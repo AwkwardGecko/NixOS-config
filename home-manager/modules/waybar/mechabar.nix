@@ -100,7 +100,7 @@
 				};
 			};
 
-			"hyprland/window": {
+			"hyprland/window" = {
 				"format" = "{}";
 				"separate-outputs" = true;
 				"min-length" = 5;
