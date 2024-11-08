@@ -15,8 +15,9 @@
 			layer = "top";
 			position = "top";
 			# height = 24;
-			mode = "dock";
+			# mode = "dock";
 			# exclusive = true;
+			reload_style_on_change = true;
 
 			modules-left = [
 				"clock#1"
