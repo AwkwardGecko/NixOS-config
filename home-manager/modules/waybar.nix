@@ -80,7 +80,7 @@
 			#};
 
 			"tray" = {
-				"icon-size" = "30";
+				"icon-size" = 30;
 			};
 
 			cpu = {
@@ -99,15 +99,6 @@
 
 			memory = { format = "{}%  "; };
 			
-			network = {
-				interval = 1;
-				format-alt = "{ifname}: {ipaddr}/{cidr}";
-				format-disconnected = "Disconnected ⚠";
-				format-ethernet = "{ifname}: {ipaddr}/{cidr}   up: {bandwidthUpBits} down: {bandwidthDownBits}";
-				format-linked = "{ifname} (No IP) ";
-				format-wifi = "{essid} ({signalStrength}%) ";
-			};
-
 			pulseaudio = {
 				format = "{volume}% {icon} " ;#{format_source}
 				#format-bluetooth = "{volume}% {icon} "; #{format_source}
