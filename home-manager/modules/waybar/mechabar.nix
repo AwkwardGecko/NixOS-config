@@ -300,7 +300,7 @@
 
 				"format-icons" = {
 					"headphone" = "󰋋";
-					"default" = ["󰕿", "󰖀", "󰕾"];
+					"default" = ["󰕿" "󰖀" "󰕾"];
 				};
 
 				"tooltip" = true;
