@@ -159,7 +159,7 @@
 			* {	
 				border: none;
 				border-radius: 10;
-				font-size: 15px;
+				font-size: 15;
 				font-family: "JetbrainsMono Nerd Font";
 			}
 
