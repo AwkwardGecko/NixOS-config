@@ -101,7 +101,7 @@
 
 			memory = {
         		interval = 10;
-				format = "  {percentage}%";
+				format = "{percentage}% ";
 				max-length = 10;
 				tooltip = true;
 				tooltip-format = "RAM - {used:0.1f}GiB used";
@@ -158,7 +158,7 @@
 		style = ''
 			* {	
 				border: none;
-				border-radius: 10px;
+				border-radius: 10;
 				font-size: 15px;
 				font-family: "JetbrainsMono Nerd Font";
 			}
@@ -366,7 +366,7 @@
 				background: #E8A2AF;
 			}
 
-			#"hyprland/workspaces" {
+			#hyprland-hyprland {
 				margin-top: 6px;
 				margin-left: 8px;
 				padding-left: 10px;
