@@ -25,9 +25,9 @@
 		exec-once = [
 			"waybar"
 			"sleep 10 && openrgb --startminimzed -p Default"
-			"signal-desktop"
+			"sleep 10 && signal-desktop"
 			"blueman-applet"
-			"pypr" #???
+			#"pypr" #???
 		];
 
 		env = [
@@ -111,6 +111,7 @@
 			"$mainMod, print, exec, grimblast copy area"			
 
 			"$mainMod, Q, exec, $terminal"
+			"$mainMod, return, exec, $terminal"
 			"$mainMod, C, killactive,"
 			"$mainMod, E, exec, $fileManager"
 			"$mainMod, F, exec, $browser"
