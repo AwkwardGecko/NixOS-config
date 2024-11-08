@@ -52,16 +52,12 @@
   home.sessionVariables = {
     # QT_QPA_PLATFORMTHEME = 
     # Custom Proton Versions (Glorious Eggroll (GE))
-    #STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
-    # Electron support for Wayland
-    NIXOS_OZONE_WL = "1";
-    #EDITOR = "nvim";
-    #TERMINAL = "kitty";
-    # SHELL = "fish";
+    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
+    NIXOS_OZONE_WL = "1"; # Wayland Electron support
   };
 
   home.packages = with pkgs; [
-    #	baobab
+    baobab
     #	blueman
     cryptsetup # LUKS support
     #	digikam
