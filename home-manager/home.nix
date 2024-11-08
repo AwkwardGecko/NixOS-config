@@ -54,7 +54,7 @@
     #	git
     #	google-chrome
     grimblast
-    #	htop
+    	htop
     #	hyprpaper
     #	hyprshot
     #	jellyfin-media-player
