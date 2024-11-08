@@ -11,19 +11,27 @@
 		
 		settings = [{
 
-			"layer": "top",
-			"modules-left": ["hyprland/launcher","cpu","memory","custom/media","tray"],
-			"modules-center": ["hyprland/tags"],
-			"modules-right": ["custom/updates","custom/wallpaper","backlight","pulseaudio","clock", "battery","custom/power"],
+			"layer" = "top";
+			"modules-left" = ["hyprland/launcher","cpu","memory","custom/media","tray"];
+			"modules-center" = ["hyprland/tags"];
 			
-			"pulseaudio": {
-				"tooltip": false,
-				"scroll-step": 5,
-				"format": "{icon} {volume}%",
-				"format-muted": "{icon} {volume}%",
-				"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
-				"format-icons": {
-					"default": ["", "", ""]
+			"modules-right" = [
+				"custom/updates"
+				"custom/wallpaper"
+				"backlight"
+				"pulseaudio"
+				"clock"
+				"custom/power"
+			];
+			
+			"pulseaudio" = {
+				"tooltip" = false;
+				"scroll-step" = 5;
+				"format" = "{icon} {volume}%";
+				"format-muted": "{icon} {volume}%";
+				"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle";
+				"format-icons" = {
+					"default" = ["", "", ""]
 				}
 			},
 
