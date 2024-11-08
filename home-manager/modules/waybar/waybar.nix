@@ -12,8 +12,8 @@
 		settings = [{
 
 			"layer": "top",
-			"modules-left": ["custom/launcher","cpu","memory","custom/media","tray"],
-			"modules-center": ["river/tags"],
+			"modules-left": ["hyprland/launcher","cpu","memory","custom/media","tray"],
+			"modules-center": ["hyprland/tags"],
 			"modules-right": ["custom/updates","custom/wallpaper","backlight","pulseaudio","clock", "battery","custom/power"],
 			
 			"pulseaudio": {
@@ -27,7 +27,7 @@
 				}
 			},
 
-			"river/tags": {
+			"hyprland/tags": {
 				"num-tags": 6
 			},
 			"network": {
@@ -41,18 +41,6 @@
 				"interval":1,
 				"on-scroll-up": "light -A 5",
 				"on-scroll-down": "light -U 5"
-			},
-			"battery": {
-				"states": {
-					"good": 95,
-					"warning": 30,
-					"critical": 20
-				},
-				"format": "{icon}  {capacity}%",
-				"format-charging": " {capacity}%",
-				"format-plugged": " {capacity}%",
-				"format-alt": "{time} {icon}",
-				"format-icons": ["", "", "", "", ""]
 			},
 			"tray":{
 				"icon-size":18,
@@ -81,7 +69,6 @@
 					"default": " "
 				},
 				"escape": true,
-				"exec": "$HOME/.config/system_scripts/mediaplayer.py 2> /dev/null",
 				"on-click": "playerctl play-pause"
 			},
 			"custom/launcher":{
@@ -91,7 +78,6 @@
 			},
 			"custom/power":{
 				"format": " ",
-				"on-click": "bash ~/.config/rofi/leave/leave.sh",
 			},
 			"custom/updates":{
 				"format": "{} Update(s)",
@@ -108,7 +94,7 @@
 		
 		style = ''
 			
-			{
+			* {
 				border: none;
 				border-radius: 10;
 				font-family: "JetbrainsMono Nerd Font" ;
