@@ -31,7 +31,7 @@
 				"custom/right-arrow-light"
 				"custom/right-arrow-dark"
 				"clock#3"
-				#"custom/right-arrow-light"
+				"custom/right-arrow-light"
 			];
 			
 			modules-right = [
@@ -86,7 +86,7 @@
 			};
 
 			"clock#3" = {
-				"format" = "{:%m-%d}";
+				"format" = " {:%m-%d}";
 				"tooltip" = false;
 			};
 
