@@ -236,7 +236,7 @@
 				color: #E8A2AF;
 			}
 
-			#network {
+			#bluetooth {
 				margin-top: 6px;
 				margin-left: 8px;
 				padding-left: 10px;
