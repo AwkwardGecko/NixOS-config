@@ -106,7 +106,7 @@
 			}
 		}];
 		
-		style = [''
+		style = [{
 			
 			{
 				border: none;
@@ -355,6 +355,6 @@
 				color: #161320;
 				background: #F2CDCD;
 			}
-		'';]
+		}];
 	};
 }
