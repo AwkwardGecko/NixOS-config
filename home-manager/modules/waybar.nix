@@ -35,27 +35,25 @@
 		
 			"clock#1" = {
 				"format" = "{:%A %B %d %I:%M %p}";
-				format-alt = " {:%Y-%m-%d} ";
 				"tooltip" = false;
-				tooltip-format = "<tt><small>{calendar}</small></tt>"; 
-				calendar = {
-					mode = "year";
-					mode-mon-col = 3;
-					weeks-pos = "right";
-					on-scroll = 1;
-					format = {
-						"months" = "<span color='#ffead3'><b>{}</b></span>";
-						"days" = "<span color='#ffead3'><b>{}</b></span>";
-						"weeks" = "<span color='#ffead3'><b>{}</b></span>";
-						"weekdays" = "<span color='#ffead3'><b>{}</b></span>";
-						"today" = "<span color='#ffead3'><b>{}</b></span>";
-					};
-				};
 			};
 
 			#clock = { 				#  
 			##	format = "{:%H:%M} ";
-
+			#	format-alt = " {:%Y-%m-%d} ";
+			#	tooltip-format = "<tt><small>{calendar}</small></tt>"; 
+			#	calendar = {
+			#		mode = "year";
+			#		mode-mon-col = 3;
+			#		weeks-pos = "right";
+			#		on-scroll = 1;
+			#		format = {
+			#			"months" = "<span color='#ffead3'><b>{}</b></span>";
+			#			"days" = "<span color='#ffead3'><b>{}</b></span>";
+			#			"weeks" = "<span color='#ffead3'><b>{}</b></span>";
+			#			"weekdays" = "<span color='#ffead3'><b>{}</b></span>";
+			#			"today" = "<span color='#ffead3'><b>{}</b></span>";
+			#		};
 			#	};
 			#
 			#	actions = {
