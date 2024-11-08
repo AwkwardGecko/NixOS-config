@@ -34,29 +34,7 @@
 				"disk"
 				"custom/power"
 			];
-			
-
-			"custom/left-arrow-dark" = {
-				"format" = "";
-				"tooltip" = false;
-			};
-			
-			"custom/left-arrow-light" = {
-				"format" = "";
-				"tooltip" = false;
-			};
-			
-			"custom/right-arrow-dark" = {
-				"format" = "";
-				"tooltip" = false;
-			};
-			
-			"custom/right-arrow-light" = {
-				"format" = "";
-				"tooltip" = false;
-			};
-
-			
+		
 			"clock#1" = {
 				"format" = "{:%A}";
 				"tooltip" = false;
@@ -68,7 +46,7 @@
 			};
 
 			"clock#3" = {
-				"format" = "{:%m-%d}";
+				"format" = "{:%M-%d}";
 				"tooltip" = false;
 			};
 
