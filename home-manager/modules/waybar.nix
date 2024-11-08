@@ -21,8 +21,8 @@
 			];
 			
 			modules-center = [
-				"clock1"
-				"clock2"
+				"clock#1"
+				"clock#2"
 			];
 			
 			modules-right = [
@@ -34,13 +34,13 @@
 				"custom/power"
 			];
 			
-			"clock1" = {
+			"clock#1" = {
 				"format" = "{:%A %B %d %I:%M %p}";
 				"tooltip" = false;
 			};
-		
-			"clock2" = {
-				"format" = {%I:%M %p}";
+			
+			"clock#2" = {
+				"format" = "{%I:%M %p}";
 				"tooltip" = false;
 			};
 
