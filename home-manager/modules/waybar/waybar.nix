@@ -54,7 +54,7 @@
 		"custom/left-arrow-dark" = {
 			"format" = "";
 			"tooltip" = false;
-		},
+		};
 		
 		"custom/left-arrow-light" = {
 			"format" = "";
