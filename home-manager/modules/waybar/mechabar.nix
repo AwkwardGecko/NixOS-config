@@ -195,7 +195,7 @@
 						"<span foreground='#a6e3a1'> </span> Timeshift";
 
 					"Authenticate" = "  Authenticate";
-				}
+				};
 			};
 
 			"custom/cpuinfo" = {
