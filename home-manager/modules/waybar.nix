@@ -35,6 +35,7 @@
 			
 			modules-right = [
 
+				"custom/left-arrow-dark"
 				"custom/left-arrow-light"
 				"pulseaudio"
 				"custom/left-arrow-dark"
