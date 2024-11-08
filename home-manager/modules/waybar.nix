@@ -17,7 +17,9 @@
 			# height = 24;
 			# mode = "dock";
 			# exclusive = true;
+			# passthrough = false;
 			reload_style_on_change = true;
+			gtk-layer-shell = true;
 
 			modules-left = [
 				"clock#1"
