@@ -36,7 +36,7 @@
 			];
 		
 			"clock#1" = {
-				"format" = "{:%A %B %d %H:%M}";
+				"format" = "{:%A %B %d %I:%M %p}";
 				"tooltip" = false;
 			};
 			
