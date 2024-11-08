@@ -242,7 +242,7 @@
 			};
 
 			"clock#time" = {
-				"format" =: "󱑂 {:%H:%M}";
+				"format" = "󱑂 {:%H:%M}";
 				"tooltip" = true
 				"tooltip-format" = "12-hour Format: {:%I:%M %p}";
 				"min-length" = 8;
