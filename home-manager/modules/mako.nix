@@ -4,7 +4,9 @@
 	############
 
 	{ config, pkgs, lib, ... }: {
-	
+
+	colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
+
 	services.mako = {
 		enable = true; # notification daemon
 		backgroundColor = "#${config.colorScheme.palette.base01}";
