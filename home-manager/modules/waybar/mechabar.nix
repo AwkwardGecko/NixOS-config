@@ -270,7 +270,7 @@
 				"max-length" = 8;
 			};
 
-			"custom/wifi": {
+			"custom/wifi" = {
 				"exec" = "~/.config/waybar/scripts/wifiinfo.sh";
 				"return-type" = "json";
 
