@@ -22,15 +22,9 @@
 			];
 			
 			modules-center = [
-				"custom/left-arrow-dark"
 				"clock#1"
-				"custom/left-arrow-light"
-				"custom/left-arrow-dark"
 				"clock#2"
-				"custom/right-arrow-dark"
-				"custom/right-arrow-light"
 				"clock#3"
-				"custom/right-arrow-dark"
 			];
 			
 			modules-right = [
