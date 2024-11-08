@@ -76,7 +76,7 @@
 
 			
 			"clock#1" = {
-				"format" = "{:%A}";
+				"format" = " {:%A}";
 				"tooltip" = false;
 			};
 			
