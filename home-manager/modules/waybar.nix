@@ -94,7 +94,7 @@
 				path = "/";
 				tooltip = true;
 				unit = "GB";
-				tooltip-format = "Available {free} of {total}"
+				tooltip-format = "Available {free} of {total}";
 			};
 
 			memory = { format = "{}%  "; };
