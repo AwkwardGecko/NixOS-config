@@ -105,26 +105,11 @@
 			
 			pulseaudio = {
 				format = "{volume}% {icon} " ;#{format_source}
-				#format-bluetooth = "{volume}% {icon} "; #{format_source}
-				#format-bluetooth<D-y><D-h><D-h>-muted = " {icon} "; #{format_source}
-				#format-muted = " {format_source}";
-				#format-source = "{volume}% ";
 				format-source-muted = "";
 				on-click = "pavucontrol";
-
-				format-icons = {
-					car = "";
-					default = [ "" "" "" ];
-					handsfree = "";
-					headphones = "";
-					headset = "";
-					phone = "";
-					portable = "";
-				};
-
 			};
 			
-			"hyprland/mode" = { 
+			hyprland/mode = { 
 				format = ''<span style="italic">{}</span>'';
 			};
 
