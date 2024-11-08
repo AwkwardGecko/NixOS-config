@@ -193,7 +193,7 @@
 			* {
 				border: none;
 				border-radius: 0;
-				font-family: Source Code Pro;
+				font-family: Cantarell;
 			}
 
 			window#waybar {
