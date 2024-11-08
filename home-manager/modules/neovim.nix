@@ -33,10 +33,5 @@
 		vim.cmd('colorscheme gruvbox')
 		vim.g.gruvbox_material_background = 'hard'
 	'';
-
-	#extraLuaPackages = with pkgs.vimPlugins; [
-	#	indent-blankline-nvim
-	#];
-
   };
 }
