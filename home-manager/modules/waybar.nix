@@ -35,19 +35,19 @@
 			
 			modules-right = [
 
-				"custom/left-arrow-dark"
+				"custom/left-arrow-light"
 				"pulseaudio"
-				"custom/left-arrow-light"
 				"custom/left-arrow-dark"
+				"custom/left-arrow-light"
 				"memory"
-				"custom/left-arrow-light"
 				"custom/left-arrow-dark"
+				"custom/left-arrow-light"
 				"cpu"
-				"custom/left-arrow-light"
 				"custom/left-arrow-dark"
+				"custom/left-arrow-light"
 				"disk"
-				"custom/left-arrow-light"
 				"custom/left-arrow-dark"
+				"custom/left-arrow-light"
 				"custom/power"
 			];
 			
