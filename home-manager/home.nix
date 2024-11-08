@@ -73,7 +73,7 @@
     #	pipx	
     #	qbittorrent
     #	qt6ct # QT support
-    #	ripgrep # ???
+    	ripgrep # something for nvim
     #	rofi-wayland
     shotwell
     signal-desktop
