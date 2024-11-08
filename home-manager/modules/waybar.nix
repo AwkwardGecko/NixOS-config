@@ -176,7 +176,7 @@
 			};
 			
 			"custom/power" = {
-				"format" = " ⏻ ";
+				"format" = "⏻";
 				"tooltip" = true;
 				"menu" = "on-click";
 				"menu-file" = "~/.dotfiles/home-manager/modules/waybar/power_menu.xml"; # Menu file in resources folder
@@ -282,33 +282,6 @@
 				transition: none;
 				color: #1A1826;
 				background: #FAE3B0;
-			}
-
-			#battery {
-				margin-top: 6px;
-				margin-left: 8px;
-				padding-left: 10px;
-				padding-right: 10px;
-				margin-bottom: 0px;
-				border-radius: 10px;
-				transition: none;
-				color: #161320;
-				background: #B5E8E0;
-			}
-
-			#battery.charging, #battery.plugged {
-				color: #161320;
-				background-color: #B5E8E0;
-			}
-
-			#battery.critical:not(.charging) {
-				background-color: #B5E8E0;
-				color: #161320;
-				animation-name: blink;
-				animation-duration: 0.5s;
-				animation-timing-function: linear;
-				animation-iteration-count: infinite;
-				animation-direction: alternate;
 			}
 
 			@keyframes blink {
