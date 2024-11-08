@@ -156,12 +156,6 @@
 		}];
 		
 		style = ''
-			
-			/*base background color*/
-			@define-color red #161320;
-
-
-
 			* {	
 				border: none;
 				border-radius: 10px;
@@ -261,8 +255,8 @@
 					color: #B5E8E0;
 				}
 			}
-			
-			#custom-updates {
+
+			#disk {
 				margin-top: 6px;
 				margin-left: 8px;
 				padding-left: 10px;
@@ -298,7 +292,7 @@
 				background: #DDB6F2;
 			}
 
-			#custom-wallpaper {
+			#cpu {
 				margin-top: 6px;
 				margin-left: 8px;
 				padding-left: 10px;
@@ -334,7 +328,7 @@
 				background: #161320;
 			}
 
-			#workspaces {
+			#custom-power {
 				font-size: 20px;
 				margin-top: 6px;
 				margin-left: 8px;
@@ -348,10 +342,7 @@
 				background: #F28FAD;
 			}
 
-			#workspaces button {
-				color: @content_main
-
-			# cpu {
+			#custom-wallpaper {
 				margin-top: 6px;
 				margin-left: 8px;
 				padding-left: 10px;
@@ -363,7 +354,7 @@
 				background: #C9CBFF;
 			}
 
-			# disk {
+			#custom-updates {
 				margin-top: 6px;
 				margin-left: 8px;
 				padding-left: 10px;
@@ -371,11 +362,11 @@
 				margin-bottom: 0px;
 				border-radius: 10px;
 				transition: none;
-				color: @red;
+				color: #161320;
 				background: #E8A2AF;
 			}
 
-			#custom-power {
+			#workspaces {
 				margin-top: 6px;
 				margin-left: 8px;
 				padding-left: 10px;
