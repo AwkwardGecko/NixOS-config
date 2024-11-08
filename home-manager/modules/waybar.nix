@@ -46,7 +46,7 @@
 			};
 
 			"clock#3" = {
-				"format" = "{:%M-%d}";
+				"format" = "{:%M %d}";
 				"tooltip" = false;
 			};
 
