@@ -30,7 +30,7 @@
 	extraLuaConfig = ''
 		require("ibl").setup()
 		vim.o.termguicolors = true
-		vim.cmd('colorscheme gruvbox-material')
+		vim.cmd('colorscheme gruvbox')
 		vim.g.gruvbox_material_background = 'hard'
 	'';
 
