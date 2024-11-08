@@ -258,7 +258,7 @@
 					"mode-mon-col" = 6;
 					"on-click-right" = "mode";
 					"format" = { "today" = "<span color='#f38ba8'><b>{}</b></span>" };
-				},
+				};
 				
 				"actions" = { "on-click-right" = "mode" };
 				"min-length" = 8;
