@@ -28,27 +28,29 @@
 				"tooltip" = false;
 				"scroll-step" = 5;
 				"format" = "{icon} {volume}%";
-				"format-muted": "{icon} {volume}%";
-				"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle";
+				"format-muted" = "{icon} {volume}%";
+				"on-click" = "pactl set-sink-mute @DEFAULT_SINK@ toggle";
 				"format-icons" = {
 					"default" = ["", "", ""]
 				}
-			},
+			};
 
-			"hyprland/tags": {
-				"num-tags": 6
-			},
-			"network": {
-				"tooltip": false,
-				"format-wifi": "  {essid}",
-				"format-ethernet": ""
-			},
-			"backlight": {
-				"tooltip": false,
-				"format": " {}%",
-				"interval":1,
-				"on-scroll-up": "light -A 5",
-				"on-scroll-down": "light -U 5"
+			"hyprland/tags" = {
+				"num-tags" = 6
+			};
+
+			"network" = {
+				"tooltip" = false;
+				"format-wifi" = "  {essid}";
+				"format-ethernet"; ""
+			};
+
+			"backlight" = {
+				"tooltip" = false;
+				"format" = " {}%";
+				"interval" = 1;
+				"on-scroll-up" = "light -A 5";
+				"on-scroll-down" = "light -U 5";
 			},
 			"tray":{
 				"icon-size":18,
