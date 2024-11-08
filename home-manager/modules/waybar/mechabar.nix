@@ -92,11 +92,11 @@
 				"on-scroll-down" = "hyprctl dispatch workspace +1";
 				"sort-by-number" = true;
 				"persistent-workspaces" = {
-					"1": [],
-					"2": [],
-					"3": [],
-					"4": [],
-					"5": []
+					"1" = [];
+					"2" = [];
+					"3" = [];
+					"4" = [];
+					"5" = [];
 				};
 			};
 
