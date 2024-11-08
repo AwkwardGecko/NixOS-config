@@ -75,7 +75,7 @@
 
 			
 			"clock#1" = {
-				"format" = " {:%A} ";
+				"format" = "{:%A}";
 				"tooltip" = false;
 			};
 			
@@ -85,7 +85,7 @@
 			};
 
 			"clock#3" = {
-				"format" = " {:%m-%d}";
+				"format" = "{:%m-%d}";
 				"tooltip" = false;
 			};
 
