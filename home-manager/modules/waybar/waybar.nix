@@ -193,7 +193,8 @@
 			* {
 				border: none;
 				border-radius: 0;
-				font-family: Cantarell;
+				font-size: 20px;
+				font-family: monospace;
 			}
 
 			window#waybar {
