@@ -3,7 +3,7 @@
 	### MAKO ###
 	############
 
-	{ config, pkgs, lib, ... }: {
+	{ config, pkgs, inputs, lib, ... }: {
 
 	colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
 
