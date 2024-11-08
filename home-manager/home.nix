@@ -36,8 +36,8 @@
     #./modules/swaync.nix
     ./modules/rofi.nix
     #./modules/waybar/style.nix
-    #./modules/waybar.nix
-	./modules/waybar/mechabar.nix
+    ./modules/waybar.nix
+	#./modules/waybar/mechabar.nix
   ];
 
   home.sessionVariables = {

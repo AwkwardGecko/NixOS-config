@@ -679,7 +679,6 @@
 				color: #161320;
 				background: #F2CDCD;
 			}
-
 		'';
 	};
 }
