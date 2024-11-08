@@ -115,7 +115,7 @@
 			#};
 
 			"tray" = {
-				"icon-size" = "20";
+				"icon-size" = "30";
 			};
 
 			cpu = {
