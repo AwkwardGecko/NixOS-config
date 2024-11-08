@@ -21,7 +21,7 @@
 			];
 			
 			modules-center = [
-				"clock#1"
+				"clock"
 			];
 			
 			modules-right = [
@@ -33,7 +33,7 @@
 				"custom/power"
 			];
 		
-			"clock#1" = {
+			"clock" = {
 				"format" = "{:%A %B %d %I:%M %p}";
 				"tooltip" = false;
 			};
@@ -100,7 +100,7 @@
 			};
 
 			pulseaudio = {
-				format = "{volume}% {icon}" ;#{format_source}
+				format = "{volume}% {icon} " ;#{format_source}
 				#format-bluetooth = "{volume}% {icon} "; #{format_source}
 				#format-bluetooth-muted = " {icon} "; #{format_source}
 				#format-muted = " {format_source}";
