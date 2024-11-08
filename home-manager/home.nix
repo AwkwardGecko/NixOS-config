@@ -47,7 +47,7 @@
 
   ];
 
-  colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
+  # colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
 
   home.sessionVariables = {
     # QT_QPA_PLATFORMTHEME = 
