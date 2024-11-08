@@ -71,7 +71,6 @@
     pavucontrol
     wine
     wine-staging
-    wine-mono
     wine-gecko
     wine-wayland
   ];
