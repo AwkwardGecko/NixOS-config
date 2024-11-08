@@ -76,8 +76,8 @@
 			#};
 
 			tray = {
-				"icon-size" = 25;
-				"spacing" = 6;
+				icon-size = 25;
+				spacing = 6;
 			};
 
 			cpu = {
