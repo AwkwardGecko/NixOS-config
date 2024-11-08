@@ -71,7 +71,6 @@
     pavucontrol
     wine
     wine-staging
-    wine-gecko
     wine-wayland
   ];
 }
