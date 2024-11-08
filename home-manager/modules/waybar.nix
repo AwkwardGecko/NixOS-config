@@ -55,28 +55,28 @@
 			
 
 			"custom/left-arrow-dark" = {
-				"format" = " ";
+				"format" = "  ";
 				"tooltip" = false;
 			};
 			
 			"custom/left-arrow-light" = {
-				"format" = " ";
+				"format" = "  ";
 				"tooltip" = false;
 			};
 			
 			"custom/right-arrow-dark" = {
-				"format" = " ";
+				"format" = "  ";
 				"tooltip" = false;
 			};
 			
 			"custom/right-arrow-light" = {
-				"format" = " ";
+				"format" = "  ";
 				"tooltip" = false;
 			};
 
 			
 			"clock#1" = {
-				"format" = " {:%A}";
+				"format" = "{:%A}";
 				"tooltip" = false;
 			};
 			
@@ -142,7 +142,7 @@
 			};
 
 			pulseaudio = {
-				format = "{volume}% {icon} " ;#{format_source}
+				format = "{volume}% {icon}" ;#{format_source}
 				#format-bluetooth = "{volume}% {icon} "; #{format_source}
 				#format-bluetooth-muted = " {icon} "; #{format_source}
 				#format-muted = " {format_source}";
@@ -177,7 +177,7 @@
 			};
 			
 			"custom/power" = {
-				"format" = "  ⏻  ";
+				"format" = " ⏻ ";
 				"tooltip" = true;
 				"menu" = "on-click";
 				"menu-file" = "~/.dotfiles/home-manager/modules/waybar/power_menu.xml"; # Menu file in resources folder
