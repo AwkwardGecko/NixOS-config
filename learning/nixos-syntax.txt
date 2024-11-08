@@ -1,0 +1,63 @@
+
+	####################
+	### NIXOS SYNTAX ###
+	####################
+
+	nix repl
+	
+
+	boolean	> true/false
+	string	> "string"
+	string	> ''spanning multiple 
+		  lines''
+
+	path 	> /true/string
+
+	----------------------------------------------------------------------------------------	
+	|				|			|				|
+	|				|			|				|
+	|	x = {			|	x.a = 1;	|	x.a = 1;		|
+	|	 	a = 1;		|	x.b = true;	|	x = { b = true; };	|
+	|		b = true;	|			|				|
+	|	};			|			|				|
+	|				|			|				|
+	-----------------------------------------------------------------------------------------
+
+	block comment
+
+	/*
+		This is a block comment
+	*/
+
+
+	"inject values into strings with ${myVariable}!"
+
+	["array", in, json, 24.05]
+
+	["list" in "nixos" 24.05]
+
+
+
+	{						{
+		name: "object in json",				name = "attribute set";
+		numEyes: 2					numEyes = 2;
+	};						};
+
+
+
+	# longform javascript function
+	
+	function(aParameter) {
+		return aParameter + 1;
+	}
+
+	#shorter javascript function
+
+	(aParameter) > {
+		return aParameter + 1;
+	}
+
+
+	# shortest javascript function
+	
+	aParameter > aParameter + 1

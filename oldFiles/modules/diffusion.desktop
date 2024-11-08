@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Exec=bash .local/share/applications/diffusion.sh
+Icon=appimagekit-laigter
+Name[en_GB]=Diffusion
+Name=Diffusion
+Path=
+StartupNotify=true
+Terminal=true
+TerminalOptions=
+Type=Application
+Version=1.0
