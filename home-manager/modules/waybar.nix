@@ -143,8 +143,8 @@
 				format = "{icon}";
         		format-alt = "{status}";
 				format-icons = {
-            		enabled = "BT ON  ";
-					disabled = "BT OFF  ";
+            		enabled = "On  ";
+					disabled = "Off  ";
 				};
 			on-click = "blueberry";
 			};  
