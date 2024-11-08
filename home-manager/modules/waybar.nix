@@ -89,8 +89,12 @@
 			};
 
 			disk = {
-				format = "{usage}% 〠";
+				interval = 30;
+				format = "{percentage_used}% 󰋊";
+				path = "/";
 				tooltip = true;
+				unit = "GB";
+				tooltip-format = "Available {free} of {total}"
 			};
 
 			memory = { format = "{}%  "; };
