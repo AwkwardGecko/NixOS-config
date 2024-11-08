@@ -199,9 +199,11 @@
 			}
 
 			window#waybar {
+				background: transparent;
+			}
 
-				background: #292b2e;
-				color: #fdf6e3;
+			window#waybar.hidden {
+				opacity: 0.2;
 			}
 
 			#workspaces button {
