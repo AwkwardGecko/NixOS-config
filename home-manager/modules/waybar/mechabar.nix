@@ -29,49 +29,49 @@
 
 				"custom/paddw"
 				"hyprland/window"       # window title
-			];
+			]
 
 			"modules-center" = [
-				"custom/paddc";
-				"custom/left2";
-				"custom/cpuinfo";       # temperature
+				"custom/paddc"
+				"custom/left2"
+				"custom/cpuinfo"       # temperature
 
-				"custom/left3";
-				"memory";               # memory
+				"custom/left3"
+				"memory"               # memory
 
-				"custom/left4";
-				"custom/cpu";           # cpu
-				"custom/leftin1";
+				"custom/left4"
+				"custom/cpu"          # cpu
+				"custom/leftin1"
 
-				"custom/left5";
-				"idle_inhibitor";       # arch logo
-				"custom/right2";
+				"custom/left5"
+				"idle_inhibitor"       # arch logo
+				"custom/right2"
 
-				"custom/rightin1";
-				"clock#time";           # time
-				"custom/right3";
+				"custom/rightin1"
+				"clock#time"          # time
+				"custom/right3"
 
-				"clock#date";	        # date
-				"custom/right4";
+				"clock#date"	        # date
+				"custom/right4"
 
-				"custom/wifi";	        # wi-fi
-				"custom/right5";
+				"custom/wifi"        # wi-fi
+				"custom/right5"
 			];
 
 			"modules-right" = [
-				"custom/media";         # media info
+				"custom/media"         # media info
 
-				"custom/left6";
-				"pulseaudio";           # output device
+				"custom/left6"
+				"pulseaudio"           # output device
 
-				"custom/left7";
-				"custom/backlight";     # brightness
+				"custom/left7"
+				"custom/backlight"     # brightness
 
-				"custom/left8";
-				"battery";              # battery
+				"custom/left8"
+				"battery"              # battery
 
-				"custom/leftin2";
-				"custom/power";			# power button
+				"custom/leftin2"
+				"custom/power"			# power button
 			];
 
 			# === Modules ===
