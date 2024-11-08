@@ -81,6 +81,7 @@
 
 			"tray" = {
 				"icon-size" = 30;
+				"spacing" = 3;
 			};
 
 			cpu = {
