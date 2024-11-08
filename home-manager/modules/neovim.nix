@@ -32,7 +32,7 @@
 		require("ibl").setup()
 		vim.g.mapleader = ' '
 		vim.g.maplocalleader = ' '
-		vim.o.clipboard = 'wl-clipboard-rs'
+		vim.o.clipboard = 'unnamedplus'
 		vim.o.number = true
 		-- vim.o.relativenumber = true
 		vim.o.signcolumn = 'yes'
