@@ -18,7 +18,7 @@
 			modules-left = [
 				"hyprland/workspaces"
 				"tray"
-				"custom/right-arrow-light"
+				"custom/right-arrow-dark"
 			];
 			
 			modules-center = [
@@ -55,22 +55,22 @@
 			
 
 			"custom/left-arrow-dark" = {
-				"format" = "  ";
+				"format" = "";
 				"tooltip" = false;
 			};
 			
 			"custom/left-arrow-light" = {
-				"format" = "  ";
+				"format" = "";
 				"tooltip" = false;
 			};
 			
 			"custom/right-arrow-dark" = {
-				"format" = "  ";
+				"format" = "";
 				"tooltip" = false;
 			};
 			
 			"custom/right-arrow-light" = {
-				"format" = "  ";
+				"format" = "";
 				"tooltip" = false;
 			};
 
