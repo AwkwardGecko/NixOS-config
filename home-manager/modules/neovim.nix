@@ -1,4 +1,4 @@
-#############
+############
 ### NEOVIM ###
 ##############
 
@@ -32,7 +32,7 @@
 		require("ibl").setup()
 		vim.g.mapleader = ' '
 		vim.g.maplocalleader = ' '
-		vim.o.clipboard = 'wl-copy'
+		vim.o.clipboard = 'unnamedplus'
 		vim.o.number = true
 		vim.o.signcolumn = 'yes'
 		vim.o.tabstop = 4
