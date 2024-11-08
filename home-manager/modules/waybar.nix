@@ -31,6 +31,7 @@
 				"memory"
 				"cpu"
 				"disk"
+				"bluetooth"
 				"custom/power"
 			];
 			
@@ -137,6 +138,19 @@
 				];
 			};
 			
+			bluetooth = {
+				interval = 30;
+				format = "{icon}";
+        		format-alt = "{status}";
+				format-icons = {
+            		enabled = "";
+					disabled = "";
+				};
+			on-click = "blueberry";
+			};  
+
+
+
 			"custom/power" = {
 				"format" = "⏻ ";
 				"tooltip" = true;

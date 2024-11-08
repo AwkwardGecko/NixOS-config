@@ -26,7 +26,7 @@
 			"waybar"
 			"sleep 10 && openrgb --startminimzed -p Default"
 			"sleep 10 && signal-desktop"
-			"blueman-applet"
+			"sleep 10 && steam -silent %U"
 			#"pypr" #???
 		];
 
