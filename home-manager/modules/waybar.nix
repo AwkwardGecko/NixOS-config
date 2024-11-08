@@ -156,6 +156,26 @@
 		}];
 		
 		style = ''
+			
+			/*base background color*/
+			@define-color red #161320;
+			/@define-color bg_main_tooltip rgba(0, 0, 0, 0.7);
+
+
+			/*base background color of selections */
+			/@define-color bg_hover rgba(200, 200, 200, 0.3);
+			/*base background color of active elements */
+			@define-color bg_active rgba(100, 100, 100, 0.5);
+
+			/*base border color*/
+			@define-color border_main rgba(255, 255, 255, 0.2);
+
+			/*text color for entries, views and content in general */
+			@define-color content_main white;
+			/*text color for entries that are unselected */
+			@define-color content_inactive rgba(255, 255, 255, 0.25);
+
+
 			* {	
 				border: none;
 				border-radius: 10px;
@@ -342,6 +362,9 @@
 				background: #F28FAD;
 			}
 
+			#workspaces button {
+				color: @content_main
+
 			# cpu {
 				margin-top: 6px;
 				margin-left: 8px;
@@ -362,7 +385,7 @@
 				margin-bottom: 0px;
 				border-radius: 10px;
 				transition: none;
-				color: #161320;
+				color: @red;
 				background: #E8A2AF;
 			}
 
