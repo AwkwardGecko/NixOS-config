@@ -79,7 +79,7 @@
 			#	};
 			#};
 
-			"tray" = {
+			tray = {
 				"icon-size" = 25;
 				"spacing" = 6;
 			};
