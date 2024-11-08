@@ -11,60 +11,115 @@
 		
 	programs.waybar.settings = [{
 
-		height = 30;
 		layer = "top";
 		position = "top";
-		tray = { spacing = 10; };
 		
 		modules-left = [
-
-			"hyprland/workspaces"    
+			"hyprland/workspaces"
+			"tray"
+			"custom/right-arrow-dark"
 		];
 		
 		modules-center = [
-			"clock"
+			"custom/left-arrow-dark"
+			"clock#1"
+			"custom/left-arrow-light"
+			"custom/left-arrow-dark"
+			"clock#2"
+			"custom/right-arrow-dark"
+			"custom/right-arrow-light"
+			"clock#3"
+			"custom/right-arrow-dark"
 		];
 		
 		modules-right = [
 
-			#"network"
+			"custom/left-arrow-dark"
 			"pulseaudio"
-			"cpu"
+			"custom/left-arrow-light"
+			"custom/left-arrow-dark"
 			"memory"
-			"temperature"
-			"tray"
+			"custom/left-arrow-light"
+			"custom/left-arrow-dark"
+			"cpu"
+			"custom/left-arrow-light"
+			"custom/left-arrow-dark"
+			"disk"
+			"custom/left-arrow-light"
+			"custom/left-arrow-dark"
 			"custom/power"
 		];
 		
-		clock = { 				#  
-			format = "{:%H:%M} ";
-			format-alt = " {:%Y-%m-%d} ";
-			tooltip-format = "<tt><small>{calendar}</small></tt>"; 
-			calendar = {
-				mode = "year";
-				mode-mon-col = 3;
-				weeks-pos = "right";
-				on-scroll = 1;
-				format = {
-					"months" = "<span color='#ffead3'><b>{}</b></span>";
-					"days" = "<span color='#ffead3'><b>{}</b></span>";
-					"weeks" = "<span color='#ffead3'><b>{}</b></span>";
-					"weekdays" = "<span color='#ffead3'><b>{}</b></span>";
-					"today" = "<span color='#ffead3'><b>{}</b></span>";
-				};
-			};
 
-			actions = {
-				on-click-right = "mode";
-				on-scoll-up = [
-					"tz_up"
-					"shift_up"
-				];
-				on-scroll-down = [
-					"tz_down"
-					"shift_down"
-				];
-			};
+		"custom/left-arrow-dark" = {
+			"format" = "";
+			"tooltip" = false;
+		},
+		
+		"custom/left-arrow-light" = {
+			"format" = "";
+			"tooltip" = false;
+		};
+		
+		"custom/right-arrow-dark" = {
+			"format" = "";
+			"tooltip" = false;
+		};
+		
+		"custom/right-arrow-light" = {
+			"format" = "";
+			"tooltip" = false;
+		};
+
+		
+		"clock#1" = {
+			"format" = "{:%a}";
+			"tooltip" = false;
+		};
+		
+		"clock#2" = {
+			"format" = "{:%H:%M}";
+			"tooltip" = false;
+		};
+
+		"clock#3" = {
+			"format" = "{:%m-%d}";
+			"tooltip" = false;
+		};
+
+		#clock = { 				#  
+		##	format = "{:%H:%M} ";
+		#	format-alt = " {:%Y-%m-%d} ";
+		#	tooltip-format = "<tt><small>{calendar}</small></tt>"; 
+		#	calendar = {
+		#		mode = "year";
+		#		mode-mon-col = 3;
+		#		weeks-pos = "right";
+		#		on-scroll = 1;
+		#		format = {
+		#			"months" = "<span color='#ffead3'><b>{}</b></span>";
+		#			"days" = "<span color='#ffead3'><b>{}</b></span>";
+		#			"weeks" = "<span color='#ffead3'><b>{}</b></span>";
+		#			"weekdays" = "<span color='#ffead3'><b>{}</b></span>";
+		#			"today" = "<span color='#ffead3'><b>{}</b></span>";
+		#		};
+		#	};
+		#
+		#	actions = {
+		#		on-click-right = "mode";
+		#		on-scoll-up = [
+		#			"tz_up"
+		#			"shift_up"
+		#		];
+		#		on-scroll-down = [
+		#			"tz_down"
+		#			"shift_down"
+		#		];
+		#	};
+		#};
+
+		"tray" = {
+			"icon-size" = "20";
 		};
 
 		cpu = {
