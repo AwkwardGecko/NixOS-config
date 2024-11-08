@@ -29,7 +29,7 @@
 
 				"custom/paddw"
 				"hyprland/window"       # window title
-			]
+			];
 
 			"modules-center" = [
 				"custom/paddc"
