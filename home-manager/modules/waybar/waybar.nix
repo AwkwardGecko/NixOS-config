@@ -53,22 +53,22 @@
 			
 
 			"custom/left-arrow-dark" = {
-				"format" = "";
+				"format" = " ";
 				"tooltip" = false;
 			};
 			
 			"custom/left-arrow-light" = {
-				"format" = "";
+				"format" = " ";
 				"tooltip" = false;
 			};
 			
 			"custom/right-arrow-dark" = {
-				"format" = "";
+				"format" = " ";
 				"tooltip" = false;
 			};
 			
 			"custom/right-arrow-light" = {
-				"format" = "";
+				"format" = " ";
 				"tooltip" = false;
 			};
 
@@ -159,7 +159,7 @@
 				};
 
 			};
-		
+			
 			"hyprland/mode" = { 
 				format = ''<span style="italic">{}</span>'';
 			};
