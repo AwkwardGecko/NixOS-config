@@ -451,7 +451,7 @@
 
 			# == Right Inverse ==
 
-			"custom/rightin1": {
+			"custom/rightin1" = {
 				"format" = "";
 				"tooltip" = false;
 			};
