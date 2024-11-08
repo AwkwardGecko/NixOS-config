@@ -34,8 +34,8 @@
     # ./modules/OpenRGB.nix
     # ./modules/star-rail.nix
     ./modules/rofi.nix
-    ./modules/waybar/style.nix
-    ./modules/waybar/waybar.nix
+    #./modules/waybar/style.nix
+    ./modules/waybar.nix
   ];
 
   home.sessionVariables = {
@@ -73,7 +73,7 @@
     #	qbittorrent
     #	qt6ct # QT support
     #	ripgrep # ???
-    #rofi-wayland
+    #	rofi-wayland
     shotwell
     signal-desktop
     #	vlc
