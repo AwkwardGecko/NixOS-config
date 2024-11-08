@@ -46,7 +46,7 @@
 
   home.packages = with pkgs; [
     baobab
-    #	blueman
+    blueberry
     cryptsetup # LUKS support
     #	digikam
     #	dualsensectl
