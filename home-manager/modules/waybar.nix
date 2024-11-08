@@ -87,14 +87,20 @@
 
 			disk = {
 				interval = 30;
-				format = "{percentage_used}% 󰋊";
+				format = "{percentage_used}% 󰋊 ";
 				path = "/";
 				tooltip = true;
 				unit = "GB";
 				tooltip-format = "Available {free} of {total}";
 			};
 
-			memory = { format = "{}%  "; };
+			memory = {
+        		interval = 10;
+				format = "  {percentage}%";
+				max-length = 10;
+				tooltip = true;
+				tooltip-format = "RAM - {used:0.1f}GiB used";
+			};
 			
 			pulseaudio = {
 				format = "{volume}% {icon} " ;#{format_source}
