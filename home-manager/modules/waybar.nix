@@ -15,7 +15,7 @@
 			layer = "top";
 			position = "top";
 			# height = 24;
-			# mode = "dock";
+			mode = "dock";
 			# exclusive = true;
 
 			modules-left = [
@@ -29,7 +29,6 @@
 			];
 			
 			modules-right = [
-
 				"pulseaudio"
 				"memory"
 				"cpu"
