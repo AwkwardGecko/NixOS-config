@@ -334,7 +334,7 @@
 				};
 
 				"format" = "{icon} {capacity}%";
-				"format-icons" = ["󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂"];
+				"format-icons" = ["󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂"];
 				"format-full" = "󱃌 {capacity}%";
 				"format-warning" = "󰁻 {capacity}%";
 				"format-critical" = "󱃍 {capacity}%";
