@@ -50,6 +50,7 @@
 						"weekdays" = "<span color='#ffead3'><b>{}</b></span>";
 						"today" = "<span color='#ffead3'><b>{}</b></span>";
 					};
+				};
 			};
 
 			#clock = { 				#  
