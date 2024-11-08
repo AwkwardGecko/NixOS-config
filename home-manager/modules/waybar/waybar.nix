@@ -108,7 +108,7 @@
 		
 		style = [''
 			
-			* {
+			{
 				border: none;
 				border-radius: 10;
 				font-family: "JetbrainsMono Nerd Font" ;
