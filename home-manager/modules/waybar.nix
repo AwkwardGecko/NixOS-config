@@ -255,8 +255,8 @@
 					color: #B5E8E0;
 				}
 			}
-
-			#disk {
+			
+			#custom-updates {
 				margin-top: 6px;
 				margin-left: 8px;
 				padding-left: 10px;
@@ -292,7 +292,7 @@
 				background: #DDB6F2;
 			}
 
-			#cpu {
+			#custom-wallpaper {
 				margin-top: 6px;
 				margin-left: 8px;
 				padding-left: 10px;
@@ -328,7 +328,7 @@
 				background: #161320;
 			}
 
-			#custom-power {
+			#workspaces {
 				font-size: 20px;
 				margin-top: 6px;
 				margin-left: 8px;
@@ -342,7 +342,7 @@
 				background: #F28FAD;
 			}
 
-			#custom-wallpaper {
+			# cpu {
 				margin-top: 6px;
 				margin-left: 8px;
 				padding-left: 10px;
@@ -354,7 +354,7 @@
 				background: #C9CBFF;
 			}
 
-			#custom-updates {
+			# disk {
 				margin-top: 6px;
 				margin-left: 8px;
 				padding-left: 10px;
@@ -366,7 +366,7 @@
 				background: #E8A2AF;
 			}
 
-			#workspaces {
+			#custom-power {
 				margin-top: 6px;
 				margin-left: 8px;
 				padding-left: 10px;
