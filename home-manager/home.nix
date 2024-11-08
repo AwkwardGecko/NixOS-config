@@ -35,24 +35,10 @@
     # ./modules/star-rail.nix
     ./modules/waybar/style.nix
     ./modules/waybar/waybar.nix
-
-    #./modules/themes/adwaita-icon-theme.nix	# Icon - Adwaita
-    #./modules/themes/bibata-cursors.nix		# Cursor - Bibata-Modern-Classic
-    #./modules/themes/dracula.nix
-    #./modules/themes/gruvbox-gtk-theme.nix		# Theme - Gruvbox
-    #./modules/themes/flat-remix-gtk.nix		# Theme - Flat-Remix-GTK-Grey-Darkest
-
-    #./modules/themes/font-fira-sans.nix
-    #./modules/themes/font-sans.nix
-
   ];
 
-  #colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
-
   home.sessionVariables = {
-    # QT_QPA_PLATFORMTHEME = 
-    # Custom Proton Versions (Glorious Eggroll (GE))
-    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
+    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d"; # Add custon Proton versions to Steam
     NIXOS_OZONE_WL = "1"; # Wayland Electron support
   };
 
