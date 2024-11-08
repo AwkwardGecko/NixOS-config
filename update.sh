@@ -1,6 +1,6 @@
 #~/.nix-profile/bin/bash
 
-git add *
+git add * .config/
 git commit -m "another commit"
 git push github main
 home-manager switch -b backup --flake ~/.dotfiles/
