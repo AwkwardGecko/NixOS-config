@@ -80,8 +80,8 @@
 			#};
 
 			"tray" = {
-				"icon-size" = 30;
-				"spacing" = 3;
+				"icon-size" = 25;
+				"spacing" = 6;
 			};
 
 			cpu = {
