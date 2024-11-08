@@ -190,21 +190,30 @@
 		}];
 		
 		style = ''
-			* {
-				border: none;
-				border-radius: 0;
+			* {	
 				font-size: 20px;
 				font-family: monospace;
 			}
 
 			window#waybar {
 
-				background: #16191C;
-				color: #AAB2BF;
+				background: #292b2e;
+				color: #fdf6e3;
 			}
 
 			#workspaces button {
 				padding: 0 5px;
+			}
+
+			#custom-right-arrow-dark,
+			#custom-left-arrow-dark {
+				color: #1a1a1a;
+			}
+			
+			#custom-right-arrow-light,
+			#custom-left-arrow-light {
+				color: #292b2e;
+				background: #1a1a1a;
 			}
 		'';
 	};
