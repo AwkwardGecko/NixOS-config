@@ -366,7 +366,17 @@
 				background: #E8A2AF;
 			}
 
-				
+			--#hyprland/workspaces {
+			--	margin-top: 6px;
+			--	margin-left: 8px;
+			--	padding-left: 10px;
+			--	padding-right: 10px;
+			--	margin-bottom: 0px;
+			--	border-radius: 10px;
+			--	transition: none;
+			--	color: #161320;
+			--	background: #F2CDCD;
+			--}
 		'';
 	};
 }
