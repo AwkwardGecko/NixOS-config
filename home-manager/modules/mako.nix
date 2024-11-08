@@ -9,6 +9,7 @@
 
 	services.mako = {
 		enable = true; # notification daemon
+		defaultTimeout = 20000;
 		backgroundColor = "#${config.colorScheme.palette.base01}";
 		borderColor = "#${config.colorScheme.palette.base0E}";
 		borderRadius = 5;

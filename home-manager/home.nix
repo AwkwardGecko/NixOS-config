@@ -33,6 +33,7 @@
     ./modules/neovim.nix
     # ./modules/OpenRGB.nix
     # ./modules/star-rail.nix
+    #./modules/swaync.nix
     ./modules/rofi.nix
     #./modules/waybar/style.nix
     ./modules/waybar.nix
