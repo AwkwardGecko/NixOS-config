@@ -109,9 +109,9 @@
 				on-click = "pavucontrol";
 			};
 			
-			hyprland/mode = { 
-				format = ''<span style="italic">{}</span>'';
-			};
+			#hyprland/mode = { 
+			#	format = ''<span style="italic">{}</span>'';
+			#};
 
 			temperature = {
 				critical-threshold = 80;
