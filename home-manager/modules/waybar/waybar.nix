@@ -205,6 +205,6 @@
 			#workspaces button {
 				padding: 0 5px;
 			};
-		''
+		'';
 	};
 }
