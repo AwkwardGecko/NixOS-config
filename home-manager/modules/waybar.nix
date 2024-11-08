@@ -22,7 +22,8 @@
 			];
 			
 			modules-center = [
-				#"custom/left-arrow-light"
+				"custom/left-arrow-dark"
+				"custom/left-arrow-light"
 				"clock#1"
 				"custom/left-arrow-dark"
 				"custom/left-arrow-light"
