@@ -21,7 +21,6 @@
 			modules-left = [
 				"clock#1"
 				"clock#2"
-				"hyprland/workspaces"
 				"tray"
 			];
 			
