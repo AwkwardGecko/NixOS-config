@@ -176,7 +176,7 @@
 			};
 			
 			"custom/power" = {
-				"format" = "⏻";
+				"format" = "⏻ ";
 				"tooltip" = true;
 				"menu" = "on-click";
 				"menu-file" = "~/.dotfiles/home-manager/modules/waybar/power_menu.xml"; # Menu file in resources folder
