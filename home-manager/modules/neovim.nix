@@ -21,7 +21,6 @@
 		indent-blankline-nvim
 		gruvbox-nvim
 		gruvbox-material-nvim
-		nvim-lspconfig
 	];
 
 	# extraConfig = ''
