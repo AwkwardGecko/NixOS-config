@@ -158,7 +158,7 @@
 		style = ''
 			* {	
 				border: none;
-				border-radius: 10;
+				border-radius: 10px;
 				font-size: 15px;
 				font-family: "JetbrainsMono Nerd Font";
 			}
