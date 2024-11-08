@@ -21,14 +21,14 @@
 			# === Positions ===
 
 			"modules-left" = [
-				"custom/ws";            # window icon
-				"custom/left1";
+				"custom/ws"            # window icon
+				"custom/left1"
 
-				"hyprland/workspaces";  # workspaces
-				"custom/right1";
+				"hyprland/workspaces"  # workspaces
+				"custom/right1"
 
-				"custom/paddw";
-				"hyprland/window";       # window title
+				"custom/paddw"
+				"hyprland/window"       # window title
 			];
 
 			"modules-center" = [
