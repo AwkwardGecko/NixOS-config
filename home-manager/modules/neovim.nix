@@ -32,7 +32,6 @@
 		vim.g.mapleader = ' '
 		vim.g.maplocalleader = ' '
 		vim.o.clipboard = 'wl-copy'
-
 		vim.o.number = true
 		-- vim.o.relativenumber = true
 		vim.o.signcolumn = 'yes'
