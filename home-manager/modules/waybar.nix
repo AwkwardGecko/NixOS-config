@@ -18,7 +18,7 @@
 			modules-left = [
 				"hyprland/workspaces"
 				"tray"
-				"custom/right-arrow-dark"
+				"custom/right-arrow-light"
 			];
 			
 			modules-center = [
