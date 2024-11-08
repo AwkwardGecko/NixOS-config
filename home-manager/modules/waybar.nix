@@ -14,9 +14,9 @@
 
 			layer = "top";
 			position = "top";
-			-- height = 24;
-			-- mode = "dock";
-			-- exclusive = true;
+			# height = 24;
+			# mode = "dock";
+			# exclusive = true;
 
 			modules-left = [
 				"hyprland/workspaces"
