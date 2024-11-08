@@ -21,12 +21,14 @@
 		indent-blankline-nvim
 		gruvbox-nvim
 		gruvbox-material-nvim
+		nvim-lspconfig
 	];
 
 	# extraConfig = ''
 	#	foo
 	# '';
 
+	# e
 	extraLuaConfig = ''
 		require("ibl").setup()
 		vim.g.mapleader = ' '

@@ -79,9 +79,9 @@
     signal-desktop
     #	vlc
     #	wayland-protocols
-    wine
-    wine-wayland
-    wine-staging
+    #wine
+    #wine-wayland
+    #wine-staging
     #	winetricks
     wl-clipboard-rs
   ];
