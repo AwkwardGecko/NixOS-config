@@ -339,7 +339,7 @@
 				"format-warning" = "󰁻 {capacity}%";
 				"format-critical" = "󱃍 {capacity}%";
 				"format-charging" = "󱘖 {capacity}%";
-				"tooltip-format" = "Time to Empty: {time}"
+				"tooltip-format" = "Time to Empty: {time}";
 				"tooltip-format-charging" = "Time to Full: {time}";
 				"interval" = 1;
 				"min-length" = 6;
