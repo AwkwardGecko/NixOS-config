@@ -21,7 +21,7 @@
 			];
 			
 			modules-center = [
-				"clock"
+				"clock#1"
 			];
 			
 			modules-right = [
@@ -35,6 +35,16 @@
 		
 			"clock#1" = {
 				"format" = "{:%A %B %d %I:%M %p}";
+				"tooltip" = false;
+			};
+			
+			"clock#2" = {
+				"format" = "{:%H:%M}";
+				"tooltip" = false;
+			};
+
+			"clock#3" = {
+				"format" = "{:%B %d}";
 				"tooltip" = false;
 			};
 
