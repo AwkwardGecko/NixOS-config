@@ -21,6 +21,8 @@
   nixpkgs.config.allowUnfree = true;
   hardware.enableAllFirmware = true;
 
+  security.polkit.enable = true;
+
   imports = [
     ./hardware-configuration.nix
 
