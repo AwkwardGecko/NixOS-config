@@ -21,39 +21,6 @@
   nixpkgs.config.allowUnfree = true;
   hardware.enableAllFirmware = true;
 
-  security.polkit = {
-	enable = true;
-	extraConfig = ''
-		
-		polkit.addRule(function(action, subject) {
-			
-			if (
-				
-				subject.isInGroup("zozano")
-				&& (
-					action.id == "org.freedesktop.login1.reboot" ||
-					action.id == "org.freedesktop.login1.reboot-multiple-sessions" ||
-					action.id == "org.freedesktop.login1.power-off" ||
-					action.id == "org.freedesktop.login1.power-off-multiple-sessions"
-				)
-			)
-			
-			{
-				return polkit.Result.YES;
-			}
-
-			if (subject.isInGroup("wheel"))
-				return polkit.Result.YES;
-
-
-
-		});
-
-
-
-	'';
-  };
-
   imports = [
     ./hardware-configuration.nix
 
@@ -64,6 +31,7 @@
     ./modules/cachix.nix
     ./modules/hypr.nix
     ./modules/internationalisation.nix
+	./modules/polkit.nix
     #./modules/nixvim.nix
     ./modules/nvidia.nix
     #./modules/star-rail.nix
