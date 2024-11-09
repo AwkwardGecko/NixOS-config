@@ -21,8 +21,8 @@
     # ./modules/bluez.nix
     # ./modules/fastfetch.nix
     # ./modules/firefox.nix
-    ./modules/cursor.nix
-	./modules/fish.nix
+    # ./modules/cursor.nix
+    ./modules/fish.nix
     ./modules/fonts.nix
     ./modules/git.nix
     ./modules/gtk.nix
@@ -81,9 +81,9 @@
     signal-desktop
     #	vlc
     #	wayland-protocols
-    #wine
-    #wine-wayland
-    #wine-staging
+    #	wine
+    #	wine-wayland
+    #	wine-staging
     #	winetricks
     wl-clipboard-rs
   ];
