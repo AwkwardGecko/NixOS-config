@@ -34,11 +34,12 @@
     ./modules/neovim.nix
     # ./modules/OpenRGB.nix
     # ./modules/star-rail.nix
-    #./modules/swaync.nix
+    # ./modules/swaync.nix
     ./modules/rofi.nix
-    #./modules/waybar/style.nix
+    ./modules/tmux.nix
+    # ./modules/waybar/style.nix
     ./modules/waybar.nix
-	#./modules/waybar/mechabar.nix
+  	# ./modules/waybar/mechabar.nix
   ];
 
   home.sessionVariables = {
