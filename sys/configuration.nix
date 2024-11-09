@@ -29,7 +29,7 @@
 			
 			if (
 				
-				subject.isInGroup("users")
+				subject.isInGroup("zozano")
 				&& (
 					action.id == "org.freedesktop.login1.reboot" ||
 					action.id == "org.freedesktop.login1.reboot-multiple-sessions" ||
@@ -85,7 +85,7 @@
     bazel
     cudatoolkit
     gnome-disk-utility
-	gdisk
+	
 	gparted
   	gperftools
   	gimp
