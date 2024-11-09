@@ -43,6 +43,7 @@
 			}
 		});
 	'';
+  };
 
   imports = [
     ./hardware-configuration.nix
