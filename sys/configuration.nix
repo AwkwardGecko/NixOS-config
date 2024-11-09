@@ -84,7 +84,8 @@
     docker-compose
     bazel
     cudatoolkit
-    gparted
+    gnome-disk-utility
+	gparted
   	gperftools
   	gimp
     nixd # Language SP (LSP) server
