@@ -21,12 +21,12 @@
 				"pulseaudio" "memory" "cpu" "disk" "bluetooth" "custom/power"
 			];
 			
-			"clock#1" = {
-				format = "{:%A %B %d}";
+			"clock#date" = {
+				format = "󰨳 {:%A %B %d}";
 				tooltip = false;
 			};
 			
-			"clock#2" = {
+			"clock#time" = {
 				format = "{:%I:%M %p}";
 				tooltip = false;
 			};
@@ -39,7 +39,6 @@
 			pulseaudio = {
 				format = "{volume}% {icon}" ;
 				format-muted = "󰝟 {volume}%";
-				icon-size = 50;
 				format-icons = {
 					default = ["󰕿" "󰖀" "󰕾"];
 				};
