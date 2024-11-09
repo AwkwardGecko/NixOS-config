@@ -29,6 +29,7 @@
     ./modules/bluetooth.nix
     ./modules/boot.nix
     ./modules/cachix.nix
+	./modules/filesystem.nix
     ./modules/hypr.nix
     ./modules/internationalisation.nix
 	./modules/polkit.nix
@@ -63,7 +64,8 @@
     bazel
     cudatoolkit
     gnome-disk-utility
-	
+	libheif
+	libheif.out
 	gparted
   	gperftools
   	gimp
