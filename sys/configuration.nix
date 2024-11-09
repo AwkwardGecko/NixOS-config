@@ -85,6 +85,7 @@
     bazel
     cudatoolkit
     gnome-disk-utility
+	gdisk
 	gparted
   	gperftools
   	gimp
