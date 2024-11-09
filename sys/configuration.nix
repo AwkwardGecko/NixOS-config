@@ -89,6 +89,7 @@
 
   environment.systemPackages = with pkgs; [
 
+	bootiso
     docker
     docker-compose
     bazel
