@@ -39,7 +39,7 @@
 			pulseaudio = {
 				format = "{volume}% {icon}" ;
 				format-muted = "󰝟 {volume}%";
-				icon-size = 25;
+				icon-size = 50;
 				format-icons = {
 					default = ["󰕿" "󰖀" "󰕾"];
 				};
