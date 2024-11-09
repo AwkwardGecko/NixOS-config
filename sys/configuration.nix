@@ -60,8 +60,9 @@
     docker-compose
     bazel
     cudatoolkit
-    gperftools
-    gimp
+    gparted
+  	gperftools
+  	gimp
     nixd # Language SP (LSP) server
     nixfmt-rfc-style # used to format styles - $ nixfmt <file>.nix
     #haskellPackages.cuda
