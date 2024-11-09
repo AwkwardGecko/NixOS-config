@@ -14,30 +14,14 @@
 
 			layer = "top";
 			position = "top";
-			# height = 24;
 			# mode = "dock";
 			# exclusive = true;
 			# passthrough = false;
 			reload_style_on_change = true;
 
-			modules-left = [
-				"clock#1"
-				"clock#2"
-				"tray"
-			];
-			
-			modules-center = [
-				"hyprland/workspaces"
-			];
-			
-			modules-right = [
-				"pulseaudio"
-				"memory"
-				"cpu"
-				"disk"
-				"bluetooth"
-				"custom/power"
-			];
+			modules-left = [ "clock#1" "clock#2" "tray" ];
+			modules-center = [ "hyprland/workspaces" ];
+			modules-right = [ "pulseaudio" "memory" "cpu" "disk" "bluetooth" "custom/power" ];
 			
 			"clock#1" = {
 				format = "{:%A %B %d}";

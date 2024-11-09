@@ -21,3 +21,5 @@ SHIFT + '
 Q + number
 # move pane
 hold CTRL + B, Arrows
+
+https://www.youtube.com/watch?v=nTqu6w2wc68
