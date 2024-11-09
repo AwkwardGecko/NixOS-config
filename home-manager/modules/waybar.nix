@@ -39,7 +39,9 @@
 			pulseaudio = {
 				format = "{volume}% {icon}" ;
 				format-muted = "󰝟 {volume}%";
-				default = ["󰕿" "󰖀" "󰕾"];
+				format-icons = {
+					default = ["󰕿" "󰖀" "󰕾"];
+				};
 				on-click = "pavucontrol";
 			};
 
