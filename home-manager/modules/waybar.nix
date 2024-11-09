@@ -36,12 +36,8 @@
 				spacing = 6;
 			};
 
-			hyprland/mode = { 
-				format = ''<span style="italic">{}</span>'';
-			};
-
 			pulseaudio = {
-				format = "{volume}% {icon} " ;#{format_source}
+				format = "{volume}% {icon}" ;
 				format-source-muted = "";
 				on-click = "pavucontrol";
 			};
