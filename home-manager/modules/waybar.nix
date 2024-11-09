@@ -53,7 +53,7 @@
 			disk = {
 				interval = 30;
 				format = "{percentage_used}% 󰋊 ";
-				path = "/";
+				path = "/home";
 				tooltip = true;
 				unit = "GB";
 				tooltip-format = "Available {free} of {total}";
