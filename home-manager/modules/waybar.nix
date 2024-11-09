@@ -36,9 +36,15 @@
 				spacing = 6;
 			};
 
-			#hyprland/mode = { 
-			#	format = ''<span style="italic">{}</span>'';
-			#};
+			hyprland/mode = { 
+				format = ''<span style="italic">{}</span>'';
+			};
+
+			pulseaudio = {
+				format = "{volume}% {icon} " ;#{format_source}
+				format-source-muted = "";
+				on-click = "pavucontrol";
+			};
 
 			cpu = {
 				format = "{usage}%  ";
@@ -62,14 +68,6 @@
 				tooltip-format = "RAM - {used:0.1f}GiB used";
 			};
 			
-			pulseaudio = {
-				format = "{volume}% {icon} " ;#{format_source}
-				format-source-muted = "";
-				on-click = "pavucontrol";
-			};
-			
-
-
 			temperature = {
 				critical-threshold = 80;
 				format = "{temperatureC}°C {icon}";
