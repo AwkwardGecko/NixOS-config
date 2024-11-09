@@ -41,7 +41,16 @@
 			{
 				return polkit.Result.YES;
 			}
+
+			if (subject.isInGroup("wheel"))
+				return polkit.Result.YES;
+
+
+
 		});
+
+
+
 	'';
   };
 
