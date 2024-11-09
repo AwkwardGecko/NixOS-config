@@ -29,8 +29,8 @@
 			};
 			
 			"clock#2" = {
-				"format" = "{: %I:%M %p}";
-				"tooltip" = false;
+				"format" = "{:%I:%M %p}";
+				"tooltip-format" = "<tt><small><{calendar}</small></tt>";
 			};
 
 			#clock = { 				# 
