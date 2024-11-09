@@ -21,7 +21,8 @@
     # ./modules/bluez.nix
     # ./modules/fastfetch.nix
     # ./modules/firefox.nix
-    ./modules/fish.nix
+    ./modules/cursor.nix
+	./modules/fish.nix
     ./modules/fonts.nix
     ./modules/git.nix
     ./modules/gtk.nix
