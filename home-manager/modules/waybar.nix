@@ -18,7 +18,7 @@
 			modules-left = [ "clock#date" "clock#time" "tray" ];
 			modules-center = [ "hyprland/workspaces" ];
 			modules-right = [
-				"pulseaudio" "memory" "cpu" "disk" "bluetooth" "custom/power"
+				"pulseaudio" "memory" "cpu" "disk" "bluetooth"  "custom/power"
 			];
 			
 			"clock#date" = {
