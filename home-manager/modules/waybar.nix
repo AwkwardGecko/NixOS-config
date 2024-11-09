@@ -29,7 +29,7 @@
 			};
 			
 			"clock#2" = {
-				"format" = " { :%I:%M %p}";
+				"format" = "{  :%I:%M %p}";
 				"tooltip" = false;
 			};
 
