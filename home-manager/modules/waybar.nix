@@ -14,14 +14,12 @@
 
 			layer = "top";
 			position = "top";
-			# mode = "dock";
-			# exclusive = true;
-			# passthrough = false;
-			reload_style_on_change = true;
 
 			modules-left = [ "clock#1" "clock#2" "tray" ];
 			modules-center = [ "hyprland/workspaces" ];
-			modules-right = [ "pulseaudio" "memory" "cpu" "disk" "bluetooth" "custom/power" ];
+			modules-right = [
+				"pulseaudio" "memory" "cpu" "disk" "bluetooth" "custom/power"
+			];
 			
 			"clock#1" = {
 				format = "{:%A %B %d}";
@@ -30,50 +28,17 @@
 			
 			"clock#2" = {
 				format = "{:%I:%M %p}";
-				tooltip-format = "<tt><small><{calendar}</small></tt>";
-				calendar = {
-					mode = "year";
-					mode-mon-col = 3;
-					weeks-pos = "right";
-					on-scroll = 1;
-					
-					format = {
-						"months" = "<span color='#ffead3'><b>{}</b></span>";
-						"days" = "<span color='#ffead3'><b>{}</b></span>";
-						"weeks" = "<span color='#ffead3'><b>{}</b></span>";
-						"weekdays" = "<span color='#ffead3'><b>{}</b></span>";
-						"today" = "<span color='#ffead3'><b>{}</b></span>";
-					};
-				};
-				
-				actions = {
-					
-					on-click-right = "mode";
-					
-					on-scoll-up = [
-						"tz_up"
-						"shift_up"
-					];
-					
-					on-scroll-down = [
-						"tz_down"
-						"shift_down"
-					];
-				};
+				tooltip = false;
 			};
-
-			#clock = { 				# 
-			##	format = "{:%H:%M} ";
-			#	format-alt = " {:%Y-%m-%d} ";
-			#	tooltip-format = "<tt><small>{calendar}</small></tt>"; 
-			#	calendar = {
-
-			#};
 
 			tray = {
 				icon-size = 25;
 				spacing = 6;
 			};
+
+			#hyprland/mode = { 
+			#	format = ''<span style="italic">{}</span>'';
+			#};
 
 			cpu = {
 				format = "{usage}%  ";
@@ -103,9 +68,7 @@
 				on-click = "pavucontrol";
 			};
 			
-			#hyprland/mode = { 
-			#	format = ''<span style="italic">{}</span>'';
-			#};
+
 
 			temperature = {
 				critical-threshold = 80;
