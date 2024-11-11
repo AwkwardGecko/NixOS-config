@@ -21,6 +21,12 @@
   nixpkgs.config.allowUnfree = true;
   hardware.enableAllFirmware = true;
 
+
+{ 
+  nixpkgs.overlays = [ stable-diffusion-webui-nix.overlays.default ];
+}
+
+
   imports = [
     ./hardware-configuration.nix
 
@@ -58,7 +64,8 @@
 
   environment.systemPackages = with pkgs; [
 
-	bootiso
+stable-diffusion-webui
+bootiso
     docker
     docker-compose
     bazel

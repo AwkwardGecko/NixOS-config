@@ -6,10 +6,10 @@
 
   inputs = {
 
-    nixvim = {
-	url = "github:nix-community/nixvim";
-	inputs.nixpkgs.follows = "nixpkgs";
-    };
+	stable-diffusion-webui-nix = {
+		url = "github:Janrupf/stable-diffusion-webui-nix/main";
+		inputs.nixpkgs.follows = "nixpkgs";
+	};
 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
