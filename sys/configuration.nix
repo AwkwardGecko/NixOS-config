@@ -23,7 +23,7 @@
 
 
  
-  nixpkgs.overlays = [ stable-diffusion-webui-nix.overlays.default ];
+  nixpkgs.overlays = [ "stable-diffusion-webui-nix.overlays.default" ];
 
 
 
