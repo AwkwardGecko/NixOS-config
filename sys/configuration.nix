@@ -65,6 +65,7 @@ bootiso
     docker
     docker-compose
     bazel
+	digikam
     cudatoolkit
     gnome-disk-utility
 	libheif
