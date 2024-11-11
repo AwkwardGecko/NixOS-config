@@ -47,9 +47,9 @@
     # kdeconnect.enable = true;
     gamemode.enable = true;
   };
-{ 
+ 
   nixpkgs.overlays = [ stable-diffusion-webui-nix.overlays.default ];
-};
+
   services = {
 
     teamviewer.enable = true;
