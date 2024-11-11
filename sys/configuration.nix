@@ -81,6 +81,7 @@ bootiso
     pyenv
     pavucontrol
     wine
+	vlc
     wine-staging
     wine-wayland
   ];
