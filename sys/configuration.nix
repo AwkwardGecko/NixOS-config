@@ -72,7 +72,8 @@ bootiso
 	libheif.out
 	gparted
   	gperftools
-  	gimp
+  	qbittorrent
+	gimp
     nixd # Language SP (LSP) server
     nixfmt-rfc-style # used to format styles - $ nixfmt <file>.nix
     #haskellPackages.cuda
