@@ -21,12 +21,6 @@
   nixpkgs.config.allowUnfree = true;
   hardware.enableAllFirmware = true;
 
-
- 
-  nixpkgs.overlays = [ stable-diffusion-webui-nix ];
-
-
-
   imports = [
     ./hardware-configuration.nix
 
@@ -53,7 +47,9 @@
     # kdeconnect.enable = true;
     gamemode.enable = true;
   };
-
+{ 
+  nixpkgs.overlays = [ stable-diffusion-webui-nix.overlays.default ];
+};
   services = {
 
     teamviewer.enable = true;
