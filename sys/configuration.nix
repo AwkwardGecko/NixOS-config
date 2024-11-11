@@ -60,6 +60,7 @@
   environment.systemPackages = with pkgs; [
 
 glibc
+glibc_memusage
 bootiso
     docker
     docker-compose
