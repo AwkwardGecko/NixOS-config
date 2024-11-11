@@ -20,6 +20,8 @@
 	plugins = with pkgs.vimPlugins; [
 		indent-blankline-nvim
 		gruvbox-nvim
+		nvchad
+		nvchad-ui
 		gruvbox-material-nvim
 	];
 
