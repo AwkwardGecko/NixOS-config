@@ -20,8 +20,8 @@
 	plugins = with pkgs.vimPlugins; [
 		indent-blankline-nvim
 		gruvbox-nvim
-		nvchad
-		nvchad-ui
+		# nvchad
+		# nvchad-ui
 		gruvbox-material-nvim
 	];
 
@@ -29,7 +29,7 @@
 	#	foo
 	# '';
 
-	# e
+	# 
 	extraLuaConfig = ''
 		require("ibl").setup()
 		vim.g.mapleader = ' '

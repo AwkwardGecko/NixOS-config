@@ -22,5 +22,21 @@
 		admin@tareesc.catholic.edu.au
 
 
+	MidCoast Christian College
+		+61 2 6539 0100
+		admin@mccc.nsw.edu.au
+
+	Kempsey High School
+		+61 2 6562 6166
+		kempsey-h.school@det.nsw.edu.au	
+
+	Melville High School
+		+61 2 6562 7511 
+		melville-h.school@det.nsw.edu.au
+
+	St Paul’s Catholic Secondary College - Kempsey
+		+61 2 6562 7200
+		https://www.kmpslism.catholic.edu.au/contact
+
 
 	
