@@ -22,9 +22,9 @@
   hardware.enableAllFirmware = true;
 
 
-{ 
+ 
   nixpkgs.overlays = [ stable-diffusion-webui-nix.overlays.default ];
-}
+
 
 
   imports = [
