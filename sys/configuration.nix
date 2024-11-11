@@ -48,7 +48,6 @@
     gamemode.enable = true;
   };
  
-  nixpkgs.overlays = [ stable-diffusion-webui-nix.overlays.default ];
 
   services = {
 
@@ -60,7 +59,7 @@
 
   environment.systemPackages = with pkgs; [
 
-stable-diffusion-webui
+ldconfig
 bootiso
     docker
     docker-compose
