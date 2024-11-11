@@ -59,7 +59,7 @@
 
   environment.systemPackages = with pkgs; [
 
-ldconfig
+glibc
 bootiso
     docker
     docker-compose
