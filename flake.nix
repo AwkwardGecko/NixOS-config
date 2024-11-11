@@ -30,7 +30,6 @@
     {
       self,
       nixpkgs,
-      nixvim,
       home-manager,
       aagl,
       ...
@@ -55,7 +54,6 @@
 
               nix.settings = aagl.nixConfig;
               programs.honkers-railway-launcher.enable = true;
-		#programs.nixvim.enable = true;
             }
           ];
         };
