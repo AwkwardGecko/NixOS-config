@@ -60,7 +60,7 @@
 
   environment.systemPackages = with pkgs; [
 
-stable-diffusion-webui
+#stable-diffusion-webui
 bootiso
     docker
     docker-compose
