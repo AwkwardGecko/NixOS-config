@@ -80,6 +80,7 @@ bootiso
     #haskellPackages.torch
     python310
     pyenv
+	strawberry
     pavucontrol
     wine
 	vlc
