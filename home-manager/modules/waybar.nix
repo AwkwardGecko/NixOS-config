@@ -90,7 +90,7 @@
 
 
 			"custom/power" = {
-				"format" = "⏻ ";
+				"format" = "⏻";
 				"tooltip" = true;
 				"on-click" = "shutdown now";
 			#	"menu" = "on-click";
