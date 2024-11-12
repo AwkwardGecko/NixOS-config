@@ -18,8 +18,7 @@
 			modules-left = [ "clock#date" "clock#time" "tray" ];
 			modules-center = [ "hyprland/workspaces" ];
 			modules-right = [
-				"pulseaudio" "memory" "cpu" "disk" "bluetooth"  "custom/power"
-			];
+				"pulseaudio" "memory" "cpu" "disk" "bluetooth" "custom/power" ];
 			
 			"clock#date" = {
 				format = "󰨳 {:%A %B %d}";
@@ -90,12 +89,13 @@
 
 
 
-			#"custom/power" = {
-			#	"format" = "⏻ ";
-			#	"tooltip" = true;
+			"custom/power" = {
+				"format" = "⏻ ";
+				"tooltip" = true;
+				"on-click" = "wlogout";
 			#	"menu" = "on-click";
 			#	"menu-file" = "~/.dotfiles/home-manager/modules/waybar/power_menu.xml"; # Menu file in resources folder
-			#};
+			};
 
 			"menu-actions" = {
 				"shutdown" = "shutdown";
