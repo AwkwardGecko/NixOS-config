@@ -24,7 +24,7 @@
 
 		exec-once = [
 			"waybar"
-			"sleep 10 && openrgb --startminimized -p Default"
+			"sleep 5 && openrgb --startminimized -p Default.orp.ba"
 			"sleep 5 && signal-desktop"
 			"sleep 5 && steam -silent %U"
 			#"pypr" #???
