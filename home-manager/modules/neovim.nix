@@ -19,9 +19,8 @@
 	
 	plugins = with pkgs.vimPlugins; [
 		indent-blankline-nvim
+		nvim-lspconfig
 		gruvbox-nvim
-		# nvchad
-		# nvchad-ui
 		gruvbox-material-nvim
 	];
 
