@@ -48,7 +48,8 @@
   };
 
   home.packages = with pkgs; [
-    baobab
+    nvchad
+	baobab
     blueberry
     cryptsetup # LUKS support
     #	digikam
