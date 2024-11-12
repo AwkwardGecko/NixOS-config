@@ -48,7 +48,6 @@
   };
 
   home.packages = with pkgs; [
-    nvchad
 	baobab
     blueberry
     cryptsetup # LUKS support

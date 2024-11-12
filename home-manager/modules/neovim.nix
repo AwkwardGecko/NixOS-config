@@ -20,8 +20,20 @@
 	plugins = with pkgs.vimPlugins; [
 		indent-blankline-nvim
 		nvim-lspconfig
-		gruvbox-nvim
+		nvchad-ui
 		nvchad
+		nvim-tree-lua
+		nvim-web-devicons
+		gitsigns-nvim
+		mason-nvim
+		nvim-cmp
+		nvim-autopairs
+		snippets-nvim
+		nvim-treesitter
+		telescope-nvim
+		which-key-nvim
+		mason-lspconfig-nvim
+		gruvbox-nvim
 		gruvbox-material-nvim
 	];
 
