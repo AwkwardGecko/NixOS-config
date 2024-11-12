@@ -21,6 +21,7 @@
 		indent-blankline-nvim
 		nvim-lspconfig
 		gruvbox-nvim
+		nvchad
 		gruvbox-material-nvim
 	];
 
