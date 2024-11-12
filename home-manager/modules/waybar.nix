@@ -92,7 +92,7 @@
 			"custom/power" = {
 				"format" = "⏻ ";
 				"tooltip" = true;
-				"on-click" = "wlogout";
+				"on-click" = "shutdown";
 			#	"menu" = "on-click";
 			#	"menu-file" = "~/.dotfiles/home-manager/modules/waybar/power_menu.xml"; # Menu file in resources folder
 			};
