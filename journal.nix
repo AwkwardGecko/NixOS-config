@@ -1,5 +1,0 @@
-
-	buy new clothes
-
-		- shorts
-		-  
