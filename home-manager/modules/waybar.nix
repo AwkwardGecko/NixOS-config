@@ -15,15 +15,19 @@
 			layer = "top";
 			position = "top";
 
-			modules-left = [ "clock#date" "clock#time" "tray" "hyprland/window" ];
+			modules-left = [ "clock#date" "clock#time" "tray" "hyprland/mode" ];
 			modules-center = [ "hyprland/workspaces" ];
 			modules-right = [
 				"pulseaudio" "memory" "cpu" "disk" "bluetooth" "custom/power" ];
 			
-			"hyprland/window" = {
-				format = "{}";
-				max-length = 120;
-			};
+			"hyprland/window": {
+				"format": "👉 {}",
+				"rewrite": {
+					"(.*) — Mozilla Firefox": "🌎 $1",
+					"(.*) - fish": "> [$1]"
+				},
+				"separate-outputs": true
+			}
 
 			"clock#date" = {
 				format = "󰨳 {:%A %B %d}";
