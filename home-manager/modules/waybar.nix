@@ -15,11 +15,16 @@
 			layer = "top";
 			position = "top";
 
-			modules-left = [ "clock#date" "clock#time" "tray" ];
+			modules-left = [ "clock#date" "clock#time" "tray" "hyprland/window" ];
 			modules-center = [ "hyprland/workspaces" ];
 			modules-right = [
 				"pulseaudio" "memory" "cpu" "disk" "bluetooth" "custom/power" ];
 			
+			"hyprland/window" = {
+				format = "{}";
+				max-length = 120;
+			};
+
 			"clock#date" = {
 				format = "󰨳 {:%A %B %d}";
 				tooltip = false;
