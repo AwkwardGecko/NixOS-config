@@ -173,6 +173,7 @@
 		];
 
 		windowrulev2 = [
+			"workspace 3,class:(vlc)"
 			"workspace 9,class:(StarRail)"
 			"suppressevent maximize, class:.*"
 			"nofocus,class:^$,title:^$,wayland:1,floating:1,fullscreen:0,pinned:0"
