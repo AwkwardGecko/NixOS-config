@@ -27,7 +27,7 @@
 					"(.*) - fish" = "> [$1]";
 				};
 				"separate-outputs" = true;
-			}
+			};
 
 			"clock#date" = {
 				format = "󰨳 {:%A %B %d}";
