@@ -15,7 +15,7 @@
 			layer = "top";
 			position = "top";
 
-			modules-left = [ "clock#date" "clock#time" "tray" "hyprland/mode" ];
+			modules-left = [ "clock#date" "clock#time" "tray" "hyprland/window" ];
 			modules-center = [ "hyprland/workspaces" ];
 			modules-right = [
 				"pulseaudio" "memory" "cpu" "disk" "bluetooth" "custom/power" ];
