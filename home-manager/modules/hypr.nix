@@ -173,6 +173,7 @@
 		];
 
 		windowrulev2 = [
+			"workspace 9,class:(StarRail),title:()"
 			"suppressevent maximize, class:.*"
 			"nofocus,class:^$,title:^$,wayland:1,floating:1,fullscreen:0,pinned:0"
 		];
