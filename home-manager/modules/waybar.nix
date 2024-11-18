@@ -20,13 +20,13 @@
 			modules-right = [
 				"pulseaudio" "memory" "cpu" "disk" "bluetooth" "custom/power" ];
 			
-			"hyprland/window": {
-				"format": "👉 {}",
-				"rewrite": {
-					"(.*) — Mozilla Firefox": "🌎 $1",
-					"(.*) - fish": "> [$1]"
+			"hyprland/window" = {
+				"format" = "👉 {}",
+				"rewrite" = {
+					"(.*) — Mozilla Firefox" = "🌎 $1",
+					"(.*) - fish" = "> [$1]"
 				},
-				"separate-outputs": true
+				"separate-outputs" = true
 			}
 
 			"clock#date" = {
