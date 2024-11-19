@@ -21,13 +21,13 @@
 				"pulseaudio" "memory" "cpu" "disk" "bluetooth" "custom/power" ];
 			
 			"hyprland/window" = {
-				format = "{class}";
+				format = "{initialTitle}";
 				max-length = 40;
 				# rewrite = {
 					# "(.*) — Mozilla Firefox" = "🌎 $1";
 					# "(.*) - fish" = "> [$1]";
 				# };
-				#"all-outputs" = true;
+				"separate-outputs" = true;
 			};
 
 			"clock#date" = {
