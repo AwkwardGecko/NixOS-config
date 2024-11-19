@@ -21,7 +21,7 @@
 				"pulseaudio" "memory" "cpu" "disk" "bluetooth" "custom/power" ];
 			
 			"hyprland/window" = {
-				format = {title};
+				format = "{class}";
 				max-length = 40;
 				# rewrite = {
 					# "(.*) — Mozilla Firefox" = "🌎 $1";
