@@ -1,6 +1,3 @@
-
-
-
 tmux new -s <nameOfSession>
 
 tmux a #connect to last session
