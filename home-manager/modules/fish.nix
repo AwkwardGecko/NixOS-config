@@ -14,5 +14,4 @@
 		}
 	};
 
-	programs.fastfetch.enable = true;
 }

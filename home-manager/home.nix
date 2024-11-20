@@ -53,7 +53,8 @@
     cryptsetup # LUKS support
     #	digikam
     #	dualsensectl
-    #	gimp
+    	fastfetch
+	#	gimp
     #	git
     #	google-chrome
     grimblast
