@@ -10,8 +10,8 @@
 		shellInit = "cd .dotfiles/";
 		shellInitLast = "fastfetch";
 		plugins = {
-			gruvbox
-		}
+			gruvbox = enable;
+		};
 	};
 
 }
