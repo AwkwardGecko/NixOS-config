@@ -11,7 +11,7 @@
 		shellInitLast = "fastfetch";
 		plugins = {
 			gruvbox
-		};
+		}
 	};
 
 	programs.fastfetch.enable = true;
