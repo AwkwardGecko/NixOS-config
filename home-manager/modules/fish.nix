@@ -7,6 +7,7 @@
 
 	programs.fish = {
 		enable = true;
+		shellInit = "cd .dotfiles/";
 		shellInitLast = "fastfetch";
 	};
 
