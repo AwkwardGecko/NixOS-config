@@ -9,9 +9,9 @@
 		enable = true;
 		shellInit = "cd .dotfiles/";
 		shellInitLast = "fastfetch";
-		plugins = with pkgs.fishPlugins; [
+		plugins = {
 			gruvbox
-		];
+		};
 	};
 
 	programs.fastfetch.enable = true;
