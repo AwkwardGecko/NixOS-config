@@ -50,8 +50,8 @@
  
 
   services = {
-	jellyfin.enable = true;
-    teamviewer.enable = true;
+    jellyfin.enable = true;
+	teamviewer.enable = true;
     hardware.openrgb.enable = true;
   };
 
@@ -68,6 +68,7 @@ bootiso
 	digikam
     cudatoolkit
     gnome-disk-utility
+	jellyfin-media-player
 	libheif
 	libheif.out
 	gparted
