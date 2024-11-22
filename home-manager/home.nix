@@ -68,7 +68,6 @@
     	htop
     #	hyprpaper
     #	hyprshot
-    	jellyfin-media-player
     #	plasma5Packages.kdeconnect-kde
     #	lua
     #	lua54Packages.luarocks-nix
