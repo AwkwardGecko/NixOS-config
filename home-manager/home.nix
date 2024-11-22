@@ -48,7 +48,7 @@
   };
 
 	home.file = {
-		".local/share/applications/start.sh".source = source/local/applications/start.sh;
+		".local/share/applications/start.sh".source = source/local/share/applications/start.sh;
 	};
 
   home.packages = with pkgs; [
