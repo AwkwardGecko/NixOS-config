@@ -50,7 +50,6 @@
  
 
   services = {
-    jellyfin.enable = true;
 	teamviewer.enable = true;
     hardware.openrgb.enable = true;
   };
