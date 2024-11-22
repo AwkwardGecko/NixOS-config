@@ -1,8 +1,8 @@
 [Desktop Entry]
-Name=Steam Linux Runtime 1.0 (scout)
-Comment=Play this game on Steam
-Exec=steam steam://rungameid/1070560
-Icon=steam
-Terminal=false
+Name=Diffusion
+Comment=Stable Diffusion
+Exec=~/.local/share/applications/start.sh
+Icon=
+Terminal=true
 Type=Application
-Categories=Game;
+Categories=Media;
