@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Jellyfin Media Player
+Comment=Stable Diffusion
+Exec=jellyfin-media-player --platform=xcb
+Icon=jellyfin
+Terminal=true
+Type=Application
+Categories=Media;
