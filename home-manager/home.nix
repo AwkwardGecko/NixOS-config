@@ -49,6 +49,7 @@
 
 	home.file = {
 		".local/share/applications/start.sh".source = source/local/share/applications/start.sh;
+		".local/share/applications/diffusion.desktop".source = source/local/share/applications/diffusion.desktop;
 	};
 
   home.packages = with pkgs; [
