@@ -47,6 +47,10 @@
     NIXOS_OZONE_WL = "1"; # Wayland Electron support
   };
 
+	home.file = {
+		".local/share/applications/start.sh".source = source/local/applications/start.sh;
+	};
+
   home.packages = with pkgs; [
 	baobab
     blueberry
