@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Jellyfin Media Player
-Exec=jellyfin-media-player --platform=xcb
+Exec=/home/zozano/.local/share/applications/jellyfin.sh --platform=xcb
 Icon=jellyfin-media-player
 Terminal=true
 Type=Application
