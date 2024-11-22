@@ -2,7 +2,7 @@
 Name=Jellyfin Media Player
 Comment=Stable Diffusion
 Exec=jellyfin-media-player --platform=xcb
-Icon=jellyfin
+Icon=jellyfin-media-player
 Terminal=true
 Type=Application
 Categories=Media;
