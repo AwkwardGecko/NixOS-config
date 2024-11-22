@@ -50,8 +50,8 @@
 
 	home.file = {
 		".local/share/applications".source = source/local/share/application;
-		".local/share/applications/diffusion.desktop".source = source/local/share/applications/diffusion.desktop;
-		".local/share/applications/jellyfin.desktop".source = source/local/share/applications/jellyfin.desktop;
+		#".local/share/applications/diffusion.desktop".source = source/local/share/applications/diffusion.desktop;
+		#".local/share/applications/jellyfin.desktop".source = source/local/share/applications/jellyfin.desktop;
 	};
 
   home.packages = with pkgs; [
