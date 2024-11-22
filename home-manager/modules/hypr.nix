@@ -175,6 +175,7 @@
 		windowrulev2 = [
 			"workspace 1,class:(firefox)"
 			"workspace 9,title:(Star Rail)"
+			"workspace 9,title:(Valheim)"
 			"suppressevent maximize, class:.*"
 			"nofocus,class:^$,title:^$,wayland:1,floating:1,fullscreen:0,pinned:0"
 		];
