@@ -68,7 +68,6 @@ bootiso
 	digikam
     cudatoolkit
     gnome-disk-utility
-	jellyfin
 	jellyfin-web
 	jellyfin-media-player
 	libheif
