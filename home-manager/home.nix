@@ -85,7 +85,8 @@
     #	qt6ct # QT support
     	ripgrep # something for nvim
     #	rofi-wayland
-    shotwell
+    protonup-qt
+	shotwell
     signal-desktop
     #	vlc
     #	wayland-protocols
