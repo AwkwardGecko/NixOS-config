@@ -1,3 +1,3 @@
-#!~/.nix-profile/bin/bash
+#!/run/current-system/sw/bin/bash
 
 jellyfinmediaplayer --platform=xcb
