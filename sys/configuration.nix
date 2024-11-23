@@ -79,7 +79,7 @@ bootiso
 	gimp
     nixd # Language SP (LSP) server
     nixfmt-rfc-style # used to format styles - $ nixfmt <file>.nix
-    haskellPackages.cuda
+    #haskellPackages.cuda
     #haskellPackages.torch
     python310
     pyenv
