@@ -67,10 +67,6 @@ bootiso
 	digikam
     cudatoolkit
     gnome-disk-utility
-	jellyfin
-	jellyfin-ffmpeg
-	jellyfin-web
-	jellyfin-media-player
 	libheif
 	libheif.out
 	gparted
