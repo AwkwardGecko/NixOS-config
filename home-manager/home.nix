@@ -69,7 +69,8 @@
     	htop
     #	hyprpaper
     #	hyprshot
-    #	plasma5Packages.kdeconnect-kde
+    jellyfin-web
+	#	plasma5Packages.kdeconnect-kde
     #	lua
     #	lua54Packages.luarocks-nix
     #	lutris
