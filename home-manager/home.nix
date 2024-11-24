@@ -45,7 +45,7 @@
   home.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d"; # Add custon Proton versions to Steam
     NIXOS_OZONE_WL = "1"; # Wayland Electron support
-	QT_QPA_PLATFORM=wayland-egl;
+	#QT_QPA_PLATFORM=wayland-egl;
   };
 
 	home.file = {
@@ -73,7 +73,8 @@
     #	lua
     #	lua54Packages.luarocks-nix
     #	lutris
-    nautilus # file browser
+    mesa
+	nautilus # file browser
     #	nettools
     #	networkmanagerapplet
     #	nwg-look # ???
