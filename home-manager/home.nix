@@ -71,7 +71,8 @@
     #	hyprshot
     jellyfin-web
 	#	plasma5Packages.kdeconnect-kde
-    #	lua
+    libva
+	#	lua
     #	lua54Packages.luarocks-nix
     #	lutris
     mesa
