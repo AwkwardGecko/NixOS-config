@@ -65,6 +65,7 @@
     #	git
     #	google-chrome
     grimblast
+	grc
     	htop
     #	hyprpaper
     #	hyprshot

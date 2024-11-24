@@ -66,7 +66,6 @@ bootiso
     bazel
 	digikam
     cudatoolkit
-	cudnn
     gnome-disk-utility
 	libheif
 	libheif.out
