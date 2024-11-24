@@ -45,7 +45,7 @@
   home.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d"; # Add custon Proton versions to Steam
     NIXOS_OZONE_WL = "1"; # Wayland Electron support
-	QT_QPA_PLATFORM=wayland-egl;
+	QT_QPA_PLATFORM=egl-wayland;
   };
 
 	home.file = {
