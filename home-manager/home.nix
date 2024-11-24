@@ -88,6 +88,7 @@
     	ripgrep # something for nvim
     #	rofi-wayland
     jellyfin-media-player
+	qt5ct
 	protonup-qt
 	shotwell
     signal-desktop
