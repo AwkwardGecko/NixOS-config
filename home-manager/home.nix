@@ -99,7 +99,7 @@
     #	wine-staging
     #	winetricks
     wl-clipboard-rs
-	xcbeautify # colour support for wayland? 
+	#xcbeautify # colour support for wayland? 
   ];
 
   programs.home-manager.enable = true;
