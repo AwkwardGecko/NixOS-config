@@ -84,11 +84,11 @@
     #	python312Packages.pip
     #	pipx	
     #	qbittorrent
-    #	qt6ct # QT support
+    	qt6ct # QT support
     	ripgrep # something for nvim
     #	rofi-wayland
     jellyfin-media-player
-	qt5ct
+	#qt5ct
 	protonup-qt
 	shotwell
     signal-desktop
