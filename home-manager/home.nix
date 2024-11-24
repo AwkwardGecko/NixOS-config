@@ -62,6 +62,7 @@
     #	digikam
     #	dualsensectl
     	fastfetch
+		flathub
 		flatpak
 	#	gimp
     #	git
