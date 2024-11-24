@@ -91,7 +91,8 @@
 	shotwell
     signal-desktop
     #	vlc
-    #	wayland-protocols
+	egl-wayland
+    wayland-protocols
     #	wine
     #	wine-wayland
     #	wine-staging
