@@ -95,7 +95,6 @@
 	#qt5ct
 	protonup-qt
 	shotwell
-	rustdesk
     signal-desktop
     #	vlc
 	egl-wayland

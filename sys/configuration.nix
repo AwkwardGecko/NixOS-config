@@ -80,7 +80,8 @@ bootiso
     python310
     pyenv
 	strawberry
-    pavucontrol
+    rustdesk
+	pavucontrol
     wine
 	vlc
     wine-staging
