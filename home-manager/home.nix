@@ -84,7 +84,7 @@
     #	nwg-look # ???
     #	protonvpn-gui
     #	pyprland # python support for Hyprland
-    #	python3
+    	python3
     #	python312Packages.pip
     	pipx	
     #	qbittorrent
