@@ -68,7 +68,8 @@
     #	google-chrome
     grimblast
 	grc
-    	htop
+    home-assistant-component-tests.tuya
+	htop
     #	hyprpaper
     #	hyprshot
     jellyfin-web
