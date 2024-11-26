@@ -86,7 +86,8 @@
     #	pyprland # python support for Hyprland
     	python3
     #	python312Packages.pip
-    	pipx	
+   		pip
+   		pipx	
     #	qbittorrent
     	qt6ct # QT support
     	ripgrep # something for nvim
