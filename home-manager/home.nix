@@ -86,7 +86,6 @@
     #	pyprland # python support for Hyprland
     	python3
     #	python312Packages.pip
-   		pip
    		pipx	
     #	qbittorrent
     	qt6ct # QT support
