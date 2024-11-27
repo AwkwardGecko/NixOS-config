@@ -7,7 +7,7 @@
 
 	programs.fish = {
 		enable = true;
-		shellInit = "cd .dotfiles/";
+		shellInit = "cd ~/.dotfiles/";
 		shellInitLast = "fastfetch";
 		plugins = [
 			{ name = "gruvbox"; src = pkgs.fishPlugins.gruvbox.src;}
