@@ -28,6 +28,7 @@
 		mason-nvim
 		nvim-cmp
 		nvim-autopairs
+		nvchad-ui
 		snippets-nvim
 		nvim-treesitter
 		telescope-nvim
