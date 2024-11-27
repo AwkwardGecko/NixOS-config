@@ -14,6 +14,7 @@
 		fira-code-symbols
 		font-awesome
 		#gyre-fonts
+		jetbrains-mono
 		liberation_ttf
 		#ipafont
 		mplus-outline-fonts.githubRelease
