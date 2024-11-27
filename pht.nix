@@ -1,0 +1,23 @@
+D
+A
+D
+D
+A
+D
+D
+D
+A
+D
+A
+free will exists
+A
+A
+D
+A
+D
+D
+A
+A
+D
+A
+A
