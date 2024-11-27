@@ -13,7 +13,7 @@
 			shell = "fish";
 		};
 
-		font.name = "JetBrainsMono"
+		font.name = "JetBrains Mono Nerd"
 		themeFile = "GruvboxMaterialDarkMedium";
 	};
 }
