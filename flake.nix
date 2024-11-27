@@ -10,23 +10,29 @@
 		url = "github:Janrupf/stable-diffusion-webui-nix/main";
 		inputs.nixpkgs.follows = "nixpkgs";
 	};
+	
+	nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+	nix-colors.url = "github:misterio77/nix-colors";
 
-    nix-colors.url = "github:misterio77/nix-colors";
+	nvchad4nix = {
+		url = "github:nix-community/nix4nvchad";
+		inputs.nixpkgs.follows = "nixpkgs";
+	};
 
-    home-manager = {
-      url = "github:nix-community/home-manager/master";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+	home-manager = {
+		url = "github:nix-community/home-manager/master";
+		inputs.nixpkgs.follows = "nixpkgs";
+	};
 
-    aagl = {
-      url = "github:ezKEa/aagl-gtk-on-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+	aagl = {
+		url = "github:ezKEa/aagl-gtk-on-nix";
+		inputs.nixpkgs.follows = "nixpkgs";
+	};
+
   };
 
-  outputs =
+	outputs =
     {
       self,
       nixpkgs,
