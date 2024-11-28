@@ -94,7 +94,7 @@
     ];
 
     extraLuaConfig = ''
-      ${builtins.readFile ./nvim/options.lua}
+      ${builtins.readFile ./options.lua}
     '';
 
     # extraLuaConfig = ''
