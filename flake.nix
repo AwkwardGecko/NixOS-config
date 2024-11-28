@@ -39,7 +39,7 @@
     let
       lib = nixpkgs.lib;
       pkgs = {
-	  	nixpkgs.legacyPackages.${system}
+	  	#nixpkgs.legacyPackages.${system}
 		import nixpkgs {
 			inherit system;
 		};
