@@ -9,19 +9,6 @@
   ...
 }:
 
-  nixpkgs = {
-    overlays = [
-      (final: prev: {
-        vimPlugins = prev.vimPlugins // {
-          own-onedark-nvim = prev.vimUtils.buildVimPlugin {
-            name = "onedark";
-            src = inputs.plugin-onedark;
-          };
-        };
-      })
-    ];
-  };
-
   programs.neovim = 
   let
     toLua = str: "lua << EOF\n${str}\nEOF\n";

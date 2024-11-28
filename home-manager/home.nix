@@ -13,10 +13,25 @@
   pkgs,
   ...
 }:
+
+  nixpkgs = {
+    overlays = [
+      (final: prev: {
+        vimPlugins = prev.vimPlugins // {
+          own-onedark-nvim = prev.vimUtils.buildVimPlugin {
+            name = "onedark";
+            src = inputs.plugin-onedark;
+          };
+        };
+      })
+    ];
+  };
+
+
+
 {
 
   imports = [
-    inputs.nix-colors.homeManagerModules.default
     # ./modules/applications.nix
     # ./modules/bluez.nix
     # ./modules/fastfetch.nix
