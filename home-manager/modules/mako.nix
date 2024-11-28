@@ -5,8 +5,6 @@
 
 	{ config, pkgs, inputs, lib, ... }: {
 
-	colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
-
 	services.mako = {
 		enable = true; # notification daemon
 		defaultTimeout = 20000;
