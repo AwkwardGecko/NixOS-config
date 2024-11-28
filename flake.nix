@@ -20,6 +20,10 @@
 		inputs.nixpkgs.follows = "nixpkgs";
 	};
 
+nixvim = {
+  url = "github:nix-community/nixvim";
+  inputs.nixpkgs.follows = "nixpkgs";
+  };
 
     plugin-onedark.url = "github:navarasu/onedark.nvim";
     plugin-onedark.flake = false;
