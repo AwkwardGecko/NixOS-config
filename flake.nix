@@ -15,11 +15,6 @@
 
 	nix-colors.url = "github:misterio77/nix-colors";
 
-	nvchad4nix = {
-		url = "github:nix-community/nix4nvchad";
-		inputs.nixpkgs.follows = "nixpkgs";
-	};
-
 	home-manager = {
 		url = "github:nix-community/home-manager/master";
 		inputs.nixpkgs.follows = "nixpkgs";

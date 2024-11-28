@@ -31,7 +31,7 @@
     #./modules/terminal.nix
     ./modules/mako.nix
     # ./modules/mangohud.nix
-    ./modules/neovim.nix
+    ./modules/neovim/neovim.nix
     # ./modules/OpenRGB.nix
     # ./modules/star-rail.nix
     # ./modules/swaync.nix
