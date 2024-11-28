@@ -82,7 +82,7 @@
           p.tree-sitter-python
           p.tree-sitter-json
         ]));
-        config = toLuaFile ./nvim/plugin/treesitter.lua;
+        config = toLuaFile ./plugin/treesitter.lua;
       }
 
       vim-nix
