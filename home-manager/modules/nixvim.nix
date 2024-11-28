@@ -2,7 +2,8 @@
   config,
   pkgs,
   lib,
-  ...
+  inputs,
+...
 }:
 {
   inputs.nixvim = {
