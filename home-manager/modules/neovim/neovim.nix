@@ -1,4 +1,4 @@
-###########
+##############
 ### NEOVIM ###
 ##############
 
@@ -25,7 +25,6 @@
 
     extraPackages = with pkgs; [
       lua-language-server
-      rnix-hashes
 
       xclip
       wl-clipboard
