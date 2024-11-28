@@ -47,7 +47,8 @@
 		nvim-tree-lua
 		nvim-web-devicons
 		
-		nvim-lspconfig # Vimjoyer recommended
+		{ plugin = nvim-lspconfig; # Vimjoyer recommended
+			config = toLuaFile ./neovim/plugin/lsp.lua; }
 		
 		nvim-luasnip # Vimjoyer recommended
 		friendly-snippets
