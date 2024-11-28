@@ -25,7 +25,6 @@
 
     extraPackages = with pkgs; [
       lua-language-server
-      nix-lsp
 
       xclip
       wl-clipboard
