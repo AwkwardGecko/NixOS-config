@@ -53,12 +53,12 @@
       nvim-cmp 
       {
         plugin = nvim-cmp;
-        config = toLuaFile ./nvim/plugin/cmp.lua;
+        config = toLuaFile ./plugin/cmp.lua;
       }
 
       {
         plugin = telescope-nvim;
-        config = toLuaFile ./nvim/plugin/telescope.lua;
+        config = toLuaFile ./plugin/telescope.lua;
       }
 
       telescope-fzf-native-nvim
