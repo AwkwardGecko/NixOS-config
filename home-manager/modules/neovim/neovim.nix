@@ -8,6 +8,12 @@
   lib,
   ...
 }:
+
+	let
+		toLua = str: "lua << EOF\n${str}\nEOF\n";
+		toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n"
+	in
+
 {
   programs.neovim = {
 
@@ -17,10 +23,7 @@
 	vimAlias = true;
 	vimdiffAlias = true;
 
-	let
-		toLua = str: "lua << EOF\n${str}\nEOF\n";
-		toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n"
-	in
+
 
 	plugins = with pkgs.vimPlugins; [
 		
