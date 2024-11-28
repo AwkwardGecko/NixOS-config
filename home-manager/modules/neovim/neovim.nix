@@ -106,3 +106,4 @@
     #   ${builtins.readFile ./nvim/plugin/other.lua}
     # '';
   };
+};
