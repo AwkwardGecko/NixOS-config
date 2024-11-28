@@ -6,11 +6,6 @@
 
   inputs = {
 
-	stable-diffusion-webui-nix = {
-		url = "github:Janrupf/stable-diffusion-webui-nix/main";
-		inputs.nixpkgs.follows = "nixpkgs";
-	};
-	
 	nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
 	nix-colors.url = "github:misterio77/nix-colors";
@@ -25,6 +20,11 @@
 		inputs.nixpkgs.follows = "nixpkgs";
 	};
 
+
+    plugin-onedark.url = "github:navarasu/onedark.nvim";
+    plugin-onedark.flake = false;
+
+
   };
 
 	outputs =
@@ -38,8 +38,13 @@
 
     let
       lib = nixpkgs.lib;
-      pkgs = nixpkgs.legacyPackages.${system};
-      system = "x86_64-linux";
+      pkgs = {
+	  	nixpkgs.legacyPackages.${system};
+		import nixpkgs {
+			inherit system;
+		};
+	  };
+      # system = "x86_64-linux";
     in
     {
       nixosConfigurations = {
