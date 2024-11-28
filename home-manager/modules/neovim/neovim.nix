@@ -16,18 +16,26 @@
 	viAlias = true;
 	vimAlias = true;
 	vimdiffAlias = true;
-	
+
+	let
+		toLua = str: "lua << EOF\n${str}\nEOF\n";
+		toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n"
+	in
+
 	plugins = with pkgs.vimPlugins; [
-		comment-nvim # Vimjoyer recommended
+		
+		{ plugin = comment-nvim; # Vimjoyer recommended
+			config = toLua "require(\"Comment\").setup()";}
 
 		cmp_luasnip # Vimjoyer recommended
 		cmp-nvim-lsp # Vimjoyer recommended
 
-		indent-blankline-nvim
+		{ plugin = gruvbox-material-nvim;
+			config = "gruvbox_material_background = 'hard'";}
 
-		gruvbox-material-nvim
 
-		gruvbox-nvim
+		{ plugin = gruvbox-nvim;
+			config = "colorscheme gruvbox";}
 
 		lualine-nvim
 
@@ -79,8 +87,6 @@
 		vim.o.updatetime = 300
 		vim.o.mouse = 'a'
 		vim.o.termguicolors = true
-		vim.cmd('colorscheme gruvbox')
-		vim.g.gruvbox_material_background = 'hard'
 	'';
   };
 }
