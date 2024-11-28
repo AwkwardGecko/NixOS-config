@@ -5,7 +5,7 @@
 
 	{ config, pkgs, inputs, lib, ... }: {
 
-	colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
+	#colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
 
 	services.mako = {
 		enable = true; # notification daemon
