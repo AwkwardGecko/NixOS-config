@@ -38,11 +38,11 @@
 
     let
       lib = nixpkgs.lib;
-      pkgs = import nixpkgs {
-	  	#nixpkgs.legacyPackages.${system}
+      pkgs = 
+	  #nixpkgs.legacyPackages.${system}
 			inherit system;
 		};
-		# system = "x86_64-linux";
+		 system = "x86_64-linux";
     in
     {
       nixosConfigurations = {
