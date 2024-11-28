@@ -49,7 +49,7 @@
 		
 		nvim-lspconfig # Vimjoyer recommended
 		
-		nvim_luasnip # Vimjoyer recommended
+		nvim-luasnip # Vimjoyer recommended
 		friendly-snippets
 
 		telescope-nvim
