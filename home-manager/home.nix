@@ -14,7 +14,9 @@
   ...
 }:
 
+{
 
+  nixpkgs = {
     overlays = [
       (final: prev: {
         vimPlugins = prev.vimPlugins // {
@@ -25,11 +27,8 @@
         };
       })
     ];
+  };
 
-
-
-
-{
 
   imports = [
     # ./modules/applications.nix
