@@ -48,9 +48,9 @@
 		nvim-web-devicons
 		
 		{ plugin = nvim-lspconfig; # Vimjoyer recommended
-			config = toLuaFile ./neovim/plugin/lsp.lua; }
+			config = toLuaFile ./neovim/plugin/lsp.lua;}
 		
-		nvim-luasnip # Vimjoyer recommended
+		# nvim_luasnip # Vimjoyer recommended, not working?
 		friendly-snippets
 
 		telescope-nvim
