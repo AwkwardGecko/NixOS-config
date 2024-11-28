@@ -32,7 +32,6 @@
 		lualine-nvim
 
 		nvim-cmp # Vimjoyer recommended
-		nvim-cmp; # Vimjoyer recommended
 
 		nvim-tree-lua
 		nvim-web-devicons
@@ -45,6 +44,8 @@
 		telescope-nvim
 		telescope-fzf-native-nvim
 		
+		vim-nix
+
 		(nvim-treesitter.withPlugins (p: [
 			p.tree-sitter-nix
 			p.tree-sitter-vim
