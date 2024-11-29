@@ -62,6 +62,10 @@
 glibc
 glibc_memusage
 bootiso
+    bluez
+    bluez-alsa
+    bluez-tools
+
     docker
     docker-compose
     bazel
