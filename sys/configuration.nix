@@ -19,7 +19,7 @@
   networking.hostName = "z-nixos";
   networking.networkmanager.enable = true;
   nixpkgs.config.allowUnfree = true;
-  #hardware.enableAllFirmware = true;
+  hardware.enableAllFirmware = true;
   xdg.autostart.enable = true;
 
   imports = [
