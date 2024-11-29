@@ -20,7 +20,7 @@
         bluez-alsa
         bluetuith # can transfer files via OBEX
       ];
-};}
+};
 
 
    #    hardware.bluetooth = {
