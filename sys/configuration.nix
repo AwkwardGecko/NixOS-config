@@ -85,6 +85,7 @@ bootiso
     nixfmt-rfc-style # used to format styles - $ nixfmt <file>.nix
     unixtools.ifconfig
     nettools
+    iproute2
     #haskellPackages.cuda
     #haskellPackages.torch
     python310
