@@ -63,6 +63,7 @@
 glibc
 glibc_memusage
 bootiso
+btmon
     #bluez
     #bluez-alsa
     #bluez-tools
