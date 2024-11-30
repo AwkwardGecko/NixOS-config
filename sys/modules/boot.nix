@@ -10,7 +10,7 @@
         efi.canTouchEfiVariables = true;
     };
 
-    boot.extraModulePackages = with config.boot.kernelPackages; [
+    boot.kernelParams = [
         btusb
     ];
 }
