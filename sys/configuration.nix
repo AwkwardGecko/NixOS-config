@@ -63,8 +63,8 @@
 glibc
 glibc_memusage
 bootiso
-btmon
-    #bluez
+    #btmon
+    bluez-experimental
     #bluez-alsa
     #bluez-tools
     docker
