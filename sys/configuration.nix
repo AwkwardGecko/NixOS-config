@@ -22,6 +22,8 @@
   #hardware.enableAllFirmware = true;
   #hardware.xpadneo.enable = true;
   #xdg.autostart.enable = true;
+  services.blueman.enable = true;
+  services.blueman-applet.enable = true;
 
   imports = [
     ./hardware-configuration.nix
