@@ -10,7 +10,7 @@
         efi.canTouchEfiVariables = true;
     };
 
-    boot.kernelParams = [
-        btusb
-    ];
+    # boot.kernelParams = [
+    #     btusb
+    # ];
 }
