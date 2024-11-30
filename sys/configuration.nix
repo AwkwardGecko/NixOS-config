@@ -20,6 +20,7 @@
   networking.networkmanager.enable = true;
   nixpkgs.config.allowUnfree = true;
   hardware.enableAllFirmware = true;
+  hardware.xpadneo.enable = true;
   xdg.autostart.enable = true;
 
   imports = [
