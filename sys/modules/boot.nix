@@ -11,7 +11,10 @@
     };
 
     boot.initrd.kernelModules = [
-        "usbhid" "btush" "joydev" "xpad"
+        "usbhid"
+        "btusb"
+        "joydev"
+        "xpad"
     ];
     # boot.kernelParams = [
     #     btusb
