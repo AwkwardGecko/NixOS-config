@@ -83,6 +83,7 @@ bootiso
 	gimp
     nixd # Language SP (LSP) server
     nixfmt-rfc-style # used to format styles - $ nixfmt <file>.nix
+    unixtools.ifconfig
     nettools
     #haskellPackages.cuda
     #haskellPackages.torch
