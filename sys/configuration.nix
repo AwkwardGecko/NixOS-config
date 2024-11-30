@@ -19,9 +19,9 @@
   networking.hostName = "z-nixos";
   networking.networkmanager.enable = true;
   nixpkgs.config.allowUnfree = true;
-  hardware.enableAllFirmware = true;
-  hardware.xpadneo.enable = true;
-  xdg.autostart.enable = true;
+  #hardware.enableAllFirmware = true;
+  #hardware.xpadneo.enable = true;
+  #xdg.autostart.enable = true;
 
   imports = [
     ./hardware-configuration.nix
@@ -63,10 +63,9 @@
 glibc
 glibc_memusage
 bootiso
-    bluez
-    bluez-alsa
-    bluez-tools
-
+    #bluez
+    #bluez-alsa
+    #bluez-tools
     docker
     docker-compose
     bazel
