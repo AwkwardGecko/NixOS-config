@@ -10,6 +10,9 @@
         efi.canTouchEfiVariables = true;
     };
 
+    boot.initrd.kernelModules = [
+        "usbhid" "btush" "joydev" "xpad"
+    ];
     # boot.kernelParams = [
     #     btusb
     # ];

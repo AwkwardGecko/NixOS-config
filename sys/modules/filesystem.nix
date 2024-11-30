@@ -5,7 +5,7 @@
 
 	{ config, pkgs, lib, ... }: {
 
-      # services.gvfs.enable = true;
+    services.gvfs.enable = true;
 
 	environment.pathsToLink = [ "share/thumbnailers" ];
 }
