@@ -65,9 +65,9 @@ glibc
 glibc_memusage
 bootiso
     #btmon
-    bluez-experimental
-    bluez-alsa
-    bluez-tools
+    #bluez-experimental
+    #bluez-alsa
+    #bluez-tools
     docker
     docker-compose
     bazel
