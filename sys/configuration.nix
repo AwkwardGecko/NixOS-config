@@ -22,14 +22,13 @@
   hardware.enableAllFirmware = true;
   hardware.xpadneo.enable = true;
   xdg.autostart.enable = true;
-  #services.blueman-applet.enable = true;
 
   imports = [
     ./hardware-configuration.nix
 
     ./modules/audio.nix
     ./modules/autologin.nix
-    ./modules/bluetooth.nix
+    #./modules/bluetooth.nix
     ./modules/boot.nix
     ./modules/cachix.nix
 	./modules/filesystem.nix

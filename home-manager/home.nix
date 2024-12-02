@@ -36,6 +36,7 @@
     # ./modules/fastfetch.nix
     # ./modules/firefox.nix
     # ./modules/cursor.nix
+    ./../sys/modules/bluetooth.nix
     ./modules/fish.nix
     ./modules/fonts.nix
     ./modules/git.nix
