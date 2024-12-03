@@ -58,7 +58,7 @@
   home.packages = with pkgs; [
 	baobab
     #blueberry
-    clementine
+    #clementine
     cryptsetup # LUKS support
     #	digikam
     #	dualsensectl
@@ -77,6 +77,7 @@
 	#	plasma5Packages.kdeconnect-kde
     krusader # file manager 
     krename # batch renamer for krusader
+    libmusicbrainz
     libva
 	#	lua
     #	lua54Packages.luarocks-nix
