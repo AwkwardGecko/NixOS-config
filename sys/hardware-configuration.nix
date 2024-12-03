@@ -37,7 +37,7 @@
   fileSystems."/server" =
     { device = "sftp://z-home@192.168.1.157/home/z-home";
       fsType = "fuse.sshfs";
-      options = [ "port=421" "nofail" "password_stdin" "_netdev" ];
+      options = [ "port=421" "nofail" "_netdev" ];
     };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
