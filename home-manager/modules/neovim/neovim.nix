@@ -44,7 +44,7 @@
 
       {
         plugin = indent-blankline-nvim;
-        config = "require("ibl").setup()";
+        config = toLua "require("ibl").setup()";
       }
 
       {
