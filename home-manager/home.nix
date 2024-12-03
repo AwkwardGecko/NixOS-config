@@ -52,7 +52,7 @@
     # ./modules/waybar/style.nix
     ./modules/waybar.nix
     # ./modules/waybar/mechabar.nix
-    ./modules/xserver.nix
+    #./modules/xserver.nix
   ];
 
   home.sessionVariables = {
