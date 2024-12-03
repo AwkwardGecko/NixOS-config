@@ -33,7 +33,7 @@
     # ./modules/OpenRGB.nix
     ./modules/ranger.nix
     # ./modules/star-rail.nix
-    ./modules/style.nix
+    #./modules/style.nix
     # ./modules/swaync.nix
     ./modules/rofi.nix
     ./modules/tmux.nix
