@@ -40,7 +40,7 @@
     #./modules/star-rail.nix
     ./modules/steam.nix
     ./modules/users.nix
-    ./modules/xserver.nix
+    #./modules/xserver.nix
   ];
 
   programs = {
