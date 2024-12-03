@@ -36,7 +36,8 @@
       self,
       nixpkgs,
       home-manager,
-      aagl,
+    aagl,
+    nixvim,
       ...
     }@inputs:
 
