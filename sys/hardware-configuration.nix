@@ -32,7 +32,13 @@
   fileSystems."/steam" =
     { device = "/dev/disk/by-uuid/249c8bec-3ec2-4b89-8618-748cd918d4ba";
       fsType = "btrfs";
-    }; 
+    };
+
+  fileSystems."/server" =
+    { device = "z-home@192.168.1.157";
+      fsType = "fuse.sshfs";
+      options = [ "port=421" "nofail" "password_stdin" "_netdev" ];
+    };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
