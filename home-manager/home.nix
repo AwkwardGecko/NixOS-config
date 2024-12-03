@@ -22,7 +22,7 @@
     ./modules/fish.nix
     ./modules/fonts.nix
     ./modules/git.nix
-    ./modules/gtk.nix
+    #./modules/gtk.nix
     ./modules/hypr.nix
     ./modules/kitty.nix
     #./modules/terminal.nix
