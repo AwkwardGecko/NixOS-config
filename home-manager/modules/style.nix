@@ -25,7 +25,7 @@
     };
 
     iconTheme = {
-      package = pkgs.gnome.adwaita-icon-theme;
+      package = pkgs.papirus-icon-theme;
       name = "Adwaita";
     };
 
