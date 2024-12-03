@@ -35,7 +35,7 @@
     };
 
   fileSystems."/server" =
-    { device = "sftp://z-home@192.168.1.157/home/z-home";
+    { device = "z-home@192.168.1.157/home/z-home";
       fsType = "fuse.sshfs";
       options = [ "port=421" "nofail" "_netdev" ];
     };
