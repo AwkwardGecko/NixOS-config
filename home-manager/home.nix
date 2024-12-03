@@ -45,6 +45,7 @@
     #./modules/nixvim.nix
     ./modules/neovim/neovim.nix
     # ./modules/OpenRGB.nix
+    ./modules/ranger.nix
     # ./modules/star-rail.nix
     # ./modules/swaync.nix
     ./modules/rofi.nix
@@ -87,6 +88,7 @@
     #	hyprshot
     jellyfin-web
 	#	plasma5Packages.kdeconnect-kde
+    krusader
     libva
 	#	lua
     #	lua54Packages.luarocks-nix
