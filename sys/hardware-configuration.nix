@@ -34,11 +34,11 @@
       fsType = "btrfs";
     };
 
-  fileSystems."/server" =
-    { device = "z-home@192.168.1.157/home/z-home";
-      fsType = "fuse.sshfs";
-      options = [ "port=421" "nofail" "_netdev" ];
-    };
+  #fileSystems."/server" =
+  #  { device = "z-home@192.168.1.157/home/z-home";
+  #    fsType = "fuse.sshfs";
+  #    options = [ "port=421" "nofail" "_netdev" ];
+  #  };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
