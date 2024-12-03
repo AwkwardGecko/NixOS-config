@@ -16,20 +16,6 @@
 
 {
 
-  nixpkgs = {
-    overlays = [
-      (final: prev: {
-        vimPlugins = prev.vimPlugins // {
-          own-onedark-nvim = prev.vimUtils.buildVimPlugin {
-            name = "onedark";
-            src = inputs.plugin-onedark;
-          };
-        };
-      })
-    ];
-  };
-
-
   imports = [
     # ./modules/applications.nix
     #./modules/cursor.nix
@@ -50,7 +36,7 @@
     # ./modules/swaync.nix
     ./modules/rofi.nix
     ./modules/tmux.nix
-    # ./modules/waybar/style.nix
+    ./modules/waybar/style.nix
     ./modules/waybar.nix
     # ./modules/waybar/mechabar.nix
     #./modules/xserver.nix
@@ -88,6 +74,7 @@
     #	hyprshot
     jellyfin-web
 	#	plasma5Packages.kdeconnect-kde
+    keymon # shows which keys are pressed
     krusader # file manager 
     krename # batch renamer for krusader
     libva
