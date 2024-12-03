@@ -44,7 +44,6 @@
 			gaps_in = 5;
 			gaps_out = 10;
 			border_size = 2;
-
 			"col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
 			"col.inactive_border" = "rgba(595959aa)";
 			resize_on_border = false;
@@ -173,10 +172,13 @@
 		];
 
 		windowrulev2 = [
-			"workspace 1,class:(firefox)"
+            "workspace 1,title:(Kitty)"
+            "workspace 1,class:(firefox)"
 			"workspace 9,title:(Star Rail)"
-			"workspace 9,title:(Fallout)"
-			"workspace 9,title:(Valheim)"
+			"workspace 10,title:(Fallout)"
+            "workspace 11,title:(Valheim)"
+            "workspace 12,title:(Shovel Knight)"
+            "workspace 13,title:(Payday)"
 			"suppressevent maximize, class:.*"
 			"nofocus,class:^$,title:^$,wayland:1,floating:1,fullscreen:0,pinned:0"
 		];

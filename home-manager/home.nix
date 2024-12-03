@@ -32,11 +32,7 @@
 
   imports = [
     # ./modules/applications.nix
-    # ./modules/bluez.nix
-    # ./modules/fastfetch.nix
-    # ./modules/firefox.nix
-    # ./modules/cursor.nix
-    ./../sys/modules/bluetooth.nix
+    #./modules/cursor.nix
     ./modules/fish.nix
     ./modules/fonts.nix
     ./modules/git.nix
