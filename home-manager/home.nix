@@ -74,7 +74,6 @@
     #	hyprshot
     jellyfin-web
 	#	plasma5Packages.kdeconnect-kde
-    keymon # shows which keys are pressed
     krusader # file manager 
     krename # batch renamer for krusader
     libva

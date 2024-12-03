@@ -30,10 +30,11 @@
 			#"pypr" #???
 		];
 
-		env = [
-			"XCURSOR_SIZE,24"
-			"HYPRCURSOR_SIZE,24"
-		];
+        env = [
+        #	"XCURSOR_SIZE,24"
+        #	"HYPRCURSOR_SIZE,24"
+        hyprctl setcursor Bibata-Modern-Classic 24
+        ];
 
 		#####################
 		### LOOK AND FEEL ###
