@@ -88,7 +88,8 @@ bootiso
     #haskellPackages.torch
     python310
     pyenv
-	strawberry
+    sc-controller # steam controller support 
+    strawberry
     rustdesk
 	pavucontrol
     wine
