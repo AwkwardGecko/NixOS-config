@@ -28,7 +28,7 @@
 
     ./modules/audio.nix
     ./modules/autologin.nix
-    #./modules/bluetooth.nix
+    ./modules/bluetooth.nix
     ./modules/boot.nix
     ./modules/cachix.nix
 	./modules/filesystem.nix
