@@ -28,7 +28,7 @@
     #./modules/terminal.nix
     ./modules/mako.nix
     # ./modules/mangohud.nix
-    ./modules/nixvim.nix
+    #./modules/nixvim.nix
     #./modules/neovim/neovim.nix
     # ./modules/OpenRGB.nix
     ./modules/ranger.nix
