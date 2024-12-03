@@ -26,15 +26,16 @@
 			"waybar"
 			"sleep 1 && openrgb --startminimized -p Default.orp.ba"
 			"sleep 3 && signal-desktop"
-			"sleep 1 && steam -silent %U"
+            "sleep 1 && steam -silent %U"
+            "hyprctl setcursor Bibata-Modern-Classic 24"
 			#"pypr" #???
 		];
 
-        env = [
+        #env = [
         #	"XCURSOR_SIZE,24"
         #	"HYPRCURSOR_SIZE,24"
-        hyprctl setcursor Bibata-Modern-Classic 24
-        ];
+          #];
+        
 
 		#####################
 		### LOOK AND FEEL ###
