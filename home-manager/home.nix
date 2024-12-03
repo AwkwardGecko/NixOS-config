@@ -88,7 +88,8 @@
     #	hyprshot
     jellyfin-web
 	#	plasma5Packages.kdeconnect-kde
-    krusader
+    krusader # file manager 
+    krename # batch renamer for krusader
     libva
 	#	lua
     #	lua54Packages.luarocks-nix
