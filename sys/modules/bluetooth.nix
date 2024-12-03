@@ -13,7 +13,7 @@
     };
 
     services.blueman.enable = true;
-    
+    hardware.pulseaudio.enable = true; 
 
 
 }   
