@@ -61,8 +61,8 @@
     cryptsetup # LUKS support
     #	digikam
     #	dualsensectl
-    	fastfetch
-		flatpak
+   	fastfetch
+	flatpak
 	#	gimp
     #	git
     #	google-chrome
@@ -85,14 +85,15 @@
     #	nettools
     #	networkmanagerapplet
     #	nwg-look # ???
+    playerctl
     #	protonvpn-gui
     #	pyprland # python support for Hyprland
-    	python3
+  	python3
     #	python312Packages.pip
-   		pipx	
+  	pipx	
     #	qbittorrent
-    	qt6ct # QT support
-    	ripgrep # something for nvim
+   	qt6ct # QT support
+   	ripgrep # something for nvim
     #	rofi-wayland
     jellyfin-media-player
 	#qt5ct
