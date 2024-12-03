@@ -89,6 +89,7 @@ bootiso
     python310
     pyenv
     sc-controller # steam controller support 
+    sshfs
     strawberry
     rustdesk
 	pavucontrol
