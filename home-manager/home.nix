@@ -69,6 +69,7 @@
     #	google-chrome
     grimblast
 	grc
+    haskellPackages.MusicBrainz
     home-assistant-component-tests.tuya
 	htop
     #	hyprpaper
@@ -77,7 +78,6 @@
 	#	plasma5Packages.kdeconnect-kde
     krusader # file manager 
     krename # batch renamer for krusader
-    libmusicbrainz
     libva
 	#	lua
     #	lua54Packages.luarocks-nix
