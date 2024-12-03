@@ -43,6 +43,10 @@
       }
 
       {
+        plugin = indent-blankline-nvim;
+        config = toLua "require("ibl").setup()"
+
+      {
         plugin = gruvbox-nvim;
         config = "colorscheme gruvbox";
       }
