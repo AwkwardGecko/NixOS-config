@@ -27,8 +27,8 @@
 			"sleep 1 && openrgb --startminimized -p Default.orp.ba"
 			"sleep 3 && signal-desktop"
             "sleep 1 && steam -silent %U"
-          "hyprctl setcursor Bibata-Modern-Classic 24"
-          "sshfs z-home@192.168.1.157:/ /server -oport=421"
+            "hyprctl setcursor Bibata-Modern-Classic 24"
+            "bash ~/.local/share/applications/mount-server.sh"
 			#"pypr" #???
 		];
 
