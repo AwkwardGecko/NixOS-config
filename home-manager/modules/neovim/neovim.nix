@@ -42,10 +42,10 @@
         config = toLua "require(\"Comment\").setup()";
       }
 
-      {
-        plugin = indent-blankline-nvim;
-        config = require("ibl").setup();
-      }
+      # {
+      #   plugin = indent-blankline-nvim;
+      #   config = require("ibl").setup();
+      # }
 
       {
         plugin = gruvbox-nvim;
