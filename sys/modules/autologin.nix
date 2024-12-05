@@ -1,12 +1,16 @@
+##################
+### AUTO LOGIN ###
+##################
 
-	##################
-	### AUTO LOGIN ###
-	##################
-
-	{ config, pkgs, lib, ... }:
 {
-	services.displayManager.autoLogin = {
-		enable = true;
-		user = "zozano";
-	};
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
+  services.displayManager.autoLogin = {
+    enable = true;
+    user = "zozano";
+  };
 }

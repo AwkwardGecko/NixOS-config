@@ -1,11 +1,15 @@
+##############
+### DOCKER ###
+##############
 
-	##############
-    ### DOCKER ###
-	##############
-
-	{ config, pkgs, lib, ... }:
 {
-	virtualisation.docker = {
-		enable = true;
-	};
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
+  virtualisation.docker = {
+    enable = true;
+  };
 }

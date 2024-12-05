@@ -44,24 +44,21 @@
 
   home.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d"; # Add custon Proton versions to Steam
-    NIXOS_OZONE_WL = "1"; # Wayland Electron support
+    #NIXOS_OZONE_WL = "1"; # Wayland Electron support
 	#QT_QPA_PLATFORM=xcb;
 	#__EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_mesa.json jellyfinmediaplayer;
   };
 
 	home.file = {
 		".local/share/applications".source = source/local/share/applications;
-		#".local/share/applications/diffusion.desktop".source = source/local/share/applications/diffusion.desktop;
-		#".local/share/applications/jellyfin.desktop".source = source/local/share/applications/jellyfin.desktop;
 	};
 
   home.packages = with pkgs; [
-	baobab
+	baobab # disk usage analyzer
     #blueberry
     #clementine
     cryptsetup # LUKS support
     #	digikam
-    #	dualsensectl
    	fastfetch
 	flatpak
 	#	gimp

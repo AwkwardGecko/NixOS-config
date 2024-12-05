@@ -25,10 +25,10 @@
   imports = [
     ./hardware-configuration.nix
 
-    ./modules/audio.nix                 # 
-    ./modules/autologin.nix             # 100%
+    ./modules/audio.nix
+    ./modules/autologin.nix # 100%
     ./modules/bluetooth.nix
-    ./modules/boot.nix                  # kernel modules
+    ./modules/boot.nix # kernel modules
     ./modules/cachix.nix
     ./modules/docker.nix
     ./modules/filesystem.nix
@@ -49,16 +49,15 @@
 
   #programs = {
 
-    # firefox.enable = true;
-    # kdeconnect.enable = true;
-    #gamemode.enable = true;
-    #};
- 
+  # firefox.enable = true;
+  # kdeconnect.enable = true;
+  #gamemode.enable = true;
+  #};
 
   #services = {
-    # teamviewer.enable = true;
-    #hardware.openrgb.enable = true;
-    #};
+  # teamviewer.enable = true;
+  #hardware.openrgb.enable = true;
+  #};
 
   #virtualisation.docker.enable = true;
 
@@ -74,15 +73,15 @@
     docker
     docker-compose
     bazel
-	digikam
+    digikam
     cudatoolkit
     gnome-disk-utility
-	libheif
-	libheif.out
-	gparted
-  	gperftools
-  	qbittorrent
-	gimp
+    libheif
+    libheif.out
+    gparted
+    gperftools
+    qbittorrent
+    gimp
     nixd # Language SP (LSP) server
     nixfmt-rfc-style # used to format styles - $ nixfmt <file>.nix
     unixtools.ifconfig
@@ -92,13 +91,13 @@
     #haskellPackages.torch
     python310
     pyenv
-    sc-controller # steam controller support 
+    sc-controller # steam controller support
     sshfs
     strawberry
     rustdesk
-	pavucontrol
+    pavucontrol
     wine
-	vlc
+    vlc
     wine-staging
     wine-wayland
   ];

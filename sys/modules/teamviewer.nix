@@ -1,11 +1,15 @@
+##################
+### TEAMVIEWER ###
+##################
 
-	##################
-	### TEAMVIEWER ###
-	##################
-
-	{ config, pkgs, lib, ... }:
 {
-    services.teamviewer = {
-		enable = true;
-	};
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
+  services.teamviewer = {
+    enable = true;
+  };
 }

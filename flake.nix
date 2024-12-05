@@ -6,45 +6,45 @@
 
   inputs = {
 
-	nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-	nix-colors.url = "github:misterio77/nix-colors";
+    nix-colors.url = "github:misterio77/nix-colors";
 
-	home-manager = {
-		url = "github:nix-community/home-manager/master";
-		inputs.nixpkgs.follows = "nixpkgs";
-	};
+    home-manager = {
+      url = "github:nix-community/home-manager/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-	aagl = {
-		url = "github:ezKEa/aagl-gtk-on-nix";
-		inputs.nixpkgs.follows = "nixpkgs";
-	};
+    aagl = {
+      url = "github:ezKEa/aagl-gtk-on-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     plugin-onedark.url = "github:navarasu/onedark.nvim";
     plugin-onedark.flake = false;
 
     nixvim = {
-        url = "github:nix-community/nixvim";
-        # If using a stable channel you can use `url = "github:nix-community/nixvim/nixos-<version>"`
-        inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/nixvim";
+      # If using a stable channel you can use `url = "github:nix-community/nixvim/nixos-<version>"`
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
   };
 
-	outputs =
+  outputs =
     {
       self,
       nixpkgs,
       home-manager,
-    aagl,
-    nixvim,
+      aagl,
+      nixvim,
       ...
     }@inputs:
 
     let
       lib = nixpkgs.lib;
       pkgs = nixpkgs.legacyPackages.${system};
-	  system = "x86_64-linux";
+      system = "x86_64-linux";
     in
     {
       nixosConfigurations = {

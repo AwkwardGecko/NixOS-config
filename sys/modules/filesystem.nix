@@ -1,11 +1,16 @@
+##################
+### FILESYSTEM ###
+##################
 
-	##################
-	### FILESYSTEM ###
-	##################
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
 
-	{ config, pkgs, lib, ... }: {
+  services.gvfs.enable = true;
 
-    services.gvfs.enable = true;
-
-	environment.pathsToLink = [ "share/thumbnailers" ];
+  environment.pathsToLink = [ "share/thumbnailers" ];
 }

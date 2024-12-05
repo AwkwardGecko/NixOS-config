@@ -1,32 +1,37 @@
+##############
+### POLKIT ###
+##############
 
-	##############
-	### POLKIT ###
-	##############
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
 
-	{ config, pkgs, lib, ... }: {
+  security.polkit = {
 
-	security.polkit = {
-		
-		enable = true;
-		extraConfig = ''
-			
-			polkit.addRule(function(action, subject) {
-				
-				if (
-					subject.isInGroup("zozano")
-					&& (
-						action.id == "org.freedesktop.login1.reboot" ||
-						action.id == "org.freedesktop.login1.reboot-multiple-sessions" ||
-						action.id == "org.freedesktop.login1.power-off" ||
-						action.id == "org.freedesktop.login1.power-off-multiple-sessions"
-					)
-				)
-				
-				{ return polkit.Result.YES; }
+    enable = true;
+    extraConfig = ''
+      	
+      	polkit.addRule(function(action, subject) {
+      		
+      		if (
+      			subject.isInGroup("zozano")
+      			&& (
+      				action.id == "org.freedesktop.login1.reboot" ||
+      				action.id == "org.freedesktop.login1.reboot-multiple-sessions" ||
+      				action.id == "org.freedesktop.login1.power-off" ||
+      				action.id == "org.freedesktop.login1.power-off-multiple-sessions"
+      			)
+      		)
+      		
+      		{ return polkit.Result.YES; }
 
-				if (subject.isInGroup("wheel"))
-					return polkit.Result.YES;
-			});
-		'';
-	};
+      		if (subject.isInGroup("wheel"))
+      			return polkit.Result.YES;
+      	});
+    '';
+  };
 }

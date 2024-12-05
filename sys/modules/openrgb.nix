@@ -1,11 +1,15 @@
+###############
+### OPENRGB ###
+###############
 
-	###############
-    ### OPENRGB ###
-	###############
-
-	{ config, pkgs, lib, ... }:
 {
-	services.hardware.openrgb = {
-		enable = true;
-	};
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
+  services.hardware.openrgb = {
+    enable = true;
+  };
 }

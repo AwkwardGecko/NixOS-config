@@ -1,12 +1,17 @@
+################
+### HYPRLAND ###
+################
 
-	################
-	### HYPRLAND ###
-	################
-
-	{ config, pkgs, lib, ... }:
 {
-	programs.hyprland = {
-		enable = true;
-		xwayland.enable = true;
-	};
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 }

@@ -1,12 +1,17 @@
+####################
+### AUTO UPGRADE ###
+####################
 
-	####################
-	### AUTO UPGRADE ###
-	####################
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
 
-	{ config, pkgs, lib, ... }: {
-
-	system.autoUpgrade = {
-		enable = true;
-		allowReboot = false;
-	};
+  system.autoUpgrade = {
+    enable = true;
+    allowReboot = false;
+  };
 }
