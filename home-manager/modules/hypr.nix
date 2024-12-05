@@ -7,7 +7,7 @@
 {
 	wayland.windowManager.hyprland.enable = true;
 
-    wayland.windowmanager.hyprland.plugins = with pkgs.hyprlandPlugins; [
+    wayland.windowManager.hyprland.plugins = with pkgs.hyprlandPlugins; [
         hyprtrails
     ];
 

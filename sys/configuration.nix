@@ -25,11 +25,11 @@
   imports = [
     ./hardware-configuration.nix
 
-    ./modules/audio.nix
+    ./modules/audio.nix # audio
     ./modules/autologin.nix # 100%
-    ./modules/bluetooth.nix
-    ./modules/boot.nix # kernel modules
-    ./modules/cachix.nix
+    ./modules/bluetooth.nix # bluetooth
+    ./modules/boot.nix # configure kernel modules
+    ./modules/cachix.nix # cachix
     ./modules/docker.nix
     ./modules/filesystem.nix
     ./modules/firefox.nix
@@ -62,7 +62,6 @@
   #virtualisation.docker.enable = true;
 
   environment.systemPackages = with pkgs; [
-
     glibc
     glibc_memusage
     bootiso
