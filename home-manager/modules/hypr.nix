@@ -8,12 +8,12 @@
 	wayland.windowManager.hyprland.enable = true;
 
     wayland.windowManager.hyprland.plugins = with pkgs.hyprlandPlugins; [
-        hyprtrails
+      hyprtrails
     ];
 
-      home.packages = with pkgs; [
-        hyprsunset
-      ];
+    home.packages = with pkgs; [
+      hyprsunset
+    ];
 
     wayland.windowManager.hyprland.settings = {
 
