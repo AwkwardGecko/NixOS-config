@@ -57,6 +57,7 @@
 	baobab # disk usage analyzer
     #blueberry
     #clementine
+    cb
     cryptsetup # LUKS support
     #	digikam
    	fastfetch
@@ -107,8 +108,8 @@
     #	wine-staging
     #	winetricks
 	wlroots
-    wl-clipboard-rs
-	#xcbeautify # colour support for wayland? 
+    #wl-clipboard-rs
+    #xcbeautify # colour support for wayland? 
   ];
 
   programs.home-manager.enable = true;
