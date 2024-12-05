@@ -6,7 +6,12 @@
 	{ config, pkgs, lib, ... }:
 {
 	wayland.windowManager.hyprland.enable = true;
-	wayland.windowManager.hyprland.settings = {
+
+    wayland.windowmanager.hyprland.plugins = with pkgs.hyprlandPlugins [
+        hyprtrails
+    ];
+
+    wayland.windowManager.hyprland.settings = {
 
 		################
 		### PROGRAMS ###
