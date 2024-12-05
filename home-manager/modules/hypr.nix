@@ -11,6 +11,10 @@
         hyprtrails
     ];
 
+      home.packages = with pkgs; [
+        hyprsunset
+      ];
+
     wayland.windowManager.hyprland.settings = {
 
 		################

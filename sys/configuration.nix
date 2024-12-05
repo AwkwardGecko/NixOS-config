@@ -47,20 +47,6 @@
     ./modules/xserver.nix
   ];
 
-  #programs = {
-
-  # firefox.enable = true;
-  # kdeconnect.enable = true;
-  #gamemode.enable = true;
-  #};
-
-  #services = {
-  # teamviewer.enable = true;
-  #hardware.openrgb.enable = true;
-  #};
-
-  #virtualisation.docker.enable = true;
-
   environment.systemPackages = with pkgs; [
     glibc
     glibc_memusage
