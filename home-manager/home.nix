@@ -57,7 +57,7 @@
 	baobab # disk usage analyzer
     #blueberry
     #clementine
-    cb
+    cliphist
     cryptsetup # LUKS support
     #	digikam
    	fastfetch
