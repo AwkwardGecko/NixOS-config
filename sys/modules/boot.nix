@@ -16,7 +16,4 @@
         "joydev"
         "xpad"
     ];
-    # boot.kernelParams = [
-    #     btusb
-    # ];
 }

@@ -21,40 +21,43 @@
   nixpkgs.config.allowUnfree = true;
   hardware.enableAllFirmware = true;
   hardware.xpadneo.enable = true;
-  xdg.autostart.enable = true;
 
   imports = [
     ./hardware-configuration.nix
 
-    ./modules/audio.nix
-    ./modules/autologin.nix
+    ./modules/audio.nix                 # 
+    ./modules/autologin.nix             # 100%
     ./modules/bluetooth.nix
-    ./modules/boot.nix
+    ./modules/boot.nix                  # kernel modules
     ./modules/cachix.nix
-	./modules/filesystem.nix
+    
+    ./modules/filesystem.nix
+    ./modules/firefox.nix
     ./modules/hypr.nix
     ./modules/internationalisation.nix
-	./modules/polkit.nix
+    ./modules/openrgb.nix
+    ./modules/polkit.nix
     #./modules/nixvim.nix
     ./modules/nvidia.nix
     #./modules/star-rail.nix
     ./modules/steam.nix
+    ./modules/teamviewer.nix
     ./modules/users.nix
     ./modules/xserver.nix
   ];
 
   programs = {
 
-    firefox.enable = true;
+    # firefox.enable = true;
     # kdeconnect.enable = true;
     gamemode.enable = true;
   };
  
 
-  services = {
-	teamviewer.enable = true;
-    hardware.openrgb.enable = true;
-  };
+  #services = {
+    # teamviewer.enable = true;
+    #hardware.openrgb.enable = true;
+    #};
 
   virtualisation.docker.enable = true;
 
