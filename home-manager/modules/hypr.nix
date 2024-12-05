@@ -37,7 +37,7 @@
 			"sleep 3 && signal-desktop"
             "sleep 1 && steam -silent %U"
             "hyprctl setcursor Bibata-Modern-Classic 24"
-            "bash ~/.local/share/applications/mount-server.sh"
+            #"bash ~/.local/share/applications/mount-server.sh"
 			#"pypr" #???
 		];
 
