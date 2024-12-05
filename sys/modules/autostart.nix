@@ -13,7 +13,7 @@
     description = "mount-server";
     serviceConfig.PassEnvironment = "DISPLAY";
     script = ''
-      bash /home/zozano/.local/share/applications/mount-server.sh
+      bash sshfs z-home@192.168.1.157:/ /server -oport=421
       '';
     wantedBy = [ "multi-user.target" ]; # starts after login
   };
