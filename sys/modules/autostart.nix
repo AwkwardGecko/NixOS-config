@@ -16,4 +16,5 @@
       bash /home/zozano/.local/share/applications/mount-server.sh
       '';
     wantedBy = [ "multi-user.target" ]; # starts after login
-};
+  };
+}
