@@ -30,9 +30,10 @@
     ./modules/bluetooth.nix
     ./modules/boot.nix                  # kernel modules
     ./modules/cachix.nix
-    
+    ./modules/docker.nix
     ./modules/filesystem.nix
     ./modules/firefox.nix
+    ./modules/gamemode.nix
     ./modules/hypr.nix
     ./modules/internationalisation.nix
     ./modules/openrgb.nix
@@ -46,12 +47,12 @@
     ./modules/xserver.nix
   ];
 
-  programs = {
+  #programs = {
 
     # firefox.enable = true;
     # kdeconnect.enable = true;
-    gamemode.enable = true;
-  };
+    #gamemode.enable = true;
+    #};
  
 
   #services = {
@@ -59,13 +60,13 @@
     #hardware.openrgb.enable = true;
     #};
 
-  virtualisation.docker.enable = true;
+  #virtualisation.docker.enable = true;
 
   environment.systemPackages = with pkgs; [
 
-glibc
-glibc_memusage
-bootiso
+    glibc
+    glibc_memusage
+    bootiso
     #btmon
     #bluez-experimental
     #bluez-alsa
