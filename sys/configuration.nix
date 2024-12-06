@@ -31,6 +31,8 @@
     '';
   };
 
+  security.doas.enable = true;
+
 
   imports = [
     ./hardware-configuration.nix
@@ -67,7 +69,6 @@
     #bluez-experimental
     #bluez-alsa
     #bluez-tools
-    doas
     docker
     docker-compose
     bazel
