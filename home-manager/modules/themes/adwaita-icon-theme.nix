@@ -1,13 +1,18 @@
+###############
+### ADWAITA ###
+###############
 
-	###############
-	### ADWAITA ###
-	###############
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
 
-	{ config, pkgs, lib, ... }: {
-
-	gtk.iconTheme = {
-		name = "Adwaita";
-		package = pkgs.adwaita-icon-theme;
-	};
+  gtk.iconTheme = {
+    name = "Adwaita";
+    package = pkgs.adwaita-icon-theme;
+  };
 
 }

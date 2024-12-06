@@ -9,14 +9,13 @@
   ...
 }:
 
-  let
-    toLua = str: "lua << EOF\n${str}\nEOF\n";
-    toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
-  in
-  {
+let
+  toLua = str: "lua << EOF\n${str}\nEOF\n";
+  toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
+in
+{
 
-
-  programs.neovim = { 
+  programs.neovim = {
     enable = true;
 
     viAlias = true;
@@ -54,7 +53,7 @@
 
       neodev-nvim
 
-      nvim-cmp 
+      nvim-cmp
       {
         plugin = nvim-cmp;
         config = toLuaFile ./plugin/cmp.lua;
@@ -73,19 +72,20 @@
       luasnip
       friendly-snippets
 
-
       lualine-nvim
       nvim-web-devicons
 
       {
-        plugin = (nvim-treesitter.withPlugins (p: [
-          p.tree-sitter-nix
-          p.tree-sitter-vim
-          p.tree-sitter-bash
-          p.tree-sitter-lua
-          p.tree-sitter-python
-          p.tree-sitter-json
-        ]));
+        plugin = (
+          nvim-treesitter.withPlugins (p: [
+            p.tree-sitter-nix
+            p.tree-sitter-vim
+            p.tree-sitter-bash
+            p.tree-sitter-lua
+            p.tree-sitter-python
+            p.tree-sitter-json
+          ])
+        );
         config = toLuaFile ./plugin/treesitter.lua;
       }
 

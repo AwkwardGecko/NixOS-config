@@ -1,12 +1,17 @@
+#################
+### FIRA SANS ###
+#################
 
-	#################
-	### FIRA SANS ###
-	#################
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
 
-	{ config, pkgs, lib, ... }: {
-
-	font = {
-		name = "Fira Sans";
-		size = 11;
-	};
+  font = {
+    name = "Fira Sans";
+    size = 11;
+  };
 }

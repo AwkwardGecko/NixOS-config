@@ -1,11 +1,17 @@
-	####################
-	### GRUVBOX-PLUS ###
-	####################
+####################
+### GRUVBOX-PLUS ###
+####################
 
-	{ config, pkgs, lib, ... }: {
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
 
-	gtk.iconTheme = {
-		name = "Gruvbox Plus";
-		package = pkgs.gruvbox-plus-icons;
-	};
+  gtk.iconTheme = {
+    name = "Gruvbox Plus";
+    package = pkgs.gruvbox-plus-icons;
+  };
 }

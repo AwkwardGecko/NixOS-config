@@ -1,12 +1,17 @@
+######################
+### FLAT-REMIX-GTK ###
+######################
 
-	######################
-	### FLAT-REMIX-GTK ###
-	######################
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
 
-	{ config, pkgs, lib, ... }: {
-
-	gtk.theme = {
-		name = "Flat-Remix-GTK-Grey-Darkest";
-		package = pkgs.flat-remix-gtk;
-	};
+  gtk.theme = {
+    name = "Flat-Remix-GTK-Grey-Darkest";
+    package = pkgs.flat-remix-gtk;
+  };
 }

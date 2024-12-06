@@ -1,12 +1,17 @@
+############
+### SANS ###
+############
 
-	############
-	### SANS ###
-	############
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
 
-	{ config, pkgs, lib, ... }: {
-
-	font = {
-		name = "Sans";
-		size = 11;
-	};
+  font = {
+    name = "Sans";
+    size = 11;
+  };
 }

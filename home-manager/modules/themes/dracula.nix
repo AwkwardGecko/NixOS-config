@@ -1,13 +1,19 @@
-	###############
-	### DRACULA ###
-	###############
+###############
+### DRACULA ###
+###############
 
-	{ config, pkgs, lib, ... }: {
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
 
-	gtk = {
-		theme = {
-			name = "Dracula";
-			package = pkgs.dracula-theme;
-		};
-	};
+  gtk = {
+    theme = {
+      name = "Dracula";
+      package = pkgs.dracula-theme;
+    };
+  };
 }
