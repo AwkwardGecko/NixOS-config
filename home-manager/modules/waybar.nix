@@ -149,7 +149,7 @@
           on-click = "blueman-manager";
         };
 
-        mpris = {
+        "mpris" = {
           format = "{player_icon} {title} [{artist}]";
           interval = 1;
           format-paused = "{status_icon} <i>{dynamic}</i>";
@@ -307,8 +307,6 @@
       	background: #161320;
       }
 
-
-
       #disk {
       	margin-top: 6px;
       	margin-left: 8px;
@@ -320,6 +318,7 @@
       	color: #B5E8E0;
       	background: #161320;
       }
+
       #clock {
       	margin-top: 6px;
       	margin-left: 8px;
@@ -392,16 +391,16 @@
       	background: #161320;
       }
 
-      #workspaces {
-      	margin-top: 6px;
+      #hyprland-workspaces {
+       	margin-top: 6px;
       	margin-left: 8px;
       	padding-left: 10px;
-      	padding-right: 10px;
       	margin-bottom: 0px;
+      	padding-right: 10px;
       	border-radius: 10px;
       	transition: none;
       	color: #B5E8E0;
-      	background: #000000;
+      	background: #161320;
       }
 
 
