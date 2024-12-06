@@ -77,8 +77,8 @@
           icon-name = "input-gaming-symbolic";
           icon-spacing = 0;
           icon-size = 20;
-          tooltip = true;
-          tooltip-format = "Games running: {count}";
+          #tooltip = true;
+          #tooltip-format = "Games running: {count}";
         };
 
         pulseaudio = {
