@@ -55,12 +55,12 @@
 
         "clock#date" = {
           format = "󰨳 {:%A %B %d}";
-          tooltip = false;
+          #tooltip = false;
         };
 
         "clock#time" = {
           format = "󱑂 {:%I:%M %p}";
-          tooltip = false;
+          #tooltip = false;
         };
 
         tray = {
@@ -100,7 +100,7 @@
           format = "{usage}% ";
           icon-size = 20;
           icon-spacing = 0;
-          tooltip = true;
+          #tooltip = true;
         };
 
         disk = {
@@ -109,9 +109,9 @@
           icon-spacing = 0;
           format = "{percentage_used}% 󰋊";
           path = "/home";
-          tooltip = true;
+          #tooltip = true;
           unit = "GB";
-          tooltip-format = "Available {free} of {total}";
+          #tooltip-format = "Available {free} of {total}";
         };
 
         memory = {
@@ -120,8 +120,8 @@
           icon-spacing = 0;
           format = "{percentage}% ";
           max-length = 10;
-          tooltip = true;
-          tooltip-format = "RAM - {used:0.1f}GiB used";
+          #tooltip = true;
+          #tooltip-format = "RAM - {used:0.1f}GiB used";
         };
 
         temperature = {
