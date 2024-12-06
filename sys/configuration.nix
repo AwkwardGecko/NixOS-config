@@ -67,6 +67,7 @@
     #bluez-experimental
     #bluez-alsa
     #bluez-tools
+    doas
     docker
     docker-compose
     bazel
