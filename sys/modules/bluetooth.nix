@@ -14,8 +14,9 @@
     enable = true;
     powerOnBoot = false;
     #    settings.General.Experimental = true;
-    ControllerMode = "bredr";
-
+    General = {
+      ControllerMode = "bredr";
+    };
   };
 
   #  services.blueman.enable = true;
