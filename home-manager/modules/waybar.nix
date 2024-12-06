@@ -39,7 +39,7 @@
           "memory"
           "cpu"
           "disk"
-          #"bluetooth"
+          "bluetooth"
           "custom/power"
         ];
 
@@ -146,7 +146,7 @@
             enabled = "On ";
             disabled = "Off ";
           };
-          on-click = "blueberry";
+          on-click = "blueman-manager";
         };
 
         mpris = {
