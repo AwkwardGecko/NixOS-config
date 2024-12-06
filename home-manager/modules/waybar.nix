@@ -314,6 +314,9 @@
       	margin-bottom: 0px;
       	border-radius: 10px;
       	transition: none;
+      	color: #161320;
+      	background: #ABE9B3;
+      	/*background: #1A1826;*/
       }
 
       #memory {
@@ -348,6 +351,8 @@
       	padding-right: 10px;
       	border-radius: 10px;
       	transition: none;
+      	color: #B5E8E0;
+      	background: #161320;
       }
 
       #custom-launcher {
@@ -412,13 +417,7 @@
       	background: #000000;
       }
 
-      #mode {
-        background-color: #64727D;
-        box-shadow: inset 0 -3px #ffffff;
-      }
 
-      #tray,
-      #clock,
 
     '';
   };
