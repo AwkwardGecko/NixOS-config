@@ -33,7 +33,7 @@
         ];
 
         modules-right = [
-          "custom/media"
+          "mpris"
           "gamemode"
           "pulseaudio"
           "memory"
