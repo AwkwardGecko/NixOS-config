@@ -170,8 +170,8 @@
           tooltip = true;
           #on-click = "shutdown now";
           #on-click-right = "reboot now";
-          on-click = "menu";
-          #menu = "on-click";
+          #on-click = "menu";
+          menu = "on-click";
           menu-file = "~/.local/share/applications/power_menu.xml"; # Menu file in resources folder
         };
 
