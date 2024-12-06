@@ -33,13 +33,14 @@
         ];
 
         modules-right = [
+          "custom-media"
           "gamemode"
           "pulseaudio"
           "memory"
           "cpu"
           "disk"
           #"bluetooth"
-          "custom/power"
+          "custom-power"
         ];
 
         # "hyprland/window" = {
@@ -148,7 +149,20 @@
           on-click = "blueberry";
         };
 
-        "custom/power" = {
+        custom-media = {
+          format = "{icon} {}";
+          return-type = "json";
+          max-length = 50;
+          format-icons = {
+            default = " ";
+          };
+          escape = true;
+          exec = "$HOME/.local/share/applications/mediaplayer.py 2> /dev/null";
+          on-click = "playerctl play-pause"
+        };
+
+
+        custom-power = {
           icon-size = 20;
           icon-spacing = 0;
           format = "⏻ ";
