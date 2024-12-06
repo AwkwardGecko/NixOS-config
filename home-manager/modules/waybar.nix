@@ -191,9 +191,13 @@
             font-family: "JetbrainsMono Nerd Font";
         }
 
-        window#waybar {
-            background: transparent;
-        }
+window#waybar {
+    background-color: rgba(43, 48, 59, 0.5);
+    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
 
         window#waybar.hidden {
             opacity: 0.2;
