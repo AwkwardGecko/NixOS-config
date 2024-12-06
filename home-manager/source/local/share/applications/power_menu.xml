@@ -12,7 +12,7 @@
         </object>
 	</child>
     <child>
-        <object class="GtkMenuItem" id="systemctl shutdown">
+        <object class="GtkMenuItem" id="systemctl shutdown now">
 			<property name="label">Shutdown</property>
         </object>
     </child>
