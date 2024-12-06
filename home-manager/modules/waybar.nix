@@ -260,20 +260,20 @@
       	margin-bottom: 0px;
       	border-radius: 10px;
       	transition: none;
-      	color: #1A1826;
-      	background: #FAE3B0;
+      	color: #161320;
+      	background: #F8BD96;
       }
 
       #gamemode {
       	margin-top: 6px;
       	margin-left: 8px;
       	padding-left: 10px;
-      	padding-right: 10px;
       	margin-bottom: 0px;
+      	padding-right: 10px;
       	border-radius: 10px;
       	transition: none;
-      	color: #161320;
-      	background: #F8BD96;
+      	color: #B5E8E0;
+      	background: #161320;
       }
 
       #pulseaudio {
@@ -284,8 +284,8 @@
       	padding-right: 10px;
       	border-radius: 10px;
       	transition: none;
-      	color: #B5E8E0;
-      	background: #161320;
+      	color: #161320;
+      	background: #DDB6F2;
       }
 
       @keyframes blink {
@@ -303,8 +303,8 @@
       	padding-right: 10px;
       	border-radius: 10px;
       	transition: none;
-      	color: #161320;
-      	background: #DDB6F2;
+      	color: #B5E8E0;
+      	background: #161320;
       }
       #clock {
       	margin-top: 6px;
