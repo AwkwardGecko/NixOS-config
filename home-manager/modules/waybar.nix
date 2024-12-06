@@ -326,8 +326,8 @@
       	padding-right: 10px;
       	border-radius: 10px;
       	transition: none;
-      	color: #161320;
-      	background: #96CDFB;
+      	color: #B5E8E0;
+      	background: #161320;
       }
 
       #cpu {
@@ -338,8 +338,8 @@
       	padding-right: 10px;
       	border-radius: 10px;
       	transition: none;
-      	color: #161320;
-      	background: #96CDFB;
+      	color: #B5E8E0;
+      	background: #161320;
       }
 
       #tray {
@@ -367,15 +367,15 @@
       }
 
       #custom-power {
-      	margin-top: 6px;
+       	margin-top: 6px;
       	margin-left: 8px;
       	padding-left: 10px;
-      	padding-right: 10px;
       	margin-bottom: 0px;
+      	padding-right: 10px;
       	border-radius: 10px;
       	transition: none;
-      	color: #161320;
-      	background: #bd93f9;
+      	color: #B5E8E0;
+      	background: #161320;
       }
 
       #workspaces {
