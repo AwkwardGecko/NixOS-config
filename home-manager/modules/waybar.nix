@@ -337,7 +337,7 @@
 				border-radius: 10px;
 				transition: none;
 				color: #161320;
-				background: #C9CBFF;
+				background: #000000;
 			}
 		'';
 	};
