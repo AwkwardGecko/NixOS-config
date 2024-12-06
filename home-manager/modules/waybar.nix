@@ -22,12 +22,16 @@
         position = "top";
 
         modules-left = [
-          "clock#date"
-          "clock#time"
           "tray"
+          "hyprland/workspaces"
           #"hyprland/window"
         ];
-        modules-center = [ "hyprland/workspaces" ];
+
+        modules-center = [ 
+          "clock#date"
+          "clock#time"
+        ];
+
         modules-right = [
           "gamemode"
           "pulseaudio"
