@@ -149,7 +149,7 @@
           on-click = "blueman-manager";
         };
 
-        "mpris" = {
+        mpris = {
           format = "{player_icon} {title} [{artist}]";
           interval = 1;
           format-paused = "{status_icon} <i>{dynamic}</i>";
