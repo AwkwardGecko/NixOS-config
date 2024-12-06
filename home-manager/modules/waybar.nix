@@ -219,7 +219,7 @@
       		color: #E8A2AF;
       	}
 
-      	#bluetooth {
+      	#gamemode {
       		margin-top: 6px;
       		margin-left: 8px;
       		padding-left: 10px;
