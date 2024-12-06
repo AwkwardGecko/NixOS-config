@@ -63,7 +63,7 @@
           tooltip = false;
         };
 
-        tray = {
+        "tray" = {
           icon-size = 25;
           spacing = 10;
         };
