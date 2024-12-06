@@ -170,8 +170,9 @@
           tooltip = true;
           #on-click = "shutdown now";
           #on-click-right = "reboot now";
-          "menu" = "on-click";
-          "menu-file" = "~/.dotfiles/home-manager/modules/waybar/power_menu.xml"; # Menu file in resources folder
+          on-click = "power-menu";
+          menu = "on-click";
+          menu-file = "~/.dotfiles/home-manager/modules/waybar/power_menu.xml"; # Menu file in resources folder
         };
 
         "menu-actions" = {
