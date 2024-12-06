@@ -1,16 +1,21 @@
+###########
+### GIT ###
+###########
 
-	###########
-	### GIT ###
-	###########
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
 
-	{ config, pkgs, lib, ... }: {
-
-	programs.git = {
-		enable = true;
-		userName = "Zozano";
-		userEmail = "private@private.com";
-		extraConfig = {
-			init.defaultBranch = "main";
-		};
-	};
+  programs.git = {
+    enable = true;
+    userName = "Zozano";
+    userEmail = "private@private.com";
+    extraConfig = {
+      init.defaultBranch = "main";
+    };
+  };
 }

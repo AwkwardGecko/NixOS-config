@@ -1,8 +1,13 @@
-	############
-	### TMUX ###
-	############
+############
+### TMUX ###
+############
 
-	{ config, pkgs, lib, ... }:
 {
-	programs.tmux.enable = true;
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
+  programs.tmux.enable = true;
 }

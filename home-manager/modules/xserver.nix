@@ -1,18 +1,23 @@
+################
+### X-SERVER ###
+################
 
-	################
-	### X-SERVER ###
-	################
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
 
-	{ config, pkgs, lib, ... }: {
+  services.xserver = {
 
-	services.xserver = {
-		
-		enable = true;
-		videoDrivers = [ "nvidia" ];
-		
-		xkb = {
-			layout = "us";
-			variant = "";
-		};
-	};
+    enable = true;
+    videoDrivers = [ "nvidia" ];
+
+    xkb = {
+      layout = "us";
+      variant = "";
+    };
+  };
 }

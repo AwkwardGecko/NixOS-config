@@ -1,11 +1,13 @@
-	
-	#############
-	### STYLE ###
-	#############
+#############
+### STYLE ###
+#############
 
-	{ config, pkgs, lib, ... }: 
-
-
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   home.pointerCursor = {

@@ -1,19 +1,23 @@
+############
+### ROFI ###
+############
 
-	############
-	### ROFI ###
-	############
-
-	{ config, pkgs, lib, ... }:
 {
-	programs.rofi = {
-		enable = true;
-		
-		extraConfig = {
-			#
-		};
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
+  programs.rofi = {
+    enable = true;
 
-		plugins = with pkgs; [
-			#
-		];
-	};
+    extraConfig = {
+      #
+    };
+
+    plugins = with pkgs; [
+      #
+    ];
+  };
 }

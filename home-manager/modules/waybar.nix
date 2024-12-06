@@ -1,357 +1,376 @@
-	
-	##############
-	### WAYBAR ###
-	##############
+##############
+### WAYBAR ###
+##############
 
-	{ config, pkgs, lib, ... }: {
-	
-	programs.waybar = {
-		enable = true;
-	};
-		
-	programs.waybar = {
-		settings = [{
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
 
-			layer = "top";
-			position = "top";
+  programs.waybar = {
+    enable = true;
+  };
 
-			modules-left = [ "clock#date" "clock#time" "tray" "hyprland/window" ];
-			modules-center = [ "hyprland/workspaces" ];
-			modules-right = [
-            "pulseaudio" "memory" "cpu" "disk" "gamemode" 
-            #"bluetooth"
-            "custom/power" ];
-			
-			"hyprland/window" = {
-				format = "{initialTitle}";
-				max-length = 40;
-				# rewrite = {
-					# "(.*) — Mozilla Firefox" = "🌎 $1";
-					# "(.*) - fish" = "> [$1]";
-				# };
-				"separate-outputs" = true;
-			};
+  programs.waybar = {
+    settings = [
+      {
 
-			"clock#date" = {
-				format = "󰨳 {:%A %B %d}";
-				tooltip = false;
-			};
-			
-			"clock#time" = {
-				format = "󱑂 {:%I:%M %p}";
-				tooltip = false;
-			};
+        layer = "top";
+        position = "top";
 
-			tray = {
-				icon-size = 25;
-				spacing = 6;
-			};
+        modules-left = [
+          "clock#date"
+          "clock#time"
+          "tray"
+          "hyprland/window"
+        ];
+        modules-center = [ "hyprland/workspaces" ];
+        modules-right = [
+          "gamemode"
+          "pulseaudio"
+          "memory"
+          "cpu"
+          "disk"
+          #"bluetooth"
+          "custom/power"
+        ];
 
-            gamemode = {
-              format = "{glyph}";
-              format-alt = "{glyph} {count}";
-              glyph = "";
-              hide-not-running = true;
-              use-icon = true; 
-              icon-name = "input-gaming-symbolic";
-              icon-spacing = 4;
-              icon-size = 20;
-              tooltip = true;
-              tooltip-format = "Games running: {count}";
-            };
+        "hyprland/window" = {
+          format = "{initialTitle}";
+          max-length = 40;
+          # rewrite = {
+          # "(.*) — Mozilla Firefox" = "🌎 $1";
+          # "(.*) - fish" = "> [$1]";
+          # };
+          "separate-outputs" = true;
+        };
 
-			pulseaudio = {
-				format = "{volume}% {icon}" ;
-				format-muted = "󰝟 {volume}%";
-				format-icons = {
-					default = ["󰕿" "󰖀" "󰕾"];
-				};
-				on-click = "pavucontrol";
-			};
+        "clock#date" = {
+          format = "󰨳 {:%A %B %d}";
+          tooltip = false;
+        };
 
-			cpu = {
-				format = "{usage}%  ";
-				tooltip = true;
-			};
+        "clock#time" = {
+          format = "󱑂 {:%I:%M %p}";
+          tooltip = false;
+        };
 
-			disk = {
-				interval = 30;
-				format = "{percentage_used}% 󰋊 ";
-				path = "/home";
-				tooltip = true;
-				unit = "GB";
-				tooltip-format = "Available {free} of {total}";
-			};
+        tray = {
+          icon-size = 25;
+          spacing = 6;
+        };
 
-			memory = {
-        		interval = 10;
-				format = "{percentage}% ";
-				max-length = 10;
-				tooltip = true;
-				tooltip-format = "RAM - {used:0.1f}GiB used";
-			};
-			
-			temperature = {
-				critical-threshold = 80;
-				format = "{temperatureC}°C {icon}";
-				format-icons = [
-					""
-					""
-					""
-				];
-			};
-			
-			bluetooth = {
-				interval = 30;
-				format = "{icon}";
-        		format-alt = "{status}";
-				format-icons = {
-            		enabled = "On  ";
-					disabled = "Off  ";
-				};
-			on-click = "blueberry";
-			};  
+        gamemode = {
+          format = "{glyph}";
+          format-alt = "{glyph} {count}";
+          glyph = "";
+          hide-not-running = true;
+          use-icon = true;
+          icon-name = "input-gaming-symbolic";
+          icon-spacing = 4;
+          icon-size = 20;
+          tooltip = true;
+          tooltip-format = "Games running: {count}";
+        };
 
+        pulseaudio = {
+          format = "{volume}% {icon}";
+          format-muted = "󰝟 {volume}%";
+          format-icons = {
+            default = [
+              "󰕿"
+              "󰖀"
+              "󰕾"
+            ];
+          };
+          on-click = "pavucontrol";
+        };
 
+        cpu = {
+          format = "{usage}%  ";
+          tooltip = true;
+        };
 
-			"custom/power" = {
-				"format" = "⏻ ";
-				"tooltip" = true;
-				"on-click" = "shutdown now";
-				"on-click-right" = "reboot now";
-			#	"menu" = "on-click";
-			#	"menu-file" = "~/.dotfiles/home-manager/modules/waybar/power_menu.xml"; # Menu file in resources folder
-			};
+        disk = {
+          interval = 30;
+          format = "{percentage_used}% 󰋊 ";
+          path = "/home";
+          tooltip = true;
+          unit = "GB";
+          tooltip-format = "Available {free} of {total}";
+        };
 
-			"menu-actions" = {
-				"shutdown" = "shutdown";
-				"reboot" = "reboot";
-				"suspend" = "systemctl suspend";
-				"hibernate" = "systemctl hibernate";
-			};
-		}];
-		
-		style = ''
-			* {	
-				border: none;
-				border-radius: 10px;
-				font-size: 15px;
-				font-family: "JetbrainsMono Nerd Font";
-			}
+        memory = {
+          interval = 10;
+          format = "{percentage}% ";
+          max-length = 10;
+          tooltip = true;
+          tooltip-format = "RAM - {used:0.1f}GiB used";
+        };
 
-			window#waybar {
-				background: transparent;
-			}
+        temperature = {
+          critical-threshold = 80;
+          format = "{temperatureC}°C {icon}";
+          format-icons = [
+            ""
+            ""
+            ""
+          ];
+        };
 
-			window#waybar.hidden {
-				opacity: 0.2;
-			}
-			
-			#window {
-				margin-top: 6px;
-				padding-left: 10px;
-				padding-right: 10px;
-				border-radius: 10px;
-				transition: none;
-				background: transparent;
-			}
+        bluetooth = {
+          interval = 30;
+          format = "{icon}";
+          format-alt = "{status}";
+          format-icons = {
+            enabled = "On  ";
+            disabled = "Off  ";
+          };
+          on-click = "blueberry";
+        };
 
-			#tags {
-				margin-top: 6px;
-				margin-left: 12px;
-				font-size: 4px;
-				margin-bottom: 0px;
-				border-radius: 10px;
-				background: #161320;
-				transition: none;
-			}
+        "custom/power" = {
+          "format" = "⏻ ";
+          "tooltip" = true;
+          "on-click" = "shutdown now";
+          "on-click-right" = "reboot now";
+          #	"menu" = "on-click";
+          #	"menu-file" = "~/.dotfiles/home-manager/modules/waybar/power_menu.xml"; # Menu file in resources folder
+        };
 
-			#tags button {
-				transition: none;
-				color: #B5E8E0;
-				background: transparent;
-				font-size: 16px;
-				border-radius: 2px;
-			}
+        "menu-actions" = {
+          "shutdown" = "shutdown";
+          "reboot" = "reboot";
+          "suspend" = "systemctl suspend";
+          "hibernate" = "systemctl hibernate";
+        };
+      }
+    ];
 
-			#tags button.occupied {
-				transition: none;
-				color: #F28FAD;
-				background: transparent;
-				font-size: 4px;
-			}
+    style = ''
+      	* {	
+      		border: none;
+      		border-radius: 10px;
+      		font-size: 15px;
+      		font-family: "JetbrainsMono Nerd Font";
+      	}
 
-			#tags button.focused {
-				color: #ABE9B3;
-				border-top: 2px solid #ABE9B3;
-				border-bottom: 2px solid #ABE9B3;
-			}
+      	window#waybar {
+      		background: transparent;
+      	}
 
-			#tags button:hover {
-				transition: none;
-				box-shadow: inherit;
-				text-shadow: inherit;
-				color: #FAE3B0;
-				border-color: #E8A2AF;
-				color: #E8A2AF;
-			}
+      	window#waybar.hidden {
+      		opacity: 0.2;
+      	}
+      	
+      	#window {
+      		margin-top: 6px;
+      		padding-left: 10px;
+      		padding-right: 10px;
+      		border-radius: 10px;
+      		transition: none;
+      		background: transparent;
+      	}
 
-			#tags button.focused:hover {
-				color: #E8A2AF;
-			}
+      	#tags {
+      		margin-top: 6px;
+      		margin-left: 12px;
+      		font-size: 4px;
+      		margin-bottom: 0px;
+      		border-radius: 10px;
+      		background: #161320;
+      		transition: none;
+      	}
 
-			#bluetooth {
-				margin-top: 6px;
-				margin-left: 8px;
-				padding-left: 10px;
-				padding-right: 10px;
-				margin-bottom: 0px;
-				border-radius: 10px;
-				transition: none;
-				color: #161320;
-				background: #bd93f9;
-			}
+      	#tags button {
+      		transition: none;
+      		color: #B5E8E0;
+      		background: transparent;
+      		font-size: 16px;
+      		border-radius: 2px;
+      	}
 
-			#pulseaudio {
-				margin-top: 6px;
-				margin-left: 8px;
-				padding-left: 10px;
-				padding-right: 10px;
-				margin-bottom: 0px;
-				border-radius: 10px;
-				transition: none;
-				color: #1A1826;
-				background: #FAE3B0;
-			}
+      	#tags button.occupied {
+      		transition: none;
+      		color: #F28FAD;
+      		background: transparent;
+      		font-size: 4px;
+      	}
 
-			@keyframes blink {
-				to {
-					background-color: #BF616A;
-					color: #B5E8E0;
-				}
-			}
+      	#tags button.focused {
+      		color: #ABE9B3;
+      		border-top: 2px solid #ABE9B3;
+      		border-bottom: 2px solid #ABE9B3;
+      	}
 
-			#disk {
-				margin-top: 6px;
-				margin-left: 8px;
-				padding-left: 10px;
-				padding-right: 10px;
-				margin-bottom: 0px;
-				border-radius: 10px;
-				transition: none;
-				color: #161320;
-				background: #F8BD96;
-			}
-			#clock {
-				margin-top: 6px;
-				margin-left: 8px;
-				padding-left: 10px;
-				padding-right: 10px;
-				margin-bottom: 0px;
-				border-radius: 10px;
-				transition: none;
-				color: #161320;
-				background: #ABE9B3;
-				/*background: #1A1826;*/
-			}
+      	#tags button:hover {
+      		transition: none;
+      		box-shadow: inherit;
+      		text-shadow: inherit;
+      		color: #FAE3B0;
+      		border-color: #E8A2AF;
+      		color: #E8A2AF;
+      	}
 
-			#memory {
-				margin-top: 6px;
-				margin-left: 8px;
-				padding-left: 10px;
-				margin-bottom: 0px;
-				padding-right: 10px;
-				border-radius: 10px;
-				transition: none;
-				color: #161320;
-				background: #DDB6F2;
-			}
+      	#tags button.focused:hover {
+      		color: #E8A2AF;
+      	}
 
-			#cpu {
-				margin-top: 6px;
-				margin-left: 8px;
-				padding-left: 10px;
-				margin-bottom: 0px;
-				padding-right: 10px;
-				border-radius: 10px;
-				transition: none;
-				color: #161320;
-				background: #96CDFB;
-			}
+      	#bluetooth {
+      		margin-top: 6px;
+      		margin-left: 8px;
+      		padding-left: 10px;
+      		padding-right: 10px;
+      		margin-bottom: 0px;
+      		border-radius: 10px;
+      		transition: none;
+      		color: #161320;
+      		background: #bd93f9;
+      	}
 
-			#tray {
-				margin-top: 6px;
-				margin-left: 8px;
-				padding-left: 10px;
-				margin-bottom: 0px;
-				padding-right: 10px;
-				border-radius: 10px;
-				transition: none;
-				color: #B5E8E0;
-				background: #161320;
-			}
+      	#pulseaudio {
+      		margin-top: 6px;
+      		margin-left: 8px;
+      		padding-left: 10px;
+      		padding-right: 10px;
+      		margin-bottom: 0px;
+      		border-radius: 10px;
+      		transition: none;
+      		color: #1A1826;
+      		background: #FAE3B0;
+      	}
 
-			#custom-launcher {
-				font-size: 24px;
-				margin-top: 6px;
-				margin-left: 8px;
-				padding-left: 10px;
-				padding-right: 5px;
-				border-radius: 10px;
-				transition: none;
-				color: #89DCEB;
-				background: #161320;
-			}
+      	@keyframes blink {
+      		to {
+      			background-color: #BF616A;
+      			color: #B5E8E0;
+      		}
+      	}
 
-			#custom-power {
-				font-size: 20px;
-				margin-top: 6px;
-				margin-left: 8px;
-				margin-right: 8px;
-				padding-left: 10px;
-				padding-right: 5px;
-				margin-bottom: 0px;
-				border-radius: 10px;
-				transition: none;
-				color: #161320;
-				background: #F28FAD;
-			}
+      	#disk {
+      		margin-top: 6px;
+      		margin-left: 8px;
+      		padding-left: 10px;
+      		padding-right: 10px;
+      		margin-bottom: 0px;
+      		border-radius: 10px;
+      		transition: none;
+      		color: #161320;
+      		background: #F8BD96;
+      	}
+      	#clock {
+      		margin-top: 6px;
+      		margin-left: 8px;
+      		padding-left: 10px;
+      		padding-right: 10px;
+      		margin-bottom: 0px;
+      		border-radius: 10px;
+      		transition: none;
+      		color: #161320;
+      		background: #ABE9B3;
+      		/*background: #1A1826;*/
+      	}
 
-			#custom-wallpaper {
-				margin-top: 6px;
-				margin-left: 8px;
-				padding-left: 10px;
-				padding-right: 10px;
-				margin-bottom: 0px;
-				border-radius: 10px;
-				transition: none;
-				color: #161320;
-				background: #C9CBFF;
-			}
+      	#memory {
+      		margin-top: 6px;
+      		margin-left: 8px;
+      		padding-left: 10px;
+      		margin-bottom: 0px;
+      		padding-right: 10px;
+      		border-radius: 10px;
+      		transition: none;
+      		color: #161320;
+      		background: #DDB6F2;
+      	}
 
-			#custom-updates {
-				margin-top: 6px;
-				margin-left: 8px;
-				padding-left: 10px;
-				padding-right: 10px;
-				margin-bottom: 0px;
-				border-radius: 10px;
-				transition: none;
-				color: #161320;
-				background: #E8A2AF;
-			}
+      	#cpu {
+      		margin-top: 6px;
+      		margin-left: 8px;
+      		padding-left: 10px;
+      		margin-bottom: 0px;
+      		padding-right: 10px;
+      		border-radius: 10px;
+      		transition: none;
+      		color: #161320;
+      		background: #96CDFB;
+      	}
 
-			#workspaces {
-				margin-top: 6px;
-				margin-left: 8px;
-				padding-left: 10px;
-				padding-right: 10px;
-				margin-bottom: 0px;
-				border-radius: 10px;
-				transition: none;
-				color: #B5E8E0;
-				background: #000000;
-			}
-		'';
-	};
+      	#tray {
+      		margin-top: 6px;
+      		margin-left: 8px;
+      		padding-left: 10px;
+      		margin-bottom: 0px;
+      		padding-right: 10px;
+      		border-radius: 10px;
+      		transition: none;
+      		color: #B5E8E0;
+      		background: #161320;
+      	}
+
+      	#custom-launcher {
+      		font-size: 24px;
+      		margin-top: 6px;
+      		margin-left: 8px;
+      		padding-left: 10px;
+      		padding-right: 5px;
+      		border-radius: 10px;
+      		transition: none;
+      		color: #89DCEB;
+      		background: #161320;
+      	}
+
+      	#custom-power {
+      		font-size: 20px;
+      		margin-top: 6px;
+      		margin-left: 8px;
+      		margin-right: 8px;
+      		padding-left: 10px;
+      		padding-right: 5px;
+      		margin-bottom: 0px;
+      		border-radius: 10px;
+      		transition: none;
+      		color: #161320;
+      		background: #F28FAD;
+      	}
+
+      	#custom-wallpaper {
+      		margin-top: 6px;
+      		margin-left: 8px;
+      		padding-left: 10px;
+      		padding-right: 10px;
+      		margin-bottom: 0px;
+      		border-radius: 10px;
+      		transition: none;
+      		color: #161320;
+      		background: #C9CBFF;
+      	}
+
+      	#custom-updates {
+      		margin-top: 6px;
+      		margin-left: 8px;
+      		padding-left: 10px;
+      		padding-right: 10px;
+      		margin-bottom: 0px;
+      		border-radius: 10px;
+      		transition: none;
+      		color: #161320;
+      		background: #E8A2AF;
+      	}
+
+      	#workspaces {
+      		margin-top: 6px;
+      		margin-left: 8px;
+      		padding-left: 10px;
+      		padding-right: 10px;
+      		margin-bottom: 0px;
+      		border-radius: 10px;
+      		transition: none;
+      		color: #B5E8E0;
+      		background: #000000;
+      	}
+    '';
+  };
 }

@@ -1,9 +1,14 @@
+###########
+### GTK ###
+###########
 
-	###########
-	### GTK ###
-	###########
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
 
-	{ config, pkgs, lib, ... }: {
-
-	gtk.theme.enable = true;
+  gtk.theme.enable = true;
 }

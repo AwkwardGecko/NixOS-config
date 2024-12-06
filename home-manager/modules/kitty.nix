@@ -1,19 +1,24 @@
-	
-	#############
-	### KITTY ###
-	#############
+#############
+### KITTY ###
+#############
 
-	{ config, pkgs, lib, ... }: {
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
 
-	programs.kitty = {
-		enable = true;
-		shellIntegration.enableFishIntegration = true;
-					
-		settings = {
-			shell = "fish";
-		};
+  programs.kitty = {
+    enable = true;
+    shellIntegration.enableFishIntegration = true;
 
-		font.name = "JetBrains Mono";
-		themeFile = "GruvboxMaterialDarkMedium";
-	};
+    settings = {
+      shell = "fish";
+    };
+
+    font.name = "JetBrains Mono";
+    themeFile = "GruvboxMaterialDarkMedium";
+  };
 }
