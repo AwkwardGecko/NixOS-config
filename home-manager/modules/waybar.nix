@@ -18,7 +18,9 @@
 			modules-left = [ "clock#date" "clock#time" "tray" "hyprland/window" ];
 			modules-center = [ "hyprland/workspaces" ];
 			modules-right = [
-				"pulseaudio" "memory" "cpu" "disk" "bluetooth" "custom/power" ];
+            "pulseaudio" "memory" "cpu" "disk" 
+            #"bluetooth"
+            "custom/power" ];
 			
 			"hyprland/window" = {
 				format = "{initialTitle}";
@@ -138,7 +140,6 @@
 				padding-right: 10px;
 				border-radius: 10px;
 				transition: none;
-				color: transparent;
 				background: transparent;
 			}
 
