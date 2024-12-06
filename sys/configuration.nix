@@ -51,7 +51,7 @@
   ];
 
   environment.sessionVariables = {
-    XDG_DATA_DIRS=$XDG_DATA_DIRS:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share;
+    XDG_DATA_DIRS=/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share;
   };
 
   environment.systemPackages = with pkgs; [
