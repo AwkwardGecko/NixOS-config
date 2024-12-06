@@ -88,6 +88,7 @@
     iproute2
     #haskellPackages.cuda
     #haskellPackages.torch
+    ostree
     python310
     pyenv
     sc-controller # steam controller support
