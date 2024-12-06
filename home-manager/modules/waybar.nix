@@ -83,6 +83,7 @@
         pulseaudio = {
           format = "{volume}% {icon}";
           icon-size = 20;
+          icon-spacing = 0;
           format-muted = "󰝟 {volume}%";
           format-icons = {
             default = [
