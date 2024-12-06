@@ -47,7 +47,7 @@
     #NIXOS_OZONE_WL = "1"; # Wayland Electron support
 	#QT_QPA_PLATFORM=xcb;
 	#__EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_mesa.json jellyfinmediaplayer;
-  XDG_DATA_DIRS= "XDG_DATA_DIRS:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share";
+  XDG_DATA_DIRS= "#XDG_DATA_DIRS:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share";
   };
 
 	home.file = {
