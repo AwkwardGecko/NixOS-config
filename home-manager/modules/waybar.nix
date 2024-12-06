@@ -42,15 +42,15 @@
           "custom/power"
         ];
 
-        "hyprland/window" = {
-          format = "{initialTitle}";
-          max-length = 40;
-          # rewrite = {
-          # "(.*) — Mozilla Firefox" = "🌎 $1";
-          # "(.*) - fish" = "> [$1]";
-          # };
-          "separate-outputs" = true;
-        };
+        # "hyprland/window" = {
+        #   format = "{initialTitle}";
+        #   max-length = 40;
+        #   # rewrite = {
+        #   # "(.*) — Mozilla Firefox" = "🌎 $1";
+        #   # "(.*) - fish" = "> [$1]";
+        #   # };
+        #   "separate-outputs" = true;
+        # };
 
         "clock#date" = {
           format = "󰨳 {:%A %B %d}";
@@ -82,6 +82,7 @@
 
         pulseaudio = {
           format = "{volume}% {icon}";
+          icon-size = 20;
           format-muted = "󰝟 {volume}%";
           format-icons = {
             default = [
