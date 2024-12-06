@@ -167,7 +167,7 @@
           icon-size = 20;
           icon-spacing = 0;
           format = "⏻ ";
-          tooltip = true;
+          #tooltip = true;
           #on-click = "shutdown now";
           #on-click-right = "reboot now";
           #on-click = "menu";
