@@ -19,5 +19,6 @@
     "btusb"
     "joydev"
     "xpad"
+    "rtbth"
   ];
 }
