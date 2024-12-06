@@ -15,20 +15,13 @@
     powerOnBoot = false;
     #    settings.General.Experimental = true;
     settings.General = {
-      ControllerMode = "bredr";
+      ControllerMode = "dual";
     };
   };
 
   services.blueman.enable = true;
 
 }
-#services.blueman.enable = true;
-
-#    hardware.bluetooth = {
-#      enable = true;
-#      powerOnBoot = true;
-#    };
-# services.blueman.enable = true;
 
 # environment.systemPackages = with pkgs; [
 #	bluez
