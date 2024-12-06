@@ -151,7 +151,7 @@
         "custom/power" = {
           icon-size = 20;
           icon-spacing = 0;
-          "format" = "⏻";
+          "format" = "⏻ ";
           "tooltip" = true;
           "on-click" = "shutdown now";
           "on-click-right" = "reboot now";
