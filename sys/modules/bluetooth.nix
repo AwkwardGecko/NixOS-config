@@ -14,7 +14,7 @@
     enable = true;
     powerOnBoot = false;
     #    settings.General.Experimental = true;
-    General = {
+    settings.General = {
       ControllerMode = "bredr";
     };
   };
