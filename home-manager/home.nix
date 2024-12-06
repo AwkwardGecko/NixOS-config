@@ -57,7 +57,7 @@
   home.packages = with pkgs; [
 	baobab # disk usage analyzer
     #blueberry
-    #clementine
+    clementine
     cliphist
     cryptsetup # LUKS support
     #	digikam
