@@ -195,6 +195,13 @@
       	background: transparent;
       }
 
+      @keyframes blink {
+      	to {
+      		background-color: #BF616A;
+      		color: #B5E8E0;
+      	}
+      }
+
       window#waybar.hidden {
       	opacity: 0.2;
       }
@@ -208,15 +215,7 @@
       	background: transparent;
       }
 
-      #tags {
-      	margin-top: 6px;
-      	margin-left: 12px;
-      	font-size: 4px;
-      	margin-bottom: 0px;
-      	border-radius: 10px;
-      	background: #161320;
-      	transition: none;
-      }
+
 
       #tags button {
       	transition: none;
@@ -288,12 +287,7 @@
       	background: #161320;
       }
 
-      @keyframes blink {
-      	to {
-      		background-color: #BF616A;
-      		color: #B5E8E0;
-      	}
-      }
+
 
       #disk {
       	margin-top: 6px;
