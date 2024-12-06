@@ -13,9 +13,9 @@
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = false;
-    #    settings.General.Experimental = true;
     settings.General = {
-      ControllerMode = "dual";
+      Experimental = true;
+      ControllerMode = "bredr";
     };
   };
 
