@@ -284,8 +284,8 @@
       	padding-right: 10px;
       	border-radius: 10px;
       	transition: none;
-      	color: #161320;
-      	background: #DDB6F2;
+      	color: #B5E8E0;
+      	background: #161320;
       }
 
       @keyframes blink {
