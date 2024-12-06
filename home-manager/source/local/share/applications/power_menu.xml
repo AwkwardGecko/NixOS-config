@@ -2,7 +2,7 @@
 <interface>
   <object class="GtkMenu" id="menu">
     <child>
-        <object class="GtkMenuItem" id="shutdown">
+        <object class="GtkMenuItem" id="shutdown now">
 			<property name="label">Shutdown</property>
         </object>
     </child>
@@ -10,7 +10,7 @@
       <object class="GtkSeparatorMenuItem" id="delimiter1"/>
     </child>
     <child>
-		<object class="GtkMenuItem" id="reboot">
+		<object class="GtkMenuItem" id="reboot now">
 			<property name="label">Reboot</property>
 		</object>
     </child>
