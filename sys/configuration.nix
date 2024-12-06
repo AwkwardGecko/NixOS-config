@@ -22,6 +22,8 @@
   hardware.enableAllFirmware = true;
   hardware.xpadneo.enable = true;
 
+  services.flatpak.enable = true;
+
   imports = [
     ./hardware-configuration.nix
 
