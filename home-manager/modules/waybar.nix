@@ -96,13 +96,17 @@
         };
 
         cpu = {
-          format = "{usage}%  ";
+          format = "{usage}% ";
+          icon-size = 20;
+          icon-spacing = 0;
           tooltip = true;
         };
 
         disk = {
           interval = 30;
-          format = "{percentage_used}% 󰋊 ";
+          icon-size = 20;
+          icon-spacing = 0;           
+          format = "{percentage_used}% 󰋊";
           path = "/home";
           tooltip = true;
           unit = "GB";
@@ -111,6 +115,8 @@
 
         memory = {
           interval = 10;
+          icon-size = 20;
+          icon-spacing = 0;           
           format = "{percentage}% ";
           max-length = 10;
           tooltip = true;
@@ -118,6 +124,8 @@
         };
 
         temperature = {
+          icon-size = 20;
+          icon-spacing = 0;   
           critical-threshold = 80;
           format = "{temperatureC}°C {icon}";
           format-icons = [
@@ -128,18 +136,22 @@
         };
 
         bluetooth = {
+          icon-size = 20;
+          icon-spacing = 0;   
           interval = 30;
           format = "{icon}";
           format-alt = "{status}";
           format-icons = {
-            enabled = "On  ";
-            disabled = "Off  ";
+            enabled = "On ";
+            disabled = "Off ";
           };
           on-click = "blueberry";
         };
 
         "custom/power" = {
-          "format" = "⏻ ";
+          icon-size = 20;
+          icon-spacing = 0;
+          "format" = "⏻";
           "tooltip" = true;
           "on-click" = "shutdown now";
           "on-click-right" = "reboot now";
