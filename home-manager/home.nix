@@ -64,7 +64,8 @@
     cryptsetup # LUKS support
     #	digikam
    	fastfetch
-	#	gimp
+    flatpak
+    #	gimp
     #	git
     #	google-chrome
     grimblast
