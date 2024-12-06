@@ -14,7 +14,7 @@
     enable = true;
     powerOnBoot = false;
     #    settings.General.Experimental = true;
-    controllerMode = bredr;
+    controllerMode = "bredr";
 
   };
 
