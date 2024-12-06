@@ -251,7 +251,7 @@
       		color: #E8A2AF;
       	}
 
-      	#custom/media {
+      	#custom-media {
       		margin-top: 6px;
       		margin-left: 8px;
       		padding-left: 10px;
@@ -262,7 +262,6 @@
       		color: #161320;
       		background: #bd93f9;
       	}
-
 
       	#gamemode {
       		margin-top: 6px;
