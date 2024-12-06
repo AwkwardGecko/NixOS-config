@@ -47,6 +47,19 @@
 				spacing = 6;
 			};
 
+            gamemode = {
+              format = "{glyph}";
+              format-alt = "{glyph} {count}";
+              glyph = "";
+              hide-not-running = true;
+              use-icon = true; 
+              icon-name = "input-gaming-symbolic";
+              icon-spacing = 4;
+              icon-size = 20;
+              tooltip = true;
+              tooltip-format = "Games running: {count}";
+            };
+
 			pulseaudio = {
 				format = "{volume}% {icon}" ;
 				format-muted = "󰝟 {volume}%";
