@@ -158,7 +158,7 @@
           };
           escape = true;
           exec = "$HOME/.local/share/applications/mediaplayer.py 2> /dev/null";
-          on-click = "playerctl play-pause"
+          on-click = "playerctl play-pause";
         };
 
 
