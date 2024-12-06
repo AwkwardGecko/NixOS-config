@@ -150,8 +150,8 @@
         };
 
         mpris = {
-          format = "DEFAULT = {player_icon} {dynamic}";
-          format-paused = "DEFAULT = {status_icon} <i>{dynamic}</i>";
+          format = "{player_icon} {dynamic}";
+          format-paused = "{status_icon} <i>{dynamic}</i>";
           player-icons = {
             default = "▶";
             mpv = "🎵";
