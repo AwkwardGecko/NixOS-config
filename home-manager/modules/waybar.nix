@@ -24,6 +24,7 @@
         modules-left = [
           "tray"
           "hyprland/workspaces"
+          "mpris"
           #"hyprland/window"
         ];
 
@@ -33,7 +34,6 @@
         ];
 
         modules-right = [
-          "mpris"
           "gamemode"
           "pulseaudio"
           "memory"
