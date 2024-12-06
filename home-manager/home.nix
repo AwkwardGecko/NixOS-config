@@ -54,6 +54,8 @@
     ".local/share/vlc/lua/extensions".source = source/local/share/vlc/lua/extensions;
 	};
 
+  services.flatpak.enable = true;
+
   home.packages = with pkgs; [
 	baobab # disk usage analyzer
     #blueberry
@@ -62,7 +64,6 @@
     cryptsetup # LUKS support
     #	digikam
    	fastfetch
-	flatpak
 	#	gimp
     #	git
     #	google-chrome
