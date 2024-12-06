@@ -33,14 +33,14 @@
         ];
 
         modules-right = [
-          "custom-media"
+          "custom/media"
           "gamemode"
           "pulseaudio"
           "memory"
           "cpu"
           "disk"
           #"bluetooth"
-          "custom-power"
+          "custom/power"
         ];
 
         # "hyprland/window" = {
@@ -149,7 +149,7 @@
           on-click = "blueberry";
         };
 
-        custom-media = {
+        "custom/media" = {
           format = "{icon} {}";
           return-type = "json";
           max-length = 50;
@@ -162,7 +162,7 @@
         };
 
 
-        custom-power = {
+        "custom/power" = {
           icon-size = 20;
           icon-spacing = 0;
           format = "⏻ ";
@@ -250,6 +250,19 @@
       	#tags button.focused:hover {
       		color: #E8A2AF;
       	}
+
+      	#custom/media {
+      		margin-top: 6px;
+      		margin-left: 8px;
+      		padding-left: 10px;
+      		padding-right: 10px;
+      		margin-bottom: 0px;
+      		border-radius: 10px;
+      		transition: none;
+      		color: #161320;
+      		background: #bd93f9;
+      	}
+
 
       	#gamemode {
       		margin-top: 6px;
