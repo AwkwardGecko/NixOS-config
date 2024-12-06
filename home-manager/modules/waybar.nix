@@ -336,7 +336,7 @@
 				margin-bottom: 0px;
 				border-radius: 10px;
 				transition: none;
-				color: #161320;
+				color: #B5E8E0;
 				background: #000000;
 			}
 		'';
