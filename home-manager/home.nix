@@ -65,6 +65,7 @@
     #	gimp
     #	git
     #	google-chrome
+    gi
     grimblast
 	grc
     haskellPackages.MusicBrainz
