@@ -50,7 +50,8 @@
   };
 
 	home.file = {
-		".local/share/applications".source = source/local/share/applications;
+    ".local/share/applications".source = source/local/share/applications;
+    ".local/share/vlc/lua/extensions".source = source/local/share/vlc/lua/extensions;
 	};
 
   home.packages = with pkgs; [
