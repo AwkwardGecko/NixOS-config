@@ -256,12 +256,12 @@
       	margin-top: 6px;
       	margin-left: 8px;
       	padding-left: 10px;
-      	padding-right: 10px;
       	margin-bottom: 0px;
+      	padding-right: 10px;
       	border-radius: 10px;
       	transition: none;
-      	color: #161320;
-      	background: #F8BD96;
+      	color: #B5E8E0;
+      	background: #161320;
       }
 
       #gamemode {
