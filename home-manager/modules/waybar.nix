@@ -274,7 +274,7 @@
 				padding-right: 10px;
 				border-radius: 10px;
 				transition: none;
-				color: #B9DCEB;
+				color: #B5E8E0;
 				background: #161320;
 			}
 
@@ -337,7 +337,7 @@
 				border-radius: 10px;
 				transition: none;
 				color: #161320;
-				background: #F2CDCD;
+				background: #C9CBFF;
 			}
 		'';
 	};
