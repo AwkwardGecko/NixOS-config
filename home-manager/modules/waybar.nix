@@ -66,11 +66,11 @@
         gamemode = {
           format = "{glyph}";
           format-alt = "{glyph} {count}";
-          glyph = "";
+          glyph = " ";
           hide-not-running = true;
           use-icon = true;
           icon-name = "input-gaming-symbolic";
-          icon-spacing = 4;
+          icon-spacing = 1;
           icon-size = 20;
           tooltip = true;
           tooltip-format = "Games running: {count}";
