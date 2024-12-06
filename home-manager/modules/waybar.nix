@@ -195,15 +195,15 @@
       	background: transparent;
       }
 
+      window#waybar.hidden {
+      	opacity: 0.2;
+      }
+
       @keyframes blink {
       	to {
       		background-color: #BF616A;
       		color: #B5E8E0;
       	}
-      }
-
-      window#waybar.hidden {
-      	opacity: 0.2;
       }
 
       #window {
@@ -216,40 +216,6 @@
       }
 
 
-
-      #tags button {
-      	transition: none;
-      	color: #B5E8E0;
-      	background: transparent;
-      	font-size: 16px;
-      	border-radius: 2px;
-      }
-
-      #tags button.occupied {
-      	transition: none;
-      	color: #F28FAD;
-      	background: transparent;
-      	font-size: 4px;
-      }
-
-      #tags button.focused {
-      	color: #ABE9B3;
-      	border-top: 2px solid #ABE9B3;
-      	border-bottom: 2px solid #ABE9B3;
-      }
-
-      #tags button:hover {
-      	transition: none;
-      	box-shadow: inherit;
-      	text-shadow: inherit;
-      	color: #FAE3B0;
-      	border-color: #E8A2AF;
-      	color: #E8A2AF;
-      }
-
-      #tags button.focused:hover {
-      	color: #E8A2AF;
-      }
 
       #mpris {
       	margin-top: 6px;
