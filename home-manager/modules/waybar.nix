@@ -150,7 +150,7 @@
         };
 
         mpris = {
-          format = "{player_icon} {dynamic}";
+          format = "{player_icon} {title} - {artist} {position}";
           format-paused = "{status_icon} <i>{dynamic}</i>";
           player-icons = {
             default = "▶";
