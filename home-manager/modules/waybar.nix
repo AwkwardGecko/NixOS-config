@@ -215,49 +215,7 @@
             background: transparent;
         }
 
-        #tags {
-            margin-top: 6px;
-            margin-left: 12px;
-            font-size: 4px;
-            margin-bottom: 0px;
-            border-radius: 10px;
-            background: #161320;
-            transition: none;
-        }
 
-        #tags button {
-            transition: none;
-            color: #B5E8E0;
-            background: transparent;
-            font-size: 16px;
-            border-radius: 2px;
-        }
-
-        #tags button.occupied {
-            transition: none;
-            color: #F28FAD;
-            background: transparent;
-            font-size: 4px;
-        }
-
-        #tags button.focused {
-            color: #ABE9B3;
-            border-top: 2px solid #ABE9B3;
-            border-bottom: 2px solid #ABE9B3;
-        }
-
-        #tags button:hover {
-            transition: none;
-            box-shadow: inherit;
-            text-shadow: inherit;
-            color: #FAE3B0;
-            border-color: #E8A2AF;
-            color: #E8A2AF;
-        }
-
-        #tags button.focused:hover {
-            color: #E8A2AF;
-        }
 
         #bluetooth {
             margin-top: 6px;
@@ -402,7 +360,6 @@
             color: #B5E8E0;
             background: #161320;
         }
-
 
         #workspaces button {
             padding: 0 5px;
