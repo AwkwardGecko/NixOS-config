@@ -70,7 +70,7 @@
           hide-not-running = true;
           use-icon = true;
           icon-name = "input-gaming-symbolic";
-          icon-spacing = 1;
+          icon-spacing = 0;
           icon-size = 20;
           tooltip = true;
           tooltip-format = "Games running: {count}";
