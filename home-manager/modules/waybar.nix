@@ -172,7 +172,7 @@
           #on-click-right = "reboot now";
           on-click = "menu";
           #menu = "on-click";
-          menu-file = "~/.dotfiles/home-manager/modules/waybar/power_menu.xml"; # Menu file in resources folder
+          menu-file = "~/.local/share/applications/power_menu.xml"; # Menu file in resources folder
         };
 
         "menu-actions" = {
