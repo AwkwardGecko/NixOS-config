@@ -274,7 +274,7 @@
 				padding-right: 10px;
 				border-radius: 10px;
 				transition: none;
-				color: #B5E8E0;
+				color: #B9DCEB;
 				background: #161320;
 			}
 
