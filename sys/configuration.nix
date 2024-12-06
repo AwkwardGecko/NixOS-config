@@ -88,7 +88,8 @@
     iproute2
     #haskellPackages.cuda
     #haskellPackages.torch
-    ostree
+    ostree # package for flatpak
+    rpm-ostree # package for flatpak
     python310
     pyenv
     sc-controller # steam controller support
