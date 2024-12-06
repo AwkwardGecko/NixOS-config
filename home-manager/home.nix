@@ -85,6 +85,7 @@
     #	nettools
     #	networkmanagerapplet
     #	nwg-look # ???
+    osdlyrics
     playerctl
     #	protonvpn-gui
     #	pyprland # python support for Hyprland
