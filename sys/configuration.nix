@@ -33,6 +33,7 @@
 
   security.doas.enable = true;
 
+  programs.npm.enable = true;
 
   imports = [
     ./hardware-configuration.nix
@@ -82,7 +83,6 @@
     qbittorrent
     gimp
     nixd # Language SP (LSP) server
-    npm
     nixfmt-rfc-style # used to format styles - $ nixfmt <file>.nix
     unixtools.ifconfig
     nettools
