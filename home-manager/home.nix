@@ -98,7 +98,8 @@
     jellyfin-media-player
 	#qt5ct
 	protonup-qt
-	shotwell
+    python312Packages.tinytuya
+    shotwell
     signal-desktop
     #	vlc
 	egl-wayland
