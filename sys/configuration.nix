@@ -90,7 +90,8 @@
     #haskellPackages.torch
     ostree # package for flatpak
     rpm-ostree # package for flatpak
-    python310
+    python311
+    python311Packages.pip
     pyenv
     sc-controller # steam controller support
     sshfs
