@@ -98,6 +98,7 @@
     rustdesk
     pavucontrol
     wine
+    uv
     vlc
     wine-staging
     wine-wayland
