@@ -81,7 +81,8 @@
     #	lua54Packages.luarocks-nix
     #	lutris
     mesa
-	nautilus # file browser
+    mkvtoolnix #modify video files 
+    nautilus # file browser
     #	nettools
     #	networkmanagerapplet
     #	nwg-look # ???
