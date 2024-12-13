@@ -61,7 +61,8 @@
     cliphist
     cryptsetup # LUKS support
     #	digikam
-   	fastfetch
+    easymp3gain
+    fastfetch
     #	gimp
     #	git
     #	google-chrome
