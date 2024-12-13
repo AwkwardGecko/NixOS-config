@@ -81,6 +81,7 @@
     #	lua54Packages.luarocks-nix
     #	lutris
     mesa
+    mp3gain # normalize volume of music
     mkvtoolnix #modify video files 
     nautilus # file browser
     #	nettools

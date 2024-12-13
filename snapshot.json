@@ -1,4 +1,275 @@
 {
-    "timestamp": 1733617344.7497663,
-    "devices": []
+    "timestamp": 1734054804.0996306,
+    "devices": [
+        {
+            "id": "bf53cd49b809f27a6avhmt",
+            "name": "tuya-fan-1",
+            "key": "pY'E|^#$r*QW:V7=",
+            "mac": "38:1f:8d:e0:59:a4",
+            "uuid": "53affafb06369034",
+            "sn": "100058309031A7",
+            "category": "fsd",
+            "product_name": "GRID Ceiling Fan",
+            "product_id": "4car5fldnnmdx17y",
+            "biz_type": 18,
+            "model": "",
+            "sub": false,
+            "icon": "https://images.tuyaeu.com/smart/icon/ay1536534747810ekKBj/15650583052c42bd34127.png",
+            "mapping": {
+                "4": {
+                    "code": "fan_direction",
+                    "type": "Enum",
+                    "values": {
+                        "range": [
+                            "forward",
+                            "reverse"
+                        ]
+                    }
+                },
+                "10": {
+                    "code": "bright_value",
+                    "type": "Integer",
+                    "values": {
+                        "unit": "",
+                        "min": 0,
+                        "max": 100,
+                        "scale": 0,
+                        "step": 2
+                    }
+                },
+                "11": {
+                    "code": "temp_value",
+                    "type": "Integer",
+                    "values": {
+                        "unit": "",
+                        "min": 0,
+                        "max": 100,
+                        "scale": 0,
+                        "step": 2
+                    }
+                }
+            },
+            "ip": "",
+            "origin": "cloud",
+            "ver": ""
+        },
+        {
+            "id": "bf37d0962ac13dcb72aulg",
+            "name": "tuya-fan-2",
+            "key": "xo{@#X(V`sIQD8_z",
+            "mac": "38:1f:8d:e0:3d:32",
+            "uuid": "539a0b704a689a70",
+            "sn": "10005830901B92",
+            "category": "fsd",
+            "product_name": "GRID Ceiling Fan",
+            "product_id": "4car5fldnnmdx17y",
+            "biz_type": 18,
+            "model": "",
+            "sub": false,
+            "icon": "https://images.tuyaeu.com/smart/icon/ay1536534747810ekKBj/15650583052c42bd34127.png",
+            "mapping": {
+                "4": {
+                    "code": "fan_direction",
+                    "type": "Enum",
+                    "values": {
+                        "range": [
+                            "forward",
+                            "reverse"
+                        ]
+                    }
+                },
+                "10": {
+                    "code": "bright_value",
+                    "type": "Integer",
+                    "values": {
+                        "unit": "",
+                        "min": 0,
+                        "max": 100,
+                        "scale": 0,
+                        "step": 2
+                    }
+                },
+                "11": {
+                    "code": "temp_value",
+                    "type": "Integer",
+                    "values": {
+                        "unit": "",
+                        "min": 0,
+                        "max": 100,
+                        "scale": 0,
+                        "step": 2
+                    }
+                }
+            },
+            "ip": "",
+            "origin": "cloud",
+            "ver": ""
+        },
+        {
+            "id": "bf26f423c63fafe949wcbv",
+            "name": "tuya-fan-3",
+            "key": "61T(Q{JL16hrQ&mh",
+            "mac": "38:1f:8d:e0:6b:c9",
+            "uuid": "dcb6c715764bdb61",
+            "sn": "1000583090489A",
+            "category": "fsd",
+            "product_name": "GRID Ceiling Fan",
+            "product_id": "4car5fldnnmdx17y",
+            "biz_type": 18,
+            "model": "",
+            "sub": false,
+            "icon": "https://images.tuyaeu.com/smart/icon/ay1536534747810ekKBj/15650583052c42bd34127.png",
+            "mapping": {
+                "4": {
+                    "code": "fan_direction",
+                    "type": "Enum",
+                    "values": {
+                        "range": [
+                            "forward",
+                            "reverse"
+                        ]
+                    }
+                },
+                "10": {
+                    "code": "bright_value",
+                    "type": "Integer",
+                    "values": {
+                        "unit": "",
+                        "min": 0,
+                        "max": 100,
+                        "scale": 0,
+                        "step": 2
+                    }
+                },
+                "11": {
+                    "code": "temp_value",
+                    "type": "Integer",
+                    "values": {
+                        "unit": "",
+                        "min": 0,
+                        "max": 100,
+                        "scale": 0,
+                        "step": 2
+                    }
+                }
+            },
+            "ip": "",
+            "origin": "cloud",
+            "ver": ""
+        },
+        {
+            "id": "bf4ae0c3a8cef00c43okiw",
+            "name": "AV-P500S",
+            "key": "AkBa~Ixb)>dHKrtb",
+            "mac": "a0:92:08:dc:0c:94",
+            "uuid": "87509c5bab294df4",
+            "sn": "100081885007E3",
+            "category": "kj",
+            "product_name": "AV-P500S",
+            "product_id": "ah5losmuxjp8xgsk",
+            "biz_type": 18,
+            "model": "Smart True HEPA Air Purifier",
+            "sub": false,
+            "icon": "https://images.tuyaeu.com/smart/icon/bay1610153570695AvDA/fc630e66e591d8c3037ee6e6c9208d6c.png",
+            "mapping": {
+                "1": {
+                    "code": "switch",
+                    "type": "Boolean",
+                    "values": {}
+                },
+                "2": {
+                    "code": "pm25",
+                    "type": "Integer",
+                    "values": {
+                        "unit": "",
+                        "min": 0,
+                        "max": 10000,
+                        "scale": 1,
+                        "step": 1
+                    }
+                },
+                "3": {
+                    "code": "mode",
+                    "type": "Enum",
+                    "values": {
+                        "range": [
+                            "manual",
+                            "auto"
+                        ]
+                    }
+                },
+                "4": {
+                    "code": "fan_speed_enum",
+                    "type": "Enum",
+                    "values": {
+                        "range": [
+                            "low",
+                            "mid",
+                            "high"
+                        ]
+                    }
+                },
+                "5": {
+                    "code": "filter",
+                    "type": "Integer",
+                    "values": {
+                        "unit": "%",
+                        "min": 0,
+                        "max": 100,
+                        "scale": 0,
+                        "step": 1
+                    }
+                },
+                "7": {
+                    "code": "lock",
+                    "type": "Boolean",
+                    "values": {}
+                },
+                "8": {
+                    "code": "light",
+                    "type": "Boolean",
+                    "values": {}
+                },
+                "11": {
+                    "code": "filter_reset",
+                    "type": "Boolean",
+                    "values": {}
+                },
+                "16": {
+                    "code": "filter_days",
+                    "type": "Integer",
+                    "values": {
+                        "unit": "hour",
+                        "min": 0,
+                        "max": 5000,
+                        "scale": 0,
+                        "step": 1
+                    }
+                },
+                "19": {
+                    "code": "countdown_left",
+                    "type": "Integer",
+                    "values": {
+                        "unit": "min",
+                        "min": 0,
+                        "max": 1500,
+                        "scale": 0,
+                        "step": 1
+                    }
+                },
+                "21": {
+                    "code": "air_quality",
+                    "type": "Enum",
+                    "values": {
+                        "range": [
+                            "good"
+                        ]
+                    }
+                }
+            },
+            "ip": "",
+            "origin": "cloud",
+            "ver": ""
+        }
+    ]
 }
