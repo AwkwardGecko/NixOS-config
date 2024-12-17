@@ -93,6 +93,7 @@
     #haskellPackages.torch
     ostree # package for flatpak
     rpm-ostree # package for flatpak
+    playonlinux
     python311
     python311Packages.pip
     pyenv
