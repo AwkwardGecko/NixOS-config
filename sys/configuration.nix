@@ -44,7 +44,7 @@
     ./modules/bluetooth.nix # bluetooth
     ./modules/boot.nix # configure kernel modules
     ./modules/cachix.nix # cachix
-    ./modules/cron.nix
+    #./modules/cron.nix
     ./modules/docker.nix
     ./modules/filesystem.nix
     ./modules/firefox.nix
@@ -57,6 +57,7 @@
     ./modules/nvidia.nix
     #./modules/star-rail.nix
     ./modules/steam.nix
+    #./modules/systemd-timers.nix
     ./modules/teamviewer.nix
     ./modules/users.nix
     ./modules/xserver.nix

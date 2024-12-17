@@ -89,6 +89,7 @@
     #	networkmanagerapplet
     #	nwg-look # ???
     playerctl
+    playonlinux
     #	protonvpn-gui
     #	pyprland # python support for Hyprland
   	python3
