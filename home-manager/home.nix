@@ -60,6 +60,7 @@
     clementine
     cliphist
     cryptsetup # LUKS support
+    dex # run .desktop files from CLI
     #	digikam
     fastfetch
     #	gimp
