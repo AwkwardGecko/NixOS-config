@@ -59,7 +59,6 @@
     #blueberry
     clementine
     cliphist
-    cron
     cryptsetup # LUKS support
     #	digikam
     fastfetch
