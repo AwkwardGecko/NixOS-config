@@ -195,7 +195,7 @@
       "workspace 10,title:(Fallout)"
       "workspace 11,title:(Valheim)"
       "workspace 12,title:(Shovel Knight)"
-      "workspace 13,title:(Payday)"
+      "workspace 13,title:(PAYDAY)"
       "suppressevent maximize, class:.*"
       "nofocus,class:^$,title:^$,wayland:1,floating:1,fullscreen:0,pinned:0"
     ];
