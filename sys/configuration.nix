@@ -96,6 +96,7 @@
     playonlinux
     python311
     python311Packages.pip
+    python311Packages.pyasyncore
     pyenv
     sc-controller # steam controller support
     sshfs
