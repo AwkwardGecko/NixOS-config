@@ -80,7 +80,7 @@
     gnome-disk-utility
     libheif
     libheif.out
-    lutris-free
+    lutris
     gparted
     gperftools
     qbittorrent
