@@ -13,6 +13,6 @@
     enable = true;
     systemCronJobs = [
     "@reboot dex ~/.local/share/applications/teamviewer.desktop"
-    ]
+    ];
   };
 }
