@@ -12,7 +12,7 @@
   services.cron = {
     enable = true;
     systemCronJobs = [
-    "@reboot dex ~/.local/share/applications/teamviewer.desktop"
+    "@reboot sleep 15 && dex ~/.local/share/applications/teamviewer.desktop"
     ];
   };
 }
