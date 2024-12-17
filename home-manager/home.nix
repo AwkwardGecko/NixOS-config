@@ -59,9 +59,9 @@
     #blueberry
     clementine
     cliphist
+    cron
     cryptsetup # LUKS support
     #	digikam
-    easymp3gain
     fastfetch
     #	gimp
     #	git
