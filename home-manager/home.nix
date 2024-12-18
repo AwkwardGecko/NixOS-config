@@ -56,7 +56,7 @@
 
   home.packages = with pkgs; [
 	baobab # disk usage analyzer
-    bing-wall
+    bingwall
     #blueberry
     clementine
     cliphist
