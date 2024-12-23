@@ -91,32 +91,6 @@
     unixtools.ifconfig
     nettools
     iproute2
-    #haskellPackages.cuda
-    #haskellPackages.torch
-    ostree # package for flatpak
-    rpm-ostree # package for flatpak
-    pxattr # allows execution of .app files
-    playonlinux
-    python311
-    python311Packages.pip
-    python311Packages.pyasyncore
-    python311Packages.xattr
-    pyenv
-    sc-controller # steam controller support
-    sshfs
-    strawberry
-    rustdesk
-    pavucontrol
-    wine
-    uv
-    vlc
-    wine-staging
-    wine-wayland
-  ];
-
-pkgs.buildFHSUserEnv = {
-  name = "fhs";
-  targetPkgs = _: with pkgs; [
     libz
     icu
     openssl # For updater
@@ -146,7 +120,28 @@ pkgs.buildFHSUserEnv = {
     mesa
     libGL
     libsecret
+
+    #haskellPackages.cuda
+    #haskellPackages.torch
+    ostree # package for flatpak
+    rpm-ostree # package for flatpak
+    pxattr # allows execution of .app files
+    playonlinux
+    python311
+    python311Packages.pip
+    python311Packages.pyasyncore
+    python311Packages.xattr
+    pyenv
+    sc-controller # steam controller support
+    sshfs
+    strawberry
+    rustdesk
+    pavucontrol
+    wine
+    uv
+    vlc
+    wine-staging
+    wine-wayland
   ];
-};.env
 
 }
