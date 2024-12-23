@@ -147,6 +147,6 @@ pkgs.buildFHSUserEnv = {
     libGL
     libsecret
   ];
-}).env
+}.env
 
 }
