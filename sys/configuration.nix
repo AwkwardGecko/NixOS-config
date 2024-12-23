@@ -114,7 +114,7 @@
     wine-wayland
   ];
 
-pkgs.buildFHSUserEnv {
+pkgs.buildFHSUserEnv = {
   name = "fhs";
   targetPkgs = _: with pkgs; [
     libz
