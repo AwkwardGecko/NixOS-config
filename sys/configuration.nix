@@ -49,7 +49,7 @@
     ./modules/filesystem.nix
     ./modules/firefox.nix
     ./modules/gamemode.nix
-    ./modukes/grayjay.nix
+    ./modules/grayjay.nix
     ./modules/hypr.nix
     ./modules/internationalisation.nix
     ./modules/openrgb.nix
