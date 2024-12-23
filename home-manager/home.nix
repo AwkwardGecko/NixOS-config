@@ -56,7 +56,6 @@
 
   home.packages = with pkgs; [
 	baobab # disk usage analyzer
-    bing-wallpaper-changer
     #blueberry
     clementine
     cliphist

@@ -94,6 +94,7 @@
     #haskellPackages.torch
     ostree # package for flatpak
     rpm-ostree # package for flatpak
+    pxattr # allows execution of .app files
     playonlinux
     python311
     python311Packages.pip
