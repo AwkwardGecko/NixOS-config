@@ -99,6 +99,7 @@
     python311
     python311Packages.pip
     python311Packages.pyasyncore
+    python311Packages.xattr
     pyenv
     sc-controller # steam controller support
     sshfs
