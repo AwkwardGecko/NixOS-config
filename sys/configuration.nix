@@ -49,7 +49,7 @@
     ./modules/filesystem.nix
     ./modules/firefox.nix
     ./modules/gamemode.nix
-    ./modules/grayjay.nix
+    # ./modules/grayjay.nix
     ./modules/hypr.nix
     ./modules/internationalisation.nix
     ./modules/openrgb.nix
@@ -113,4 +113,40 @@
     wine-staging
     wine-wayland
   ];
+
+(pkgs.buildFHSUserEnv {
+  name = "fhs";
+  targetPkgs = _: with pkgs; [
+    libz
+    icu
+    openssl # For updater
+
+    xorg.libX11
+    xorg.libXcomposite
+    xorg.libXdamage
+    xorg.libXext
+    xorg.libXfixes
+    xorg.libXrandr
+    xorg.libxcb
+
+    gtk3
+    glib
+    nss
+    nspr
+    dbus
+    atk
+    cups
+    libdrm
+    expat
+    libxkbcommon
+    pango
+    cairo
+    udev
+    alsa-lib
+    mesa
+    libGL
+    libsecret
+  ];
+}).env
+
 }
