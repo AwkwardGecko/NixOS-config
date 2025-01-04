@@ -132,7 +132,7 @@
       "$mainMod, R, exec, $menu"
       "$mainMod, P, pseudo,"
       "$mainMod, J, togglesplit,"
-      ", F9, exec, bash kill deadcells"
+      "$mainMod, F9, exec, bash kill deadcells"
 
       "$mainMod, left, movefocus, l"
       "$mainMod, right, movefocus, r"
