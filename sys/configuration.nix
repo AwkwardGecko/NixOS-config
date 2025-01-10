@@ -142,7 +142,7 @@
     vlc
     wine-staging
     wine-wayland
-    youtube-dl
+    yt-dlp
   ];
 
 }
