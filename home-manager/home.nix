@@ -111,7 +111,6 @@
     #	wine-staging
     #	winetricks
     wlroots
-    youtube-dl
     #wl-clipboard-rs
     #xcbeautify # colour support for wayland? 
   ];
