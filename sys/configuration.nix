@@ -103,6 +103,7 @@
     xorg.libXrandr
     xorg.libxcb
 
+    parted
     gtk3
     glib
     nss
