@@ -66,7 +66,7 @@
 
 
   environment.systemPackages = with pkgs; [
-    btrfs-restore
+    btrfs-progs
     glibc
     glibc_memusage
     bootiso
