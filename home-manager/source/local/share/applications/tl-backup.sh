@@ -2,6 +2,6 @@
 
 cd "/steam/SteamLibrary/steamapps/compatdata/41500/pfx/drive_c/users/steamuser/AppData/Roaming/runic games/"
 
-rm torchlight.tar.gz
+mv torchlight.tar.gz old-backups/${date +"%Y%m%d%H%M")
 
 tar -czvf torchlight.tar.gz torchlight/
