@@ -199,6 +199,7 @@
       "workspace 13,title:(PAYDAY)"
       "workspace 14,title:(Dead Cells)"
       "workspace 15,title:(Torchlight)"
+      "workspace 16,title:(Rocket League)"
       "suppressevent maximize, class:.*"
       "nofocus,class:^$,title:^$,wayland:1,floating:1,fullscreen:0,pinned:0"
     ];
