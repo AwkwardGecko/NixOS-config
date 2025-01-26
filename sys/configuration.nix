@@ -67,7 +67,7 @@
 
   environment.systemPackages = with pkgs; [
     btrfs-progs
-    gddrescue
+    ddrescue
     glibc
     glibc_memusage
     bootiso
