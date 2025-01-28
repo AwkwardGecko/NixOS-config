@@ -1,0 +1,10 @@
+# Mapfile. Created by GNU ddrescue version 1.28
+# Command line: ddrescue --no-scrape /dev/sda1 /mnt/hddbackup/hdd.img /mnt/hddbackup/rescue.map
+# Start time:   2025-01-26 21:38:38
+# Current time: 2025-01-27 08:38:54
+# Copying non-tried blocks... Pass 1 (forwards)
+# current_pos  current_status  current_pass
+0x9F77910000     ?               1
+#      pos        size  status
+0x00000000  0x9F77910000  +
+0x9F77910000  0x132496F0000  ?
