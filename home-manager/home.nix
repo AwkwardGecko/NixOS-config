@@ -102,7 +102,6 @@
 	protonup-qt
     python312Packages.tinytuya
     shotwell
-    signal-desktop
     #	vlc
 	egl-wayland
     wayland-protocols

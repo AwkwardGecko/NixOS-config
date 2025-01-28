@@ -125,6 +125,7 @@
     mesa
     libGL
     libsecret
+    signal-desktop
 
     #haskellPackages.cuda
     #haskellPackages.torch
