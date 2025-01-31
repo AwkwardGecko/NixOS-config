@@ -50,7 +50,6 @@
       nixosConfigurations = {
         z-nixos = lib.nixosSystem {
           inherit system;
-          inherit inputs;
           modules = [
             ./sys/configuration.nix
             {
