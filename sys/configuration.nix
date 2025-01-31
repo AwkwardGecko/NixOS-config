@@ -68,13 +68,7 @@
   ];
 
 
-  nixpkgs.config = {
-    packagesOverrides = pkgs: {
-      unstable = import <unstable> {
-        config = config.nixpkgs.config;
-      };
-    };
-  };
+
 
   environment.systemPackages = with pkgs; [
     btrfs-progs
@@ -134,7 +128,6 @@
     mesa
     libGL
     libsecret
-    nixpkgsUnstable.signal-desktop
 
     #haskellPackages.cuda
     #haskellPackages.torch

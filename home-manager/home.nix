@@ -62,6 +62,8 @@
     cryptsetup # LUKS support
     dex # run .desktop files from CLI
     #	digikam
+    
+	egl-wayland
     fastfetch
     #	gimp
     #	git
@@ -102,8 +104,8 @@
 	protonup-qt
     python312Packages.tinytuya
     shotwell
+    signal-desktop
     #	vlc
-	egl-wayland
     wayland-protocols
     #	wine
     #	wine-wayland
