@@ -9,6 +9,9 @@
   inputs,
   ...
 }:
+
+let 
+
 {
   system.stateVersion = "24.05";
   nix.settings.experimental-features = [
@@ -125,7 +128,7 @@
     mesa
     libGL
     libsecret
-    Unstable.signal-desktop
+    nixpkgsUnstable.signal-desktop
 
     #haskellPackages.cuda
     #haskellPackages.torch
