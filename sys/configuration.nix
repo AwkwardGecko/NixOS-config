@@ -134,7 +134,7 @@
     mesa
     libGL
     libsecret
-    signal-desktop
+    unstable.signal-desktop
 
     #haskellPackages.cuda
     #haskellPackages.torch
