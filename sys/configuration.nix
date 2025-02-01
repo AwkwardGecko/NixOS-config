@@ -133,12 +133,12 @@
     rpm-ostree # package for flatpak
     pxattr # allows execution of .app files
     playonlinux
-    python312
-    python312Packages.pip
-    python312Packages.pyasyncore
-    python312Packages.xattr
-    python312Packages.typing
-    python312Packages.ffmpeg
+    python313
+    python313Packages.pip
+    python313Packages.pyasyncore
+    python313Packages.xattr
+    python313Packages.future-typing
+    python313Packages.python-ffmpeg
     pyenv
     sc-controller # steam controller support
     sshfs
