@@ -149,8 +149,8 @@
     wine-staging
     wine-wayland
     yt-dlp
-    ffmpeg-python
     typing
+    ffmpeg
   ];
 
 }
