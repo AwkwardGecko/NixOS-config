@@ -141,6 +141,7 @@
     pyenv
     sc-controller # steam controller support
     sshfs
+    smartmontools
     strawberry
     rustdesk
     pavucontrol
