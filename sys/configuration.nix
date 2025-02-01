@@ -137,6 +137,8 @@
     python311Packages.pip
     python311Packages.pyasyncore
     python311Packages.xattr
+    python311Packages.typing
+    python311Packages.ffmpeg
     pyenv
     sc-controller # steam controller support
     sshfs
@@ -149,8 +151,6 @@
     wine-staging
     wine-wayland
     yt-dlp
-    typing
-    ffmpeg
   ];
 
 }
