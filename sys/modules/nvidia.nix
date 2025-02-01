@@ -18,7 +18,7 @@
       nvidiaSettings = true;
       powerManagement.enable = false;
       powerManagement.finegrained = false;
-      package = config.boot.kernelPackages.nvidiaPackages.production;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
     };
 
     graphics = {
