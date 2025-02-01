@@ -68,19 +68,6 @@
   ];
 
 
-system.autoUpgrade = {
-  enable = true;
-  flake = inputs.self.outPath;
-  flags = [
-    "--update-input"
-    "nixpkgs"
-    "-L" # print build logs
-  ];
-  dates = "02:00";
-  randomizedDelaySec = "45min";
-};
-
-
   environment.systemPackages = with pkgs; [
     btrfs-progs
     ddrescue
@@ -162,6 +149,8 @@ system.autoUpgrade = {
     wine-staging
     wine-wayland
     yt-dlp
+    ffmpeg-python
+    typing
   ];
 
 }
