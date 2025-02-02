@@ -150,6 +150,7 @@
     sshfs
     smartmontools
     stdenv
+    signal-desktop
     strawberry
     rustdesk
     pavucontrol
