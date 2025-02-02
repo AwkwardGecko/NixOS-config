@@ -69,21 +69,28 @@
 
 
   environment.systemPackages = with pkgs; [
-    btrfs-progs
-    ddrescue
-    glibc
-    glibc_memusage
+  
     bootiso
+    btrfs-progs
     #btmon
     #bluez-experimental
     #bluez-alsa
     #bluez-tools
+
+    ddrescue
     docker
     docker-compose
+
+    ffmpeg
+    glibc
+
+    glibc_memusage
+    
+    gnome-disk-utility
+
+
     bazel
     digikam
-    cudatoolkit
-    gnome-disk-utility
     libheif
     libheif.out
     lutris
@@ -142,6 +149,7 @@
     sc-controller # steam controller support
     sshfs
     smartmontools
+    stdenv
     strawberry
     rustdesk
     pavucontrol
@@ -151,7 +159,6 @@
     wine-staging
     wine-wayland
     yt-dlp
-    ffmpeg
   ];
 
 }
