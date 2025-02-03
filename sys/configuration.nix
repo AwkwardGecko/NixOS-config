@@ -83,7 +83,7 @@
 
     ffmpeg
     glibc
-
+    git
     glibc_memusage
     
     gnome-disk-utility
