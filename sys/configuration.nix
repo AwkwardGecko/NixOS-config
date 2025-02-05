@@ -146,6 +146,7 @@
     python311Packages.xattr
     python311Packages.yt-dlp
     pyenv
+    rclone
     sc-controller # steam controller support
     sshfs
     smartmontools
