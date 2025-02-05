@@ -157,6 +157,7 @@
     wine
     uv
     vlc
+    wget
     wine-staging
     wine-wayland
     yt-dlp
