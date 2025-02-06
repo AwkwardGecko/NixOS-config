@@ -38,6 +38,8 @@
 
   programs.npm.enable = true;
 
+aagl.enableNixpkgsReleaseBranchCheck = false;
+
   imports = [
     ./hardware-configuration.nix
 
