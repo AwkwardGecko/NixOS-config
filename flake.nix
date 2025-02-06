@@ -6,7 +6,7 @@
 
   inputs = {
 
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     nix-colors.url = "github:misterio77/nix-colors";
 
@@ -18,6 +18,7 @@
     aagl = {
       url = "github:ezKEa/aagl-gtk-on-nix";
       inputs.nixpkgs.follows = "nixpkgs";
+      enableNixpkgsReleaseBranchCheck = false;
     };
 
     plugin-onedark.url = "github:navarasu/onedark.nvim";
