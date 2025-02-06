@@ -17,8 +17,7 @@
 
     aagl = {
       url = "github:ezKEa/aagl-gtk-on-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-      enableNixpkgsReleaseBranchCheck = false;
+      inputs.nixpkgs.follows = "nixpkgs"; 
     };
 
     plugin-onedark.url = "github:navarasu/onedark.nvim";
