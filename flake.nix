@@ -50,7 +50,7 @@
           system = "x86_64-linux";
           modules = [
             ./z-nixos/configuration.nix
-            ./home-manager.nixosModules.home-manager
+            home-manager.nixosModules.home-manager
             { 
               imports = [ aagl.nixosModules.z-nixos ];
               nix.settings = aagl.nixConfig;
