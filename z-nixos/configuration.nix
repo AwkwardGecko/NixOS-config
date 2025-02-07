@@ -47,6 +47,8 @@
     "SDL_ttf-2.0.11"    # test removing this soon
   ];
 
+  programs.cavalier.enable = true;
+
   security.doas.enable = true;
 
   programs.ssh.startAgent = true;

@@ -59,7 +59,6 @@
   home.packages = with pkgs; [
 	baobab        # disk usage analyzer
     #blueberry
-    cavalier
     clementine
     cliphist    # wayland clipboard manager
     cryptsetup  # LUKS support
