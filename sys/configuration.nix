@@ -38,23 +38,32 @@
 
   programs.npm.enable = true;
 
-aagl.enableNixpkgsReleaseBranchCheck = false;
+  aagl.enableNixpkgsReleaseBranchCheck = false;
 
   imports = [
     ./hardware-configuration.nix
 
     ./modules/audio.nix # audio
     ./modules/autologin.nix # 100%
+    
     #./modules/autostart.nix # autostart applications like mount-server.sh
-    ./modules/bluetooth.nix # bluetooth
+    
+    #./modules/bluetooth.nix # bluetooth
     ./modules/boot.nix # configure kernel modules
+    
     ./modules/cachix.nix # cachix
+    
     #./modules/cron.nix
+    
     ./modules/docker.nix
     ./modules/filesystem.nix
+    
     ./modules/firefox.nix
     ./modules/gamemode.nix
-    # ./modules/grayjay.nix
+    
+
+    
+
     ./modules/hypr.nix
     ./modules/internationalisation.nix
     ./modules/openrgb.nix
@@ -71,24 +80,27 @@ aagl.enableNixpkgsReleaseBranchCheck = false;
 
 
   environment.systemPackages = with pkgs; [
-  
+
     bootiso
     btrfs-progs
-    #btmon
-    #bluez-experimental
-    #bluez-alsa
-    #bluez-tools
+
 
     ddrescue
     docker
     docker-compose
 
+
     ffmpeg
     glibc
     git
     glibc_memusage
-    
     gnome-disk-utility
+    
+
+    #btmon
+    #bluez-experimental
+    #bluez-alsa
+    #bluez-tools
 
 
     bazel
@@ -108,6 +120,24 @@ aagl.enableNixpkgsReleaseBranchCheck = false;
     libz
     icu
     openssl # For updater
+    
+
+
+    ############## doesn't contain SDL_ttf
+
+
+
+    
+
+
+
+
+
+    
+
+
+
+
 
     xorg.libX11
     xorg.libXcomposite
@@ -126,6 +156,8 @@ aagl.enableNixpkgsReleaseBranchCheck = false;
     atk
     cups
     libdrm
+    
+
     expat
     libxkbcommon
     pango
@@ -138,6 +170,9 @@ aagl.enableNixpkgsReleaseBranchCheck = false;
 
     #haskellPackages.cuda
     #haskellPackages.torch
+    
+
+
     ostree # package for flatpak
     rpm-ostree # package for flatpak
     pxattr # allows execution of .app files
@@ -147,6 +182,8 @@ aagl.enableNixpkgsReleaseBranchCheck = false;
     python311Packages.pyasyncore
     python311Packages.xattr
     python311Packages.yt-dlp
+    
+
     pyenv
     rclone
     sc-controller # steam controller support
@@ -161,8 +198,8 @@ aagl.enableNixpkgsReleaseBranchCheck = false;
     uv
     vlc
     wget
-    wine-staging
-    wine-wayland
+    #wine-staging
+    #wine-wayland
     yt-dlp
   ];
 
