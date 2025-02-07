@@ -32,27 +32,39 @@
   };
 
   outputs =
-    {
+    inputs@{
+    #{
       self,
       nixpkgs,
       home-manager,
       aagl,
       nixvim,
       ...
-    }@inputs:
+      #}@inputs:
+      }:
 
-    let
-      lib = nixpkgs.lib;
-      pkgs = nixpkgs.legacyPackages.${system};
-      system = "x86_64-linux";
-    in
+
+    #let
+    #lib = nixpkgs.lib;
+      # pkgs = nixpkgs.legacyPackages.${system};
+      #system = "x86_64-linux";
+      #in
     {
       nixosConfigurations = {
-        z-nixos = lib.nixosSystem {
-          inherit system;
+        hostname = nixpkgs.lib.nixosSystem { #newedit
+          system = "x86_64-linux";
+        #z-nixos = lib.nixosSystem { #oldedit
+          #inherit system;
           modules = [
             ./sys/configuration.nix
-            {
+            ./home-manager/home.nix 
+
+            # home-manager.nixosModules.home-manager {
+            #     home-manager.useGlobalPkgs = true;
+            #     home-manager.useUserPackages = true;
+            #     home-manager.users.zozano = import ./home-manager/home.nix;
+              # home-manager.extraSpecialArgs = inherit inputs;
+          ] 
 
               imports = [
                 aagl.nixosModules.default
@@ -65,14 +77,14 @@
         };
       };
 
-      homeConfigurations = {
-        z-home = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          extraSpecialArgs = {
-            inherit inputs;
-          };
-          modules = [ ./home-manager/home.nix ];
-        };
-      };
+      # homeConfigurations = {
+      #   z-home = home-manager.lib.homeManagerConfiguration {
+      #     inherit pkgs;
+      #     extraSpecialArgs = {
+      #       inherit inputs;
+      #     };
+      #     modules = [ ./home-manager/home.nix ];
+      #   };
+      # };
     };
 }
