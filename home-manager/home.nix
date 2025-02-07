@@ -55,31 +55,31 @@
 	};
 
   home.packages = with pkgs; [
-	baobab # disk usage analyzer
+	baobab        # disk usage analyzer
     #blueberry
     clementine
-    # cliphist # wayland clipboard manager
-    cryptsetup # LUKS support
-    dex # run .desktop files from CLI
-    #	digikam
+    cliphist    # wayland clipboard manager
+    cryptsetup  # LUKS support
+    dex         # run .desktop files from CLI
+    #digikam
 	egl-wayland
     fastfetch
-    #	gimp
-    #	git
-    #	google-chrome
+    #gimp
+    #git
+    #google-chrome
     grimblast
 	grc
     home-assistant-component-tests.tuya
 	htop
-    #	hyprpaper
-    #	hyprshot
+    #hyprpaper
+    #hyprshot
     jellyfin-web
-	#	plasma5Packages.kdeconnect-kde
+	#plasma5Packages.kdeconnect-kde
     krusader # file manager 
     krename # batch renamer for krusader
     libva
-	#	lua
-    #	lua54Packages.luarocks-nix
+	#lua
+    #lua54Packages.luarocks-nix
     mesa
     mp3gain # normalize volume of music
     mkvtoolnix #modify video files 

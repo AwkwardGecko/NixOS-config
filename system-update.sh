@@ -4,5 +4,5 @@ cd /home/zozano/.dotfiles
 git add *
 git commit -m "$(date '+%F_%H:%M:%S')"
 git push github main
-sudo nixos-rebuild switch --upgrade --flake /home/zozano/.dotfiles/.#
-home-manager switch -b backup --flake /home/zozano/.dotfiles/.#
+sudo nixos-rebuild switch --upgrade --flake /home/zozano/.dotfiles/#
+home-manager switch -b backup --flake /home/zozano/.dotfiles/#
