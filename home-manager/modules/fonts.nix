@@ -20,9 +20,9 @@
     font-awesome
     #gyre-fonts
     jetbrains-mono
-    liberation_ttf
+    #liberation_ttf
     #ipafont
-    mplus-outline-fonts.githubRelease
+    #mplus-outline-fonts.githubRelease
     nerdfonts
     noto-fonts
     noto-fonts-emoji
