@@ -65,7 +65,7 @@
             #     home-manager.users.zozano = import ./home-manager/home.nix;
               # home-manager.extraSpecialArgs = inherit inputs;
            
-
+            ];
               imports = [
                 aagl.nixosModules.default
               ];
