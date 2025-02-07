@@ -41,7 +41,7 @@
       aagl,
       nixvim,
       ...
-      }:
+    }:
 
 
     let
@@ -52,16 +52,13 @@
     {
       nixosConfigurations = {
         z-nixos = nixpkgs.lib.nixosSystem { #newedit
+          system = "x86_64-linux";
           extraSpecialArgs = {inherit inputs;};
           modules = [
             ./sys/configuration.nix
             inputs.home-manager.nixosModules.z-nixos
-           
-          
-              imports = [
-                aagl.nixosModules.default
-              ];
-
+            { 
+              imports = [ aagl.nixosModules.default ];
               nix.settings = aagl.nixConfig;
               programs.honkers-railway-launcher.enable = true;
             }
