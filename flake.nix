@@ -6,7 +6,7 @@
 
   inputs = {
 
-    nixpkgs.url = "github:Nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "github:Nixos/nixpkgs/nixos-unstable";
 
     nix-colors.url = "github:misterio77/nix-colors";
 
