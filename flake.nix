@@ -37,7 +37,6 @@
       self,
       nixpkgs,
       home-manager,
-      inputs,
       aagl,
       nixvim,
       ...
