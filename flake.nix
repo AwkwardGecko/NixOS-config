@@ -44,11 +44,11 @@
       }:
 
 
-    #let
-    #lib = nixpkgs.lib;
-      # pkgs = nixpkgs.legacyPackages.${system};
-      #system = "x86_64-linux";
-      #in
+    let
+      #lib = nixpkgs.lib;
+      pkgs = nixpkgs.legacyPackages.${system};
+      system = "x86_64-linux";
+     in
     {
       nixosConfigurations = {
         hostname = nixpkgs.lib.nixosSystem { #newedit
