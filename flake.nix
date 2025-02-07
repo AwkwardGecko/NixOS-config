@@ -33,14 +33,14 @@
 
   outputs =
     
-    {
+    inputs@{
       self,
       nixpkgs,
       home-manager,
       aagl,
       nixvim,
       ...
-    }@inputs:
+    }:
 
 
     let
@@ -50,7 +50,7 @@
      in
     {
       nixosConfigurations = {
-        z-nixos = nixpkgs.lib.nixosSystem {
+        z-home = nixpkgs.lib.nixosSystem {
           extraSpecialArgs = {inherit inputs;};
           modules = [
             ./sys/configuration.nix
@@ -62,16 +62,6 @@
             }
           ];
         };
-      
-      home-manager = nixpkgs.lib.nixosSystem {
-          extraSpecialArgs = {inherit inputs;};
-          modules = [
-            ./sys/configuration.nix
-          ];
-      };
-
-    
-
   };
-    };
-}
+  }
+    

@@ -32,13 +32,6 @@
     '';
   };
 
-  home-manager = {
-      extraSpecialArgs = { inherit inputs; };
-      users = {
-        "zozano" = import ./home-manager/home.nix;
-      };
-  };
-
 
   security.doas.enable = true;
 
