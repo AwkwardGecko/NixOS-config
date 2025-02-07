@@ -43,16 +43,13 @@
     }:
 
 
-    # let
-      #lib = nixpkgs.lib;
-    #  pkgs = nixpkgs.legacyPackages.x86_64-linux;
-    # in
+
     {
       nixosConfigurations = {
-        sys = nixpkgs.lib.nixosSystem {
+        z-nixos = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./sys/configuration.nix
+            ./z-nixos/configuration.nix
             home-manager.nixosModules.home-manager
             { 
               imports = [ aagl.nixosModules.default ];
