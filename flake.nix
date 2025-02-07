@@ -54,12 +54,12 @@
         z-nixos = nixpkgs.lib.nixosSystem { #newedit
           extraSpecialArgs = {inherit inputs;};
           modules = [
-            ./sys/configuration.nix
-            inputs.home-manager.nixosModules.z-nixos 
+            ./sys/configuration.nix;
+            inputs.home-manager.nixosModules.z-nixos;
           
            
           
-              imports [
+              imports = [
                 aagl.nixosModules.default
               ];
 
