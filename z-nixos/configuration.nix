@@ -9,7 +9,7 @@
   inputs,
   ...
 }:
-
+{
   # Automatic updating
   system.autoUpgrade.enable = true;
   system.autoUpdates.dates = "daily";
@@ -20,7 +20,6 @@
   nix.gc.options = "--delete-older-than 7d";
   nix.settings.auto-optimise-store = true;
 
-{
   system.stateVersion = "24.05";
   nix.settings.experimental-features = [
     "nix-command"
