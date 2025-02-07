@@ -37,10 +37,11 @@
       self,
       nixpkgs,
       home-manager,
+      inputs,
       aagl,
       nixvim,
       ...
-    }@inputs:
+    }:
 
 
     let
