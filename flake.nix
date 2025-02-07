@@ -6,7 +6,7 @@
 
   inputs = {
 
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:Nixos/nixpkgs?ref=nixos-unstable";
 
     nix-colors.url = "github:misterio77/nix-colors";
 
@@ -46,7 +46,6 @@
     let
       #lib = nixpkgs.lib;
       pkgs = nixpkgs.legacyPackages.${system};
-      system = "x86_64-linux";
      in
     {
       nixosConfigurations = {
