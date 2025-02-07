@@ -36,12 +36,11 @@
     {
       self,
       nixpkgs,
-      inputs,
       home-manager,
       aagl,
       nixvim,
       ...
-    }:
+    }@inputs:
 
 
     let
