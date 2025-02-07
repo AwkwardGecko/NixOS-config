@@ -54,8 +54,8 @@
         z-nixos = nixpkgs.lib.nixosSystem { #newedit
           modules = [
             ./sys/configuration.nix
-            ./home-manager/home.nix 
- 
+            inputs.home-manager.nixosModules.z-nixos 
+            ] 
            
           
               imports = [
