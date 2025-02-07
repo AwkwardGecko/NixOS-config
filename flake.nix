@@ -49,7 +49,7 @@
     # in
     {
       nixosConfigurations = {
-        z-home = nixpkgs.lib.nixosSystem {
+        sys = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
             ./sys/configuration.nix
