@@ -26,7 +26,7 @@
     mplus-outline-fonts.githubRelease
     nerd-fonts.zed-mono
     nerd-fonts.victor-mono
-    nerd-fonts.ubunutu-sans
+    nerd-fonts.ubuntu-sans
     nerd-fonts.ubuntu-mono
     nerd-fonts.ubuntu
     nerd-fonts.tinos
