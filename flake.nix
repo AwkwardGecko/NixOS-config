@@ -66,7 +66,7 @@
       };
 
       homeConfigurations = {
-        zozano = home-manager.lib.homeManagerConfiguration {
+        z-home = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           extraSpecialArgs = {
             inherit inputs;
