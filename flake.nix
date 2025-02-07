@@ -46,13 +46,13 @@
 
     {
       nixosConfigurations = {
-        z-nixos = nixpkgs.lib.nixosSystem {
+        default = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
             ./z-nixos/configuration.nix
             home-manager.nixosModules.home-manager
             { 
-              imports = [ aagl.nixosModules.z-nixos ];
+              imports = [ aagl.nixosModules.default ];
               nix.settings = aagl.nixConfig;
               programs.honkers-railway-launcher.enable = true;
 
