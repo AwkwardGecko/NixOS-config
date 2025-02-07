@@ -11,11 +11,7 @@
 }:
 {
   # Automatic updating
-system.autoUpgrade = {
-  enable = true;
-  dates = "daily";
-  flake = inputs.self.outPath;
-};
+
 
   # Automatic cleanup
   nix.gc.automatic = true;
