@@ -52,7 +52,7 @@
       nixosConfigurations = {
         z-nixos = nixpkgs.lib.nixosSystem { #newedit
           system = "x86_64-linux";
-          extraSpecialArgs = {inherit inputs;};
+          extraSpecialArgs = { inherit inputs; };
           modules = [
             ./sys/configuration.nix
             inputs.home-manager.nixosModules.z-nixos
