@@ -6,7 +6,6 @@
 
   inputs = {
 
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     stylix.url = "github:danth/stylix";
 
     nixpkgs.url = "github:Nixos/nixpkgs/nixos-unstable";
