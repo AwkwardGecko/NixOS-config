@@ -54,10 +54,12 @@
     ".local/share/vlc/lua/extensions".source = source/local/share/vlc/lua/extensions;
 	};
 
+
+programs.cavalier.enable = true;
+  
   home.packages = with pkgs; [
 	baobab        # disk usage analyzer
     #blueberry
-    cavalier
     clementine
     cliphist    # wayland clipboard manager
     cryptsetup  # LUKS support
