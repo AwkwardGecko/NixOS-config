@@ -56,7 +56,7 @@
           #extraSpecialArgs = { inherit inputs; };
           modules = [
             ./sys/configuration.nix
-            z-home.inputs.home-manager.nixosModules.z-nixos
+           inputs.home-manager.nixosModules.z-nixos
             { 
               imports = [ aagl.nixosModules.default ];
               nix.settings = aagl.nixConfig;
@@ -66,14 +66,14 @@
         };
       };
 
-      # homeConfigurations = {
-      #   z-home = home-manager.lib.homeManagerConfiguration {
-      #     inherit pkgs;
-      #     extraSpecialArgs = {
-      #       inherit inputs;
-      #     };
-      #     modules = [ ./home-manager/home.nix ];
-      #   };
-      # };
+      homeConfigurations = {
+         z-home = home-manager.lib.homeManagerConfiguration {
+           inherit pkgs;
+           extraSpecialArgs = {
+             inherit inputs;
+           };
+           modules = [ ./home-manager/home.nix ];
+         };
+      };
     };
 }
