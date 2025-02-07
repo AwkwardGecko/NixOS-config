@@ -13,6 +13,9 @@
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
+
+
+++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts)
     #corefonts
     #dina-font
     fira-code
@@ -20,10 +23,9 @@
     font-awesome
     #gyre-fonts
     jetbrains-mono
-    #liberation_ttf
+    liberation_ttf
     #ipafont
-    #mplus-outline-fonts.githubRelease
-    nerdfonts
+    mplus-outline-fonts.githubRelease
     noto-fonts
     noto-fonts-emoji
     #noto-fonts-extra
