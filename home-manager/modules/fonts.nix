@@ -15,7 +15,7 @@
   home.packages = with pkgs; [
 
 
-++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts)
+    builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts)
     #corefonts
     #dina-font
     fira-code
