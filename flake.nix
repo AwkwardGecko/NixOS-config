@@ -55,7 +55,7 @@
           #extraSpecialArgs = { inherit inputs; };
           modules = [
             ./sys/configuration.nix
-            inputs.home-manager.nixosModules.z-nixos
+            z-home.inputs.home-manager.nixosModules.z-nixos
             { 
               imports = [ aagl.nixosModules.default ];
               nix.settings = aagl.nixConfig;
