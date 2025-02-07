@@ -6,6 +6,9 @@
 
   inputs = {
 
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    stylix.url = "github:danth/stylix";
+
     nixpkgs.url = "github:Nixos/nixpkgs/nixos-unstable";
 
     nix-colors.url = "github:misterio77/nix-colors";
@@ -39,6 +42,7 @@
       home-manager,
       aagl,
       nixvim,
+      stylix,
       ...
     }:
 
@@ -54,6 +58,7 @@
           modules = [
             ./z-nixos/configuration.nix
             home-manager.nixosModules.home-manager
+            stylix.nixosModules.stylix
             { 
               imports = [ aagl.nixosModules.default ];
               nix.settings = aagl.nixConfig;
