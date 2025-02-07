@@ -57,7 +57,7 @@
           modules = [
             ./z-nixos/configuration.nix
             home-manager.nixosModules.home-manager
-            stylix.nixosModules.stylix
+            #stylix.nixosModules.stylix
             { 
               imports = [ aagl.nixosModules.default ];
               nix.settings = aagl.nixConfig;
