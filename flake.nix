@@ -45,7 +45,7 @@
 
     let
       #lib = nixpkgs.lib;
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = nixpkgs.legacyPackages.x86_64-linux;
      in
     {
       nixosConfigurations = {
