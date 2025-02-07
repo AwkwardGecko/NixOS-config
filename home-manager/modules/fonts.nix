@@ -19,7 +19,6 @@
   home.packages = with pkgs; [
 
 
-    corefonts
     #dina-font
     fira-code
     fira-code-symbols
