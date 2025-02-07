@@ -11,7 +11,10 @@
 }:
 {
   # Automatic updating
-
+  system.autoUpgrade = {
+    enable = true;
+    dates = "12:00";
+  };
 
   # Automatic cleanup
   nix.gc.automatic = true;
