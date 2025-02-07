@@ -15,11 +15,6 @@ system.autoUpgrade = {
   enable = true;
   dates = "daily";
   flake = inputs.self.outPath;
-  flags = [
-    "--update-input"
-    "nixpkgs"
-    "-L" # print build logs
-  ];
 };
 
   # Automatic cleanup
