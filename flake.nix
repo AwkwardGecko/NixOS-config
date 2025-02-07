@@ -42,11 +42,14 @@
       ...
     }:
 
-
+    let
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
+    in
 
     {
       nixosConfigurations = {
-        default = nixpkgs.lib.nixosSystem {
+        z-nixos = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
             ./z-nixos/configuration.nix
