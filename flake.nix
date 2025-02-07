@@ -59,7 +59,7 @@
           
            
           
-              imports = [
+              imports [
                 aagl.nixosModules.default
               ];
 
