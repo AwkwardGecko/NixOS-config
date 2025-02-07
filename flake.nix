@@ -41,7 +41,7 @@
       aagl,
       nixvim,
       ...
-    }:
+    }@inputs:
 
 
     let
