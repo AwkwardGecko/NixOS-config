@@ -43,7 +43,6 @@
 
   imports = [
     ./hardware-configuration.nix
-    inputs.home-manager.nixosModules.default
     ./modules/audio.nix # audio
     ./modules/autologin.nix # 100%
     
