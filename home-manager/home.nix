@@ -20,7 +20,7 @@
     # ./modules/applications.nix
     #./modules/cursor.nix
     ./modules/fish.nix
-    ./modules/fonts.nix
+    #./modules/fonts.nix
     ./modules/git.nix
     #./modules/gtk.nix
     ./modules/hypr.nix
