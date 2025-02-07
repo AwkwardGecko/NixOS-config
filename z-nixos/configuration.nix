@@ -11,8 +11,16 @@
 }:
 {
   # Automatic updating
-  system.autoUpgrade.enable = true;
-  system.autoUpdates.dates = "daily";
+system.autoUpgrade = {
+  enable = true;
+  dates = "daily";
+  flake = inputs.self.outPath;
+  flags = [
+    "--update-input"
+    "nixpkgs"
+    "-L" # print build logs
+  ];
+};
 
   # Automatic cleanup
   nix.gc.automatic = true;
