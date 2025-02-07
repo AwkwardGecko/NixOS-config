@@ -12,7 +12,7 @@
 
   fonts.fontconfig.enable = true;
 
-
+fonts.packages = [ ... ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts)
 
   home.packages = with pkgs; [
 
