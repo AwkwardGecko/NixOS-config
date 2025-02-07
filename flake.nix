@@ -51,19 +51,11 @@
      in
     {
       nixosConfigurations = {
-        hostname = nixpkgs.lib.nixosSystem { #newedit
-          system = "x86_64-linux";
-        #z-nixos = lib.nixosSystem { #oldedit
-          #inherit system;
+        z-nixos = nixpkgs.lib.nixosSystem { #newedit
           modules = [
             ./sys/configuration.nix
             ./home-manager/home.nix 
-          ];
-            # home-manager.nixosModules.home-manager {
-            #     home-manager.useGlobalPkgs = true;
-            #     home-manager.useUserPackages = true;
-            #     home-manager.users.zozano = import ./home-manager/home.nix;
-              # home-manager.extraSpecialArgs = inherit inputs;
+ 
            
           
               imports = [
