@@ -71,7 +71,7 @@
     #./modules/nixvim.nix
     ./modules/nvidia.nix
     #./modules/star-rail.nix
-    ./modules/steam.nix
+    #./modules/steam.nix
     #./modules/systemd-timers.nix
     ./modules/teamviewer.nix
     ./modules/users.nix
