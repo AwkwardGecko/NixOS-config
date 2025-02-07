@@ -56,7 +56,7 @@
           modules = [
             ./sys/configuration.nix
             inputs.home-manager.nixosModules.z-nixos 
-            ];
+          
            
           
               imports = [
