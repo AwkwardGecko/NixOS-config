@@ -32,6 +32,14 @@
     '';
   };
 
+  home-manager = {
+      extraSpecialArgs = { inherit inputs; };
+      users = {
+        "zozano" = import /home/zozano/.dotfiles/home-manager/home.nix;
+      };
+  };
+
+
   security.doas.enable = true;
 
   programs.ssh.startAgent = true;
