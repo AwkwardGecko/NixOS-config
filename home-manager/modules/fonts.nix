@@ -12,11 +12,7 @@
 
   fonts.fontconfig.enable = true;
 
-  fonts.packages = [ 
-    corefonts
-  ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
-
-  home.packages = with pkgs; [
+  fonts.packages = with pkgs; [
 
 
     #dina-font
