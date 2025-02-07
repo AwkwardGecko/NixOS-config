@@ -10,6 +10,16 @@
   ...
 }:
 
+  # Automatic updating
+  system.autoUpgrade.enable = true;
+  system.autoUpdates.dates = "daily";
+
+  # Automatic cleanup
+  nix.gc.automatic = true;
+  nix.gc.dates = "daily";
+  nix.gc.options = "--delete-older-than 7d";
+  nix.settings.auto-optimise-store = true;
+
 {
   system.stateVersion = "24.05";
   nix.settings.experimental-features = [
@@ -32,6 +42,9 @@
     '';
   };
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "SDL_ttf-2.0.11"    # test removing this soon
+  ];
 
   security.doas.enable = true;
 
@@ -45,33 +58,22 @@
     ./hardware-configuration.nix
     ./modules/audio.nix # audio
     ./modules/autologin.nix # 100%
-    
     #./modules/autostart.nix # autostart applications like mount-server.sh
-    
     #./modules/bluetooth.nix # bluetooth
     ./modules/boot.nix # configure kernel modules
-    
     ./modules/cachix.nix # cachix
-    
     #./modules/cron.nix
-    
     ./modules/docker.nix
     ./modules/filesystem.nix
-    
     ./modules/firefox.nix
     ./modules/gamemode.nix
-    
-
-    
-
     ./modules/hypr.nix
     ./modules/internationalisation.nix
     ./modules/openrgb.nix
     ./modules/polkit.nix
     #./modules/nixvim.nix
     ./modules/nvidia.nix
-    #./modules/star-rail.nix
-    #./modules/steam.nix
+    ./modules/steam.nix
     #./modules/systemd-timers.nix
     ./modules/teamviewer.nix
     ./modules/users.nix
@@ -80,29 +82,19 @@
 
 
   environment.systemPackages = with pkgs; [
-
     bootiso
     btrfs-progs
-
-
-    ddrescue
     docker
     docker-compose
-
-
     ffmpeg
     glibc
     git
     glibc_memusage
     gnome-disk-utility
-    
-
     #btmon
     #bluez-experimental
     #bluez-alsa
     #bluez-tools
-
-
     bazel
     digikam
     libheif
@@ -120,24 +112,6 @@
     libz
     icu
     openssl # For updater
-    
-
-
-    ############## doesn't contain SDL_ttf
-
-
-
-    
-
-
-
-
-
-    
-
-
-
-
 
     xorg.libX11
     xorg.libXcomposite
@@ -156,8 +130,6 @@
     atk
     cups
     libdrm
-    
-
     expat
     libxkbcommon
     pango
@@ -167,12 +139,6 @@
     mesa
     libGL
     libsecret
-
-    #haskellPackages.cuda
-    #haskellPackages.torch
-    
-
-
     ostree # package for flatpak
     rpm-ostree # package for flatpak
     pxattr # allows execution of .app files
@@ -182,8 +148,6 @@
     python311Packages.pyasyncore
     python311Packages.xattr
     python311Packages.yt-dlp
-    
-
     pyenv
     rclone
     sc-controller # steam controller support
@@ -198,8 +162,8 @@
     uv
     vlc
     wget
-    #wine-staging
-    #wine-wayland
+    wine-staging
+    wine-wayland
     yt-dlp
   ];
 

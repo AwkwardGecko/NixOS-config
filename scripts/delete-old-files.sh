@@ -1,3 +1,3 @@
 #~/.nixos-profile/bash
 
-sudo nix-collect-garbage --delete-old
+sudo nix-collect-garbage -d --delete-older-than 7d

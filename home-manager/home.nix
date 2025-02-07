@@ -99,7 +99,7 @@
     #	rofi-wayland
     jellyfin-media-player
 	#qt5ct
-    #protonup-qt
+    protonup-qt
     #python312Packages.tinytuya
     shotwell
     #	vlc
@@ -112,6 +112,8 @@
     #wl-clipboard-rs
     #xcbeautify # colour support for wayland? 
   ];
+
+  home.enableNixpkgsReleaseCheck = false;
 
   programs.home-manager.enable = true;
   home.username = "zozano"; # Home Manager needs a bit of information about

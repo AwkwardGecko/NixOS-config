@@ -23,7 +23,7 @@
     #liberation_ttf
     #ipafont
     #mplus-outline-fonts.githubRelease
-    #nerd-fonts
+    nerd-fonts
     noto-fonts
     noto-fonts-emoji
     #noto-fonts-extra
