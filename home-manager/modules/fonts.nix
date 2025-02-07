@@ -17,7 +17,7 @@
   home.packages = with pkgs; [
 
 
-    #corefonts
+    corefonts
     #dina-font
     fira-code
     fira-code-symbols
@@ -27,6 +27,7 @@
     liberation_ttf
     #ipafont
     mplus-outline-fonts.githubRelease
+    nerdfonts
     noto-fonts
     noto-fonts-emoji
     #noto-fonts-extra
