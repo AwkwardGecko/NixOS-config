@@ -99,7 +99,7 @@
     #	rofi-wayland
     jellyfin-media-player
 	#qt5ct
-	protonup-qt
+    #protonup-qt
     #python312Packages.tinytuya
     shotwell
     #	vlc
