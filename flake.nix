@@ -8,7 +8,7 @@
 
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    #nix-colors.url = "github:misterio77/nix-colors";
+    nix-colors.url = "github:misterio77/nix-colors";
 
     home-manager = {
       url = "github:nix-community/home-manager/master";
@@ -50,12 +50,11 @@
      in
     {
       nixosConfigurations = {
-        z-nixos = nixpkgs.lib.nixosSystem { #newedit
-          system = "x86_64-linux";
-          #extraSpecialArgs = { inherit inputs; };
+        z-nixos = nixpkgs.lib.nixosSystem {
+          extraSpecialArgs = {inherit inputs;};
           modules = [
             ./sys/configuration.nix
-           inputs.home-manager.nixosModules.z-nixos
+            inputs.home-manager.nixosModules.default
             { 
               imports = [ aagl.nixosModules.default ];
               nix.settings = aagl.nixConfig;
@@ -63,16 +62,16 @@
             }
           ];
         };
+      
+      home-manager = nixpkgs.lib.nixosSystem {
+          extraSpecialArgs = {inherit inputs;};
+          modules = [
+            ./sys/configuration.nix
+          ];
       };
 
-      homeConfigurations = {
-         z-home = home-manager.lib.homeManagerConfiguration {
-           inherit pkgs;
-           extraSpecialArgs = {
-             inherit inputs;
-           };
-           modules = [ ./home-manager/home.nix ];
-         };
-      };
+    
+
+  };
     };
 }

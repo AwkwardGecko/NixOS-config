@@ -35,7 +35,7 @@
   home-manager = {
       extraSpecialArgs = { inherit inputs; };
       users = {
-        "zozano" = import /home/zozano/.dotfiles/home-manager/home.nix;
+        "zozano" = import ./home-manager/home.nix;
       };
   };
 
@@ -50,7 +50,7 @@
 
   imports = [
     ./hardware-configuration.nix
-
+    inputs.home-manager.nixosModules.default
     ./modules/audio.nix # audio
     ./modules/autologin.nix # 100%
     
