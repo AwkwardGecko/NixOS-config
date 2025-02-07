@@ -43,22 +43,25 @@
     }:
 
 
-    let
+    # let
       #lib = nixpkgs.lib;
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
-     in
+    #  pkgs = nixpkgs.legacyPackages.x86_64-linux;
+    # in
     {
       nixosConfigurations = {
         z-home = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          extraSpecialArgs = {inherit inputs;};
           modules = [
             ./sys/configuration.nix
-            inputs.home-manager.nixosModules.default
+            home-manager.nixosModules.home-manager
             { 
               imports = [ aagl.nixosModules.default ];
               nix.settings = aagl.nixConfig;
               programs.honkers-railway-launcher.enable = true;
+
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.zozano = import ./home-manager/home.nix;
             }
           ];
         };
