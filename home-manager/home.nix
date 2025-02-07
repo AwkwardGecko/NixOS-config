@@ -20,7 +20,7 @@
     # ./modules/applications.nix
     #./modules/cursor.nix
     ./modules/fish.nix
-    #./modules/fonts.nix
+    ./modules/fonts.nix
     ./modules/git.nix
     #./modules/gtk.nix
     ./modules/hypr.nix
@@ -58,7 +58,7 @@
 	baobab # disk usage analyzer
     #blueberry
     clementine
-    cliphist
+    # cliphist # wayland clipboard manager
     cryptsetup # LUKS support
     dex # run .desktop files from CLI
     #	digikam
@@ -69,7 +69,6 @@
     #	google-chrome
     grimblast
 	grc
-    haskellPackages.MusicBrainz
     home-assistant-component-tests.tuya
 	htop
     #	hyprpaper
@@ -101,7 +100,7 @@
     jellyfin-media-player
 	#qt5ct
 	protonup-qt
-    python312Packages.tinytuya
+    #python312Packages.tinytuya
     shotwell
     #	vlc
     wayland-protocols
