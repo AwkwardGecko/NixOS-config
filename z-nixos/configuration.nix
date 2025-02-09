@@ -59,8 +59,7 @@
     ./hardware-configuration.nix
     ./modules/audio.nix # audio
     ./modules/autologin.nix # 100%
-    #./modules/autostart.nix # autostart applications like mount-server.sh
-    #./modules/bluetooth.nix # bluetooth
+    ./modules/bluetooth.nix # bluetooth
     ./modules/boot.nix # configure kernel modules
     ./modules/cachix.nix # cachix
     #./modules/cron.nix
