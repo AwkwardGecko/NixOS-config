@@ -79,6 +79,7 @@
     ./modules/teamviewer.nix
     ./modules/users.nix
     ./modules/xserver.nix
+    ./modules/whisperai.nix
   ];
 
 
