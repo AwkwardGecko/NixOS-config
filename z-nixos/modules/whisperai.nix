@@ -1,7 +1,7 @@
 { pkgs, lib, config, ... }:
 
 {
-  environment.systemPackages = [
+  environment.systemPackages = with pkgs; [
     python312Packages.openai-whisper
   ];
 }
