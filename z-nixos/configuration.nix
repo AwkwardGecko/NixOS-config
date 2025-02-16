@@ -80,6 +80,7 @@
     ./modules/users.nix
     ./modules/xserver.nix
     ./modules/whisperai.nix
+    ./modules/wine.nix
   ];
 
 
@@ -164,8 +165,6 @@
     uv
     vlc
     wget
-    wine-staging
-    wine-wayland
     yt-dlp
   ];
 
