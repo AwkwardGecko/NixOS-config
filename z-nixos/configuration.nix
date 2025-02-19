@@ -124,7 +124,7 @@
     xorg.libXfixes
     xorg.libXrandr
     xorg.libxcb
-    
+    binutils-wrapper 
     libpcap # 2025-02-19 for star rail relic scorer: Fribbels Honkai Star Rail Optimizer
     dcap 
     parted
