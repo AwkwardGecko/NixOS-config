@@ -116,7 +116,7 @@
     icu
     openssl # For updater
     cargo
-    cc
+    cargo-c
     xorg.libX11
     xorg.libXcomposite
     xorg.libXdamage
