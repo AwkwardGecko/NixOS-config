@@ -126,7 +126,9 @@
     xorg.libXfixes
     xorg.libXrandr
     xorg.libxcb
-    
+
+
+    crane
     python312Packages.libpcap
     pcapfix
     binutils_nogold 
