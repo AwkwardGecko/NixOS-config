@@ -127,7 +127,7 @@
     xorg.libXfixes
     xorg.libXrandr
     xorg.libxcb
-
+    rustc
     crate2nix
     crane
     python312Packages.libpcap
