@@ -4,7 +4,7 @@
 # See https://github.com/kolloch/crate2nix for more info.
 
 { 
-, pkgs 
+ pkgs 
 , lib 
 , stdenv 
 , buildRustCrateForPkgs ? pkgs: pkgs.buildRustCrate
