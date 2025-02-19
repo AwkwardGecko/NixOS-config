@@ -138,7 +138,7 @@
     cargo-c
     cargo-rr
     cargo-deb
-
+    rustup
     parted
     gtk3
     glib
