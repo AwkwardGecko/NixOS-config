@@ -123,7 +123,7 @@
     xorg.libXfixes
     xorg.libXrandr
     xorg.libxcb
-
+    libpcap
     parted
     gtk3
     glib
