@@ -3,10 +3,10 @@
 #   "generate"
 # See https://github.com/kolloch/crate2nix for more info.
 
-{ nixpkgs ? <nixpkgs>
-, pkgs ? import nixpkgs
-, lib ? pkgs.lib
-, stdenv ? pkgs.stdenv
+{ nixpkgs 
+, pkgs 
+, lib 
+, stdenv 
 , buildRustCrateForPkgs ? pkgs: pkgs.buildRustCrate
   # This is used as the `crateOverrides` argument for `buildRustCrate`.
 , defaultCrateOverrides ? pkgs.defaultCrateOverrides
