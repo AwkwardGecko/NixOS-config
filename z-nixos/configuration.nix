@@ -154,6 +154,8 @@
     python311Packages.pyasyncore
     python311Packages.xattr
     python311Packages.yt-dlp
+    python312Packages.libpcap
+    Python313Packages.libpcap
     pyenv
     rclone
     sc-controller # steam controller support
