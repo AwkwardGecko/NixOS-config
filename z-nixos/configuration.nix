@@ -126,7 +126,7 @@
     xorg.libxcb
     
     libpcap # 2025-02-19 for star rail relic scorer: Fribbels Honkai Star Rail Optimizer
-    
+    dcap 
     parted
     gtk3
     glib
