@@ -4,7 +4,7 @@
 # See https://github.com/kolloch/crate2nix for more info.
 
 { nixpkgs ? <nixpkgs>
-, pkgs ? import nixpkgs { config = {}; }
+, pkgs ? import nixpkgs
 , lib ? pkgs.lib
 , stdenv ? pkgs.stdenv
 , buildRustCrateForPkgs ? pkgs: pkgs.buildRustCrate
