@@ -81,7 +81,6 @@
     ./modules/xserver.nix
     ./modules/whisperai.nix
     ./modules/wine.nix
-    ./modules/Cargo.nix
   ];
 
 
