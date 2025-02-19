@@ -3,29 +3,7 @@
 #   "generate"
 # See https://github.com/kolloch/crate2nix for more info.
 
-{ 
- pkgs 
-, lib 
-, stdenv 
-, buildRustCrateForPkgs ? pkgs: pkgs.buildRustCrate
-  # This is used as the `crateOverrides` argument for `buildRustCrate`.
-, defaultCrateOverrides ? pkgs.defaultCrateOverrides
-  # The features to enable for the root_crate or the workspace_members.
-, rootFeatures ? [ "default" ]
-  # If true, throw errors instead of issueing deprecation warnings.
-, strictDeprecation ? false
-  # Elements to add to the `-C target-feature=` argument passed to `rustc`
-  # (separated by `,`, prefixed with `+`).
-  # Used for conditional compilation based on CPU feature detection.
-, targetFeatures ? []
-  # Whether to perform release builds: longer compile times, faster binaries.
-, release ? true
-  # Additional crate2nix configuration if it exists.
-, crateConfig
-  ? if builtins.pathExists ./crate-config.nix
-    then pkgs.callPackage ./crate-config.nix {}
-    else {}
-}:
+{ pkgs, lib, ... }:
 
 rec {
   #
