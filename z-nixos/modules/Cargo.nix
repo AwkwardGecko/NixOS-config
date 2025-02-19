@@ -3,7 +3,7 @@
 #   "generate"
 # See https://github.com/kolloch/crate2nix for more info.
 
-{ nixpkgs 
+{ 
 , pkgs 
 , lib 
 , stdenv 
