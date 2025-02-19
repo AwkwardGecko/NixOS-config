@@ -127,7 +127,7 @@
     xorg.libXrandr
     xorg.libxcb
     
-
+    python312Packages.libpcap
     pcapfix
     binutils_nogold 
     libpcap # 2025-02-19 for star rail relic scorer: Fribbels Honkai Star Rail Optimizer
