@@ -18,7 +18,7 @@
       open = true;
       nvidiaSettings = true;
       powerManagement.enable = false;
-      powerManagement.finegrained = false;
+      powerManagement.finegrained = true;
       package = config.boot.kernelPackages.nvidiaPackages.stable;
     };
 
@@ -26,10 +26,6 @@
       enable = true;
       enable32Bit = true;
     };
-
-  environment.systemPackages = with pkgs; [
-    nvidia-persistenced
-  ];
 
   };
 }
