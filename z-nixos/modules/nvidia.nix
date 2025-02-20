@@ -29,10 +29,13 @@
       enable32Bit = true;
     };
 
+
+
+
+  };
+
     environment.systemPackages = with pkgs; [
       nvfancontrol
     ];
 
-
-  };
 }
