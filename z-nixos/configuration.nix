@@ -118,6 +118,14 @@
     icu
     openssl # For updater
     cargo
+
+    clinfo
+    gwe
+    nvtop-nvidia
+    virtualglLib
+    vulkan-loader
+    vulkan-tools
+
     gcc 
     xorg.libX11
     xorg.libXcomposite
