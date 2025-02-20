@@ -27,5 +27,9 @@
       enable32Bit = true;
     };
 
+  environment.systemPackages = with pkgs; [
+    nvidia-persistenced
+  ];
+
   };
 }
