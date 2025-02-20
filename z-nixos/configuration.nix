@@ -141,6 +141,7 @@
     rustup
     parted
     gtk3
+    gtkd
     glib
     nss
     nspr
