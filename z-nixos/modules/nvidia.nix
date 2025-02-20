@@ -17,8 +17,8 @@
       modesetting.enable = true;
       open = true;
       nvidiaSettings = true;
-      # powerManagement.enable = true;
-      # powerManagement.finegrained = true;
+      powerManagement.enable = true;
+      powerManagement.finegrained = false;
       package = config.boot.kernelPackages.nvidiaPackages.latest;
     };
 

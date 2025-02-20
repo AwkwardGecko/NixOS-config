@@ -53,7 +53,34 @@
 	home.file = {
     ".local/share/applications".source = source/local/share/applications;
     ".local/share/vlc/lua/extensions".source = source/local/share/vlc/lua/extensions;
-	};
+  
+ ".nv/nvidia-application-profiles-rc".text = ''
+{
+    "rules": [
+        {
+            "pattern": {
+                "feature": "dso",
+                "matches": "libGL.so.1"
+            },
+            "profile": "openGL_fix"
+        }
+    ],
+    "profiles": [
+        {
+            "name": "openGL_fix",
+            "settings": [
+                {
+                    "key": "GLThreadedOptimizations",
+                    "value": false
+                }
+            ]
+        }
+    ]
+}
+    '';
+
+
+  };
 
 
   
