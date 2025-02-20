@@ -121,7 +121,7 @@
 
     clinfo
     gwe
-    nvtop-nvidia
+    nvtopPackages.nvidia
     virtualglLib
     vulkan-loader
     vulkan-tools
