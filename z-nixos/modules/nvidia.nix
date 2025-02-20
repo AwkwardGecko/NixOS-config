@@ -28,19 +28,16 @@
       enable = true;
       enable32Bit = true;
     };
-
-
-  system.environment.variables = {
-    GBM_BACKEND = "nvidia-drm";
-    LIBVA_DRIVER_NAME = "nvidia";
-    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-  };
-
-
   };
 
     environment.systemPackages = with pkgs; [
       nvfancontrol
-    ];
+  ];
+
+    environment.variables = {
+    GBM_BACKEND = "nvidia-drm";
+    LIBVA_DRIVER_NAME = "nvidia";
+    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+  };
 
 }
