@@ -22,6 +22,10 @@
       package = config.boot.kernelPackages.nvidiaPackages.latest;
     };
 
+    environment.systemPackages = with pkgs; [
+      nvfancontrol
+    ];
+
     graphics = {
       enable = true;
       enable32Bit = true;
