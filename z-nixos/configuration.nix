@@ -117,9 +117,9 @@
     libz
     icu
     openssl # For updater
+    rustc
     cargo
     crane
-    dream2nix
     clinfo
     gwe
     nvtopPackages.nvidia
