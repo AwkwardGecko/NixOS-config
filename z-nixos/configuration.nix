@@ -118,6 +118,7 @@
     icu
     openssl # For updater
     rustc
+    llvmPackages.bintools
     cargo
     crane
     clinfo
