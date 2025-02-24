@@ -118,7 +118,8 @@
     icu
     openssl # For updater
     cargo
-    rust
+    crane
+    dream2nix
     clinfo
     gwe
     nvtopPackages.nvidia
