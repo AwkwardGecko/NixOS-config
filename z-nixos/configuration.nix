@@ -118,7 +118,7 @@
     icu
     openssl # For updater
     cargo
-
+    rust
     clinfo
     gwe
     nvtopPackages.nvidia
