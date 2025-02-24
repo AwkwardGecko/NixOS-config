@@ -138,6 +138,7 @@
     rustc
     crate2nix
     crane
+    pkg-config
     python312Packages.libpcap
     pcapfix
     binutils_nogold 
