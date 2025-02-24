@@ -137,6 +137,7 @@
     xorg.libXrandr
     xorg.libxcb
     rustc
+    lld
     crate2nix
     crane
     pkg-config
