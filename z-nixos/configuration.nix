@@ -129,7 +129,7 @@
     virtualglLib
     vulkan-loader
     vulkan-tools
-
+  latest.firefox-nightly-bin
     gcc 
     xorg.libX11
     xorg.libXcomposite
