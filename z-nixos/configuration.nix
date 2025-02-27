@@ -88,6 +88,7 @@
   environment.systemPackages = with pkgs; [
     bootiso
     btrfs-progs
+    brave
     docker
     docker-compose
     ffmpeg
