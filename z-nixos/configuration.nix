@@ -192,6 +192,7 @@
     pavucontrol
     wine
     uv
+    unigine-superposition
     vlc
     vivaldi
     wget
