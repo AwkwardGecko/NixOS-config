@@ -116,6 +116,7 @@
     iproute2
     libz
     icu
+    glxinfo # gpu benchmark tool
     openssl # For updater
     rustc
     llvmPackages.bintools
