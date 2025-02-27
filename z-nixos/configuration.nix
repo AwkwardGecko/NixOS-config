@@ -83,6 +83,7 @@
     ./modules/wine.nix
   ];
 
+  nixpkgs.overlays = { ../overlays/firefox-overlay.nix };
 
   programs.nix-ld.enable = true;
 
