@@ -193,6 +193,7 @@
     wine
     uv
     vlc
+    vivaldi
     wget
     yt-dlp
   ];
