@@ -191,6 +191,7 @@
     rustdesk
     pavucontrol
     wine
+    upower # possible dependency for vivaldi
     uv
     unigine-superposition
     vlc
