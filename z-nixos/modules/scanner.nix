@@ -5,12 +5,12 @@
     enable = true;
     
     extraBackends = [
-      pkgs.utushi
+      pkgs.utsushi
     ];
   };
 
   services.udev.packages = [
-      pkgs.utushi
+      pkgs.utsushi
   ];
 
   users.users.zozano.extraGroups = [
