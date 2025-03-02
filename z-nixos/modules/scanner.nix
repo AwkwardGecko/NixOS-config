@@ -6,7 +6,7 @@
     
     extraBackends = with pkgs; [
       utsushi
-      epkowa
+      #      epkowa
     ];
   };
 
