@@ -186,6 +186,7 @@
     smartmontools
     stdenv
     signal-desktop
+    simple-scan
     strawberry
     rustdesk
     pavucontrol
