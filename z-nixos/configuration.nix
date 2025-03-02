@@ -103,6 +103,7 @@
     #bluez-tools
     bazel
     digikam
+    evince # document viewer
     libheif
     libheif.out
     lutris
