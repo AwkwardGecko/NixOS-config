@@ -9,9 +9,13 @@
     ];
   };
 
-  services.udev.packages = [
+  services = {
+    udev.packages = [
       pkgs.utsushi
-  ];
+    ];
+    avahi.enable = true;
+    avahi.nssmdns = true;
+  };
 
   users.users.zozano.extraGroups = [
     "scanner"
