@@ -74,6 +74,7 @@
     ./modules/polkit.nix
     #./modules/nixvim.nix
     ./modules/nvidia.nix
+    ./modules/scanner.nix
     ./modules/steam.nix
     #./modules/systemd-timers.nix
     ./modules/teamviewer.nix
@@ -186,7 +187,6 @@
     smartmontools
     stdenv
     signal-desktop
-    simple-scan
     strawberry
     rustdesk
     pavucontrol
