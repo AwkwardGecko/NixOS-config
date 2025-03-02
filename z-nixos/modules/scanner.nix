@@ -4,8 +4,9 @@
   hardware.sane = {
     enable = true;
     
-    extraBackends = [
-      pkgs.utsushi
+    extraBackends = with pkgs; [
+      utsushi
+      epkowa
     ];
   };
 
