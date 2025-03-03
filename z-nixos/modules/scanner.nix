@@ -15,7 +15,7 @@
       pkgs.utsushi
     ];
     avahi.enable = true;
-    avahi.nssmdns = true;
+    avahi.nssmdns4 = true;
   };
 
   users.users.zozano.extraGroups = [
