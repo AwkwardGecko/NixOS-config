@@ -187,7 +187,7 @@
     rclone
     sc-controller # steam controller support
     sshfs
-    sqlite.dev # possible dependency for cargo
+    sqlite # possible dependency for cargo
     smartmontools
     stdenv
     signal-desktop
