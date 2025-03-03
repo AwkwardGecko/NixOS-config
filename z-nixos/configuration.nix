@@ -86,6 +86,8 @@
 
   programs.nix-ld.enable = true;
 
+  services.onlyoffice.enable = true;
+
   environment.systemPackages = with pkgs; [
     bootiso
     btrfs-progs
