@@ -10,12 +10,20 @@
 }:
 {
 
+  environment.systemPackages = with pkgs; [
+    linuxKernel.packages.linux_zen.xpadneo
+  ];
+
+
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
     settings.General = {
-      Experimental = true;
-      ControllerMode = "dual";
+      Privacy = "device";
+      JustWorksRepairing = "always";
+      Class = "0x000100";
+      FastConnectable = "true";
+      #ControllerMode = "dual";
     };
   };
 
