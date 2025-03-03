@@ -155,6 +155,7 @@
     cargo-rr
     cargo-deb
     rustup
+    rustup-toolchain-install-master
     parted
     gtk3
     gtkd
