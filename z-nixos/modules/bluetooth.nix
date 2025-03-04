@@ -11,7 +11,7 @@
 {
 
   environment.systemPackages = with pkgs; [
-    linuxKernel.packages.linux_zen.xpadneo
+    linuxKernel.packages.linux_zen.xpadone
   ];
 
 
@@ -21,7 +21,7 @@
     settings.General = {
       Privacy = "device";
       JustWorksRepairing = "always";
-      Class = "0x000000";
+      Class = "0x000100";
       FastConnectable = "true";
       #ControllerMode = "dual";
     };
