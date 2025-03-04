@@ -11,7 +11,7 @@
 {
 
   environment.systemPackages = with pkgs; [
-    linuxKernel.packages.linux_zen.xpadone
+    linuxKernel.packages.linux_zen.xpadneo
   ];
 
 
@@ -23,7 +23,7 @@
       JustWorksRepairing = "always";
       Class = "0x000100";
       FastConnectable = "true";
-      #ControllerMode = "dual";
+      ControllerMode = "dual";
     };
   };
 
