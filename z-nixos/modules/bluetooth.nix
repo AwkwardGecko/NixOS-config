@@ -24,7 +24,7 @@
     settings.General = {
       Privacy = "device";
       JustWorksRepairing = "always";
-      Class = "0x000000";
+      Class = "0x000100";
       FastConnectable = "true";
       # ControllerMode = "dual";
     };
