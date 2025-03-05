@@ -204,7 +204,8 @@
       "workspace 15,title:(Torchlight)"
       "workspace 16,title:(Rocket League)"
       "workspace 17,title:(Cyberpunk2077)"
-      "workspace 18,title:(Grand Theft Auto)"
+      "workspace 18,title:(Grand Theft Auto V)"
+      "workspace 18,title:(SocialClubHelper)"
       "suppressevent maximize, class:.*"
       "nofocus,class:^$,title:^$,wayland:1,floating:1,fullscreen:0,pinned:0"
     ];
