@@ -13,6 +13,9 @@
   boot.initrd.kernelModules = [ "joydev" "xpad" ];
   environment.systemPackages = with pkgs; [
     linuxKernel.packages.linux_zen.xpadneo
+    bluez
+    bluez-alsa
+    bluez-tools
   ];
 
   #  hardware.xone.enable = true;
@@ -34,10 +37,5 @@
   services.blueman.enable = true;
 
 
-environment.systemPackages = with pkgs; [
-	bluez
-	bluez-alsa
-	bluez-tools
-  ];
 
 }
