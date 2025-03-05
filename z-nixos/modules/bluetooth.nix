@@ -27,7 +27,7 @@
       JustWorksRepairing = "always";
       Class = "0x000100";
       FastConnectable = "true";
-      # ControllerMode = "dual";
+      ControllerMode = "dual";
     };
   };
 
@@ -35,8 +35,8 @@
 
 }
 
-# environment.systemPackages = with pkgs; [
-#	bluez
-#	bluez-alsa
-#	bluez-tools
-# ];
+environment.systemPackages = with pkgs; [
+	bluez
+	bluez-alsa
+	bluez-tools
+ ];
