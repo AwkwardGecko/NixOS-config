@@ -10,6 +10,7 @@
 }:
 {
 
+  boot.initrd.kernelModules = [ "joydev" "xpad" ];
   environment.systemPackages = with pkgs; [
     linuxKernel.packages.linux_zen.xpadneo
   ];
