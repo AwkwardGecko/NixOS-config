@@ -14,7 +14,7 @@
     linuxKernel.packages.linux_zen.xpadneo
   ];
 
-  hardware.xone.enable = true;
+  #  hardware.xone.enable = true;
 
 
 
