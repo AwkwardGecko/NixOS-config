@@ -154,6 +154,7 @@
     cargo-c
     cargo-rr
     cargo-deb
+    gnome-calculator
     rustup
     rustup-toolchain-install-master
     parted
