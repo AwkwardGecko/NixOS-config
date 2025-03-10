@@ -85,8 +85,6 @@
 
   programs.nix-ld.enable = true;
 
-  services.onlyoffice.enable = true;
-
   environment.systemPackages = with pkgs; [
 
     alsa-lib
@@ -152,6 +150,7 @@
     nspr
     nss
     nvtopPackages.nvidia
+    onlyoffice-bin
     openssl # For updater
     ostree # package for flatpak
     pango
