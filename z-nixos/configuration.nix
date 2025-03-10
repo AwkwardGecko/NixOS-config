@@ -32,7 +32,6 @@
   networking.networkmanager.enable = true;
   nixpkgs.config.allowUnfree = true;
   hardware.enableAllFirmware = true;
-  hardware.xpadneo.enable = true;
 
   services.flatpak.enable = true;
   systemd.services.flatpak-repo = {
@@ -89,50 +88,111 @@
   services.onlyoffice.enable = true;
 
   environment.systemPackages = with pkgs; [
+
+    alsa-lib
+    atk
+    bazel
+    binutils_nogold
+    #bluez-alsa
+    #bluez-experimental
+    #bluez-tools
     bootiso
-    btrfs-progs
     brave
+    #btmon
+    btrfs-progs
+    cairo
+    cargo
+    cargo-auditable-cargo-wrapper
+    cargo-c
+    cargo-deb
+    cargo-rr
+    clinfo
+    crane
+    crane
+    crate2nix
+    cups
+    dbus
+    dcap
+    digikam
     docker
     docker-compose
-    ffmpeg
-    glibc
-    git
-    glibc_memusage
-    gnome-disk-utility
-    #btmon
-    #bluez-experimental
-    #bluez-alsa
-    #bluez-tools
-    bazel
-    digikam
     evince # document viewer
-    libheif
-    libheif.out
-    lutris
+    expat
+    ffmpeg
+    gcc
+    gimp
+    git
+    glib
+    glibc
+    glibc_memusage
+    gnome-calculator
+    gnome-disk-utility
     gparted
     gperftools
-    qbittorrent
-    gimp
+    gtk3
+    gtkd
+    gwe
+    icu
+    iproute2
+    libGL
+    libdrm
+    libheif
+    libheif.out
+    libpcap # 2025-02-19 for star rail relic scorer: Fribbels Honkai Star Rail Optimizer
+    libsecret
+    libxkbcommon
+    libz
+    lld
+    llvmPackages.bintools
+    lutris
+    mesa
+    nettools
     nixd # Language SP (LSP) server
     nixfmt-rfc-style # used to format styles - $ nixfmt <file>.nix
-    unixtools.ifconfig
-    nettools
-    iproute2
-    libz
-    icu
-    virtualglLib # gpu benchmark tool
-    openssl # For updater
-    rustc
-    llvmPackages.bintools
-    cargo
-    crane
-    clinfo
-    gwe
+    nspr
+    nss
     nvtopPackages.nvidia
-    virtualglLib
+    openssl # For updater
+    ostree # package for flatpak
+    pango
+    parted
+    pavucontrol
+    pcapfix
+    pkg-config
+    playonlinux
+    pxattr # allows execution of .app files
+    pyenv
+    python311
+    python311Packages.pip
+    python311Packages.pyasyncore
+    python311Packages.xattr
+    python312Packages.libpcap
+    qbittorrent
+    rclone
+    rpm-ostree # package for flatpak
+    rustc
+    rustc
+    rustdesk
+    rustup
+    rustup-toolchain-install-master
+    sc-controller # steam controller support
+    signal-desktop
+    smartmontools
+    sqlite # possible dependency for cargo
+    sshfs
+    stdenv
+    strawberry
+    udev
+    unigine-superposition
+    unixtools.ifconfig
+    upower # possible dependency for vivaldi
+    uv
+    vivaldi
+    vlc
     vulkan-loader
     vulkan-tools
-    gcc 
+    wget
+    wine
     xorg.libX11
     xorg.libXcomposite
     xorg.libXdamage
@@ -140,70 +200,7 @@
     xorg.libXfixes
     xorg.libXrandr
     xorg.libxcb
-    rustc
-    lld
-    crate2nix
-    crane
-    pkg-config
-    python312Packages.libpcap
-    pcapfix
-    binutils_nogold 
-    libpcap # 2025-02-19 for star rail relic scorer: Fribbels Honkai Star Rail Optimizer
-    dcap 
-    cargo-auditable-cargo-wrapper
-    cargo-c
-    cargo-rr
-    cargo-deb
-    gnome-calculator
-    rustup
-    rustup-toolchain-install-master
-    parted
-    gtk3
-    gtkd
-    glib
-    nss
-    nspr
-    dbus
-    atk
-    cups
-    libdrm
-    expat
-    libxkbcommon
-    pango
-    cairo
-    udev
-    alsa-lib
-    mesa
-    libGL
-    libsecret
-    ostree # package for flatpak
-    rpm-ostree # package for flatpak
-    pxattr # allows execution of .app files
-    playonlinux
-    python311
-    python311Packages.pip
-    python311Packages.pyasyncore
-    python311Packages.xattr
-    python311Packages.yt-dlp
-    pyenv
-    rclone
-    sc-controller # steam controller support
-    sshfs
-    sqlite # possible dependency for cargo
-    smartmontools
-    stdenv
-    signal-desktop
-    strawberry
-    rustdesk
-    pavucontrol
-    wine
-    upower # possible dependency for vivaldi
-    uv
-    unigine-superposition
-    vlc
-    vivaldi
-    wget
-    yt-dlp
+    yt-dlp # download YouTube videos
   ];
 
 }
