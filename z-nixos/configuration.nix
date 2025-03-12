@@ -52,7 +52,10 @@
 
   programs.npm.enable = true;
 
-  services.ollama.enable = true;
+  services.ollama = {
+    enable = true;
+    acceleration = "cuda";
+  };
 
   aagl.enableNixpkgsReleaseBranchCheck = false;
 
