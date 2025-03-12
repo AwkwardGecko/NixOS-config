@@ -151,7 +151,7 @@
     nss
     nvtopPackages.nvidia
     onlyoffice-bin
-    openllm # open source language learning machine
+    #openllm # open source language learning machine
     openssl # For updater
     ostree # package for flatpak
     pango
