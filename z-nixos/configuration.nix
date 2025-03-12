@@ -52,6 +52,8 @@
 
   programs.npm.enable = true;
 
+  services.ollama.enable = true;
+
   aagl.enableNixpkgsReleaseBranchCheck = false;
 
   imports = [
@@ -151,7 +153,6 @@
     nss
     nvtopPackages.nvidia
     onlyoffice-bin
-    #openllm # open source language learning machine
     openssl # For updater
     ostree # package for flatpak
     pango
