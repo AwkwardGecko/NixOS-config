@@ -159,7 +159,6 @@
     onlyoffice-bin
     openssl # For updater
     ostree # package for flatpak
-    open-webui
     pango
     parted
     pavucontrol
