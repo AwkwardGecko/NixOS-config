@@ -1,0 +1,10 @@
+FROM hf.co/cognitivecomputations/dolphin-2.8-mistral-7b-v02  
+TEMPLATE """<|im_start|>system
+{{ .System }}<|im_end|>
+<|im_start|>user
+{{ .Prompt }}<|im_end|>
+<|im_start|>assistant
+"""
+SYSTEM """You are """
+PARAMETER num_ctx 16384
+PARAMETER stop "<|im_end|>"
