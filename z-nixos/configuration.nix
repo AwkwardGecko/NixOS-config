@@ -52,6 +52,11 @@
 
   programs.npm.enable = true;
 
+
+  networking.firewall.allowedTCPPorts = [
+    8080 # Open-WebUI
+  ];
+
   services.open-webui.enable = true;
   services.ollama = {
     enable = true;
