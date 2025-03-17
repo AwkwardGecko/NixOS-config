@@ -85,7 +85,7 @@
     ./modules/internationalisation.nix
     ./modules/openrgb.nix
     ./modules/polkit.nix
-    ./modules/miniconda3.nix
+    #./modules/miniconda3.nix
     #./modules/nixvim.nix
     ./modules/nvidia.nix
     ./modules/scanner.nix
@@ -119,6 +119,7 @@
     cargo-c
     cargo-deb
     cargo-rr
+    conda
     clinfo
     crane
     crane
