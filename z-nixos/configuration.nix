@@ -146,6 +146,7 @@
     gwe
     icu
     iproute2
+    koboldcpp
     libGL
     libdrm
     libheif
