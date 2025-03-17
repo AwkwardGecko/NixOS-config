@@ -85,6 +85,7 @@
     ./modules/internationalisation.nix
     ./modules/openrgb.nix
     ./modules/polkit.nix
+    ./modules/miniconda3.nix
     #./modules/nixvim.nix
     ./modules/nvidia.nix
     ./modules/scanner.nix
