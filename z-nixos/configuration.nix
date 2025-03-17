@@ -168,7 +168,6 @@
     nspr
     nss
     nvtopPackages.nvidia
-    nvm
     onlyoffice-bin
     openssl # For updater
     ostree # package for flatpak
