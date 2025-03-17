@@ -162,9 +162,11 @@
     nettools
     nixd # Language SP (LSP) server
     nixfmt-rfc-style # used to format styles - $ nixfmt <file>.nix
+    nodePackages.nodejs
     nspr
     nss
     nvtopPackages.nvidia
+    nvm
     onlyoffice-bin
     openssl # For updater
     ostree # package for flatpak
