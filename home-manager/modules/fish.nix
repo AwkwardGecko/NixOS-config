@@ -13,7 +13,7 @@
   programs.fish = {
     enable = true;
     shellAbbrs = {
-      update-nix = "bash /home/zozano/.local/share/applications/update.sh";
+      update-nix = "bash /home/zozano/.dotfiles/source/local/share/applications/update.sh";
     };
     shellInit = "cd ~/.dotfiles/";
     shellInitLast = "fastfetch";
