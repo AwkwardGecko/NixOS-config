@@ -89,6 +89,7 @@
     #./modules/nixvim.nix
     ./modules/nvidia.nix
     ./modules/scanner.nix
+    ./modules/ssh.nix
     ./modules/steam.nix
     #./modules/systemd-timers.nix
     ./modules/teamviewer.nix
