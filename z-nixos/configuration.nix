@@ -23,9 +23,9 @@
         {
           command = "/home/zozano/.local/share/applications/update.sh";
           options = [ "NOPASSWD" ];
-        }
-    }
-  ]
+        };
+    };
+  ];
 
 
   # Automatic cleanup
