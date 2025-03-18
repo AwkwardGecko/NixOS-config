@@ -14,6 +14,7 @@
     enable = true;
     shellAbbrs = {
       update-nix = "bash /home/zozano/.dotfiles/home-manager/source/local/share/applications/update.sh";
+      server-connect = "ssh -t z-home@192.168.1.157 'fish -l'";
     };
     shellInit = "cd ~/.dotfiles/";
     shellInitLast = "fastfetch";
