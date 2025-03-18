@@ -12,6 +12,9 @@
 
   programs.fish = {
     enable = true;
+    shellAbbrs = {
+      update = "~/.local/share/applications/update.desktop"
+    };
     shellInit = "cd ~/.dotfiles/";
     shellInitLast = "fastfetch";
     plugins = [
