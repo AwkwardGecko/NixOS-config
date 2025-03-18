@@ -1,4 +1,4 @@
-#~/.nix-profile/bin/bash
+#!/usr/bin/env bash
 
 cd /home/zozano/.dotfiles
 git add *
