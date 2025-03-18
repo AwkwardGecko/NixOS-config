@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=SillyTavern
+Exec=bash -c "~/.local/share/applications/sillytavern.sh"
+Icon=jellyfin-media-player
+Terminal=false
+Type=Application
+Categories=Media;
