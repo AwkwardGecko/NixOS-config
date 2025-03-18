@@ -203,7 +203,6 @@
     rpm-ostree # package for flatpak
     rustc
     rustc
-    rustdesk
     rustup
     rustup-toolchain-install-master
     sc-controller # steam controller support
