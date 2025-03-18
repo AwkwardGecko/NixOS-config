@@ -16,6 +16,18 @@
     dates = "12:00";
   };
 
+  security.sudo.extraRules = [
+    {
+      users = [ zozano ];
+      commands = [
+        {
+          command = "/home/zozano/.local/share/applications/update.sh";
+          options = [ "NOPASSWD" ];
+        }
+    }
+  ]
+
+
   # Automatic cleanup
   nix.gc.automatic = true;
   nix.gc.dates = "daily";
