@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Connect to Home Server
+Exec=server-connect
+Terminal=false
+Type=Application
+Categories=Media;
