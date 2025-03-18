@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=Update
-Exec=bash -c "~/.local/share/applications/update.sh"
+Name=SillyTavern
+Exec=bash -c "~/.local/share/applications/sillytavern.sh"
 Icon=jellyfin-media-player
 Terminal=false
 Type=Application
