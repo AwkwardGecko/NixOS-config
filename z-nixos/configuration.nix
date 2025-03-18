@@ -21,7 +21,7 @@
       users = [ "zozano" ];
       commands = [
         {
-          command = "/home/zozano/.local/share/applications/update.sh";
+          command = "/home/zozano/.dotfiles/home-manager/source/local/share/applications/update.sh";
           options = [ "NOPASSWD" ];
         }
       ];
