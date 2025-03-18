@@ -11,7 +11,7 @@
 {
   users.users.zozano = {
     openssh.authorizedKeys.keys = [
-  "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMw7Bpl8lnXMVQF6dZPJA3qHRDgIMwcmTowzVigWWZ2E your_email@example.com"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL+JLIMMkhZty4POE+gHXrNwy11myWa0F+nVsWeyYJE3 tim@solaire.com"
     ];
   };
 
