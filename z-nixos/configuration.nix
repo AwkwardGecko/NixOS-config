@@ -18,7 +18,7 @@
 
   security.sudo.extraRules = [
     {
-      users = [ zozano ];
+      users = [ "zozano" ];
       commands = [
         {
           command = "/home/zozano/.local/share/applications/update.sh";
