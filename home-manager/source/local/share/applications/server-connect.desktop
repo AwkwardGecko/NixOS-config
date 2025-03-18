@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Connect to Home Server
+Name=Server Connect to Home Server
 Exec=kitty ssh -t z-home@192.168.1.157 'fish -l'
 Terminal=false
 Type=Application
