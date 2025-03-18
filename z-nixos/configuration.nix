@@ -21,7 +21,7 @@
       users = [ "zozano" ];
       commands = [
         {
-          command = "/home/zozano/.dotfiles/home-manager/source/local/share/applications/update.sh";
+          command = "/run/current-system/sw/bin/nixos-rebuild";
           options = [ "NOPASSWD" ];
         }
       ];
