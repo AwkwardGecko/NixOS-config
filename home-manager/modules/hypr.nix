@@ -124,7 +124,7 @@
 
     bind = [
 
-      ", print, exec, grimblast save area ~/Pictures/$(date +%Y-%m-%d_%H-%M-%S).png"
+      ", print, exec, grimblast save area ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"
       "$mainMod, print, exec, grimblast copy area"
 
       "$mainMod, Q, exec, $terminal"
@@ -175,6 +175,9 @@
 
       "$mainMod, mouse:272, movewindow"
       "$mainMod, mouse:273, resizewindow"
+      ", mouse:276 , workspace, e+1"
+      ", mouse:275 , workspace, e-1"
+
     ];
 
     bindl = [
