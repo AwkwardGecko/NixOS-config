@@ -145,6 +145,7 @@
     docker
     docker-compose
     evince # document viewer
+    evtest # outputs key and button codes
     expat
     ffmpeg
     gcc
@@ -223,7 +224,6 @@
     vulkan-tools
     wget
     wine
-    xev # outputs mouse/key codes
     xorg.libX11
     xorg.libXcomposite
     xorg.libXdamage
