@@ -175,8 +175,8 @@
 
       "$mainMod, mouse:272, movewindow"
       "$mainMod, mouse:273, resizewindow"
-      ", mouse:276 , workspace, e+1"
-      ", mouse:275 , workspace, e-1"
+      ", mouse:276, workspace, e+1"
+      ", mouse:275, workspace, e-1"
 
     ];
 
