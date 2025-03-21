@@ -223,6 +223,7 @@
     vulkan-tools
     wget
     wine
+    xev # outputs mouse/key codes
     xorg.libX11
     xorg.libXcomposite
     xorg.libXdamage
