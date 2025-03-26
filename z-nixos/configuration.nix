@@ -96,7 +96,7 @@
     ./modules/docker.nix
     ./modules/filesystem.nix
     ./modules/firefox.nix
-    ./modules/fonts.nix
+    #./modules/fonts.nix
     ./modules/gamemode.nix
     ./modules/hypr.nix
     ./modules/internationalisation.nix
