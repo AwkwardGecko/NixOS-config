@@ -73,7 +73,7 @@
       iptables -A nixos-fw -p tcp --source 192.168.1.0/24 --dport 8080 -j nixos-fw-accept '';
   };
 
-  programs.nix-ld.enable = true # resolve library issues for Stable Diffusion
+  programs.nix-ld.enable = true; # resolve library issues for Stable Diffusion
 
   programs.coolercontrol.enable = true;
 
