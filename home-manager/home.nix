@@ -48,7 +48,7 @@
 	#QT_QPA_PLATFORM=xcb;
     #__EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_mesa.json jellyfinmediaplayer;
     HYPRLAND_INSTANCE_SIGNATURE = "$echo $HYPRLAND_INSTANCE_SIGNATURE)";
-    LD_LIBRARY_PATH=/run/opengl-driver/lib
+    LD_LIBRARY_PATH=/run/opengl-driver/lib;
   };
 
 	home.file = {
