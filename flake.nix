@@ -1,3 +1,6 @@
+{ pkgs, lib, config, ... }:
+
+
 {
   # to create the flake.lock file with user permissions, run:
   # $ nix flake lock
