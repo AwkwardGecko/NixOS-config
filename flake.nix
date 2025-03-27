@@ -1,20 +1,8 @@
-{ pkgs, lib, config, ... }:
-
-
 {
   # to create the flake.lock file with user permissions, run:
   # $ nix flake lock
 
   description = "Flake File";
-
-
-pkgs = import nixpkgs {
-  inherit system;
-  config.allowUnfree = true;
-  overlays = [
-    stable-diffusion-webui-nix.overlays.default
-  ];
-};
 
 
   inputs = {
@@ -68,11 +56,10 @@ pkgs = import nixpkgs {
 
     let
       system = "x86_64-linux";
-      # pkgs = nixpkgs.legacyPackages.${system};
-      pkgs = import nxpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
+      pkgs = nixpkgs.legacyPackages.${system};
+      overlays = [
+        stable-diffusion-webui-nix.overlays.default
+      ];
     in
 
 
