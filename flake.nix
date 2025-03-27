@@ -59,10 +59,6 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
-
-      overlays = [
-        stable-diffusion-webui.overlays.default
-        ];
       };
     in
 
