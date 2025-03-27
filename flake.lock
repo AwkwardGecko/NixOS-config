@@ -552,31 +552,6 @@
         "type": "github"
       }
     },
-    "python-flexseal": {
-      "inputs": {
-        "flake-utils": [
-          "stable-diffusion-webui-nix",
-          "flake-utils"
-        ],
-        "nixpkgs": [
-          "stable-diffusion-webui-nix",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1734836319,
-        "narHash": "sha256-h/Jiq852WJyyAL037sIxjPDScjeH8sUoZVZBWlciXaw=",
-        "owner": "Janrupf",
-        "repo": "python-flexseal",
-        "rev": "fdd313f7b9a5c9545c015acaf0729b01f708118a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Janrupf",
-        "repo": "python-flexseal",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "aagl": "aagl",
@@ -594,21 +569,19 @@
         "flake-utils": "flake-utils_2",
         "nixpkgs": [
           "nixpkgs"
-        ],
-        "python-flexseal": "python-flexseal"
+        ]
       },
       "locked": {
-        "lastModified": 1736572586,
-        "narHash": "sha256-S/TppmrAnMUXLrJSyEj3PHvUYVfiRpV5xurpOR7QUY4=",
-        "owner": "Janrupf",
-        "repo": "stable-diffusion-webui-nix",
-        "rev": "7df8049f078544640b957f29b9dacb20595e1a0c",
+        "lastModified": 1700602273,
+        "narHash": "sha256-ADX+LFobTA/anhTLpO0wCC1uWPJvymtX/C/d20efijE=",
+        "owner": "virchau13",
+        "repo": "automatic1111-webui-nix",
+        "rev": "5b5c18e45f3b19253ed8c19106a14f4b97c345f3",
         "type": "github"
       },
       "original": {
-        "owner": "Janrupf",
-        "ref": "main",
-        "repo": "stable-diffusion-webui-nix",
+        "owner": "virchau13",
+        "repo": "automatic1111-webui-nix",
         "type": "github"
       }
     },
