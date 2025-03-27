@@ -26,7 +26,7 @@
     plugin-onedark.flake = false;
 
     stable-diffusion-webui-nix = {
-      url = "github:Janrupf/stable-diffusion-webui-nix/main";
+      url = "github:virchau13/automatic1111-webui-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -62,6 +62,9 @@
     {
       nixosConfigurations = {
         z-nixos = nixpkgs.lib.nixosSystem {
+
+          specialArgs = { inherit stable-diffusion-webui-nix; };
+
           system = "x86_64-linux";
           modules = [
             ./z-nixos/configuration.nix
