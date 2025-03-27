@@ -104,6 +104,7 @@
     ./modules/fonts.nix
     ./modules/gamemode.nix
     ./modules/hypr.nix
+    ./modules/hyprland_instance_sig.nix
     ./modules/internationalisation.nix
     ./modules/openrgb.nix
     ./modules/polkit.nix
