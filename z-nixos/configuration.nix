@@ -32,8 +32,6 @@ inputs,
     }
   ];
 
-  nixpkgs.overlays = [ stable-diffusion-webui-nix.overlays.default ]; # stable diffusion
-
   # Automatic cleanup
   nix = {
     gc = {

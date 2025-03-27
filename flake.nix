@@ -4,6 +4,16 @@
 
   description = "Flake File";
 
+
+pkgs = import nixpkgs {
+  inherit system;
+  config.allowUnfree = true;
+  overlays = [
+    stable-diffusion-webui-nix.overlays.default
+  ];
+};
+
+
   inputs = {
 
     stylix.url = "github:danth/stylix";
