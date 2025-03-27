@@ -18,6 +18,7 @@
   services.openssh = {
     enable = true;
     settings = {
+      PubkeyAuthentication = true;
       PasswordAuthentication = false;
       PermitRootLogin = "no";
       KbdInteractiveAuthentication = false;
