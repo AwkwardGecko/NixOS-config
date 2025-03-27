@@ -26,7 +26,7 @@
     plugin-onedark.url = "github:navarasu/onedark.nvim";
     plugin-onedark.flake = false;
 
-    stable-diffusion-webui-nix = {
+    stable-diffusion-webui = {
       url = "github:virchau13/automatic1111-webui-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
