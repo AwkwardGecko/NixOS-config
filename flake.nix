@@ -48,7 +48,8 @@
       home-manager,
       aagl,
       nixvim,
-      stylix,
+    stylix,
+      stable-diffusion-webui-nix,
       ...
     }:
 
