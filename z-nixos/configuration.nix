@@ -17,7 +17,7 @@
       dates = "12:00";
     };
     stateVersion = "24.05";
-  }
+  };
 
   security.sudo.extraRules = [
     {
