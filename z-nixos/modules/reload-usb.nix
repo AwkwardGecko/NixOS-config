@@ -9,7 +9,7 @@
       Type = "oneshot";
       RemainAfterExit = true;
       ExecStart = "${pkgs.kmod}/bin/modprobe -r usbhid && ${pkgs.kmod}/bin/modprobe usbhid";
-      Restart = "no";
+      Restart = false;
     };
   };
 }
