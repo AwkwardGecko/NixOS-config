@@ -58,7 +58,7 @@
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       overlays = [
-        stable-diffusion-webui-nix.overlays.default
+        stable-diffusion-webui.overlays.default
       ];
     in
 
@@ -68,7 +68,7 @@
       nixosConfigurations = {
         z-nixos = nixpkgs.lib.nixosSystem {
 
-          specialArgs = { inherit stable-diffusion-webui-nix; };
+          specialArgs = { inherit stable-diffusion-webui; };
 
           system = "x86_64-linux";
           modules = [
