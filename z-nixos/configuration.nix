@@ -31,7 +31,7 @@
     }
   ];
 
-  #nixpkgs.overlays = [ stable-diffusion-webui-nix.overlays.default ]; # stable diffusion
+  nixpkgs.overlays = [ stable-diffusion-webui-nix.overlays.default ]; # stable diffusion
 
 
 
@@ -227,7 +227,7 @@
     smartmontools
     sqlite # possible dependency for cargo
     sshfs
-    #stable-diffusion-webui.forge.cuda
+    stable-diffusion-webui.forge.cuda
     stdenv
     strawberry
     udev
