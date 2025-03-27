@@ -58,14 +58,18 @@ pkgs = import nixpkgs {
       home-manager,
       aagl,
       nixvim,
-    stylix,
+      stylix,
       stable-diffusion-webui-nix,
       ...
     }:
 
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      # pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nxpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
     in
 
 
