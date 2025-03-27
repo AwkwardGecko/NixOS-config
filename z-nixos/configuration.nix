@@ -224,7 +224,7 @@ inputs,
     smartmontools
     sqlite # possible dependency for cargo
     sshfs
-    stable-diffusion-webui.forge.cuda
+    stable-diffusion-webui.cuda
     stdenv
     strawberry
     udev
