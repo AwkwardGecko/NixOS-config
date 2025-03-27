@@ -11,10 +11,13 @@
 }:
 {
   # Automatic updating
-  system.autoUpgrade = {
-    enable = true;
-    dates = "12:00";
-  };
+  system = {
+    autoUpgrade = {
+      enable = true;
+      dates = "12:00";
+    };
+    stateVersion = "24.05";
+  }
 
   security.sudo.extraRules = [
     {
@@ -33,17 +36,24 @@
 
 
   # Automatic cleanup
-  nix.gc.automatic = true;
-  nix.gc.dates = "daily";
-  nix.gc.options = "--delete-older-than 7d";
-  nix.settings.auto-optimise-store = true;
+  nix = {
+    gc = {
+      automatic = true;
+      dates = "daily";
+      options = "--delete-older-than 7d";
+    }
 
-  system.stateVersion = "24.05";
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  settings = {
+    auto-optimise-store = true;
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+  };
+
   swapDevices = [ { label = "swap"; } ];
+
+
   networking.hostName = "z-nixos";
   networking.networkmanager.enable = true;
   nixpkgs.config.allowUnfree = true;
@@ -99,7 +109,7 @@
     ./modules/docker.nix
     ./modules/filesystem.nix
     ./modules/firefox.nix
-    #./modules/fonts.nix
+    ./modules/fonts.nix
     ./modules/gamemode.nix
     ./modules/hypr.nix
     ./modules/internationalisation.nix
