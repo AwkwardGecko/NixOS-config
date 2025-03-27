@@ -50,7 +50,7 @@
       aagl,
       nixvim,
       stylix,
-      stable-diffusion-webui-nix,
+      stable-diffusion-webui,
       ...
     }:
 

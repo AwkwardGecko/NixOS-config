@@ -557,11 +557,11 @@
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
         "plugin-onedark": "plugin-onedark",
-        "stable-diffusion-webui-nix": "stable-diffusion-webui-nix",
+        "stable-diffusion-webui": "stable-diffusion-webui",
         "stylix": "stylix"
       }
     },
-    "stable-diffusion-webui-nix": {
+    "stable-diffusion-webui": {
       "inputs": {
         "flake-utils": "flake-utils_2",
         "nixpkgs": [
