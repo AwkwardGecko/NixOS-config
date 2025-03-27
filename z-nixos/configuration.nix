@@ -47,6 +47,7 @@
 
   networking.hostName = "z-nixos";
   networking.networkmanager.enable = true;
+  networking.interfaces.enp10s0.macAddress = "04:42:1A:A7:FD:1F";
   nixpkgs.config.allowUnfree = true;
   hardware.enableAllFirmware = true;
 
