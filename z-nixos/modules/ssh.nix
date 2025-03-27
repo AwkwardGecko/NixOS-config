@@ -19,7 +19,7 @@
     enable = true;
     settings = {
       PubkeyAuthentication = true;
-      PasswordAuthentication = false;
+      PasswordAuthentication = true;
       PermitRootLogin = "no";
       KbdInteractiveAuthentication = false;
     };
