@@ -7,7 +7,7 @@
   pkgs,
   libs,
 inputs,
-  stable-diffusion-webui-nix,
+  stable-diffusion-webui,
   ...
 }:
 {
