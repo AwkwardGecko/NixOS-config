@@ -162,6 +162,7 @@
     glib
     glibc
     glibc_memusage
+    google-perftools
     gnome-calculator
     gnome-disk-utility
     gparted
