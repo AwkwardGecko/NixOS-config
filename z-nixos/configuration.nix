@@ -157,12 +157,13 @@
     expat
     ffmpeg
     gcc
+    gcc-unwrapped # for stable diffusion
     gimp
     git
     glib
     glibc
     glibc_memusage
-    gperftools
+    gperftools # for stable diffusion
     gnome-calculator
     gnome-disk-utility
     gparted
@@ -175,6 +176,7 @@
     koboldcpp
     libGL
     libdrm
+    libglvnd # for stable diffusion
     libheif
     libheif.out
     libpcap # 2025-02-19 for star rail relic scorer: Fribbels Honkai Star Rail Optimizer
@@ -241,6 +243,7 @@
     xorg.libXrandr
     xorg.libxcb
     yt-dlp # download YouTube videos
+    zlib # for stable diffusion
   ];
 
 }
