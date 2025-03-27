@@ -32,11 +32,7 @@ inputs,
     }
   ];
 
-  pkgs = import nixpkgs {
-    inherit system;
     overlays = [ stable-diffusion-webui-nix.overlays.default ]; # stable diffusion
-  };
-
 
   # Automatic cleanup
   nix = {
