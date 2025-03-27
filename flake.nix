@@ -67,9 +67,6 @@
     {
       nixosConfigurations = {
         z-nixos = nixpkgs.lib.nixosSystem {
-
-          specialArgs = { inherit stable-diffusion-webui; };
-
           system = "x86_64-linux";
           modules = [
             ./z-nixos/configuration.nix
