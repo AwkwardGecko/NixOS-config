@@ -1,4 +1,6 @@
 { ... }:
+
+{
 systemd.services.reload-usb-dongle = {
   wantedBy = [ "multi-user.target" ];
   script = ''
