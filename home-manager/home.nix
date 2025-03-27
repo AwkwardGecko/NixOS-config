@@ -46,7 +46,8 @@
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d"; # Add custon Proton versions to Steam
     #NIXOS_OZONE_WL = "1"; # Wayland Electron support
 	#QT_QPA_PLATFORM=xcb;
-	#__EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_mesa.json jellyfinmediaplayer;
+    #__EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_mesa.json jellyfinmediaplayer;
+    HYPRLAND_INSTANCE_SIGNATURE = "$echo $HYPRLAND_INSTANCE_SIGNATURE)";
   };
 
 	home.file = {
