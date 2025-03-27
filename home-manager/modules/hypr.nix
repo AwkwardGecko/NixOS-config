@@ -43,7 +43,6 @@
       "hyprctl setcursor Bibata-Modern-Classic 24"
       "sleep 10 && bash ~/.local/share/applications/mount-server.sh"
       "sleep 15 && bash ~/.local/share/applications/mount-music.sh"
-      "exec-once = hyprctl dispatch exec [workspace 1 silent] kitty"
       #"sshfs z-home@192.168.1.157:/ /server -oport=421"
       #"pypr" #???
     ];
@@ -215,7 +214,6 @@
       "workspace 18,title:(Rockstar)"
       "suppressevent maximize, class:.*"
       "nofocus,class:^$,title:^$,wayland:1,floating:1,fullscreen:0,pinned:0"
-      "exec:/home/zozano/.dotfiles/scripts/workspace_manager.sh address:$HYPRLAND_INSTANCE_SIGNATURE,class:.*"
     ];
 
   };
