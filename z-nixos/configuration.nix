@@ -111,6 +111,7 @@
     #./modules/miniconda3.nix
     #./modules/nixvim.nix
     ./modules/nvidia.nix
+    ./modules/reload-usb.nix
     ./modules/scanner.nix
     ./modules/ssh.nix
     ./modules/steam.nix
