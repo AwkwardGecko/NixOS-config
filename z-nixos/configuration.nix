@@ -28,6 +28,9 @@
     }
   ];
 
+  { nixpkgs.overlays = [ stable-diffusion-webui-nix.overlays.default ]; } # stable diffusion
+
+
 
   # Automatic cleanup
   nix.gc.automatic = true;
@@ -55,9 +58,9 @@
     '';
   };
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "SDL_ttf-2.0.11"    # test removing this soon
-  ];
+  #nixpkgs.config.permittedInsecurePackages = [
+    #"SDL_ttf-2.0.11"    # test removing this soon
+    #];
 
   security.doas.enable = true;
 
@@ -115,8 +118,6 @@
     ./modules/whisperai.nix
     ./modules/wine.nix
   ];
-
-  programs.nix-ld.enable = true;
 
   environment.systemPackages = with pkgs; [
 
@@ -215,6 +216,7 @@
     smartmontools
     sqlite # possible dependency for cargo
     sshfs
+    stable-diffusion-webui.forge.cuda
     stdenv
     strawberry
     udev
