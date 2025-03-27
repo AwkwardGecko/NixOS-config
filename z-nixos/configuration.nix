@@ -2,20 +2,13 @@
 ### CONFIGURATION ###
 #####################
 
-{
-  config,
-  pkgs,
-  libs,
-inputs,
-  stable-diffusion-webui,
-  ...
-}:
+{ config, pkgs, libs, inputs, ... }:
 {
   # Automatic updating
   system = {
     autoUpgrade = {
       enable = true;
-      dates = "12:00";
+      dates = "daily";
     };
     stateVersion = "24.05";
   };
@@ -224,7 +217,6 @@ inputs,
     smartmontools
     sqlite # possible dependency for cargo
     sshfs
-    stable-diffusion-webui.cuda
     stdenv
     strawberry
     udev
