@@ -7,4 +7,5 @@ systemd.services.reload-usb-dongle = {
     modprobe -r usbhid
     modprobe usbhid
   '';
-};
+  };
+}
