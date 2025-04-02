@@ -51,8 +51,6 @@
       "LIBVA_DRIVER_NAME,nvidia"
       "__GLX_VENDOR_LIBRARY_NAME,nvidia"
       "NIXOS_OZONE_WL,1"
-      "HYPRLAND_INSTANCE_SIGNATURE,$HYPRLAND_INSTANCE_SIGNATURE"
-
     ];
 
     #####################

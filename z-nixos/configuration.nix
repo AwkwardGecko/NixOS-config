@@ -196,14 +196,15 @@
     nss
     nvtopPackages.nvidia
     onlyoffice-bin
-    openssl # For updater
+    openssl # For updater / reliquary-archiver
     ostree # package for flatpak
     pango
     parted
     pavucontrol
     pcapfix
-    pkg-config
+    pkg-config # for reliquary-archiver
     playonlinux
+    protobuf
     pxattr # allows execution of .app files
     pyenv
     python311
@@ -216,7 +217,7 @@
     rpm-ostree # package for flatpak
     rustc
     rustc
-    rustup
+    rustup # for reliquary-archiver
     rustup-toolchain-install-master
     sc-controller # steam controller support
     signal-desktop
@@ -244,7 +245,7 @@
     xorg.libXrandr
     xorg.libxcb
     yt-dlp # download YouTube videos
-    zlib # for stable diffusion
+    zlib # for stable diffusion / reliquary launcher
   ];
 
 }
