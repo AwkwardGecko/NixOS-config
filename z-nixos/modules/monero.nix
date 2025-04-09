@@ -4,9 +4,9 @@
   # Enable Monero service (for node management)
   services.monero = {
     enable = true;
-    mining.enable = true;
+    #    mining.enable = true;
     #mining.wallet = "your-wallet-address";  # Replace with your Monero wallet address
-    mining.threads = 6;  # Adjust based on how many threads you want to allocate for mining
+    #mining.threads = 6;  # Adjust based on how many threads you want to allocate for mining
   };
 
   # Install XMRig and configure it
