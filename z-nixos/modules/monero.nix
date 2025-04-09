@@ -15,6 +15,7 @@
   ];
 
 
+
   # Optional: Power management to optimize energy usage during mining
   powerManagement.cpuFreqGovernor = "powersave";  # Use a low power governor when not actively using the CPU
 

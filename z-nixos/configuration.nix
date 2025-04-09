@@ -171,6 +171,7 @@
     lld
     llvmPackages.bintools
     lutris
+    monero-gui
     mesa
     nettools
     nixd # Language SP (LSP) server
