@@ -9,6 +9,7 @@
       telescope.enable = true;             # Fuzzy finder for files and more
       cmp.enable = true;              # Autocompletion plugin
       #nvim-lspconfig.enable = true;        # Language Server Protocol integration
+      webdev-icons.enable = true;
       bufferline.enable = true;            # Buffer tabline for better navigation
       gitsigns.enable = true;              # Git integration in the editor
       comment.enable = true;               # Easy commenting of code
