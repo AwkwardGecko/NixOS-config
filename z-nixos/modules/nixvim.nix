@@ -22,8 +22,6 @@
       set smartindent      " Enable smart indentation
       set autoindent       " Enable automatic indentation
 
-      " Ensure the colorscheme is applied correctly
-      colorscheme gruvbox  # Set the gruvbox colorscheme
     '';
   };
 }
