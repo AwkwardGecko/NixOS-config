@@ -15,11 +15,9 @@
       nvim-autopairs.enable = true;             # Automatic pairing of parentheses and brackets
       indent-blankline.enable = true;      # Visual indentation guides
       fugitive.enable = true;              # Git commands inside Neovim
-
-      # Manually add external plugins like nvim-lspconfig, dashboard-nvim, and nerdtree
-      "neovim/nvim-lspconfig" = { enable = true; };        # LSP plugin for language servers
-      "glepnir/dashboard-nvim" = { enable = true; };        # Start screen plugin
-      "preservim/nerdtree" = { enable = true; };            # File explorer plugin
+      dashboard-nvim.enable = true;
+      cmp-nvim-lsp.enable = true;
+      nerdtree.enable = true;
     };
 
     opts = {
