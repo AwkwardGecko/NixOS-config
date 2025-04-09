@@ -15,10 +15,13 @@
       nvim-autopairs.enable = true;             # Automatic pairing of parentheses and brackets
       indent-blankline.enable = true;      # Visual indentation guides
       fugitive.enable = true;              # Git commands inside Neovim
-      dashboard-nvim.enable = true;
       cmp-nvim-lsp.enable = true;
       nerdtree.enable = true;
     };
+
+    extraPlugins = with pkgs.vimPlugins; [
+      dashboard-nvim
+    ];
 
     opts = {
       number = true;                       # Show absolute line numbers
