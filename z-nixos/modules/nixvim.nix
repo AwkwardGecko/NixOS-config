@@ -3,22 +3,22 @@
     enable = true;
     colorschemes.gruvbox.enable = true;  # Gruvbox colorscheme
 
-    plugins = [
-      { name = "hoob3rt/lualine.nvim"; enable = true; }            # Statusline plugin
-      { name = "nvim-treesitter/nvim-treesitter"; enable = true; }  # Advanced syntax highlighting
-      { name = "nvim-telescope/telescope.nvim"; enable = true; }    # Fuzzy finder for files and more
-      { name = "hrsh7th/nvim-cmp"; enable = true; }                 # Autocompletion plugin
-      { name = "neovim/nvim-lspconfig"; enable = true; }            # Language Server Protocol integration
-      { name = "kyazdani42/nvim-web-devicons"; enable = true; }     # File icons for Neovim
-      { name = "akinsho/bufferline.nvim"; enable = true; }          # Buffer tabline for better navigation
-      { name = "lewis6991/gitsigns.nvim"; enable = true; }          # Git integration in the editor
-      { name = "numToStr/Comment.nvim"; enable = true; }            # Easy commenting of code
-      { name = "windwp/nvim-autopairs"; enable = true; }            # Automatic pairing of parentheses and brackets
-      { name = "lukas-reineke/indent-blankline.nvim"; enable = true; }  # Visual indentation guides
-      { name = "preservim/nerdtree"; enable = true; }               # File explorer plugin
-      { name = "tpope/vim-fugitive"; enable = true; }               # Git commands inside Neovim
-      { name = "glepnir/dashboard-nvim"; enable = true; }            # Start screen with shortcuts and session info
-    ];
+    plugins = {
+      lualine.enable = true;               # Statusline plugin
+      treesitter.enable = true;            # Advanced syntax highlighting
+      telescope.enable = true;             # Fuzzy finder for files and more
+      cmp.enable = true;                   # Autocompletion plugin
+      nvim-lspconfig.enable = true;        # Language Server Protocol integration
+      web-devicons.enable = true;          # File icons for Neovim
+      bufferline.enable = true;            # Buffer tabline for better navigation
+      gitsigns.enable = true;              # Git integration in the editor
+      comment.enable = true;               # Easy commenting of code
+      autopairs.enable = true;             # Automatic pairing of parentheses and brackets
+      indent-blankline.enable = true;      # Visual indentation guides
+      nerdtree.enable = true;              # File explorer plugin
+      fugitive.enable = true;              # Git commands inside Neovim
+      dashboard-nvim.enable = true;        # Start screen with shortcuts and session info
+    };
 
     opts = {
       number = true;                       # Show absolute line numbers
