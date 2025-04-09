@@ -28,7 +28,6 @@
     #./modules/terminal.nix
     ./modules/mako.nix
     # ./modules/mangohud.nix
-    ./modules/nixvim.nix
     ./modules/neovim/neovim.nix
     # ./modules/OpenRGB.nix
     ./modules/ranger.nix
@@ -41,6 +40,16 @@
     # ./modules/waybar/mechabar.nix
     #./modules/xserver.nix
   ];
+
+  programs.nixvim = {
+    enable = true;
+    colorscheme = "onedark";
+    plugins.lualine.enable = true;
+    plugins.treesitter.enable = true;
+  };
+
+
+
 
   home.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d"; # Add custon Proton versions to Steam
