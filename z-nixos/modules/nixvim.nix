@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   programs.nixvim = {
     enable = true;
-    colorscheme = "gruvbox";  # Set the colorscheme to gruvbox
+    colorschemes.gruvbox.enable = true;
 
     plugins = {
       # Enable lualine and treesitter as plugins
@@ -9,10 +9,6 @@
       treesitter.enable = true;
     };
 
-    # Declare the plugins explicitly using vimPlugins from Nix
-    vimPlugins = with pkgs.vimPlugins; [
-      gruvbox-community.gruvbox  # Add the gruvbox plugin
-    ];
 
     extraConfigVim = ''
       " Enable line numbers
