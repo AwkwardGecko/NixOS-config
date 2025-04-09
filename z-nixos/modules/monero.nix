@@ -1,0 +1,9 @@
+{ ... }:
+
+{
+
+  services.monero = {
+    enable = true;
+  };
+
+}

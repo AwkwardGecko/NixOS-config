@@ -108,6 +108,7 @@
     ./modules/internationalisation.nix
     ./modules/openrgb.nix
     ./modules/polkit.nix
+    ./modules/monero.nix
     #./modules/miniconda3.nix
     #./modules/nixvim.nix
     ./modules/nvidia.nix
@@ -155,7 +156,6 @@
     docker-compose
     evince # document viewer
     evtest # outputs key and button codes
-    exodus
     expat
     ffmpeg
     gcc
