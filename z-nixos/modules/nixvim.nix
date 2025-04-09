@@ -12,7 +12,7 @@
       bufferline.enable = true;            # Buffer tabline for better navigation
       gitsigns.enable = true;              # Git integration in the editor
       comment.enable = true;               # Easy commenting of code
-      autopairs.enable = true;             # Automatic pairing of parentheses and brackets
+      #autopairs.enable = true;             # Automatic pairing of parentheses and brackets
       indent-blankline.enable = true;      # Visual indentation guides
       nerdtree.enable = true;              # File explorer plugin
       fugitive.enable = true;              # Git commands inside Neovim
