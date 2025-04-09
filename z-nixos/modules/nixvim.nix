@@ -16,7 +16,7 @@
       indent-blankline.enable = true;      # Visual indentation guides
       nerdtree.enable = true;              # File explorer plugin
       fugitive.enable = true;              # Git commands inside Neovim
-      dashboard-nvim.enable = true;        # Start screen with shortcuts and session info
+      #dashboard-nvim.enable = true;        # Start screen with shortcuts and session info
     };
 
     opts = {
