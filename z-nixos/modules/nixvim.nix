@@ -8,7 +8,6 @@
       treesitter.enable = true;            # Advanced syntax highlighting
       telescope.enable = true;             # Fuzzy finder for files and more
       cmp.enable = true;                   # Autocompletion plugin
-      nvim-lspconfig.enable = true;        # Language Server Protocol integration
       web-devicons.enable = true;          # File icons for Neovim
       bufferline.enable = true;            # Buffer tabline for better navigation
       gitsigns.enable = true;              # Git integration in the editor
@@ -22,14 +21,19 @@
           name = "glepnir/dashboard-nvim";
           type = "git";
           url = "https://github.com/glepnir/dashboard-nvim";
-        }
+        },
         
         {
           name = "preservim/nerdtree";
           type = "git";
           url = "https://github.com/preservim/nerdtree";
-        }
+        },
 
+        {
+          name = "neovim/nvim-lspconfig";
+          type = "git";
+          url = "https://github.com/neovim/nvim-lspconfig";
+        },
 
       ];
       
