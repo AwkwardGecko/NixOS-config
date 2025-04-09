@@ -24,6 +24,14 @@
           type = "git";
           url = "https://github.com/glepnir/dashboard-nvim";
         }
+        
+        {
+          name = "preservim/nerdtree";
+          type = "git";
+          url = "https://github.com/preservim/nerdtree";
+        }
+
+
       ];
       
     };
