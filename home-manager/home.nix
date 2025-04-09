@@ -56,8 +56,6 @@
     #NIXOS_OZONE_WL = "1"; # Wayland Electron support
 	#QT_QPA_PLATFORM=xcb;
     #__EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_mesa.json jellyfinmediaplayer;
-    HYPRLAND_INSTANCE_SIGNATURE = "$echo $HYPRLAND_INSTANCE_SIGNATURE)";
-    LD_LIBRARY_PATH=/steam/SteamLibrary/steamapps/common/GarrysMod/bin/libprofiler.so.0;
   };
 
 	home.file = {
