@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, self, ... }: {
   programs.nixvim = {
     enable = true;
     colorschemes.gruvbox.enable = true;  # Gruvbox colorscheme
@@ -22,6 +22,24 @@
     #   nerdtree
     #   nvim-lsp
     # ];
+
+    plugins.cmp = {
+      enable = true;
+      autoEnableSources = true;
+      sources = [
+        {name = "nvim_lsp";}
+        {name = "path";}
+        {name = "buffer";}
+      ]
+    }
+
+    plugins.lsp = {
+      enable = true;
+      servers = {
+        tsserver.enable = true;
+        lua-ls.enable = true
+      }
+    }
 
     opts = {
       number = true;                       # Show absolute line numbers
