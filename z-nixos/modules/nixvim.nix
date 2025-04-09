@@ -17,8 +17,7 @@
       indent-blankline.enable = true;      # Visual indentation guides
       nerdtree.enable = true;              # File explorer plugin
       fugitive.enable = true;              # Git commands inside Neovim
-    };
-
+      
       plugin = [
         {
           name = "glepnir/dashboard-nvim";
@@ -26,6 +25,8 @@
           url = "https://github.com/glepnir/dashboard-nvim";
         }
       ];
+      
+    };
 
 
     opts = {
