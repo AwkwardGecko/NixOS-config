@@ -48,6 +48,9 @@
   networking.hostName = "z-nixos";
   networking.networkmanager.enable = true;
   networking.interfaces.enp10s0.macAddress = "04:42:1A:A7:FD:1F";
+
+  networking.firewall.allowedTCPPorts = [ 18080 18081 ]; # monero support
+
   nixpkgs.config.allowUnfree = true;
   hardware.enableAllFirmware = true;
 
@@ -109,26 +112,21 @@
 
   environment.systemPackages = with pkgs; [
 
-     alsa-lib                   # ALSA sound library
+    alsa-lib                    # ALSA sound library
     atk                         # Accessibility toolkit (GNOME dependencies)
     bazel                       # Google's build tool (used for TensorFlow etc.)
-    binutils_nogold             # Binutils without the gold linker
-    # bluez-alsa                # ALSA backend for Bluetooth audio
-    # bluez-experimental       # Experimental Bluetooth stack features
-    # bluez-tools              # Utilities for Bluetooth
+    #binutils_nogold             # Binutils without the gold linker
     bootiso                     # Create bootable USB drives from ISO
     brave                       # Web browser
     # btmon                    # Bluetooth monitoring/debugging
     btrfs-progs                 # Btrfs filesystem tools
     cairo                       # 2D graphics library
     cargo                       # Rust package manager
-    cargo-auditable-cargo-wrapper  # Adds audit metadata to Rust binaries
     cargo-c                     # Build C-style shared libs from Rust
     cargo-deb                   # Generate .deb packages from Rust projects
     cargo-rr                    # Run Rust programs under rr debugger
     clinfo                      # Lists OpenCL devices
     conda                       # Python environment manager
-    crate2nix                   # Converts Cargo.toml into Nix expressions
     crane                       # Nix-native Rust build system (like crate2nix)
     cups                        # Printing system
     dbus                        # IPC system used by desktop apps
@@ -145,18 +143,15 @@
     gimp                        # Image editing software
     git                         # Version control
     glib                        # Low-level GNOME core library
-    glibc                       # GNU C Library
-    glibc_memusage              # Tracks memory usage of programs
+    #glibc_memusage              # Tracks memory usage of programs
     gnome-calculator            # Calculator app
     gnome-disk-utility          # Disk management GUI
     gparted                     # Partitioning tool
-    gperftools                  # Google Performance Tools (used by Stable Diffusion)
     gtk3                        # GNOME GUI toolkit v3
     gtkd                        # D bindings for GTK
-    gwe                         # GreenWithEnvy - NVIDIA GPU control GUI
     icu                         # Unicode support libraries
     iproute2                    # Network tools (replacement for net-tools)
-    koboldcpp                   # Local LLM interface for KoboldAI
+    #koboldcpp                   # Local LLM interface for KoboldAI
     libGL                       # OpenGL library
     libdrm                      # Direct Rendering Manager (graphics stuff)
     libglvnd                    # OpenGL Vendor-Neutral Dispatch library (Stable Diffusion dependency)
@@ -165,7 +160,6 @@
     libpcap                     # Packet capture library (used in Fribbels Honkai Star Rail Optimizer)
     libsecret                   # Secret storage (GNOME keyring)
     libxkbcommon                # Keyboard layout handling (Wayland/X)
-    libz                        # Compression library (zlib)
     lld                         # LLVM linker
     llvmPackages.bintools      # LLVM toolchain binaries (e.g., ar, nm)
     #lutris                      # Game manager (especially for Wine games)
@@ -180,28 +174,22 @@
     nvtopPackages.nvidia        # GPU usage monitor for NVIDIA
     onlyoffice-bin              # Office suite
     openssl                     # TLS/SSL support (used by reliquary-archiver and other tools)
-    ostree                      # Backend for Flatpak, versioned filesystem
     pango                       # Text rendering library
     parted                      # Partitioning tool
     pavucontrol                 # PulseAudio volume control GUI
     pcapfix                     # Repairs broken .pcap files
     pkg-config                  # Finds C libraries (used by reliquary-archiver)
-    playonlinux                 # Wine frontend for installing Windows games
     protobuf                    # Google's Protocol Buffers (serialization)
-    pxattr                      # Manipulate extended file attributes (.app file exec support)
     pyenv                       # Python version manager
     python311                   # Python 3.11 interpreter
     python311Packages.pip       # Python 3.11 pip installer
     python311Packages.pyasyncore # Async networking module for Python 3.11
-    python311Packages.xattr     # Python module for extended attributes
     python312Packages.libpcap   # Python bindings for libpcap (next-gen testing?)
     qbittorrent                 # BitTorrent client
     rclone                      # Sync with cloud storage
-    rpm-ostree                  # System image manager (used with Flatpak)
     #rustc                       # Rust compiler
     rustup                      # Rust toolchain manager (used by reliquary-archiver)
     rustup-toolchain-install-master # Install Rust toolchains from master
-    sc-controller               # Steam controller driver + GUI
     signal-desktop              # Encrypted messaging desktop app
     smartmontools               # Monitor hard drive health (S.M.A.R.T.)
     sqlite                      # Embedded SQL database engine
@@ -210,7 +198,6 @@
     strawberry                  # Music player
     udev                        # Device manager for the Linux kernel
     unigine-superposition       # GPU benchmarking tool
-    unixtools.ifconfig          # Brings back `ifconfig`
     upower                      # Power management daemon (dependency for Vivaldi maybe)
     uv                          # Fast Python package manager
     vivaldi                     # Web browser
