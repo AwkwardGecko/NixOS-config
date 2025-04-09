@@ -18,21 +18,19 @@
       
       plugin = [
         {
+          name = "neovim/nvim-lspconfig";
+          type = "git";
+          url = "https://github.com/neovim/nvim-lspconfig";
+        },
+        {
           name = "glepnir/dashboard-nvim";
           type = "git";
           url = "https://github.com/glepnir/dashboard-nvim";
-        }
-        
+        },
         {
           name = "preservim/nerdtree";
           type = "git";
           url = "https://github.com/preservim/nerdtree";
-        }
-
-        {
-          name = "neovim/nvim-lspconfig";
-          type = "git";
-          url = "https://github.com/neovim/nvim-lspconfig";
         }
 
       ];
