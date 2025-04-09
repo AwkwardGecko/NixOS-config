@@ -60,33 +60,14 @@
     '';
   };
 
-  #nixpkgs.config.permittedInsecurePackages = [
-    #"SDL_ttf-2.0.11"    # test removing this soon
-    #];
-
   security.doas.enable = true;
-
   programs.ssh.startAgent = true;
-
   programs.npm.enable = true;
-
-
-  networking.firewall = { 
-    allowedTCPPorts = [ 8080 8000 # Open-WebUI 
-    ];
-    extraCommands = ''
-      iptables -A nixos-fw -p tcp --source 192.168.1.0/24 --dport 8080 -j nixos-fw-accept '';
-  };
 
   programs.nix-ld.enable = true; # resolve library issues for Stable Diffusion
 
   programs.coolercontrol.enable = true;
 
-  services.open-webui.enable = true;
-  services.ollama = {
-    enable = true;
-    acceleration = "cuda";
-  };
 
   aagl.enableNixpkgsReleaseBranchCheck = false;
 
@@ -106,6 +87,7 @@
     ./modules/hypr.nix
     ./modules/hyprland_instance_sig.nix
     ./modules/internationalisation.nix
+    #./modules/ollama.nix
     ./modules/openrgb.nix
     ./modules/polkit.nix
     ./modules/monero.nix
