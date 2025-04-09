@@ -17,11 +17,11 @@
       fugitive.enable = true;              # Git commands inside Neovim
     };
 
-    extraPlugins = with pkgs.vimPlugins; [
-      dashboard-nvim
-      nerdtree
-      nvim-lsp
-    ];
+    # extraPlugins = with pkgs.vimPlugins; [
+    #   dashboard-nvim
+    #   nerdtree
+    #   nvim-lsp
+    # ];
 
     opts = {
       number = true;                       # Show absolute line numbers
