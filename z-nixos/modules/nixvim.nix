@@ -22,15 +22,15 @@
     #   nvim-lsp
     # ];
 
-    plugins.cmp = {
-      enable = true;
-      autoEnableSources = true;
-      sources = [
-        #{name = "nvim-lsp";}
-        {name = "path";}
-        {name = "buffer";}
-      ];
-    };
+    # plugins.cmp = {
+    #   enable = true;
+    #   autoEnableSources = true;
+    #   sources = [
+    #     {name = "nvim-lsp";}
+    #     {name = "path";}
+    #     {name = "buffer";}
+    #   ];
+    # };
 
     plugins.lsp = {
       enable = true;
