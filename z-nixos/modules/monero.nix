@@ -53,10 +53,6 @@
   # Optional: Power management to optimize energy usage during mining
   powerManagement.cpuFreqGovernor = "powersave";  # Use a low power governor when not actively using the CPU
 
-  # Optional: Logging configuration to save miner logs for troubleshooting
-  logging = {
-    level = "info";  # Choose logging level (info, debug, etc.)
-    file = "/var/log/xmrig-mining.log";  # Path to save XMRig mining log file
-  };
+
 }
 
