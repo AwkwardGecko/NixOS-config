@@ -26,7 +26,7 @@
       enable = true;
       autoEnableSources = true;
       sources = [
-        {name = "nvim-lsp";}
+        #{name = "nvim-lsp";}
         {name = "path";}
         {name = "buffer";}
       ];
