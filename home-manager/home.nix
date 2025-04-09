@@ -49,6 +49,7 @@
     #NIXOS_OZONE_WL = "1"; # Wayland Electron support
 	#QT_QPA_PLATFORM=xcb;
     #__EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_mesa.json jellyfinmediaplayer;
+    GITHUB_TOKEN = "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";
   };
 
 	home.file = {
