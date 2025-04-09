@@ -21,6 +21,8 @@
 
     extraPlugins = with pkgs.vimPlugins; [
       dashboard-nvim
+      nerdtree
+      nvim-lsp
     ];
 
     opts = {
