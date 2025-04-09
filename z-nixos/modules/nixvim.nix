@@ -17,4 +17,5 @@
       smartindent = true;          # Enable smart indentation
       autoindent = true;           # Enable automatic indentation
     };
+  };
 }
