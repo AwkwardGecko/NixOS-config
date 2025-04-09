@@ -78,12 +78,13 @@
               home-manager.users.zozano = import ./home-manager/home.nix;
             }
           ]; #modules end
+        
           specialArgs = {
             inherit inputs;
+          };
         };
-  };
+      };
     };
-
 
   }
     
