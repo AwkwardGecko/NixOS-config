@@ -4,7 +4,7 @@
   # Enable Monero service (for node management)
   services.monero = {
     enable = true;
-    dataDir = "/steam/Monero"
+    dataDir = "/steam/Monero";
     #    mining.enable = true;
     #mining.wallet = "your-wallet-address";  # Replace with your Monero wallet address
     #mining.threads = 6;  # Adjust based on how many threads you want to allocate for mining
