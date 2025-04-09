@@ -8,7 +8,7 @@
       treesitter.enable = true;            # Advanced syntax highlighting
       telescope.enable = true;             # Fuzzy finder for files and more
       cmp.enable = true;              # Autocompletion plugin
-      #nvim-lspconfig.enable = true;        # Language Server Protocol integration
+      { name = "neovim/nvim-lspconfig"; enable = true; }        # Language Server Protocol integration
       web-devicons.enable = true;
       bufferline.enable = true;            # Buffer tabline for better navigation
       gitsigns.enable = true;              # Git integration in the editor
