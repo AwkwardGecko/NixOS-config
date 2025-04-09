@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   programs.nixvim = {
     enable = true;
-    colorscheme = "onedark";
+    colorscheme = "gruvbox";
     plugins = {
       lualine.enable = true;
       treesitter.enable = true;
