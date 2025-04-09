@@ -32,13 +32,13 @@
     #   ];
     # };
 
-    plugins.lsp = {
-      enable = true;
-      servers = {
-        tsserver.enable = true;
-        lua-ls.enable = true;
-      };
-    };
+    # plugins.lsp = {
+    #   enable = true;
+    #   servers = {
+    #     tsserver.enable = true;
+    #     lua-ls.enable = true;
+    #   };
+    # };
 
     opts = {
       number = true;                       # Show absolute line numbers
