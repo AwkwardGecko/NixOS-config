@@ -9,6 +9,14 @@
     };
 
     extraConfigVim = ''
+      " Install vim-plug if not already installed
+      if empty(glob('~/.vim/autoload/plug.vim'))
+        silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+            https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        " Wait a bit for the plugin manager to install
+        autocmd VimEnter * PlugInstall | source $MYVIMRC
+      endif
+
       " Use vim-plug for plugin management
       call plug#begin('~/.vim/plugged')
 
