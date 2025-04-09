@@ -5,7 +5,11 @@
     plugins = {
       lualine.enable = true;
       treesitter.enable = true;
-      gruvbox.enable = true;
+	{
+          name = "gruvbox-community/gruvbox";
+          type = "git";
+          url = "https://github.com/gruvbox-community/gruvbox";
+        }
     };
     extraConfigVim = ''
       set number
