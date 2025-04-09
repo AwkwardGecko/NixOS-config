@@ -16,7 +16,6 @@
       indent-blankline.enable = true;      # Visual indentation guides
       fugitive.enable = true;              # Git commands inside Neovim
       
-      plugin = [
       # Manually add plugins like nvim-lspconfig, dashboard-nvim, and nerdtree
       plugin = [
         {
