@@ -18,9 +18,18 @@
       " End plugin installation
       call plug#end()
 
+      " Enable line numbers
+      set number           " Show absolute line numbers
+      set relativenumber   " Show relative line numbers
+
+      " Enable line indentation
+      set tabstop=4        " Set tab width to 4 spaces
+      set shiftwidth=4     " Indentation width
+      set expandtab        " Use spaces instead of tabs
+      set smartindent      " Enable smart indentation
+      set autoindent       " Enable automatic indentation
+
       " Additional Vim settings
-      set number
-      set relativenumber
       colorscheme gruvbox  # Ensure the colorscheme is set correctly
     '';
   };
