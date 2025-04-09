@@ -41,13 +41,6 @@
     #./modules/xserver.nix
   ];
 
-  programs.nixvim = {
-    enable = true;
-    colorscheme = "onedark";
-    plugins.lualine.enable = true;
-    plugins.treesitter.enable = true;
-  };
-
 
 
 

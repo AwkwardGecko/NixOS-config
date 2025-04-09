@@ -93,6 +93,7 @@
     ./modules/monero.nix
     #./modules/miniconda3.nix
     #./modules/nixvim.nix
+    ./modules/nixvim.nix
     ./modules/nvidia.nix
     #./modules/reload-usb.nix
     ./modules/scanner.nix
