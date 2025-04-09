@@ -5,6 +5,7 @@
     plugins = {
       lualine.enable = true;
       treesitter.enable = true;
+      gruvbox.enable = true;
     };
     extraConfigVim = ''
       set number
