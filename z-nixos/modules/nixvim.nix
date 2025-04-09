@@ -5,6 +5,7 @@
     plugins = {
       lualine.enable = true;
       treesitter.enable = true;
+	plugin = [
 	{
           name = "gruvbox-community/gruvbox";
           type = "git";
