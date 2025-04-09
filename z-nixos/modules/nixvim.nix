@@ -31,7 +31,7 @@
         {name = "path";}
         {name = "buffer";}
       ]
-    }
+    };
 
     plugins.lsp = {
       enable = true;
@@ -39,7 +39,7 @@
         tsserver.enable = true;
         lua-ls.enable = true
       }
-    }
+    };
 
     opts = {
       number = true;                       # Show absolute line numbers
