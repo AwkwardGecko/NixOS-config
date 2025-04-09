@@ -7,7 +7,7 @@
       lualine.enable = true;               # Statusline plugin
       treesitter.enable = true;            # Advanced syntax highlighting
       telescope.enable = true;             # Fuzzy finder for files and more
-      nvim-cmp.enable = true;              # Autocompletion plugin
+      cmp.enable = true;              # Autocompletion plugin
       #nvim-lspconfig.enable = true;        # Language Server Protocol integration
       bufferline.enable = true;            # Buffer tabline for better navigation
       gitsigns.enable = true;              # Git integration in the editor
