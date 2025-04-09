@@ -7,11 +7,7 @@
 
   inputs = {
 
-    # stylix.url = "github:danth/stylix";
-
     nixpkgs.url = "github:Nixos/nixpkgs/nixos-unstable";
-
-    # nix-colors.url = "github:misterio77/nix-colors";
 
     home-manager = {
       url = "github:nix-community/home-manager/master";
@@ -23,17 +19,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    #plugin-onedark.url = "github:navarasu/onedark.nvim";
-    #plugin-onedark.flake = false;
-
-    #stable-diffusion-webui = {
-    #  url = "github:virchau13/automatic1111-webui-nix";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
-
     nixvim = {
       url = "github:nix-community/nixvim";
-       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
   };
@@ -51,19 +39,17 @@
 
     let
       system = "x86_64-linux";
-      #pkgs = nixpkgs.legacyPackages.${system};
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
       };
     in
 
-
-
     {
       nixosConfigurations = {
         z-nixos = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
+          #system = "x86_64-linux";
+          system = system;
           modules = [
             ./z-nixos/configuration.nix
             home-manager.nixosModules.home-manager
@@ -78,13 +64,11 @@
               home-manager.users.zozano = import ./home-manager/home.nix;
             }
           ]; #modules end
-        
+         
           specialArgs = {
             inherit inputs;
           };
         };
       };
     };
-
-  }
-    
+  } 
