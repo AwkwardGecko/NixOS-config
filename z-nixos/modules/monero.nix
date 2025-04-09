@@ -5,8 +5,7 @@
   services.monero = {
     enable = true;
     mining.enable = true;
-    mining.pool = "monero-eu1.nanopool.org:14444";  # Replace with your pool's address and port
-    mining.wallet = "your-wallet-address";  # Replace with your Monero wallet address
+    #mining.wallet = "your-wallet-address";  # Replace with your Monero wallet address
     mining.threads = 6;  # Adjust based on how many threads you want to allocate for mining
   };
 
