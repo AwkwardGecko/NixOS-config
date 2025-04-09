@@ -67,6 +67,7 @@
           modules = [
             ./z-nixos/configuration.nix
             home-manager.nixosModules.home-manager
+            nixvim.nixosModules.nixvim
             { 
               imports = [ aagl.nixosModules.default ];
               nix.settings = aagl.nixConfig;
