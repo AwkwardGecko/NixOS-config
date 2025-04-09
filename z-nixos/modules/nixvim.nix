@@ -9,22 +9,20 @@
     };
 
     extraConfigVim = ''
-      " Install vim-plug if not already installed
-      if empty(glob('~/.vim/autoload/plug.vim'))
-        silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-            https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-        " Wait a bit for the plugin manager to install
-        autocmd VimEnter * PlugInstall | source $MYVIMRC
+      " Ensure packer is installed
+      if empty(glob('~/.local/share/nvim/site/pack/packer/start/packer.nvim'))
+        silent !git clone --depth 1 https://github.com/wbthomason/packer.nvim \
+            ~/.local/share/nvim/site/pack/packer/start/packer.nvim
       endif
 
-      " Use vim-plug for plugin management
-      call plug#begin('~/.vim/plugged')
-
-      " Add gruvbox plugin
-      Plug 'gruvbox-community/gruvbox'
-
-      " End plugin installation
-      call plug#end()
+      " Initialize packer
+      lua << EOF
+        require('packer').startup(function(use)
+          use 'gruvbox-community/gruvbox'  -- Add the gruvbox plugin
+          use 'nvim-lualine/lualine.nvim'  -- lualine plugin
+          use 'nvim-treesitter/nvim-treesitter'  -- treesitter plugin
+        end)
+      EOF
 
       " Enable line numbers
       set number           " Show absolute line numbers
