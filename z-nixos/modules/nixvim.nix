@@ -33,7 +33,7 @@
           name = "neovim/nvim-lspconfig";
           type = "git";
           url = "https://github.com/neovim/nvim-lspconfig";
-        },
+        }
 
       ];
       
