@@ -17,6 +17,7 @@
 
   home.packages = with pkgs; [
     hyprsunset
+    swayidle
   ];
 
   wayland.windowManager.hyprland.settings = {
@@ -41,9 +42,13 @@
       "sleep 3 && signal-desktop"
       "sleep 1 && steam -silent %U"
       "hyprctl setcursor Bibata-Modern-Classic 24"
-      "sleep 10 && bash ~/.local/share/applications/mount-server.sh"
-      "sleep 15 && bash ~/.local/share/applications/mount-music.sh"
+      #"sleep 10 && bash ~/.local/share/applications/mount-server.sh"
+      #"sleep 15 && bash ~/.local/share/applications/mount-music.sh"
       #"sshfs z-home@192.168.1.157:/ /server -oport=421"
+      "swayidle - w \
+        timeout 300 'hyprctl dispatch dpms off' \
+        resume 'hyprctl dispatch dpms on'"
+        # ^ turn off screen after 5 minutes
       #"pypr" #???
     ];
 
