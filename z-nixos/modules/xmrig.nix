@@ -27,12 +27,12 @@
       pools = [
         {
           # url = "xmr-eu1.nanopool.org:10343";
-          url = "pool.supportxmr.com:5555";
+          url = "xmr-eu2.nanopool.org:10343";
           # url = "pool.supportxmr.com:8080";
           user = "48rmufMfAAiHH4N8q7wzdrdvcN7AXcgwTN2oEqCrCnBafCeyFaZNjZbG6ytK4BsnpUZnLuRMAstaeSpDs3JKg4qrT3x1K2K";
           algo = "rx/wow";
           keepalive = true;
-          tls = false;
+          tls = true;
         }
       ];
 
