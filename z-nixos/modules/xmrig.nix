@@ -30,7 +30,7 @@
           url = "xmr-eu2.nanopool.org:10343";
           # url = "pool.supportxmr.com:8080";
           user = "48rmufMfAAiHH4N8q7wzdrdvcN7AXcgwTN2oEqCrCnBafCeyFaZNjZbG6ytK4BsnpUZnLuRMAstaeSpDs3JKg4qrT3x1K2K";
-          # algo = "rx/wow";
+          algo = "rx/0";
           keepalive = true;
           tls = true;
         }
