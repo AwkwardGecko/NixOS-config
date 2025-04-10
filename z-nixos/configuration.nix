@@ -57,7 +57,7 @@
 
   networking.firewall.allowedUDPPorts = [
     14444 # xmrig
-  ]
+  ];
 
   nixpkgs.config.allowUnfree = true;
   hardware.enableAllFirmware = true;
