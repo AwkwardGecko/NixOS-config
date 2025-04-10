@@ -39,14 +39,6 @@ in
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-    extraPackages = with pkgs; [ nvidia-vaapi-driver ];
-  };
-
-
   systemd.services.xmrig = {
     description = "XMRig Mining Service (CPU + CUDA)";
     after = [ "network.target" "nvidia-persistenced.service" ];
