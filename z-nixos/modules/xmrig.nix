@@ -22,7 +22,7 @@
         large-pages = true;
         mode = "auto";
         cache = 2;
-      }
+      };
 
       pools = [
         {
