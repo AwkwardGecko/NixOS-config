@@ -4,7 +4,7 @@ let
   xmrigConfigJSON = builtins.toJSON {
     pools = [
       {
-        url = "sg.supportxmr.com:443";
+        url = "pool.supportxmr.com:443";
         user = "48rmufMfAAiHH4N8q7wzdrdvcN7AXcgwTN2oEqCrCnBafCeyFaZNjZbG6ytK4BsnpUZnLuRMAstaeSpDs3JKg4qrT3x1K2K";
         pass = "x"; # optional password
         tls = true;
