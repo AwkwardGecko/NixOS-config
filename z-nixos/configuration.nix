@@ -140,6 +140,7 @@
     cups                        # Printing system
     dbus                        # IPC system used by desktop apps
     dcap                        # Data Center Attestation Primitives (SGX stuff)
+    dig                         # DNS Lookup
     digikam                     # Photo management software
     docker                      # Container engine
     docker-compose              # Define & run multi-container apps with Docker
