@@ -35,7 +35,6 @@ in
 {
   environment.systemPackages = with pkgs; [
     xmrig
-    nvidia_x11  # Ensures proper NVIDIA driver
   ];
 
   services.xserver.videoDrivers = [ "nvidia" ];
@@ -47,13 +46,6 @@ in
     extraPackages = with pkgs; [ nvidia-vaapi-driver ];
   };
 
-  # NVIDIA settings for CUDA
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = false;
-    open = false;
-    nvidiaSettings = true;
-  };
 
   systemd.services.xmrig = {
     description = "XMRig Mining Service (CPU + CUDA)";
