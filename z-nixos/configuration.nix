@@ -52,11 +52,11 @@
   networking.firewall.allowedTCPPorts = [ 
     18080 # monero
     18081 # monero
-    14444 # xmrig
+    9000 # xmrig
   ];
 
   networking.firewall.allowedUDPPorts = [
-    14444 # xmrig
+    9000 # xmrig
   ];
 
   nixpkgs.config.allowUnfree = true;
