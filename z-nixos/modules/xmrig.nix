@@ -6,10 +6,24 @@
     settings = {
 
       autosave = true;
+      autosave-interval = 300;
       cpu = true;
       opencl = false;
       cuda = false;
-     
+      
+      # CPU settings
+      cpu-priority = 5;
+      cpu-usage = 75;
+      threads = 6;
+
+
+      # RandomX optimizations
+      randomx = {
+        large-pages = true;
+        mode = "auto";
+        cache = 2;
+      }
+
       pools = [
         {
           url = "xmr-eu1.nanopool.org:10343";
