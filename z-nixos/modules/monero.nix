@@ -10,15 +10,8 @@
     mining.threads = 6;  # Adjust based on how many threads you want to allocate for mining
   };
 
-  # Install XMRig and configure it
-  environment.systemPackages = with pkgs; [
-    xmrig  # Install XMRig mining software
-    monero-cli # checking sync speed 
-  ];
-
   # Optional: Power management to optimize energy usage during mining
   powerManagement.cpuFreqGovernor = "powersave";  # Use a low power governor when not actively using the CPU
-
 
 }
 

@@ -108,6 +108,7 @@
     ./modules/xserver.nix
     ./modules/whisperai.nix
     ./modules/wine.nix
+    ./modules/xmrig.nix
   ];
 
   environment.systemPackages = with pkgs; [
