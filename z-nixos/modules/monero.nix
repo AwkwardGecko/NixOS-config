@@ -13,7 +13,7 @@
   # Install XMRig and configure it
   environment.systemPackages = with pkgs; [
     xmrig  # Install XMRig mining software
-    monero # checking sync speed 
+    monero-cli # checking sync speed 
   ];
 
 
