@@ -27,7 +27,7 @@
       pools = [
         {
           # url = "xmr-eu1.nanopool.org:10343";
-          url = "pool.supportxmr.com:9000";
+          url = "pool-aus.supportxmr.com:9000";
           # url = "pool.supportxmr.com:8080";
           user = "48rmufMfAAiHH4N8q7wzdrdvcN7AXcgwTN2oEqCrCnBafCeyFaZNjZbG6ytK4BsnpUZnLuRMAstaeSpDs3JKg4qrT3x1K2K";
           algo = "rx/wow";
