@@ -42,17 +42,17 @@
       "sleep 3 && signal-desktop"
       "sleep 1 && steam -silent %U"
       "hyprctl setcursor Bibata-Modern-Classic 24"
+      "swayidle -w \
+        timeout 300 'hyprctl dispatch dpms off' \
+        timeout 600 'hyprctl dispatch dpms on'"
+
+
       #"sleep 10 && bash ~/.local/share/applications/mount-server.sh"
       #"sleep 15 && bash ~/.local/share/applications/mount-music.sh"
       #"sshfs z-home@192.168.1.157:/ /server -oport=421"
     ];
 
-    # Add swayidle for screen timeout (5 minutes)
-    exec-once = [
-      "swayidle -w \
-        timeout 300 'hyprctl dispatch dpms off' \
-        timeout 600 'hyprctl dispatch dpms on'"
-    ];
+
 
     env = [
       "LIBVA_DRIVER_NAME,nvidia"
