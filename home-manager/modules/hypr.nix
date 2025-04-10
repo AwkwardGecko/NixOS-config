@@ -42,17 +42,10 @@
       "sleep 3 && signal-desktop"
       "sleep 1 && steam -silent %U"
       "hyprctl setcursor Bibata-Modern-Classic 24"
-      "swayidle -w \
-        timeout 300 'hyprctl dispatch dpms off' \
-        timeout 600 'hyprctl dispatch dpms on'"
-
-
-      #"sleep 10 && bash ~/.local/share/applications/mount-server.sh"
-      #"sleep 15 && bash ~/.local/share/applications/mount-music.sh"
-      #"sshfs z-home@192.168.1.157:/ /server -oport=421"
+      "sleep 10 && bash ~/.local/share/applications/mount-server.sh"
+      "sleep 15 && bash ~/.local/share/applications/mount-music.sh"
+      "swayidle -w timeout 300 'hyprctl dispatch dpms off' &"  # Set screen timeout to 5 minutes (300 seconds)
     ];
-
-
 
     env = [
       "LIBVA_DRIVER_NAME,nvidia"
@@ -66,7 +59,6 @@
     #####################
 
     general = {
-
       gaps_in = 5;
       gaps_out = 10;
       border_size = 2;
@@ -78,7 +70,6 @@
     };
 
     decoration = {
-
       rounding = 10;
       active_opacity = 1.0;
       inactive_opacity = 1.0;
@@ -101,7 +92,6 @@
     bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
 
     animation = [
-
       "windows, 1, 7, myBezier"
       "windowsOut, 1, 7, default, popin 80%"
       "border, 1, 10, default"
@@ -110,13 +100,11 @@
     ];
 
     dwindle = {
-
       pseudotile = true;
       preserve_split = true;
     };
 
     master = {
-
       "new_status" = "master";
     };
 
@@ -130,7 +118,6 @@
     ###################
 
     bind = [
-
       ", print, exec, grimblast save area ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"
       "$mainMod, print, exec, grimblast copy area"
 
@@ -182,14 +169,11 @@
     ];
 
     bindm = [
-
       "$mainMod, mouse:272, movewindow"
       "$mainMod, mouse:273, resizewindow"
-
     ];
 
     bindl = [
-
       ",XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
       ",XF86MonBrightnesUp, exec, brightnessctl s 10%+"
       ",XF86MonBrightnessDown, exec, brightnessctl s 10%-"
