@@ -49,6 +49,8 @@
   networking.networkmanager.enable = true;
   networking.interfaces.enp10s0.macAddress = "04:42:1A:A7:FD:1F";
 
+  networking.nameserver = [ "1.1.1.1" "8.8.8.8"]
+
   networking.firewall.allowedTCPPorts = [ 
     18080 # monero
     18081 # monero
