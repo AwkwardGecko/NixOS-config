@@ -1,9 +1,13 @@
 { config, pkgs, lib, ... }:
 
 let
-  xmrigWithTLS = pkgs.xmrig.override {
-    withOpenSSL = true;
-  };
+  xmrigWithTLS = pkgs.xmrig.overrideAttrs (old: rec {
+    nativeBuildInputs = old.nativeBuildInputs ++ [ pkgs.openssl ];
+
+    meta = with old.meta; {
+      license = licenses.mit;
+    };
+  });
 
   xmrigConfigJSON = builtins.toJSON {
     api = {
