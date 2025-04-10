@@ -1,6 +1,9 @@
 { config, pkgs, lib, ... }:
 
 let
+  # Import licenses to use the MIT license
+  licenses = pkgs.lib.licenses;
+
   xmrigWithTLS = pkgs.xmrig.overrideAttrs (old: rec {
     nativeBuildInputs = old.nativeBuildInputs ++ [ pkgs.openssl ];
 
