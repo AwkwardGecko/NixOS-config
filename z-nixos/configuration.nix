@@ -177,6 +177,7 @@
     llvmPackages.bintools      # LLVM toolchain binaries (e.g., ar, nm)
     #lutris                      # Game manager (especially for Wine games)
     mesa                        # Open-source graphics drivers
+    monero-cli
     monero-gui                  # GUI wallet for Monero cryptocurrency
     nettools                    # Old-school network tools (ifconfig, etc.)
     nixd                        # Nix language server (LSP)
