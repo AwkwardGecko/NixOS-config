@@ -14,8 +14,8 @@
       donate-level = 0;
       
       # CPU settings
-      cpu-priority = 3;
-      cpu-usage = 75;
+      cpu-priority = 2;
+      cpu-usage = 50;
       # cpu-usage = null;
       threads = 4;
       # threads = null;
