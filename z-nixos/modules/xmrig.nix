@@ -15,10 +15,10 @@
       
       # CPU settings
       cpu-priority = 5;
-      #cpu-usage = 75;
-      cpu-usage = null;
-      # threads = 6;
-      threads = null;
+      cpu-usage = 75;
+      # cpu-usage = null;
+      threads = 6;
+      # threads = null;
 
       # RandomX optimizations
       randomx = {
