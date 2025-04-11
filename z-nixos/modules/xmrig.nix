@@ -17,7 +17,7 @@
       cpu-priority = 5;
       cpu-usage = 75;
       # cpu-usage = null;
-      threads = 6;
+      threads = 4;
       # threads = null;
 
       # RandomX optimizations
