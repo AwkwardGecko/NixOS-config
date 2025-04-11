@@ -39,12 +39,6 @@
           tls = true;
         }
       ];
-
-      systemd.services.xmrig = {
-        enable = true;
-        after = [ "network.target" ];
-      };
-
     };
   };
 }
