@@ -19,16 +19,6 @@
   ];
 
 
-  systemd.services.monero.serviceConfig.ExecStart = lib.mkForce ''
-    ${pkgs.monero}/bin/monerod \
-      --data-dir /steam/Monero \
-      --prune-blockchain \
-      --out-peers 64 \
-      --enable-dns-blocklist \
-      --max-concurrency 8 \
-      --block-sync-size 20 \
-      --db-sync-mode fast:async:1000
-  '';
 
 
 }
