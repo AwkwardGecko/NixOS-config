@@ -10,6 +10,8 @@
 }:
 {
 
+  boot.kernelPackages = pkgs.linuxPackages_zen;
+
   boot.extraModprobeConfig = '' options bluetooth disable_ertm=1 '';
   boot.initrd.kernelModules = [ 
     "joydev"
