@@ -19,7 +19,7 @@
   ];
 
 
-  systemd.services.monero-cli.serviceConfig.ExecStart = lib.mkForce ''
+  systemd.services.monero.serviceConfig.ExecStart = lib.mkForce ''
     ${pkgs.monero}/bin/monerod \
       --data-dir /steam/Monero \
       --prune-blockchain \
