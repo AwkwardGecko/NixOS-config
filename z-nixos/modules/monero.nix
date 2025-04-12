@@ -25,7 +25,7 @@ systemd.services.monero = {
 
   serviceConfig = {
     User = "zozano";
-    Group = "zozano";
+    Group = "users";
     ExecStart = "${pkgs.monero-cli}/bin/monerod --config-file=/steam/Monero/monero.conf --non-interactive --data-dir=/steam/Monero --out-peers 64 --prune-blockchain --enable-dns-blocklist --max-concurrency 8 --block-sync-size 20 --db-sync-mode fast:async:1000";
     Restart = "always";
     SuccessExitStatus = [
