@@ -19,7 +19,6 @@
   boot.initrd.kernelModules = [ 
     "joydev"
     "uhid"
-    "xpadneo"
   ];
 
   environment.systemPackages = with pkgs; [
@@ -37,6 +36,7 @@
       Privacy = "device";
       JustWorksRepairing = "always";
       FastConnectable = "true";
+      Class = "0x000100";
     };
   };
 
