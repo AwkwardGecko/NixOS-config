@@ -49,31 +49,24 @@
 
 { config, pkgs, lib, ... }:
 
+{ config, pkgs, lib, ... }:
+
 {
-  # Ensure the Bluetooth package and service are enabled
-  networking.enableBluetooth = true;
+  # Enable Bluetooth support
+  networking.bluetooth.enable = true;
 
-  # Bluetooth package (we'll use bluez)
+  # Package for BlueZ Bluetooth stack
   networking.bluetooth.package = pkgs.bluez;
-
-  # Enable Bluetooth on boot
-  services.bluetooth.enable = true;
 
   # Optional: Disable Enhanced Re-Transmission Mode (ERTM) for compatibility
   networking.bluetooth.extraModprobeConfig = ''
     options bluetooth disable_ertm=1
   '';
 
-  # Make sure Bluetooth starts at boot
-  systemd.services.bluetooth = {
-    description = "Bluetooth service";
-    wantedBy = [ "multi-user.target" ];
-    serviceConfig.ExecStart = "${pkgs.bluez}/bin/bluetoothd";
-    serviceConfig.ExecStop = "${pkgs.bluez}/bin/bluetoothd --shutdown";
-    restart = "always";
-  };
+  # Enable Bluetooth on boot and configure the Bluetooth service
+  services.bluetooth.enable = true;
 
-  # Enable the Bluetooth hardware
+  # Bluetooth hardware settings
   hardware.bluetooth.enable = true;
 }
 
