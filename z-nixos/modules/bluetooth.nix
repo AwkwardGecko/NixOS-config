@@ -10,20 +10,19 @@
 }:
 {
 
-  boot.extraModulePackages = [ config.boot.kernelPackages.xpadneo ];
-
   boot.extraModprobeConfig = '' options bluetooth disable_ertm=1 '';
-  boot.initrd.kernelModules = [ "joydev" "uhid"];
+  boot.initrd.kernelModules = [ 
+    "joydev"
+    "uhid"
+    "hid_xpadneo"
+  ];
+  
   environment.systemPackages = with pkgs; [
     linuxKernel.packages.linux_zen.xpadneo
     #bluez-experimental
     #bluez-alsa
     #bluez-tools
   ];
-
-  #  hardware.xone.enable = true;
-
-
 
   hardware.bluetooth = {
     enable = true;
