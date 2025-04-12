@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Server Connect to Home Server
+Exec=kitty journalctl -u xmrig -f
+Terminal=false
+Type=Application
+Categories=Media;
