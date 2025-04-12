@@ -41,4 +41,9 @@
       ];
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    xmrig-proxy
+  ]
+
 }
