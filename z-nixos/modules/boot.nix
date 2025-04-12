@@ -18,6 +18,5 @@
     "usbhid"
     "btusb"
     "joydev"
-    "xpad"
   ];
 }
