@@ -13,6 +13,12 @@
     #mining.threads = 6;  # Adjust based on how many threads you want to allocate for mining
   };
 
+  environment.systemPackages = with pkgs; [
+    monero-gui
+    monero-cli
+  ]
+
+
   systemd.services.monero-cli.serviceConfig.ExecStart = lib.mkForce ''
     ${pkgs.monero}/bin/monerod \
       --data-dir /steam/Monero \
