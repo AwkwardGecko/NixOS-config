@@ -24,7 +24,7 @@
       isSystemUser = true;
       group = "monero";
       description = "Monero daemon user";
-      home = "var/lib/monero";
+      home = "/var/lib/monero";
       createHome = true;
     };
 
