@@ -18,8 +18,8 @@
     "hid_xpadneo"
   ];
   
-  environment.systemPackages = with pkgs; [
-    linuxKernel.packages.linux_zen.xpadneo
+  #environment.systemPackages = with pkgs; [
+    #linuxKernel.packages.linux_zen.xpadneo
     #bluez-experimental
     #bluez-alsa
     #bluez-tools
