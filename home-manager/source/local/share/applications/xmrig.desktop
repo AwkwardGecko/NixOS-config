@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Server Connect to Home Server
+Name=XMRIG
 Exec=kitty journalctl -u xmrig -f
 Terminal=false
 Type=Application
