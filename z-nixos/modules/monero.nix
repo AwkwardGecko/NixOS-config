@@ -13,11 +13,11 @@
     #mining.threads = 6;  # Adjust based on how many threads you want to allocate for mining
   };
 
-  systemd.services.monero-wallet-gui.serviceConfig.ExecStart = lib.mkForce ''
+  systemd.services.monero-cli.serviceConfig.ExecStart = lib.mkForce ''
     ${pkgs.monero}/bin/monerod \
       --data-dir /steam/Monero \
-      --out-peers 64 \
       --prune-blockchain \
+      --out-peers 64 \
       --enable-dns-blocklist \
       --max-concurrency 8 \
       --block-sync-size 20 \
