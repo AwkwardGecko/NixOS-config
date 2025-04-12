@@ -44,7 +44,7 @@
       "hyprctl setcursor Bibata-Modern-Classic 24"
       "sleep 10 && bash ~/.local/share/applications/mount-server.sh"
       "sleep 15 && bash ~/.local/share/applications/mount-music.sh"
-      "swayidle -w timeout 300 'hyprctl dispatch dpms off' &"  # Set screen timeout to 5 minutes (300 seconds)
+      "swayidle -w timeout 300 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' &"
     ];
 
     env = [
@@ -110,7 +110,7 @@
 
     misc = {
       "force_default_wallpaper" = -1;
-      "disable_hyprland_logo" = false;
+      "disable_hyprland_logo" = true;
     };
 
     ###################
