@@ -18,7 +18,21 @@
     monero-cli
   ];
 
+systemd.services.monero = {
+  description = "monero daemon";
+  after = [ "network.target" ];
+  wantedBy = [ "multi-user.target" ];
 
-
+  serviceConfig = {
+    User = "monero";
+    Group = "monero";
+    ExecStart = "${pkgs.monero-cli}/bin/monerod --config-file=${configFile} --non-interactive --data-dir=/steam/Monero --out-peers 64 --prune-blockchain --enable-dns-blocklist --max-concurrency 8 --block-sync-size 20 --db-sync-mode fast:async:1000";
+    Restart = "always";
+    SuccessExitStatus = [
+      0
+      1
+    ];
+  };
+};
 
 }
