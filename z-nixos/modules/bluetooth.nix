@@ -15,19 +15,25 @@
   
 
   boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+    xpadneo
+  ];
+
   boot.extraModprobeConfig = '' options bluetooth disable_ertm=1 '';
   boot.initrd.kernelModules = [ 
     "joydev"
     "uhid"
-    "hid_xpadneo"
+    #"hid_xpadneo"
   ];
 
-  environment.systemPackages = with pkgs; [
-    linuxKernel.packages.linux_zen.xpadneo
+  #environment.systemPackages = with pkgs; [
+    #linuxKernel.packages.linux_zen.xpadneo
     #bluez-experimental
     #bluez-alsa
     #bluez-tools
-  ];
+  #];
+
+  hardware.xpadneo.enable = true;
 
   hardware.bluetooth = {
     enable = true;
