@@ -35,8 +35,8 @@
       options = [
         "compress=zstd"
         "space_cache=v2"
-
-      ]
+        "discard=async"
+      ];
     };
 
   fileSystems."/server" =
