@@ -23,7 +23,7 @@
     #bluez-experimental
     #bluez-alsa
     #bluez-tools
-  ];
+  #];
 
   hardware.bluetooth = {
     enable = true;
