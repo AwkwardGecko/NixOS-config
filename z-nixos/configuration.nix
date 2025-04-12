@@ -163,6 +163,7 @@
     icu                         # Unicode support libraries
     iproute2                    # Network tools (replacement for net-tools)
     #koboldcpp                   # Local LLM interface for KoboldAI
+    jq
     libGL                       # OpenGL library
     libdrm                      # Direct Rendering Manager (graphics stuff)
     libglvnd                    # OpenGL Vendor-Neutral Dispatch library (Stable Diffusion dependency)
