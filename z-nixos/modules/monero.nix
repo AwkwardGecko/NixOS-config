@@ -18,8 +18,6 @@
     monero-cli
   ];
 
-  config = lib.mkIf cfg.enable {
-
     users.users.monero = {
       isSystemUser = true;
       group = "monero";
@@ -27,7 +25,7 @@
       home = /home/monero;
       createHome = true;
     };
-  };
+
 
 
 systemd.services.monero = {
