@@ -16,7 +16,7 @@
   environment.systemPackages = with pkgs; [
     monero-gui
     monero-cli
-  ]
+  ];
 
 
   systemd.services.monero-cli.serviceConfig.ExecStart = lib.mkForce ''
