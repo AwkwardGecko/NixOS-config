@@ -28,7 +28,7 @@
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
-    package = pkgs.bluezFull;
+    package = pkgs.bluez;
     settings.General = {
       Privacy = "device";
       JustWorksRepairing = "always";
