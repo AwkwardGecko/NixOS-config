@@ -46,24 +46,25 @@
 #}
 
 
-{ config, pkgs, ... }:
+
+{ config, pkgs, lib, ... }:
 
 {
-  # Enable Bluetooth support
-  networking.bluetooth.enable = true;
+  # Ensure the Bluetooth package and service are enabled
+  networking.enableBluetooth = true;
 
-  # Set up Bluetooth package (no need for bluezFull anymore)
+  # Bluetooth package (we'll use bluez)
   networking.bluetooth.package = pkgs.bluez;
 
-  # Ensure the Bluetooth service is powered on at boot
-  services.bluetooth.powerOnBoot = true;
+  # Enable Bluetooth on boot
+  services.bluetooth.enable = true;
 
-  # Optional: Disable ERTM (Enhanced Re-Transmission Mode) for compatibility
+  # Optional: Disable Enhanced Re-Transmission Mode (ERTM) for compatibility
   networking.bluetooth.extraModprobeConfig = ''
     options bluetooth disable_ertm=1
   '';
 
-  # Enable the Bluetooth daemon to start automatically
+  # Make sure Bluetooth starts at boot
   systemd.services.bluetooth = {
     description = "Bluetooth service";
     wantedBy = [ "multi-user.target" ];
@@ -72,10 +73,7 @@
     restart = "always";
   };
 
-  # Enable specific Bluetooth modules (you can modify or remove as per your requirements)
-  hardware.bluetooth = {
-    enable = true;
-    # You can add additional settings here, if needed
-  };
+  # Enable the Bluetooth hardware
+  hardware.bluetooth.enable = true;
 }
 
