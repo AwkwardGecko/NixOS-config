@@ -18,14 +18,12 @@
     monero-cli
   ];
 
-    users.groups.monero = {};
+    users.groups.monero = { };
 
     users.users.monero = {
       isSystemUser = true;
       group = "monero";
       description = "Monero daemon user";
-      home = /home/monero;
-      createHome = true;
     };
 
 
