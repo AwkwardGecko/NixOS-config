@@ -11,12 +11,15 @@
 
 {
 
+  boot.blacklistedKernelModules = [ "xpad" ];
+  
+
   #boot.kernelPackages = pkgs.linuxPackages_zen_6_12;
   boot.extraModprobeConfig = '' options bluetooth disable_ertm=1 '';
   boot.initrd.kernelModules = [ 
     "joydev"
     "uhid"
-    #"hid_xpadneo"
+    "hid_xpadneo"
   ];
 
   environment.systemPackages = with pkgs; [
