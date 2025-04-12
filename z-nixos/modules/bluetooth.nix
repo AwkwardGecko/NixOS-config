@@ -19,7 +19,7 @@
   boot.initrd.kernelModules = [ 
     "joydev"
     "uhid"
-    #"hid_xpadneo"
+    "hid_xpadneo"
   ];
 
   environment.systemPackages = with pkgs; [
