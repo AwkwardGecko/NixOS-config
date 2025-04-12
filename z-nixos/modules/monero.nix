@@ -24,7 +24,7 @@
       isSystemUser = true;
       group = "monero";
       description = "Monero daemon user";
-      home = cfg.dataDir;
+      home = /home/monero;
       createHome = true;
     };
   };
