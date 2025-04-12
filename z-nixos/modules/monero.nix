@@ -18,6 +18,8 @@
     monero-cli
   ];
 
+    users.groups.monero = true;
+
     users.users.monero = {
       isSystemUser = true;
       group = "monero";
