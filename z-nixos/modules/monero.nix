@@ -18,6 +18,15 @@
     monero-cli
   ];
 
+    users.users.monero = {
+      isSystemUser = true;
+      group = "monero";
+      description = "Monero daemon user";
+      home = cfg.dataDir;
+      createHome = true;
+    };
+
+
 systemd.services.monero = {
   description = "monero daemon";
   after = [ "network.target" ];
