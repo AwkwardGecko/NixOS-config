@@ -18,7 +18,7 @@
     monero-cli
   ];
 
-    users.groups.monero = true;
+    users.groups.monero = {};
 
     users.users.monero = {
       isSystemUser = true;
