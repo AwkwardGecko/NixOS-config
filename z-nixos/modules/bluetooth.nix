@@ -10,7 +10,7 @@
 }:
 {
 
-  boot.kernelPackages = pkgs.linuxPackages_zen_6_12;
+  #boot.kernelPackages = pkgs.linuxPackages_zen_6_12;
   boot.extraModprobeConfig = '' options bluetooth disable_ertm=1 '';
   boot.initrd.kernelModules = [ 
     "joydev"
@@ -28,12 +28,19 @@
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
+    package = pkgs.bluezFull;
     settings.General = {
       Privacy = "device";
       JustWorksRepairing = "always";
-      Class = "0x000100";
       FastConnectable = "true";
-      # ControllerMode = "dual";
     };
   };
+
+  services.blueman.enable = true;
+
+  environment.variables = {
+    "BLUETOOTH_ENABLE_EXPERIMENTAL" = "1";
+  };
+
+
 }
