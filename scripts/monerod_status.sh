@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Grep the latest sync status from the log
-log_file="/steam/Monero/monerod.log"  # adjust if needed
+log_file="/steam/Monero/bitmonero.log"  # adjust if needed
 
 # This is super basic. You can expand this to parse percentages etc.
 line=$(grep 'Synced' "$log_file" | tail -n 1)
