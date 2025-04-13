@@ -43,6 +43,10 @@
     };
   };
 
+  sysctl = {
+  "vm.nr_hugepages" = 2048;  # Set this to the number of huge pages you want
+  };
+
   boot.kernelParams = [
   "hugepagesz=2M"
   "hugepages=2048"
