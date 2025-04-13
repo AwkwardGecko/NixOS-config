@@ -23,7 +23,7 @@
 
         modules-left = [
           #"mpris"
-          #"custom/xmr-sync"
+          "custom/xmr-sync"
           #"hyprland/window"
         ];
 
@@ -223,7 +223,7 @@
             background: transparent;
         }
 
-        #custom/xmr-sync {
+        #custom-xmr-sync {
             margin-top: 6px;
             margin-left: 8px;
             padding-left: 10px;
