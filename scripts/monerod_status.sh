@@ -1,11 +1,17 @@
 #!/usr/bin/env bash
 
-# Grep the latest sync status from the log
-log_file="/steam/Monero/bitmonero.log"  # adjust if needed
+log_file="/steam/Monero/bitmonero.log"
 
-# This is super basic. You can expand this to parse percentages etc.
 line=$(grep 'Synced' "$log_file" | tail -n 1)
-percent=$(echo "$line" | grep -oP '\(\K[0-9]+%' | tr -d '%')
+percent=$(echo "$line" | sed -n 's/.*(\([0-9]\+\)%,.*/\1/p')
 
-echo "{\"text\": \"XMR: ${percent}%\", \"tooltip\": \"$(echo "$line" | sed 's/"/\\"/g')\"}"
+# Escape double quotes for tooltip
+escaped_line=$(echo "$line" | sed 's/"/\\"/g')
+
+echo "{\"text\": \"XMR: ${percent}%\", \"tooltip\": \"${escaped_line}\"}"
+
+if [[ -z "$percent" ]]; then
+    echo '{"text": "XMR: ?", "tooltip": "No sync data found"}'
+    exit 0
+fi
 

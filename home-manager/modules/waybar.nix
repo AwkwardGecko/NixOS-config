@@ -138,7 +138,7 @@
         };
 
         "custom/xmr-sync" = {
-          exec = "${config.home.homeDirectory}/.dotfiles/scripts/monerod_status.sh";
+          exec = "/home/zozano/.dotfiles/scripts/monerod_status.sh";
           interval = 30;
           format = "{}";
         };
