@@ -22,7 +22,7 @@
         position = "top";
 
         modules-left = [
-          "mpris"
+          #"mpris"
           #"custom/xmr-sync"
           #"hyprland/window"
         ];
