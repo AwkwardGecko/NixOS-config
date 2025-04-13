@@ -23,7 +23,7 @@
 
         modules-left = [
           "mpris"
-          "custom/xmr-sync"
+          #"custom/xmr-sync"
           #"hyprland/window"
         ];
 
