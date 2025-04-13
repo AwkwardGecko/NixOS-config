@@ -14,10 +14,10 @@
       donate-level = 0;
       
       # CPU settings
-      cpu-priority = 2;
+      cpu-priority = -2;
       cpu-usage = 50;
       # cpu-usage = null;
-      threads = 4;
+      threads = 6;
       # threads = null;
 
       # RandomX optimizations
@@ -44,11 +44,11 @@
   };
 
   boot.kernel.sysctl = {
-    "vm.nr_hugepages" = 4096;  # Set this to the number of huge pages you want
+    "vm.nr_hugepages" = 2048;  # Set this to the number of huge pages you want
   };
 
   boot.kernelParams = [
-    "hugepagesz=1G"
+    "hugepagesz=2M"
     "hugepages=2048"
     "transparent_hugepage=always"
   ];
