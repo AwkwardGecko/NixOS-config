@@ -43,6 +43,8 @@
     };
   };
 
+  boot.kernelParams = [ "hugepagesz=2M" "hugepages=2048" ];
+
   environment.systemPackages = with pkgs; [
     xmrig-proxy
     xprintidle
