@@ -48,7 +48,7 @@
   };
 
   boot.kernelParams = [
-    "hugepagesz=2M"
+    "hugepagesz=1G"
     "hugepages=2048"
     "transparent_hugepage=always"
   ];
