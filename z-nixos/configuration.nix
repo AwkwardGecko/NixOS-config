@@ -201,7 +201,7 @@
     #rustc                       # Rust compiler
     rustup                      # Rust toolchain manager (used by reliquary-archiver)
     rustup-toolchain-install-master # Install Rust toolchains from master
-    signal-desktop              # Encrypted messaging desktop app
+    signal-desktop-bin          # Encrypted messaging desktop app
     smartmontools               # Monitor hard drive health (S.M.A.R.T.)
     sqlite                      # Embedded SQL database engine
     sshfs                       # Mount remote filesystems over SSH

@@ -23,6 +23,7 @@
 
         modules-left = [
           "mpris"
+          "custom/xmr-sync"
           #"hyprland/window"
         ];
 
@@ -136,6 +137,12 @@
           ];
         };
 
+        "custom/xmr-sync" = {
+          exec = "${config.home.homeDirectory}/.dotfiles/scripts/monerod_status.sh";
+          interval = 30;
+          format = "{}";
+        };
+
         bluetooth = {
           icon-size = 20;
           icon-spacing = 0;
@@ -214,6 +221,19 @@
             border-radius: 10px;
             transition: none;
             background: transparent;
+        }
+
+        #custom/xmr-sync {
+            margin-top: 6px;
+            margin-left: 8px;
+            padding-left: 10px;
+            margin-bottom: 0px;
+            padding-right: 10px;
+            border-radius: 10px;
+            transition: none;
+            color: #B5E8E0;
+            background: #161320;
+
         }
 
 
