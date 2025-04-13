@@ -15,7 +15,7 @@
       
       # CPU settings
       cpu-priority = -2;
-      cpu-usage = 75;
+      cpu-usage = 60;
       # cpu-usage = null;
       threads = 6;
       # threads = null;
