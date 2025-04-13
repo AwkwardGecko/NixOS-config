@@ -43,7 +43,11 @@
     };
   };
 
-  boot.kernelParams = [ "hugepagesz=2M" "hugepages=2048" ];
+  boot.kernelParams = [
+  "hugepagesz=2M"
+  "hugepages=2048"
+  "transparent_hugepage=always"
+  ];
 
   environment.systemPackages = with pkgs; [
     xmrig-proxy
