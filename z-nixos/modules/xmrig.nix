@@ -43,7 +43,7 @@
     };
   };
 
-  sysctl = {
+  boot.kernel.sysctl = {
   "vm.nr_hugepages" = 2048;  # Set this to the number of huge pages you want
   };
 
