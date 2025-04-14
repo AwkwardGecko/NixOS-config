@@ -14,11 +14,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-comfyui = {
-      url = "github:dyscorv/nix-comfyui";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     aagl = {
       url = "github:ezKEa/aagl-gtk-on-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -39,7 +34,6 @@
       home-manager,
       aagl,
       nixvim,
-      nix-comfyui,
       ...
     }:
 
@@ -48,9 +42,6 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
-        overlays = [
-          "inputs.nix-comfyui.overlays.default"
-        ];
       };
     in
 
