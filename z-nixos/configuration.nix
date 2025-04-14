@@ -163,6 +163,7 @@
     gtkd                        # D bindings for GTK
     icu                         # Unicode support libraries
     iproute2                    # Network tools (replacement for net-tools)
+    inotify-tools               # check what is making folders
     #koboldcpp                   # Local LLM interface for KoboldAI
     jq                          #
     libGL                       # OpenGL library
