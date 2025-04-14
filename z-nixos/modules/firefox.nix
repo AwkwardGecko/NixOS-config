@@ -7,7 +7,6 @@
 {
   programs.firefox = {
     enable = true;
-    sandbox = true;
     settings = {
       # Disable telemetry and data collection
       "toolkit.telemetry.enabled" = false;
