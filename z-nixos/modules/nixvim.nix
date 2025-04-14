@@ -16,30 +16,6 @@
       fugitive.enable = true;              # Git commands inside Neovim
     };
 
-    # extraPlugins = with pkgs.vimPlugins; [
-    #   dashboard-nvim
-    #   nerdtree
-    #   nvim-lsp
-    # ];
-
-    # plugins.cmp = {
-    #   enable = true;
-    #   autoEnableSources = true;
-    #   sources = [
-    #     {name = "nvim-lsp";}
-    #     {name = "path";}
-    #     {name = "buffer";}
-    #   ];
-    # };
-
-    # plugins.lsp = {
-    #   enable = true;
-    #   servers = {
-    #     tsserver.enable = true;
-    #     lua-ls.enable = true;
-    #   };
-    # };
-
     opts = {
       number = true;                       # Show absolute line numbers
       relativenumber = true;               # Show relative line numbers
@@ -48,6 +24,13 @@
       expandtab = true;                    # Use spaces instead of tabs
       smartindent = true;                  # Enable smart indentation
       autoindent = true;                   # Enable automatic indentation
+    };
+
+    keymaps = {
+      ["v"] = {
+        ["<C-S-c>"] = "'+y', -- Copy"
+        ["<C-S-v>"] = "'+p', -- Paste"
+      };
     };
   };
 }
