@@ -200,6 +200,7 @@
     pkg-config                  # Finds C libraries (used by reliquary-archiver)
     protobuf                    # Google's Protocol Buffers (serialization)
     pyenv                       # Python version manager
+    python3
     python311                   # Python 3.11 interpreter
     python311Packages.pyyaml
     python311Packages.numpy
