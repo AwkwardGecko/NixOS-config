@@ -182,7 +182,6 @@
     nettools                    # Old-school network tools (ifconfig, etc.)
     nixd                        # Nix language server (LSP)
     nixfmt-rfc-style            # Nix formatter
-    nix-comfyui
     nodePackages.nodejs         # Node.js runtime
     nspr                        # Netscape Portable Runtime (used by Firefox, etc.)
     nss                         # Network Security Services

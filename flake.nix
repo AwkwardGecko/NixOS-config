@@ -67,6 +67,8 @@
               nix.settings = aagl.nixConfig;
               programs.honkers-railway-launcher.enable = true;
 
+              programs.nix-comfyui.enable = true;
+
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.zozano = import ./home-manager/home.nix;
