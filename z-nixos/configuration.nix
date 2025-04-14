@@ -139,6 +139,8 @@
     cmake
     conda                       # Python environment manager
     crane                       # Nix-native Rust build system (like crate2nix)
+    cudaPackages.cudnn          # CUDA
+    cudatoolkit
     cups                        # Printing system
     curl
     dbus                        # IPC system used by desktop apps
@@ -199,6 +201,9 @@
     protobuf                    # Google's Protocol Buffers (serialization)
     pyenv                       # Python version manager
     python311                   # Python 3.11 interpreter
+    python311Packages.pyyaml
+    python311Packages.numpy
+    python311Packages.scipy
     python311Packages.pip       # Python 3.11 pip installer
     python311Packages.pyasyncore # Async networking module for Python 3.11
     python311Packages.setuptools
