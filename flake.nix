@@ -48,7 +48,7 @@
         inherit system;
         config.allowUnfree = true;
         overlays = [
-          "inputs.nix-comfyui.overlays.default";
+          "inputs.nix-comfyui.overlays.default"
         ];
       };
     in
