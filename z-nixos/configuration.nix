@@ -43,7 +43,7 @@
   };
 
   swapDevices = [ { label = "swap"; } ];
-  services.custom-ssh-agent.enable = true;
+  #services.custom-ssh-agent.enable = true;
 
   networking.hostName = "z-nixos";
   networking.networkmanager.enable = true;
