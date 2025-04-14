@@ -14,6 +14,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nix-comfyui = {
+      url = "github:dyscorv/nix-comfyui";
+      inputs.nixpkgs.follows = "nixpkgs";
+    }
+
+
     aagl = {
       url = "github:ezKEa/aagl-gtk-on-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -42,27 +48,13 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
+        overlays = [
+          "inputs.nix-comfyui.overlays.default";
+        ];
       };
     in
 
     {
-
-      # packages.${system} = {
-      #   honkersFHS = pkgs.buildFHSUserEnv {
-      #     name = "honkers-railway";
-      #     targetPkgs = pkgs: with pkgs; [
-      #       glibc
-      #       gmp
-      #       acl
-      #       attr
-      #       # possibly more depending on launcher logs
-      #       # you can add others like libselinux/libcap if needed
-      #     ];
-      #     runScript = "${pkgs.honkers-railway-launcher}/bin/honkers-railway-launcher";
-      #   };
-      # };
-
-
       nixosConfigurations = {
         z-nixos = nixpkgs.lib.nixosSystem {
           #system = "x86_64-linux";
