@@ -14,7 +14,7 @@
   programs = {
     firefox = {
       enable = true;
-      languagePacks = [ "en-AU" "en-US" ];
+      languagePacks = [ "en-US" ];
 
       /* ---- POLICIES ---- */
       # Check about:policies#documentation for options.
