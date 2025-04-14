@@ -46,6 +46,23 @@
     in
 
     {
+
+      packages.${system} = {
+        honkersFHS = pkgs.buildFHSUserEnv {
+          name = "honkers-railway";
+          targetPkgs = pkgs: with pkgs; [
+            glibc
+            gmp
+            acl
+            attr
+            # possibly more depending on launcher logs
+            # you can add others like libselinux/libcap if needed
+          ];
+          runScript = "${pkgs.honkers-railway-launcher}/bin/honkers-railway-launcher";
+        };
+      };
+
+
       nixosConfigurations = {
         z-nixos = nixpkgs.lib.nixosSystem {
           #system = "x86_64-linux";
