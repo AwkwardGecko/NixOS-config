@@ -30,10 +30,7 @@
       "browser.cache.memory.enable" = true;
     };
 
-    extensions = [
-      pkgs.firefox-extension.uBlockOrigin
-      pkgs.firefox-extension.bitwarden
-    ];
+
   };
 }
 
