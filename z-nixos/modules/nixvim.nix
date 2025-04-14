@@ -26,12 +26,17 @@
       autoindent = true;                   # Enable automatic indentation
     };
 
-    keymaps = {
-      ["v"] = {
-        ["<C-S-c>"] = "'+y', -- Copy"
-        ["<C-S-v>"] = "'+p', -- Paste"
-      };
-    };
+    keymaps = [
+      {
+        key = "<C-S-c>";
+        action = "+y";  # Ctrl+Shift+C to copy to clipboard
+      }
+      
+      {
+        key = "<C-S-v>";
+        action = "+p";  # Ctrl+Shift+V to paste from clipboard
+      }
+    ];  
   };
 }
 
