@@ -40,7 +40,7 @@
     LIBVA_DRIVER_NAME = "nvidia";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
     __GL_VRR_ALLOWED = "1";
-    export LIBGL_DRIVERS_PATH = /run/opengl-driver/lib/dri;
+    LIBGL_DRIVERS_PATH = /run/opengl-driver/lib/dri;
   };
 
 }

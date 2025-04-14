@@ -154,6 +154,7 @@
     gimp                        # Image editing software
     git                         # Version control
     glib                        # Low-level GNOME core library
+    glxinfo                     # 
     #glibc_memusage              # Tracks memory usage of programs
     gnome-calculator            # Calculator app
     gnome-disk-utility          # Disk management GUI
@@ -163,7 +164,7 @@
     icu                         # Unicode support libraries
     iproute2                    # Network tools (replacement for net-tools)
     #koboldcpp                   # Local LLM interface for KoboldAI
-    jq
+    jq                          #
     libGL                       # OpenGL library
     libdrm                      # Direct Rendering Manager (graphics stuff)
     libglvnd                    # OpenGL Vendor-Neutral Dispatch library (Stable Diffusion dependency)
