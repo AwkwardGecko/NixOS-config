@@ -17,8 +17,7 @@
     nix-comfyui = {
       url = "github:dyscorv/nix-comfyui";
       inputs.nixpkgs.follows = "nixpkgs";
-    }
-
+    };
 
     aagl = {
       url = "github:ezKEa/aagl-gtk-on-nix";
