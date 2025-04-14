@@ -98,7 +98,7 @@
     ./modules/fonts.nix
     ./modules/gamemode.nix
     ./modules/hypr.nix
-    ./modules/hyprland_instance_sig.nix
+    #./modules/hyprland_instance_sig.nix
     ./modules/internationalisation.nix
     #./modules/ollama.nix
     ./modules/openrgb.nix
@@ -114,7 +114,7 @@
     ./modules/teamviewer.nix
     ./modules/users.nix
     ./modules/xserver.nix
-    ./modules/whisperai.nix
+    #./modules/whisperai.nix
     ./modules/wine.nix
     ./modules/xmrig.nix
     #./modules/xmrig_cpu_monitor.nix
