@@ -10,6 +10,8 @@
 }:
 {
 
+  hardware.nvidia.modesetting.enable = true;
+
   services.xserver.videoDrivers = [ "nvidia" ]; 
   hardware = {
 
@@ -30,14 +32,17 @@
     };
   };
 
-    environment.systemPackages = with pkgs; [
-      nvfancontrol
+  environment.systemPackages = with pkgs; [
+    nvfancontrol
   ];
-
-    environment.variables = {
+  
+  environment.variables = {
     GBM_BACKEND = "nvidia-drm";
+    LIBGL_ALWAYS_INDIRECT = "0";
     LIBVA_DRIVER_NAME = "nvidia";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    __GL_VRR_ALLOWED = "1";
+    export LIBGL_DRIVERS_PATH = /run/opengl-driver/lib/dri;
   };
 
 }
