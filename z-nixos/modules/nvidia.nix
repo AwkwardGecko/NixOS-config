@@ -36,11 +36,8 @@
   
   environment.variables = {
     GBM_BACKEND = "nvidia-drm";
-    LIBGL_ALWAYS_INDIRECT = "0";
     LIBVA_DRIVER_NAME = "nvidia";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    __GL_VRR_ALLOWED = "1";
-    LIBGL_DRIVERS_PATH = /run/opengl-driver/lib/dri;
   };
 
 }
