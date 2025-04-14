@@ -39,6 +39,7 @@
       home-manager,
       aagl,
       nixvim,
+      nix-comfyui,
       ...
     }:
 
