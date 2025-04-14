@@ -136,9 +136,11 @@
     cargo-deb                   # Generate .deb packages from Rust projects
     cargo-rr                    # Run Rust programs under rr debugger
     clinfo                      # Lists OpenCL devices
+    cmake
     conda                       # Python environment manager
     crane                       # Nix-native Rust build system (like crate2nix)
     cups                        # Printing system
+    curl
     dbus                        # IPC system used by desktop apps
     dcap                        # Data Center Attestation Primitives (SGX stuff)
     dig                         # DNS Lookup
@@ -159,6 +161,7 @@
     gnome-calculator            # Calculator app
     gnome-disk-utility          # Disk management GUI
     gparted                     # Partitioning tool
+    gperftools
     gtk3                        # GNOME GUI toolkit v3
     gtkd                        # D bindings for GTK
     icu                         # Unicode support libraries
@@ -198,6 +201,9 @@
     python311                   # Python 3.11 interpreter
     python311Packages.pip       # Python 3.11 pip installer
     python311Packages.pyasyncore # Async networking module for Python 3.11
+    python311Packages.setuptools
+    python311Packages.wheel
+    python311Packages.torch
     python312Packages.libpcap   # Python bindings for libpcap (next-gen testing?)
     qbittorrent                 # BitTorrent client
     rclone                      # Sync with cloud storage
@@ -212,6 +218,7 @@
     strawberry                  # Music player
     udev                        # Device manager for the Linux kernel
     unigine-superposition       # GPU benchmarking tool
+    unzip
     upower                      # Power management daemon (dependency for Vivaldi maybe)
     uv                          # Fast Python package manager
     vivaldi                     # Web browser
