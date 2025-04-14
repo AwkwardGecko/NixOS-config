@@ -10,6 +10,10 @@
 }:
 {
 
+  fonts.packages = with pkgs; [
+    jetbrains-mono
+  ];
+
   programs.kitty = {
     enable = true;
     shellIntegration.enableFishIntegration = true;
@@ -18,7 +22,11 @@
       shell = "fish";
     };
 
-    font.name = "JetBrains Mono";
+    font = {
+      name = "JetBrains Mono";
+      size = 12;
+    };
+
     themeFile = "GruvboxMaterialDarkMedium";
   };
 }
