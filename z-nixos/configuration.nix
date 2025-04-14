@@ -176,6 +176,7 @@
     lld                         # LLVM linker
     llvmPackages.bintools      # LLVM toolchain binaries (e.g., ar, nm)
     #lutris                      # Game manager (especially for Wine games)
+    lynis                       # security auditing
     mesa                        # Open-source graphics drivers
     nettools                    # Old-school network tools (ifconfig, etc.)
     nixd                        # Nix language server (LSP)
