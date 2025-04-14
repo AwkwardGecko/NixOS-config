@@ -14,12 +14,6 @@
 
   i18n.defaultLocale = "en_AU.UTF-8";
 
-  supportedLocales = [
-    "en_AU.UTF-8"
-    "en_US.UTF-8"
-    "en_DK.UTF-8"
-  ];
-
   i18n.extraLocaleSettings = {
 
     LANGUAGE = "en_AU.UTF-8";
