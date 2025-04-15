@@ -28,7 +28,7 @@
   outputs = inputs@{ self, nixpkgs, home-manager, aagl, nixvim, nix-comfyui, ... }:
     let
      
-      myRuntimeDir = "/home/zozano/comfyui-runtime";
+      myRuntimeDir = "/home/zozano/comfyui";
 
         comfyWrapper = pkgs.writeShellScriptBin "comfyui" ''
           mkdir -p "${myRuntimeDir}"
