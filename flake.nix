@@ -48,7 +48,17 @@
           home-manager.nixosModules.home-manager
           nixvim.nixosModules.nixvim
           {
-            imports = [ aagl.nixosModules.default ];
+            imports = [ 
+              aagl.nixosModules.default
+              nix-comfyui.nixosModules.default
+            ];
+            
+            services.comfyui = {
+              enable = true;
+              autoStart = true;
+              listenPort = "8188"; #default
+            };
+
             nix.settings = aagl.nixConfig;
             programs.honkers-railway-launcher.enable = true;
 
