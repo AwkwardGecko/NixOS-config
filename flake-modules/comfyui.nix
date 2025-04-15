@@ -3,7 +3,7 @@
 let
   myRuntimeDir = "/home/zozano/comfyui";
 
-  my-comfyui = inputs.nix-comfyui.packages.${pkgs.system}.comfyui.override {
+  my-comfyui = inputs.nix-comfyui.comfyui.override {
     extensions = [
       pkgs.comfyuiPackages.extensions.acly-inpaint
       pkgs.comfyuiPackages.extensions.acly-tooling
