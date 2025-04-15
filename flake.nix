@@ -50,7 +50,7 @@
           {
             imports = [ 
               aagl.nixosModules.default
-              nix-comfyui.nixosModules.default
+              "${inputs.nix-comfyui}/modules/comfyui.nix"
             ];
             
             nix.settings = aagl.nixConfig;
