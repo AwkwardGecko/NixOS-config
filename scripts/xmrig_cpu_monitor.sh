@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 CPU_THRESHOLD=20  # Define the CPU usage threshold (in percentage)
 

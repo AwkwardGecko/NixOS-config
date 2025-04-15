@@ -1,2 +1,2 @@
-#~/.nixos-profile/bash
+#!/usr/bin/env bash
 home-manager switch -b backup --flake ~/.dotfiles

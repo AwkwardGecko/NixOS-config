@@ -1,4 +1,4 @@
-#!/bin/bash
+#!usr/bin/env bash
 
 current_workspace=$(hyprctl activeworkspace -j | jq '.id')
 window_count=$(hyprctl workspaces -j | jq ".[] | select(.id == $current_workspace) | .windows")

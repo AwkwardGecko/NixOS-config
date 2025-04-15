@@ -42,6 +42,10 @@
     };
   };
 
+  systemd.extraConfig = ''
+    CoredumpFilter=0x0
+  ''; #popups can fuck right off
+
   swapDevices = [ { label = "swap"; } ];
   #services.custom-ssh-agent.enable = true;
 

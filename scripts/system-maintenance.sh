@@ -1,4 +1,4 @@
-#~/.nixos-profile/bin
+#!/usr/bin/env bash
 
 nix-collect-garbage
 

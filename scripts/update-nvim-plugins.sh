@@ -1,4 +1,4 @@
-#~/.nixos-profile/bash
+#!/usr/bin/env bash
 
 rm ~/.config/nvim/lazy-lock.json
 
