@@ -48,7 +48,7 @@
               programs.honkers-railway-launcher.enable = true;
 
               environment.systemPackages = with pkgs; [
-                comfyui
+                my-comfyui
                 comfyuiPackages.krita-with-extensions
               ];
 
