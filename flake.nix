@@ -30,27 +30,27 @@
 
     let
      
-      # myRuntimeDir = "/home/zozano/comfyui";
-      #
-      #   comfyWrapper = pkgs.writeShellScriptBin "comfyui" ''
-      #     mkdir -p "${myRuntimeDir}"
-      #     cd "${myRuntimeDir}"
-      #     exec ${my-comfyui}/bin/comfyui "$@"
-      #   '';
-      #
-      # my-comfyui = pkgs.comfyuiPackages.comfyui.override {
-      #   extensions = [
-      #     pkgs.comfyuiPackages.extensions.acly-inpaint
-      #     pkgs.comfyuiPackages.extensions.acly-tooling
-      #     pkgs.comfyuiPackages.extensions.cubiq-ipadapter-plus
-      #     pkgs.comfyuiPackages.extensions.fannovel16-controlnet-aux
-      #   ];
-      #
-      #   commandLineArgs = [
-      #     "--preview-method"
-      #     "auto"
-      #   ];
-      # };
+      myRuntimeDir = "/home/zozano/comfyui";
+
+        comfyWrapper = pkgs.writeShellScriptBin "comfyui" ''
+          mkdir -p "${myRuntimeDir}"
+          cd "${myRuntimeDir}"
+          exec ${my-comfyui}/bin/comfyui "$@"
+        '';
+
+      my-comfyui = pkgs.comfyuiPackages.comfyui.override {
+        extensions = [
+          pkgs.comfyuiPackages.extensions.acly-inpaint
+          pkgs.comfyuiPackages.extensions.acly-tooling
+          pkgs.comfyuiPackages.extensions.cubiq-ipadapter-plus
+          pkgs.comfyuiPackages.extensions.fannovel16-controlnet-aux
+        ];
+
+        commandLineArgs = [
+          "--preview-method"
+          "auto"
+        ];
+      };
 
 
       system = "x86_64-linux";
@@ -64,9 +64,9 @@
         z-nixos = nixpkgs.lib.nixosSystem {
           system = system;
           modules = [
-            ./flake-modules/comfyui.nix
+            #./flake-modules/comfyui.nix
             ./z-nixos/configuration.nix
-            ./flake-modules/test/test.nix
+            #./flake-modules/test/test.nix
             home-manager.nixosModules.home-manager
             nixvim.nixosModules.nixvim
             {
@@ -77,11 +77,11 @@
 
               aagl.enableNixpkgsReleaseBranchCheck = false;
 
-              # environment.systemPackages = with pkgs; [
-              #   my-comfyui
-              #   comfyWrapper
-              #   comfyuiPackages.krita-with-extensions
-              # ];
+              environment.systemPackages = with pkgs; [
+                my-comfyui
+                comfyWrapper
+                comfyuiPackages.krita-with-extensions
+              ];
 
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
