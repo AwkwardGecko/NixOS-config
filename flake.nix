@@ -27,6 +27,22 @@
 
   outputs = inputs@{ self, nixpkgs, home-manager, aagl, nixvim, nix-comfyui, ... }:
     let
+      
+      my-comfyui = pkgs.comfyuiPackages.comfyui.override {
+        extensions = [
+          pkgs.comfyuiPackages.extensions.acly-inpaint
+          pkgs.comfyuiPackages.extensions.acly-tooling
+          pkgs.comfyuiPackages.extensions.cubiq-ipadapter-plus
+          pkgs.comfyuiPackages.extensions.fannovel16-controlnet-aux
+        ];
+
+        commandLineArgs = [
+          "--preview-method"
+          "auto"
+        ];
+      };
+
+
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
