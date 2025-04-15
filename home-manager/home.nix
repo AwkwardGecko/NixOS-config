@@ -47,11 +47,6 @@
 
   home.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d"; # Add custon Proton versions to Steam
-    COMFYUI_CHECKPOINT_PATH =   "/mnt/luks/.assets/models/Stable-diffusion";
-    COMFYUI_LORA_PATH =         "/mnt/luks/.assets/models/Lora";
-    COMFYUI_VAE_PATH =          "/mnt/luks/.assets/models/VAE";
-    COMFYUI_CONTROLNET_PATH =   "/mnt/luks/.assets/models/ControlNet";
-
     #GTK_THEME = "Adwaita";
     #CUDA_HOME = "/nix/store/xxxxxx-cudatoolkit-12.8/lib64"
     #LD_LIBRARY_PATH = "/usr/lib/x86_64-linux-gnu";

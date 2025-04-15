@@ -82,7 +82,7 @@
   programs.coolercontrol.enable = true;
 
 
-  aagl.enableNixpkgsReleaseBranchCheck = false;
+  # aagl.enableNixpkgsReleaseBranchCheck = false;
 
   imports = [
     ./hardware-configuration.nix
@@ -223,7 +223,7 @@
     stdenv                      # Nix standard environment
     strawberry                  # Music player
     udev                        # Device manager for the Linux kernel
-    unigine-superposition       # GPU benchmarking tool
+    # unigine-superposition       # GPU benchmarking tool
     unzip
     upower                      # Power management daemon (dependency for Vivaldi maybe)
     uv                          # Fast Python package manager
