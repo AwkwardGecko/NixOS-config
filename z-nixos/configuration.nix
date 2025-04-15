@@ -73,6 +73,8 @@
     '';
   };
 
+
+  services.auditd.enable = true;
   security.doas.enable = true;
   programs.ssh.startAgent = true;
   programs.npm.enable = true;
@@ -124,7 +126,6 @@
 
     alsa-lib                    # ALSA sound library
     atk                         # Accessibility toolkit (GNOME dependencies)
-    auditd
     bazel                       # Google's build tool (used for TensorFlow etc.)
     #binutils_nogold             # Binutils without the gold linker
     bootiso                     # Create bootable USB drives from ISO
