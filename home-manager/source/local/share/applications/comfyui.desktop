@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=SillyTavern
-Exec=bash -c "~/.local/share/applications/sillytavern.sh"
+Name=ComfyUI
+Exec=bash -c "cd /home/zozano/comfyui && comfyui"
 Icon=jellyfin-media-player
 Terminal=false
 Type=Application
