@@ -73,8 +73,7 @@
     '';
   };
 
-
-  services.auditd.enable = true;
+  security.auditd.enable = true;
   security.doas.enable = true;
   programs.ssh.startAgent = true;
   programs.npm.enable = true;
