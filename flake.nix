@@ -66,6 +66,7 @@
           modules = [
             ./flake-modules/comfyui.nix
             ./z-nixos/configuration.nix
+            ./flake-modules/test/test.nix
             home-manager.nixosModules.home-manager
             nixvim.nixosModules.nixvim
             {
