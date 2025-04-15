@@ -236,8 +236,6 @@
 
         }
 
-
-
         #bluetooth {
             margin-top: 6px;
             margin-left: 8px;
