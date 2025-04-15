@@ -44,7 +44,7 @@
       "hyprctl setcursor Bibata-Modern-Classic 24"
       "sleep 10 && bash ~/.local/share/applications/mount-server.sh"
       "sleep 15 && bash ~/.local/share/applications/mount-music.sh"
-      "swayidle -w timeout 300 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' &"
+      "swayidle -w timeout 900 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' &"
     ];
 
     env = [
