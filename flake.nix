@@ -30,15 +30,6 @@
 
     let
      
-      myRuntimeDir = "/home/zozano/comfyui";
-
-        comfyWrapper = pkgs.writeShellScriptBin "comfyui" ''
-          export XDG_RUNTIME_DIR="${myRuntimeDir}"
-          mkdir -p "${myRuntimeDir}"
-          cd "${myRuntimeDir}"
-          exec ${my-comfyui}/bin/comfyui "$@"
-      '';
-
       my-comfyui = pkgs.comfyuiPackages.comfyui.override {
         extensions = [
           pkgs.comfyuiPackages.extensions.acly-inpaint
