@@ -27,7 +27,15 @@
 
   outputs = inputs@{ self, nixpkgs, home-manager, aagl, nixvim, nix-comfyui, ... }:
     let
-      
+     
+      myRunetimeDir = "/home/zozano/comfyui-runtime";
+
+        comfyWrapper = pkgs.writeShellScriptBin "comfyui" ''
+          mkdir -p "${myRuntimeDir}"
+          cd "${myRuntimeDir}"
+          exec ${my-comfyui}/bin/comfyui "$@"
+        '';
+
       my-comfyui = pkgs.comfyuiPackages.comfyui.override {
         extensions = [
           pkgs.comfyuiPackages.extensions.acly-inpaint
@@ -65,6 +73,7 @@
 
               environment.systemPackages = with pkgs; [
                 my-comfyui
+                comfyWrapper
                 comfyuiPackages.krita-with-extensions
               ];
 
