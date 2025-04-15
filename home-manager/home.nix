@@ -50,7 +50,7 @@
     COMFYUI_CHECKPOINT_PATH =   "/mnt/luks/.assets/models/Stable-diffusion";
     COMFYUI_LORA_PATH =         "/mnt/luks/.assets/models/Lora";
     COMFYUI_VAE_PATH =          "/mnt/luks/.assets/models/VAE";
-    COMFYUI_CONTROLNET_PATH =   "/mnt/luks/.assets/models/ControlNet"
+    COMFYUI_CONTROLNET_PATH =   "/mnt/luks/.assets/models/ControlNet";
 
     #GTK_THEME = "Adwaita";
     #CUDA_HOME = "/nix/store/xxxxxx-cudatoolkit-12.8/lib64"
