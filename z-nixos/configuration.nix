@@ -73,13 +73,10 @@
     '';
   };
 
-  security.audit = {
-    enable = true;
-    rules = [
+  security.auditd.enable = true;
+  security.audit.rules = [
       "-w /home/zozano/.dotfiles/SillyTavern2/ -p wa"
     ];
-  };
-
 
 security.doas.enable = true;
   programs.ssh.startAgent = true;
