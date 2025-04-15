@@ -36,7 +36,7 @@
           mkdir -p "${myRuntimeDir}"
           cd "${myRuntimeDir}"
           exec ${my-comfyui}/bin/comfyui "$@"
-        '';
+      '';
 
       my-comfyui = pkgs.comfyuiPackages.comfyui.override {
         extensions = [
