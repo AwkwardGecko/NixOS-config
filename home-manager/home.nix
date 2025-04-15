@@ -27,6 +27,7 @@
     ./modules/kitty.nix
     #./modules/terminal.nix
     ./modules/mako.nix
+    ./modules/nix-direnv.nix  # for making python scripts work in nix
     # ./modules/mangohud.nix
     #./modules/neovim/neovim.nix
     # ./modules/OpenRGB.nix
@@ -46,7 +47,8 @@
 
   home.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d"; # Add custon Proton versions to Steam
-    GTK_THEME = "Adwaita";
+    #GTK_THEME = "Adwaita";
+    #CUDA_HOME = "/nix/store/xxxxxx-cudatoolkit-12.8/lib64"
     #LD_LIBRARY_PATH = "/usr/lib/x86_64-linux-gnu";
     #LC_ALL = "en_AU.UTF-8";
     #NIXOS_OZONE_WL = "1"; # Wayland Electron support
