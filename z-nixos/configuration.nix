@@ -75,11 +75,9 @@
 
   security.auditd = {
     enable = true;
-    rules = [
-      "-w /home/zozano/.dotfiles/SillyTavern2 -p wq"
-    ];
   };
-  security.doas.enable = true;
+
+security.doas.enable = true;
   programs.ssh.startAgent = true;
   programs.npm.enable = true;
 
