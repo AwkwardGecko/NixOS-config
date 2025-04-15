@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=ComfyUI
-Exec=bash "cd /home/zozano/comfyui && comfyui & sleep 5 && firefox -P Diffusion http://127.0.0.1:8188"
+Exec=bash -c "cd /home/zozano/comfyui && comfyui & sleep 5 && firefox -P Diffusion http://127.0.0.1:8188"
 Icon=jellyfin-media-player
 Terminal=true
 Type=Application
