@@ -25,53 +25,43 @@
     };
   };
 
-  outputs = inputs@{
-    self,
-    nixpkgs,
-    home-manager,
-    aagl,
-    nixvim,
-    nix-comfyui,
-    ...
-  }: let
-    system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
-    };
-  in {
-    nixosConfigurations = {
-      z-nixos = nixpkgs.lib.nixosSystem {
-        system = system;
-        modules = [
-          ./z-nixos/configuration.nix
-          home-manager.nixosModules.home-manager
-          nixvim.nixosModules.nixvim
-          {
-            imports = [ 
-              aagl.nixosModules.default
-              "${inputs.nix-comfyui}/modules/comfyui.nix"
-            ];
-            
-            nix.settings = aagl.nixConfig;
-            programs.honkers-railway-launcher.enable = true;
+  outputs = inputs@{ self, nixpkgs, home-manager, aagl, nixvim, nix-comfyui, ... }:
+    let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+        overlays = [ nix-comfyui.overlays.default ];
+      };
+    in {
+      nixosConfigurations = {
+        z-nixos = nixpkgs.lib.nixosSystem {
+          system = system;
+          modules = [
+            ./z-nixos/configuration.nix
+            home-manager.nixosModules.home-manager
+            nixvim.nixosModules.nixvim
+            {
+              imports = [ aagl.nixosModules.default ];
 
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.zozano = import ./home-manager/home.nix;
-          }
-        ];
-        specialArgs = {
-          inherit inputs;
+              nix.settings = aagl.nixConfig;
+              programs.honkers-railway-launcher.enable = true;
+
+              environment.systemPackages = with pkgs; [
+                comfyui
+              ];
+
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.zozano = import ./home-manager/home.nix;
+            }
+          ];
+
+          specialArgs = {
+            inherit inputs;
+          };
         };
       };
     };
-
-    # Expose comfyui as a runnable app with `nix run`
-    apps.${system}.default = nix-comfyui.apps.${system}.default;
-
-    # If you want to pull in packages (e.g. to include in your system)
-    packages.${system}.comfyui = nix-comfyui.packages.${system}.default;
-  };
 }
 
