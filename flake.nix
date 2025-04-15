@@ -31,7 +31,7 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
-        overlays = [ nix-comfyui.overlays.default ];
+        overlays = [ inputs.nix-comfyui.overlays.default ];
       };
     in {
       nixosConfigurations = {
@@ -49,6 +49,7 @@
 
               environment.systemPackages = with pkgs; [
                 comfyui
+                comfyuiPackages.krita-with-extensions
               ];
 
               home-manager.useGlobalPkgs = true;
