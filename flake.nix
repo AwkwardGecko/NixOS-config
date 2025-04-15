@@ -71,7 +71,6 @@
 
               environment.systemPackages = with pkgs; [
                 my-comfyui
-                comfyWrapper
                 comfyuiPackages.krita-with-extensions
               ];
 
