@@ -64,7 +64,7 @@
         z-nixos = nixpkgs.lib.nixosSystem {
           system = system;
           modules = [
-            ./flake-modules/comfy.nix
+            ./flake-modules/comfyui.nix
             ./z-nixos/configuration.nix
             home-manager.nixosModules.home-manager
             nixvim.nixosModules.nixvim
