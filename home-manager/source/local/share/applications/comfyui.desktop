@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=ComfyUI
-Exec=kitty bash -c "cd /home/zozano/comfyui && comfyui --lowvram --precision full --cuda-device 0 & sleep 5 && firefox -P Diffusion http://127.0.0.1:8188"
+Exec=kitty bash -c "cd /home/zozano/comfyui && comfyui --lowvram --precision fp32 --cuda-device 0 & sleep 5 && firefox -P Diffusion http://127.0.0.1:8188"
 Icon=jellyfin-media-player
 Terminal=false
 Type=Application
