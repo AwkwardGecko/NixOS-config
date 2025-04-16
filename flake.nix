@@ -50,7 +50,10 @@
           "--disable-smart-memory"
           "--reserve-vram" "1.5"
           "--fp16-vae"
+          "--fp16-unet"
+          "--fp16-text-enc"
           "--cuda-device" "0"
+          "--use-pytorch-cross-attention"
         ];
       };
       
