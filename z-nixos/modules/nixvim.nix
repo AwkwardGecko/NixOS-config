@@ -24,7 +24,18 @@
       expandtab = true;                    # Use spaces instead of tabs
       smartindent = true;                  # Enable smart indentation
       autoindent = true;                   # Enable automatic indentation
+      sessionoptions = "buffers,curdir,folds,help,tabpages,winsize";  # Save session options
     };
+
+    vimrc = ''
+      " Automatically save the session when Neovim exits
+      autocmd VimLeavePre * silent! mksession! ~/.vim/sessions/default.vim
+
+      " Automatically load the session when Neovim starts
+      if filereadable(expand('~/.vim/sessions/default.vim'))
+        source ~/.vim/sessions/default.vim
+      endif
+    '';
 
     keymaps = [
       {
