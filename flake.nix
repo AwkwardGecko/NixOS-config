@@ -26,7 +26,8 @@
 
     nix-comfyui = {
       url = "github:dyscorv/nix-comfyui";
-      inputs.nixpkgs.follows = "nixpkgs";
+      flake = false;
+      #inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -59,6 +60,19 @@
         inherit system;
         config.allowUnfree = true;
         overlays = [ inputs.nix-comfyui.overlays.default ];
+        (self: super: {
+          comfyuiPackages = super.comfyuiPackages // {
+            comfyui = super.comfyuiPackages.comfyui.override {
+              # Define the custom node directory
+              extraBuildInputs = [ comfyui-manager ];
+              # Optional: Specify where to add the ComfyUI manager within the ComfyUI custom_nodes path
+              installPhase = ''
+                mkdir -p $out/.local/share/comfyui/custom_nodes
+                cp -r ${comfyui-manager}/. $out/.local/share/comfyui/custom_nodes/
+              '';
+            };
+          };
+        })
       };
     in {
       nixosConfigurations = {

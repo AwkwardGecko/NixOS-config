@@ -21,6 +21,22 @@
         "type": "github"
       }
     },
+    "comfyui-manager": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1744728014,
+        "narHash": "sha256-BjqLFHbWaHACdwpLDgUTkcW8mm+zPdiw5m2Pc0gH4PE=",
+        "owner": "ltdrdata",
+        "repo": "ComfyUI-Manager",
+        "rev": "3214ab52c6e6213e5c9301e3830e11b8986f83bb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ltdrdata",
+        "repo": "ComfyUI-Manager",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -100,11 +116,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1744663884,
-        "narHash": "sha256-a6QGaZMDM1miK8VWzAITsEPOdmLk+xTPyJSTjVs3WhI=",
+        "lastModified": 1744735751,
+        "narHash": "sha256-OPpfgL3qUIbQdbmp1/ZwnlsuTLooHN4or0EABnZTFRY=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "d5cdf55bd9f19a3debd55b6cb5d38f7831426265",
+        "rev": "db7738e67a101ad945abbcb447e1310147afaf1b",
         "type": "github"
       },
       "original": {
@@ -211,11 +227,11 @@
         "nuschtosSearch": "nuschtosSearch"
       },
       "locked": {
-        "lastModified": 1744669903,
-        "narHash": "sha256-gtfLmGx/N+BzIck9sGLIfzETxocYjVKo4gmSeH6zfaY=",
+        "lastModified": 1744753228,
+        "narHash": "sha256-Re8g2pby4sr4hgzJmQJxeH/9PtgX85nivkWibapRI5s=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "ee9655637cbf898415e09c399bc504180e246d42",
+        "rev": "d4dada282aeac94b5d53dd70e276a2f5f534f783",
         "type": "github"
       },
       "original": {
@@ -281,6 +297,7 @@
     "root": {
       "inputs": {
         "aagl": "aagl",
+        "comfyui-manager": "comfyui-manager",
         "home-manager": "home-manager",
         "nix-comfyui": "nix-comfyui",
         "nixpkgs": "nixpkgs",
