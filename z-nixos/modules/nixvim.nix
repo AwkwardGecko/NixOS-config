@@ -38,16 +38,6 @@
         };
       }
     ];
-
-    extraConfigLua = ''
-      " Automatically save the session when Neovim exits
-      autocmd VimLeavePre * silent! mksession! ~/.vim/sessions/default.vim
-
-      " Automatically load the session when Neovim starts
-      if filereadable(expand('~/.vim/sessions/default.vim'))
-        source ~/.vim/sessions/default.vim
-      endif
-    '';
   };
 }
 
