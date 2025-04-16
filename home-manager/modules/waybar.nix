@@ -23,7 +23,8 @@
 
         modules-left = [
           #"mpris"
-          "custom/xmr-sync"
+          #"custom/xmr-sync"
+          "notifications"
           #"hyprland/window"
         ];
 
@@ -43,6 +44,12 @@
           "bluetooth"
           "custom/power"
         ];
+
+        "notifications" = {
+          format = "{message}";
+          max-length = 200;
+          icon-size = 32;
+        };
 
         "hyprland/window" = {
           format = "{initialTitle}";

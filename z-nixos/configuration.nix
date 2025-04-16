@@ -175,6 +175,7 @@
     libdrm                      # Direct Rendering Manager (graphics stuff)
     libglvnd                    # OpenGL Vendor-Neutral Dispatch library (Stable Diffusion dependency)
     libheif                    # HEIF image support
+    libnotify
     libpcap                     # Packet capture library (used in Fribbels Honkai Star Rail Optimizer)
     libsecret                   # Secret storage (GNOME keyring)
     libxkbcommon                # Keyboard layout handling (Wayland/X)
