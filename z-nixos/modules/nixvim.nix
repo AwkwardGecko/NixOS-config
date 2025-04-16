@@ -14,19 +14,10 @@
       gitsigns.enable = true;              # Git integration in the editor
       comment.enable = true;               # Easy commenting of code
       nvim-autopairs.enable = true;             # Automatic pairing of parentheses and brackets
-      #indent-blankline.enable = true;      # Visual indentation guides
-      lightline.enable = true;
+      indent-blankline.enable = true;      # Visual indentation guides
+      #lightline.enable = true;
       fugitive.enable = true;              # Git commands inside Neovim
 
-      lsp = {
-        enable = true;
-        servers = {
-          tsserver.enable = true;
-          lua-ls.enable = true;
-          rust-analyzer.enable = true;
-        };
-      };
-    };
 
     opts = {
       number = true;                       # Show absolute line numbers
