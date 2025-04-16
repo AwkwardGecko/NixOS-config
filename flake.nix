@@ -56,7 +56,12 @@
           "0"
         ];
       };
-
+      
+      postInstall = ''
+        mkdir -p $out/home/zozano/comfyui/custom_nodes
+        cp -r ${comfyui-manager}/* $out/home/zozano/comfyui/custom_nodes/
+      '';
+      
 
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -64,17 +69,17 @@
         config.allowUnfree = true;
         overlays = [
           inputs.nix-comfyui.overlays.default
-          (self: super: {
-            comfyuiPackages = super.comfyuiPackages // {
-              comfyui = super.comfyuiPackages.comfyui.overrideAttrs (old: {
-                installPhase = ''
-                  ${old.installPhase or ""}
-                  mkdir -p $out/home/zozano/comfyui/custom_nodes
-                  cp -r ${comfyui-manager}/* $out/home/zozano/comfyui/custom_nodes/
-                '';
-              });
-            };
-          })
+          # (self: super: {
+          #   comfyuiPackages = super.comfyuiPackages // {
+          #     comfyui = super.comfyuiPackages.comfyui.overrideAttrs (old: {
+          #       installPhase = ''
+          #         ${old.installPhase or ""}
+          #         mkdir -p $out/home/zozano/comfyui/custom_nodes
+          #         cp -r ${comfyui-manager}/* $out/home/zozano/comfyui/custom_nodes/
+          #       '';
+          #     });
+          #   };
+          # })
         ];
       };
     
@@ -113,5 +118,4 @@
         };
       };
     };
-}
-
+  }
