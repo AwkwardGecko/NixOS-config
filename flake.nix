@@ -42,7 +42,6 @@
   };
 
   outputs = inputs@{ self, nixpkgs, flake-utils, rust-overlay, home-manager, aagl, nixvim, nix-comfyui, comfyui-manager, ... }:
-    flake-utils.lib.eachDefaultSystem (System:
 
     let
     
@@ -143,5 +142,5 @@
           };
         };
       };
-    });
+    };
   }
