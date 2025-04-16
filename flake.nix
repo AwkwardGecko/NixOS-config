@@ -26,8 +26,8 @@
 
     nix-comfyui = {
       url = "github:dyscorv/nix-comfyui";
-      flake = false;
-      #inputs.nixpkgs.follows = "nixpkgs";
+      #flake = false;
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -52,7 +52,7 @@
           "--reserve-vram"
           "1.5"
           "--fp32-vae"
-          "--cude-device"
+          "--cuda-device"
           "0"
         ];
       };
