@@ -17,7 +17,7 @@
       indent-blankline.enable = true;      # Visual indentation guides
       #lightline.enable = true;
       fugitive.enable = true;              # Git commands inside Neovim
-
+    };
 
     opts = {
       number = true;                       # Show absolute line numbers
@@ -29,6 +29,5 @@
       autoindent = true;                   # Enable automatic indentation
     };
   };
-};
 }
 
