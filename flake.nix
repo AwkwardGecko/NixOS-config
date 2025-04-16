@@ -64,8 +64,8 @@
                 extraBuildInputs = [ comfyui-manager ];
                 # Optional: Specify where to add the ComfyUI manager within the ComfyUI custom_nodes path
                 installPhase = ''
-                  mkdir -p $out/.local/share/comfyui/custom_nodes
-                  cp -r ${comfyui-manager}/. $out/.local/share/comfyui/custom_nodes/
+                  mkdir -p $out/home/zozano/comfyui/custom_nodes
+                  cp -r ${comfyui-manager}/. $out/home/zozano/comfyui/custom_nodes/
                 '';
               };
             };
