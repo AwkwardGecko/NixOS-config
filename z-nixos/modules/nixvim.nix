@@ -29,5 +29,6 @@
       autoindent = true;                   # Enable automatic indentation
     };
   };
+};
 }
 
