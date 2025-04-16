@@ -42,11 +42,6 @@
     };
   };
 
-  systemd.extraConfig = ''
-    DefaultTimeoutStartSec=0
-    DefaultTimeoutStopSec=0
-  '';
-
   swapDevices = [ { label = "swap"; } ];
   #services.custom-ssh-agent.enable = true;
 
@@ -78,12 +73,7 @@
     '';
   };
 
-  security.auditd.enable = true;
-  security.audit.rules = [
-      "-w /home/zozano/.dotfiles/SillyTavern2/ -p wa"
-    ];
-
-security.doas.enable = true;
+  security.doas.enable = true;
   programs.ssh.startAgent = true;
   programs.npm.enable = true;
 
@@ -185,7 +175,6 @@ security.doas.enable = true;
     libdrm                      # Direct Rendering Manager (graphics stuff)
     libglvnd                    # OpenGL Vendor-Neutral Dispatch library (Stable Diffusion dependency)
     libheif                    # HEIF image support
-    libheif.out                # Possibly accidental duplicate; same purpose
     libpcap                     # Packet capture library (used in Fribbels Honkai Star Rail Optimizer)
     libsecret                   # Secret storage (GNOME keyring)
     libxkbcommon                # Keyboard layout handling (Wayland/X)
@@ -198,7 +187,7 @@ security.doas.enable = true;
     nettools                    # Old-school network tools (ifconfig, etc.)
     nixd                        # Nix language server (LSP)
     nixfmt-rfc-style            # Nix formatter
-    nodePackages.nodejs         # Node.js runtime
+    nodejs                      # Node.js runtime
     nspr                        # Netscape Portable Runtime (used by Firefox, etc.)
     nss                         # Network Security Services
     nvtopPackages.nvidia        # GPU usage monitor for NVIDIA
