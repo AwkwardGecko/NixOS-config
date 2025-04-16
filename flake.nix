@@ -45,15 +45,12 @@
         ];
 
         commandLineArgs = [
-          "--preview-method"
-          "auto"
+          "--preview-method" "auto"
           "--lowvram"
           "--disable-smart-memory"
-          "--reserve-vram"
-          "1.5"
-          "--fp32-vae"
-          "--cuda-device"
-          "0"
+          "--reserve-vram" "1.5"
+          "--fp16-vae"
+          "--cuda-device" "0"
         ];
       };
       
