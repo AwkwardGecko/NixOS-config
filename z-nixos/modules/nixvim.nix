@@ -27,7 +27,7 @@
       sessionoptions = "buffers,curdir,folds,help,tabpages,winsize";  # Save session options
     };
 
-    extraConfig = ''
+    extraConfigLua = ''
       " Automatically save the session when Neovim exits
       autocmd VimLeavePre * silent! mksession! ~/.vim/sessions/default.vim
 
