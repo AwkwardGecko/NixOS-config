@@ -9,10 +9,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    flake-utils = {
-      url = "github:numtide/flake-utils";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # flake-utils = {
+    #   url = "github:numtide/flake-utils";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     comfyui-manager = {
       url = "github:ltdrdata/ComfyUI-Manager";
@@ -36,17 +36,14 @@
 
     nix-comfyui = {
       url = "github:dyscorv/nix-comfyui";
-      #flake = false;
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, flake-utils, rust-overlay, home-manager, aagl, nixvim, nix-comfyui, comfyui-manager, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, aagl, nixvim, nix-comfyui, comfyui-manager, ... }:
 
     let
     
-      rust = pkgs.rust-bin.stable.latest.default;
-
       my-comfyui = pkgs.comfyuiPackages.comfyui.override {
         extensions = [
           pkgs.comfyuiPackages.extensions.acly-inpaint
@@ -79,36 +76,12 @@
         inherit system;
         config.allowUnfree = true;
         overlays = [
-          inputs.rust-overlay.overlays.default
           inputs.nix-comfyui.overlays.default
-          # (self: super: {
-          #   comfyuiPackages = super.comfyuiPackages // {
-          #     comfyui = super.comfyuiPackages.comfyui.overrideAttrs (old: {
-          #       installPhase = ''
-          #         ${old.installPhase or ""}
-          #         mkdir -p $out/home/zozano/comfyui/custom_nodes
-          #         cp -r ${comfyui-manager}/* $out/home/zozano/comfyui/custom_nodes/
-          #       '';
-          #     });
-          #   };
-          # })
         ];
       };
     
     in {
       
-      devShells.default = pkgs.mkShell {
-        buildInputs = [
-          rust
-          pkgs.pkg-config
-          pkgs.openssl
-          pkgs.cmake
-          pkgs.libclang
-          pkgs.clang
-        ];
-      };
-
-
       nixosConfigurations = {
         z-nixos = nixpkgs.lib.nixosSystem {
           system = system;
