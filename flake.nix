@@ -59,7 +59,7 @@
       
       postInstall = ''
         mkdir -p $out/home/zozano/comfyui/custom_nodes
-        cp -r ${comfyui-manager}/* $out/home/zozano/comfyui/custom_nodes/
+        cp -r ${comfyui-manager} $out/home/zozano/comfyui/custom_nodes/ComfyUI-Manager
       '';
       
 
