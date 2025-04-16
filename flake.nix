@@ -65,15 +65,15 @@
         overlays = [
           inputs.nix-comfyui.overlays.default
           (self: super: {
-            comfyuiPackages = super.comfyuiPackages // {
+            comfyuiPackages = super.comfyuiPackages.comfyui.overrideAttrs (old: {
               comfyui = super.comfyuiPackages.comfyui.override {
                 installPhase = ''
                   mkdir -p $out/home/zozano/comfyui/custom_nodes
-                  cp -r /home/zozano/comfyui-manager/* $out/home/zozano/comfyui/custom_nodes/
+                  cp -r ${comfyui-manager}* $out/home/zozano/comfyui/custom_nodes/
                 '';
               };
             };
-          })
+          }))
         ];
       };
     
