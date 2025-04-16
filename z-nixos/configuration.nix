@@ -224,7 +224,7 @@ security.doas.enable = true;
     python312Packages.libpcap   # Python bindings for libpcap (next-gen testing?)
     qbittorrent                 # BitTorrent client
     rclone                      # Sync with cloud storage
-    #rustc                       # Rust compiler
+    rustc                       # Rust compiler
     rustup                      # Rust toolchain manager (used by reliquary-archiver)
     rustup-toolchain-install-master # Install Rust toolchains from master
     signal-desktop-bin          # Encrypted messaging desktop app
