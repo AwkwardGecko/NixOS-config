@@ -45,7 +45,7 @@
   systemd.extraConfig = ''
     DefaultTimeoutStartSec=0
     DefaultTimeoutStopSec=0
-  ''
+  '';
 
   swapDevices = [ { label = "swap"; } ];
   #services.custom-ssh-agent.enable = true;
