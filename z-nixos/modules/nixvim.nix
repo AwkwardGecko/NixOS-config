@@ -18,11 +18,11 @@
       lightline.enable = true;
       fugitive.enable = true;              # Git commands inside Neovim
 
-      cmp = {
+      nvim-cmp = {
         enable = true;
         autoEnableSources = true;
         sources = [
-          {name = "lsp";}
+          {name = "nvim-lsp";}
           {name = "path";}
           {name = "buffer";}
         ];
