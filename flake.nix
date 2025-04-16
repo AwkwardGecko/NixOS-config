@@ -72,7 +72,7 @@
                   cp -r ${comfyui-manager}* $out/home/zozano/comfyui/custom_nodes/
                 '';
               };
-            })
+            });
           })
         ];
       };
