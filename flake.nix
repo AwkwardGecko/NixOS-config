@@ -47,6 +47,13 @@
         commandLineArgs = [
           "--preview-method"
           "auto"
+          "--lowvram"
+          "--disable-smart-memory"
+          "--reserve-vram"
+          "1.5"
+          "--fp32-vae"
+          "--cude-device"
+          "0"
         ];
       };
 
@@ -60,9 +67,6 @@
           (self: super: {
             comfyuiPackages = super.comfyuiPackages // {
               comfyui = super.comfyuiPackages.comfyui.override {
-                # Define the custom node directory
-                extraBuildInputs = [ comfyui-manager ];
-                # Optional: Specify where to add the ComfyUI manager within the ComfyUI custom_nodes path
                 installPhase = ''
                   mkdir -p $out/home/zozano/comfyui/custom_nodes
                   cp -r /home/zozano/comfyui-manager/* $out/home/zozano/comfyui/custom_nodes/
