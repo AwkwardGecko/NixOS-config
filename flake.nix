@@ -44,10 +44,6 @@
           pkgs.comfyuiPackages.extensions.fannovel16-controlnet-aux
         ];
 
-        extraCustomNodes = [
-          comfyui-manager
-        ];
-
         commandLineArgs = [
           "--preview-method"
           "auto"
