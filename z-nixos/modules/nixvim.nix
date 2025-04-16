@@ -19,7 +19,7 @@
       fugitive.enable = true;              # Git commands inside Neovim
 
       cmp = {
-        enable.true;
+        enable = true;
         autoEnableSources = true;
         sources = [
           {name = "nvim_lsp";}
