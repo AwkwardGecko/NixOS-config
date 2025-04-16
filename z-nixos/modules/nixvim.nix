@@ -27,6 +27,18 @@
       sessionoptions = "buffers,curdir,folds,help,tabpages,winsize";  # Save session options
     };
 
+    keymaps = [
+      {
+        mode = "v";
+        key = "<C-S-s>";
+        action = "+y";
+        options = {
+          silent = true;
+          noremap = true;
+        };
+      }
+    ];
+
     extraConfigLua = ''
       " Automatically save the session when Neovim exits
       autocmd VimLeavePre * silent! mksession! ~/.vim/sessions/default.vim
@@ -35,10 +47,6 @@
       if filereadable(expand('~/.vim/sessions/default.vim'))
         source ~/.vim/sessions/default.vim
       endif
-      
-      " Key mappings
-        nnoremap <C-S-c> "+y   " Ctrl+Shift+C to copy to clipboard
-        nnoremap <C-S-v> "+p   " Ctrl+Shift+V to paste from clipboard
     '';
   };
 }
