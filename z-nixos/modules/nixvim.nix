@@ -3,6 +3,8 @@
     enable = true;
     colorschemes.gruvbox.enable = true;  # Gruvbox colorscheme
 
+
+
     plugins = {
       lualine.enable = true;               # Statusline plugin
       treesitter.enable = true;            # Advanced syntax highlighting
@@ -12,32 +14,39 @@
       gitsigns.enable = true;              # Git integration in the editor
       comment.enable = true;               # Easy commenting of code
       nvim-autopairs.enable = true;             # Automatic pairing of parentheses and brackets
-      indent-blankline.enable = true;      # Visual indentation guides
+      #indent-blankline.enable = true;      # Visual indentation guides
+      lightline.enable = true;
       fugitive.enable = true;              # Git commands inside Neovim
+
+      cmp = {
+        enable.true;
+        autoEnableSources = true;
+        sources = [
+          {name = "nvim_lsp";}
+          {name = "path";}
+          {name = "buffer";}
+        ];
+      };
+
+      lsp = {
+        enable = true;
+        servers = {
+          tsserver.enable = true;
+          lua-ls.enable = true;
+          rust-analyzer.enable = true;
+        };
+      };
     };
 
     opts = {
       number = true;                       # Show absolute line numbers
-      relativenumber = true;               # Show relative line numbers
+      #relativenumber = true;               # Show relative line numbers
       shiftwidth = 2;                      # Set indentation width to 2 spaces
       tabstop = 2;                         # Set tab width to 2 spaces
       expandtab = true;                    # Use spaces instead of tabs
       smartindent = true;                  # Enable smart indentation
       autoindent = true;                   # Enable automatic indentation
-      sessionoptions = "buffers,curdir,folds,help,tabpages,winsize";  # Save session options
     };
-
-    keymaps = [
-      {
-        mode = "v";
-        key = "<C-S-s>";
-        action = "+y";
-        options = {
-          silent = true;
-          noremap = true;
-        };
-      }
-    ];
   };
 }
 
