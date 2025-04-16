@@ -9,6 +9,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    comfyui-manager = {
+      url = "github:ltdrdata/ComfyUI-Manager";
+      flake = false;
+    };
+
     aagl = {
       url = "github:ezKEa/aagl-gtk-on-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,7 +30,7 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, aagl, nixvim, nix-comfyui, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, aagl, nixvim, nix-comfyui, comfyui-manager, ... }:
     
 
     let
@@ -36,6 +41,10 @@
           pkgs.comfyuiPackages.extensions.acly-tooling
           pkgs.comfyuiPackages.extensions.cubiq-ipadapter-plus
           pkgs.comfyuiPackages.extensions.fannovel16-controlnet-aux
+        ];
+
+        extraCustomNodes = [
+          comfyui-manager
         ];
 
         commandLineArgs = [
