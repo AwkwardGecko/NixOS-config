@@ -43,8 +43,9 @@
   };
 
   systemd.extraConfig = ''
-    CoredumpFilter=0x0
-  ''; #popups can fuck right off
+    DefaultTimeoutStartSec=0
+    DefaultTimeoutStopSec=0
+  ''
 
   swapDevices = [ { label = "swap"; } ];
   #services.custom-ssh-agent.enable = true;
