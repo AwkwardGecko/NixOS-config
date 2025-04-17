@@ -26,7 +26,7 @@
     ./modules/hypr.nix
     ./modules/kitty.nix
     #./modules/terminal.nix
-    #./modules/mako.nix
+    ./modules/mako.nix
     # ./modules/mangohud.nix
     #./modules/neovim/neovim.nix
     # ./modules/OpenRGB.nix
@@ -59,7 +59,6 @@
     ".local/share/applications".source = source/local/share/applications;
     ".config/hypr/hypridle.conf".source = source/config/hypr/hypridle.conf;
     ".local/share/vlc/lua/extensions".source = source/local/share/vlc/lua/extensions;
-    #".config/xmrig.json".source = source/config/xmrig/xmrig.json;
   
  ".nv/nvidia-application-profiles-rc".text = ''
 {

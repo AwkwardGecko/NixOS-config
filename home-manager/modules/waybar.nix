@@ -24,7 +24,7 @@
         modules-left = [
           #"mpris"
           #"custom/xmr-sync"
-          "notifications"
+          #"notifications"
           #"hyprland/window"
         ];
 
@@ -45,11 +45,11 @@
           "custom/power"
         ];
 
-        "notifications" = {
-          format = "{message}";
-          max-length = 200;
-          icon-size = 32;
-        };
+        # "notifications" = {
+        #   format = "{message}";
+        #   max-length = 200;
+        #   icon-size = 32;
+        # };
 
         "hyprland/window" = {
           format = "{initialTitle}";
@@ -142,12 +142,6 @@
             ""
             ""
           ];
-        };
-
-        "custom/xmr-sync" = {
-          exec = "/home/zozano/.dotfiles/scripts/monerod_status.sh";
-          interval = 30;
-          format = "{}";
         };
 
         bluetooth = {
