@@ -17,6 +17,7 @@
 
   home.packages = with pkgs; [
     hyprsunset
+    hypridle
     swayidle
   ];
 
@@ -44,13 +45,8 @@
       "hyprctl setcursor Bibata-Modern-Classic 24"
       "sleep 10 && bash ~/.local/share/applications/mount-server.sh"
       "sleep 15 && bash ~/.local/share/applications/mount-music.sh"
+      "hypridle &"
     ];
-
-    idle = {
-      timeout = 900;
-      on-timeout = "hyprctl dispatch dpms off";
-      on-resume = "hyprctl dispatch dpms on";
-    };
 
     env = [
       "LIBVA_DRIVER_NAME,nvidia"
@@ -72,6 +68,14 @@
       resize_on_border = false;
       allow_tearing = false;
       layout = "dwindle";
+      before_sleep_cmd = "hyprctl dispatch dpms off";
+      after_resume_cmd = "hyprctl dispatch dpms on";
+    };
+
+    listener = {
+    timeout = 900
+    on-timeout = "hyprctl dispatch dpms off"
+    on-resume = "hyprctl dispatch dpms on"
     };
 
     decoration = {
