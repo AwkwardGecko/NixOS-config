@@ -4,11 +4,12 @@
   systemd.user.services.xmrig = {
     Unit = {
       Description = "xmrig miner (user service)";
-      After = [ "network.target" ];
+      After = [ "default.target" ];
     };
     Install.WantedBy = [ "default.target" ];
     Service = {
-      ExecStart = "${pkgs.xmrig}/bin/xmrig --config /home/zozano/.config/xmrig/config.json";
+      Environment = "XMRIG_CONFIG=%h/.config/xmrig/config.json";
+      ExecStart = "${pkgs.xmrig}/bin/xmrig --config %h/.config/xmrig/config.json";
       Restart = "always";
       RestartSec = 5;
       Nice = 19;
