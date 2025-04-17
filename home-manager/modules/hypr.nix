@@ -44,8 +44,13 @@
       "hyprctl setcursor Bibata-Modern-Classic 24"
       "sleep 10 && bash ~/.local/share/applications/mount-server.sh"
       "sleep 15 && bash ~/.local/share/applications/mount-music.sh"
-      "swayidle -w timeout 900 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' &"
     ];
+
+    idle = {
+      timeout = 900;
+      on-timeout = "hyprctl dispatch dpms off";
+      on-resume = "hyprctl dispatch dpms on";
+    };
 
     env = [
       "LIBVA_DRIVER_NAME,nvidia"
