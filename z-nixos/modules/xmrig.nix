@@ -14,10 +14,10 @@
       donate-level = 0;
       
       # CPU settings
-      cpu-priority = -2;
-      cpu-usage = 50;
+      cpu-priority = 5;
+      cpu-usage = 20;
       # cpu-usage = null;
-      threads = 6;
+      threads = 2;
       # threads = null;
 
       # RandomX optimizations
