@@ -26,7 +26,7 @@
   ];
 
   boot.kernel.sysctl = {
-    "vm.swapiness" = 50; 
+    "vm.swapiness" = 80; 
   };
 
   # Automatic cleanup
