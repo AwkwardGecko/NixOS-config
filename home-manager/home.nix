@@ -59,7 +59,7 @@
     ".local/share/applications".source = source/local/share/applications;
     ".config/hypr/hypridle.conf".source = source/config/hypr/hypridle.conf;
     ".local/share/vlc/lua/extensions".source = source/local/share/vlc/lua/extensions;
-    ".config/xmrig.json".source = source/config/xmrig.json;
+    ".config/xmrig.json".source = source/config/xmrig/xmrig.json;
   
  ".nv/nvidia-application-profiles-rc".text = ''
 {
