@@ -25,7 +25,7 @@
     cuda = false;
     "donate-level" = 0;
     "cpu-priority" = 5;
-    "cpu-usage" = 60;
+    "cpu-usage" = 95;
     threads = 12;
     randomx = {
       "large-pages" = true;
