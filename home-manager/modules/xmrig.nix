@@ -8,7 +8,8 @@
     };
     Install.WantedBy = [ "default.target" ];
     Service = {
-      ExecStart = "${pkgs.xmrig}/bin/xmrig";
+      WorkingDirectory = "%h";
+      ExecStart = "${pkgs.xmrig}/bin/xmrig --config $HOME/.config/xmrig/config.json";
       Restart = "always";
       Nice = 19;
       CPUWeight = 1;
