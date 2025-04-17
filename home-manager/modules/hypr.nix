@@ -18,7 +18,7 @@
   home.packages = with pkgs; [
     hyprsunset
     hypridle
-    swayidle
+    ypidof
   ];
 
   wayland.windowManager.hyprland.settings = {
@@ -43,8 +43,8 @@
       "sleep 3 && signal-desktop"
       "sleep 1 && steam -silent %U"
       "hyprctl setcursor Bibata-Modern-Classic 24"
-      "sleep 10 && bash ~/.local/share/applications/mount-server.sh"
-      "sleep 15 && bash ~/.local/share/applications/mount-music.sh"
+      #"sleep 10 && bash ~/.local/share/applications/mount-server.sh"
+      #"sleep 15 && bash ~/.local/share/applications/mount-music.sh"
       "hypridle &"
     ];
 
@@ -52,7 +52,7 @@
       "LIBVA_DRIVER_NAME,nvidia"
       "__GLX_VENDOR_LIBRARY_NAME,nvidia"
       "NIXOS_OZONE_WL,1"
-      "WINE_FULLSCREEN_FOCUS_MODE=1"
+      #"WINE_FULLSCREEN_FOCUS_MODE=1"
     ];
 
     #####################
