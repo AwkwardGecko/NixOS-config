@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=ComfyUI
-Exec=kitty bash -c "sudo cryptsetup open /dev/disk/by-uuid/c5e87ce4-523f-46b9-8735-c6e7545a6d56 luks && sudo mount /dev/mapper/luks /mnt/luks && cd /home/zozano/comfyui && comfyui & sleep 5 && firefox -P Diffusion http://127.0.0.1:8188"
+Exec=kitty bash -c "sudo cryptsetup open ~/.local/share/applications/start.sh && cd /home/zozano/comfyui && comfyui & sleep 5 && firefox -P Diffusion http://127.0.0.1:8188"
 Icon=jellyfin-media-player
 Terminal=false
 Type=Application
