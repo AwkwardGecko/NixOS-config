@@ -54,8 +54,9 @@
 
         commandLineArgs = [
           "--preview-method" "auto"
-          "--lowvram"
-          "--disable-smart-memory"
+          #"--lowvram"
+          "--medvram"
+          #"--disable-smart-memory"
           "--reserve-vram" "1.5"
           "--fp16-vae"
           "--fp16-unet"
