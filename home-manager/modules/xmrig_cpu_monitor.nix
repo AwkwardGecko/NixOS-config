@@ -6,13 +6,16 @@
       {
         timeout = 300;
         command = "systemctl --user start xmrig";
+        resumeCommand = "systemctl --user stop xmrig";
       }
     ];
-    resumeCommand = "systemctl --user stop xmrig";
   };
 
   systemd.user.services.xmrig = {
-    Unit.Description = "xmrig miner (user service)";
+    Unit = {
+      Description = "xmrig miner (user service)";
+      After = [ "network.target" ];
+    };
     Install.WantedBy = [ "default.target" ];
     Service = {
       ExecStart = "${pkgs.xmrig}/bin/xmrig";
