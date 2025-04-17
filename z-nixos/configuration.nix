@@ -97,6 +97,7 @@
     ./modules/firefox.nix
     ./modules/fonts.nix
     ./modules/gamemode.nix
+    ./modules/huge-pages.nix
     ./modules/hypr.nix
     #./modules/hyprland_instance_sig.nix
     ./modules/internationalisation.nix
@@ -116,7 +117,6 @@
     ./modules/xserver.nix
     #./modules/whisperai.nix
     ./modules/wine.nix
-    #./modules/xmrig.nix
   ];
 
   environment.systemPackages = with pkgs; [
