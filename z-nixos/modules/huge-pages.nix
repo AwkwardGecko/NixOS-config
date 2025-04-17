@@ -11,4 +11,10 @@
     "transparent_hugepage=always"
   ];
 
+  boot.kernelModules = [
+    "msr"
+  ];
+
+  users.users.zozano.extraGroups = [ "msr" ];
+
 }
