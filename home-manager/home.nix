@@ -58,7 +58,7 @@
 
 	home.file = {
     ".local/share/applications".source = source/local/share/applications;
-    ".config/hypr".source = source/config/hypr;
+    ".config/hypr/hypridle.conf".source = source/config/hypr/hypridle.conf;
     ".local/share/vlc/lua/extensions".source = source/local/share/vlc/lua/extensions;
   
  ".nv/nvidia-application-profiles-rc".text = ''
