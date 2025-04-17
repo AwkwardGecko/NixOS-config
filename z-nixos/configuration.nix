@@ -116,8 +116,8 @@
     ./modules/xserver.nix
     #./modules/whisperai.nix
     ./modules/wine.nix
-    #./modules/xmrig.nix
-    #./modules/xmrig_cpu_monitor.nix
+    ./modules/xmrig.nix
+    ./modules/xmrig_cpu_monitor.nix
   ];
 
   environment.systemPackages = with pkgs; [
