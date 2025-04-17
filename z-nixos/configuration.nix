@@ -25,9 +25,9 @@
     }
   ];
 
-  boot.kernel.sysctl = {
-    "vm.swapiness" = 50; 
-  };
+  # boot.kernel.sysctl = {
+  #   "vm.swapiness" = 50; 
+  # };
 
   # Automatic cleanup
   nix = {
