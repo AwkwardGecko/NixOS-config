@@ -18,7 +18,6 @@
   home.packages = with pkgs; [
     hyprsunset
     hypridle
-    pidof
   ];
 
   wayland.windowManager.hyprland.settings = {
