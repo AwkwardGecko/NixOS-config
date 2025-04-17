@@ -1,4 +1,4 @@
-{ config, libs, pkgs }:
+{ config, lib, pkgs, ... }:
 
 {
   programs.chromium = {
@@ -18,3 +18,4 @@
     };
   };
 }
+
