@@ -6,7 +6,6 @@
       Description = "xmrig miner (user service)";
       After = [ "default.target" ];
     };
-    Install.WantedBy = [ "default.target" ];
     Service = {
       Environment = "XMRIG_CONFIG=%h/.config/xmrig/config.json";
       ExecStart = "${pkgs.xmrig}/bin/xmrig --config %h/.config/xmrig/config.json";
