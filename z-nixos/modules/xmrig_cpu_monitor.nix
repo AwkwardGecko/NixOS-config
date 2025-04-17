@@ -1,5 +1,5 @@
 { config, pkgs, ... }:
-
+{
   systemd.user.services."xmrig-idle" = {
   description = "Manage xmrig based on idle state (Wayland)";
   wantedBy = [ "graphical-session.target" ];
