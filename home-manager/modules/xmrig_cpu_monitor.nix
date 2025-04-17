@@ -1,18 +1,25 @@
 { config, pkgs, ... }:
 {
-  systemd.user.services."xmrig-idle" = {
-  description = "Manage xmrig based on idle state (Wayland)";
-  wantedBy = [ "graphical-session.target" ];
-  script = ''
-    exec swayidle \
-      timeout 300 'systemctl --user start xmrig' \
-      resume 'systemctl --user stop xmrig'
-  '';
-  serviceConfig = {
-    Restart = "always";
+  services.swayidle = {
+    enable = true;
+    timeouts = [
+      {
+        timeout = 300;
+        command = "systemctl --user start xmrig";
+      }
+    ];
+    resumeCommand = "systemctl --user stop xmrig";
   };
 
-  environment.systemPackages = with pkgs; [
-    swayidle
-  ];
-};
+  systemd.user.services.xmrig = {
+    Unit.Description = "xmrig miner (user service)";
+    Install.WantedBy = [ "default.target" ];
+    Service = {
+      ExecStart = "${pkgs.xmrig}/bin/xmrig";
+      Restart = "always";
+      Nice = 19;
+      CPUWeight = 1;
+    };
+  };
+}
+
