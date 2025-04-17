@@ -55,7 +55,6 @@
 
   environment.systemPackages = with pkgs; [
     xmrig-proxy
-    xprintidle
   ];
 
 }
