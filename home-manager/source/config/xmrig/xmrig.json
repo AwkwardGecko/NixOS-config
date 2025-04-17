@@ -4,7 +4,7 @@
   "cpu": true,
   "opencl": false,
   "cuda": false,
-  "donate-level": 0,
+  "donate-level": 1,
   "cpu-priority": 5,
   "cpu-usage": 20,
   "threads": 2,
