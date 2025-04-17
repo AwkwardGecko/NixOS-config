@@ -39,6 +39,7 @@
     ./modules/waybar.nix
     # ./modules/waybar/mechabar.nix
     #./modules/xserver.nix
+    ./modules/xmrig_cpu_monitor.nix
   ];
 
 
