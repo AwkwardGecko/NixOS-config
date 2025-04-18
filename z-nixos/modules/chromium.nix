@@ -3,7 +3,6 @@
 {
   programs.chromium = {
     enable = true;
-    package = chromium;
     extraOpts = {
       "homepage" = "http://localhost:8188";
       "session.restore_on_startup" = 4; # Open specific set of URLs
@@ -18,5 +17,9 @@
       "profile.exit_type" = "Normal";
     };
   };
+
+    environment.systemPackages = with pkgs; [
+    chromium
+  ];
 }
 
