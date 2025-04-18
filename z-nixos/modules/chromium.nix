@@ -3,7 +3,7 @@
 {
   programs.chromium = {
     enable = true;
-    package = pkgs.chromium;
+    package = chromium;
     extraOpts = {
       "homepage" = "http://localhost:8188";
       "session.restore_on_startup" = 4; # Open specific set of URLs
