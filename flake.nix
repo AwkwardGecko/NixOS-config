@@ -14,10 +14,10 @@
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
 
-    comfyui-manager = {
-      url = "github:ltdrdata/ComfyUI-Manager";
-      flake = false;
-    };
+    # comfyui-manager = {
+    #   url = "github:ltdrdata/ComfyUI-Manager";
+    #   flake = false;
+    # };
 
     aagl = {
       url = "github:ezKEa/aagl-gtk-on-nix";
@@ -67,12 +67,6 @@
         ];
       };
       
-      postInstall = ''
-        mkdir -p $out/home/zozano/comfyui/custom_nodes
-        cp -r ${comfyui-manager} $out/home/zozano/comfyui/custom_nodes/ComfyUI-Manager
-      '';
-      
-
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
