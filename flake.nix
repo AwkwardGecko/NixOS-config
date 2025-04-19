@@ -14,10 +14,10 @@
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
 
-    # comfyui-manager = {
-    #   url = "github:ltdrdata/ComfyUI-Manager";
-    #   flake = false;
-    # };
+    comfyui-manager = {
+      url = "github:ltdrdata/ComfyUI-Manager";
+      flake = false;
+    };
 
     aagl = {
       url = "github:ezKEa/aagl-gtk-on-nix";
@@ -43,28 +43,72 @@
   outputs = inputs@{ self, nixpkgs, home-manager, aagl, nixvim, nix-comfyui, ... }:
 
     let
-    
-      my-comfyui = pkgs.comfyuiPackages.comfyui.override {
-        extensions = [
-          pkgs.comfyuiPackages.extensions.acly-inpaint
-          pkgs.comfyuiPackages.extensions.acly-tooling
-          pkgs.comfyuiPackages.extensions.cubiq-ipadapter-plus
-          pkgs.comfyuiPackages.extensions.fannovel16-controlnet-aux
-        ];
+   
+      my-comfyui = pkgs.stdenv.mkDerivation {
+        pname = "my-comfyui";
+        version = "1.0";
 
-        commandLineArgs = [
-          "--preview-method" "auto"
-          #"--lowvram"
-          "--normalvram"
-          #"--disable-smart-memory"
-          "--reserve-vram" "1.5"
-          "--fp16-vae"
-          "--fp16-unet"
-          "--fp16-text-enc"
-          "--cuda-device" "0"
-          "--use-pytorch-cross-attention"
-        ];
+        src = pkgs.comfyuiPackages.comfyui;
+
+        nativeBuildInputs = with pkgs; [ rsync ];
+
+        installPhase = ''
+          mkdir -p $out
+          rsync -a $src/ $out/
+
+          mkdir -p $out/custom_nodes
+          cp -r ${inputs.comfyui-manager} $out/custom_nodes/ComfyUI-Manager
+        '';
+
+        passthru = {
+          extensions = [
+            pkgs.comfyuiPackages.extensions.acly-inpaint
+            pkgs.comfyuiPackages.extensions.acly-tooling
+            pkgs.comfyuiPackages.extensions.cubiq-ipadapter-plus
+            pkgs.comfyuiPackages.extensions.fannovel16-controlnet-aux
+          ];
+
+          commandLineArgs = [
+            "--preview-method" "auto"
+            #"--lowvram"
+            "--normalvram"
+            #"--disable-smart-memory"
+            "--reserve-vram" "1.5"
+            "--fp16-vae"
+            "--fp16-unet"
+            "--fp16-text-enc"
+            "--cuda-device" "0"
+            "--use-pytorch-cross-attention"
+          ];
+        };
       };
+
+
+
+
+
+      # my-comfyui = pkgs.comfyuiPackages.comfyui.override {
+      #
+      #   extensions = [
+      #     pkgs.comfyuiPackages.extensions.acly-inpaint
+      #     pkgs.comfyuiPackages.extensions.acly-tooling
+      #     pkgs.comfyuiPackages.extensions.cubiq-ipadapter-plus
+      #     pkgs.comfyuiPackages.extensions.fannovel16-controlnet-aux
+      #   ];
+      #
+      #   commandLineArgs = [
+      #     "--preview-method" "auto"
+      #     #"--lowvram"
+      #     "--normalvram"
+      #     #"--disable-smart-memory"
+      #     "--reserve-vram" "1.5"
+      #     "--fp16-vae"
+      #     "--fp16-unet"
+      #     "--fp16-text-enc"
+      #     "--cuda-device" "0"
+      #     "--use-pytorch-cross-attention"
+      #   ];
+      # };
       
       system = "x86_64-linux";
       pkgs = import nixpkgs {
