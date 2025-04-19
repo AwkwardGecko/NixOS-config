@@ -54,7 +54,7 @@
 
 installPhase = ''
   mkdir -p $out/bin
-  cp -r ${src}/* $out/
+  cp -r $src/* $out/
 
   mkdir -p $out/custom_nodes
   cp -r ${inputs.comfyui-manager} $out/custom_nodes/ComfyUI-Manager
