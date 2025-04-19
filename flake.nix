@@ -40,7 +40,7 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, aagl, nixvim, nix-comfyui, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, aagl, nixvim, comfyui-manager, nix-comfyui, ... }:
 
     let
    
@@ -50,7 +50,7 @@
 
         src = pkgs.comfyuiPackages.comfyui;
 
-        nativeBuildInputs = with pkgs; [ rsync ];
+        BuildInputs = with pkgs; [ rsync ];
 
         installPhase = ''
           mkdir -p $out
