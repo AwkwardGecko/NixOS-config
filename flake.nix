@@ -40,7 +40,7 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, aagl, nixvim, nix-comfyui, comfyui-manager, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, aagl, nixvim, nix-comfyui, ... }:
 
     let
     
