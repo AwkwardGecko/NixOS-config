@@ -50,7 +50,7 @@
           pkgs.comfyuiPackages.extensions.acly-tooling
           pkgs.comfyuiPackages.extensions.cubiq-ipadapter-plus
           pkgs.comfyuiPackages.extensions.fannovel16-controlnet-aux
-          pkgs.comfyuiPackages.extensions.comfyui-manager
+          pkgs.comfyuiPackages.extensions.my-comfyui-manager
         ];
 
         commandLineArgs = [
