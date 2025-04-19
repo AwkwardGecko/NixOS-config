@@ -14,10 +14,10 @@
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
 
-    # comfyui-manager = {
-    #   url = "github:ltdrdata/ComfyUI-Manager";
-    #   flake = false;
-    # };
+    comfyui-manager = {
+      url = "github:ltdrdata/ComfyUI-Manager";
+      flake = false;
+    };
 
     aagl = {
       url = "github:ezKEa/aagl-gtk-on-nix";
