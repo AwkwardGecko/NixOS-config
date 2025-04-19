@@ -54,11 +54,13 @@
 
         installPhase = ''
           mkdir -p $out
+          mkdir -p $out/custom_nodes
+
           rsync -a $src/ $out/
 
-          mkdir -p $out/custom_nodes
           cp -r ${inputs.comfyui-manager} $out/custom_nodes/ComfyUI-Manager
-        '';
+          '';
+
 
         passthru = {
           extensions = [
