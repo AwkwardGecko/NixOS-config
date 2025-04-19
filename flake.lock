@@ -24,11 +24,11 @@
     "comfyui-manager": {
       "flake": false,
       "locked": {
-        "lastModified": 1745023183,
-        "narHash": "sha256-MY+108SmLjOIxcc5CSJ/iKw063LIuL7/Ds3EzBKMkDY=",
+        "lastModified": 1745026267,
+        "narHash": "sha256-N5FUo/XODRi8KZnmVB35Kc16stc+qZp2A+apR0qvii0=",
         "owner": "ltdrdata",
         "repo": "ComfyUI-Manager",
-        "rev": "32b6266dd900901e591088b137d5560e37c5c496",
+        "rev": "770cd0f9f504bd7351e361cb8a58e311877c0a8f",
         "type": "github"
       },
       "original": {
