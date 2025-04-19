@@ -50,7 +50,7 @@
 
         src = pkgs.comfyuiPackages.comfyui;
 
-        BuildInputs = with pkgs; [ rsync ];
+        nativeBuildInputs = with pkgs; [ rsync ];
 
         installPhase = ''
           mkdir -p $out
