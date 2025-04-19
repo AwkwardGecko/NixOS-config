@@ -214,7 +214,7 @@
     python311Packages.pyasyncore # Async networking module for Python 3.11
     python311Packages.setuptools
     python311Packages.wheel
-    python311Packages.torch
+    #python311Packages.torch
     python312Packages.libpcap   # Python bindings for libpcap (next-gen testing?)
     qbittorrent                 # BitTorrent client
     rclone                      # Sync with cloud storage
