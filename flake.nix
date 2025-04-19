@@ -49,7 +49,7 @@
         version = "1.0";
 
         src = pkgs.comfyuiPackages.comfyui;
-
+        passthrough = { inherit commandLineArgs; };
         nativeBuildInputs = with pkgs; [ rsync ];
 
 installPhase = ''
