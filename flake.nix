@@ -118,6 +118,7 @@ installPhase = ''
       # };
       
       system = "x86_64-linux";
+      lib = pkgs.lib;
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
@@ -125,7 +126,8 @@ installPhase = ''
           inputs.nix-comfyui.overlays.default
         ];
       };
-    
+
+
     in {
       
       nixosConfigurations = {
