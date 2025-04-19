@@ -52,14 +52,19 @@
 
         nativeBuildInputs = with pkgs; [ rsync ];
 
-        installPhase = ''
-          mkdir -p $out
-          mkdir -p $out/custom_nodes
+installPhase = ''
+  mkdir -p $out/bin
+  cp -r ${src}/* $out/
 
-          rsync -a $src/ $out/
+  mkdir -p $out/custom_nodes
+  cp -r ${inputs.comfyui-manager} $out/custom_nodes/ComfyUI-Manager
 
-          cp -r ${inputs.comfyui-manager} $out/custom_nodes/ComfyUI-Manager
-          '';
+  cat > $out/bin/comfyui <<EOF
+  #!${pkgs.bash}/bin/bash
+  exec ${pkgs.python3}/bin/python $out/main.py ${lib.escapeShellArgs passthru.commandLineArgs}
+  EOF
+  chmod +x $out/bin/comfyui
+'';
 
 
         passthru = {
