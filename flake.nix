@@ -44,78 +44,28 @@
 
     let
    
-      my-comfyui = pkgs.stdenv.mkDerivation {
-        pname = "my-comfyui";
-        version = "1.0";
+      my-comfyui = pkgs.comfyuiPackages.comfyui.override {
 
-        src = pkgs.comfyuiPackages.comfyui;
-        passthru = { inherit commandLineArgs; };
-        nativeBuildInputs = with pkgs; [ rsync ];
+        extensions = [
+          pkgs.comfyuiPackages.extensions.acly-inpaint
+          pkgs.comfyuiPackages.extensions.acly-tooling
+          pkgs.comfyuiPackages.extensions.cubiq-ipadapter-plus
+          pkgs.comfyuiPackages.extensions.fannovel16-controlnet-aux
+        ];
 
-installPhase = ''
-  mkdir -p $out/bin
-  cp -r $src/* $out/
-
-  mkdir -p $out/custom_nodes
-  cp -r ${inputs.comfyui-manager} $out/custom_nodes/ComfyUI-Manager
-
-  cat > $out/bin/comfyui <<EOF
-  #!${pkgs.bash}/bin/bash
-  exec ${pkgs.python3}/bin/python $out/main.py ${lib.escapeShellArgs passthru.commandLineArgs}
-  EOF
-  chmod +x $out/bin/comfyui
-'';
-
-
-        passthru = {
-          extensions = [
-            pkgs.comfyuiPackages.extensions.acly-inpaint
-            pkgs.comfyuiPackages.extensions.acly-tooling
-            pkgs.comfyuiPackages.extensions.cubiq-ipadapter-plus
-            pkgs.comfyuiPackages.extensions.fannovel16-controlnet-aux
-          ];
-
-          commandLineArgs = [
-            "--preview-method" "auto"
-            #"--lowvram"
-            "--normalvram"
-            #"--disable-smart-memory"
-            "--reserve-vram" "1.5"
-            "--fp16-vae"
-            "--fp16-unet"
-            "--fp16-text-enc"
-            "--cuda-device" "0"
-            "--use-pytorch-cross-attention"
-          ];
-        };
+        commandLineArgs = [
+          "--preview-method" "auto"
+          #"--lowvram"
+          "--normalvram"
+          #"--disable-smart-memory"
+          "--reserve-vram" "1.5"
+          "--fp16-vae"
+          "--fp16-unet"
+          "--fp16-text-enc"
+          "--cuda-device" "0"
+          "--use-pytorch-cross-attention"
+        ];
       };
-
-
-
-
-
-      # my-comfyui = pkgs.comfyuiPackages.comfyui.override {
-      #
-      #   extensions = [
-      #     pkgs.comfyuiPackages.extensions.acly-inpaint
-      #     pkgs.comfyuiPackages.extensions.acly-tooling
-      #     pkgs.comfyuiPackages.extensions.cubiq-ipadapter-plus
-      #     pkgs.comfyuiPackages.extensions.fannovel16-controlnet-aux
-      #   ];
-      #
-      #   commandLineArgs = [
-      #     "--preview-method" "auto"
-      #     #"--lowvram"
-      #     "--normalvram"
-      #     #"--disable-smart-memory"
-      #     "--reserve-vram" "1.5"
-      #     "--fp16-vae"
-      #     "--fp16-unet"
-      #     "--fp16-text-enc"
-      #     "--cuda-device" "0"
-      #     "--use-pytorch-cross-attention"
-      #   ];
-      # };
       
       system = "x86_64-linux";
       lib = pkgs.lib;
