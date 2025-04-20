@@ -95,7 +95,9 @@
 
   
   home.packages = with pkgs; [
-	baobab        # disk usage analyzer
+	nsxiv
+
+  baobab        # disk usage analyzer
     #blueberry
     clementine
     cliphist    # wayland clipboard manager

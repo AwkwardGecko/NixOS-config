@@ -196,7 +196,6 @@
     nodejs                      # Node.js runtime
     nspr                        # Netscape Portable Runtime (used by Firefox, etc.)
     nss                         # Network Security Services
-    nsxiv                       # Image viewer
     nvtopPackages.nvidia        # GPU usage monitor for NVIDIA
     onlyoffice-bin              # Office suite
     openssl                     # TLS/SSL support (used by reliquary-archiver and other tools)
