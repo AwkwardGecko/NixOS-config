@@ -59,6 +59,9 @@
     ".local/share/applications".source = source/local/share/applications;
     ".config/hypr/hypridle.conf".source = source/config/hypr/hypridle.conf;
     ".local/share/vlc/lua/extensions".source = source/local/share/vlc/lua/extensions;
+    ".config/nsxiv/delete_and_next.sh".source = source/config/nsxiv/delete_and_next.sh;
+    ".config/nsxiv/exec/key-handler".source = source/config/nsxiv/exec/key-handler;
+    ".local/bin/nsxiv-wrapper".source = source/local/bin/nsxiv-wrappr;
   
  ".nv/nvidia-application-profiles-rc".text = ''
 {

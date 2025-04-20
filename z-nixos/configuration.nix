@@ -172,7 +172,7 @@
     gtkd                        # D bindings for GTK
     icu                         # Unicode support libraries
     iproute2                    # Network tools (replacement for net-tools)
-    imv                         # Image viewer
+    #imv                         # Image viewer
     inotify-tools               # check what is making folders
     #koboldcpp                   # Local LLM interface for KoboldAI
     jq                          #
@@ -196,7 +196,7 @@
     nodejs                      # Node.js runtime
     nspr                        # Netscape Portable Runtime (used by Firefox, etc.)
     nss                         # Network Security Services
-    #nsxiv                       # Image viewer
+    nsxiv                       # Image viewer
     nvtopPackages.nvidia        # GPU usage monitor for NVIDIA
     onlyoffice-bin              # Office suite
     openssl                     # TLS/SSL support (used by reliquary-archiver and other tools)
