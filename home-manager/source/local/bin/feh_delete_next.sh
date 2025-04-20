@@ -15,6 +15,8 @@ for i in "${!images[@]}"; do
     fi
 done
 
-# Start Feh with the images and the ability to delete on pressing the delete key
-feh --fullscreen --action "rm ${images[$index]} && feh --reload" --index $index "${images[@]}"
+# Start Feh with the images and the ability to delete on pressing the delete key, 
+# mouse wheel zooming, and no zooming with left-click.
+feh --fullscreen --action "rm ${images[$index]} && feh --reload" \
+    --index $index --no-zoom --zoom 100 --mousewheel-zoom "${images[@]}"
 
