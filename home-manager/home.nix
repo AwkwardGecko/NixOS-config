@@ -19,6 +19,7 @@
   imports = [
     # ./modules/applications.nix
     #./modules/cursor.nix
+    ./modules/feh.nix
     ./modules/fish.nix
     #./modules/fonts.nix
     ./modules/git.nix
@@ -61,7 +62,6 @@
     ".local/share/vlc/lua/extensions".source = source/local/share/vlc/lua/extensions;
     # ".config/nsxiv/delete_and_next.sh".source = source/config/nsxiv/delete_and_next.sh;
     # ".config/nsxiv/exec/key-handler".source = source/config/nsxiv/exec/key-handler;
-    ".local/bin/feh_delete_next.sh".source = source/local/bin/feh_delete_next.sh;
   
  ".nv/nvidia-application-profiles-rc".text = ''
 {
