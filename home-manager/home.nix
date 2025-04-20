@@ -112,7 +112,6 @@
 	htop
     #hyprpaper
     #hyprshot
-    feh
     jellyfin-web
 	#plasma5Packages.kdeconnect-kde
     krusader # file manager 
