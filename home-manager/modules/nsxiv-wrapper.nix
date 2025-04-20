@@ -1,6 +1,16 @@
 # A NixOS module to set up nsxiv with delete-on-keypress and file manager integration
 { config, pkgs, ... }:
 
+home-manager.users.zozano = {
+  environment.systemPackages = [
+    pkgs.nsxiv
+    pkgs.nsxiv-wrapper
+  ];
+  # Add other relevant configuration for user zozano here
+};
+
+
+
 let
   wrapperScript = pkgs.writeShellScriptBin "nsxiv-wrapper" ''
     #!/usr/bin/env bash
