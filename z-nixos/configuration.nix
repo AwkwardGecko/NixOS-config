@@ -103,6 +103,7 @@
     ./modules/firefox.nix
     ./modules/fonts.nix
     ./modules/gamemode.nix
+    ./modules/git-push-dotfiles.nix
     ./modules/huge-pages.nix
     ./modules/hypr.nix
     #./modules/hyprland_instance_sig.nix
