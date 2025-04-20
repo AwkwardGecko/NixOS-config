@@ -195,6 +195,7 @@
     nixd                        # Nix language server (LSP)
     nixfmt-rfc-style            # Nix formatter
     nodejs                      # Node.js runtime
+    nomacs                      # image viewer
     nspr                        # Netscape Portable Runtime (used by Firefox, etc.)
     nss                         # Network Security Services
     nvtopPackages.nvidia        # GPU usage monitor for NVIDIA

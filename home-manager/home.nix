@@ -19,7 +19,6 @@
   imports = [
     # ./modules/applications.nix
     #./modules/cursor.nix
-    ./modules/feh.nix
     ./modules/fish.nix
     #./modules/fonts.nix
     ./modules/git.nix
