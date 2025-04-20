@@ -41,10 +41,13 @@ in {
   config = {
     environment.systemPackages = with pkgs; [ nsxiv wrapperScript ];
 
-    systemd.tmpfiles.rules = [
-      "d ${configDir}/exec 0755 ${config.mainUser} users - -",
-      "f ${configDir}/exec/key-handler 0755 ${config.mainUser} users - ${keyHandlerScript}"
-    ];
+Here's the fixed version of the code snippet from `nsxiv-wrapper.nix`:
+
+```nix
+systemd.tmpfiles.rules = [
+  "d ${configDir}/exec 0755 ${config.mainUser} users - -"
+  "f ${configDir}/exec/key-handler 0755 ${config.mainUser} users - ${keyHandlerScript}"
+];
   };
 }
 
