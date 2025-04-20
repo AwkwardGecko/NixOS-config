@@ -10,11 +10,11 @@ let
     filename="$(basename "$file")"
 
     # Safely collect images in the directory
-    mapfile -t images < <(find "$dir" -maxdepth 1 -type f \(
-      -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \
-      -o -iname '*.gif' -o -iname '*.webp' \) | sort)
+    images=$(find "$dir" -maxdepth 1 -type f \
+      \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \
+         -o -iname '*.gif' -o -iname '*.webp' \) | sort)
 
-    exec ${pkgs.nsxiv}/bin/nsxiv -n "${images[@]}" -S "$filename"
+    exec ${pkgs.nsxiv}/bin/nsxiv -n $images -S "$filename"
   '';
 
   deleteScript = pkgs.writeShellScript "delete_and_next.sh" ''
@@ -23,10 +23,10 @@ let
     [ -f "$file" ] && rm "$file"
   '';
 
-  keyHandlerScript = pkgs.writeShellScript "key-handler" ''
+  keyHandlerScript = pkgs.writeText "key-handler.sh" ''
     #!/usr/bin/env bash
     case "$1" in
-      Delete|d) ${deleteScript} "$2" ;;
+      Delete|d) ${deleteScript}/bin/delete_and_next.sh "$2" ;;
     esac
   '';
 
@@ -42,15 +42,9 @@ in {
     environment.systemPackages = with pkgs; [ nsxiv wrapperScript ];
 
     systemd.tmpfiles.rules = [
-      "d ${configDir}/exec 0755 ${config.mainUser} users - -"
+      "d ${configDir}/exec 0755 ${config.mainUser} users - -",
+      "f ${configDir}/exec/key-handler 0755 ${config.mainUser} users - ${keyHandlerScript}"
     ];
-
-    # Write the key-handler using home.file if using Home Manager or write directly otherwise
-    home.file.".config/nsxiv/exec/key-handler" = {
-      text = keyHandlerScript.text;
-      executable = true;
-      target = "${configDir}/exec/key-handler";
-    };
   };
 }
 
