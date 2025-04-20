@@ -9,9 +9,10 @@ let
     dir="$(dirname "$file")"
     filename="$(basename "$file")"
 
-    images=($(find "$dir" -maxdepth 1 -type f \(
+    # Safely collect images in the directory
+    mapfile -t images < <(find "$dir" -maxdepth 1 -type f \(
       -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \
-      -o -iname '*.gif' -o -iname '*.webp' \) | sort))
+      -o -iname '*.gif' -o -iname '*.webp' \) | sort)
 
     exec ${pkgs.nsxiv}/bin/nsxiv -n "${images[@]}" -S "$filename"
   '';
@@ -42,8 +43,14 @@ in {
 
     systemd.tmpfiles.rules = [
       "d ${configDir}/exec 0755 ${config.mainUser} users - -"
-      "f ${configDir}/exec/key-handler 0755 ${config.mainUser} users - ${keyHandlerScript}"
     ];
+
+    # Write the key-handler using home.file if using Home Manager or write directly otherwise
+    home.file.".config/nsxiv/exec/key-handler" = {
+      text = keyHandlerScript.text;
+      executable = true;
+      target = "${configDir}/exec/key-handler";
+    };
   };
 }
 
