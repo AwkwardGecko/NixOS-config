@@ -13,8 +13,6 @@
 
   boot.blacklistedKernelModules = [ "xpad" ];
   
-
-  boot.kernelPackages = pkgs.linuxPackages_zen;
   boot.extraModulePackages = with config.boot.kernelPackages; [
     xpadneo
   ];

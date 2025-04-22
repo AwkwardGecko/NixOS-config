@@ -5,8 +5,8 @@
     enable = true;
     
     extraBackends = with pkgs; [
-      utsushi
-      #      epkowa
+      #utsushi
+      epkowa
     ];
   };
 

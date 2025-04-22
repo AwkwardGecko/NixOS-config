@@ -14,6 +14,8 @@
     efi.canTouchEfiVariables = true;
   };
 
+  boot.kernelPackages = pkgs.linuxPackages_zen;
+
   boot.initrd.kernelModules = [
     "usbhid"
     "btusb"

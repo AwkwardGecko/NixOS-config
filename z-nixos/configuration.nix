@@ -90,6 +90,7 @@
 
   imports = [
     ./hardware-configuration.nix
+    ./modules/agenix.nix # secrets manager
     ./modules/audio.nix # audio
     ./modules/autologin.nix # 100%
     ./modules/bash.nix
@@ -115,7 +116,7 @@
     ./modules/nixvim.nix
     ./modules/nvidia.nix
     #./modules/reload-usb.nix
-    ./modules/scanner.nix
+    #./modules/scanner.nix
     ./modules/ssh.nix
     ./modules/steam.nix
     #./modules/systemd-timers.nix
@@ -240,6 +241,7 @@
     vlc                         # Media player
     vulkan-loader               # Vulkan runtime loader
     vulkan-tools                # Vulkan utilities like `vulkaninfo`
+    wl-clipboard                # clipboard support for wayland
     wget                        # File downloader
     wine                        # Windows compatibility layer
     xorg.libX11                 # Core X11 library

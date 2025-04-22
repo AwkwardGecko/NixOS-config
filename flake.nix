@@ -9,19 +9,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # flake-utils = {
-    #   url = "github:numtide/flake-utils";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-
-    comfyui-manager = {
-      url = "github:ltdrdata/ComfyUI-Manager";
-      flake = false;
-    };
-
-    aagl = {
-      url = "github:ezKEa/aagl-gtk-on-nix";
+    star-rail = {
+      url = "path:./flakes/star-rail/";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.aagl = {
+        url = "github:ezKEa/aagl-gtk-on-nix";
+        inputs.nixpkgs.follows = "nixpkgs";
+      };
     };
 
     nixvim = {
@@ -35,83 +29,73 @@
     };
 
     nix-comfyui = {
-      url = "github:dyscorv/nix-comfyui";
-      inputs.nixpkgs.follows = "nixpkgs";
+        url = "github:dyscorv/nix-comfyui";
+        inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, aagl, nixvim, comfyui-manager, nix-comfyui, ... }:
-
-    let
-   
-      my-comfyui = pkgs.comfyuiPackages.comfyui.override {
-
-        extensions = [
-          pkgs.comfyuiPackages.extensions.acly-inpaint
-          pkgs.comfyuiPackages.extensions.acly-tooling
-          pkgs.comfyuiPackages.extensions.cubiq-ipadapter-plus
-          pkgs.comfyuiPackages.extensions.fannovel16-controlnet-aux
-        ];
-
-        commandLineArgs = [
-          "--preview-method" "auto"
-          #"--lowvram"
-          "--normalvram"
-          #"--disable-smart-memory"
-          "--reserve-vram" "1.5"
-          "--fp16-vae"
-          "--fp16-unet"
-          "--fp16-text-enc"
-          "--cuda-device" "0"
-          "--use-pytorch-cross-attention"
-        ];
-      };
-      
-      system = "x86_64-linux";
-      lib = pkgs.lib;
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-        overlays = [
-          inputs.nix-comfyui.overlays.default
-        ];
-      };
+outputs = inputs@{ self, nixpkgs, home-manager, nixvim, star-rail, nix-comfyui, ... }:
+let
+  
+  system = "x86_64-linux";
+  pkgs = import nixpkgs {
+    inherit system;
+    config.allowUnfree = true;
+    overlays = [ inputs.nix-comfyui.overlays.default ];
+  };
 
 
-    in {
-      
-      nixosConfigurations = {
-        z-nixos = nixpkgs.lib.nixosSystem {
-          system = system;
-          modules = [
-            #./flake-modules/comfyui.nix
-            ./z-nixos/configuration.nix
-            #./flake-modules/test/test.nix
-            home-manager.nixosModules.home-manager
-            nixvim.nixosModules.nixvim
-            {
-              imports = [ aagl.nixosModules.default ];
+  my-comfyui = pkgs.comfyuiPackages.comfyui.override {
+    extensions = [
+      pkgs.comfyuiPackages.extensions.acly-inpaint
+      pkgs.comfyuiPackages.extensions.acly-tooling
+      pkgs.comfyuiPackages.extensions.cubiq-ipadapter-plus
+      pkgs.comfyuiPackages.extensions.fannovel16-controlnet-aux
+    ];
+    commandLineArgs = [
+      "--preview-method" "auto"
+      "--normalvram"
+      "--reserve-vram" "1.5"
+      "--fp16-vae"
+      "--fp16-unet"
+      "--fp16-text-enc"
+      "--cuda-device" "0"
+      "--use-pytorch-cross-attention"
+    ];
+  };
 
-              nix.settings = aagl.nixConfig;
-              programs.honkers-railway-launcher.enable = true;
+in {
 
-              aagl.enableNixpkgsReleaseBranchCheck = false;
+  nixosConfigurations = {
+    z-nixos = nixpkgs.lib.nixosSystem {
+      inherit system;
 
-              environment.systemPackages = with pkgs; [
-                my-comfyui
-                comfyuiPackages.krita-with-extensions
-              ];
+      modules = [
+        ./z-nixos/configuration.nix
+        home-manager.nixosModules.home-manager
+        nixvim.nixosModules.nixvim
+        inputs.star-rail.defaultModule 
+        {
 
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.zozano = import ./home-manager/home.nix;
-            }
+          environment.systemPackages = with pkgs; [
+            my-comfyui
+            comfyuiPackages.krita-with-extensions
           ];
 
-          specialArgs = {
-            inherit inputs;
+          environment.variables = {
+            GITHUB_TOKEN = "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";
           };
-        };
+
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.zozano = import ./home-manager/home.nix;
+        }
+      ];
+
+      specialArgs = {
+        inherit inputs;
       };
     };
-  }
+  };
+};
+}
