@@ -8,7 +8,7 @@
    ];
 
    age.secrets.github-token = {
-      file = ../../.gitignore/github-token.age;
+      file = ../../secrets/github-token.age;
       owner = "zozano";
    };
 
