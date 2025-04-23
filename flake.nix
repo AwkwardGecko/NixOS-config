@@ -5,11 +5,8 @@
       
       nixpkgs.url = "github:Nixos/nixpkgs/nixos-unstable";
 
-      sops-nix = {
-         url = "github:Mic92/sops-nix";
-         inputs.nixpkgs.follows = "nixpkgs";
-      };
-
+      inputs.sops-nix.url = "github:Mic92/sops-nix";
+      
       home-manager = {
          url = "github:nix-community/home-manager/master";
          inputs.nixpkgs.follows = "nixpkgs";
@@ -45,7 +42,7 @@
       };
   };
 
-outputs = inputs@{ self, nixpkgs, home-manager, sops-nix, nixvim, star-rail, nix-comfyui, ... }:
+outputs = inputs@{ self, nixpkgs, home-manager, nixvim, star-rail, nix-comfyui, ... }:
 let
   
   system = "x86_64-linux";
