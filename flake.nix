@@ -2,39 +2,49 @@
   description = "Flake File";
 
   inputs = {
-    nixpkgs.url = "github:Nixos/nixpkgs/nixos-unstable";
+      
+      nixpkgs.url = "github:Nixos/nixpkgs/nixos-unstable";
 
-    home-manager = {
-      url = "github:nix-community/home-manager/master";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    star-rail = {
-      url = "path:./flakes/star-rail/";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.aagl = {
-        url = "github:ezKEa/aagl-gtk-on-nix";
-        inputs.nixpkgs.follows = "nixpkgs";
+      agenix = {
+         url = "github:ryantm/agenix";
       };
-    };
 
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+      home-manager = {
+         url = "github:nix-community/home-manager/master";
+         inputs.nixpkgs.follows = "nixpkgs";
+      };
 
-    rust-overlay = {
-      url = "github:oxalica/rust-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # star-rail = {
+    #   url = "path:./flakes/star-rail/";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.aagl = {
+    #     url = "github:ezKEa/aagl-gtk-on-nix";
+    #     inputs.nixpkgs.follows = "nixpkgs";
+    #   };
+    # };
 
-    nix-comfyui = {
+      star-rail = {
+         url = "path:./flakes/star-rail";
+         inputs.nixpkgs.follows = "nixpkgs";
+      };
+
+      nixvim = {
+         url = "github:nix-community/nixvim";
+       inputs.nixpkgs.follows = "nixpkgs";
+      };
+
+      rust-overlay = {
+         url = "github:oxalica/rust-overlay";
+         inputs.nixpkgs.follows = "nixpkgs";
+      };
+
+      nix-comfyui = {
         url = "github:dyscorv/nix-comfyui";
         inputs.nixpkgs.follows = "nixpkgs";
-    };
+      };
   };
 
-outputs = inputs@{ self, nixpkgs, home-manager, nixvim, star-rail, nix-comfyui, ... }:
+outputs = inputs@{ self, nixpkgs, home-manager, nixvim, agenix, star-rail, nix-comfyui, ... }:
 let
   
   system = "x86_64-linux";
@@ -72,19 +82,16 @@ in {
 
       modules = [
         ./z-nixos/configuration.nix
+        agenix.nixosModules.default
         home-manager.nixosModules.home-manager
         nixvim.nixosModules.nixvim
         inputs.star-rail.defaultModule 
+        
         {
-
           environment.systemPackages = with pkgs; [
             my-comfyui
             comfyuiPackages.krita-with-extensions
           ];
-
-          environment.variables = {
-            GITHUB_TOKEN = "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";
-          };
 
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;

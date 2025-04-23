@@ -1,15 +1,19 @@
 { config, pkgs, lib, ... }:
 
 {
-   imports = [ ./secrets.nix ];
-   age.secrets.my-secret = {
-      file = ./secrets/my-secret.age;
-   };
+   environment.systemPackages = with pkgs; [
+      age
+      agenix-cli
+   ];
 
-   systemd.services.my-service = {
-      serviceConfig.EnvironmentFile = config.age.secrets.my-secret.path;
-   };
+   # age.secrets.github-token = {
+   #    file = ../../secrets/github-token.age;
+   #    recipients = [
+   #       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGmBtbRHIiny56UVPCWE3icyyHZLZdb2U2Y3eDWUbtXE zozano@z-nixos"
+   #    ];
+   # };
 
-
-
+   # systemd.services.my-service = {
+   #    serviceConfig.EnvironmentFile = config.age.secrets.github-token.path;
+   # };
 }

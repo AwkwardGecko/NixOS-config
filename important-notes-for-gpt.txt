@@ -1,0 +1,22 @@
+Instructions:
+
+Read all the files in this archive, look for redundencies, security flaws, errors.
+
+Give advice about what to improve, and how.
+
+--------
+
+Notes:
+
+This isn't meant to be reproducable, it's only meant to be run on this machine.
+Don't bloat your response with praise about what I'm doing right, focus on what's wrong.
+
+--------
+
+Ignore giving advice about the following:
+
+allowUnfree = true
+hardcoded MAC address
+hardcoded swapDevices
+NOPASSWD on nixos-rebuild
+state version pin
