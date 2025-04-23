@@ -21,6 +21,7 @@
     #./modules/cursor.nix
     ./modules/fish.nix
     #./modules/fonts.nix
+    ./modules/gpg.nix
     ./modules/git.nix
     #./modules/gtk.nix
     ./modules/hypr.nix
