@@ -3,11 +3,13 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    aagl.url = "github:ezKEa/aagl-gtk-on-nix";
-    aagl.inputs.nixpkgs.follows = "nixpkgs";
+    aagl = {
+         url = "github:ezKEa/aagl-gtk-on-nix";
+         inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, aagl, ... }: {
+  outputs = { self, nixpkgs, aagl, ... }: {
     defaultModule = {
       imports = [ aagl.nixosModules.default ];
 

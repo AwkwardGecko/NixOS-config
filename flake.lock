@@ -338,11 +338,11 @@
         ]
       },
       "locked": {
-        "path": "./flakes/star-rail",
+        "path": "./flakes/aagl",
         "type": "path"
       },
       "original": {
-        "path": "./flakes/star-rail",
+        "path": "./flakes/aagl",
         "type": "path"
       },
       "parent": []

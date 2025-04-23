@@ -7,4 +7,10 @@
    sops.defaultSopsFormat = "yaml";
 
    sops.age.keyFile = "/home/zozano/.config/sops/age/keys.txt";
+
+   
+
+   environment.systemPackages = with pkgs; [
+      sops
+   ];
 }
