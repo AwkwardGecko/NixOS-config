@@ -2,8 +2,7 @@
 
 {
    environment.systemPackages = with pkgs; [
-      age
-      agenix-cli
+      ragenix 
    ];
 
    # age.secrets.github-token = {
