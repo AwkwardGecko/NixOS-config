@@ -2,7 +2,7 @@
 
 {
   wayland.windowManager.hyprland.enable = true;
-  services.sdg-desktop-portal = {
+  services.xdg-desktop-portal = {
      enable = true;
      wlr.enable = true;
   };
