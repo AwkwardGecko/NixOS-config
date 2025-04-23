@@ -122,6 +122,7 @@
     #./modules/systemd-timers.nix
     ./modules/teamviewer.nix
     ./modules/users.nix
+    ./modules/xdg-desktop-portal.nix
     ./modules/xserver.nix
     #./modules/whisperai.nix
     ./modules/wine.nix

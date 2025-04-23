@@ -47,7 +47,7 @@
 
 
   home.sessionVariables = {
-    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d"; # Add custon Proton versions to Steam
+    #STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d"; # Add custon Proton versions to Steam
     #GTK_THEME = "Adwaita";
     #LD_LIBRARY_PATH = "/usr/lib/x86_64-linux-gnu";
     #LC_ALL = "en_AU.UTF-8";

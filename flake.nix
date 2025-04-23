@@ -15,10 +15,15 @@
          inputs.nixpkgs.follows = "nixpkgs";
       };
 
+      # star-rail = {
+      #    url = "path:./flakes/aagl";
+      # };
+
       star-rail = {
-         url = "path:./flakes/aagl";
+         url = "github:ezKEa/aagl-gtk-on-nix";
          inputs.nixpkgs.follows = "nixpkgs";
       };
+
 
       nixvim = {
          url = "github:nix-community/nixvim";
@@ -48,11 +53,15 @@ let
   };
 
   my-comfyui = pkgs.comfyuiPackages.comfyui.override {
-    extensions = [
-      pkgs.comfyuiPackages.extensions.acly-inpaint
-      pkgs.comfyuiPackages.extensions.acly-tooling
-      pkgs.comfyuiPackages.extensions.cubiq-ipadapter-plus
-      pkgs.comfyuiPackages.extensions.fannovel16-controlnet-aux
+    extensions = with pkgs.comfyuiPackages.extensions; [
+      acly-inpaint
+      acly-tooling
+      #badcafecode-execution-inversion-demo
+      cubiq-essentials
+      #cubiq-ipadapter-plus
+      #gourieff-reactor
+      #fannovel16-controlnet-aux
+      #ssitu-ultimate-sd-upscale
     ];
     commandLineArgs = [
       "--preview-method" "auto"
@@ -77,7 +86,7 @@ in {
         sops-nix.nixosModules.sops
         home-manager.nixosModules.home-manager
         nixvim.nixosModules.nixvim
-        inputs.star-rail.defaultModule 
+        #inputs.star-rail.defaultModule 
          
         {
           environment.systemPackages = with pkgs; [
@@ -85,9 +94,18 @@ in {
             comfyuiPackages.krita-with-extensions
           ];
 
-          # environment.sessionVariables = {
-          # 
-          # };
+          environment.sessionVariables = {
+            STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
+            XDG_CURRENT_DESKTOP = "Hyprland";
+            XDG_SESSION_TYPE = "wayland";
+          };
+
+
+          imports = [ star-rail.nixosModules.default];
+          nix.settings = star-rail.nixConfig;
+          programs.honkers-railway-launcher.enable = true;
+          aagl.enableNixpkgsReleaseBranchCheck = false;
+
 
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;

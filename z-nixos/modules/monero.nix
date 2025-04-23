@@ -18,15 +18,13 @@
     monero-cli
   ];
 
-    users.groups.monero = { };
-
-    users.users.monero = {
-      isSystemUser = true;
-      group = "monero";
-      description = "Monero daemon user";
-      home = "/var/lib/monero";
-      createHome = true;
-    };
+    # users.users.zozano = {
+    #   isSystemUser = true;
+    #   group = "users";
+    #   description = "Monero daemon user";
+    #   home = "/var/lib/monero";
+    #   createHome = true;
+    # };
 
 
 
@@ -36,9 +34,11 @@ systemd.services.monero = {
   wantedBy = [ "multi-user.target" ];
 
   serviceConfig = {
-    User = "monero";
-    Group = "monero";
+    User = "zozano";
+    Group = "users";
     ExecStart = "${pkgs.monero-cli}/bin/monerod --config-file=/steam/Monero/monero.conf --non-interactive --data-dir=/steam/Monero --out-peers 64 --prune-blockchain --enable-dns-blocklist --max-concurrency 8 --block-sync-size 20 --db-sync-mode fast:async:1000";
+    ExecStop = "${pkgs.monero-cli}/bin/monerod exit";
+    TimeoutStopSec = "90s";
     Restart = "always";
     SuccessExitStatus = [
       0
