@@ -86,12 +86,15 @@ in {
         home-manager.nixosModules.home-manager
         nixvim.nixosModules.nixvim
         inputs.star-rail.defaultModule 
-        
+         
         {
           environment.systemPackages = with pkgs; [
             my-comfyui
             comfyuiPackages.krita-with-extensions
           ];
+
+          # environment.sessionVariables = {
+          # };
 
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
