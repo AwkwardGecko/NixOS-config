@@ -5,8 +5,9 @@
       
       nixpkgs.url = "github:Nixos/nixpkgs/nixos-unstable";
 
-      inputs.sops-nix = {
+      sops-nix = {
          url = "github:Mic92/sops-nix";
+         inputs.nixpkgs.follows = "nixpkgs";
       };
 
       home-manager = {
@@ -14,17 +15,8 @@
          inputs.nixpkgs.follows = "nixpkgs";
       };
 
-    # star-rail = {
-    #   url = "path:./flakes/star-rail/";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    #   inputs.aagl = {
-    #     url = "github:ezKEa/aagl-gtk-on-nix";
-    #     inputs.nixpkgs.follows = "nixpkgs";
-    #   };
-    # };
-
       star-rail = {
-         url = "path:./flakes/star-rail";
+         url = "path:./flakes/aagl";
          inputs.nixpkgs.follows = "nixpkgs";
       };
 
@@ -44,7 +36,8 @@
       };
   };
 
-outputs = inputs@{ self, nixpkgs, home-manager, nixvim, star-rail, nix-comfyui, ... }:
+outputs = inputs@{ self, nixpkgs, home-manager, nixvim, star-rail, sops-nix, nix-comfyui, ... }:
+
 let
   
   system = "x86_64-linux";
@@ -81,6 +74,7 @@ in {
 
       modules = [
         ./z-nixos/configuration.nix
+        sops-nix.nixosModules.sops
         home-manager.nixosModules.home-manager
         nixvim.nixosModules.nixvim
         inputs.star-rail.defaultModule 
