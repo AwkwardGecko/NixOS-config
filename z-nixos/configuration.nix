@@ -90,7 +90,6 @@
 
   imports = [
     ./hardware-configuration.nix
-    ./modules/agenix.nix # secrets manager
     ./modules/audio.nix # audio
     ./modules/autologin.nix # 100%
     ./modules/bash.nix
@@ -117,6 +116,7 @@
     ./modules/nvidia.nix
     #./modules/reload-usb.nix
     #./modules/scanner.nix
+    ./modules/sops-nix.nix
     ./modules/ssh.nix
     ./modules/steam.nix
     #./modules/systemd-timers.nix
@@ -128,7 +128,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
-
+    age                          # generate keypair
     alsa-lib                    # ALSA sound library
     atk                         # Accessibility toolkit (GNOME dependencies)
     bazel                       # Google's build tool (used for TensorFlow etc.)

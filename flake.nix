@@ -5,8 +5,9 @@
       
       nixpkgs.url = "github:Nixos/nixpkgs/nixos-unstable";
 
-      agenix = {
-         url = "github:ryantm/agenix";
+      sops-nix = {
+         url = "github:Mic92/sops-nix";
+         inputs.nixpkgs.follows = "nixpkgs";
       };
 
       home-manager = {
@@ -44,7 +45,7 @@
       };
   };
 
-outputs = inputs@{ self, nixpkgs, home-manager, nixvim, agenix, star-rail, nix-comfyui, ... }:
+outputs = inputs@{ self, nixpkgs, home-manager, sops-nix, nixvim, star-rail, nix-comfyui, ... }:
 let
   
   system = "x86_64-linux";
@@ -81,14 +82,12 @@ in {
 
       modules = [
         ./z-nixos/configuration.nix
-        agenix.nixosModules.default
         home-manager.nixosModules.home-manager
         nixvim.nixosModules.nixvim
         inputs.star-rail.defaultModule 
          
         {
           environment.systemPackages = with pkgs; [
-            agenix.packages.${system}.default
             my-comfyui
             comfyuiPackages.krita-with-extensions
           ];
