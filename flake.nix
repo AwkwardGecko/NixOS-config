@@ -88,7 +88,7 @@ in {
          
         {
           environment.systemPackages = with pkgs; [
-            agenix
+            agenix.packages.${system}.default
             my-comfyui
             comfyuiPackages.krita-with-extensions
           ];

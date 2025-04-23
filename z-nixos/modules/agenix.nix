@@ -1,9 +1,9 @@
 { config, pkgs, lib, ... }:
 
 {
+
    environment.systemPackages = with pkgs; [
       age
-      agenix-cli
    ];
 
    age.secrets.github-token = {
