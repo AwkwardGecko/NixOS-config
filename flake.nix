@@ -5,7 +5,7 @@
       
       nixpkgs.url = "github:Nixos/nixpkgs/nixos-unstable";
 
-      inputs.sops-nix.url = "github:Mic92/sops-nix";
+      sops-nix.url = "github:Mic92/sops-nix";
       
       home-manager = {
          url = "github:nix-community/home-manager/master";
