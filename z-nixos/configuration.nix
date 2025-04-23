@@ -117,7 +117,6 @@
     ./modules/nvidia.nix
     #./modules/reload-usb.nix
     #./modules/scanner.nix
-    ./modules/secrets.nix
     ./modules/ssh.nix
     ./modules/steam.nix
     #./modules/systemd-timers.nix

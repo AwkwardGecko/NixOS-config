@@ -1,5 +1,0 @@
-{
-  "github-token.txt".publicKeys = [
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGmBtbRHIiny56UVPCWE3icyyHZLZdb2U2Y3eDWUbtXE zozano@z-nixos"
-  ];
-}

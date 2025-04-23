@@ -3,17 +3,18 @@
 {
    environment.systemPackages = with pkgs; [
       age
-      ragenix 
+      agenix
+      agenix-cli
    ];
 
-   # age.secrets.github-token = {
-   #    file = ../../secrets/github-token.age;
-   #    recipients = [
-   #       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGmBtbRHIiny56UVPCWE3icyyHZLZdb2U2Y3eDWUbtXE zozano@z-nixos"
-   #    ];
-   # };
+   age.secrets.github-token = {
+      file = ../../.gitignore/github-token.age;
+      owner = "zozano";
+   };
 
-   # systemd.services.my-service = {
-   #    serviceConfig.EnvironmentFile = config.age.secrets.github-token.path;
-   # };
+   systemd.services.github-token = {
+      serviceConfig = {
+         Environment = "GITHUB_TOKEN=${config.age.secrets.github-token.path}";
+      };
+   };
 }

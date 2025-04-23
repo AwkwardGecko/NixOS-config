@@ -54,7 +54,6 @@ let
     overlays = [ inputs.nix-comfyui.overlays.default ];
   };
 
-
   my-comfyui = pkgs.comfyuiPackages.comfyui.override {
     extensions = [
       pkgs.comfyuiPackages.extensions.acly-inpaint
@@ -94,6 +93,7 @@ in {
           ];
 
           # environment.sessionVariables = {
+          # 
           # };
 
           home-manager.useGlobalPkgs = true;
