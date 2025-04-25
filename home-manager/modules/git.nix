@@ -9,7 +9,6 @@
   ...
 }:
 {
-
   programs.git = {
     enable = true;
     userName = "Zozano";

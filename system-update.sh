@@ -2,11 +2,11 @@
 set -euo pipefail
 
 cd /home/zozano/.dotfiles
-# git add *
+git add *
 # sleep 2
-# git commit -m "$(date '+%F_%H:%M:%S')"
+git commit -m "$(date '+%F_%H:%M:%S')"
 # sleep 2
-# git push github main
+git push github main
 # sleep 2
 
 nix flake update
