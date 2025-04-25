@@ -63,25 +63,25 @@ let
       #fannovel16-controlnet-aux
       #ssitu-ultimate-sd-upscale
       
-      (pkgs.stdenv.mkDerivation {
-         pname = "impact-pack";
-         version = "main";
-         src = pkgs.fetchFromGitHub {
-            owner = "ltdrdata";
-            repo = "ComfyUI-Impact-Pack";
-            rev = "2708eba825335387de60220d9e461f6e4ab63bc0"; # commit hash or tag
-            #sha256 = pkgs.lib.fakeSha256;
-            sha256 = "sha256-L5ti3QUzCyXzYQuGikEwVkwthUL0dbEqAHrMM0Ui+B8="; # use `nix-prefetch-url`
-         };
-       
-         installPhase = ''
-            mkdir -p $out/lib/python3.11/site-packages
-            python3 -m pip install --target=$out/lib/python3.11/site-packages -r $src/requirements.txt
-            cp -rT $src/* $out
-         '';
-
-         passthru.originalName = "impact-pack";
-      })
+      # (pkgs.stdenv.mkDerivation {
+      #    pname = "impact-pack";
+      #    version = "main";
+      #    src = pkgs.fetchFromGitHub {
+      #       owner = "ltdrdata";
+      #       repo = "ComfyUI-Impact-Pack";
+      #       rev = "2708eba825335387de60220d9e461f6e4ab63bc0"; # commit hash or tag
+      #       #sha256 = pkgs.lib.fakeSha256;
+      #       sha256 = "sha256-L5ti3QUzCyXzYQuGikEwVkwthUL0dbEqAHrMM0Ui+B8="; # use `nix-prefetch-url`
+      #    };
+      #  
+      #    installPhase = ''
+      #       mkdir -p $out/lib/python3.11/site-packages
+      #       python3 -m pip install --target=$out/lib/python3.11/site-packages -r $src/requirements.txt
+      #       cp -rT $src/* $out
+      #    '';
+      #
+      #    passthru.originalName = "impact-pack";
+      # })
     ];
 
     commandLineArgs = [
