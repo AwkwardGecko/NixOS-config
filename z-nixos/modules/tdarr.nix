@@ -1,3 +1,4 @@
+zozano@z-nixos ~/.d/z/modules (main) [SIGINT]> cat tdarr.nix 
 # Auto-generated using compose2nix v0.3.1.
 { pkgs, lib, ... }:
 
@@ -56,17 +57,17 @@
       "--network=bridge"
     ];
   };
-  # systemd.services."podman-tdarr" = {
-  #   serviceConfig = {
-  #     Restart = lib.mkOverride 90 "always";
-  #   };
-  #   partOf = [
-  #     "podman-compose-tdarr-root.target"
-  #   ];
-  #   wantedBy = [
-  #     "podman-compose-tdarr-root.target"
-  #   ];
-  # };
+  systemd.services."podman-tdarr" = {
+    serviceConfig = {
+      Restart = lib.mkOverride 90 "always";
+    };
+    partOf = [
+      "podman-compose-tdarr-root.target"
+    ];
+    wantedBy = [
+      "podman-compose-tdarr-root.target"
+    ];
+  };
   virtualisation.oci-containers.containers."tdarr-node" = {
     image = "ghcr.io/haveagitgat/tdarr_node:latest";
     environment = {
@@ -98,17 +99,17 @@
       "--network=container:tdarr"
     ];
   };
-  # systemd.services."podman-tdarr-node" = {
-  #   serviceConfig = {
-  #     Restart = lib.mkOverride 90 "always";
-  #   };
-  #   partOf = [
-  #     "podman-compose-tdarr-root.target"
-  #   ];
-  #   wantedBy = [
-  #     "podman-compose-tdarr-root.target"
-  #   ];
-  # };
+  systemd.services."podman-tdarr-node" = {
+    serviceConfig = {
+      Restart = lib.mkOverride 90 "always";
+    };
+    partOf = [
+      "podman-compose-tdarr-root.target"
+    ];
+    wantedBy = [
+      "podman-compose-tdarr-root.target"
+    ];
+  };
 
   # Root service
   # When started, this will automatically create all resources and start
