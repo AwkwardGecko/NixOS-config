@@ -20,7 +20,7 @@
   virtualisation.oci-containers.backend = "podman";
 
   # Containers
-  virtualisation.oci-containers.containers."tdarr" = {
+  virtualisation.oci-containers.containers."tdarr-main" = {
     image = "ghcr.io/haveagitgat/tdarr:latest";
     environment = {
       "NVIDIA_DRIVER_CAPABILITIES" = "all";
@@ -56,7 +56,7 @@
       "--network=bridge"
     ];
   };
-  systemd.services."podman-tdarr" = {
+  systemd.services."podman-tdarr-main" = {
     serviceConfig = {
       Restart = lib.mkOverride 90 "always";
     };
@@ -67,7 +67,7 @@
       "podman-compose-tdarr-root.target"
     ];
   };
-  virtualisation.oci-containers.containers."tdarr-node" = {
+  virtualisation.oci-containers.containers."tdarr-node-main" = {
     image = "ghcr.io/haveagitgat/tdarr_node:latest";
     environment = {
       "NVIDIA_DRIVER_CAPABILITIES" = "all";
@@ -98,7 +98,7 @@
       "--network=container:tdarr"
     ];
   };
-  systemd.services."podman-tdarr-node" = {
+  systemd.services."podman-tdarr-node-main" = {
     serviceConfig = {
       Restart = lib.mkOverride 90 "always";
     };
