@@ -42,6 +42,7 @@
       "/docker/tdarr/server:/app/server:rw"
       "/docker/tdarr/transcode:/temp:rw"
       "/server/data/media:/media:rw"
+      "/dev/dri:/dev/dri:rw"
     ];
     ports = [
       "8265:8265/tcp"
@@ -78,7 +79,8 @@
       "NVIDIA_DRIVER_CAPABILITIES" = "all";
       "NVIDIA_VISIBLE_DEVICES" = "all";
       "TZ" = "Australia/Sydney";
-      "serverIP" = "0.0.0.0";
+      "nodeID" = "MyNode";
+      "serverIP" = "tdarr";
       "serverPort" = "8266";
     };
     volumes = [
@@ -86,6 +88,7 @@
       "/docker/tdarr/logs:/app/logs:rw"
       "/docker/tdarr/transcode:/temp:rw"
       "/server/data/media:/media:rw"
+      "/dev/dri:/dev/dri:rw"
     ];
     dependsOn = [
       "tdarr"
@@ -95,7 +98,7 @@
       "--device=/dev/dri:/dev/dri:rwm"
       "--device=nvidia.com/gpu=all"
       "--network-alias=tdarr-node"
-      "--network=container:tdarr"
+      "--network=tdarr_default"
     ];
   };
   systemd.services."podman-tdarr-node" = {
