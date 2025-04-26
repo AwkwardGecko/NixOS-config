@@ -98,7 +98,7 @@
     ./modules/cachix.nix # cachix
     ./modules/chromium.nix
     #./modules/cron.nix
-    ./modules/docker.nix
+    #./modules/docker.nix
     ./modules/filesystem.nix
     ./modules/firefox.nix
     ./modules/fonts.nix
