@@ -2,6 +2,10 @@
 { pkgs, lib, ... }:
 
 {
+   environment.systemPackages = with pkgs; [
+      libva-utils
+   ];
+
   # Runtime
   virtualisation.podman = {
     enable = true;
@@ -20,22 +24,14 @@
   virtualisation.oci-containers.backend = "podman";
 
   # Containers
-  virtualisation.oci-containers.containers."tdarr-main" = {
+  virtualisation.oci-containers.containers."tdarr" = {
     image = "ghcr.io/haveagitgat/tdarr:latest";
     environment = {
       "NVIDIA_DRIVER_CAPABILITIES" = "all";
       "NVIDIA_VISIBLE_DEVICES" = "all";
-      "PGID" = "100";
-      "PUID" = "1000";
       "TZ" = "Australia/Sydney";
-      "UMASK_SET" = "002";
-      "ffmpegVersion" = "7";
-      "inContainer" = "true";
-      "internalNode" = "true";
-      "nodeName" = "MyInternalNode";
       "serverIP" = "0.0.0.0";
       "serverPort" = "8266";
-      "webUIPort" = "8265";
     };
     volumes = [
       "/docker/tdarr/configs:/app/configs:rw"
@@ -53,13 +49,19 @@
       "--device=/dev/dri:/dev/dri:rwm"
       "--device=nvidia.com/gpu=all"
       "--network-alias=tdarr"
-      "--network=bridge"
+      "--network=tdarr_default"
     ];
   };
-  systemd.services."podman-tdarr-main" = {
+  systemd.services."podman-tdarr" = {
     serviceConfig = {
       Restart = lib.mkOverride 90 "always";
     };
+    after = [
+      "podman-network-tdarr_default.service"
+    ];
+    requires = [
+      "podman-network-tdarr_default.service"
+    ];
     partOf = [
       "podman-compose-tdarr-root.target"
     ];
@@ -67,18 +69,12 @@
       "podman-compose-tdarr-root.target"
     ];
   };
-  virtualisation.oci-containers.containers."tdarr-node-main" = {
+  virtualisation.oci-containers.containers."tdarr-node" = {
     image = "ghcr.io/haveagitgat/tdarr_node:latest";
     environment = {
       "NVIDIA_DRIVER_CAPABILITIES" = "all";
       "NVIDIA_VISIBLE_DEVICES" = "all";
-      "PGID" = "100";
-      "PUID" = "1000";
       "TZ" = "Australia/Sydney";
-      "UMASK_SET" = "002";
-      "ffmpegVersion" = "7";
-      "inContainer" = "true";
-      "nodeName" = "MyExternalNode";
       "serverIP" = "0.0.0.0";
       "serverPort" = "8266";
     };
@@ -95,19 +91,40 @@
     extraOptions = [
       "--device=/dev/dri:/dev/dri:rwm"
       "--device=nvidia.com/gpu=all"
+      "--network-alias=tdarr-node"
       "--network=container:tdarr"
     ];
   };
-  systemd.services."podman-tdarr-node-main" = {
+  systemd.services."podman-tdarr-node" = {
     serviceConfig = {
       Restart = lib.mkOverride 90 "always";
     };
+    after = [
+      "podman-network-tdarr_default.service"
+    ];
+    requires = [
+      "podman-network-tdarr_default.service"
+    ];
     partOf = [
       "podman-compose-tdarr-root.target"
     ];
     wantedBy = [
       "podman-compose-tdarr-root.target"
     ];
+  };
+
+  systemd.services."podman-network-tdarr_default" = {
+    path = [ pkgs.podman ];
+    serviceConfig = {
+      Type = "oneshot";
+      RemainAfterExit = true;
+      ExecStop = "podman network rm -f tdarr_default";
+    };
+    script = ''
+      podman network inspect tdarr_default || podman network create tdarr_default
+    '';
+    partOf = [ "podman-compose-tdarr-root.target" ];
+    wantedBy = [ "podman-compose-tdarr-root.target" ];
   };
 
   # Root service
@@ -119,4 +136,4 @@
     };
     wantedBy = [ "multi-user.target" ];
   };
-}
+  }
