@@ -146,6 +146,7 @@
     cargo-rr                    # Run Rust programs under rr debugger
     clinfo                      # Lists OpenCL devices
     cmake
+    compose2nix
     conda                       # Python environment manager
     crane                       # Nix-native Rust build system (like crate2nix)
     cudaPackages.cudnn          # CUDA
