@@ -42,11 +42,11 @@
       Privacy = "device";
       JustWorksRepairing = "always";
       FastConnectable = "true";
-      Class = "0x000100";
+      # Class = "0x000100";
     };
   };
 
-  # hardware.enableAllFirmware = true;
+  hardware.enableAllFirmware = true;
 
   services.blueman.enable = true;
 }
