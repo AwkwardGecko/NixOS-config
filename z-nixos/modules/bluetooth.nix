@@ -13,11 +13,11 @@
 
   boot.blacklistedKernelModules = [ "xpad" ];
   
-  boot.extraModulePackages = with config.boot.kernelPackages; [
-    xpadneo
-  ];
+  # boot.extraModulePackages = with config.boot.kernelPackages; [
+  #   xpadneo
+  # ];
 
-  boot.extraModprobeConfig = '' options bluetooth disable_ertm=1 '';
+  boot.extraModprobeConfig = '' bluetooth disable_ertm=1 '';
   boot.initrd.kernelModules = [ 
     "joydev"
     "uhid"
