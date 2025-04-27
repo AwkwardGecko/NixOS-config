@@ -28,7 +28,7 @@
     #linuxKernel.packages.linux_zen.xpadneo
     bluez-experimental
     #bluez-alsa
-    #bluez-tools
+    bluez-tools
   ];
 
   hardware.xpadneo.enable = true;
@@ -37,6 +37,7 @@
     enable = true;
     powerOnBoot = true;
     settings.General = {
+      MultiProfile = "multiple";
       Experimental = true;
       Privacy = "device";
       JustWorksRepairing = "always";
