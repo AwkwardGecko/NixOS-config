@@ -25,9 +25,9 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    linuxKernel.packages.linux_zen.xpadneo
+    xpadneo
     # bluez-experimental
-    #bluez-alsa
+    # bluez-alsa
     # bluez-tools
   ];
 
@@ -38,7 +38,7 @@
     powerOnBoot = true;
     settings.General = {
       # MultiProfile = "multiple";
-      # Experimental = true;
+      Experimental = true;
       Privacy = "device";
       JustWorksRepairing = "always";
       FastConnectable = "true";
