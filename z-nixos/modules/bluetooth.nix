@@ -25,7 +25,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    xpadneo
+    /* xpadneo */
     # bluez-experimental
     # bluez-alsa
     # bluez-tools
