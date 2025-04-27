@@ -21,32 +21,32 @@
   boot.initrd.kernelModules = [ 
     "joydev"
     "uhid"
-    "hid_xpadneo"
+    # "hid_xpadneo"
   ];
 
   environment.systemPackages = with pkgs; [
-    #linuxKernel.packages.linux_zen.xpadneo
-    bluez-experimental
+    linuxKernel.packages.linux_zen.xpadneo
+    # bluez-experimental
     #bluez-alsa
-    bluez-tools
+    # bluez-tools
   ];
 
-  hardware.xpadneo.enable = true;
+  # hardware.xpadneo.enable = true;
 
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
     settings.General = {
-      MultiProfile = "multiple";
-      Experimental = true;
+      # MultiProfile = "multiple";
+      # Experimental = true;
       Privacy = "device";
       JustWorksRepairing = "always";
       FastConnectable = "true";
-      # Class = "0x000100";
+      Class = "0x000100";
     };
   };
 
-  hardware.enableAllFirmware = true;
+  # hardware.enableAllFirmware = true;
 
   services.blueman.enable = true;
 }
