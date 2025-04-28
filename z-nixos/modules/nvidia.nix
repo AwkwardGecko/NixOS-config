@@ -10,7 +10,11 @@
 }:
 {
 
-  services.xserver.videoDrivers = [ "nvidia" ]; 
+  services.xserver = {
+     enable = true;
+     videoDrivers = [ "nvidia" ];
+  };
+
   hardware = {
 
     nvidia = {
@@ -20,11 +24,6 @@
       powerManagement.enable = false;
       powerManagement.finegrained = false;
       package = config.boot.kernelPackages.nvidiaPackages.latest;
-    };
-
-    x11 = {
-      enable = true;
-      videoDrivers = [ "nvidia" ];
     };
 
     graphics = {
