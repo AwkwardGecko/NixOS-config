@@ -119,7 +119,7 @@ in {
             STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
             XDG_CURRENT_DESKTOP = "Hyprland";
             XDG_SESSION_TYPE = "wayland";
-            XAUTHORITY=$HOME/.Xauthority
+            XAUTHORITY = "\$HOME/.Xauthority";
           };
 
 
