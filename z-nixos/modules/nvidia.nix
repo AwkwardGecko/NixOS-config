@@ -22,7 +22,10 @@
       package = config.boot.kernelPackages.nvidiaPackages.latest;
     };
 
-
+    x11 = {
+      enable = true;
+      videoDrivers = [ "nvidia" ];
+    };
 
     graphics = {
       enable = true;
