@@ -83,7 +83,7 @@
 
   programs.nix-ld.enable = true; # resolve library issues for Stable Diffusion
 
-  programs.coolercontrol.enable = true;
+  # programs.coolercontrol.enable = true;
 
 
   # aagl.enableNixpkgsReleaseBranchCheck = false;
@@ -97,6 +97,7 @@
     ./modules/boot.nix # configure kernel modules
     ./modules/cachix.nix # cachix
     ./modules/chromium.nix
+    ./modules/coolercontrol.nix
     #./modules/cron.nix
     #./modules/docker.nix
     ./modules/filesystem.nix
