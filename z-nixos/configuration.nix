@@ -226,6 +226,7 @@
     python311Packages.wheel
     #python311Packages.torch
     python312Packages.libpcap   # Python bindings for libpcap (next-gen testing?)
+    python312Packages.venv
     qbittorrent                 # BitTorrent client
     rclone                      # Sync with cloud storage
     rustc                       # Rust compiler
