@@ -2,10 +2,6 @@
 
 {
 
-  environment.systemPackages = with pkgs; [
-    xmrig
-  ];
-
   systemd.user.services.xmrig = {
     Unit = {
       Description = "xmrig miner (user service)";

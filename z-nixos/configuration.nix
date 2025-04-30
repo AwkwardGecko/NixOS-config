@@ -249,6 +249,7 @@
     wl-clipboard                # clipboard support for wayland
     wget                        # File downloader
     wine                        # Windows compatibility layer
+    xmrig
     xorg.libX11                 # Core X11 library
     xorg.libXcomposite          # Compositing support for X11
     xorg.libXdamage             # Damage tracking for X11
