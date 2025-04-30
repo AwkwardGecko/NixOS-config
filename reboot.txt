@@ -1,0 +1,2 @@
+May 01 09:47:18 z-nixos systemd[1]: systemd-reboot.service: Deactivated successfully.
+May 01 09:47:18 z-nixos systemd[1]: Finished System Reboot.

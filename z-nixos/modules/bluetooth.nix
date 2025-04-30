@@ -17,7 +17,7 @@
   #   xpadneo
   # ];
 
-  boot.extraModprobeConfig = '' bluetooth disable_ertm=1 '';
+  # boot.extraModprobeConfig = '' bluetooth disable_ertm=1 '';
   boot.initrd.kernelModules = [ 
     "joydev"
     "uhid"
