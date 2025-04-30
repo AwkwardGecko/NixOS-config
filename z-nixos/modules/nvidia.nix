@@ -11,7 +11,7 @@
 {
 
   services.xserver = {
-     enable = false;
+     enable = true;
      videoDrivers = [ "nvidia" ];
   };
 
