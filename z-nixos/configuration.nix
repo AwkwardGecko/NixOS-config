@@ -212,6 +212,7 @@
     parted                      # Partitioning tool
     pavucontrol                 # PulseAudio volume control GUI
     pcapfix                     # Repairs broken .pcap files
+    pciutils                    # testing PCI links
     pkg-config                  # Finds C libraries (used by reliquary-archiver)
     protobuf                    # Google's Protocol Buffers (serialization)
     pyenv                       # Python version manager
