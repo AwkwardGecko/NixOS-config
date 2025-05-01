@@ -199,6 +199,7 @@
     llvmPackages.bintools      # LLVM toolchain binaries (e.g., ar, nm)
     #lutris                      # Game manager (especially for Wine games)
     lsof
+    lsusb                        # check usb connections
     lynis                       # security auditing
     mesa                        # Open-source graphics drivers
     nettools                    # Old-school network tools (ifconfig, etc.)
