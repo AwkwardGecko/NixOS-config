@@ -184,14 +184,17 @@
     inotify-tools               # check what is making folders
     #koboldcpp                   # Local LLM interface for KoboldAI
     jq                          #
+    libcap # test
     libGL                       # OpenGL library
     libdrm                      # Direct Rendering Manager (graphics stuff)
     libglvnd                    # OpenGL Vendor-Neutral Dispatch library (Stable Diffusion dependency)
     libheif                    # HEIF image support
     libnotify
+    
     libpcap                     # Packet capture library (used in Fribbels Honkai Star Rail Optimizer)
     libsecret                   # Secret storage (GNOME keyring)
     libxkbcommon                # Keyboard layout handling (Wayland/X)
+    libz
     lld                         # LLVM linker
     llvmPackages.bintools      # LLVM toolchain binaries (e.g., ar, nm)
     #lutris                      # Game manager (especially for Wine games)
