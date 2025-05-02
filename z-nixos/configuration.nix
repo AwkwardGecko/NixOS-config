@@ -13,17 +13,21 @@
     stateVersion = "24.05";
   };
 
-  security.sudo.extraRules = [
-    {
-      users = [ "zozano" ];
-      commands = [
-        {
-          command = "/run/current-system/sw/bin/nixos-rebuild";
-          options = [ "NOPASSWD" ];
-        }
-      ];
-    }
-  ];
+  security.sudo = {
+     extraRules = [{
+         users = [ "zozano" ];
+         commands = [
+            {
+            command = "/run/current-system/sw/bin/nixos-rebuild";
+            options = [ "NOPASSWD" ];
+            }
+         ];
+     }];
+
+     extraConfig = ''
+     Defaults timestamp_timeout=-1
+     '';
+  };
 
   # boot.kernel.sysctl = {
   #   "vm.swapiness" = 50; 
