@@ -214,6 +214,7 @@
     nss                         # Network Security Services
     nvtopPackages.nvidia        # GPU usage monitor for NVIDIA
     onlyoffice-bin              # Office suite
+    opencv
     openssl                     # TLS/SSL support (used by reliquary-archiver and other tools)
     pango                       # Text rendering library
     parted                      # Partitioning tool
