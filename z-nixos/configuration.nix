@@ -190,6 +190,7 @@
     jq                          #
     libcap # test
     libGL                       # OpenGL library
+    libglvnd
     libdrm                      # Direct Rendering Manager (graphics stuff)
     libglvnd                    # OpenGL Vendor-Neutral Dispatch library (Stable Diffusion dependency)
     libheif                    # HEIF image support
