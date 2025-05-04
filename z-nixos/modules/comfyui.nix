@@ -1,40 +1,22 @@
-{ lib, python3Packages, ... }:
-
-python3Packages.buildPythonPackage rec {
-   pname = "comfyui-dependencies";
-   version = "1.0";
-   src = "/home/zozano/test-shell/ComfyUI/requirements.txt";
-
-   propagatedBuildInputs = with python3Packages; [
-    comfyui-frontend-package
-    comfyui-workflow-templates
-    torch
-    torchsde
-    torchvision
-    torchaudio
-    numpy
-    einops
-    transformers
-    tokenizers
-    sentencepiece
-    safetensors
-    aiohttp
-    yarl
-    pyyaml
-    Pillow
-    scipy
-    tqdm
-    psutil
-    kornia
-    spandrel
-    soundfile
-    av
-    pydantic
+{ lib, pkgs, ... }:
+{
+   environment.systemPackages = with pkgs; [
+    python312
+    python312Packages.diffusers
+    python312Packages.pip
+    python312Packages.safetensors
+    python312Packages.setuptools
+    python312Packages.virtualenv
+    #python312Packages.onnxruntime-gpu
+    git
+    cudatoolkit
+    gcc
+    libGL
+    libglvnd
+    mesa
+    opencv
+    stdenv.cc.cc.lib
+    zlib
    ];
-
-   meta = with lib; {
-      description = "ComfyUI dependencies";
-      license = licenses.mit;
-   };
 
 };

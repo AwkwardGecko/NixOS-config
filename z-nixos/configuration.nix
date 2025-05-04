@@ -101,6 +101,7 @@
     ./modules/boot.nix # configure kernel modules
     ./modules/cachix.nix # cachix
     ./modules/chromium.nix
+    ./modules/comfyui.nix
     ./modules/coolercontrol.nix
     #./modules/cron.nix
     #./modules/docker.nix
