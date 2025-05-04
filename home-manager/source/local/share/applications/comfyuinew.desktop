@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=NewComfyUI
-Exec=cd ~/test-shell && NIXPKGS_ALLOW_UNFREE=1 nix-shell --run "cd ComfyUI && python main.py"
+Exec=kitty bash -c "cd ~/test-shell && NIXPKGS_ALLOW_UNFREE=1 nix-shell --run "cd ComfyUI && python main.py""
 Icon=/home/zozano/.local/share/icons/comfyui.png
 Terminal=false
 Type=Application
