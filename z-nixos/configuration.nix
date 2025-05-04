@@ -224,7 +224,6 @@
     protobuf                    # Google's Protocol Buffers (serialization)
     pyenv                       # Python version manager
     python3
-    python3Packages.comfyui-frontend-package
     python311                   # Python 3.11 interpreter
     python311Packages.pyyaml
     python311Packages.numpy
@@ -235,6 +234,7 @@
     python311Packages.wheel
     #python311Packages.torch
     python312Packages.libpcap   # Python bindings for libpcap (next-gen testing?)
+    python312Packages.opencv-python
     qbittorrent                 # BitTorrent client
     rclone                      # Sync with cloud storage
     rustc                       # Rust compiler
