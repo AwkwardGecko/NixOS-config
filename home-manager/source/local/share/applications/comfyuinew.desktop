@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=ComfyUI
+Name=NewComfyUI
 Exec=~./local/share/applications/comfyui-shell.sh
 Icon=~./local/share/icons/comfyui.png
 Terminal=false
