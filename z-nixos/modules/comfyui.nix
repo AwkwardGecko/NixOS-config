@@ -7,7 +7,6 @@
     python312Packages.safetensors
     python312Packages.setuptools
     python312Packages.virtualenv
-    #python312Packages.onnxruntime-gpu
     git
     cudatoolkit
     gcc
@@ -19,4 +18,4 @@
     zlib
    ];
 
-};
+}
