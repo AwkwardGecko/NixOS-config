@@ -13,7 +13,7 @@
 
   services.mako = {
     enable = true; # notification daemon
-    defaultTimeout = 2;
+    defaultTimeout = "2";
     icons = true;
     font = "monospace";
     #backgroundColor = "#${config.colorScheme.palette.base01}";
