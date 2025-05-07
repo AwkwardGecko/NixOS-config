@@ -269,17 +269,7 @@
             background: #161320;
         }
 
-        #custom-cputemp {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            margin-bottom: 0px;
-            padding-right: 10px;
-            border-radius: 10px;
-            transition: none;
-            color: #B5E8E0;
-            background: #161320;
-        }
+
 
         #bluetooth {
             margin-top: 6px;
