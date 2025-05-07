@@ -19,9 +19,9 @@
         position = "top";
 
         modules-left = [
-          "custom/gpu-temp"
-          "custom/gpu-load"
-          "custom/cpu-temp"
+          "custom/gputemp"
+          "custom/gpuload"
+          "custom/cputemp"
           "cpu"
         ];
 
@@ -168,7 +168,7 @@
         };
 
 
-        "custom/gpu-temp" = {
+        "custom/gputemp" = {
           icon-size = 20;
           icon-spacing = 0;
           format = " GPU {output}°C";
@@ -176,7 +176,7 @@
           interval = 10;
          };
 
-        "custom/gpu-load" = {
+        "custom/gpuload" = {
           icon-size = 20;
           icon-spacing = 0;
           format = " GPU {output}%";
@@ -184,7 +184,7 @@
           interval = 5;
         };
 
-        "custom/cpu-temp" = {
+        "custom/cputemp" = {
           icon-size = 20;
           icon-spacing = 0;
           format = " CPU {output}°C";
@@ -245,7 +245,7 @@
             background: transparent;
         }
 
-        #custom-gpu-temp {
+        #custom-gputemp {
             margin-top: 6px;
             margin-left: 8px;
             padding-left: 10px;
@@ -257,7 +257,7 @@
             background: #161320;
         }
         
-        #custom-gpu-load {
+        #custom-gpuload {
             margin-top: 6px;
             margin-left: 8px;
             padding-left: 10px;
@@ -269,7 +269,7 @@
             background: #161320;
         }
 
-        #custom-cpu-temp {
+        #custom-cputemp {
             margin-top: 6px;
             margin-left: 8px;
             padding-left: 10px;
