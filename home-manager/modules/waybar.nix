@@ -19,9 +19,9 @@
         position = "top";
 
         modules-left = [
-          "custom/gputemp"
-          "custom/gpuload"
-          "custom/cputemp"
+          #"custom/gputemp"
+          #"custom/gpuload"
+          #"custom/cputemp"
           "cpu"
           "memory"
         ];

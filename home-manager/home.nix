@@ -37,7 +37,7 @@
     # ./modules/swaync.nix
     ./modules/rofi.nix
     ./modules/tmux.nix
-    # ./modules/waybar.nix
+    ./modules/waybar.nix
     # ./modules/waybar/mechabar.nix
     #./modules/xserver.nix
     ./modules/xmrig.nix
