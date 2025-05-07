@@ -188,7 +188,7 @@
           icon-size = 20;
           icon-spacing = 0;
           format = " CPU {output}°C";
-          exec = "sensors | awk '/Tctl:/ {print $2}' | sed 's/+//;s/°C//'";
+          exec = "/run/current-system/sw/bin/sensors | awk '/Tctl:/ {print \$2}' | sed 's/+//;s/°C//'";
           interval = 10;
         };
 
