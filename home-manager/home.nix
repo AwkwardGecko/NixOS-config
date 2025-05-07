@@ -61,6 +61,7 @@
     #".config/hypr/hypridle.conf".source = source/config/hypr/hypridle-xmrig-on.conf;
     ".config/hypr/hypridle.conf".source = source/config/hypr/hypridle-xmrig-off.conf;
     ".local/share/vlc/lua/extensions".source = source/local/share/vlc/lua/extensions;
+    ".config/waybar/gputemp.sh".source = source/config/waybar/gputemp.sh;
     # ".config/nsxiv/delete_and_next.sh".source = source/config/nsxiv/delete_and_next.sh;
     # ".config/nsxiv/exec/key-handler".source = source/config/nsxiv/exec/key-handler;
   };
