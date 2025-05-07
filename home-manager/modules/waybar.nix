@@ -19,9 +19,9 @@
         position = "top";
 
         modules-left = [
-          #"custom/gputemp"
-          #"custom/gpuload"
-          #"custom/cputemp"
+          "custom/gputemp"
+          "custom/gpuload"
+          "custom/cputemp"
           "cpu"
           "memory"
         ];
@@ -168,13 +168,15 @@
         };
 
 
-        # "custom/gputemp" = {
-        #   icon-size = 20;
-        #   icon-spacing = 0;
-        #   format = " GPU {output}°C";
-        #   exec =  ''sh -c "/run/current-system/sw/bin/nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits"'';
-        #   interval = 10;
-        #  };
+        "custom/gputemp" = {
+          format = " GPU {output}°C";
+          max-length = 40;
+          icon-size = 20;
+          icon-spacing = 0;
+          exec =  "$HOME/.config/waybar/gputemp.sh 2> /dev/null";
+          return-type = "json";
+          interval = 10;
+         };
         #
         # "custom/gpuload" = {
         #   icon-size = 20;
