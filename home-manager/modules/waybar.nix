@@ -21,7 +21,7 @@
         modules-left = [
           #"custom/gputemp"
           #"custom/gpuload"
-          #"custom/cputemp"
+          "custom/cputemp"
           "cpu"
           "memory"
         ];
@@ -172,7 +172,7 @@
           icon-size = 20;
           icon-spacing = 0;
           format = " GPU {output}°C";
-          exec = "/usr/bin/env bash -c nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits";
+          exec = "/run/current-system/sw/bin/nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits";
           interval = 10;
          };
 
