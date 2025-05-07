@@ -21,7 +21,7 @@
         modules-left = [
           #"custom/gputemp"
           #"custom/gpuload"
-          "custom/cputemp"
+          #"custom/cputemp"
           "cpu"
           "memory"
         ];
@@ -168,29 +168,29 @@
         };
 
 
-        "custom/gputemp" = {
-          icon-size = 20;
-          icon-spacing = 0;
-          format = " GPU {output}°C";
-          exec =  ''sh -c "/run/current-system/sw/bin/nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits"'';
-          interval = 10;
-         };
-
-        "custom/gpuload" = {
-          icon-size = 20;
-          icon-spacing = 0;
-          format = " GPU {output}%";
-          exec = "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits";
-          interval = 5;
-        };
-
-        "custom/cputemp" = {
-          icon-size = 20;
-          icon-spacing = 0;
-          format = " CPU {output}°C";
-          exec = "/run/current-system/sw/bin/sensors | awk '/Tctl:/ {print \$2}' | sed 's/+//;s/°C//'";
-          interval = 10;
-        };
+        # "custom/gputemp" = {
+        #   icon-size = 20;
+        #   icon-spacing = 0;
+        #   format = " GPU {output}°C";
+        #   exec =  ''sh -c "/run/current-system/sw/bin/nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits"'';
+        #   interval = 10;
+        #  };
+        #
+        # "custom/gpuload" = {
+        #   icon-size = 20;
+        #   icon-spacing = 0;
+        #   format = " GPU {output}%";
+        #   exec = "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits";
+        #   interval = 5;
+        # };
+        #
+        # "custom/cputemp" = {
+        #   icon-size = 20;
+        #   icon-spacing = 0;
+        #   format = " CPU {output}°C";
+        #   exec = "/run/current-system/sw/bin/sensors | awk '/Tctl:/ {print \$2}' | sed 's/+//;s/°C//'";
+        #   interval = 10;
+        # };
 
         "custom/power" = {
           icon-size = 20;
