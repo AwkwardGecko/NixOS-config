@@ -25,7 +25,7 @@
           "custom/gpu-temp"
           "custom/gpu-load"
           "custom/cpu-temp"
-          "custom/cpu"
+          "cpu"
         ];
 
         modules-center = [
@@ -242,7 +242,7 @@
             background: transparent;
         }
 
-        #custom-xmr-sync {
+        #custom-gpu-temp {
             margin-top: 6px;
             margin-left: 8px;
             padding-left: 10px;
@@ -252,7 +252,30 @@
             transition: none;
             color: #B5E8E0;
             background: #161320;
+        }
+        
+        #custom-gpu-load {
+            margin-top: 6px;
+            margin-left: 8px;
+            padding-left: 10px;
+            margin-bottom: 0px;
+            padding-right: 10px;
+            border-radius: 10px;
+            transition: none;
+            color: #B5E8E0;
+            background: #161320;
+        }
 
+        #custom-cpu-temp {
+            margin-top: 6px;
+            margin-left: 8px;
+            padding-left: 10px;
+            margin-bottom: 0px;
+            padding-right: 10px;
+            border-radius: 10px;
+            transition: none;
+            color: #B5E8E0;
+            background: #161320;
         }
 
         #bluetooth {
