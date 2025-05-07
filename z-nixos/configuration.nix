@@ -177,6 +177,7 @@
     glib                        # Low-level GNOME core library
     glxinfo                     # 
     #glibc_memusage              # Tracks memory usage of programs
+    gedit
     gnome-calculator            # Calculator app
     gnome-disk-utility          # Disk management GUI
     gparted                     # Partitioning tool

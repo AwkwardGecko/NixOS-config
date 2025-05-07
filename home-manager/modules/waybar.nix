@@ -22,10 +22,10 @@
         position = "top";
 
         modules-left = [
-          #"mpris"
-          #"custom/xmr-sync"
-          #"notifications"
-          #"hyprland/window"
+          "custom/gpu-temp"
+          "custom/gpu-load"
+          "custom/cpu-temp"
+          "custom/cpu"
         ];
 
         modules-center = [
@@ -39,7 +39,6 @@
           "gamemode"
           "pulseaudio"
           "memory"
-          "cpu"
           "disk"
           "bluetooth"
           "custom/power"
@@ -105,7 +104,7 @@
         };
 
         cpu = {
-          format = "{usage}% ";
+          format = "{usage}%  ";
           icon-size = 20;
           icon-spacing = 0;
           #tooltip = true;
@@ -124,9 +123,9 @@
 
         memory = {
           interval = 10;
-          icon-size = 20;
+          icon-size = 20; 
           icon-spacing = 0;
-          format = "{percentage}% ";
+          format = "{percentage}%  ";
           max-length = 10;
           #tooltip = true;
           #tooltip-format = "RAM - {used:0.1f}GiB used";
@@ -169,6 +168,25 @@
             paused = "⏸";
           };
           ignored-players = [ "firefox" ];
+        };
+
+
+        "custom/gpu-temp" = {
+          format = " GPU {output}°C";
+          exec = "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits";
+          interval = 10;
+         };
+
+        "custom/gpu-load" = {
+          format = " GPU {output}%";
+          exec = "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits";
+          interval = 5;
+        };
+
+        "custom/cpu-temp" = {
+          format = " CPU {output}°C";
+          exec = "sensors | awk '/Tctl:/ {print $2}' | sed 's/+//;s/°C//'";
+          interval = 10;
         };
 
         "custom/power" = {
