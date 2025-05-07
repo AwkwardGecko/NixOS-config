@@ -172,18 +172,24 @@
 
 
         "custom/gpu-temp" = {
+          icon-size = 20;
+          icon-spacing = 0;
           format = " GPU {output}°C";
           exec = "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits";
           interval = 10;
          };
 
         "custom/gpu-load" = {
+          icon-size = 20;
+          icon-spacing = 0;
           format = " GPU {output}%";
           exec = "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits";
           interval = 5;
         };
 
         "custom/cpu-temp" = {
+          icon-size = 20;
+          icon-spacing = 0;
           format = " CPU {output}°C";
           exec = "sensors | awk '/Tctl:/ {print $2}' | sed 's/+//;s/°C//'";
           interval = 10;
