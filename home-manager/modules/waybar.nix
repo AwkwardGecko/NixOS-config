@@ -19,10 +19,11 @@
         position = "top";
 
         modules-left = [
-          "custom/gputemp"
-          "custom/gpuload"
-          "custom/cputemp"
+          "custom-gputemp"
+          "custom-gpuload"
+          "custom-cputemp"
           "cpu"
+          "memory"
         ];
 
         modules-center = [
@@ -35,7 +36,6 @@
           "tray"
           "gamemode"
           "pulseaudio"
-          "memory"
           "disk"
           "bluetooth"
           "custom/power"
@@ -168,7 +168,7 @@
         };
 
 
-        "custom/gputemp" = {
+        "custom-gputemp" = {
           icon-size = 20;
           icon-spacing = 0;
           format = " GPU {output}°C";
@@ -176,7 +176,7 @@
           interval = 10;
          };
 
-        "custom/gpuload" = {
+        "custom-gpuload" = {
           icon-size = 20;
           icon-spacing = 0;
           format = " GPU {output}%";
@@ -184,7 +184,7 @@
           interval = 5;
         };
 
-        "custom/cputemp" = {
+        "custom-cputemp" = {
           icon-size = 20;
           icon-spacing = 0;
           format = " CPU {output}°C";
