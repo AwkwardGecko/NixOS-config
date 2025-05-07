@@ -172,7 +172,7 @@
           icon-size = 20;
           icon-spacing = 0;
           format = " GPU {output}°C";
-          exec = "{$bash}/bin/bash nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits";
+          exec = "/usr/bin/env bash nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits";
           interval = 10;
          };
 
