@@ -12,9 +12,6 @@
 
   programs.waybar = {
     enable = true;
-  };
-
-  programs.waybar = {
     settings = [
       {
 
