@@ -10,6 +10,19 @@
 }:
 {
 
+   services.mbpfan = {
+      enable = true;
+      settings = {
+         general = {
+            low_temp = 55;
+            high_temp = 58;
+            max_temp = 65;
+            polling_interval = 1;
+         };
+      };
+   };
+
+
   services.xserver = {
      enable = true;
      videoDrivers = [ "nvidia" ];
