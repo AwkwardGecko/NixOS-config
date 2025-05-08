@@ -201,7 +201,7 @@
           icon-size = 20;
           icon-spacing = 0;
           exec = "/home/zozano/.dotfiles/scripts/waybar-update-status.sh";
-          interval = 300;
+          interval = 5;
           on-click = "kitty --hold /usr/bin/env bash -c '/home/zozano/.dotfiles/system-update.sh'";
           tooltip = false;
           return-type = "json";
