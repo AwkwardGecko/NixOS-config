@@ -172,7 +172,7 @@
           format = " GPU {}°C";
           icon-size = 20;
           icon-spacing = 0;
-          exec =  "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounit";
+          exec =  "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits";
           return-type = "";
           interval = 5;
          };
