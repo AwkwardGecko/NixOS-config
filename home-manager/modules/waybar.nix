@@ -19,7 +19,7 @@
         position = "top";
 
         modules-left = [
-          "custom/cpu"
+          "custom/cpuload"
           "custom/cputemp"
           "custom/gpuload"
           "custom/gputemp"
@@ -168,7 +168,7 @@
         #   #tooltip = true;
         # };
         
-        "custom/cpu" = {
+        "custom/cpuload" = {
             format = "CPU   {}%";
             exec = "printf '%02d\\n' $(grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print int(usage)}')";
             interval = 5;
@@ -271,6 +271,18 @@
         }
         
         #custom-cputemp {
+            margin-top: 6px;
+            margin-left: 8px;
+            padding-left: 10px;
+            margin-bottom: 0px;
+            padding-right: 10px;
+            border-radius: 10px;
+            transition: none;
+            color: #B5E8E0;
+            background: #161320;
+        }
+
+        #custom-cpuload {
             margin-top: 6px;
             margin-left: 8px;
             padding-left: 10px;
