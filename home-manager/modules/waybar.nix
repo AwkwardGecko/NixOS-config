@@ -185,7 +185,15 @@
           icon-size = 20;
           icon-spacing = 0;
           return-type = ""; 
-          exec = "nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F',' '{ printf \"%02d%%\\n\", int(($1 / $2) * 100) }'";
+          #exec = "nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F',' '{ printf \"%02d%%\\n\", int(($1 / $2) * 100) }'";
+          exec = "nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F',' '{ 
+            val=int(($1 / $2) * 100); 
+            color=\"\x1b[38;5\"; 
+            if (val <= 50) { color=color\"82m\"; } 
+            else if (val <= 80) { color=color\"226m\"; } 
+            else { color=color\"196m\"; } 
+            printf \"%s%02d%%\x1b[0m\\n\", color, val;
+            }'";
           interval = 5;
          };
 
