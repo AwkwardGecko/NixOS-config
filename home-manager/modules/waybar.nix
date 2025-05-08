@@ -287,6 +287,7 @@
             padding-left: 10px;
             margin-bottom: 0px;
             padding-right: 10px;
+            color: #B5E8E0;
             transition: none;
             border-radius: 10px;
             background: #161320;
