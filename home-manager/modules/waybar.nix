@@ -177,7 +177,7 @@
             interval = 5;
             return-type = "";
             icon-size = 20;
-            icon-spacing = 1;
+            icon-spacing = 0;
         };
        
         "custom/gpuvram" = {
