@@ -19,9 +19,9 @@
         position = "top";
 
         modules-left = [
-          "custom/gputemp"
+          # "custom/gputemp"
           "custom/gpuload"
-          "custom/cputemp"
+          #"custom/cputemp"
           "cpu"
           "memory"
         ];
@@ -168,23 +168,24 @@
         };
 
 
-        "custom/gputemp" = {
-          format = " GPU {output}°C";
-          max-length = 40;
-          icon-size = 20;
-          icon-spacing = 0;
-          exec =  "$HOME/.config/waybar/gputemp.sh 2> /dev/null";
-          return-type = "json";
-          interval = 10;
-         };
-        #
-        # "custom/gpuload" = {
+        # "custom/gputemp" = {
+        #   format = " GPU {output}°C";
+        #   max-length = 40;
         #   icon-size = 20;
         #   icon-spacing = 0;
-        #   format = " GPU {output}%";
-        #   exec = "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits";
-        #   interval = 5;
-        # };
+        #   exec =  "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounit";
+        #   return-type = "json";
+        #   interval = 10;
+        #  };
+        #
+        "custom/gpuload" = {
+          icon-size = 20;
+          icon-spacing = 0;
+          format = " GPU {}%";
+          return-type = "";
+          exec = "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits";
+          interval = 5;
+        };
         #
         # "custom/cputemp" = {
         #   icon-size = 20;
