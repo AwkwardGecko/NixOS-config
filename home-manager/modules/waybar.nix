@@ -197,7 +197,7 @@
          };
 
         "custom/update" = {
-          format = "   ";
+          format = "{}";
           icon-size = 20;
           icon-spacing = 0;
           exec = "/home/zozano/.dotfiles/scripts/waybar-update-status.sh";
