@@ -200,9 +200,11 @@
           format = "   ";
           icon-size = 20;
           icon-spacing = 0;
+          exec = "/home/zozano/.dotfiles/scripts/waybar-update-status.sh";
+          interval = 300;
           on-click = "kitty --hold /usr/bin/env bash -c '/home/zozano/.dotfiles/system-update.sh'";
-          return-type = "";
-          interval = 5;
+          tooltip = false;
+          return-type = "json";
          };
 
 
@@ -320,8 +322,15 @@
             padding-right: 10px;
             border-radius: 10px;
             transition: none;
-            color: #B5E8E0;
             background: #161320;
+        }
+
+        #custom-update.clean {
+           color: #B5E8E0;
+        }
+
+        #custom-update.dirty {
+           color: #F28FAD;
         }
 
         #custom-cputemp {
