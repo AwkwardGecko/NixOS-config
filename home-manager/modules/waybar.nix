@@ -19,10 +19,10 @@
         position = "top";
 
         modules-left = [
+          "cpu"
+          "custom/cputemp"
           "custom/gputemp"
           "custom/gpuload"
-          "custom/cputemp"
-          "cpu"
           "memory"
         ];
 
@@ -116,7 +116,7 @@
           interval = 10;
           icon-size = 20; 
           icon-spacing = 0;
-          format = "   RAM {percentage}% ";
+          format = "  RAM {percentage}%";
           max-length = 10;
           #tooltip = true;
           #tooltip-format = "RAM - {used:0.1f}GiB used";
@@ -170,7 +170,7 @@
 
 
         "custom/gputemp" = {
-          format = " GPU {}°C";
+          format = "{}°C";
           icon-size = 20;
           icon-spacing = 0;
           exec =  "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits";
@@ -190,7 +190,7 @@
         "custom/cputemp" = {
           icon-size = 20;
           icon-spacing = 0;
-          format = " CPU {}°C";
+          format = "{}°C";
           return-type = "";
           exec = "cat /sys/class/thermal/thermal_zone0/temp | awk '{print $1 / 1000}'";
           interval = 10;
