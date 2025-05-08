@@ -230,7 +230,7 @@
             border: none;
             border-radius: 10px;
             font-size: 15px;
-            font-family: "JetBrainsMono Nerd Font";
+            font-family: "JetBrainsMono Nerd Font Mono";
         }
 
         window#waybar {
