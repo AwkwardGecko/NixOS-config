@@ -270,7 +270,7 @@
 
 
 #custom-gpuvram.low {
-    color: #82E0AA;
+    color: #B5E8E0;
 }
 
 #custom-gpuvram.medium {
