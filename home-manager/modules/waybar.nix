@@ -23,6 +23,7 @@
           "custom/cputemp"
           "custom/gpuload"
           "custom/gputemp"
+          "custom/gpuvram"
           "memory"
         ];
 
@@ -132,7 +133,16 @@
             ""
           ];
         };
-
+	\uf4b8	Memory module (your original, probably best for VRAM)
+	\uf85c	Chip (CPU/GPU style)
+	\uf85a	CPU/GPU die (blockier, chip layout)
+	\uf4bc	Hardware / Device
+	\uf57d	Globe (could be used for 'rendering', less direct)
+	\uf2db	Microchip (good for generic memory or GPU)
+󰍛	\udb80\ude5b	Material: Memory (Nerd Fonts 3.x+)
+󰍜	\udb80\ude5c	Material: GPU Memory / Chip
+󰒓	\udb80\udd13	Material: NAND / IC looking
+󰘚	\udb80\udc1a	Memory stick (not always supported)
         bluetooth = {
           icon-size = 20;
           icon-spacing = 0;
@@ -168,14 +178,23 @@
         # };
         
         "custom/cpuload" = {
-            format = "  {}%";
+            format = "	 {}%";
             exec = "printf '%02d\\n' $(grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print int(usage)}')";
             interval = 5;
             return-type = "";
             icon-size = 20;
             icon-spacing = 1;
         };
-        
+       
+        "custom/gpuvram" = {
+          format = "󰘚 {}°C";
+          icon-size = 20;
+          icon-spacing = 0;
+          exec = "nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F',' '{ printf "%.1f%%\n", ($1 / $2) * 100 }'";
+          return-type = "";
+          interval = 5;
+         };
+
         "custom/gputemp" = {
           format = " {}°C";
           icon-size = 20;
@@ -268,7 +287,17 @@
             color: #B5E8E0;
             background: #161320;
         }
-        
+        #custom-gpuvram {
+            margin-top: 6px;
+            margin-left: 8px;
+            padding-left: 10px;
+            margin-bottom: 0px;
+            padding-right: 10px;
+            border-radius: 10px;
+            transition: none;
+            color: #B5E8E0;
+            background: #161320;
+        }
         #custom-cputemp {
             margin-top: 6px;
             margin-left: 8px;
