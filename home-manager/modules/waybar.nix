@@ -198,7 +198,7 @@
 
         "custom/update" = {
           format = "{}";
-          icon-size = 20;
+          icon-size = 21;
           icon-spacing = 0;
           exec = "/home/zozano/.dotfiles/scripts/waybar-update-status.sh";
           interval = 60;
