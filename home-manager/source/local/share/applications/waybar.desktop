@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Waybar
+Exec=kitty bash -c 'waybar'
+Icon=jellyfin-media-player
+Terminal=false
+Type=Application
+Categories=Media;
