@@ -184,8 +184,8 @@
           format = "󰘚 {}°C";
           icon-size = 20;
           icon-spacing = 0;
-          exec = "nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F',' '{ printf "%.1f%%\n", ($1 / $2) * 100 }'";
-          return-type = "";
+          return-type = ""; 
+          exec = "nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F',' '{ printf \"%.1f%%\\n\", ($1 / $2) * 100 }'";
           interval = 5;
          };
 
