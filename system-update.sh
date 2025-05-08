@@ -11,14 +11,14 @@
 #
 # nix flake update
 # sudo nixos-rebuild switch --upgrade --flake /home/zozano/.dotfiles/#z-nixos
-#
-#
+
+
 (
 set -euo pipefail
 
 cd /home/zozano/.dotfiles
 git add *
-git commit -m "$(date '+%F_%H:%M:%S')" || true
+git commit -m "$(date '+%F_%H:%M:%S')" 
 git push github main
 
 # Define the timestamp file
