@@ -244,16 +244,13 @@
       }
     ];
 
-    style = ''
+   style = ''
         * {	
             border: none;
             border-radius: 10px;
             font-size: 15px;
             font-family: "JetBrainsMono Nerd Font", monospace;
         }
-
-
-
 
         window#waybar {
             background: transparent;
@@ -272,22 +269,22 @@
 
 
 
-        #custom-gpuvram.low" = {
-          color = "#82E0AA";  # Light green
+        #custom-gpuvram.low: {
+          color: #82E0AA;
         };
-  
-        #custom-gpuvram.medium" = {
-          color = "#FFD700";  # Yellow
+         
+        #custom-gpuvram.medium: {
+          color: #FFD700;
         };
-   
-        #custom-gpuvram.high" = {
-          color = "#FF6347";  # Red
+      
+        #custom-gpuvram.high: {
+          color: #FF6347;
         };
-  
-        #custom-gpuvram" = {
-          background = "#161320";  # Dark background for the whole GPU bar element
-          padding = "5px";
-          border-radius = "5px";
+      
+        #custom-gpuvram: {
+          background: #161320;
+          padding: 5px;
+          border-radius: 5px;
         };
 
 
