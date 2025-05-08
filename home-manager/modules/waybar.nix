@@ -260,7 +260,7 @@
             border: none;
             border-radius: 10px;
             font-size: 15px;
-            font-family: "JetBrainsMono Nerd Font", monospace;
+            font-family: "JetBrainsMono-Regular", monospace;
         }
 
         window#waybar {
