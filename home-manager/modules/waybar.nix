@@ -281,7 +281,7 @@
     color: #FF6347;
 }
       
-        #custom-gpuvram: {
+        #custom-gpuvram {
             margin-top: 6px;
             margin-left: 8px;
             padding-left: 10px;
