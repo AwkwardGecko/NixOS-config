@@ -36,8 +36,8 @@
           "tray"
           "gamemode"
           "pulseaudio"
-          "disk"
-          "bluetooth"
+          #"disk"
+          #"bluetooth"
           "custom/power"
         ];
 
@@ -100,7 +100,6 @@
           on-click = "pavucontrol";
         };
 
-
         disk = {
           interval = 30;
           icon-size = 20;
@@ -116,7 +115,7 @@
           interval = 10;
           icon-size = 20; 
           icon-spacing = 0;
-          format = "RAM  {percentage}%";
+          format = " {percentage}%";
           #max-length = 10;
           #tooltip = true;
           #tooltip-format = "RAM - {used:0.1f}GiB used";
@@ -169,7 +168,7 @@
         # };
         
         "custom/cpuload" = {
-            format = "CPU  {}%";
+            format = " {}%";
             exec = "printf '%02d\\n' $(grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print int(usage)}')";
             interval = 5;
             return-type = "";
@@ -189,7 +188,7 @@
         "custom/gpuload" = {
           icon-size = 20;
           icon-spacing = 0;
-          format = "GPU   {}%";
+          format = " {}%";
           return-type = "";
           exec = "printf '%02d\\n' $(nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits)";
           #exec = "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits";
