@@ -168,7 +168,7 @@
         # };
         
         "custom/cpuload" = {
-            format = " {}%";
+            format = "  {}%";
             exec = "printf '%02d\\n' $(grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print int(usage)}')";
             interval = 5;
             return-type = "";
@@ -230,7 +230,7 @@
             border: none;
             border-radius: 10px;
             font-size: 15px;
-            font-family: "JetbrainsMono Nerd Font";
+            font-family: "JetBrainsMono Nerd Font";
         }
 
         window#waybar {
