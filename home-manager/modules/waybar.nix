@@ -282,9 +282,14 @@
         };
       
         #custom-gpuvram: {
-          background: #161320;
-          padding: 5px;
-          border-radius: 5px;
+            margin-top: 6px;
+            margin-left: 8px;
+            padding-left: 10px;
+            margin-bottom: 0px;
+            padding-right: 10px;
+            transition: none;
+            border-radius: 10px;
+            background: #161320;
         };
 
 
