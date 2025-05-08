@@ -168,12 +168,12 @@
         # };
         
         "custom/cpuload" = {
-            format = "  {}%";
+            format = " {}%";
             exec = "printf '%02d\\n' $(grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print int(usage)}')";
             interval = 5;
             return-type = "";
             icon-size = 20;
-            icon-spacing = 0;
+            icon-spacing = 1;
         };
         
         "custom/gputemp" = {
