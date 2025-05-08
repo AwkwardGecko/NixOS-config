@@ -196,7 +196,7 @@
           icon-spacing = 0;
           exec = "/home/zozano/.dotfiles/scripts/waybar-update-status.sh";
           interval = 300;
-          on-click = "kitty --hold /usr/bin/env bash -c '/home/zozano/.dotfiles/system-update.sh'";
+          on-click = "kitty /usr/bin/env bash -c '/home/zozano/.dotfiles/system-update.sh'";
           tooltip = false;
           return-type = "json";
          };
