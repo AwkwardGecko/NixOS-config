@@ -137,14 +137,7 @@
             ""
           ];
         };
-	\uf120	Terminal
-	\uf2f1	Refresh/Rebuild
-	\uf013	Settings / Build
-	\uf011	Power (for shutdown?)
-	\uf085	Gears (system config)
-󰘳	\udb80\ude33	Nix-style build (Material/NF)
-󰎈	\udb80\udc88	Laptop/server
-	\uf303	Arch Linux icon, but looks dope for terminals
+
         bluetooth = {
           icon-size = 20;
           icon-spacing = 0;
