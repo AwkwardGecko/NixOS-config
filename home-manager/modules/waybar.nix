@@ -170,12 +170,11 @@
 
         "custom/gputemp" = {
           format = " GPU {}°C";
-          max-length = 40;
           icon-size = 20;
           icon-spacing = 0;
           exec =  "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounit";
           return-type = "";
-          interval = 10;
+          interval = 5;
          };
 
         "custom/gpuload" = {
@@ -261,6 +260,18 @@
             background: #161320;
         }
         
+        #custom-cputemp {
+            margin-top: 6px;
+            margin-left: 8px;
+            padding-left: 10px;
+            margin-bottom: 0px;
+            padding-right: 10px;
+            border-radius: 10px;
+            transition: none;
+            color: #B5E8E0;
+            background: #161320;
+        }
+
         #custom-gpuload {
             margin-top: 6px;
             margin-left: 8px;
