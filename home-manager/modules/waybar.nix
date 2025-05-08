@@ -200,7 +200,7 @@
           format = "   ";
           icon-size = 20;
           icon-spacing = 0;
-          on-click = "kitty hold sh -c '/home/zozano/.dotfiles/system-update.sh'";
+          on-click = "kitty --hold sh -c '/home/zozano/.dotfiles/system-update.sh'";
           return-type = "";
           interval = 5;
          };
