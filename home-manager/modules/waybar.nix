@@ -2,6 +2,9 @@
 ### WAYBAR ###
 ##############
 
+#   			 	 	 󰍛	 󰍜	 󰒓 󰘚	
+
+# 						 
 {
   config,
   pkgs,
@@ -133,16 +136,7 @@
             ""
           ];
         };
-	\uf4b8	Memory module (your original, probably best for VRAM)
-	\uf85c	Chip (CPU/GPU style)
-	\uf85a	CPU/GPU die (blockier, chip layout)
-	\uf4bc	Hardware / Device
-	\uf57d	Globe (could be used for 'rendering', less direct)
-	\uf2db	Microchip (good for generic memory or GPU)
-󰍛	\udb80\ude5b	Material: Memory (Nerd Fonts 3.x+)
-󰍜	\udb80\ude5c	Material: GPU Memory / Chip
-󰒓	\udb80\udd13	Material: NAND / IC looking
-󰘚	\udb80\udc1a	Memory stick (not always supported)
+
         bluetooth = {
           icon-size = 20;
           icon-spacing = 0;
