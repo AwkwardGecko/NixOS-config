@@ -186,14 +186,12 @@
           icon-spacing = 0;
           return-type = ""; 
           #exec = "nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F',' '{ printf \"%02d%%\\n\", int(($1 / $2) * 100) }'";
-          exec = "nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F',' '{ 
-            val=int(($1 / $2) * 100); 
-            color=\"\x1b[38;5\"; 
-            if (val <= 50) { color=color\"82m\"; } 
-            else if (val <= 80) { color=color\"226m\"; } 
-            else { color=color\"196m\"; } 
-            printf \"%s%02d%%\x1b[0m\\n\", color, val;
-            }'";
+  exec = "nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F',' '{ 
+    val=int(($1 / $2) * 100); 
+    if (val <= 50) { print \"low\"; } 
+    else if (val <= 80) { print \"medium\"; } 
+    else { print \"high\"; } 
+  }'";
           interval = 5;
          };
 
@@ -253,6 +251,22 @@
             font-size: 15px;
             font-family: "JetBrainsMono Nerd Font", monospace;
         }
+
+  "#custom-gpuvram.low" = {
+    color = "#82E0AA";  # Light green
+  };
+  "#custom-gpuvram.medium" = {
+    color = "#FFD700";  # Yellow
+  };
+  "#custom-gpuvram.high" = {
+    color = "#FF6347";  # Red
+  };
+  "#custom-gpuvram" = {
+    background = "#161320";  # Dark background for the whole GPU bar element
+    padding = "5px";
+    border-radius = "5px";
+  };
+
 
         window#waybar {
             background: transparent;
