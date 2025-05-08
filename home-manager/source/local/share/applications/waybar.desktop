@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Waybar
-Exec=kitty bash -c 'waybar'
+Exec=bash -c 'waybar'
 Icon=jellyfin-media-player
 Terminal=false
 Type=Application
