@@ -181,11 +181,11 @@
         };
        
         "custom/gpuvram" = {
-          format = "󰘚 {}°C";
+          format = "󰘚 {}";
           icon-size = 20;
           icon-spacing = 0;
           return-type = ""; 
-          exec = "nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F',' '{ printf \"%.1f%%\\n\", ($1 / $2) * 100 }'";
+          exec = "nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F',' '{ printf \"%02d%%\\n\", int(($1 / $2) * 100) }'";
           interval = 5;
          };
 
