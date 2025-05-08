@@ -12,7 +12,6 @@
 # nix flake update
 # sudo nixos-rebuild switch --upgrade --flake /home/zozano/.dotfiles/#z-nixos
 
-
 (
    set -euo pipefail
 
@@ -34,4 +33,7 @@
    fi
 
    sudo nixos-rebuild switch --upgrade --flake /home/zozano/.dotfiles/#z-nixos
+
+   echo "Done!"
+   sleep 2  # short pause before closing
 ) && exit
