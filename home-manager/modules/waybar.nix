@@ -197,7 +197,7 @@
          };
 
         "custom/update" = {
-          format = " t  ";
+          format = "   ";
           icon-size = 20;
           icon-spacing = 0;
           on-click = "kitty --hold /usr/bin/env bash -c '/home/zozano/.dotfiles/system-update.sh'";
@@ -278,20 +278,6 @@
             }
         }
 
-
-
-#custom-gpuvram.low {
-    color: #B5E8E0;
-}
-
-#custom-gpuvram.medium {
-    color: #FFD700;
-}
-
-#custom-gpuvram.high {
-    color: #FF6347;
-}
-      
         #custom-gpuvram {
             margin-top: 6px;
             margin-left: 8px;
