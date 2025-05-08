@@ -100,12 +100,6 @@
           on-click = "pavucontrol";
         };
 
-        cpu = {
-          format = "{usage}%  ";
-          icon-size = 20;
-          icon-spacing = 0;
-          #tooltip = true;
-        };
 
         disk = {
           interval = 30;
@@ -166,6 +160,13 @@
           };
           ignored-players = [ "firefox" ];
         };
+        
+        cpu = {
+          format = "  CPU {usage}%";
+          icon-size = 20;
+          icon-spacing = 0;
+          #tooltip = true;
+        };
 
 
         "custom/gputemp" = {
@@ -180,7 +181,7 @@
         "custom/gpuload" = {
           icon-size = 20;
           icon-spacing = 0;
-          format = " GPU {}%";
+          format = "  GPU {}%";
           return-type = "";
           exec = "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits";
           interval = 5;
