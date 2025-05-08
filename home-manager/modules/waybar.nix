@@ -323,6 +323,7 @@
             border-radius: 10px;
             transition: none;
             background: #161320;
+            color: #B5E8E0;
         }
 
         #custom-update.clean {
