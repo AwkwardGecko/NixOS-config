@@ -169,12 +169,12 @@
 
 
         "custom/gputemp" = {
-          format = " GPU {output}°C";
+          format = " GPU {}°C";
           max-length = 40;
           icon-size = 20;
           icon-spacing = 0;
           exec =  "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounit";
-          return-type = "json";
+          return-type = "";
           interval = 10;
          };
 
@@ -192,7 +192,7 @@
           icon-spacing = 0;
           format = " CPU {}°C";
           return-type = "";
-          exec = "sensors | awk '/Tctl:/ {print \$2}' | sed 's/+//;s/°C//'";
+          exec = "cat /sys/class/thermal/thermal_zone0/temp | awk '{print $1 / 1000}'";
           interval = 10;
         };
 
