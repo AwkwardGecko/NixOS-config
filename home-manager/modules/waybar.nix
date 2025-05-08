@@ -200,7 +200,7 @@
           format = "   ";
           icon-size = 20;
           icon-spacing = 0;
-          on-click = "kitty --hold sh -c '/home/zozano/.dotfiles/system-update.sh'";
+          on-click = "kitty --hold /usr/bin/env bash -c '/home/zozano/.dotfiles/system-update.sh'";
           return-type = "";
           interval = 5;
          };
@@ -315,6 +315,18 @@
         }
 
         #custom-gputemp {
+            margin-top: 6px;
+            margin-left: 8px;
+            padding-left: 10px;
+            margin-bottom: 0px;
+            padding-right: 10px;
+            border-radius: 10px;
+            transition: none;
+            color: #B5E8E0;
+            background: #161320;
+        }
+
+        #custom-update {
             margin-top: 6px;
             margin-left: 8px;
             padding-left: 10px;
