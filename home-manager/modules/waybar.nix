@@ -204,7 +204,7 @@
           interval = 60;
           on-click = "kitty --hold /usr/bin/env bash -c '/home/zozano/.dotfiles/system-update.sh'";
           tooltip = false;
-          return-type = "{}";
+          return-type = "json";
          };
 
 
