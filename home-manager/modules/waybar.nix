@@ -290,7 +290,7 @@
             transition: none;
             border-radius: 10px;
             background: #161320;
-        };
+        }
 
 
         #window {
