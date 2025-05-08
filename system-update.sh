@@ -13,6 +13,7 @@
 # sudo nixos-rebuild switch --upgrade --flake /home/zozano/.dotfiles/#z-nixos
 #
 #
+(
 set -euo pipefail
 
 cd /home/zozano/.dotfiles
@@ -33,3 +34,4 @@ else
 fi
 
 sudo nixos-rebuild switch --upgrade --flake /home/zozano/.dotfiles/#z-nixos
+) && exit
