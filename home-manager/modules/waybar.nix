@@ -269,15 +269,15 @@
 
 
 
-#custom-gpuvram.low {
+#custom-gpuvram.low: {
     color: #82E0AA;  /* Light green */
 }
 
-#custom-gpuvram.medium {
+#custom-gpuvram.medium: {
     color: #FFD700;  /* Yellow */
 }
 
-#custom-gpuvram.high {
+#custom-gpuvram.high: {
     color: #FF6347;  /* Red */
 }
       
