@@ -19,7 +19,7 @@
         position = "top";
 
         modules-left = [
-          "cpu"
+          "custom/cpu"
           "custom/cputemp"
           "custom/gpuload"
           "custom/gputemp"
@@ -161,13 +161,22 @@
           ignored-players = [ "firefox" ];
         };
         
-        cpu = {
-          format = "CPU  {usage}%";
-          icon-size = 20;
-          icon-spacing = 0;
-          #tooltip = true;
+        # cpu = {
+        #   format = "CPU   {usage}%";
+        #   icon-size = 20;
+        #   icon-spacing = 0;
+        #   #tooltip = true;
+        # };
+        
+        "custom/cpu" = {
+            format = "CPU   {}%";
+            exec = "printf '%02d\\n' $(grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print int(usage)}')";
+            interval = 5;
+            return-type = "";
+            icon-size = 20;
+            icon-spacing = 0;
         };
-
+        
         "custom/gputemp" = {
           format = "{}°C";
           icon-size = 20;
@@ -180,7 +189,7 @@
         "custom/gpuload" = {
           icon-size = 20;
           icon-spacing = 0;
-          format = "  GPU {}%";
+          format = "GPU  {}%";
           return-type = "";
           exec = "printf '%02d\\n' $(nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits)";
           #exec = "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits";
