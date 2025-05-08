@@ -185,13 +185,13 @@
           icon-size = 20;
           icon-spacing = 0;
           return-type = ""; 
-          #exec = "nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F',' '{ printf \"%02d%%\\n\", int(($1 / $2) * 100) }'";
-  exec = "nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F',' '{ 
-    val=int(($1 / $2) * 100); 
-    if (val <= 50) { print \"low\"; } 
-    else if (val <= 80) { print \"medium\"; } 
-    else { print \"high\"; } 
-  }'";
+          exec = "nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F',' '{ printf \"%02d%%\\n\", int(($1 / $2) * 100) }'";
+  # exec = "nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F',' '{ 
+  #   val=int(($1 / $2) * 100); 
+  #   if (val <= 50) { print \"low\"; } 
+  #   else if (val <= 80) { print \"medium\"; } 
+  #   else { print \"high\"; } 
+  # }'";
           interval = 5;
          };
 
