@@ -117,7 +117,7 @@
           icon-size = 20; 
           icon-spacing = 0;
           format = "  RAM {percentage}%";
-          max-length = 10;
+          #max-length = 10;
           #tooltip = true;
           #tooltip-format = "RAM - {used:0.1f}GiB used";
         };
