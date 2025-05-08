@@ -200,7 +200,7 @@
           format = "Update";
           icon-size = 20;
           icon-spacing = 0;
-          on-click = "kitty bash -c /home/zozano/.dotfiles/system-update.sh";
+          on-click = "kitty ./home/zozano/.dotfiles/system-update.sh";
           return-type = "";
           interval = 5;
          };
