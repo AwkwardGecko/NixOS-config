@@ -37,6 +37,7 @@
         ];
 
         modules-right = [
+          "custom/update"
           "tray"
           "gamemode"
           "pulseaudio"
@@ -194,6 +195,16 @@
   # }'";
           interval = 5;
          };
+
+        "custom/update" = {
+          format = "Update";
+          icon-size = 20;
+          icon-spacing = 0;
+          on-click = "kitty bash -c /home/zozano/.dotfiles/system-update.sh";
+          return-type = "";
+          interval = 5;
+         };
+
 
         "custom/gputemp" = {
           format = " {}°C";
