@@ -21,8 +21,8 @@
         modules-left = [
           "cpu"
           "custom/cputemp"
-          "custom/gputemp"
           "custom/gpuload"
+          "custom/gputemp"
           "memory"
         ];
 
@@ -116,7 +116,7 @@
           interval = 10;
           icon-size = 20; 
           icon-spacing = 0;
-          format = "  RAM {percentage}%";
+          format = "RAM   {percentage}%";
           #max-length = 10;
           #tooltip = true;
           #tooltip-format = "RAM - {used:0.1f}GiB used";
@@ -162,18 +162,17 @@
         };
         
         cpu = {
-          format = "  CPU {usage}%";
+          format = "CPU  {usage}%";
           icon-size = 20;
           icon-spacing = 0;
           #tooltip = true;
         };
 
-
         "custom/gputemp" = {
           format = "{}°C";
           icon-size = 20;
           icon-spacing = 0;
-          exec =  "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits";
+          exec = " nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits";
           return-type = "";
           interval = 5;
          };
@@ -183,14 +182,15 @@
           icon-spacing = 0;
           format = "  GPU {}%";
           return-type = "";
-          exec = "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits";
+          exec = "printf '%02d\\n' $(nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits)";
+          #exec = "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits";
           interval = 5;
         };
 
         "custom/cputemp" = {
           icon-size = 20;
           icon-spacing = 0;
-          format = "{}°C";
+          format = " {}°C";
           return-type = "";
           exec = "cat /sys/class/thermal/thermal_zone0/temp | awk '{print $1 / 1000}'";
           interval = 10;
