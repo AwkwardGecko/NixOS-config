@@ -197,7 +197,7 @@
          };
 
         "custom/update" = {
-          format = "   ";
+          format = " t  ";
           icon-size = 20;
           icon-spacing = 0;
           on-click = "kitty --hold /usr/bin/env bash -c '/home/zozano/.dotfiles/system-update.sh'";
