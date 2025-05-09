@@ -126,6 +126,7 @@
     #./modules/scanner.nix
     ./modules/sops-nix.nix
     ./modules/ssh.nix
+    ./modules/statix.nix
     ./modules/steam.nix
     #./modules/systemd-timers.nix
     ./modules/tdarr.nix
