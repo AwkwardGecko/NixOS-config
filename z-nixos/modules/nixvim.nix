@@ -66,9 +66,9 @@
     opts = {
       number = true;                       # Show absolute line numbers
       
-      shiftwidth = 3;                      # Set indentation width to 2 spaces
-      tabstop = 3;                         # Set tab width to 2 spaces
-      softtabstop = 3;
+      shiftwidth = 2;                      # Set indentation width to 2 spaces
+      tabstop = 2;                         # Set tab width to 2 spaces
+      softtabstop = 2;
       expandtab = true;                    # Use spaces instead of tabs
       smartindent = true;                  # Enable smart indentation
       autoindent = true;                   # Enable automatic indentation
