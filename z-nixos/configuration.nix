@@ -130,7 +130,7 @@
     ./modules/statix.nix
     ./modules/steam.nix
     #./modules/systemd-timers.nix
-    #./modules/tdarr.nix
+    ./modules/tdarr.nix
     ./modules/teamviewer.nix
     ./modules/users.nix
     ./modules/xdg-desktop-portal.nix
