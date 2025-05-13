@@ -37,10 +37,10 @@
       "serverPort" = "8266";
     };
     volumes = [
-      "/var/lib/tdarr/configs:/app/configs:rw"
-      "/var/lib/tdarr/logs:/app/logs:rw"
-      "/var/lib/tdarr/server:/app/server:rw"
-      "/var/lib/tdarr/transcode:/temp:rw"
+      "/config/tdarr/configs:/app/configs:rw"
+      "/config/tdarr/logs:/app/logs:rw"
+      "/config/tdarr/server:/app/server:rw"
+      "/config/tdarr/transcode:/temp:rw"
       "/data/media:/media:rw"
       "/dev/dri:/dev/dri:rw"
     ];
@@ -84,9 +84,9 @@
       "serverPort" = "8266";
     };
     volumes = [
-      "/var/lib/tdarr/configs:/app/configs:rw"
-      "/var/lib/tdarr/logs:/app/logs:rw"
-      "/var/lib/tdarr/transcode:/temp:rw"
+      "/config/tdarr/configs:/app/configs:rw"
+      "/config/tdarr/logs:/app/logs:rw"
+      "/config/tdarr/transcode:/temp:rw"
       "/data/media:/media:rw"
       "/dev/dri:/dev/dri:rw"
     ];
