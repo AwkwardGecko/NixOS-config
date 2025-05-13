@@ -2,8 +2,8 @@
 
 {
   virtualisation.waydroid.enable = true;
-
-    boot.extraModulePackages = with config.boot.kernelPackages; [
+  
+  boot.extraModulePackages = with config.boot.kernelPackages; [
     waydroidModules
   ];
 
@@ -14,5 +14,4 @@
 
   boot.extraModprobeConfig = ''
     options binder_linux devices=binder,hwbinder,vndbinder
-  '';
-}
+  '';}
