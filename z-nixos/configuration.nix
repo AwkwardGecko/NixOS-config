@@ -97,6 +97,7 @@
     ./modules/audio.nix # audio
     ./modules/autologin.nix # 100%
     ./modules/bash.nix
+    ./modules/bluearchive.nix
     ./modules/bluetooth.nix # bluetooth
     ./modules/boot.nix # configure kernel modules
     ./modules/cachix.nix # cachix
