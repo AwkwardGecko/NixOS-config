@@ -27,7 +27,7 @@
     ./modules/hypr.nix
     ./modules/kitty.nix
     #./modules/terminal.nix
-    #./modules/mako.nix
+    ./modules/mako.nix
     # ./modules/mangohud.nix
     #./modules/neovim/neovim.nix
     # ./modules/OpenRGB.nix

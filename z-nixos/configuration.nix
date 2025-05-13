@@ -139,11 +139,12 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    age                          # generate keypair
+    age                         # generate keypair
+    alejandra                   # format nix files
     alsa-lib                    # ALSA sound library
     atk                         # Accessibility toolkit (GNOME dependencies)
     bazel                       # Google's build tool (used for TensorFlow etc.)
-    #binutils_nogold             # Binutils without the gold linker
+    #binutils_nogold            # Binutils without the gold linker
     bootiso                     # Create bootable USB drives from ISO
     brave                       # Web browser
     # btmon                    # Bluetooth monitoring/debugging
