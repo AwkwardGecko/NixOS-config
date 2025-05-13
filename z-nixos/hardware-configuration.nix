@@ -38,6 +38,18 @@
         "discard=async"
       ];
     };
+  
+  fileSystems."/data" =
+    { device = "z-home@192.168.1.157:/data";
+      fsType = "sshfs";
+    options = [ 
+      "nodev"
+      "nofail"
+      "allow_other"
+      "IdentityFile=/home/zozano/.ssh/home-server_z-nix"
+    ];
+  }; 
+
 
   fileSystems."/server" =
     { device = "z-home@192.168.1.157:/";
