@@ -231,6 +231,7 @@
     pciutils                    # testing PCI links
     pkg-config                  # Finds C libraries (used by reliquary-archiver)
     protobuf                    # Google's Protocol Buffers (serialization)
+    proton-pass
     pyenv                       # Python version manager
     python3
     python311                   # Python 3.11 interpreter
