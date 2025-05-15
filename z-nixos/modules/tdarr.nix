@@ -77,8 +77,8 @@
   virtualisation.oci-containers.containers."tdarr-node" = {
     image = "ghcr.io/haveagitgat/tdarr_node:latest";
     environment = {
-      "NVIDIA_DRIVER_CAPABILITIES" = "all";
-      "NVIDIA_VISIBLE_DEVICES" = "all";
+      #"NVIDIA_DRIVER_CAPABILITIES" = "all";
+      #"NVIDIA_VISIBLE_DEVICES" = "all";
       "TZ" = "Australia/Sydney";
       "nodeID" = "MyNode-5600G";
       "serverIP" = "192.168.1.157";
@@ -98,7 +98,7 @@
     log-driver = "journald";
     extraOptions = [
       "--device=/dev/dri:/dev/dri:rwm"
-      "--device=nvidia.com/gpu=all"
+      #"--device=nvidia.com/gpu=all"
       "--network-alias=tdarr-node"
       "--network=tdarr_default"
     ];
