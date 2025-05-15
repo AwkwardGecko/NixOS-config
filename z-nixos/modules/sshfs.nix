@@ -1,7 +1,12 @@
 { config, lib, pkgs, ... }:
 
 {
-  environment.etc."fuse.conf".text = ''
-    user_allow_other
-  '';
+  environment = {
+    systemPackages = with pkgs; [
+      sshfs
+    ];
+    etc."fuse.conf".text = ''
+      user_allow_other
+    '';
+  };
 }
