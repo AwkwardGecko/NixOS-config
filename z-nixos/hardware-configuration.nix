@@ -39,8 +39,8 @@
       ];
     };
   
-  fileSystems."/data" =
-    { device = "z-home@192.168.1.157:/data";
+  fileSystems."/server" =
+    { device = "z-home@192.168.1.157:/";
       fsType = "sshfs";
     options = [ 
       "nodev"
@@ -51,18 +51,6 @@
       "x-systemd.requires=network-online.target"
     ];
   }; 
-
-
-  # fileSystems."/server" =
-  #   { device = "z-home@192.168.1.157:/";
-  #     fsType = "sshfs";
-  #   options = [ 
-  #     "nodev"
-  #     "nofail"
-  #     "allow_other"
-  #     "IdentityFile=/home/zozano/.ssh/home-server_z-nix"
-  #   ];
-  # };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
