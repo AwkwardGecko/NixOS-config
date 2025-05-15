@@ -87,11 +87,6 @@
 
   programs.nix-ld.enable = true; # resolve library issues for Stable Diffusion
 
-  # programs.coolercontrol.enable = true;
-
-
-  # aagl.enableNixpkgsReleaseBranchCheck = false;
-
   imports = [
     ./hardware-configuration.nix
     ./modules/audio.nix # audio
@@ -127,6 +122,7 @@
     #./modules/scanner.nix
     ./modules/sops-nix.nix
     ./modules/ssh.nix
+    ./modules/sshfs.nix
     ./modules/statix.nix
     ./modules/steam.nix
     #./modules/systemd-timers.nix
