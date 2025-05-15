@@ -27,52 +27,53 @@
   virtualisation.oci-containers.backend = "podman";
 
   # Containers
-  virtualisation.oci-containers.containers."tdarr" = {
-    image = "ghcr.io/haveagitgat/tdarr:latest";
-    environment = {
-      "NVIDIA_DRIVER_CAPABILITIES" = "all";
-      "NVIDIA_VISIBLE_DEVICES" = "all";
-      "TZ" = "Australia/Sydney";
-      "serverIP" = "0.0.0.0";
-      "serverPort" = "8266";
-    };
-    volumes = [
-      "/docker/tdarr/configs:/app/configs:rw"
-      "/docker/tdarr/logs:/app/logs:rw"
-      "/docker/tdarr/server:/app/server:rw"
-      "/docker/tdarr/transcode:/temp:rw"
-      "/data/media:/media:rw"
-      "/dev/dri:/dev/dri:rw"
-    ];
-    ports = [
-      "8265:8265/tcp"
-      "8266:8266/tcp"
-    ];
-    log-driver = "journald";
-    extraOptions = [
-      "--device=/dev/dri:/dev/dri:rwm"
-      "--device=nvidia.com/gpu=all"
-      "--network-alias=tdarr"
-      "--network=tdarr_default"
-    ];
-  };
-  systemd.services."podman-tdarr" = {
-    serviceConfig = {
-      Restart = lib.mkOverride 90 "always";
-    };
-    after = [
-      "podman-network-tdarr_default.service"
-    ];
-    requires = [
-      "podman-network-tdarr_default.service"
-    ];
-    partOf = [
-      "podman-compose-tdarr-root.target"
-    ];
-    wantedBy = [
-      "podman-compose-tdarr-root.target"
-    ];
-  };
+  # virtualisation.oci-containers.containers."tdarr" = {
+  #   image = "ghcr.io/haveagitgat/tdarr:latest";
+  #   environment = {
+  #     "NVIDIA_DRIVER_CAPABILITIES" = "all";
+  #     "NVIDIA_VISIBLE_DEVICES" = "all";
+  #     "TZ" = "Australia/Sydney";
+  #     "serverIP" = "0.0.0.0";
+  #     "serverPort" = "8266";
+  #   };
+  #   volumes = [
+  #     "/docker/tdarr/configs:/app/configs:rw"
+  #     "/docker/tdarr/logs:/app/logs:rw"
+  #     "/docker/tdarr/server:/app/server:rw"
+  #     "/docker/tdarr/transcode:/temp:rw"
+  #     "/data/media/shows:/shows:rw"
+  #     "/data/media/movies:/movies:rw"
+  #     "/dev/dri:/dev/dri:rw"
+  #   ];
+  #   ports = [
+  #     "8265:8265/tcp"
+  #     "8266:8266/tcp"
+  #   ];
+  #   log-driver = "journald";
+  #   extraOptions = [
+  #     "--device=/dev/dri:/dev/dri:rwm"
+  #     "--device=nvidia.com/gpu=all"
+  #     "--network-alias=tdarr"
+  #     "--network=tdarr_default"
+  #   ];
+  # };
+  # systemd.services."podman-tdarr" = {
+  #   serviceConfig = {
+  #     Restart = lib.mkOverride 90 "always";
+  #   };
+  #   after = [
+  #     "podman-network-tdarr_default.service"
+  #   ];
+  #   requires = [
+  #     "podman-network-tdarr_default.service"
+  #   ];
+  #   partOf = [
+  #     "podman-compose-tdarr-root.target"
+  #   ];
+  #   wantedBy = [
+  #     "podman-compose-tdarr-root.target"
+  #   ];
+  # };
   virtualisation.oci-containers.containers."tdarr-node" = {
     image = "ghcr.io/haveagitgat/tdarr_node:latest";
     environment = {
@@ -80,19 +81,20 @@
       "NVIDIA_VISIBLE_DEVICES" = "all";
       "TZ" = "Australia/Sydney";
       "nodeID" = "MyNode";
-      "serverIP" = "tdarr";
+      "serverIP" = "192.168.1.157";
       "serverPort" = "8266";
     };
     volumes = [
-      "/docker/tdarr/configs:/app/configs:rw"
-      "/docker/tdarr/logs:/app/logs:rw"
-      "/docker/tdarr/transcode:/temp:rw"
-      "/data/media:/media:rw"
+      "/var/lib/tdarr-node/configs:/app/configs:rw"
+      "/var/lib/tdarr-node/logs:/app/logs:rw"
+      "/var/lib/tdarr-node/transcode:/temp:rw"
+      "/data/media/shows:/shows:rw"
+      "/data/media/movies:/movies:rw"
       "/dev/dri:/dev/dri:rw"
     ];
-    dependsOn = [
-      "tdarr"
-    ];
+    # dependsOn = [
+    #   "tdarr"
+    # ];
     log-driver = "journald";
     extraOptions = [
       "--device=/dev/dri:/dev/dri:rwm"
