@@ -80,7 +80,7 @@
       "NVIDIA_DRIVER_CAPABILITIES" = "all";
       "NVIDIA_VISIBLE_DEVICES" = "all";
       "TZ" = "Australia/Sydney";
-      "nodeID" = "MyNode";
+      "nodeID" = "MyNode-5600G";
       "serverIP" = "192.168.1.157";
       "serverPort" = "8266";
     };
