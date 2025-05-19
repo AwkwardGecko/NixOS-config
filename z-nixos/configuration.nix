@@ -152,7 +152,7 @@
     compose2nix
     conda                       # Python environment manager
     crane                       # Nix-native Rust build system (like crate2nix)
-    cudaPackages.cudnn          # CUDA
+    #cudaPackages.cudnn          # CUDA
     cudatoolkit
     cups                        # Printing system
     curl
