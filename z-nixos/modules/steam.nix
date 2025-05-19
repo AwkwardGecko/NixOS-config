@@ -17,6 +17,4 @@
     localNetworkGameTransfers.openFirewall = true;
   };
 
-  hardware.xone.enable = true;
-  hardware.steam-hardware.enable = true;
 }
