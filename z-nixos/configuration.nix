@@ -29,10 +29,6 @@
      '';
   };
 
-  # boot.kernel.sysctl = {
-  #   "vm.swapiness" = 50; 
-  # };
-
   # Automatic cleanup
   nix = {
     gc = {
@@ -50,8 +46,7 @@
     };
   };
 
-  swapDevices = [ { label = "swap"; } ];
-  #services.custom-ssh-agent.enable = true;
+  # swapDevices = [ { label = "swap"; } ];
 
   networking.hostName = "z-nixos";
   networking.networkmanager.enable = true;
@@ -59,15 +54,15 @@
 
   networking.nameservers = [ "1.1.1.1" "8.8.8.8"];
 
-  networking.firewall.allowedTCPPorts = [ 
-    18080 # monero
-    18081 # monero
-    9000 # xmrig
-  ];
+  #networking.firewall.allowedTCPPorts = [ 
+    # 18080 # monero
+    # 18081 # monero
+    # 9000 # xmrig
+  #];
 
-  networking.firewall.allowedUDPPorts = [
-    9000 # xmrig
-  ];
+  # networking.firewall.allowedUDPPorts = [
+  #   9000 # xmrig
+  # ];
 
   nixpkgs.config.allowUnfree = true;
   hardware.enableAllFirmware = true;
@@ -124,7 +119,7 @@
     ./modules/ssh.nix
     ./modules/sshfs.nix
     ./modules/statix.nix
-    ./modules/steam.nix
+    #./modules/steam.nix
     #./modules/systemd-timers.nix
     ./modules/tdarr.nix
     ./modules/teamviewer.nix

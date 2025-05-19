@@ -18,6 +18,12 @@
     monero-cli
   ];
 
+  networking.firewall.allowedTCPPorts = [
+    18080
+    18081
+  ];
+
+
     # users.users.zozano = {
     #   isSystemUser = true;
     #   group = "users";
