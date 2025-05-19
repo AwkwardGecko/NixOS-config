@@ -1,14 +1,14 @@
 { config, pkgs, ... }:
 
 {
-  networking.firewall = {
-    allowedUDPPorts = [
-      9000
-    ];
-    allowedTCPPorts = [
-      9000
-    ];
-  };
+  # networking.firewall = {
+  #   allowedUDPPorts = [
+  #     9000
+  #   ];
+  #   allowedTCPPorts = [
+  #     9000
+  #   ];
+  # };
 
   systemd.user.services.xmrig = {
     # Install = {
