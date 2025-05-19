@@ -17,4 +17,7 @@
     localNetworkGameTransfers.openFirewall = true;
   };
 
+  hardware.steam-hardware.enable = true;
+  hardware.opengl.driSupport32Bit = true;
+  hardware.opengl.enable = true;
 }
