@@ -107,6 +107,7 @@
     ./modules/hypr.nix
     #./modules/hyprland_instance_sig.nix
     ./modules/internationalisation.nix
+    ./modules/lutris.nix
     #./modules/ollama.nix
     ./modules/openrgb.nix
     ./modules/polkit.nix
