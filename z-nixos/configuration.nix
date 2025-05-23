@@ -240,9 +240,9 @@
     python312Packages.opencv-python
     qbittorrent                 # BitTorrent client
     rclone                      # Sync with cloud storage
-    rustc                       # Rust compiler
-    rustup                      # Rust toolchain manager (used by reliquary-archiver)
-    rustup-toolchain-install-master # Install Rust toolchains from master
+    #rustc                       # Rust compiler
+    #rustup                      # Rust toolchain manager (used by reliquary-archiver)
+    #rustup-toolchain-install-master # Install Rust toolchains from master
     signal-desktop-bin          # Encrypted messaging desktop app
     smartmontools               # Monitor hard drive health (S.M.A.R.T.)
     sqlite                      # Embedded SQL database engine
