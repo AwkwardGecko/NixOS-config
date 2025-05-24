@@ -16,7 +16,7 @@
     settings = {
       defaultTimeout = "2";
       icons = true;
-      font = "JetBrainsMono-Regular";
+      font = "JetBrainsMono";
       borderRadius = "15";
       borderSize = "2";
       layer = "overlay";
