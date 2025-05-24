@@ -1,15 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  # networking.firewall = {
-  #   allowedUDPPorts = [
-  #     9000
-  #   ];
-  #   allowedTCPPorts = [
-  #     9000
-  #   ];
-  # };
-
   systemd.user.services.xmrig = {
     # Install = {
     #   WantedBy = [ "default.target" ]; 
@@ -50,7 +41,7 @@
     };
     pools = [
       {
-        url = "pool.hashvault.pro:443";
+        url = "pool.hashvault.pro:80";
         user = "48rmufMfAAiHH4N8q7wzdrdvcN7AXcgwTN2oEqCrCnBafCeyFaZNjZbG6ytK4BsnpUZnLuRMAstaeSpDs3JKg4qrT3x1K2K";
         pass = "somethingorothjer";
         keepalive = true;
