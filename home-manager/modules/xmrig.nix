@@ -28,6 +28,10 @@
     };
   };
 
+  home.file = {
+    ".config/hypr/hypridle.conf".source = source/config/hypr/hypridle-xmrig-on.conf;
+  };
+
   # xmrig settings as a user module
   xdg.configFile."xmrig/config.json".text = builtins.toJSON {
     autosave = true;
