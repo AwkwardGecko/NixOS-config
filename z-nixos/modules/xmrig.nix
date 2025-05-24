@@ -8,6 +8,10 @@
       9000
     ];
   };
+
+  boot.initrd.availableKernelModules = [
+    "msr"
+  ];
 }
 
 # Check ~/.dotfiles/home-manager/modules/xmrig.nix for more

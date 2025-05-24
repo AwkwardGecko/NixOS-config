@@ -54,16 +54,6 @@
 
   networking.nameservers = [ "1.1.1.1" "8.8.8.8"];
 
-  #networking.firewall.allowedTCPPorts = [ 
-    # 18080 # monero
-    # 18081 # monero
-    # 9000 # xmrig
-  #];
-
-  # networking.firewall.allowedUDPPorts = [
-  #   9000 # xmrig
-  # ];
-
   nixpkgs.config.allowUnfree = true;
   hardware.enableAllFirmware = true;
 
