@@ -40,7 +40,7 @@
     ./modules/waybar.nix
     # ./modules/waybar/mechabar.nix
     #./modules/xserver.nix
-    ./modules/xmrig.nix
+    #./modules/xmrig.nix
   ];
 
 
