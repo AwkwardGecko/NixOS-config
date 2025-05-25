@@ -51,6 +51,14 @@
       }
     ];
   };
+
+  #hugepages
+  boot.kernelParams = [
+    "hugepagesz=1G"
+    "default_hugepagesz=1G"
+    "hugepages=3"
+  ];
+
 }
 
 # Check ~/.dotfiles/home-manager/modules/xmrig.nix for more
