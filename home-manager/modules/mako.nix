@@ -27,7 +27,8 @@
       ignore-timeout = false;
       layer = "top";
       margin = 10;
-      markup = true;efaultTimeout = "2";
+      markup = true;
+      defaultTimeout = "2";
       font = "JetBrainsMono 10";
       #layer = "overlay";
     };
