@@ -20,7 +20,7 @@
       border-color = "#FFFFFF";
       border-radius = 0;
       default-timeout = 0;
-      font = "monospace 10";
+      #font = "monospace 10";
       height = 100;
       width = 300;
       icons = true;
@@ -28,7 +28,7 @@
       layer = "top";
       margin = 10;
       markup = true;efaultTimeout = "2";
-      font = "JetBrainsMono";
+      font = "JetBrainsMono 10";
       #layer = "overlay";
     };
   };
