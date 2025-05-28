@@ -45,6 +45,7 @@
       #"sleep 10 && bash ~/.local/share/applications/mount-server.sh"
       #"sleep 15 && bash ~/.local/share/applications/mount-music.sh"
       "hypridle"
+      "mako"
     ];
 
     env = [
