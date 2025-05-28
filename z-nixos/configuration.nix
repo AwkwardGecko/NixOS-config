@@ -244,7 +244,6 @@
     unzip
     upower                      # Power management daemon (dependency for Vivaldi maybe)
     uv                          # Fast Python package manager
-    vivaldi                     # Web browser
     vlc                         # Media player
     vulkan-loader               # Vulkan runtime loader
     vulkan-tools                # Vulkan utilities like `vulkaninfo`
