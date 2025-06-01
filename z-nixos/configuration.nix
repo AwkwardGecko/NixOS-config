@@ -159,6 +159,7 @@
     expat                       # XML parsing library
     ffmpeg                      # Video and audio processing tool
     hdparm
+    gawk
     gcc                         # GNU Compiler Collection
     gcc-unwrapped               # Unwrapped GCC (required by some projects like Stable Diffusion)
     gimp                        # Image editing software
