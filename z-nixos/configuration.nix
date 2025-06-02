@@ -129,6 +129,7 @@
     alsa-lib                    # ALSA sound library
     atk                         # Accessibility toolkit (GNOME dependencies)
     bazel                       # Google's build tool (used for TensorFlow etc.)
+    bc
     #binutils_nogold            # Binutils without the gold linker
     bootiso                     # Create bootable USB drives from ISO
     brave                       # Web browser
