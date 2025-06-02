@@ -19,8 +19,8 @@ in {
     description = "Run HDD zeroing every 30 seconds";
     wantedBy = [ "timers.target" ];
     timerConfig = {
-      OnBootSec = "30s";
-      OnUnitActiveSec = "30s";
+      OnBootSec = "50s";
+      OnUnitActiveSec = "50s";
       Unit = "hdd-zeroing.service";
       Persistent = true;
     };
