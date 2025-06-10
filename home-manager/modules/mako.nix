@@ -13,14 +13,13 @@
 
   services.mako = {
     enable = true; # notification daemon
-    package = pkgs.mako;
     settings = {
       actions = true;
       anchor = "top-right";
       background-color = "#000000CC";
       border-color = "#FFFFFF";
       border-radius = 0;
-      default-timeout = 5;
+      default-timeout = 500;
       height = 100;
       width = 300;
       icons = true;
