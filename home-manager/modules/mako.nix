@@ -40,7 +40,7 @@
 
       urgency-critical = {
         border-color = "#FF0000";
-        default-timeout = 0; # stay until dismissed
+        default-timeout = 10; # stay until dismissed
       };
     };
   };
