@@ -242,6 +242,7 @@
     sshfs                       # Mount remote filesystems over SSH
     stdenv                      # Nix standard environment
     strawberry                  # Music player
+    usbutils
     udev                        # Device manager for the Linux kernel
     # unigine-superposition       # GPU benchmarking tool
     unzip
