@@ -29,19 +29,6 @@
       margin = 10;
       markup = true;
       font = "JetBrainsMono 10";
-
-      urgency-low = {
-        border-color = "#444444";
-      };
-
-      urgency-normal = {
-        border-color = "#888888";
-      };
-
-      urgency-critical = {
-        border-color = "#FF0000";
-        default-timeout = 10; # stay until dismissed
-      };
     };
   };
 }
