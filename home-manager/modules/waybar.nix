@@ -28,6 +28,7 @@
           "custom/gputemp"
           "custom/gpuvram"
           "memory"
+          "hdd-zeroing"
         ];
 
         modules-center = [
@@ -242,6 +243,15 @@
           #menu-file = "~/.local/share/applications/power_menu.xml"; # Menu file in resources folder
         };
 
+        "custom/hdd-zeroing" = {
+          format = "{}";
+          exec = "~/.dotfiles/scripts/waybar-hdd-zeroing.sh";
+          interval = 30;
+          return-type = "json";
+          tooltip = true;
+        };
+
+
         "menu-actions" = {
           "shutdown" = "shutdown";
           "reboot" = "reboot";
@@ -286,6 +296,17 @@
             background: #161320;
         }
 
+        #custom-hdd-zeroing {
+            margin-top: 6px;
+            margin-left: 8px;
+            padding-left: 10px;
+            margin-bottom: 0px;
+            padding-right: 10px;
+            color: #B5E8E0;
+            transition: none;
+            border-radius: 10px;
+            background: #161320;
+        }
 
         #window {
             margin-top: 6px;
