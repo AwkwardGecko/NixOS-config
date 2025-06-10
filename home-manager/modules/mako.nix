@@ -28,7 +28,6 @@
       layer = "top";
       margin = 10;
       markup = true;
-      defaultTimeout = 20;
       font = "JetBrainsMono 10";
 
       urgency-low = {
