@@ -28,7 +28,7 @@
           "custom/gputemp"
           "custom/gpuvram"
           "memory"
-          "hddzero"
+          "custom/hddzero"
         ];
 
         modules-center = [
