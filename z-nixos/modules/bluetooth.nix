@@ -52,7 +52,7 @@
 
   systemd.services.bluetooth.serviceConfig.ExecStart = lib.mkForce [
     ""
-    "${pkgs.bluez}/libexec/bluetooth/bluetoothd --experimental"
+    "${pkgs.bluez}/libexec/bluetooth/bluetoothd --experimental -f /etc/bluetooth/main.conf"
   ];
 
 
