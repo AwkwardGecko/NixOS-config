@@ -107,7 +107,7 @@
     ./modules/nvidia.nix
     #./modules/reload-usb.nix
     #./modules/scanner.nix
-    ./modules/sops-nix.nix
+    # ./modules/sops-nix.nix
     ./modules/ssh.nix
     ./modules/sshfs.nix
     ./modules/statix.nix
