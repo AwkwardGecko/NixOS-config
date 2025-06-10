@@ -17,7 +17,7 @@
   #   xpadneo
   # ];
 
-  # boot.extraModprobeConfig = '' bluetooth disable_ertm=1 '';
+  boot.extraModprobeConfig = '' bluetooth disable_ertm=1 '';
   boot.initrd.kernelModules = [ 
     "joydev"
     "uhid"
@@ -31,7 +31,7 @@
     # bluez-tools
   ];
 
-  # hardware.xpadneo.enable = true;
+  hardware.xpadneo.enable = true;
 
   hardware.bluetooth = {
     enable = true;
@@ -45,6 +45,13 @@
       # Class = "0x000100";
     };
   };
+
+
+  systemd.services.bluetooth.serviceConfig.ExecStart = lib.mkForce [
+    ""
+    "${pkgs.bluez}/libexec/bluetooth/bluetoothd --experimental"
+  ];
+
 
   hardware.enableAllFirmware = true;
 
