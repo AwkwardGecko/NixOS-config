@@ -20,7 +20,7 @@
       background-color = "#000000CC";
       border-color = "#FFFFFF";
       border-radius = 0;
-      default-timeout = 0;
+      default-timeout = 5;
       height = 100;
       width = 300;
       icons = true;
