@@ -28,7 +28,7 @@
           "custom/gputemp"
           "custom/gpuvram"
           "memory"
-          "hdd-zeroing"
+          "hddzero"
         ];
 
         modules-center = [
@@ -243,7 +243,7 @@
           #menu-file = "~/.local/share/applications/power_menu.xml"; # Menu file in resources folder
         };
 
-        "custom/hdd-zeroing" = {
+        "custom/hddzero" = {
           format = "{}";
           exec = "~/.dotfiles/scripts/waybar-hdd-zeroing.sh";
           interval = 30;
@@ -296,7 +296,7 @@
             background: #161320;
         }
 
-        #custom-hdd-zeroing {
+        #custom-hddzero {
             margin-top: 6px;
             margin-left: 8px;
             padding-left: 10px;
