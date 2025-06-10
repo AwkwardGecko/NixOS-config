@@ -12,10 +12,10 @@
 {
 
   boot.blacklistedKernelModules = [ "xpad" ];
-  
-  # boot.extraModulePackages = with config.boot.kernelPackages; [
-  #   xpadneo
-  # ];
+
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+    xpadneo
+  ];
 
   boot.extraModprobeConfig = ''
     options bluetooth disable_ertm=1 
@@ -24,15 +24,15 @@
   boot.initrd.kernelModules = [ 
     "joydev"
     "uhid"
-    # "hid_xpadneo"
+    "hid_xpadneo"
   ];
 
-  environment.systemPackages = with pkgs; [
-    /* xpadneo */
-    # bluez-experimental
-    # bluez-alsa
-    # bluez-tools
-  ];
+  # environment.systemPackages = with pkgs; [
+  #   /* xpadneo */
+  #   # bluez-experimental
+  #   # bluez-alsa
+  #   # bluez-tools
+  # ];
 
   hardware.xpadneo.enable = true;
 
