@@ -13,6 +13,7 @@
 
   services.mako = {
     enable = true; # notification daemon
+    package = pkgs.mako;
     settings = {
       actions = true;
       anchor = "top-right";
