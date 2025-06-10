@@ -5,11 +5,6 @@
       
       nixpkgs.url = "github:Nixos/nixpkgs/nixos-unstable";
 
-      sops-nix = {
-         url = "github:Mic92/sops-nix";
-         inputs.nixpkgs.follows = "nixpkgs";
-      };
-
       home-manager = {
          url = "github:nix-community/home-manager/master";
          inputs.nixpkgs.follows = "nixpkgs";
@@ -30,10 +25,10 @@
        inputs.nixpkgs.follows = "nixpkgs";
       };
 
-      rust-overlay = {
-         url = "github:oxalica/rust-overlay";
-         inputs.nixpkgs.follows = "nixpkgs";
-      };
+      # rust-overlay = {
+      #    url = "github:oxalica/rust-overlay";
+      #    inputs.nixpkgs.follows = "nixpkgs";
+      # };
 
       nix-comfyui = {
         url = "github:dyscorv/nix-comfyui";
@@ -41,7 +36,7 @@
       };
   };
 
-outputs = inputs@{ self, nixpkgs, home-manager, nixvim, star-rail, sops-nix, nix-comfyui, ... }:
+outputs = inputs@{ self, nixpkgs, home-manager, nixvim, star-rail, nix-comfyui, ... }:
 
 let
   
@@ -104,7 +99,6 @@ in {
 
       modules = [
         ./z-nixos/configuration.nix
-        sops-nix.nixosModules.sops
         home-manager.nixosModules.home-manager
         nixvim.nixosModules.nixvim
         #inputs.star-rail.defaultModule 
