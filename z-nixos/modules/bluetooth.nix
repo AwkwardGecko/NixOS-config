@@ -47,10 +47,10 @@
   };
 
 
-  systemd.services.bluetooth.serviceConfig.ExecStart = lib.mkForce [
-    ""
-    "${pkgs.bluez}/libexec/bluetooth/bluetoothd --experimental"
-  ];
+  # systemd.services.bluetooth.serviceConfig.ExecStart = lib.mkForce [
+  #   ""
+  #   "${pkgs.bluez}/libexec/bluetooth/bluetoothd --experimental"
+  # ];
 
 
   hardware.enableAllFirmware = true;
