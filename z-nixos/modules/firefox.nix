@@ -16,7 +16,6 @@
       enable = true;
       languagePacks = [ 
         "en-GB"
-        "en-AU"
       ];
 
       /* ---- POLICIES ---- */
