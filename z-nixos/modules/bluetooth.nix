@@ -34,7 +34,6 @@
   #   # bluez-tools
   # ];
 
-  hardware.xpadneo.enable = true;
 
   hardware.bluetooth = {
     enable = true;
@@ -57,6 +56,7 @@
 
 
   hardware.enableAllFirmware = true;
-
+  hardware.xpad.enable = true;
+  hardware.xpadneo.enable = true;
   services.blueman.enable = true;
 }
