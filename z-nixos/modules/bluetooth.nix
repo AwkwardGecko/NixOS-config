@@ -11,7 +11,7 @@
 
 {
 
-  boot.blacklistedKernelModules = [ "xpad" ];
+  #boot.blacklistedKernelModules = [ "xpad" ];
 
   boot.extraModulePackages = with config.boot.kernelPackages; [
     xpadneo
