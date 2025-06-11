@@ -49,14 +49,26 @@
             installation_mode = "force_installed";
           };
           
+          # Proton Pass:
+          "support@protonmail.zendesk.com" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/proton-pass/latest.xpi";
+            installation_mode = "force_installed";
+          };
+
+          # Proton VPN:
+          "protonvpn" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/proton-vpn-firefox-extension/latest.xpi";
+            installation_mode = "force_installed";
+          };
+
           # Privacy Badger:
           "jid1-MnnxcxisBPnSXQ@jetpack" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/privacy-badger17/latest.xpi";
             installation_mode = "force_installed";
           };
           
-         };
-  
+        };
+        
         /* ---- PREFERENCES ---- */
         # Check about:config for options.
         Preferences = { 
