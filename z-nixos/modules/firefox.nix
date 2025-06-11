@@ -73,7 +73,7 @@
           # Aussie English Language Pack:
           "en-AU@dictionaries.addons.mozilla.org"= {
             install_url = "https://addons.mozilla.org/en-GB/firefox/addon/english-australian-dictionary/latest.xpi";
-            installation_mode = "forced_install"
+            installation_mode = "forced_install";
           };
         };
         
