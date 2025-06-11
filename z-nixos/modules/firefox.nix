@@ -14,7 +14,10 @@
   programs = {
     firefox = {
       enable = true;
-      languagePacks = [ "en-US" ];
+      languagePacks = [ 
+        "en-GB"
+        "en-AU"
+      ];
 
       /* ---- POLICIES ---- */
       # Check about:policies#documentation for options.
@@ -66,7 +69,12 @@
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/privacy-badger17/latest.xpi";
             installation_mode = "force_installed";
           };
-          
+
+          # Aussie English Language Pack:
+          "en-AU@dictionaries.addons.mozilla.org"= {
+            install_url = "https://addons.mozilla.org/en-GB/firefox/addon/english-australian-dictionary/latest.xpi";
+            installation_mode = "forced_install"
+          };
         };
         
         /* ---- PREFERENCES ---- */
