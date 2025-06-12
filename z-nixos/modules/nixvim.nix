@@ -48,9 +48,16 @@
           bashls.enable = true;
           pylsp.enable = true;
         };
-
       };
-      conform-nvim.enable = true;
+
+      conform-nvim = {
+        enable = true;
+        formatOnSave = {
+          lspFallback = true;
+          timeoutMs = 500;
+        };
+      };
+
       notify.enable = true;
       lualine.enable = true;               # Statusline plugin
       treesitter.enable = true;            # Advanced syntax highlighting
