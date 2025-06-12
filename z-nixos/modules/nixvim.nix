@@ -47,6 +47,7 @@
           html.enable = true;
           bashls.enable = true;
           pylsp.enable = true;
+          notify.enable = true;
         };
 
       };
