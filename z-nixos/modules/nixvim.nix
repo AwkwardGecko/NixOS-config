@@ -50,6 +50,7 @@
         };
 
       };
+      conform.enable = true;
       notify.enable = true;
       lualine.enable = true;               # Statusline plugin
       treesitter.enable = true;            # Advanced syntax highlighting
