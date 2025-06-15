@@ -1,7 +1,7 @@
 #~/.dotfiles/home-manager/modules/diffusion.nix
 { config, lib, pkgs, ... }:
 {
-  xdg.desktopEntries.comfyui = {
+  xdg.desktopEntries.diffusion = {
     name = "Diffusion";
     exec = ''
         ${pkgs.kitty}/bin/kitty --hold sh -c '
