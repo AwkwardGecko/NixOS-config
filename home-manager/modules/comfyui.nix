@@ -2,7 +2,7 @@
 { config, lib, pkgs, ... }:
 {
   home.file = {
-    "{$HOME}/.local/share/applications/comfyui.desktop".text = ''
+    "/.local/share/applications/comfyui.desktop".text = ''
       [Desktop Entry]
       Name=ComfyUI
       Exec=kitty bash -c "cd ~/test-shell && NIXPKGS_ALLOW_UNFREE=1 nix-shell --run 'cd ComfyUI && python main.py --lowvram'"
