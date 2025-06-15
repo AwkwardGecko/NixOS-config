@@ -15,10 +15,10 @@
 }:
 
 {
-
   imports = [
     # ./modules/applications.nix
     #./modules/cursor.nix
+    ./modules/comfui.nix
     ./modules/fish.nix
     #./modules/fonts.nix
     ./modules/gpg.nix
@@ -68,30 +68,30 @@
 
   
   home.packages = with pkgs; [
-  baobab        # disk usage analyzer
+    baobab        # disk usage analyzer
     #blueberry
     clementine
     cliphist    # wayland clipboard manager
     cryptsetup  # LUKS support
     dex         # run .desktop files from CLI
     #digikam
-	egl-wayland
+	  egl-wayland
     fastfetch
     #gimp
     #git
     #google-chrome
     grimblast
-	grc
+	  grc
     home-assistant-component-tests.tuya
-	htop
+	  htop
     #hyprpaper
     #hyprshot
     jellyfin-web
-	#plasma5Packages.kdeconnect-kde
+	  #plasma5Packages.kdeconnect-kde
     krusader # file manager 
     krename # batch renamer for krusader
     libva
-	#lua
+	  #lua
     #lua54Packages.luarocks-nix
     mesa
     mp3gain # normalize volume of music
@@ -107,11 +107,11 @@
     #	python312Packages.pip
   	pipx	
     #	qbittorrent
-   	qt6ct # QT support
-   	ripgrep # something for nvim
+    qt6ct # QT support
+    ripgrep # something for nvim
     #	rofi-wayland
     jellyfin-media-player
-	#qt5ct
+	  #qt5ct
     protonup-qt
     #python312Packages.tinytuya
     shotwell
