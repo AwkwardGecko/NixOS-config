@@ -1,4 +1,5 @@
-#/bin/bash
+#/usr/bin/env bash
+#~/.local/share/applications/start.sh
 
 #sudo umount /mnt/luks
 sudo cryptsetup open /dev/disk/by-uuid/c5e87ce4-523f-46b9-8735-c6e7545a6d56 luks

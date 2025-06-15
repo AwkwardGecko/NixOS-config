@@ -19,6 +19,7 @@
     # ./modules/applications.nix
     #./modules/cursor.nix
     ./modules/comfyui.nix
+    ./modules/diffusion.nix
     ./modules/fish.nix
     #./modules/fonts.nix
     ./modules/gpg.nix
