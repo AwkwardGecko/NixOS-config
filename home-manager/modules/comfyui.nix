@@ -5,8 +5,8 @@
     ".local/share/applications".text = ''
       [Desktop Entry]
       Name=ComfyUI
-      Exec=kitty bash -c 'cd /home/zozano/comfyui && comfyui & sleep 5 && firefox -P Diffusion http://127.0.0.1:8188'
-      Icon=jellyfin-media-player
+      Exec=kitty bash -c "cd ~/test-shell && NIXPKGS_ALLOW_UNFREE=1 nix-shell --run 'cd ComfyUI && python main.py --lowvram'"
+      Icon=/home/zozano/.local/share/icons/comfyui.png
       Terminal=false
       Type=Application
       Categories=Media;
