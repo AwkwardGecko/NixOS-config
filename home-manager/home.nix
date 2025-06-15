@@ -18,7 +18,7 @@
   imports = [
     # ./modules/applications.nix
     #./modules/cursor.nix
-    ./modules/comfui.nix
+    ./modules/comfyui.nix
     ./modules/fish.nix
     #./modules/fonts.nix
     ./modules/gpg.nix
