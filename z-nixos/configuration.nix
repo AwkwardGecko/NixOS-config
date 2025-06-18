@@ -92,7 +92,7 @@
     ./modules/gamemode.nix
     ./modules/git.nix
     ./modules/git-push-dotfiles.nix
-    ./modules/hdd-zeroing.nix
+    #./modules/hdd-zeroing.nix
     ./modules/hdd-soft-shutdown.nix
     ./modules/huge-pages.nix
     ./modules/hypr.nix
