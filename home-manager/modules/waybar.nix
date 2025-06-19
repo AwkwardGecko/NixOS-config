@@ -28,7 +28,6 @@
           "custom/gputemp"
           "custom/gpuvram"
           "memory"
-          "custom/hddzero"
         ];
 
         modules-center = [
@@ -242,15 +241,6 @@
           #menu = "on-click";
           #menu-file = "~/.local/share/applications/power_menu.xml"; # Menu file in resources folder
         };
-
-        "custom/hddzero" = {
-          format = "{}";
-          exec = "~/.dotfiles/scripts/waybar-hdd-zeroing.sh";
-          interval = 30;
-          return-type = "json";
-          tooltip = true;
-        };
-
 
         "menu-actions" = {
           "shutdown" = "shutdown";
