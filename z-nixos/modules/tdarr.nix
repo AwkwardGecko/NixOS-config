@@ -88,7 +88,7 @@
       "/var/lib/tdarr-node/configs:/app/configs:rw"
       "/var/lib/tdarr-node/logs:/app/logs:rw"
       "/var/lib/tdarr-node/transcode:/app/temp:rw"
-      "/server/data/media:/media:rw"
+      "/data/media:/data/media:rw"
       "/dev/dri:/dev/dri:rw"
     ];
     # dependsOn = [
