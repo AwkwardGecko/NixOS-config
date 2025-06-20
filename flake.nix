@@ -114,7 +114,7 @@ in {
             XDG_CURRENT_DESKTOP = "Hyprland";
             XDG_SESSION_TYPE = "wayland";
             XAUTHORITY = "\$HOME/.Xauthority";
-            GTK_THEME = "Adwaita"
+            GTK_THEME = "Adwaita";
           };
 
 
