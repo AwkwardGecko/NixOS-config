@@ -3,6 +3,9 @@
 {
   environment.systemPackages = with pkgs; [
     libadwaita
-    gtk3.immodules
   ];
+
+  environment.sessionVariables = {
+    GTK_THEME = "Adwaita";
+  };
 }
