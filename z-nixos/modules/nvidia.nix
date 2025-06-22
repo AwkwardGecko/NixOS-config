@@ -26,7 +26,7 @@
       package = config.boot.kernelPackages.nvidiaPackages.latest;
     };
 
-    nvidia-container-toolkit.enable = true;
+   # nvidia-container-toolkit.enable = true;
 
     graphics = {
       enable = true;
