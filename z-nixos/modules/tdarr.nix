@@ -123,7 +123,7 @@
   systemd.services."podman-network-tdarr_default" = {
     path = [ pkgs.podman ];
     serviceConfig = {
-      Environment = "CDI_HOOK_BINARIES=/nix/store/sakfc9chqk44x63a3iib3g6n82dmq9ia-nvidia-container-toolkit-*/bin";
+      #Environment = "CDI_HOOK_BINARIES=/nix/store/sakfc9chqk44x63a3iib3g6n82dmq9ia-nvidia-container-toolkit-*/bin";
       Type = "oneshot";
       RemainAfterExit = true;
       ExecStop = "podman network rm -f tdarr_default";
