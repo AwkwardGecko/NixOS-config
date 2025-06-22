@@ -100,6 +100,7 @@
       "--device=nvidia.com/gpu=all"
       "--network-alias=tdarr-node"
       "--network=tdarr_default"
+      "--group-add=video"
     ];
   };
   systemd.services."podman-tdarr-node" = {
