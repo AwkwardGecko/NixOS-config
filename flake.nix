@@ -25,14 +25,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-comfyui = {
-      url = "github:dyscorv/nix-comfyui";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nix-comfyui = {
+    #   url = "github:dyscorv/nix-comfyui";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, star-rail, nix-comfyui, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, star-rail, ... }:
 
   let
 
@@ -81,10 +81,10 @@
         nixvim.nixosModules.nixvim
        
         {
-          environment.systemPackages = with pkgs; [
-            my-comfyui
-            comfyuiPackages.krita-with-extensions
-          ];
+          # environment.systemPackages = with pkgs; [
+          #   my-comfyui
+          #   comfyuiPackages.krita-with-extensions
+          # ];
 
           environment.sessionVariables = {
             #STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/steam/steam/root/compatibilitytools.d";
