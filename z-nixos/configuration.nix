@@ -1,32 +1,21 @@
-####################	sudo nixos-rebuild switch --upgrade --flake ~/.dotfiles/
-### CONFIGURATION ###
-#####################
+#~/.dotfiles/z-nixos/configuration.nix
 
 { config, pkgs, libs, inputs, ... }:
 {
-  # Automatic updating
-  system = {
-    autoUpgrade = {
-      enable = true;
-      dates = "daily";
-    };
-    stateVersion = "24.05";
-  };
-
   security.sudo = {
-     extraRules = [{
-         users = [ "zozano" ];
-         commands = [
-            {
+    extraRules = [{
+      users = [ "zozano" ];
+        commands = [
+          {
             command = "/run/current-system/sw/bin/nixos-rebuild";
             options = [ "NOPASSWD" ];
-            }
-         ];
-     }];
+          }
+        ];
+    }];
 
-     extraConfig = ''
-     Defaults timestamp_timeout=-1
-     '';
+    extraConfig = ''
+      Defaults timestamp_timeout=-1
+    '';
   };
 
   # Automatic cleanup
@@ -45,8 +34,6 @@
       ];
     };
   };
-
-  # swapDevices = [ { label = "swap"; } ];
 
   networking.hostName = "z-nixos";
   networking.networkmanager.enable = true;
