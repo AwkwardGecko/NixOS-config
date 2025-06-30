@@ -1,5 +1,4 @@
 #~/.dotfiles/z-nixos/configuration.nix
-
 { config, pkgs, libs, inputs, ... }:
 {
   security.sudo = {
@@ -79,11 +78,9 @@
     ./modules/gamemode.nix
     ./modules/git.nix
     ./modules/git-push-dotfiles.nix
-    #./modules/hdd-zeroing.nix
     ./modules/hdd-soft-shutdown.nix
     ./modules/huge-pages.nix
     ./modules/hypr.nix
-    #./modules/hyprland_instance_sig.nix
     ./modules/internationalisation.nix
     ./modules/lutris.nix
     #./modules/ollama.nix
@@ -94,7 +91,6 @@
     ./modules/nvidia.nix
     #./modules/reload-usb.nix
     #./modules/scanner.nix
-    # ./modules/sops-nix.nix
     ./modules/ssh.nix
     ./modules/sshfs.nix
     ./modules/statix.nix
@@ -175,7 +171,6 @@
     libglvnd                    # OpenGL Vendor-Neutral Dispatch library (Stable Diffusion dependency)
     libheif                    # HEIF image support
     libnotify
-    
     libpcap                     # Packet capture library (used in Fribbels Honkai Star Rail Optimizer)
     libsecret                   # Secret storage (GNOME keyring)
     libxkbcommon                # Keyboard layout handling (Wayland/X)
@@ -252,5 +247,4 @@
     yt-dlp                      # YouTube downloader
     zlib                        # Compression lib (used by Stable Diffusion & reliquary launcher)
   ];
-
 }

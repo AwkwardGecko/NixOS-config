@@ -5,7 +5,7 @@
     libadwaita
   ];
 
-  # environment.sessionVariables = {
-  #   GTK_THEME = "Adwaita";
-  # };
+  environment.sessionVariables = {
+    GTK_THEME = "Adwaita";
+  };
 }

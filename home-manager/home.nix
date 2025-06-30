@@ -1,22 +1,8 @@
-################
-### HOME.NIX ###
-################
-
-# nix-channel --add https://github.com/nix-community/home-manager/archive/release-24.05.tar.gz home-manager
-# nix-channel --update
-# nix-shell '<home-manager>' -A install
-# home-manager switch -b backup --flake ~/nix/
-
-{
-  config,
-  inputs,
-  pkgs,
-  ...
-}:
-
+#~/.dotfiles/home-manager/home.nix
+{ config, lib, inputs, pkgs, ... }:
 {
   imports = [
-    # ./modules/applications.nix
+    #./modules/applications.nix
     #./modules/cursor.nix
     ./modules/comfyui.nix
     ./modules/diffusion.nix
@@ -29,31 +15,27 @@
     ./modules/kitty.nix
     #./modules/terminal.nix
     ./modules/mako.nix
-    # ./modules/mangohud.nix
+    #./modules/mangohud.nix
     #./modules/neovim/neovim.nix
-    # ./modules/OpenRGB.nix
+    #./modules/OpenRGB.nix
     ./modules/ranger.nix
-    # ./modules/star-rail.nix
+    #./modules/star-rail.nix
     ./modules/style.nix
-    # ./modules/swaync.nix
+    #./modules/swaync.nix
     ./modules/rofi.nix
     ./modules/tmux.nix
     ./modules/waybar.nix
-    # ./modules/waybar/mechabar.nix
+    #./modules/waybar/mechabar.nix
     #./modules/xserver.nix
     #./modules/xmrig.nix
   ];
 
-
-
-
   home.sessionVariables = {
-    #STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d"; # Add custon Proton versions to Steam
     #GTK_THEME = "Adwaita";
     #LD_LIBRARY_PATH = "/usr/lib/x86_64-linux-gnu";
     #LC_ALL = "en_AU.UTF-8";
     #NIXOS_OZONE_WL = "1"; # Wayland Electron support
-	#QT_QPA_PLATFORM=xcb;
+	  #QT_QPA_PLATFORM=xcb;
     #__EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_mesa.json jellyfinmediaplayer;
   };
 
@@ -66,8 +48,6 @@
     # ".config/nsxiv/exec/key-handler".source = source/config/nsxiv/exec/key-handler;
   };
 
-
-  
   home.packages = with pkgs; [
     baobab        # disk usage analyzer
     #blueberry
@@ -83,7 +63,7 @@
     #google-chrome
     grimblast
 	  grc
-    home-assistant-component-tests.tuya
+    #home-assistant-component-tests.tuya
 	  htop
     #hyprpaper
     #hyprshot

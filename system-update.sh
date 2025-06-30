@@ -19,7 +19,7 @@
     echo "Skipping nix flake update (ran recently)."
    fi
 
-   sudo nixos-rebuild switch --upgrade --flake --show-trace /home/zozano/.dotfiles/#z-nixos
+   sudo nixos-rebuild switch --upgrade --flake /home/zozano/.dotfiles/#z-nixos --show-trace
   
    sudo nix-collect-garbage --delete-older-than 7d
    sudo nix-store --optimise

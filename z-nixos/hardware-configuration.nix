@@ -4,43 +4,45 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
-    ];
+  imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-amd" ];
-  boot.extraModulePackages = [ ];
+  boot = {
+    initrd = {
+      availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
+      kernelModules = [ ];
+    };
+    kernelModules = [ "kvm-amd" ];
+    extraModulePackages = [ ];
+  };
 
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/6b47e646-e650-485d-a0ad-2feb337506e4";
+  fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-uuid/6b47e646-e650-485d-a0ad-2feb337506e4";
       fsType = "ext4";
     };
 
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/FB64-FC11";
+    "/boot" = {
+      device = "/dev/disk/by-uuid/FB64-FC11";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
-  fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/e2d9c427-977c-4271-ae93-88e11cedb227";
+    "/home" = {
+      device = "/dev/disk/by-uuid/e2d9c427-977c-4271-ae93-88e11cedb227";
       fsType = "ext4";
     };
 
-  fileSystems."/steam" =
-    { device = "/dev/disk/by-uuid/249c8bec-3ec2-4b89-8618-748cd918d4ba";
+    "/steam" = {
+      device = "/dev/disk/by-uuid/249c8bec-3ec2-4b89-8618-748cd918d4ba";
       fsType = "btrfs";
       options = [
-        #"compress=zstd"
         "space_cache=v2"
         "discard=async"
       ];
     };
-  
-  fileSystems."/data" =
-    { device = "z-home@192.168.1.157:/data";
+
+    "/data" = {
+      device = "z-home@192.168.1.157:/data";
       fsType = "sshfs";
       options = [ 
         "nodev"
@@ -50,7 +52,8 @@
         "x-systemd.automount"
         "x-systemd.requires=network-online.target"
       ];
-    }; 
+    };
+  };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
@@ -63,4 +66,5 @@
   swapDevices = [ { label = "swap"; } ];
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  system.stateVersion = "24.05"; # never delete this, unless you want your shit pushed in.
 }
