@@ -7,6 +7,11 @@ in
 {
   services.flatpak.enable = true;
 
+  # Make flatpak available in system PATH during activation scripts
+  environment.systemPackages = with pkgs; [
+    flatpak
+  ];
+
   system.activationScripts.addFlathubRemote.text = ''
     echo "Creating game directories in ${gamePath}..."
     ${mkdirBin} -p "${gamePath}/prefix" "${gamePath}/game" "${gamePath}/temp"
