@@ -42,11 +42,11 @@
               XAUTHORITY = "\$HOME/.Xauthority";
             };
 
-            imports = [ star-rail.nixosModules.default ];
-            nix.settings = star-rail.nixConfig;
-            programs.honkers-railway-launcher.enable = true;
-            programs.honkers-launcher.enable = true;
-            aagl.enableNixpkgsReleaseBranchCheck = false;
+            # imports = [ star-rail.nixosModules.default ];
+            # nix.settings = star-rail.nixConfig;
+            # programs.honkers-railway-launcher.enable = true;
+            # programs.honkers-launcher.enable = true;
+            # aagl.enableNixpkgsReleaseBranchCheck = false;
 
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
