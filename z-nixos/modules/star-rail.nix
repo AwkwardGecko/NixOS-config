@@ -2,18 +2,17 @@
 let
   flatpakBin = "${pkgs.flatpak}/bin/flatpak";
   mkdirBin = "${pkgs.coreutils}/bin/mkdir";
+  gamePath = "/steam/Honkai-Star-Rail";
 in
 {
   services.flatpak.enable = true;
 
   system.activationScripts.addFlathubRemote.text = ''
-    gamePath="/steam/Honkai-Star-Rail"
+    echo "Creating game directories in ${gamePath}..."
+    ${mkdirBin} -p "${gamePath}/prefix" "${gamePath}/game" "${gamePath}/temp"
 
-    echo "Creating game directories in \$gamePath..."
-    ${mkdirBin} -p "\$gamePath/prefix" "\$gamePath/game" "\$gamePath/temp"
-
-    echo "Granting Flatpak override permissions for \$gamePath..."
-    ${flatpakBin} override --filesystem=\$gamePath moe.launcher.the-honkers-railway-launcher
+    echo "Granting Flatpak override permissions for ${gamePath}..."
+    ${flatpakBin} override --filesystem=${gamePath} moe.launcher.the-honkers-railway-launcher
 
     if ! ${flatpakBin} remote-list | grep -q '^flathub'; then
       echo "Adding Flathub remote..."
