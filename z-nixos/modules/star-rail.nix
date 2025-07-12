@@ -30,7 +30,7 @@ in
     fi
 
     echo "Installing Gnome platform..."
-    ${flatpakBin} install -y org.gnome.Platform//45
+    ${flatpakBin} install -y org.gnome.Platform//47
 
     echo "Installing Honkai: Star Rail..."
     ${flatpakBin} install -y launcher.moe moe.launcher.the-honkers-railway-launcher
