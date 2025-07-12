@@ -95,7 +95,7 @@
     #./modules/scanner.nix
     ./modules/ssh.nix
     ./modules/sshfs.nix
-    ./modules/star-rail.nix
+    #./modules/star-rail.nix
     ./modules/statix.nix
     ./modules/steam.nix
     #./modules/systemd-timers.nix
