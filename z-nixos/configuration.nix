@@ -75,7 +75,7 @@
     #./modules/docker.nix
     ./modules/filesystem.nix
     ./modules/firefox.nix
-    ./modules/flatpak.nix
+    #./modules/flatpak.nix
     ./modules/fonts.nix
     ./modules/gamemode.nix
     ./modules/git.nix
@@ -95,7 +95,7 @@
     #./modules/scanner.nix
     ./modules/ssh.nix
     ./modules/sshfs.nix
-    #./modules/star-rail.nix
+    ./modules/star-rail.nix
     ./modules/statix.nix
     ./modules/steam.nix
     #./modules/systemd-timers.nix
