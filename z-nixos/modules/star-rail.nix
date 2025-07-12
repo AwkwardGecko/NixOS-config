@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }:
 let
-  flatpakBin = "flatpak";
+  flatpakBin = "${pkgs.flatpak}/bin/flatpak";
   mkdirBin = "${pkgs.coreutils}/bin/mkdir";
   gamePath = "/steam/Honkai-Star-Rail";
 in
