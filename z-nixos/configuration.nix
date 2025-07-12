@@ -75,6 +75,7 @@
     #./modules/docker.nix
     ./modules/filesystem.nix
     ./modules/firefox.nix
+    ./modules/flatpak.nix
     ./modules/fonts.nix
     ./modules/gamemode.nix
     ./modules/git.nix
