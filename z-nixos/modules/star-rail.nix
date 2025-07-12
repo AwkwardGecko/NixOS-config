@@ -2,7 +2,7 @@
 let
   flatpakBin = "${pkgs.flatpak}/bin/flatpak";
   mkdirBin = "${pkgs.coreutils}/bin/mkdir";
-  gamePath = "/steam/Honkai-Star-Rail";
+  gamePath = "/steam/Honkai: Star-Rail";
 in
 {
   services.flatpak.enable = true;
@@ -15,6 +15,9 @@ in
   system.activationScripts.addFlathubRemote.text = ''
     echo "Creating game directories in ${gamePath}..."
     ${mkdirBin} -p "${gamePath}/prefix" "${gamePath}/game" "${gamePath}/temp"
+
+    echo "Installing Gnome platform..."
+    ${flatpakBin} install -y org.gnome.Platform//47
 
     echo "Granting Flatpak override permissions for ${gamePath}..."
     ${flatpakBin} override --filesystem=${gamePath} moe.launcher.the-honkers-railway-launcher
@@ -29,8 +32,7 @@ in
       ${flatpakBin} remote-add --if-not-exists --user launcher.moe https://gol.launcher.moe/gol.launcher.moe.flatpakrepo
     fi
 
-    echo "Installing Gnome platform..."
-    ${flatpakBin} install -y org.gnome.Platform//47
+
 
     echo "Installing Honkai: Star Rail..."
     ${flatpakBin} install -y launcher.moe moe.launcher.the-honkers-railway-launcher
