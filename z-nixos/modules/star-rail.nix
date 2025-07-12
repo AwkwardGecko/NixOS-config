@@ -1,17 +1,39 @@
 { config, lib, pkgs, ... }:
+let
+  flatpakBin = "${pkgs.flatpak}/bin/flatpak";
+  mkdirBin = "${pkgs.coreutils}/bin/mkdir";
+in
 {
   services.flatpak.enable = true;
 
   system.activationScripts.addFlathubRemote.text = ''
-    if ! flatpak remote-list | grep -q '^flathub'; then
+    gamePath="/steam/Honkai-Star-Rail"
+
+    # Create required directories
+    echo "Creating game directories in ${gamePath}..."
+    ${mkdirBin} -p "$gamePath/prefix" "$gamePath/game" "$gamePath/temp"
+
+    # Grant Flatpak access to the game path
+    echo "Granting Flatpak override permissions for ${gamePath}..."
+    ${flatpakBin} override --filesystem=${gamePath} moe.launcher.the-honkers-railway-launcher
+
+    # Add Flathub if missing
+    if ! ${flatpakBin} remote-list | grep -q '^flathub'; then
       echo "Adding Flathub remote..."
-      flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-      echo "Adding Honkai: Star Rail repository..."
-      flatpak remote-add --if-not-exists --user launcher.moe https://gol.launcher.moe/gol.launcher.moe.flatpakrepo
-      echo "Installing Gnome platform..."
-      flatpak install org.gnome.Platform//45
-      echo "Installing Honkai: Star Rail..."
-      flatpak install launcher.moe moe.launcher.the-honkers-railway-launcher
+      ${flatpakBin} remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     fi
+
+    # Add launcher.moe repo if missing
+    if ! ${flatpakBin} remote-list --user | grep -q '^launcher.moe'; then
+      echo "Adding Honkai: Star Rail repository..."
+      ${flatpakBin} remote-add --if-not-exists --user launcher.moe https://gol.launcher.moe/gol.launcher.moe.flatpakrepo
+    fi
+
+    # Install runtime and launcher
+    echo "Installing Gnome platform..."
+    ${flatpakBin} install -y org.gnome.Platform//45
+    echo "Installing Honkai: Star Rail..."
+    ${flatpakBin} install -y launcher.moe moe.launcher.the-honkers-railway-launcher
   '';
 }
+
