@@ -52,6 +52,7 @@
     '';
   };
 
+
   security.doas.enable = true;
   programs.ssh.startAgent = true;
   programs.npm.enable = true;
@@ -98,6 +99,7 @@
     #./modules/systemd-timers.nix
     ./modules/tdarr.nix
     ./modules/teamviewer.nix
+    ./modules/untrunc-anthwlock.nix
     ./modules/users.nix
     ./modules/xdg-desktop-portal.nix
     #./modules/xmrig.nix
