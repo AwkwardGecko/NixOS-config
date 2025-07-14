@@ -52,6 +52,20 @@
       ];
     };
 
+    "/home/zozano/.steam" = {
+      device = "/dev/disk/by-uuid/249c8bec-3ec2-4b89-8618-748cd918d4ba";
+      fsType = "btrfs";
+      options = [
+        "subvol=@steam"
+        "space_cache=v2"
+        "discard=async"
+        "nofail"
+      ];
+    };
+
+
+    }
+
     "/data" = {
       device = "z-home@192.168.1.157:/data";
       fsType = "sshfs";
