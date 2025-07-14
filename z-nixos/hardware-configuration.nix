@@ -52,7 +52,7 @@
       ];
     };
 
-    "/home/zozano/.steam" = {
+    "/home/zozano/.local/share/Steam" = {
       device = "/dev/disk/by-uuid/249c8bec-3ec2-4b89-8618-748cd918d4ba";
       fsType = "btrfs";
       options = [
