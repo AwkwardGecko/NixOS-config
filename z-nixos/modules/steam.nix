@@ -29,4 +29,7 @@
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/steam/steam/root/compatibilitytools.d";
   };
 
+  environment.systemPackages = with pkgs; [
+    xdg-user-dirs
+  ];
 }
