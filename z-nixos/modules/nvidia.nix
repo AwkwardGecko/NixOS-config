@@ -35,6 +35,9 @@
   };
 
   environment.systemPackages = with pkgs; [
+    vulkan-tools
+    vulkan-loader
+    dxvk
     nvfancontrol
     lm_sensors
   ];
