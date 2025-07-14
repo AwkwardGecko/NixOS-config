@@ -49,6 +49,8 @@
         "space_cache=v2"
         "discard=async"
         "nofail"
+        "uid=1000"
+        "gid=1000"
       ];
     };
 
