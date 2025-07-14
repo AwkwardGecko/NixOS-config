@@ -88,7 +88,7 @@
     #./modules/ollama.nix
     ./modules/openrgb.nix
     ./modules/polkit.nix
-    ./modules/monero.nix
+    #./modules/monero.nix
     ./modules/nixvim.nix
     ./modules/nvidia.nix
     #./modules/reload-usb.nix
