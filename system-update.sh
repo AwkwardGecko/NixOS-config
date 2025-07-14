@@ -21,9 +21,9 @@
 
    sudo nixos-rebuild switch --upgrade --flake /home/zozano/.dotfiles/#z-nixos --show-trace
   
-   sudo nix-collect-garbage --delete-older-than 7d
-   sudo nix-store --optimise
-   nix-env --delete-generations old
+   #sudo nix-collect-garbage --delete-older-than 7d
+   #sudo nix-store --optimise
+   #nix-env --delete-generations old
 
    echo "Done!"
    sleep 2  # short pause before closing
