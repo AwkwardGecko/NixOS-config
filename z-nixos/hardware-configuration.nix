@@ -41,16 +41,16 @@
       ];
     };
 
-    "/home/zozano/.var" = {
-      device = "/dev/disk/by-uuid/249c8bec-3ec2-4b89-8618-748cd918d4ba";
-      fsType = "btrfs";
-      options = [
-        "subvol=@var"
-        "space_cache=v2"
-        "discard=async"
-        "nofail"
-      ];
-    };
+    # "/home/zozano/.var" = {
+    #   device = "/dev/disk/by-uuid/249c8bec-3ec2-4b89-8618-748cd918d4ba";
+    #   fsType = "btrfs";
+    #   options = [
+    #     "subvol=@var"
+    #     "space_cache=v2"
+    #     "discard=async"
+    #     "nofail"
+    #   ];
+    # };
 
     "/home/zozano/.var/app/moe.launcher.honkers-launcher" = {
       device = "/dev/disk/by-uuid/249c8bec-3ec2-4b89-8618-748cd918d4ba";
