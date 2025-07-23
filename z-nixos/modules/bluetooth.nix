@@ -49,7 +49,7 @@
   systemd.services."xpadneo-reload" = {
     after = [ "bluetooth.service" ];
     description = "Reload xpadneo after bluetooth restart";
-    watedBy = [ "bluetooth.service" ];
+    wantedBy = [ "bluetooth.service" ];
     serviceConfig.ExecStart = "${pkgs.kmod}/bin/modprobe hid_xpadneo";
   };
 
