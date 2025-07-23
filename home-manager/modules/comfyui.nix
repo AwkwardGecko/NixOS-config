@@ -9,7 +9,8 @@ let
     # GPU mode
     sudo nvidia-smi -i 0 -c EXCLUSIVE_PROCESS
   
-    export WINIT_UNIX_NO_PORTAL=1 comfyuistart
+    export WINIT_UNIX_NO_PORTAL=1
+    export __GL_FRAMEBUFFER_SRGB_CAPABLE=1
     export NIXPKGS_ALLOW_UNFREE=1
     export PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:64
     export COMFYUI_PORT=8188
