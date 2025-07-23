@@ -11,24 +11,39 @@ let
     
     export NIXPKGS_ALLOW_UNFREE=1
     export PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:64
-    
+    export COMFYUI_PORT=8188
+
     cd ~/test-shell/ComfyUI
     git pull origin master
-    
-    cd ~/test-shell && NIXPKGS_ALLOW_UNFREE=1 nix-shell --run '
-      /home/zozano/test-shell/.venv/bin/python -m pip install --upgrade pip &&
-      /home/zozano/test-shell/.venv/bin/python -m pip install -r /home/zozano/test-shell/ComfyUI/requirements.txt &&
-      python /home/zozano/test-shell/ComfyUI/main.py \
-        --lowvram \
-        --dont-upcast-attention \
-        --force-fp16 \
-        --use-split-cross-attention \
-        --preview-method auto \
-        --reserve-vram 0.5 \
-        --disable-smart-memory
-    '
+
+    source ../.venv/bin/activate
+    pip check
+    python main.py \
+      --lowvram \
+      --dont-upcast-attention \
+      --force-fp16 \
+      --use-split-cross-attention \
+      --preview-method auto \
+      --reserve-vram 0.5 \
+      --disable-smart-memory
   '';
 in
+
+  #   cd ~/test-shell && NIXPKGS_ALLOW_UNFREE=1 nix-shell --run '
+  #     /home/zozano/test-shell/.venv/bin/python -m pip install --upgrade pip &&
+  #     /home/zozano/test-shell/.venv/bin/python -m pip install -r /home/zozano/test-shell/ComfyUI/requirements.txt &&
+  #     python /home/zozano/test-shell/ComfyUI/main.py \
+  #       --lowvram \
+  #       --dont-upcast-attention \
+  #       --force-fp16 \
+  #       --use-split-cross-attention \
+  #       --preview-method auto \
+  #       --reserve-vram 0.5 \
+  #       --disable-smart-memory
+  #   '
+  # '';
+
+
 {
   xdg.desktopEntries.comfyui = {
     name = "ComfyUI";
