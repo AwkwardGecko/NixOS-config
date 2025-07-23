@@ -9,6 +9,7 @@ let
     export PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:64
     cd ~/test-shell/ComfyUI
     git pull origin master
+    /home/zozano/test-shell/.venv/bin/python -m pip install --upgrade pip
     /home/zozano/test-shell/.venv/bin/python -s -m pip install -r /home/zozano/test-shell/ComfyUI/requirements.txt
     python main.py \
       --lowvram \
