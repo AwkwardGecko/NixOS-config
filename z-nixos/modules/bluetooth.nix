@@ -38,11 +38,20 @@
   '';
 
 
-  # boot.extraModulePackages = with config.boot.kernelPackages; [
-  #   xpadneo
-  # ];
-  #
+  # --- Xpadneo ---
 
+  # kernelHeaders must match running kernel
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+    xpadneo
+  ];
+
+  # optional: auto-reload on Bluetooth hot-plug
+  systemd.services."xpadneo-reload" = {
+    after = [ "bluetooth.service" ];
+    description = "Reload xpadneo after bluetooth restart";
+    watedBy = [ "bluetooth.service" ];
+    serviceConfig.ExecStart = "${pkgs.kmod}/bin/modprobe hid_xpadneo";
+  };
 
   # boot.initrd.kernelModules = [ 
   #   "joydev"
@@ -50,19 +59,4 @@
   #   "hid_xpadneo"
   # ];
 
-  # environment.systemPackages = with pkgs; [
-  #   /* xpadneo */
-  #   # bluez-experimental
-  #   # bluez-alsa
-  #   # bluez-tools
-  # ];
-
-  # systemd.services.bluetooth.serviceConfig.ExecStart = lib.mkForce [
-  #   ""
-  #   "${pkgs.bluez}/libexec/bluetooth/bluetoothd --experimental -f /etc/bluetooth/main.conf"
-  # ];
-
-
-  # hardware.enableAllFirmware = true;
-  # hardware.xpadneo.enable = true;
 }
