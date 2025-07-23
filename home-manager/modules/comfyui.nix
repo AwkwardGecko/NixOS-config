@@ -16,16 +16,18 @@ let
     cd ~/test-shell/ComfyUI
     git pull origin master
 
-    source ../.venv/bin/activate
-    pip check
-    python main.py \
-      --lowvram \
-      --dont-upcast-attention \
-      --force-fp16 \
-      --use-split-cross-attention \
-      --preview-method auto \
-      --reserve-vram 0.5 \
-      --disable-smart-memory
+    nix-shell ../shell.nix --run '
+      source ../.venv/bin/activate
+      pip check
+      python main.py \
+        --lowvram \
+        --dont-upcast-attention \
+        --force-fp16 \
+        --use-split-cross-attention \
+        --preview-method auto \
+        --reserve-vram 0.5 \
+        --disable-smart-memory
+    '
   '';
 in
 
