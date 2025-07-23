@@ -9,16 +9,17 @@ let
     export PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:64
     cd ~/test-shell/ComfyUI
     git pull origin master
-    cd ~/test-shell && NIXPKGS_ALLOW_UNFREE=1 nix-shell --run \
-    /home/zozano/test-shell/.venv/bin/python -m pip install --upgrade pip \
-    /home/zozano/test-shell/.venv/bin/python -m pip install -r /home/zozano/test-shell/ComfyUI/requirements.txt \
-    python main.py \
-      --lowvram \
-      --force-fp16 \
-      --use-split-cross-attention \
-      --preview-method auto \
-      --reserve-vram 0.5 \
-      --disable-smart-memory
+    cd ~/test-shell && NIXPKGS_ALLOW_UNFREE=1 nix-shell --run '
+      /home/zozano/test-shell/.venv/bin/python -m pip install --upgrade pip &&
+      /home/zozano/test-shell/.venv/bin/python -m pip install -r /home/zozano/test-shell/ComfyUI/requirements.txt &&
+      python /home/zozano/test-shell/ComfyUI/main.py \
+        --lowvram \
+        --force-fp16 \
+        --use-split-cross-attention \
+        --preview-method auto \
+        --reserve-vram 0.5 \
+        --disable-smart-memory
+    '
   '';
 in
 {
