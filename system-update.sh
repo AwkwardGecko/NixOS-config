@@ -26,5 +26,6 @@
    #nix-env --delete-generations old
 
    echo "Done!"
+   git status
    sleep 2  # short pause before closing
 ) && exit
