@@ -11,7 +11,7 @@ let
     git pull origin master
     cd ~/test-shell && NIXPKGS_ALLOW_UNFREE=1 nix-shell --run \
     '/home/zozano/test-shell/.venv/bin/python -m pip install --upgrade pip \
-    /home/zozano/test-shell/.venv/bin/python -s -m pip install -r /home/zozano/test-shell/ComfyUI/requirements.txt \
+    /home/zozano/test-shell/.venv/bin/python -m pip install -r /home/zozano/test-shell/ComfyUI/requirements.txt \
     python main.py \
       --lowvram \
       --force-fp16 \
