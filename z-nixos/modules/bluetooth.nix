@@ -41,17 +41,17 @@
   # --- Xpadneo ---
 
   # kernelHeaders must match running kernel
-  boot.extraModulePackages = with config.boot.kernelPackages; [
-    xpadneo
-  ];
-
-  # optional: auto-reload on Bluetooth hot-plug
-  systemd.services."xpadneo-reload" = {
-    after = [ "bluetooth.service" ];
-    description = "Reload xpadneo after bluetooth restart";
-    wantedBy = [ "bluetooth.service" ];
-    serviceConfig.ExecStart = "${pkgs.kmod}/bin/modprobe hid_xpadneo";
-  };
+  # boot.extraModulePackages = with config.boot.kernelPackages; [
+  #   xpadneo
+  # ];
+  #
+  # # optional: auto-reload on Bluetooth hot-plug
+  # systemd.services."xpadneo-reload" = {
+  #   after = [ "bluetooth.service" ];
+  #   description = "Reload xpadneo after bluetooth restart";
+  #   wantedBy = [ "bluetooth.service" ];
+  #   serviceConfig.ExecStart = "${pkgs.kmod}/bin/modprobe hid_xpadneo";
+  # };
 
   # boot.initrd.kernelModules = [ 
   #   "joydev"
