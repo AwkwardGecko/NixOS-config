@@ -14,8 +14,8 @@
     xwayland.enable = true;
   };
 
-  services.xdg.portal.enable = true;
-  services.xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland pkgs.xdg-desktop-portal-gtk ];
 
   services.udisks2.enable = true;
 
