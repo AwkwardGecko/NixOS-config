@@ -92,6 +92,13 @@
             lspFallback = true;
             timeoutMs = 500;
           };
+          formatters = {
+            nix = {
+              command = "alejandra";
+              args = [ "--indentation" "2" ];
+              stdin = true;
+            };
+          };
         };
       };
 
