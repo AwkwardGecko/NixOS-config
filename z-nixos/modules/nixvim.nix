@@ -1,6 +1,8 @@
 { pkgs, self, ... }: {
   
-  programs.wl-clipboard.enable = true;
+  environment.systemPackages = with pkgs; [
+    wl-clipboard
+  ];
 
   programs.nixvim = {
     enable = true;
