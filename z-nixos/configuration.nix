@@ -61,6 +61,7 @@
 
   imports = [
     ./hardware-configuration.nix
+    ./modules/alejandra.nix
     ./modules/audio.nix # audio
     ./modules/autologin.nix # 100%
     ./modules/bash.nix
