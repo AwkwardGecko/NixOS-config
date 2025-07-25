@@ -1,6 +1,58 @@
 #~/.dotfiles/z-nixos/configuration.nix
 { config, pkgs, libs, inputs, ... }:
 {
+   imports = [
+    ./hardware-configuration.nix
+    ./modules/alejandra.nix
+    ./modules/audio.nix # audio
+    ./modules/autologin.nix # 100%
+    ./modules/bash.nix
+    #./modules/bluearchive.nix
+    ./modules/bluetooth.nix # bluetooth
+    ./modules/boot.nix # configure kernel modules
+    ./modules/cachix.nix # cachix
+    ./modules/chromium.nix
+    ./modules/comfyui.nix
+    ./modules/coolercontrol.nix
+    #./modules/cron.nix
+    #./modules/docker.nix
+    ./modules/filesystem.nix
+    ./modules/firefox.nix
+    ./modules/flatpak.nix
+    ./modules/fonts.nix
+    ./modules/gamemode.nix
+    ./modules/git.nix
+    ./modules/git-push-dotfiles.nix
+    ./modules/hdd-soft-shutdown.nix
+    ./modules/huge-pages.nix
+    ./modules/hypr.nix
+    ./modules/internationalisation.nix
+    ./modules/lutris.nix
+    #./modules/ollama.nix
+    ./modules/openrgb.nix
+    ./modules/polkit.nix
+    ./modules/monero.nix
+    ./modules/nixvim.nix
+    ./modules/nvidia.nix
+    #./modules/reload-usb.nix
+    #./modules/scanner.nix
+    ./modules/ssh.nix
+    ./modules/sshfs.nix
+    #./modules/star-rail.nix
+    ./modules/statix.nix
+    ./modules/steam.nix
+    #./modules/systemd-timers.nix
+    ./modules/tdarr.nix
+    ./modules/teamviewer.nix
+    ./modules/untrunc-anthwlock.nix
+    ./modules/users.nix
+    ./modules/xdg-desktop-portal.nix
+    #./modules/xmrig.nix
+    #./modules/xserver.nix
+    #./modules/whisperai.nix
+    ./modules/wine.nix
+  ]; 
+
   security.sudo = {
     extraRules = [{
       users = [ "zozano" ];
@@ -59,57 +111,7 @@
 
   programs.nix-ld.enable = true; # resolve library issues for Stable Diffusion
 
-  imports = [
-    ./hardware-configuration.nix
-    ./modules/alejandra.nix
-    ./modules/audio.nix # audio
-    ./modules/autologin.nix # 100%
-    ./modules/bash.nix
-    #./modules/bluearchive.nix
-    ./modules/bluetooth.nix # bluetooth
-    ./modules/boot.nix # configure kernel modules
-    ./modules/cachix.nix # cachix
-    ./modules/chromium.nix
-    ./modules/comfyui.nix
-    ./modules/coolercontrol.nix
-    #./modules/cron.nix
-    #./modules/docker.nix
-    ./modules/filesystem.nix
-    ./modules/firefox.nix
-    ./modules/flatpak.nix
-    ./modules/fonts.nix
-    ./modules/gamemode.nix
-    ./modules/git.nix
-    ./modules/git-push-dotfiles.nix
-    ./modules/hdd-soft-shutdown.nix
-    ./modules/huge-pages.nix
-    ./modules/hypr.nix
-    ./modules/internationalisation.nix
-    ./modules/lutris.nix
-    #./modules/ollama.nix
-    ./modules/openrgb.nix
-    ./modules/polkit.nix
-    ./modules/monero.nix
-    ./modules/nixvim.nix
-    ./modules/nvidia.nix
-    #./modules/reload-usb.nix
-    #./modules/scanner.nix
-    ./modules/ssh.nix
-    ./modules/sshfs.nix
-    #./modules/star-rail.nix
-    ./modules/statix.nix
-    ./modules/steam.nix
-    #./modules/systemd-timers.nix
-    ./modules/tdarr.nix
-    ./modules/teamviewer.nix
-    ./modules/untrunc-anthwlock.nix
-    ./modules/users.nix
-    ./modules/xdg-desktop-portal.nix
-    #./modules/xmrig.nix
-    #./modules/xserver.nix
-    #./modules/whisperai.nix
-    ./modules/wine.nix
-  ];
+
 
   environment.systemPackages = with pkgs; [
     age                         # generate keypair
