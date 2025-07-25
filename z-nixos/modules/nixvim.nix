@@ -63,11 +63,13 @@
 
       todo-comments = {
         enable = true;
-        keywords = {
-          TODO = { icon = ""; color = "info"; alt = [ ]; };
-          FIX = { icon = ""; color = "error"; alt = [ "FIXME" "BUG" ]; };
-          HACK = { icon = ""; color = "warning"; alt = [ ]; };
-          NOTE = { icon = ""; color = "hint"; alt = [ "INFO" ]; };
+        settings = {
+          keywords = {
+            TODO = { icon = ""; color = "info"; alt = [ ]; };
+            FIX = { icon = ""; color = "error"; alt = [ "FIXME" "BUG" ]; };
+            HACK = { icon = ""; color = "warning"; alt = [ ]; };
+            NOTE = { icon = ""; color = "hint"; alt = [ "INFO" ]; };
+          };
         };
       };
 
