@@ -62,9 +62,6 @@
       dap.enable = true;
       dap-ui.enable = true;
 
-      # copilot.enable = true;
-
-
       which-key.enable = true;
 
       harpoon.enable = true;
