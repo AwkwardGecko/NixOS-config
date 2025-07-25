@@ -7,7 +7,7 @@
     performance.byteCompileLua.enable = true;
     clipboard.providers.wl-copy.enable = true;
     colorschemes.gruvbox.enable = true;  # Gruvbox colorscheme
-    lsp.autoArchive = true;
+    autoCmd.fetchFlakeDeps = true;
 
     extraConfigLua = ''
       local format_enabled = true
