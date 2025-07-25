@@ -54,9 +54,11 @@
 
       copilot.enable = true;
 
+      
+
       cmp = {
         enable = true;
-        sources = [ "luasnip" "nvim_lsp" "buffer" "path" "copilot" ];
+        #sources = [ "luasnip" "nvim_lsp" "buffer" "path" "copilot" ];
         autoEnableSources = true;
       };
       
