@@ -1,4 +1,7 @@
 { pkgs, self, ... }: {
+  
+  programs.wl-clipboard.enable = true;
+
   programs.nixvim = {
     enable = true;
     defaultEditor = true;
@@ -7,7 +10,6 @@
     performance.byteCompileLua.enable = true;
     clipboard.providers.wl-copy.enable = true;
     colorschemes.gruvbox.enable = true;  # Gruvbox colorscheme
-    autoCmd.fetchFlakeDeps = true;
 
     extraConfigLua = ''
       local format_enabled = true
@@ -76,7 +78,6 @@
 
     opts = {
       number = true;                       # Show absolute line numbers
-      
       shiftwidth = 2;                      # Set indentation width to 2 spaces
       tabstop = 2;                         # Set tab width to 2 spaces
       softtabstop = 2;
