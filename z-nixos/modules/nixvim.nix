@@ -46,7 +46,7 @@
       # )
 
     plugins = {
-    
+
       luasnip.enable = true;
 
       dap.enable = true;
@@ -54,7 +54,22 @@
 
       # copilot.enable = true;
 
-      
+
+      which-key.enable = true;
+
+      harpoon.enable = true;
+
+      trouble.enable = true;
+
+      todo-comments = {
+        enable = true;
+        keywords = {
+          TODO = { icon = ""; color = "info"; alt = [ ]; };
+          FIX = { icon = ""; color = "error"; alt = [ "FIXME" "BUG" ]; };
+          HACK = { icon = ""; color = "warning"; alt = [ ]; };
+          NOTE = { icon = ""; color = "hint"; alt = [ "INFO" ]; };
+        };
+      };
 
       cmp = {
         enable = true;
@@ -66,8 +81,7 @@
         enable = true;
         servers = {
           lua_ls.enable = true;
-          #ts_ls.enable = true;
-          tsserver.enable = true;
+          ts_ls.enable = true;
           nil_ls.enable = true;
           cssls.enable = true;
           html.enable = true;
