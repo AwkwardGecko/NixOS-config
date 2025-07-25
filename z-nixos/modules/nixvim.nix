@@ -52,7 +52,7 @@
       dap.enable = true;
       dap-ui.enable = true;
 
-      copilot.enable = true;
+      # copilot.enable = true;
 
       
 
