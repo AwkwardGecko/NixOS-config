@@ -8,9 +8,12 @@
     nixvim.url = "github:nix-community/nixvim";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
 
+    alejandra.url = "github:kamadorueda/alejandra/4.0.0";
+    alejandra.inputs.nixpkgs.follows = "nixpkgs";
+
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, alejandra, ... }:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
@@ -27,10 +30,13 @@
           home-manager.nixosModules.home-manager
           nixvim.nixosModules.nixvim
           {
-            environment.sessionVariables = {
-              XDG_CURRENT_DESKTOP = "Hyprland";
-              XDG_SESSION_TYPE = "wayland";
-              XAUTHORITY = "\$HOME/.Xauthority";
+            environment = {
+              sessionVariables = {
+                XDG_CURRENT_DESKTOP = "Hyprland";
+                XDG_SESSION_TYPE = "wayland";
+                XAUTHORITY = "\$HOME/.Xauthority";
+              };
+              systemPackages = [alejandra.defaultPackage.${system}];
             };
 
             home-manager.useGlobalPkgs = true;
