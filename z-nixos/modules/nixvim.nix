@@ -14,30 +14,49 @@
     colorschemes.gruvbox.enable = true;  # Gruvbox colorscheme
 
     extraConfigLua = ''
-      local format_enabled = true
-      vim.api.nvim_create_user_command(
-        "ToggleFormatNotified",
-        function()
-        if format_enabled then
-          vim.cmd("FormatDisable")
-          require("notify")("Disabled formatting")
-          format_enabled = false
-        else
-          vim.cmd("FormatEnable")
-          require("notify")("Enabled formatting")
-          format_enabled = true
-          end
-        end,
-        {}
-      )
+      -- persistent flag
+      vim.g.format_enabled = true
+
+      vim.api.nvim_create_user_command("ToggleFormat", function()
+        vim.g.format_enabled = not vim.g.format_enabled
+        vim.b.autoformat = vim.g.format_enabled  -- conform uses this in 1.0
+        require("notify")(
+          (vim.g.format_enabled and "Enabled" or "Disabled") .. " formatting"
+        )
+      end, { desc = "Toggle autoformat-on-save" })
     '';
 
 
+      # old extraConfigLua
+      # local format_enabled = true
+      # vim.api.nvim_create_user_command(
+      #   "ToggleFormatNotified",
+      #   function()
+      #   if format_enabled then
+      #     vim.cmd("FormatDisable")
+      #     require("notify")("Disabled formatting")
+      #     format_enabled = false
+      #   else
+      #     vim.cmd("FormatEnable")
+      #     require("notify")("Enabled formatting")
+      #     format_enabled = true
+      #     end
+      #   end,
+      #   {}
+      # )
+
     plugins = {
-      
-     
+    
+      luasnip.enable = true;
+
+      dap.enable = true;
+      dap-ui.enable = true;
+
+      copilot.enable = true;
+
       cmp = {
         enable = true;
+        sources = [ "luasnip" "nvim_lsp" "buffer" "path" "copilot" ];
         autoEnableSources = true;
       };
       
@@ -45,7 +64,8 @@
         enable = true;
         servers = {
           lua_ls.enable = true;
-          ts_ls.enable = true;
+          #ts_ls.enable = true;
+          tsserver.enable = true;
           nil_ls.enable = true;
           cssls.enable = true;
           html.enable = true;
@@ -85,7 +105,7 @@
       softtabstop = 2;
       expandtab = true;                    # Use spaces instead of tabs
       smartindent = true;                  # Enable smart indentation
-      autoindent = true;                   # Enable automatic indentation
+      #autoindent = true;                   # Enable automatic indentation
       clipboard = "unnamedplus";
     };
   };
