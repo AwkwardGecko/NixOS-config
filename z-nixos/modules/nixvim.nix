@@ -14,6 +14,16 @@
     colorschemes.gruvbox.enable = true;  # Gruvbox colorscheme
 
     extraConfigLua = ''
+      local cmp = require("cmp")
+      cmp.setup {
+        sources = {
+          { name = "buffer" }
+          { name = "path" }
+          { name = "luasnip" }
+          { name = "nvim_lsp" }
+        }
+      }
+
       -- persistent flag
       vim.g.format_enabled = true
 
@@ -75,10 +85,15 @@
 
       cmp = {
         enable = true;
-        #sources = [ "luasnip" "nvim_lsp" "buffer" "path" "copilot" ];
         autoEnableSources = true;
       };
-      
+     
+      cmp.buffer.enable = true;
+      cmp-path.enable = true;
+      cmp-nvim-lsp.enable = true;
+      cmp_luasnip.enable = true;
+
+
       lsp = {
         enable = true;
         servers = {
