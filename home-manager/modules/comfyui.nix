@@ -33,27 +33,11 @@ let
   '';
 in
 
-  #   cd ~/test-shell && NIXPKGS_ALLOW_UNFREE=1 nix-shell --run '
-  #     /home/zozano/test-shell/.venv/bin/python -m pip install --upgrade pip &&
-  #     /home/zozano/test-shell/.venv/bin/python -m pip install -r /home/zozano/test-shell/ComfyUI/requirements.txt &&
-  #     python /home/zozano/test-shell/ComfyUI/main.py \
-  #       --lowvram \
-  #       --dont-upcast-attention \
-  #       --force-fp16 \
-  #       --use-split-cross-attention \
-  #       --preview-method auto \
-  #       --reserve-vram 0.5 \
-  #       --disable-smart-memory
-  #   '
-  # '';
-
-
 {
   xdg.desktopEntries.comfyui = {
     name = "ComfyUI";
-    exec = "kitty bash -c run-comfy.sh";
-    # exec = "kitty bash -c \"cd /home/zozano/test-shell && NIXPKGS_ALLOW_UNFREE=1 nix-shell --run 'cd ComfyUI && python main.py --lowvram'\"";
-    icon = "/home/zozano/.local/share/icons/comfyui.png";
+    exec = "kitty --hold -e ${config.home.homeDirectory}/.local/bin/run-comfy.sh";
+    icon = "${config.home.homeDirectory}/.local/share/icons/comfyui.png";
     terminal = true;
     type = "Application";
     categories = [ "Graphics" ];
