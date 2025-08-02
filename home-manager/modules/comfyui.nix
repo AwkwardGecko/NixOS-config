@@ -38,7 +38,7 @@ in
     name = "ComfyUI";
     exec = "kitty --hold -e ${config.home.homeDirectory}/.local/bin/run-comfy.sh";
     icon = "${config.home.homeDirectory}/.local/share/icons/comfyui.png";
-    terminal = true;
+    terminal = false;
     type = "Application";
     categories = [ "Graphics" ];
   };
