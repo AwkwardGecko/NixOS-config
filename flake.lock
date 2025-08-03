@@ -23,36 +23,20 @@
         "type": "github"
       }
     },
-    "comfySrc": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1754161763,
-        "narHash": "sha256-SHyKItuWUga4prAsM51Zt7+5a15tDsYXumqs8Kcom1A=",
-        "owner": "comfyanonymous",
-        "repo": "ComfyUI",
-        "rev": "13aaa66ec21c397240a9b972d818430b39112588",
-        "type": "github"
-      },
-      "original": {
-        "owner": "comfyanonymous",
-        "repo": "ComfyUI",
-        "type": "github"
-      }
-    },
     "comfyui": {
       "inputs": {
-        "comfySrc": "comfySrc",
         "flake-utils": "flake-utils",
         "nixpkgs": [
           "nixpkgs"
-        ]
+        ],
+        "src": "src"
       },
       "locked": {
-        "lastModified": 1754188846,
-        "narHash": "sha256-6BZbPPr2Dz/qgMENK7cR2yrg8Gsz+WCja8chKEVWLyM=",
+        "lastModified": 1754189033,
+        "narHash": "sha256-NeN0DeNKLNE3I1iRtidkTclFV9k7fWAlEkcCY53aRII=",
         "owner": "dectech-au",
         "repo": "comfyui",
-        "rev": "f6aa5fced31a529e3f7601d3b2462f85cc419ba4",
+        "rev": "ef14319632c3d9287961d6af471285bbe991b48a",
         "type": "github"
       },
       "original": {
@@ -290,6 +274,22 @@
         "owner": "rust-lang",
         "ref": "nightly",
         "repo": "rust-analyzer",
+        "type": "github"
+      }
+    },
+    "src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1754161763,
+        "narHash": "sha256-SHyKItuWUga4prAsM51Zt7+5a15tDsYXumqs8Kcom1A=",
+        "owner": "comfyanonymous",
+        "repo": "ComfyUI",
+        "rev": "13aaa66ec21c397240a9b972d818430b39112588",
+        "type": "github"
+      },
+      "original": {
+        "owner": "comfyanonymous",
+        "repo": "ComfyUI",
         "type": "github"
       }
     },
