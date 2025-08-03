@@ -11,9 +11,12 @@
     alejandra.url = "github:kamadorueda/alejandra/4.0.0";
     alejandra.inputs.nixpkgs.follows = "nixpkgs";
 
+    comfyui.url = "github:dectech-au/comfyui";
+    comfyui.inputs.nixpkgs.follows = "nixpkgs";
+
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, alejandra, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, comfyui, alejandra, ... }:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
@@ -29,6 +32,7 @@
           ./z-nixos/configuration.nix
           home-manager.nixosModules.home-manager
           nixvim.nixosModules.nixvim
+          comfyui.nixosModules.comfyui
           {
             environment = {
               sessionVariables = {
