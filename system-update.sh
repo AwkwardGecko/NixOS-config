@@ -19,6 +19,7 @@
     echo "Skipping nix flake update (ran recently)."
    fi
 
+   nix flake update
    sudo nixos-rebuild switch --upgrade --flake /home/zozano/.dotfiles/#z-nixos --show-trace
   
    #sudo nix-collect-garbage --delete-older-than 7d
