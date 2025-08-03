@@ -32,7 +32,6 @@
           ./z-nixos/configuration.nix
           home-manager.nixosModules.home-manager
           nixvim.nixosModules.nixvim
-          comfyui.nixosModules.comfyui
           comfyui.nixosModules.default
           {
             environment = {
