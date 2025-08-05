@@ -36,6 +36,7 @@
     #./modules/ollama.nix
     ./modules/openrgb.nix
     ./modules/polkit.nix
+    ./modules/prometheus.nix
     ./modules/monero.nix
     ./modules/nixvim.nix
     ./modules/nvidia.nix

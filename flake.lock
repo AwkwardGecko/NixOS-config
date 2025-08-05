@@ -32,11 +32,11 @@
         "src": "src"
       },
       "locked": {
-        "lastModified": 1754387942,
-        "narHash": "sha256-SKSfmbEDXUq/Vb9LP8osGb/zqK7BJ25kQ4Krv7Gh+Yc=",
+        "lastModified": 1754390108,
+        "narHash": "sha256-yEQKKu4BJzwV3VGhIsmd2cr2b9mrKyfVIdgUs5qHv/4=",
         "owner": "dectech-au",
         "repo": "comfyui",
-        "rev": "29d502e7913f7c24b8f6804e2c55ba51fc51adab",
+        "rev": "ca42740b63d46a5b2a144850a3d0b5d087448be3",
         "type": "github"
       },
       "original": {
