@@ -32,7 +32,7 @@
           ./z-nixos/configuration.nix
           home-manager.nixosModules.home-manager
           nixvim.nixosModules.nixvim
-          #comfyui.nixosModules.default
+          comfyui.nixosModules.default
           {
             environment = {
               sessionVariables = {
