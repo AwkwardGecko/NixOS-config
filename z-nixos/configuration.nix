@@ -1,7 +1,12 @@
 #~/.dotfiles/z-nixos/configuration.nix
 { config, pkgs, libs, inputs, ... }:
 {
-   imports = [
+
+  # limit rebuild speed
+  nix.settings.max-jobs = 2;
+  nix.settings.cores = 6;
+
+  imports = [
     ./hardware-configuration.nix
     ./modules/alejandra.nix
     ./modules/audio.nix # audio
