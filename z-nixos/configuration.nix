@@ -47,6 +47,7 @@
     ./modules/statix.nix
     ./modules/steam.nix
     #./modules/systemd-timers.nix
+    ./modules/tailscale.nix
     ./modules/tdarr.nix
     ./modules/teamviewer.nix
     ./modules/untrunc-anthwlock.nix
