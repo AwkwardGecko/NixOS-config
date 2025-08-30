@@ -67,6 +67,7 @@
 	  htop
     #hyprpaper
     #hyprshot
+    #jellyfinmediaplayer
     #jellyfin-web
 	  #plasma5Packages.kdeconnect-kde
     krusader # file manager 
@@ -91,7 +92,6 @@
     qt6ct # QT support
     ripgrep # something for nvim
     #	rofi-wayland
-    jellyfin-media-player
 	  #qt5ct
     protonup-qt
     #python312Packages.tinytuya
