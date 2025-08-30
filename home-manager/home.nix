@@ -67,7 +67,7 @@
 	  htop
     #hyprpaper
     #hyprshot
-    jellyfin-web
+    #jellyfin-web
 	  #plasma5Packages.kdeconnect-kde
     krusader # file manager 
     krename # batch renamer for krusader
