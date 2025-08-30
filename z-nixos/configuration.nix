@@ -37,6 +37,7 @@
     ./modules/openrgb.nix
     ./modules/polkit.nix
     ./modules/prometheus.nix
+    ./modules/protonvpn.nix
     ./modules/monero.nix
     ./modules/nixvim.nix
     ./modules/nvidia.nix
