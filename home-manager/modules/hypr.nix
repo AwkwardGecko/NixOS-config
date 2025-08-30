@@ -28,7 +28,7 @@
 
     "$mainMod" = "SUPER";
     "$terminal" = "kitty";
-    "$fileManager" = "nautilus";
+    "$fileManager" = "dolphin";
     "$browser" = "firefox";
     "$menu" = "rofi -show drun -show-icons";
 

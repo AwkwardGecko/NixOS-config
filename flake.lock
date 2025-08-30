@@ -280,11 +280,11 @@
     "src": {
       "flake": false,
       "locked": {
-        "lastModified": 1756461821,
-        "narHash": "sha256-WuS+ZSyghHK3Sd/vWIx4hx1lVYnUsxiXebsGaZW/MQ0=",
+        "lastModified": 1756523164,
+        "narHash": "sha256-1THn3rWYdDacTPn/q5yOLaPi4Kv1/IUYqNcZW7pJlUA=",
         "owner": "comfyanonymous",
         "repo": "ComfyUI",
-        "rev": "a86aaa430183068e2a264495c802c81d05eb350a",
+        "rev": "885015eecf649d6e49e1ade68e4475b434517b82",
         "type": "github"
       },
       "original": {
