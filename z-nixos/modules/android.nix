@@ -4,7 +4,7 @@
   services.udisks2.enable = true;
   programs.kdeconnect.enable = true;
   environment.systemPackages = with pkgs; [
-    kio-extras
+    kdePackages.kio-extras
     gvfs
     libmtp
   ];
