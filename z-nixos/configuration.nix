@@ -188,7 +188,7 @@
     libglvnd                    # OpenGL Vendor-Neutral Dispatch library (Stable Diffusion dependency)
     libheif                    # HEIF image support
     libnotify
-    libpcap                     # Packet capture library (used in Fribbels Honkai Star Rail Optimizer)
+    #libpcap                     # Packet capture library (used in Fribbels Honkai Star Rail Optimizer)
     libsecret                   # Secret storage (GNOME keyring)
     libxkbcommon                # Keyboard layout handling (Wayland/X)
     libz
@@ -228,7 +228,7 @@
     python311Packages.setuptools
     python311Packages.wheel
     #python311Packages.torch
-    python312Packages.libpcap   # Python bindings for libpcap (next-gen testing?)
+    # python312Packages.libpcap   # Python bindings for libpcap (next-gen testing?)
     python312Packages.opencv-python
     qbittorrent                 # BitTorrent client
     rclone                      # Sync with cloud storage
