@@ -7,5 +7,5 @@
   ];
 
   services.resolved.enable = true;
-  environment.etc."resolv.conf".source = "/run/systemd/resolve/resolv.conf";
+  #environment.etc."resolv.conf".source = "/run/systemd/resolve/resolv.conf";
 }
