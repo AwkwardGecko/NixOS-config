@@ -16,6 +16,7 @@
     #./modules/bluearchive.nix
     ./modules/bluetooth.nix # bluetooth
     ./modules/boot.nix # configure kernel modules
+    ./modules/borderlands2-fix.nix
     ./modules/cachix.nix # cachix
     ./modules/chromium.nix
     ./modules/comfyui.nix
