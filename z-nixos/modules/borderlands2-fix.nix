@@ -1,6 +1,9 @@
 { config, lib, pkgs, ... }:
 {
   systemd.tmpfiles.rules = [
-    "L /usr/lib/ssl - - - - /etc/ssl"
+    "r! /usr/lib/ssl"
+    "L+ /usr/lib/ssl - - - - /etc/ssl"
+
+    "L+ /usr/lib/ssl/cert.pem - - - - /etc/ssl/certs/ca-bundle.crt"
   ];
 }
