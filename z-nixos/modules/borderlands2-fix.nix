@@ -8,7 +8,7 @@
 
   environment.systemPackages = with pkgs; [
     pkgsi686Linux.curl
-    pkgsi686Linux.openssl_1_1
+    pkgsi686Linux.openssl_1_1w
   ];
 
   #services.resolved.enable = true;
