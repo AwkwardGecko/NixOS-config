@@ -8,9 +8,9 @@
 
   environment.systemPackages = with pkgs; [
     pkgsi686Linux.curl
-    pkgsi686Linux.openssl_1_1w
+    pkgsi686Linux.openssl
   ];
-
+  
   #services.resolved.enable = true;
   #environment.etc."resolv.conf".source = "/run/systemd/resolve/resolv.conf";
 }
