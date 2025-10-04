@@ -204,7 +204,7 @@
       "workspace 18,title:(Grand Theft Auto V)"
       "workspace 18,title:(SocialClubHelper)"
       "workspace 18,title:(Rockstar)"
-      "workspace 19,title:(Borderlands)"
+      # "workspace 19,title:(Borderlands)"
       "suppressevent maximize, class:.*"
       "nofocus,class:^$,title:^$,wayland:1,floating:1,fullscreen:0,pinned:0"
     ];
