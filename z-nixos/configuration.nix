@@ -45,7 +45,7 @@
     ./modules/nixvim.nix
     ./modules/nvidia.nix
     #./modules/reload-usb.nix
-    #./modules/scanner.nix
+    ./modules/scanner.nix
     ./modules/ssh.nix
     ./modules/sshfs.nix
     #./modules/star-rail.nix
