@@ -16,7 +16,7 @@
 
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, comfyui, alejandra, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, comfyui, alejandra, ... }:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
