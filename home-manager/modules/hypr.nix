@@ -166,6 +166,9 @@
       "$mainMod, mouse_down, workspace, e-1"
       "$mainMod, mouse_up, workspace, e+1"
 
+      "$mainMod SHIFT, mouse_down, movetoworkspace, e-1"
+      "$mainMod SHIFT, mouse_up, movetoworkspace, e+1"
+
       #", mouse:276, workspace, e+1"
       #", mouse:275, workspace, e-1"
     ];
