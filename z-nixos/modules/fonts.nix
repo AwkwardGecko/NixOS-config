@@ -108,7 +108,7 @@
       useEmbeddedBitmaps = false;
       hinting.enable = true;
       hinting.style = "slight";
-      subpixelRendering = "rgb";
+      #subpixelRendering = "rgb";
     };
   };
 }
