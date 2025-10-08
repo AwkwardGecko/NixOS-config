@@ -55,7 +55,7 @@
     ./modules/tailscale.nix
     ./modules/tdarr.nix
     ./modules/teamviewer.nix
-    ./modules/untrunc-anthwlock.nix
+    #./modules/untrunc-anthwlock.nix
     ./modules/users.nix
     ./modules/xdg-desktop-portal.nix
     #./modules/xmrig.nix
