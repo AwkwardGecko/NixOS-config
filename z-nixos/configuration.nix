@@ -42,7 +42,7 @@
     ./modules/prometheus.nix
     ./modules/protonvpn.nix
     ./modules/monero.nix
-    #./modules/nixvim.nix
+    ./modules/nixvim.nix
     ./modules/nvidia.nix
     #./modules/reload-usb.nix
     ./modules/scanner.nix
