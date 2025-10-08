@@ -35,7 +35,7 @@
     ./modules/huge-pages.nix
     ./modules/hypr.nix
     ./modules/internationalisation.nix
-    ./modules/lutris.nix
+    #./modules/lutris.nix
     #./modules/ollama.nix
     ./modules/openrgb.nix
     ./modules/polkit.nix
