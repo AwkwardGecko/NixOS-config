@@ -19,7 +19,7 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.iosevka
     noto-fonts
-    noto-fonts-cjk
+    noto-fonts-cjk-sans
     noto-fonts-emoji
 
     # Optional alternates if you want variety:
