@@ -11,6 +11,7 @@
   fonts.packages = with pkgs; [
 
     # Core fonts you *actually* need:
+    dejavu_fonts
     fira-code
     fira-code-symbols
     font-awesome
@@ -18,6 +19,7 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.iosevka
     noto-fonts
+    noto-conts-cjk
     noto-fonts-emoji
 
     # Optional alternates if you want variety:
