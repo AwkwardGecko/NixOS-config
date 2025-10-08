@@ -51,7 +51,7 @@
   home.packages = with pkgs; [
     baobab        # disk usage analyzer
     #blueberry
-    clementine
+    #clementine
     cliphist    # wayland clipboard manager
     cryptsetup  # LUKS support
     dex         # run .desktop files from CLI
