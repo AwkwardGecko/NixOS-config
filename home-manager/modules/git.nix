@@ -1,19 +1,14 @@
-###########
-### GIT ###
-###########
+# ~/.dotfiles/home-manager/modules/git.nix
 
-{
-  config,
-  pkgs,
-  lib,
-  ...
-}:
+{ config, lib, pkgs, ... }:
 {
   programs.git = {
     enable = true;
-    userName = "Zozano";
-    userEmail = "private@private.com";
-    extraConfig = {
+    settings = {
+      user = {
+        name = "Zozano";
+        email = "private@private.com";
+      };
       init.defaultBranch = "main";
     };
   };
