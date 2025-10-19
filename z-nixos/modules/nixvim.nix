@@ -77,7 +77,10 @@
         servers = {
           lua_ls.enable = true;
           ts_ls.enable = true;
-          nil_ls.enable = true;
+          nil_ls = {
+            enable = true;
+            settings.nix.flake.autoArchive = true;
+          };
           cssls.enable = true;
           html.enable = true;
           bashls.enable = true;
