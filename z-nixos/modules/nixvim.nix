@@ -74,7 +74,6 @@
 
       lsp = {
         enable = true;
-        autoArchive = true;
         servers = {
           lua_ls.enable = true;
           ts_ls.enable = true;
