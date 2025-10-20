@@ -28,20 +28,19 @@
         "flake-utils": "flake-utils",
         "nixpkgs": [
           "nixpkgs"
-        ],
-        "src": "src"
+        ]
       },
       "locked": {
-        "lastModified": 1754434737,
-        "narHash": "sha256-LGFqI0kyT2bt+oRznGJvDX5Sw7uWbHEh7QgLbzIYsxw=",
-        "owner": "dectech-au",
-        "repo": "comfyui",
-        "rev": "7893b9a05e31323d239cfe3463a420a53f3b47f0",
+        "lastModified": 1748143655,
+        "narHash": "sha256-53OwW9jlobRuBIOsjyWDWip4URo5Uh0k3gankSkNRAc=",
+        "owner": "utensils",
+        "repo": "nix-comfyui",
+        "rev": "7408af57db3ad5c10fcfe935d3235099221302e0",
         "type": "github"
       },
       "original": {
-        "owner": "dectech-au",
-        "repo": "comfyui",
+        "owner": "utensils",
+        "repo": "nix-comfyui",
         "type": "github"
       }
     },
@@ -191,11 +190,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1760524057,
-        "narHash": "sha256-EVAqOteLBFmd7pKkb0+FIUyzTF61VKi7YmvP1tw4nEw=",
+        "lastModified": 1760878510,
+        "narHash": "sha256-K5Osef2qexezUfs0alLvZ7nQFTGS9DL2oTVsIXsqLgs=",
         "owner": "Nixos",
         "repo": "nixpkgs",
-        "rev": "544961dfcce86422ba200ed9a0b00dd4b1486ec5",
+        "rev": "5e2a59a5b1a82f89f2c7e598302a9cacebb72a67",
         "type": "github"
       },
       "original": {
@@ -274,22 +273,6 @@
         "owner": "rust-lang",
         "ref": "nightly",
         "repo": "rust-analyzer",
-        "type": "github"
-      }
-    },
-    "src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1760904346,
-        "narHash": "sha256-LyOoqiZqFLLGL7lpc8nIPMpexhFaA0gkLzksQv5yY/A=",
-        "owner": "comfyanonymous",
-        "repo": "ComfyUI",
-        "rev": "b5c59b763c6b14e1362ec4274b09eca4f3f7091b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "comfyanonymous",
-        "repo": "ComfyUI",
         "type": "github"
       }
     },

@@ -11,8 +11,10 @@
     alejandra.url = "github:kamadorueda/alejandra/4.0.0";
     alejandra.inputs.nixpkgs.follows = "nixpkgs";
 
-    comfyui.url = "github:dectech-au/comfyui";
+    comfyui.url = "github:utensils/nix-comfyui";
     comfyui.inputs.nixpkgs.follows = "nixpkgs";
+
+
 
   };
 

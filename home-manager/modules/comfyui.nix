@@ -51,4 +51,15 @@ in
     type       = "Application";
     categories = [ "Graphics" "Utility" ];
   };
+
+
+  xdg.desktopEntries.comfyui-2 = {
+    name       = "ComfyUI-2";
+    comment    = "Launch ComfyUI with CUDA low-VRAM flags";
+    exec       = "${pkgs.kitty}/bin/kitty --hold -e nix run github:utensils/nix-comfyui -- --open";
+    icon       = "${config.home.homeDirectory}/.local/share/icons/comfyui.png";
+    terminal   = false;       # kitty is the terminal
+    type       = "Application";
+    categories = [ "Graphics" "Utility" ];
+  };
 }
