@@ -12,7 +12,6 @@
   virtualisation.docker = {
     enable = true;
     enableOnBoot = true;
-    enableNvidia = true;
 
     daemon.settings = {
       default-runtime = "nvidia";
