@@ -24,7 +24,7 @@
     ./modules/comfyui.nix
     ./modules/coolercontrol.nix
     #./modules/cron.nix
-    #./modules/docker.nix
+    ./modules/docker.nix
     ./modules/dolphin.nix
     ./modules/filesystem.nix
     ./modules/firefox.nix
