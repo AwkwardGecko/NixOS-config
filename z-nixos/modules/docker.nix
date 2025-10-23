@@ -11,6 +11,10 @@
 {
   virtualisation.docker = {
     enable = true;
+    daemon.settings = {
+      runtimes.nvidia.path = "${pkgs.nvidia-container-toolkit}/bin/nvidia-container-runtime";
+      default-runtime = "nvidia";
+    };
   };
 
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
