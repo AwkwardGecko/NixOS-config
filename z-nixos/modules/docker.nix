@@ -12,6 +12,7 @@
   virtualisation.docker = {
     enable = true;
     enableOnBoot = true;
+    enableNvidia = true;
 
     daemon.settings = {
       runtimes.nvidia.path = "${pkgs.nvidia-container-toolkit}/bin/nvidia-container-runtime";
@@ -22,6 +23,9 @@
   hardware = {
     
     nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
+    nvidia.modesetting = true;
+    nvidia.open = false;
+    nvidiaSettings = true;
     nvidia-container-toolkit.enable = true;
 
     graphics = {
