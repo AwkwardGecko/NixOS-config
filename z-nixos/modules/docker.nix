@@ -23,7 +23,7 @@
   hardware = {
     
     nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
-    nvidia.modesetting = true;
+    nvidia.modesetting.enable = true;
     nvidia.open = false;
     nvidiaSettings = true;
     nvidia-container-toolkit.enable = true;
