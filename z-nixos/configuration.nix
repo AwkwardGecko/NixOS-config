@@ -19,7 +19,7 @@
     ./modules/boot.nix # configure kernel modules
     #./modules/borderlands2-fix.nix
     ./modules/bottles.nix
-    ./modules/bisq.nix
+    #./modules/bisq.nix
     ./modules/cachix.nix # cachix
     ./modules/chromium.nix
     ./modules/comfyui.nix
@@ -34,6 +34,7 @@
     ./modules/gamemode.nix
     ./modules/git.nix
     ./modules/git-push-dotfiles.nix
+    ./modules/haveno.nix
     ./modules/hdd-soft-shutdown.nix
     ./modules/huge-pages.nix
     ./modules/hypr.nix
