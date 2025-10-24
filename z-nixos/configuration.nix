@@ -27,6 +27,7 @@
     #./modules/cron.nix
     ./modules/docker.nix
     ./modules/dolphin.nix
+    ./modules/eigenwallet.nix
     ./modules/filesystem.nix
     ./modules/firefox.nix
     ./modules/flatpak.nix
