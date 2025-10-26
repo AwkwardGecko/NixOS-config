@@ -56,6 +56,7 @@
     #./modules/star-rail.nix
     ./modules/statix.nix
     ./modules/steam.nix
+    ./modules/syncthing.nix
     #./modules/systemd-timers.nix
     ./modules/tailscale.nix
     #./modules/tdarr.nix
