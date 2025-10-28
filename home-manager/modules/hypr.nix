@@ -208,6 +208,8 @@
       "workspace 18,title:(SocialClubHelper)"
       "workspace 18,title:(Rockstar)"
       "workspace 19,title:(Borderlands)"
+      "workspace 20,title:(BorderlandsPreS)"
+      "workspace 21,title:(BorderlandsPreSequel)"
       "suppressevent maximize, class:.*"
       "nofocus,class:^$,title:^$,wayland:1,floating:1,fullscreen:0,pinned:0"
     ];
