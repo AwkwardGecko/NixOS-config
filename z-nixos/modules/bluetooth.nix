@@ -31,6 +31,8 @@
     options bluetooth disable_ertm=1
   '';
 
+  boot.extraModulePackages = [ config.boot.kernelPackages.xpadneo ];
+
   services.pipewire = {
     enable = true;
     alsa.enable = true;
