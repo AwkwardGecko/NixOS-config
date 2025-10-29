@@ -40,6 +40,11 @@
     wireplumber.enable = true;
   };
 
+
+services.udev.extraRules = ''
+  ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="8087", ATTR{idProduct}=="0029", TEST=="power/control", ATTR{power/control}="on"
+'';
+
   #services.udev.extraRules = ''
     # Disable USB autosuspend for Xbox Wireless Controller (045e:0b12)
   #  ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="0b12", TEST=="power/control", ATTR{power/control}="on"
