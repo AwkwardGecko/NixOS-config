@@ -10,7 +10,7 @@
         Experimental = true;
         ControllerMode = "le";
         JustWorksRepairing = "confirm";
-        FastConnectable = true;
+        FastConnectable = false;
       };
     };
   };
