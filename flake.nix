@@ -14,8 +14,6 @@
     comfyui.url = "github:utensils/nix-comfyui";
     comfyui.inputs.nixpkgs.follows = "nixpkgs";
 
-
-
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, comfyui, nixvim, alejandra, ... }:

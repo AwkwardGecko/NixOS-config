@@ -19,6 +19,7 @@
         "wheel"
         "gamemode"
         "docker"
+        "input"
       ];
       packages = with pkgs; [ ];
     };

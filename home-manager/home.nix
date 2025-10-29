@@ -31,13 +31,33 @@
     #./modules/xmrig.nix
   ];
 
+  systemd.user.startServices = "sd-switch";
+
   home.sessionVariables = {
-    #GTK_THEME = "Adwaita";
-    #LD_LIBRARY_PATH = "/usr/lib/x86_64-linux-gnu";
-    #LC_ALL = "en_AU.UTF-8";
-    #NIXOS_OZONE_WL = "1"; # Wayland Electron support
-	  #QT_QPA_PLATFORM=xcb;
-    #__EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_mesa.json jellyfinmediaplayer;
+    # Wayland backends for common stacks
+    SDL_VIDEODRIVER = "wayland";
+    QT_QPA_PLATFORM = "wayland";
+    MOZ_ENABLE_WAYLAND = 1;
+    NIXOS_OZONE_WL = 1; # Enables Wayland (Ozone) backend in Chromium/Electron apps.
+    ELECTRON_OZONE_PLATFORM_HINT = "auto";
+
+    # controllers / SDL
+    SDL_GAMECONTROLLERCONFIG = builtins.readFile "/usr/share/sdl2/gamecontrollerdb.txt"; # Injects a controller mapping database that SDL uses to identify how your gamepad buttons map to standard Xbox-style layouts.
+
+    # Video Acceleration on Nvidia
+    LIBVA_DRIVER_NAME = "nvidia"; # VA-API hardware video decode backend.
+    __GLX_VENDOR_LIBRARY_NAME = "nvidia"; # Tells GLVND (OpenGL vendor dispatcher) to use Nvidia’s driver instead of Mesa’s.
+
+    # Wine / Proton
+    WINE_FULLSCREEN_FOCUS_MODE = 1; # Lets Wine maintain focus properly when alt-tabbing fullscreen games under Wayland.
+
+    # Portals & theming (Wayland-friendly file pickers, etc.)
+    GTK_USE_PORTAL = 1;
+    QT_QPA_PLATFORMTHEME = "qt5ct";
+
+    # Pipewire
+    SDL_AUDIODRIVER = "pipewire";
+
   };
 
 	home.file = {

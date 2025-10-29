@@ -39,7 +39,7 @@
     ./modules/hdd-soft-shutdown.nix
     ./modules/huge-pages.nix
     ./modules/hypr.nix
-    ./modules/internationalisation.nix
+    ./modules/localisation.nix
     #./modules/lutris.nix
     #./modules/ollama.nix
     ./modules/openrgb.nix

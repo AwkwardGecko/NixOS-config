@@ -48,13 +48,6 @@
       "sleep 5 && mako"
     ];
 
-    env = [
-      "LIBVA_DRIVER_NAME,nvidia"
-      "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-      "NIXOS_OZONE_WL,1"
-      #"WINE_FULLSCREEN_FOCUS_MODE=1"
-    ];
-
     #####################
     ### LOOK AND FEEL ###
     #####################
