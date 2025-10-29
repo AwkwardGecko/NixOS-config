@@ -12,7 +12,6 @@
         JustWorksRepairing = "confirm";
         FastConnectable = true;
       };
-      LE.Privacy = "off";
     };
   };
 
