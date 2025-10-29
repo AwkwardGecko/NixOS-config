@@ -32,7 +32,8 @@
     options hid_xpadneo disable_ff=Y
   '';
 
-  boot.extraModulePackages = [ config.boot.kernelPackages.xpadneo ];
+  #boot.extraModulePackages = [ config.boot.kernelPackages.xpadneo ];
+  boot.blacklistedKernelModules = [ "hid_xpadneo" ];
 
   services.pipewire = {
     enable = true;
