@@ -2,9 +2,7 @@
 { config, lib, pkgs, ... }:
 let
   gcdb = pkgs.sdl_gamecontrollerdb;
-  dbPathPreferred = "${gcdb}/share/sdl2/gamecontrollerdb.txt";
-  dbPathAlt       = "${gcdb}/share/gamecontrollerdb/gamecontrollerdb.txt";
-  dbPath = if builtins.pathExists dbPathPreferred then dbPathPreferred else dbPathAlt;
+  dbPath = gcdb + "/share/sdl2/gamecontrollerdb.txt";
 in
 {
   services.udev.packages = [ pkgs.game-devices-udev-rules ];
