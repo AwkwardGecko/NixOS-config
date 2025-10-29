@@ -48,6 +48,11 @@
       "sleep 5 && mako"
     ];
 
+    env = [
+      "WLR_NO_HARDWARE_CURSOSRS,1"
+      "__GL_VRR_ALLOWED,1"
+    ];
+
     #####################
     ### LOOK AND FEEL ###
     #####################
