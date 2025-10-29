@@ -25,6 +25,7 @@
 
   # Xbox controller: kernel driver (xpadneo) for better rumble/LED/battery over BT
   hardware.xpadneo.enable = true;
+  hardware.enableRedistributableFirmware = true;
 
   boot.extraModprobeConfig = ''
     options bluetooth disable_ertm=1
