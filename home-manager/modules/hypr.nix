@@ -40,8 +40,8 @@
       "waybar"
       "sleep 1 && openrgb --startminimized -p Default.orp.ba"
       "sleep 3 && signal-desktop"
-      "sleep 1 && steam -silent %U"
-      "hyprctl setcursor Bibata-Modern-Classic 24"
+      "sleep 1 && steam -silent"
+      #"hyprctl setcursor Bibata-Modern-Classic 24"
       #"sleep 10 && bash ~/.local/share/applications/mount-server.sh"
       #"sleep 15 && bash ~/.local/share/applications/mount-music.sh"
       "hypridle"
@@ -49,13 +49,25 @@
     ];
 
     env = [
-      "WLR_NO_HARDWARE_CURSOSRS,1"
+      "XDG_CURRENT_DESKTOP,Hyprland"
+      "XDG_SESSION_TYPE,wayland"
+      "MOZ_ENABLE_WAYLAND,1"
+      "NIXOS_OZONE_WL,1"
+      "ELECTRON_OZONE_PLATFORM_HINT,auto"
+      "GTK_USE_PORTAL,1"
+      "WLR_NO_HARDWARE_CURSORS,1"
       "__GL_VRR_ALLOWED,1"
     ];
 
     #####################
     ### LOOK AND FEEL ###
     #####################
+
+    cursor = {
+      theme = "Bibata-Modern-Classic";
+      size = 24;
+    };
+
 
     general = {
       gaps_in = 5;
@@ -178,7 +190,7 @@
 
     bindl = [
       ",XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
-      ",XF86MonBrightnesUp, exec, brightnessctl s 10%+"
+      ",XF86MonBrightnessUp, exec, brightnessctl s 10%+"
       ",XF86MonBrightnessDown, exec, brightnessctl s 10%-"
 
       ",XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
@@ -190,27 +202,15 @@
       ",XF86AudioPlay, exec, playerctl play-pause"
     ];
 
-    windowrulev2 = [
-      "workspace 1,title:(Kitty)"
-      "workspace 1,class:(firefox)"
-      "workspace 9,title:(Star Rail)"
-      "workspace 10,title:(Fallout)"
-      "workspace 11,title:(Valheim)"
-      "workspace 12,title:(Shovel Knight)"
-      "workspace 13,title:(PAYDAY)"
-      "workspace 14,title:(Dead Cells)"
-      "workspace 15,title:(Torchlight)"
-      "workspace 16,title:(Rocket League)"
-      "workspace 17,title:(Cyberpunk2077)"
-      "workspace 18,title:(Grand Theft Auto V)"
-      "workspace 18,title:(SocialClubHelper)"
-      "workspace 18,title:(Rockstar)"
-      "workspace 19,title:(Borderlands)"
-      "workspace 20,title:(BorderlandsPreS)"
-      "workspace 21,title:(BorderlandsPreSequel)"
-      "suppressevent maximize, class:.*"
-      "nofocus,class:^$,title:^$,wayland:1,floating:1,fullscreen:0,pinned:0"
-    ];
+  windowrulev2 = [
+    "immediate, class:^(steam_app_.*)$"
+    "noanim, class:^(steam_app_.*)$"
+    "rounding 0, class:^(steam_app_.*|Star Rail|Cyberpunk2077|Fallout)$"
+    "float, class:^(pavucontrol|nm-connection-editor)$"
+    "opacity 1.0 override 1.0, class:^(Steam)$"
+    "suppressevent maximize, class:.*"
+    "nofocus, class:^$, title:^$, wayland:1, floating:1, fullscreen:0, pinned:0"
+  ];
 
   };
 }
