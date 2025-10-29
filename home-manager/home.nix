@@ -42,8 +42,8 @@
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
 
     # controllers / SDL
-    SDL_GAMECONTROLLERCONFIG = 
-      builtins.readFile "${pkgs.sdl2}/share/sdl2/gamecontrollerdb.txt"; # Injects a controller mapping database that SDL uses to identify how your gamepad buttons map to standard Xbox-style layouts.
+    #SDL_GAMECONTROLLERCONFIG = 
+    #  builtins.readFile "${pkgs.sdl2}/share/sdl2/gamecontrollerdb.txt"; # Injects a controller mapping database that SDL uses to identify how your gamepad buttons map to standard Xbox-style layouts.
 
     # Video Acceleration on Nvidia
     LIBVA_DRIVER_NAME = "nvidia"; # VA-API hardware video decode backend.
@@ -117,7 +117,7 @@
 	  #qt5ct
     protonup-qt
     #python312Packages.tinytuya
-    SDL2
+    #SDL2
     shotwell
     #	vlc
     wayland-protocols
