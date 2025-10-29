@@ -1,14 +1,19 @@
 #~/.dotfiles/z-nixos/modules/controller.nix
 { config, lib, pkgs, ... }:
-let
-  sdlDb = pkgs.sdl2-gamecontrollerdb or null;
-in
 {
-  hardware.steam-hardware.enable = true;
+  services.udev.packages = [ pkgs.game-devices-udev-rules ];
 
-  hardware.xone.enable = true;
+  hardware = {
+    steam-hardware.enable = true;
+    xone.enable = true;
+  };
 
-  environment.variables = lib.mkIf (sdlDb != null) {
-    SDL_GAMECONTROLLERCONFIG = builtins.readFile "${pkgs.sdlDb}/share/sdl2/gamecontrollerdb.txt";
+  environment = {
+    systemPackages = with pkgs; [
+      sdl_gamecontrollerdb
+    ];
+    variables = {
+      SDL_GAMECONTROLLERCONFIG = builtins.readFile "${pkgs.sdl_gamecontrollerdb}/share/sdl2/gamecontrollerdb.txt";
+    };
   };
 }
