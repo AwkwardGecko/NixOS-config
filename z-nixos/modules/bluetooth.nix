@@ -29,6 +29,7 @@
 
   boot.extraModprobeConfig = ''
     options bluetooth disable_ertm=1
+    options btusb enable_autosuspend=0
     options hid_xpadneo disable_ff=Y
   '';
 
