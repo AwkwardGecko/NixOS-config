@@ -7,11 +7,6 @@
   programs.chromium = {
     enable = true;
 
-    # Add the runtime flag Chromium expects on Linux for Web Bluetooth.
-    commandLineArgs = [
-      "--enable-experimental-web-platform-features"
-    ];
-
     # Make sure policy isn’t silently blocking the API.
     extraOpts = {
       "DefaultWebBluetoothGuardSetting" = 3;  # 3 = allow sites to ask
