@@ -4,18 +4,13 @@
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
+    
     settings = {
       General = {
         Experimental = true;
         ControllerMode = "dual";
-        JustWorksRepairing = "always";
+        JustWorksRepairing = "confirm";
         FastConnectable = true;
-      };
-      Policy = {
-        AutoEnable = true;
-      };
-      LE = {
-        Privacy = "off";
       };
     };
   };
@@ -25,21 +20,30 @@
   environment.systemPackages = with pkgs; [
     bluez
     bluez-tools
-    bluez-alsa
   ];
 
+  # Xbox controller: kernel driver (xpadneo) for better rumble/LED/battery over BT
+  hardware.xpadneo.enable = true;
+
   boot.extraModprobeConfig = ''
-    options bluetooth disable_ertm=1 
+    options bluetooth disable_ertm=1
   '';
 
-  services.udev.extraRules = ''
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    pulse.enable = true;
+    wireplumber.enable = true;
+  };
+
+  #services.udev.extraRules = ''
     # Disable USB autosuspend for Xbox Wireless Controller (045e:0b12)
-    ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="0b12", TEST=="power/control", ATTR{power/control}="on"
+  #  ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="0b12", TEST=="power/control", ATTR{power/control}="on"
     
     # Also disable USB autosuspend for the Intel Bluetooth adapter (8087:0026)
-    ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="8087", ATTR{idProduct}=="0026", TEST=="power/control", ATTR{power/control}="on"
+  #  ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="8087", ATTR{idProduct}=="0026", TEST=="power/control", ATTR{power/control}="on"
 
-  '';
+  #'';
   # --- Xpadneo ---
 
   # kernelHeaders must match running kernel
