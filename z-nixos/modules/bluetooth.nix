@@ -2,7 +2,7 @@
 { config, pkgs, lib, ... }:
 {
   hardware.bluetooth = {
-    enable = true;
+    enable = false;
     powerOnBoot = true;
     
     settings = {
