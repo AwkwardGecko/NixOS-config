@@ -2,7 +2,6 @@
 
 {
   hardware.bluetooth.enable = true;
-  services.blueman.enable = false; # set true if you want a GUI tray
 
   programs.chromium = {
     enable = true;
