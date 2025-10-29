@@ -15,9 +15,9 @@
     # Make sure policy isn’t silently blocking the API.
     extraOpts = {
       "DefaultWebBluetoothGuardSetting" = 3;  # 3 = allow sites to ask
-      "homepage" = "http://localhost:8188";
+      "homepage" = "https://app.storz-bickel.com";
       "session.restore_on_startup" = 4;
-      "session.startup_urls" = [ "http://localhost:8188" ];
+      "session.startup_urls" = [ "https://app.storz-bickel.com" ];
       "browser.show_home_button" = false;
       "profile.default_content_setting_values.notifications" = 2;
       "profile.default_content_setting_values.geolocation" = 2;
