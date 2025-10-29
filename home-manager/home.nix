@@ -117,6 +117,7 @@
 	  #qt5ct
     protonup-qt
     #python312Packages.tinytuya
+    SDL2
     shotwell
     #	vlc
     wayland-protocols
