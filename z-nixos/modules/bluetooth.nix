@@ -20,6 +20,7 @@
   environment.systemPackages = with pkgs; [
     bluez
     bluez-tools
+    ts
   ];
 
   # Xbox controller: kernel driver (xpadneo) for better rumble/LED/battery over BT
