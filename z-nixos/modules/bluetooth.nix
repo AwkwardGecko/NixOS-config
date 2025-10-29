@@ -8,7 +8,7 @@
     settings = {
       General = {
         Experimental = true;
-        ControllerMode = "le";
+        ControllerMode = "dual";
         JustWorksRepairing = "confirm";
         FastConnectable = false;
       };
