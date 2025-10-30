@@ -63,10 +63,10 @@
     ### LOOK AND FEEL ###
     #####################
 
-    cursor = {
-      theme = "Bibata-Modern-Classic";
-      size = 24;
-    };
+    # cursor = {
+    #   theme = "Bibata-Modern-Classic";
+    #   size = 24;
+    # };
 
 
     general = {
@@ -133,15 +133,19 @@
       ", print, exec, grimblast save area ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"
       "$mainMod, print, exec, grimblast copy area"
 
-      "$mainMod, Q, exec, $terminal"
-      "$mainMod, return, exec, $terminal"
       "$mainMod, C, killactive,"
       "$mainMod, E, exec, $fileManager"
       "$mainMod, F, exec, $browser"
-      "$mainMod, R, exec, $menu"
-      "$mainMod, P, pseudo,"
+      "$mainMod, G, togglegroup,"
       "$mainMod, J, togglesplit,"
-      "$mainMod, F9, exec, bash kill deadcells"
+      "$mainMod, M, fullscreen, 1"
+      "$mainMod, P, pseudo,"
+      "$mainMod, Q, exec, $terminal"
+      "$mainMod, R, exec, $menu"
+      "$mainMod, V, togglefloating,"
+      
+
+      "$mainMod, return, exec, $terminal"
 
       "$mainMod, left, movefocus, l"
       "$mainMod, right, movefocus, r"
@@ -202,16 +206,15 @@
       ",XF86AudioPlay, exec, playerctl play-pause"
     ];
 
-  windowrulev2 = [
-    "immediate, class:^(steam_app_.*)$"
-    "noanim, class:^(steam_app_.*)$"
-    "rounding 0, class:^(steam_app_.*|Star Rail|Cyberpunk2077|Fallout)$"
-    "float, class:^(pavucontrol|nm-connection-editor)$"
-    "opacity 1.0 override 1.0, class:^(Steam)$"
-    "suppressevent maximize, class:.*"
-    "nofocus, class:^$, title:^$, wayland:1, floating:1, fullscreen:0, pinned:0"
-  ];
-
+    windowrulev2 = [
+      "immediate, class:^(steam_app_.*)$"
+      "noanim, class:^(steam_app_.*)$"
+      "rounding 0, class:^(steam_app_.*|Star Rail|Cyberpunk2077|Fallout)$"
+      "float, class:^(pavucontrol|nm-connection-editor)$"
+      "opacity 1.0 override 1.0, class:^(Steam)$"
+      "suppressevent maximize, class:.*"
+      "nofocus, class:^$, title:^$, wayland:1, floating:1, fullscreen:0, pinned:0"
+    ];
   };
 }
 
