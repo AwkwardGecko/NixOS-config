@@ -1,39 +1,34 @@
 { config, pkgs, ... }:
 
 {
-  users.users.webdav = {
-    isSystemUser = true;
-    group = "webdav";
-  };
+  users.users.webdav = { isSystemUser = true; group = "webdav"; };
   users.groups.webdav = {};
+  systemd.tmpfiles.rules = [ "d /srv/books 0755 webdav webdav -" ];
 
-  systemd.tmpfiles.rules = [
-    "d /srv/books 0755 webdav webdav -"
-  ];
+  services.httpd = {
+    enable = true;
+    adminAddr = "admin@example.invalid";
+    enableModules = [ "dav" "dav_fs" "auth_basic" ];
+    virtualHosts."_" = {
+      listen = [{ ip = "0.0.0.0"; port = 8080; }];
+      documentRoot = "/srv/books";
+      extraConfig = ''
+        DavLockDB /var/lib/httpd/DavLock
 
-  environment.systemPackages = [ pkgs.webdav-server-rs ];
+        <Directory "/srv/books">
+          Options Indexes
+          AllowOverride None
+          Require all granted
+          Dav On
+        </Directory>
 
-  systemd.services.webdav = {
-    description = "WebDAV";
-    wantedBy = [ "multi-user.target" ];
-    after = [ "network.target" ];
-    serviceConfig = {
-      User = "webdav";
-      Group = "webdav";
-      Restart = "on-failure";
-      EnvironmentFile = "/etc/secret/webdav.env";
-      ExecStart = ''
-        ${pkgs.webdav-server-rs}/bin/webdav-server-rs \
-          --host 0.0.0.0 \
-          --port 8080 \
-          --dir /srv/books \
-          --auth-user webdav \
-          --auth-pass "$WEBDAV_PASSWORD"
+        <Location "/">
+          AuthType Basic
+          AuthName "WebDAV"
+          AuthUserFile /var/lib/httpd/htpasswd
+          Require valid-user
+        </Location>
       '';
-      ProtectSystem = "full";
-      ProtectHome = true;
-      PrivateTmp = true;
-      NoNewPrivileges = true;
     };
   };
 
