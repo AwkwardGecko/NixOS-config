@@ -29,7 +29,7 @@
       Restart = "on-failure";
       ExecStart = "${pkgs.webdav-server-rs}/bin/webdav-server-rs \
         --host 0.0.0.0 \
-        --port 8081 \
+        --port 8080 \
         --dir /srv/books \
         --auth-user webdav \
         --auth-pass changeme";
