@@ -17,8 +17,8 @@
     modify = true;            # allow PUT/DELETE/MKCOL
     auth = true;
     users = [{
-      username = "{env}WEBDAV_USER";
-      password = "{env}WEBDAV_PASS";
+      username = "webdav";
+      password = "changeme";
     }];
     # logLevel = "debug";     # enable if troubleshooting
   };
