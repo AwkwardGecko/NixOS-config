@@ -27,6 +27,6 @@
   networking.firewall.allowedTCPPorts = [ 8080 ];
 
   # provide secrets to the unit without leaking into the Nix store
-  systemd.services.webdav.serviceConfig.EnvironmentFile = "/etc/secret/webdav.env";
+  #systemd.services.webdav.serviceConfig.EnvironmentFile = "/etc/secret/webdav.env";
 }
 
