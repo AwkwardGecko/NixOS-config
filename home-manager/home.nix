@@ -111,7 +111,7 @@
     #	python312Packages.pip
   	pipx	
     #	qbittorrent
-    qt6ct # QT support
+    qqt6Packages.qt6ct # QT support
     ripgrep # something for nvim
     #	rofi-wayland
 	  #qt5ct
