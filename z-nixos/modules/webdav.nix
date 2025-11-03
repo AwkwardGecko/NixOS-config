@@ -1,41 +1,32 @@
 { config, pkgs, ... }:
 
 {
+  # storage
+  systemd.tmpfiles.rules = [
+    "d /srv/books 0755 webdav webdav -"
+  ];
   users.users.webdav = { isSystemUser = true; group = "webdav"; };
   users.groups.webdav = {};
 
-  systemd.tmpfiles.rules = [
-    "d /srv/books 0755 webdav webdav -"
-    "d /var/lib/httpd 0750 root wwwrun -"
-  ];
-
-  services.httpd = {
-    enable = true;
-    adminAddr = "admin@example.invalid";
-    modules = [ "dav" "dav_fs" "auth_basic" ];
-    virtualHosts."_" = {
-      listen = [{ ip = "0.0.0.0"; port = 8080; }];
-      documentRoot = "/srv/books";
-      extraConfig = ''
-        DavLockDB /var/lib/httpd/DavLock
-
-        <Directory "/srv/books">
-          Options Indexes
-          AllowOverride None
-          Require all granted
-          Dav On
-        </Directory>
-
-        <Location "/">
-          AuthType Basic
-          AuthName "WebDAV"
-          AuthUserFile /var/lib/httpd/htpasswd
-          Require valid-user
-        </Location>
-      '';
-    };
+  # WebDAV server
+  services.webdav.enable = true;
+  services.webdav.settings = {
+    address = "0.0.0.0";      # listen on LAN
+    port = 8080;
+    scope = "/srv/books";     # exported root
+    modify = true;            # allow PUT/DELETE/MKCOL
+    auth = true;
+    users = [{
+      username = "{env}WEBDAV_USER";
+      password = "{env}WEBDAV_PASS";
+    }];
+    # logLevel = "debug";     # enable if troubleshooting
   };
 
+  # open firewall
   networking.firewall.allowedTCPPorts = [ 8080 ];
+
+  # provide secrets to the unit without leaking into the Nix store
+  systemd.services.webdav.serviceConfig.EnvironmentFile = "/etc/secret/webdav.env";
 }
 
