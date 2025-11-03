@@ -3,7 +3,7 @@
 
    programs.coolercontrol.enable = true;
 
-   environment.systemPackages = with pkgs; [
-      coolercontrol.coolercontrol-liqctld     
-   ];
+   # environment.systemPackages = with pkgs; [
+   #    coolercontrol.coolercontrol-liqctld     
+   # ];
 }
