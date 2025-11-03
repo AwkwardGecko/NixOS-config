@@ -1,8 +1,11 @@
+{ config, lib, pkgs, ... }:
+
 {
   services.vsftpd = {
     enable = true;
     localUsers = true;
     writeEnable = true;
+    anonymousUser = false;
 
     extraConfig = ''
       pasv_enable=YES

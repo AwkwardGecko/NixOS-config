@@ -107,7 +107,7 @@
 
       notify.enable = true;
       lualine.enable = true;               # Statusline plugin
-      #treesitter.enable = true;            # Advanced syntax highlighting
+      treesitter.enable = true;            # Advanced syntax highlighting
       telescope.enable = true;             # Fuzzy finder for files and more
       web-devicons.enable = true;          # File icons for Neovim
       bufferline.enable = true;            # Buffer tabline for better navigation
