@@ -176,7 +176,7 @@
     gimp                        # Image editing software
     git                         # Version control
     glib                        # Low-level GNOME core library
-    glxinfo                     # 
+    #glxinfo                     # 
     #glibc_memusage              # Tracks memory usage of programs
     gedit
     gnome-calculator            # Calculator app
