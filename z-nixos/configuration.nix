@@ -213,7 +213,6 @@
     nomacs                      # image viewer
     nspr                        # Netscape Portable Runtime (used by Firefox, etc.)
     nss                         # Network Security Services
-    nvtopPackages.nvidia        # GPU usage monitor for NVIDIA
     onlyoffice-desktopeditors   # Office suite
     opencv
     openssl                     # TLS/SSL support (used by reliquary-archiver and other tools)
