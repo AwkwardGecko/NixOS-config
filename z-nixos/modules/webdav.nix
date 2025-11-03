@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, ... }:
 
 {
   users.users.webdav = {
@@ -7,42 +7,33 @@
   };
   users.groups.webdav = {};
 
-  # Storage
   systemd.tmpfiles.rules = [
     "d /srv/books 0755 webdav webdav -"
   ];
 
-  services.nginx = {
-    enable = true;
+  environment.systemPackages = [ pkgs.webdav-server-rs ];
 
-    # Needed for PROPFIND etc.
-    additionalModules = [ pkgs.nginxModules.davExt ];
-
-    virtualHosts."webdav.local" = {
-      listen = [
-        { addr = "0.0.0.0"; port = 8080; }
-        # add IPv6 if you want:
-        # { addr = "[::]"; port = 8080; }
-      ];
-      root = "/srv/books";
-      basicAuthFile = "/etc/nginx/htpasswd";
-
-      locations."/" = {
-        extraConfig = ''
-          client_max_body_size 2G;
-
-          # WebDAV core
-          dav_methods        PUT DELETE MKCOL COPY MOVE;
-          dav_access         user:rw group:rw all:r;
-          create_full_put_path on;
-
-          # WebDAV extensions
-          dav_ext_methods    PROPFIND OPTIONS;
-          dav_ext_lock_zone  zone=webdav_locks:10m;
-
-          autoindex on;  # lets you see listings in a browser
-        '';
-      };
+  systemd.services.webdav = {
+    description = "WebDAV";
+    wantedBy = [ "multi-user.target" ];
+    after = [ "network.target" ];
+    serviceConfig = {
+      User = "webdav";
+      Group = "webdav";
+      Restart = "on-failure";
+      EnvironmentFile = "/etc/secret/webdav.env";
+      ExecStart = ''
+        ${pkgs.webdav-server-rs}/bin/webdav-server-rs \
+          --host 0.0.0.0 \
+          --port 8080 \
+          --dir /srv/books \
+          --auth-user webdav \
+          --auth-pass "$WEBDAV_PASSWORD"
+      '';
+      ProtectSystem = "full";
+      ProtectHome = true;
+      PrivateTmp = true;
+      NoNewPrivileges = true;
     };
   };
 
