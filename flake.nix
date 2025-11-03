@@ -11,12 +11,12 @@
     alejandra.url = "github:kamadorueda/alejandra/4.0.0";
     alejandra.inputs.nixpkgs.follows = "nixpkgs";
 
-    comfyui.url = "github:utensils/nix-comfyui";
-    comfyui.inputs.nixpkgs.follows = "nixpkgs";
+    #comfyui.url = "github:utensils/nix-comfyui";
+    #comfyui.inputs.nixpkgs.follows = "nixpkgs";
 
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, comfyui, nixvim, alejandra, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, alejandra, ... }:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
