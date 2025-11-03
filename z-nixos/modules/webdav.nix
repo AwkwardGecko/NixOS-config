@@ -5,7 +5,7 @@
     isSystemUser = true;
     createHome = false;
     group = "webdav";
-    shell = pkgs.nologin;
+    #shell = pkgs.nologin;
     password = "changeme"; # optional if using htpasswd below
   };
 
