@@ -1,10 +1,8 @@
-{ config, pkgs, ... }:
-
 {
   services.vsftpd = {
     enable = true;
     localUsers = true;
-    writeEnable = true; # KOReader downloads only but harmless
+    writeEnable = true;
 
     extraConfig = ''
       pasv_enable=YES
@@ -14,15 +12,16 @@
     '';
   };
 
+  users.groups.ftpuser = {};
   users.users.ftpuser = {
     isSystemUser = true;
     createHome = true;
     home = "/srv/books";
+    group = "ftpuser";
     password = "changeme";
     description = "FTP KOReader";
   };
 
-  # ensure dir exists
   systemd.tmpfiles.rules = [
     "d /srv/books 0755 ftpuser ftpuser -"
   ];
