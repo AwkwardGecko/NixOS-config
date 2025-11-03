@@ -5,7 +5,6 @@
     enable = true;
     localUsers = true;
     writeEnable = true; # KOReader downloads only but harmless
-    anonymousLogin = false;
 
     extraConfig = ''
       pasv_enable=YES
