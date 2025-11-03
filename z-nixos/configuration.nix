@@ -156,7 +156,7 @@
     conda                       # Python environment manager
     crane                       # Nix-native Rust build system (like crate2nix)
     #cudaPackages.cudnn          # CUDA
-    cudatoolkit
+    #cudatoolkit
     cups                        # Printing system
     curl
     dbus                        # IPC system used by desktop apps
