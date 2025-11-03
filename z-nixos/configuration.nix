@@ -22,7 +22,7 @@
     ./modules/bisq.nix
     ./modules/cachix.nix # cachix
     ./modules/chromium.nix
-    ./modules/comfyui.nix
+    #./modules/comfyui.nix
     ./modules/controller.nix
     ./modules/coolercontrol.nix
     #./modules/cron.nix
