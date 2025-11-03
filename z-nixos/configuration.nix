@@ -68,6 +68,7 @@
     #./modules/xmrig.nix
     #./modules/xserver.nix
     #./modules/whisperai.nix
+    ./modules/webdav.nix
     ./modules/wine.nix
   ]; 
 
