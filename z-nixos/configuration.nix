@@ -33,7 +33,7 @@
     ./modules/firefox.nix
     ./modules/flatpak.nix
     ./modules/fonts.nix
-    ./modules/ftp.nix
+    #./modules/ftp.nix
     ./modules/gamemode.nix
     ./modules/git.nix
     ./modules/git-push-dotfiles.nix
@@ -69,7 +69,7 @@
     #./modules/xmrig.nix
     #./modules/xserver.nix
     #./modules/whisperai.nix
-    #./modules/webdav.nix
+    ./modules/webdav.nix
     ./modules/wine.nix
   ]; 
 
