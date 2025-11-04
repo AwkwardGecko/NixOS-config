@@ -53,6 +53,7 @@
     ./modules/nvidia.nix
     #./modules/reload-usb.nix
     ./modules/scanner.nix
+    ./modules/shadps4.nix
     ./modules/ssh.nix
     ./modules/sshfs.nix
     #./modules/star-rail.nix
