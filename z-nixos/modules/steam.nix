@@ -11,7 +11,7 @@
 {
   programs.steam = {
     enable = true;
-    #gamescopeSession.enable = true;
+    gamescopeSession.enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
     localNetworkGameTransfers.openFirewall = true;
@@ -36,7 +36,7 @@
     pulse.enable = true;
   };
 
-  services.xdg-desktop-portal = {
+  xdg.portal = {
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-wlr ];
   };
