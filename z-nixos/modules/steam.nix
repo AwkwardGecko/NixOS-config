@@ -29,6 +29,18 @@
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/steam/steam/root/compatibilitytools.d";
   };
 
+  services.pipewire = {
+    enable = true;
+    audio.enable = true;
+    alsa.enable = true;
+    pulse.enable = true;
+  };
+
+  services.xdg-desktop-portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-wlr ];
+  };
+
   environment.systemPackages = with pkgs; [
     xdg-user-dirs
   ];
