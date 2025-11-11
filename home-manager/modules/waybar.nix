@@ -344,9 +344,12 @@
       #custom-cputemp {
           margin-top: 6px;
           margin-left: 8px;
+          margin-right: 8px;
+          margin-bottom: 6px;
+
           padding-left: 10px;
-          margin-bottom: 0px;
           padding-right: 10px;
+          
           border-radius: 10px;
           transition: none;
           color: #B5E8E0;
@@ -356,9 +359,12 @@
       #custom-cpuload {
           margin-top: 6px;
           margin-left: 8px;
+          margin-right: 8px;
+          margin-bottom: 6px;
+
           padding-left: 10px;
-          margin-bottom: 0px;
           padding-right: 10px;
+          
           border-radius: 10px;
           transition: none;
           color: #B5E8E0;
@@ -368,9 +374,12 @@
       #custom-gpuload {
           margin-top: 6px;
           margin-left: 8px;
+          margin-right: 8px;
+          margin-bottom: 6px;
+
           padding-left: 10px;
-          margin-bottom: 0px;
           padding-right: 10px;
+          
           border-radius: 10px;
           transition: none;
           color: #B5E8E0;
@@ -382,9 +391,12 @@
       #bluetooth {
           margin-top: 6px;
           margin-left: 8px;
+          margin-right: 8px;
+          margin-bottom: 6px;
+
           padding-left: 10px;
-          margin-bottom: 0px;
           padding-right: 10px;
+          
           border-radius: 10px;
           transition: none;
           color: #B5E8E0;
@@ -394,9 +406,12 @@
       #mpris {
           margin-top: 6px;
           margin-left: 8px;
+          margin-right: 8px;
+          margin-bottom: 6px;
+
           padding-left: 10px;
-          margin-bottom: 0px;
           padding-right: 10px;
+          
           border-radius: 10px;
           transition: none;
           color: #B5E8E0;
@@ -406,9 +421,12 @@
       #gamemode {
           margin-top: 6px;
           margin-left: 8px;
+          margin-right: 8px;
+          margin-bottom: 6px;
+
           padding-left: 10px;
-          margin-bottom: 0px;
           padding-right: 10px;
+          
           border-radius: 10px;
           transition: none;
           color: #B5E8E0;
@@ -418,9 +436,12 @@
       #pulseaudio {
           margin-top: 6px;
           margin-left: 8px;
+          margin-right: 8px;
+          margin-bottom: 6px;
+
           padding-left: 10px;
-          margin-bottom: 0px;
           padding-right: 10px;
+          
           border-radius: 10px;
           transition: none;
           color: #B5E8E0;
@@ -430,9 +451,12 @@
       #disk {
           margin-top: 6px;
           margin-left: 8px;
+          margin-right: 8px;
+          margin-bottom: 6px;
+
           padding-left: 10px;
-          margin-bottom: 0px;
           padding-right: 10px;
+          
           border-radius: 10px;
           transition: none;
           color: #B5E8E0;
@@ -440,42 +464,6 @@
       }
 
       #clock {
-          margin-top: 6px;
-          margin-left: 8px;
-          padding-left: 10px;
-          margin-bottom: 0px;
-          padding-right: 10px;
-          border-radius: 10px;
-          transition: none;
-          color: #B5E8E0;
-          background: #161320;
-      }
-
-      #memory {
-          margin-top: 6px;
-          margin-left: 8px;
-          padding-left: 10px;
-          margin-bottom: 0px;
-          padding-right: 10px;
-          border-radius: 10px;
-          transition: none;
-          color: #B5E8E0;
-          background: #161320;
-      }
-
-      #cpu {
-          margin-top: 6px;
-          margin-left: 8px;
-          padding-left: 10px;
-          margin-bottom: 0px;
-          padding-right: 10px;
-          border-radius: 10px;
-          transition: none;
-          color: #B5E8E0;
-          background: #161320;
-      }
-
-      #tray {
           margin-top: 6px;
           margin-left: 8px;
           margin-right: 8px;
@@ -493,39 +481,93 @@
           background: #161320;
       }
 
-      #custom-launcher {
-          font-size: 24px;
+      #memory {
           margin-top: 6px;
           margin-left: 8px;
+          margin-right: 8px;
+          margin-bottom: 6px;
+
           padding-left: 10px;
-          padding-right: 5px;
+          padding-right: 10px;
+          
           border-radius: 10px;
           transition: none;
-          color: #89DCEB;
+          color: #B5E8E0;
+          background: #161320;
+      }
+
+      #cpu {
+          margin-top: 6px;
+          margin-left: 8px;
+          margin-right: 8px;
+          margin-bottom: 6px;
+
+          padding-left: 10px;
+          padding-right: 10px;
+          
+          border-radius: 10px;
+          transition: none;
+          color: #B5E8E0;
+          background: #161320;
+      }
+
+      #tray {
+          margin-top: 6px;
+          margin-left: 8px;
+          margin-right: 8px;
+          margin-bottom: 6px;
+
+          padding-left: 10px;
+          padding-right: 10px;
+          
+          border-radius: 10px;
+          transition: none;
+          color: #b5e8e0;
+          background: #161320;
+      }
+
+      #custom-launcher {
+          margin-top: 6px;
+          margin-left: 8px;
+          margin-right: 8px;
+          margin-bottom: 6px;
+
+          padding-left: 10px;
+          padding-right: 10px;
+          
+          border-radius: 10px;
+          transition: none;
+          color: #b5e8e0;
           background: #161320;
       }
 
       #custom-power {
           margin-top: 6px;
           margin-left: 8px;
+          margin-right: 8px;
+          margin-bottom: 6px;
+
           padding-left: 10px;
-          margin-bottom: 0px;
           padding-right: 10px;
+          
           border-radius: 10px;
           transition: none;
-          color: #B5E8E0;
+          color: #b5e8e0;
           background: #161320;
       }
 
       #workspaces {
           margin-top: 6px;
           margin-left: 8px;
+          margin-right: 8px;
+          margin-bottom: 6px;
+
           padding-left: 10px;
-          margin-bottom: 0px;
           padding-right: 10px;
+          
           border-radius: 10px;
           transition: none;
-          color: #B5E8E0;
+          color: #b5e8e0;
           background: #161320;
       }
 
