@@ -5,8 +5,8 @@
     enable = true;
     systemd.enable = true;
 
-    settings = {
-      main = {
+    settings = [
+      {
         layer = "top";
         position = "top";
 
@@ -237,18 +237,17 @@
           "suspend" = "systemctl suspend";
           "hibernate" = "systemctl hibernate";
         };
-      };
-    };
+      }
 
-    vertical = {
-      layer = "top";
-      position = "left";
+      {
+        layer = "top";
+        position = "left";
 
-      modules-center = [ "hyprland/workspaces" ];
-    };
+        modules-center = [ "hyprland/workspaces" ];
+      } 
+    ];
 
-
-    style = ''
+  style = ''
       * {	
           border: none;
           border-radius: 10px;
