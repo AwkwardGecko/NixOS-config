@@ -47,7 +47,7 @@
           #"mpris"
           #custom/update"
           "tray"
-          "gamemode"
+          #"gamemode"
           #"disk"
           #"bluetooth"
           #"custom/power"
