@@ -17,6 +17,10 @@
   programs.kitty = {
     enable = true;
     shellIntegration.enableFishIntegration = true;
+    settings = {
+      background_opacity = "0.8";
+      background = "#00000000";
+    };
 
     settings = {
       shell = "fish";
