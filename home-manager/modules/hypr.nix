@@ -26,7 +26,8 @@
 
     "$kitty_with_fastfetch" = "kitty fastfetch";
 
-    "$unhide_waybar" = "bash -c 'pkill -SIGUSR1 waybar; sleep 30; pkill -SIGUSR1 waybar'";
+    # "$unhide_waybar" = "bash -c 'pkill -SIGUSR1 waybar; sleep 30; pkill -SIGUSR1 waybar'";
+    "$unhide_waybar" = "bash -c 'pkill -SIGUSR1 waybar'";
 
     exec-once = [
       "sleep 3 && signal-desktop"

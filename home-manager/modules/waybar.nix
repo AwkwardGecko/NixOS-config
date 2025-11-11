@@ -7,23 +7,23 @@
 
     settings = [
 
-      {
-        name = "vertical";
-        layer = "overlay";
-        position = "left";
-        exclusive = false;
-        start_hidden = true;
-        "on-sigusr1" = "toggle";
-
-        modules-center = [ "hyprland/workspaces" ];
-      }
+      # {
+      #   name = "vertical";
+      #   layer = "overlay";
+      #   position = "left";
+      #   exclusive = false;
+      #   start_hidden = true;
+      #   "on-sigusr1" = "toggle";
+      #
+      #   modules-center = [ "hyprland/workspaces" ];
+      # }
 
       {
         name = "top";
         layer = "top";
         position = "top";
         exclusive = true;
-        start_hidden = true;
+        start_hidden = false;
         "on-sigusr1" = "toggle";
 
         modules-left = [
