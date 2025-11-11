@@ -21,7 +21,7 @@
 
         modules-center = [
           "clock#date"
-          "clock#time"
+          #"clock#time"
         ];
 
         modules-right = [
