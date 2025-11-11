@@ -32,7 +32,8 @@
     exec-once = [
       "sleep 3 && signal-desktop"
       "sleep 1 && steam -silent"
-      "hyprpaper &"
+      #"hyprpaper &"
+      "mpvpaper ALL ~/Videos/wallpaper/1.mp4 -o 'no-audio --loop'"
     ];
 
     env = [
