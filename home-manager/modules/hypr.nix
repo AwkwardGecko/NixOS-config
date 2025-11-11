@@ -203,7 +203,7 @@
         
         "float, class:^(sysupdate)$"
         "size 900 300, class:^(sysupdate)$"
-        "move 1660 20, class:^(sysupdate)$"
+        "move 1640 20, class:^(sysupdate)$"
         "noanim, class:^(sysupdate)$"
         "noblur, class:^(sysupdate)$"
     ];
