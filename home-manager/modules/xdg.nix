@@ -5,5 +5,8 @@
     defaultApplications = {
       "inode/directory" = [ "nautilus.desktop" ];
     };
+        associations.removed = {
+      "inode/directory" = [ "kitty-open.desktop" ];
+    };
   };
 }
