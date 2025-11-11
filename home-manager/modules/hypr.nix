@@ -94,7 +94,7 @@
     };
 
     master = {
-      new_is_master = false;  # new windows go to stack
+      new_status = false;  # new windows go to stack
       mfact = 0.5;  # master width
       allow_small_split = false; 
 
