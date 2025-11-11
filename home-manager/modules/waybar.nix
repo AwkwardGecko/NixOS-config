@@ -9,7 +9,7 @@
 
       {
         name = "vertical";
-        layer = "overlay";
+        layer = "top";
         position = "left";
         exclusive = false;
         start_hidden = true;
