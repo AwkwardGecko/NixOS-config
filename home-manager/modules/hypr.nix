@@ -1,16 +1,14 @@
 { config, pkgs, lib, ... }:
 {
-  wayland.windowManager.hyprland.enable = true;
-  # wayland.windowManager.hyprland.plugins = with pkgs.hyprlandPlugins; [
-  #   hyprtrails
-  # ];
-
-  home.packages = with pkgs; [
+   home.packages = with pkgs; [
     hyprsunset
     hypridle
-  ];
+  ]; 
 
-  wayland.windowManager.hyprland.settings = {
+  wayland.windowManager.hyprland = {
+    enable = true;
+    systemd.enable = true;
+    Settings = {
 
     "$mainMod" = "SUPER";
     "$terminal" = "kitty";

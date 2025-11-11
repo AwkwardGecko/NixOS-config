@@ -1,6 +1,7 @@
-#   			 	 	 󰍛	 󰍜	 󰒓 󰘚							 
-{ config, pkgs, lib, ... }:
+{ config, lib, pkgs, ... }:
 {
+  
+  #   			 	 	 󰍛	 󰍜	 󰒓 󰘚							 
   programs.waybar = {
     enable = true;
     systemd.enable = true;
@@ -63,7 +64,7 @@
         };
 
         "clock#date" = {
-          format = "{:%a %Y-%m-%d_%H:%M}";
+          format = "{:%Y-%m-%d_%a_%H:%M}";
         };
 
         # "clock#time" = {
