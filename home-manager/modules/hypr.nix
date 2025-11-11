@@ -26,7 +26,7 @@
 
     "$kitty_with_fastfetch" = "kitty fastfetch";
 
-    "$unhide_waybar" = "bash -c 'pkill -SIGUSR1 waybar; sleep 30; pkill -SIGUSR1 waybar'";
+    "$unhide_waybar" = "bash -c 'pkill -SIGUSR1 waybar; sleep 10; pkill -SIGUSR1 waybar'";
 
     exec-once = [
       "sleep 3 && signal-desktop"
@@ -183,8 +183,8 @@
       ",XF86MonBrightnessUp, exec, brightnessctl s 10%+"
       ",XF86MonBrightnessDown, exec, brightnessctl s 10%-"
 
-      ",XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-      ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+      ",XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+"
+      ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"
       ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 
       ",XF86AudioNext, exec, playerctl next"
@@ -203,7 +203,7 @@
         
         "float, class:^(sysupdate)$"
         "size 900 300, class:^(sysupdate)$"
-        "move 1640 40, class:^(sysupdate)$"
+        "move 1660 20, class:^(sysupdate)$"
         "noanim, class:^(sysupdate)$"
         "noblur, class:^(sysupdate)$"
     ];
