@@ -243,6 +243,8 @@
         layer = "overlay";
         position = "left";
 
+        autohide = true;
+        autohide-show-on = "change";
         exclusive = false;
         modules-center = [ "hyprland/workspaces" ];
       } 
