@@ -32,6 +32,8 @@
     
     "$menu" = "rofi -show drun -show-icons";
 
+    "$update_script" = "kitty bash ~/.dotfiles/system-update.sh";
+
     exec-once = [
       "waybar"
       "sleep 1 && openrgb --startminimized -p Default.orp.ba"
@@ -130,6 +132,7 @@
       "$mainMod, Q, exec, $terminal"
       "$mainMod, R, exec, $menu"
       "$mainMod, V, togglefloating,"
+      "$mainMod, num_lock, exec, $update_script"
       
 
       "$mainMod, return, exec, $terminal"
