@@ -22,28 +22,21 @@
 
   wayland.windowManager.hyprland.settings = {
 
-    ################
-    ### PROGRAMS ###
-    ################
-
     "$mainMod" = "SUPER";
-    "$terminal" = "kitty";
-    "$fileManager" = "nautilus";
-    "$browser" = "firefox";
-    "$menu" = "rofi -show drun -show-icons";
 
-    #################
-    ### AUTOSTART ###
-    #################
+    "$terminal" = "kitty";
+    
+    "$fileManager" = "nautilus";
+    
+    "$browser" = "firefox";
+    
+    "$menu" = "rofi -show drun -show-icons";
 
     exec-once = [
       "waybar"
       "sleep 1 && openrgb --startminimized -p Default.orp.ba"
       "sleep 3 && signal-desktop"
       "sleep 1 && steam -silent"
-      #"hyprctl setcursor Bibata-Modern-Classic 24"
-      #"sleep 10 && bash ~/.local/share/applications/mount-server.sh"
-      #"sleep 15 && bash ~/.local/share/applications/mount-music.sh"
       "hypridle"
       "sleep 5 && mako"
     ];
@@ -59,16 +52,6 @@
       "__GL_VRR_ALLOWED,1"
     ];
 
-    #####################
-    ### LOOK AND FEEL ###
-    #####################
-
-    # cursor = {
-    #   theme = "Bibata-Modern-Classic";
-    #   size = 24;
-    # };
-
-
     general = {
       gaps_in = 5;
       gaps_out = 10;
@@ -78,6 +61,8 @@
       resize_on_border = false;
       allow_tearing = false;
       layout = "dwindle";
+
+
     };
 
     decoration = {
@@ -107,7 +92,9 @@
       "windowsOut, 1, 7, default, popin 80%"
       "border, 1, 10, default"
       "borderangle, 1, 7, default"
-      "workspaces, 1, 6, default"
+      #"workspaces, 1, 6, default"
+      "fade,1,7,default"
+      "workspaces,1,7,default,slidevert"
     ];
 
     dwindle = {
@@ -177,14 +164,14 @@
       "$mainMod, S, togglespecialworkspace, magic"
       "$mainMod SHIFT, S, movetoworkspace, special:magic"
 
-      "$mainMod, mouse_down, workspace, e-1"
-      "$mainMod, mouse_up, workspace, e+1"
+      "$mainMod, mouse_down, workspace, -1"
+      "$mainMod, mouse_up, workspace, +1"
 
-      "$mainMod SHIFT, mouse_down, movetoworkspace, e-1"
-      "$mainMod SHIFT, mouse_up, movetoworkspace, e+1"
+      "$mainMod SHIFT, mouse_down, movetoworkspace, -1"
+      "$mainMod SHIFT, mouse_up, movetoworkspace, +1"
 
-      #", mouse:276, workspace, e+1"
-      #", mouse:275, workspace, e-1"
+      #", mouse:276, workspace, +1"
+      #", mouse:275, workspace, -1"
     ];
 
     bindm = [
