@@ -69,7 +69,7 @@
         };
 
         "clock#date" = {
-          format = "{:%Y-%m-%d_%H:%M}";
+          format = "{:%A %Y-%m-%d_%H:%M}";
         };
 
         # "clock#time" = {
