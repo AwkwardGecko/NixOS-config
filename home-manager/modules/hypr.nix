@@ -170,10 +170,10 @@
       "$mainMod, mouse_up, exec, $unhide_waybar"
 
       "$mainMod SHIFT, mouse_down, movetoworkspace, -1"
-      "$mainMod SHIFT, exec, $unhide_waybar"
+      "$mainMod SHIFT, mouse_down, exec, $unhide_waybar"
       
       "$mainMod SHIFT, mouse_up, movetoworkspace, +1"
-      "$mainMod SHIFT, exec, $unhide_waybar"
+      "$mainMod SHIFT, mouse_up, exec, $unhide_waybar"
 
       "$mainMod, mouse_down, exec, $unhide_waybar"
 
