@@ -31,6 +31,7 @@
           "pulseaudio"
           #"disk"
           #"bluetooth"
+          "mpris"
           "custom/power"
         ];
 
