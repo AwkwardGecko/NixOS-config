@@ -6,6 +6,19 @@
     systemd.enable = true;
 
     settings = [
+
+      {
+        name = "vertical";
+        layer = "overlay";
+        position = "left";
+
+        autohide = true;
+        autohide-show-on = "change";
+        autohide-delay = 2000;
+        exclusive = false;
+        modules-center = [ "hyprland/workspaces" ];
+      }
+
       {
         name = "top";
         layer = "top";
@@ -239,18 +252,7 @@
         };
       }
 
-      {
-        name = "vertical";
-        layer = "overlay";
-        position = "left";
 
-        autohide = true;
-        autohide-show-on = "change";
-        autohide-delay = 2000;
-
-        exclusive = false;
-        modules-center = [ "hyprland/workspaces" ];
-      } 
     ];
 
   style = ''
