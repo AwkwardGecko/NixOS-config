@@ -36,7 +36,7 @@
       "mpvpaper ALL ~/Videos/wallpaper/1.mp4 -o 'no-audio --loop'"
     ];
 
-    
+    "ecosystem:no_update_news" = true; 
 
     env = [
       "XDG_CURRENT_DESKTOP,Hyprland"
@@ -109,7 +109,6 @@
       "force_default_wallpaper" = -1;
       "disable_hyprland_logo" = true;
       "enable_anr_dialog" = false;
-      "no_update_news" = true;
     };
 
     ###################
