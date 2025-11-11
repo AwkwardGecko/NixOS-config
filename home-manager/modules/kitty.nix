@@ -19,7 +19,7 @@
     shellIntegration.enableFishIntegration = true;
     settings = {
       background_opacity = "0.8";
-      background = "#00000000";
+      background = "#000000";
     };
 
     settings = {
