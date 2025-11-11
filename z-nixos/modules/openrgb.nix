@@ -14,13 +14,16 @@
   };
 
   systemd.user.services.openrgb-autostart = {
-    Unit.Description = "OpenRGB minimized with profile";
-    
-    Service = {
+    description = "OpenRGB minimized with profile";
+    after = [ "graphical-session.target" ];
+    partOf = [ "graphical-session.target" ];
+
+    serviceConfig = {
       Type = "simple";
       ExecStart = "${pkgs.openrgb}/bin/openrgb --startminimized -p Default.orp.ba";
+      Restart = "on-failure";
     };
 
-    Install.WantedBy = [ "graphical-session.target" ];
+    wantedBy = [ "graphical-session.target" ];
   };
 }
