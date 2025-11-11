@@ -26,6 +26,8 @@
 
     "$kitty_with_fastfetch" = "kitty fastfetch";
 
+    "$unhide_waybar" = "bash -c 'pkill -SIGUSR1 waybar; sleep 30; pkill -SIGUSR1 waybar'";
+
     exec-once = [
       "sleep 3 && signal-desktop"
       "sleep 1 && steam -silent"
@@ -110,7 +112,7 @@
 
     bind = [
       
-      "$mainMod, , exec, pkill -SIGUSR1 waybar"
+      "$mainMod, space, exec, $unhide_waybar"
 
 
       ", print, exec, grimblast save area ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"
