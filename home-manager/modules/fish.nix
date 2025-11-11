@@ -17,7 +17,7 @@
       server-connect = "kitty ssh -t z-home@192.168.1.157 'fish -l'";
     };
     shellInit = "cd ~/.dotfiles/";
-    #shellInitLast = "fastfetch";
+    shellInitLast = "fastfetch";
     plugins = [
       {
         name = "gruvbox";
