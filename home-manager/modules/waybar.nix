@@ -11,18 +11,24 @@
         name = "vertical";
         layer = "overlay";
         position = "left";
+        exclusive = false;
 
         autohide = true;
-        autohide-show-on = "change";
+        autohide-show-on = "none";
         autohide-delay = 2000;
-        exclusive = false;
+        
         modules-center = [ "hyprland/workspaces" ];
       }
 
       {
         name = "top";
-        layer = "top";
+        layer = "overlay";
         position = "top";
+        exclusive = false;
+
+        autohide = true;
+        autohide-show-on "none";
+        autohide-delay = 2000;
 
         modules-left = [
           "custom/cpuload"

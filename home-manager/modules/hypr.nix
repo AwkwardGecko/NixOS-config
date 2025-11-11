@@ -112,6 +112,10 @@
     ###################
 
     bind = [
+      
+      "$mainMod, , exec, pkill -SIGUSR1 waybar"
+
+
       ", print, exec, grimblast save area ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"
       "$mainMod, print, exec, grimblast copy area"
 
