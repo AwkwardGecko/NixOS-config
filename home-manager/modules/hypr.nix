@@ -203,8 +203,8 @@
       "nofocus, class:^$, title:^$, wayland:1, floating:1, fullscreen:0, pinned:0"
         
         "float, class:^(sysupdate)$"
-        "size 900 600, class:^(sysupdate)$"
-        "move 1640 20, class:^(sysupdate)$"
+        "size 900 300, class:^(sysupdate)$"
+        "move 1640 40, class:^(sysupdate)$"
         "noanim, class:^(sysupdate)$"
         "noblur, class:^(sysupdate)$"
     ];
