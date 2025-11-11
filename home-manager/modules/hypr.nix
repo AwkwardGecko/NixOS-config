@@ -53,8 +53,6 @@
       resize_on_border = false;
       allow_tearing = false;
       layout = "dwindle";
-
-
     };
 
     decoration = {
@@ -197,7 +195,7 @@
         
         "float, class:^(sysupdate)$"
         "size 900 600, class:^(sysupdate)$"
-        "move 200 200, class:^(sysupdate)$"
+        "move 1660 0, class:^(sysupdate)$"
         "noanim, class:^(sysupdate)$"
         "noblur, class:^(sysupdate)$"
     ];
