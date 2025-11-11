@@ -244,32 +244,33 @@
         layer = "overlay";
         position = "left";
 
+        exclusive = false;
         modules-center = [ "hyprland/workspaces" ];
       } 
     ];
 
   style = ''
-      * {	
-          border: none;
-          border-radius: 10px;
-          font-size: 15px;
-          font-family: "JetBrainsMono-Regular", monospace;
-      }
+    * {	
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-family: "JetBrainsMono-Regular", monospace;
+    }
 
-      window#waybar {
-          background: transparent;
-      }
+    window#waybar {
+      background: transparent;
+    }
 
-      window#waybar.hidden {
-          opacity: 0.2;
-      }
+    window#waybar.hidden {
+      opacity: 0.2;
+    }
 
-      @keyframes blink {
-          to {
-              background-color: #BF616A;
-              color: #B5E8E0;
-          }
+    @keyframes blink {
+      to {
+        background-color: #BF616A;
+        color: #B5E8E0;
       }
+    }
 
       #custom-gpuvram {
           margin-top: 6px;
