@@ -8,8 +8,6 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [
-    mpvpaper
-  ];
+  programs.mpvpaper.enable = true;
 
 }
