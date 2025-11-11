@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-  home-manager.users.zozano.xdg.mimeApps = {
+  xdg.mimeApps = {
     enable = true;
     defaultApplications = {
       "inode/directory" = [ "nautilus.desktop" ];
