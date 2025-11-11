@@ -7,4 +7,9 @@
       wallpaper = [ ",~/Pictures/wallpaper/1.jpg" ];
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    mpvpaper
+  ];
+
 }
