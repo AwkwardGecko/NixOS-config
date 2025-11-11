@@ -51,7 +51,6 @@
       resize_on_border = false;
       allow_tearing = false;
       layout = "master";
-
     };
 
     decoration = {
@@ -111,7 +110,7 @@
 
     bind = [
       
-      "$mainMod, space, exec, pkill -SIGUSR1 waybar"
+      "$mainMod, , exec, pkill -SIGUSR1 waybar"
 
 
       ", print, exec, grimblast save area ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"
