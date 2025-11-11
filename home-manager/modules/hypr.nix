@@ -119,7 +119,7 @@
       "$mainMod, J, togglesplit,"
       "$mainMod, M, fullscreen, 1"
       "$mainMod, P, pseudo,"
-      "$mainMod, Q, exec, $terminal"
+      "$mainMod, Q, exec, $kitty_with_fastfetch"
       "$mainMod, R, exec, $menu"
       "$mainMod, V, togglefloating,"
       "$mainMod, num_lock, exec, $update_script"
@@ -194,6 +194,7 @@
       "opacity 1.0 override 1.0, class:^(Steam)$"
       "suppressevent maximize, class:.*"
       "nofocus, class:^$, title:^$, wayland:1, floating:1, fullscreen:0, pinned:0"
+      "float, class:^(kitty)$"
     ];
   };
 }
