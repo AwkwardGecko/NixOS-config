@@ -245,6 +245,8 @@
 
         autohide = true;
         autohide-show-on = "change";
+        autohide-delay = 2000;
+
         exclusive = false;
         modules-center = [ "hyprland/workspaces" ];
       } 
