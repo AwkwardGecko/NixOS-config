@@ -165,18 +165,10 @@
       "$mainMod SHIFT, S, movetoworkspace, special:magic"
 
       "$mainMod, mouse_down, workspace, -1"
-      #"$mainMod, mouse_down, exec, $unhide_waybar"
-
       "$mainMod, mouse_up, workspace, +1"
-      #"$mainMod, mouse_up, exec, $unhide_waybar"
 
       "$mainMod SHIFT, mouse_down, movetoworkspace, -1"
-      #"$mainMod SHIFT, mouse_down, exec, $unhide_waybar"
-      
       "$mainMod SHIFT, mouse_up, movetoworkspace, +1"
-      #"$mainMod SHIFT, mouse_up, exec, $unhide_waybar"
-
-      "$mainMod, mouse_down, exec, $unhide_waybar"
 
       #", mouse:276, workspace, +1"
       #", mouse:275, workspace, -1"
