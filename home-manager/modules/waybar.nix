@@ -34,6 +34,7 @@
           #"custom/gputemp"
           #"custom/gpuvram"
           #"memory"
+          "pulseaudio"
           "mpris"
         ];
 
@@ -44,13 +45,12 @@
 
         modules-right = [
           #"mpris"
-          "custom/update"
+          #custom/update"
           "tray"
           "gamemode"
-          "pulseaudio"
           #"disk"
           #"bluetooth"
-          "custom/power"
+          #"custom/power"
         ];
 
         "hyprland/window" = {
