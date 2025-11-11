@@ -22,7 +22,7 @@
         name = "top";
         layer = "top";
         position = "top";
-        exclusive = false;
+        exclusive = true;
         start_hidden = true;
         "on-sigusr1" = "toggle";
 
