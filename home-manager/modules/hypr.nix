@@ -119,7 +119,7 @@
       "$mainMod, J, togglesplit,"
       "$mainMod, M, fullscreen, 1"
       "$mainMod, P, pseudo,"
-      "$mainMod, Q, exec, $kitty_with_fastfetch"
+      "$mainMod, Q, exec, $terminal"
       "$mainMod, R, exec, $menu"
       "$mainMod, V, togglefloating,"
       "$mainMod, num_lock, exec, $update_script"
