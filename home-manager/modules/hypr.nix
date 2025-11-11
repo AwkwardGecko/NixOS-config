@@ -9,7 +9,7 @@
     enable = true;
     systemd.enable = true;
     
-    Settings = {
+    settings = {
 
       "$mainMod" = "SUPER";
       "$terminal" = "kitty";
