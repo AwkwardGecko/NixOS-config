@@ -29,7 +29,7 @@
     ./modules/tmux.nix
     ./modules/waybar.nix
     #./modules/waybar/mechabar.nix
-    ./modules/xdg.nix
+    #$./modules/xdg.nix
     #./modules/xserver.nix
     #./modules/xmrig.nix
   ];
