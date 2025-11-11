@@ -74,7 +74,7 @@
 
         tray = {
           icon-size = 21;
-          spacing = 0;
+          spacing = 10;
         };
 
         gamemode = {
