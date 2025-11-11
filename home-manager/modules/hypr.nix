@@ -52,7 +52,8 @@
       "col.inactive_border" = "rgba(595959aa)";
       resize_on_border = false;
       allow_tearing = false;
-      layout = "dwindle";
+      layout = "master";
+
     };
 
     decoration = {
@@ -93,7 +94,11 @@
     };
 
     master = {
-      "new_status" = "master";
+      new_is_master = false;  # new windows go to stack
+      mfact = 0.5;  # master width
+      allow_small_split = false; 
+
+      #"new_status" = "master";
     };
 
     misc = {
@@ -195,7 +200,7 @@
         
         "float, class:^(sysupdate)$"
         "size 900 600, class:^(sysupdate)$"
-        "move 1660 0, class:^(sysupdate)$"
+        "move 1660 20, class:^(sysupdate)$"
         "noanim, class:^(sysupdate)$"
         "noblur, class:^(sysupdate)$"
     ];
