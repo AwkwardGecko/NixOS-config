@@ -240,7 +240,8 @@
       }
 
       {
-        layer = "top";
+        name = "vertical";
+        layer = "overlay";
         position = "left";
 
         modules-center = [ "hyprland/workspaces" ];
