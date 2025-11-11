@@ -33,13 +33,6 @@
     #./modules/xmrig.nix
   ];
 
-  xdg.mimeApps = {
-    enable = true;
-    defaultApplications = {
-      "inode/directory" = [ "nautilus.desktop" ];
-    };
-  };
-
   systemd.user.startServices = "sd-switch";
 
   home.sessionVariables = {
