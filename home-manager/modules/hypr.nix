@@ -39,6 +39,7 @@
     exec-once = [
       "sleep 3 && signal-desktop"
       "sleep 1 && steam -silent"
+      "hyprpaper &"
     ];
 
     env = [
