@@ -25,13 +25,13 @@
         ];
 
         modules-right = [
+          "mpris"
           "custom/update"
           "tray"
           "gamemode"
           "pulseaudio"
           #"disk"
           #"bluetooth"
-          "mpris"
           "custom/power"
         ];
 
@@ -52,14 +52,13 @@
         };
 
         "clock#date" = {
-          format = "󰨳 {:%A %B %d}";
-          #tooltip = false;
+          format = "{:%Y-%m-%d_%H:%M}";
         };
 
-        "clock#time" = {
-          format = "󱑂 {:%I:%M %p}";
-          #tooltip = false;
-        };
+        # "clock#time" = {
+        #   format = "󱑂 {:%I:%M %p}";
+        #   #tooltip = false;
+        # };
 
         tray = {
           icon-size = 21;
