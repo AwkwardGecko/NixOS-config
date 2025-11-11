@@ -11,7 +11,7 @@
    STAMP_FILE="/tmp/nix_flake_update.timestamp"
 
    # Check if the file exists and if it's less than 10 minutes old
-   if [[ ! -f "$STAMP_FILE" || $(($(date +%s) - $(< "$STAMP_FILE"))) -ge 600 ]]; then
+   if [[ ! -f "$STAMP_FILE" || $(($(date +%s) - $(< "$STAMP_FILE"))) -ge 500 ]]; then
     echo "Running nix flake update..."
     nix flake update
     date +%s > "$STAMP_FILE"
