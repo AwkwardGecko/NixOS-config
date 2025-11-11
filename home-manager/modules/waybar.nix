@@ -21,7 +21,6 @@
 
         modules-center = [
           "clock#date"
-          "hyprland/workspaces"
           "clock#time"
         ];
 
