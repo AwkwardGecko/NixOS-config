@@ -37,7 +37,6 @@
     "$kitty_with_fastfetch" = "kitty fastfetch";
 
     exec-once = [
-      #"sleep 1 && openrgb --startminimized -p Default.orp.ba"
       "sleep 3 && signal-desktop"
       "sleep 1 && steam -silent"
       #"hypridle"
