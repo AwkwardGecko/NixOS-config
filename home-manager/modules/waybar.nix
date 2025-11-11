@@ -52,12 +52,6 @@
           "custom/power"
         ];
 
-        # "notifications" = {
-        #   format = "{message}";
-        #   max-length = 200;
-        #   icon-size = 32;
-        # };
-
         "hyprland/window" = {
           format = "{initialTitle}";
           max-length = 40;
