@@ -101,7 +101,7 @@
         "force_default_wallpaper" = -1;
         "disable_hyprland_logo" = true;
         "enable_anr_dialog" = false;
-        mouse_hide_timeout = 60;
+        "mouse_hide_timeout" = 60;
       };
 
       bind = [
