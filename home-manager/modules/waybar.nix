@@ -1,21 +1,12 @@
-#
-#   			 	 	 󰍛	 󰍜	 󰒓 󰘚	
-
-# 						 
+#   			 	 	 󰍛	 󰍜	 󰒓 󰘚							 
+{ config, pkgs, lib, ... }:
 {
-  config,
-  pkgs,
-  lib,
-  ...
-}:
-{
-
   programs.waybar = {
     enable = true;
     systemd.enable = true;
-    settings = [
-      {
 
+    settings = {
+      main = {
         layer = "top";
         position = "top";
 
@@ -246,299 +237,305 @@
           "suspend" = "systemctl suspend";
           "hibernate" = "systemctl hibernate";
         };
+      };
+    };
+
+    vertical = {
+      layer = "top";
+      position = "left";
+
+      modules-center = [ "hyprland/workspaces" ];
+    };
+
+
+    style = ''
+      * {	
+          border: none;
+          border-radius: 10px;
+          font-size: 15px;
+          font-family: "JetBrainsMono-Regular", monospace;
       }
-    ];
 
-   style = ''
-        * {	
-            border: none;
-            border-radius: 10px;
-            font-size: 15px;
-            font-family: "JetBrainsMono-Regular", monospace;
-        }
+      window#waybar {
+          background: transparent;
+      }
 
-        window#waybar {
-            background: transparent;
-        }
+      window#waybar.hidden {
+          opacity: 0.2;
+      }
 
-        window#waybar.hidden {
-            opacity: 0.2;
-        }
+      @keyframes blink {
+          to {
+              background-color: #BF616A;
+              color: #B5E8E0;
+          }
+      }
 
-        @keyframes blink {
-            to {
-                background-color: #BF616A;
-                color: #B5E8E0;
-            }
-        }
+      #custom-gpuvram {
+          margin-top: 6px;
+          margin-left: 8px;
+          padding-left: 10px;
+          margin-bottom: 0px;
+          padding-right: 10px;
+          color: #B5E8E0;
+          transition: none;
+          border-radius: 10px;
+          background: #161320;
+      }
 
-        #custom-gpuvram {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            margin-bottom: 0px;
-            padding-right: 10px;
-            color: #B5E8E0;
-            transition: none;
-            border-radius: 10px;
-            background: #161320;
-        }
+      #custom-hddzero {
+          margin-top: 6px;
+          margin-left: 8px;
+          padding-left: 10px;
+          margin-bottom: 0px;
+          padding-right: 10px;
+          color: #B5E8E0;
+          transition: none;
+          border-radius: 10px;
+          background: #161320;
+      }
 
-        #custom-hddzero {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            margin-bottom: 0px;
-            padding-right: 10px;
-            color: #B5E8E0;
-            transition: none;
-            border-radius: 10px;
-            background: #161320;
-        }
+      #window {
+          margin-top: 6px;
+          padding-left: 10px;
+          padding-right: 10px;
+          border-radius: 10px;
+          transition: none;
+          background: transparent;
+      }
 
-        #window {
-            margin-top: 6px;
-            padding-left: 10px;
-            padding-right: 10px;
-            border-radius: 10px;
-            transition: none;
-            background: transparent;
-        }
+      #custom-gputemp {
+          margin-top: 6px;
+          margin-left: 8px;
+          padding-left: 10px;
+          margin-bottom: 0px;
+          padding-right: 10px;
+          border-radius: 10px;
+          transition: none;
+          color: #B5E8E0;
+          background: #161320;
+      }
 
-        #custom-gputemp {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            margin-bottom: 0px;
-            padding-right: 10px;
-            border-radius: 10px;
-            transition: none;
-            color: #B5E8E0;
-            background: #161320;
-        }
+      #custom-update {
+          margin-top: 6px;
+          margin-left: 8px;
+          padding-left: 10px;
+          margin-bottom: 0px;
+          padding-right: 10px;
+          border-radius: 10px;
+          transition: none;
+          background: #161320;
+          color: #B5E8E0;
+      }
 
-        #custom-update {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            margin-bottom: 0px;
-            padding-right: 10px;
-            border-radius: 10px;
-            transition: none;
-            background: #161320;
-            color: #B5E8E0;
-        }
+      #custom-update.clean {
+         color: #B5E8E0;
+      }
 
-        #custom-update.clean {
-           color: #B5E8E0;
-        }
+      #custom-update.dirty {
+         color: #F28FAD;
+      }
 
-        #custom-update.dirty {
-           color: #F28FAD;
-        }
+      #custom-cputemp {
+          margin-top: 6px;
+          margin-left: 8px;
+          padding-left: 10px;
+          margin-bottom: 0px;
+          padding-right: 10px;
+          border-radius: 10px;
+          transition: none;
+          color: #B5E8E0;
+          background: #161320;
+      }
 
-        #custom-cputemp {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            margin-bottom: 0px;
-            padding-right: 10px;
-            border-radius: 10px;
-            transition: none;
-            color: #B5E8E0;
-            background: #161320;
-        }
+      #custom-cpuload {
+          margin-top: 6px;
+          margin-left: 8px;
+          padding-left: 10px;
+          margin-bottom: 0px;
+          padding-right: 10px;
+          border-radius: 10px;
+          transition: none;
+          color: #B5E8E0;
+          background: #161320;
+      }
 
-        #custom-cpuload {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            margin-bottom: 0px;
-            padding-right: 10px;
-            border-radius: 10px;
-            transition: none;
-            color: #B5E8E0;
-            background: #161320;
-        }
-
-        #custom-gpuload {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            margin-bottom: 0px;
-            padding-right: 10px;
-            border-radius: 10px;
-            transition: none;
-            color: #B5E8E0;
-            background: #161320;
-        }
+      #custom-gpuload {
+          margin-top: 6px;
+          margin-left: 8px;
+          padding-left: 10px;
+          margin-bottom: 0px;
+          padding-right: 10px;
+          border-radius: 10px;
+          transition: none;
+          color: #B5E8E0;
+          background: #161320;
+      }
 
 
 
-        #bluetooth {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            margin-bottom: 0px;
-            padding-right: 10px;
-            border-radius: 10px;
-            transition: none;
-            color: #B5E8E0;
-            background: #161320;
-        }
+      #bluetooth {
+          margin-top: 6px;
+          margin-left: 8px;
+          padding-left: 10px;
+          margin-bottom: 0px;
+          padding-right: 10px;
+          border-radius: 10px;
+          transition: none;
+          color: #B5E8E0;
+          background: #161320;
+      }
 
-        #mpris {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            margin-bottom: 0px;
-            padding-right: 10px;
-            border-radius: 10px;
-            transition: none;
-            color: #B5E8E0;
-            background: #161320;
-        }
+      #mpris {
+          margin-top: 6px;
+          margin-left: 8px;
+          padding-left: 10px;
+          margin-bottom: 0px;
+          padding-right: 10px;
+          border-radius: 10px;
+          transition: none;
+          color: #B5E8E0;
+          background: #161320;
+      }
 
-        #gamemode {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            margin-bottom: 0px;
-            padding-right: 10px;
-            border-radius: 10px;
-            transition: none;
-            color: #B5E8E0;
-            background: #161320;
-        }
+      #gamemode {
+          margin-top: 6px;
+          margin-left: 8px;
+          padding-left: 10px;
+          margin-bottom: 0px;
+          padding-right: 10px;
+          border-radius: 10px;
+          transition: none;
+          color: #B5E8E0;
+          background: #161320;
+      }
 
-        #pulseaudio {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            margin-bottom: 0px;
-            padding-right: 10px;
-            border-radius: 10px;
-            transition: none;
-            color: #B5E8E0;
-            background: #161320;
-        }
+      #pulseaudio {
+          margin-top: 6px;
+          margin-left: 8px;
+          padding-left: 10px;
+          margin-bottom: 0px;
+          padding-right: 10px;
+          border-radius: 10px;
+          transition: none;
+          color: #B5E8E0;
+          background: #161320;
+      }
 
-        #disk {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            margin-bottom: 0px;
-            padding-right: 10px;
-            border-radius: 10px;
-            transition: none;
-            color: #B5E8E0;
-            background: #161320;
-        }
+      #disk {
+          margin-top: 6px;
+          margin-left: 8px;
+          padding-left: 10px;
+          margin-bottom: 0px;
+          padding-right: 10px;
+          border-radius: 10px;
+          transition: none;
+          color: #B5E8E0;
+          background: #161320;
+      }
 
-        #clock {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            margin-bottom: 0px;
-            padding-right: 10px;
-            border-radius: 10px;
-            transition: none;
-            color: #B5E8E0;
-            background: #161320;
-        }
+      #clock {
+          margin-top: 6px;
+          margin-left: 8px;
+          padding-left: 10px;
+          margin-bottom: 0px;
+          padding-right: 10px;
+          border-radius: 10px;
+          transition: none;
+          color: #B5E8E0;
+          background: #161320;
+      }
 
-        #memory {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            margin-bottom: 0px;
-            padding-right: 10px;
-            border-radius: 10px;
-            transition: none;
-            color: #B5E8E0;
-            background: #161320;
-        }
+      #memory {
+          margin-top: 6px;
+          margin-left: 8px;
+          padding-left: 10px;
+          margin-bottom: 0px;
+          padding-right: 10px;
+          border-radius: 10px;
+          transition: none;
+          color: #B5E8E0;
+          background: #161320;
+      }
 
-        #cpu {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            margin-bottom: 0px;
-            padding-right: 10px;
-            border-radius: 10px;
-            transition: none;
-            color: #B5E8E0;
-            background: #161320;
-        }
+      #cpu {
+          margin-top: 6px;
+          margin-left: 8px;
+          padding-left: 10px;
+          margin-bottom: 0px;
+          padding-right: 10px;
+          border-radius: 10px;
+          transition: none;
+          color: #B5E8E0;
+          background: #161320;
+      }
 
-        #tray {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            margin-bottom: 0px;
-            padding-right: 10px;
-            border-radius: 10px;
-            transition: none;
-            color: #B5E8E0;
-            background: #161320;
-        }
+      #tray {
+          margin-top: 6px;
+          margin-left: 8px;
+          padding-left: 10px;
+          margin-bottom: 0px;
+          padding-right: 10px;
+          border-radius: 10px;
+          transition: none;
+          color: #B5E8E0;
+          background: #161320;
+      }
 
-        #custom-launcher {
-            font-size: 24px;
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            padding-right: 5px;
-            border-radius: 10px;
-            transition: none;
-            color: #89DCEB;
-            background: #161320;
-        }
+      #custom-launcher {
+          font-size: 24px;
+          margin-top: 6px;
+          margin-left: 8px;
+          padding-left: 10px;
+          padding-right: 5px;
+          border-radius: 10px;
+          transition: none;
+          color: #89DCEB;
+          background: #161320;
+      }
 
-        #custom-power {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            margin-bottom: 0px;
-            padding-right: 10px;
-            border-radius: 10px;
-            transition: none;
-            color: #B5E8E0;
-            background: #161320;
-        }
+      #custom-power {
+          margin-top: 6px;
+          margin-left: 8px;
+          padding-left: 10px;
+          margin-bottom: 0px;
+          padding-right: 10px;
+          border-radius: 10px;
+          transition: none;
+          color: #B5E8E0;
+          background: #161320;
+      }
 
-        #workspaces {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            margin-bottom: 0px;
-            padding-right: 10px;
-            border-radius: 10px;
-            transition: none;
-            color: #B5E8E0;
-            background: #161320;
-        }
+      #workspaces {
+          margin-top: 6px;
+          margin-left: 8px;
+          padding-left: 10px;
+          margin-bottom: 0px;
+          padding-right: 10px;
+          border-radius: 10px;
+          transition: none;
+          color: #B5E8E0;
+          background: #161320;
+      }
 
-        #workspaces button {
-            padding: 0 5px;
-            background-color: transparent;
-            color: #ffffff;
-        }
+      #workspaces button {
+          padding: 0 5px;
+          background-color: transparent;
+          color: #ffffff;
+      }
 
-        #workspaces button:hover {
-            background: rgba(0, 0, 0, 0.2);
-        }
+      #workspaces button:hover {
+          background: rgba(0, 0, 0, 0.2);
+      }
 
-        #workspaces button.focused {
-            background-color: #64727D;
-            box-shadow: inset 0 -3px #ffffff;
-        }
+      #workspaces button.focused {
+          background-color: #64727D;
+          box-shadow: inset 0 -3px #ffffff;
+      }
 
-        #workspaces button.urgent {
-            background-color: #eb4d4b;
-        }
-
-
+      #workspaces button.urgent {
+          background-color: #eb4d4b;
+      }
     '';
   };
 }
