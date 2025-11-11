@@ -27,7 +27,7 @@
         exclusive = false;
 
         autohide = true;
-        autohide-show-on "none";
+        autohide-show-on = "none";
         autohide-delay = 2000;
 
         modules-left = [
