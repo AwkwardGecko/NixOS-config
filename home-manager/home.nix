@@ -12,6 +12,7 @@
     ./modules/git.nix
     #./modules/gtk.nix
     ./modules/hypr.nix
+    ./modules/hypridle.nix
     ./modules/kitty.nix
     #./modules/lutris.nix
     #./modules/terminal.nix

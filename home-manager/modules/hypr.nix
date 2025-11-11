@@ -35,12 +35,11 @@
     "$update_script" = "kitty bash ~/.dotfiles/system-update.sh";
 
     exec-once = [
-      "waybar"
       "sleep 1 && openrgb --startminimized -p Default.orp.ba"
       "sleep 3 && signal-desktop"
       "sleep 1 && steam -silent"
-      "hypridle"
-      "sleep 5 && mako"
+      #"hypridle"
+      #"sleep 5 && mako"
     ];
 
     env = [

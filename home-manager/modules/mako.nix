@@ -10,7 +10,6 @@
   ...
 }:
 {
-
   services.mako = {
     enable = true; # notification daemon
     settings = {
