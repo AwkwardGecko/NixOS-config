@@ -22,7 +22,7 @@
     
     "$menu" = "rofi -show drun -show-icons";
 
-    "$update_script" = "kitty bash ~/.dotfiles/system-update.sh";
+    "$update_script" = "kitty --class sysupdate -e bash ~/.dotfiles/system-update.sh";
 
     "$kitty_with_fastfetch" = "kitty fastfetch";
 
@@ -194,7 +194,12 @@
       "opacity 1.0 override 1.0, class:^(Steam)$"
       "suppressevent maximize, class:.*"
       "nofocus, class:^$, title:^$, wayland:1, floating:1, fullscreen:0, pinned:0"
-      "float, class:^(kitty)$"
+        
+        "float, class:^(sysupdate)$"
+        "size 900 600, class:^(sysupdate)$"
+        "move 200 200, class:^(sysupdate)$"
+        "noanim, class:^(sysupdate)$"
+        "noblur, class:^(sysupdate)$"
     ];
   };
 }
