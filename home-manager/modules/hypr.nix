@@ -29,8 +29,6 @@
     exec-once = [
       "sleep 3 && signal-desktop"
       "sleep 1 && steam -silent"
-      #"hypridle"
-      #"sleep 5 && mako"
     ];
 
     env = [
@@ -113,7 +111,7 @@
 
     bind = [
       
-      "$mainMod, , exec, pkill -SIGUSR1 waybar"
+      "$mainMod, space, exec, pkill -SIGUSR1 waybar"
 
 
       ", print, exec, grimblast save area ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"

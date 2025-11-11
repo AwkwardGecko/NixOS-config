@@ -12,11 +12,9 @@
         layer = "overlay";
         position = "left";
         exclusive = false;
+        start_hidden = true;
+        "on-sigusr1" = "toggle";
 
-        autohide = true;
-        autohide-show-on = "none";
-        autohide-delay = 2000;
-        
         modules-center = [ "hyprland/workspaces" ];
       }
 
@@ -25,10 +23,8 @@
         layer = "overlay";
         position = "top";
         exclusive = false;
-
-        autohide = true;
-        autohide-show-on = "none";
-        autohide-delay = 2000;
+        start_hidden = true;
+        "on-sigusr1" = "toggle";
 
         modules-left = [
           "custom/cpuload"
