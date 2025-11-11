@@ -27,12 +27,13 @@
         "on-sigusr1" = "toggle";
 
         modules-left = [
-          "custom/cpuload"
-          "custom/cputemp"
-          "custom/gpuload"
-          "custom/gputemp"
-          "custom/gpuvram"
-          "memory"
+          #"custom/cpuload"
+          #"custom/cputemp"
+          #"custom/gpuload"
+          #"custom/gputemp"
+          #"custom/gpuvram"
+          #"memory"
+          "mpris"
         ];
 
         modules-center = [
@@ -41,7 +42,7 @@
         ];
 
         modules-right = [
-          "mpris"
+          #"mpris"
           "custom/update"
           "tray"
           "gamemode"
