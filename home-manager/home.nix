@@ -27,6 +27,7 @@
     #./modules/swaync.nix
     ./modules/rofi.nix
     ./modules/tmux.nix
+    ./modules/wallpaper.nix
     ./modules/waybar.nix
     #./modules/waybar/mechabar.nix
     #$./modules/xdg.nix
