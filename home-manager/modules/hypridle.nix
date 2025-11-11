@@ -56,6 +56,12 @@
 
       listener = [
         {
+          timeout = 60;
+          on-timeout = "bash -c 'pkill -SIGUSR1 waybar'";
+          on-resume = "bash -c 'pkill -SIGUSR1 waybar'";
+        }
+
+        {
           timeout = 900;
           on-timeout = "hyprlock";
         }
