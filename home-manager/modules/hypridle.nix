@@ -1,5 +1,6 @@
 { config, lib, pkgs, ... }:
 {
+  programs.hyprlock.enable = true;
   services.hypridle = {
     enable = true;
     settings = {
@@ -10,10 +11,10 @@
       };
 
       listener = [
-        {
-          timeout = 900;
-          on-timeout = "hyprlock";
-        }
+        #{
+        #  timeout = 900;
+        #  on-timeout = "hyprlock";
+        #}
         {
           timeout = 1200;
           on-timeout = "hyprctl dispatch dpms off";
