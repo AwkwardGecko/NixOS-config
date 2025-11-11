@@ -28,7 +28,7 @@
 
     font = {
       name = "JetBrains Mono";
-      size = 14;
+      size = 12;
     };
 
     themeFile = "GruvboxMaterialDarkMedium";
