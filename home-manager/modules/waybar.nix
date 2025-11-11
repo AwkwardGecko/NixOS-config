@@ -7,6 +7,7 @@
 
     settings = [
       {
+        name = "top";
         layer = "top";
         position = "top";
 
@@ -52,7 +53,7 @@
         };
 
         "clock#date" = {
-          format = "{:%A %Y-%m-%d_%H:%M}";
+          format = "{:%Y-%m-%d_%H:%M}";
         };
 
         # "clock#time" = {
