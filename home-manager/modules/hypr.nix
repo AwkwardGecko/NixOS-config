@@ -10,6 +10,13 @@
     hypridle
   ];
 
+  services.hyprpaper = {
+    enable = true;
+    settings = {
+      wallpaper = [ ",~/Pictures/wallpaper/1.jpg" ];
+    };
+  };
+
   wayland.windowManager.hyprland.settings = {
 
     "$mainMod" = "SUPER";
