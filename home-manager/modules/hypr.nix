@@ -25,7 +25,7 @@
         "sleep 3 && signal-desktop"
         "sleep 1 && steam -silent"
         #"hyprpaper &"
-        "mpvpaper ALL ~/Videos/wallpaper/1.mp4 -o 'no-audio --loop'"
+        "$HOME/.local/bin/video-wallpapers.sh"
       ];
 
       "ecosystem:no_update_news" = true; 
