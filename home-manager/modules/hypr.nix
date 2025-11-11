@@ -13,19 +13,12 @@
   wayland.windowManager.hyprland.settings = {
 
     "$mainMod" = "SUPER";
-
     "$terminal" = "kitty";
-    
     "$fileManager" = "nautilus";
-    
     "$browser" = "firefox";
-    
     "$menu" = "rofi -show drun -show-icons";
-
     "$update_script" = "kitty --class sysupdate -e bash ~/.dotfiles/system-update.sh";
-
     "$kitty_with_fastfetch" = "kitty fastfetch";
-
     # "$unhide_waybar" = "bash -c 'pkill -SIGUSR1 waybar; sleep 30; pkill -SIGUSR1 waybar'";
     "$unhide_waybar" = "bash -c 'pkill -SIGUSR1 waybar'";
 
@@ -110,10 +103,6 @@
       "disable_hyprland_logo" = true;
       "enable_anr_dialog" = false;
     };
-
-    ###################
-    ### KEYBINDINGS ###
-    ###################
 
     bind = [
       
