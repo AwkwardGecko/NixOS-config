@@ -5,7 +5,8 @@
     systemd.enable = true;
     settings = {
       
-      menus.dashboard.icon = "󱄅";
+      bar.launcher.autoDetectIcon = true;
+      #bar.dashboard.icon = "󱄅";
       bar.battery.label = true;
       bar.bluetooth.label = false;
       bar.clock.format = "%H:%M";
