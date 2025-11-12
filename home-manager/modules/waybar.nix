@@ -2,16 +2,6 @@
 {
   
   #   			 	 	 󰍛	 󰍜	 󰒓 󰘚							 
-  systemd.user.services.waybar = {
-    # Unit = {
-    #   ConditionEnvironment = lib.mkForce "";
-    # };
-    Service = {
-      Restart = "always";
-      RestartSec = 1;
-    };
-  };
-
   programs.waybar = {
     enable = true;
     systemd.enable = true;
@@ -34,7 +24,7 @@
         layer = "top";
         position = "top";
         exclusive = true;
-        start_hidden = false;
+        #start_hidden = false;
         "on-sigusr1" = "toggle";
 
         modules-left = [

@@ -12,6 +12,7 @@
     ./modules/git.nix
     #./modules/gtk.nix
     ./modules/hypr.nix
+    ./modules/hyprpanel.nix
     ./modules/hyprpaper.nix
     ./modules/hypridle.nix
     ./modules/kitty.nix
@@ -28,7 +29,7 @@
     ./modules/rofi.nix
     ./modules/tmux.nix
     ./modules/wallpaper.nix
-    ./modules/waybar.nix
+    #./modules/waybar.nix
     #./modules/waybar/mechabar.nix
     #$./modules/xdg.nix
     #./modules/xserver.nix
