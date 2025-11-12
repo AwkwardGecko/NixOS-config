@@ -6,7 +6,7 @@
     settings = {
      
       theme.font = {
-        name = "JetBrainsMono Nerd Font";
+        name = "JetBrainsMono";
         size = "16px";
       };
 
@@ -23,7 +23,7 @@
 
       bar.launcher.autoDetectIcon = true;
       #bar.dashboard.icon = "󱄅";
-      bar.battery.label = true;
+      #bar.battery.label = true;
       bar.bluetooth.label = false;
       bar.clock.format = "%H:%M";
       bar.layouts = {
