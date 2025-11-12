@@ -25,6 +25,7 @@
             "bluetooth"
             "notifications"
             "dashboard"
+            "steam"
           ];
         };
       };
