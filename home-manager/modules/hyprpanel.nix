@@ -16,7 +16,8 @@
 
           middle = [ 
             #"windowtitle"
-            "workspaces"
+            #"workspaces"
+            "clock"
           ];
 
           right = [
