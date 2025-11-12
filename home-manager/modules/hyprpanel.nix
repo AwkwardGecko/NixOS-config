@@ -4,11 +4,20 @@
 
 
 
+
   systemd.user.services.xembedsniproxy = {
-    Unit.Description = "XEmbed → SNI tray proxy";
-    Service.ExecStart = "${pkgs.kdePackages.xembedsniproxy}/bin/xembedsniproxy";
+    Unit = {
+      Description = "XEmbed → SNI tray proxy";
+      After = [ "graphical-session.target" ];
+      PartOf = [ "graphical-session.target" ];
+    };
+    Service = {
+      ExecStart = "${pkgs.kdePackages.xembed-sni-proxy}/bin/xembedsniproxy";
+      Restart = "on-failure";
+    };
     Install.WantedBy = [ "graphical-session.target" ];
   };
+
 
 
 
