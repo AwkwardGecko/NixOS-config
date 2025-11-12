@@ -3,9 +3,9 @@
   
   #   			 	 	 󰍛	 󰍜	 󰒓 󰘚							 
   systemd.user.services.waybar = {
-    Unit = {
-      ConditionEnvironment = lib.mkForce "";
-    };
+    # Unit = {
+    #   ConditionEnvironment = lib.mkForce "";
+    # };
     Service = {
       Restart = "always";
       RestartSec = 1;
