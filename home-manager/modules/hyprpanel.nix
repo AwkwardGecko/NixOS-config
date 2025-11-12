@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 
 let
-  xembedsniproxy =
-    (pkgs.kdePackages.xembed-sni-proxy or
-     pkgs.plasma5Packages.xembed-sni-proxy or
-     pkgs.xembed-sni-proxy);
+  plasmaWorkspace =
+    (pkgs.kdePackages.plasma-workspace or
+     pkgs.plasma5Packages.plasma-workspace or
+     pkgs.libsForQt5.plasma-workspace);
 in
 
 {
@@ -16,7 +16,7 @@ systemd.user.services.xembedsniproxy = {
       PartOf = [ "graphical-session.target" ];
     };
     Service = {
-      ExecStart = "${xembedsniproxy}/bin/xembedsniproxy";
+      ExecStart = "${plasmaWorkspace}/bin/xembedsniproxy";
       Restart = "on-failure";
     };
     Install.WantedBy = [ "graphical-session.target" ];
