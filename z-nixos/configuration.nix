@@ -67,7 +67,6 @@
     ./modules/teamviewer.nix
     #./modules/untrunc-anthwlock.nix
     ./modules/users.nix
-    ./modules/xembedsniproxy.nix
     ./modules/xdg-desktop-portal.nix
     #./modules/xmrig.nix
     #./modules/xserver.nix

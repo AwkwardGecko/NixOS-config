@@ -1,37 +1,5 @@
 { config, lib, pkgs, ... }:
-
-let
-  plasmaWorkspace =
-    (pkgs.kdePackages.plasma-workspace or
-     pkgs.plasma5Packages.plasma-workspace or
-     pkgs.libsForQt5.plasma-workspace);
-in
-
 {
-
-systemd.user.services.xembedsniproxy = {
-    Unit = {
-      Description = "XEmbed → SNI tray proxy";
-      After = [ "graphical-session.target" ];
-      PartOf = [ "graphical-session.target" ];
-    };
-    Service = {
-      ExecStart = "${plasmaWorkspace}/bin/xembedsniproxy";
-      Restart = "on-failure";
-    };
-    Install.WantedBy = [ "graphical-session.target" ];
-  };
-
-
-
-
-
-
-
-
-
-
-
   programs.hyprpanel = {
     enable = true;
     systemd.enable = true;
@@ -46,6 +14,12 @@ systemd.user.services.xembedsniproxy = {
       bar.tray = {
         enable = true;
         iconSize = 22;
+      };
+
+      modules.weather = {
+        enable = true;
+        location = "Port Macquarie, NSW, Australia";
+        units = "metric";
       };
 
       bar.launcher.autoDetectIcon = true;
