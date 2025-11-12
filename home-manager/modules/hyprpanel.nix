@@ -1,5 +1,21 @@
 { config, lib, pkgs, ... }:
 {
+
+
+
+
+  systemd.user.services.xembedsniproxy = {
+    Unit.Description = "XEmbed → SNI tray proxy";
+    Service.ExecStart = "${pkgs.kdePackages.xembedsniproxy}/bin/xembedsniproxy";
+    Install.WantedBy = [ "graphical-session.target" ];
+  };
+
+
+
+
+
+
+
   programs.hyprpanel = {
     enable = true;
     systemd.enable = true;
