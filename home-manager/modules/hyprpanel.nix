@@ -11,6 +11,11 @@
       };
 
 
+      bar.tray = {
+        enable = true;
+        iconSize = 22;
+      };
+
       bar.launcher.autoDetectIcon = true;
       #bar.dashboard.icon = "󱄅";
       bar.battery.label = true;
@@ -34,7 +39,7 @@
             "bluetooth"
             "notifications"
             "dashboard"
-            "steam"
+            "tray"
           ];
         };
       };
