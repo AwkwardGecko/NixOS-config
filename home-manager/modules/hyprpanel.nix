@@ -35,11 +35,11 @@
           ];
 
           right = [
+            "tray"
             #"network"
             "bluetooth"
             "notifications"
             "dashboard"
-            "tray"
           ];
         };
       };
