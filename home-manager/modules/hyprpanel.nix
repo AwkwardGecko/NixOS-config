@@ -1,22 +1,29 @@
 { config, lib, pkgs, ... }:
+
+let
+  xembedsniproxy =
+    (pkgs.kdePackages.xembed-sni-proxy or
+     pkgs.plasma5Packages.xembed-sni-proxy or
+     pkgs.xembed-sni-proxy);
+in
+
 {
 
-
-
-
-
-  systemd.user.services.xembedsniproxy = {
+systemd.user.services.xembedsniproxy = {
     Unit = {
       Description = "XEmbed → SNI tray proxy";
       After = [ "graphical-session.target" ];
       PartOf = [ "graphical-session.target" ];
     };
     Service = {
-      ExecStart = "${pkgs.kdePackages.xembed-sni-proxy}/bin/xembedsniproxy";
+      ExecStart = "${xembedsniproxy}/bin/xembedsniproxy";
       Restart = "on-failure";
     };
     Install.WantedBy = [ "graphical-session.target" ];
   };
+
+
+
 
 
 
