@@ -10,18 +10,20 @@
       bar.layouts = {
         "*" = {
           left = [
-            "dashboard"
-            "workspaces"
+            "volume"
             "media"
           ];
 
-          middle = [ "windowtitle" ];
+          middle = [ 
+            #"windowtitle"
+            "workspaces"
+          ];
 
           right = [
-            "volume"
-            "network"
+            #"network"
             "bluetooth"
             "notifications"
+            "dashboard"
           ];
         };
       };
