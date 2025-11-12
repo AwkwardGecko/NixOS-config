@@ -6,7 +6,7 @@
     settings = {
       bar.battery.label = true;
       bar.bluetooth.label = false;
-      bar.clock.format = "%H:%M:%S";
+      bar.clock.format = "%H:%M";
       bar.layouts = {
         "*" = {
           left = [
