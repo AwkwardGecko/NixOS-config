@@ -7,9 +7,8 @@
      
       theme.font = {
         name = "JetBrainsMono Nerd Font";
-        size = 16;
+        size = "16px";
       };
-
 
       bar.tray = {
         enable = true;
