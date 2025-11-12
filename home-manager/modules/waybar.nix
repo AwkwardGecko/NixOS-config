@@ -2,6 +2,16 @@
 {
   
   #   			 	 	 󰍛	 󰍜	 󰒓 󰘚							 
+  systemd.user.services.waybar = {
+    Unit = {
+      ConditionEnvironment = lib.mkForce "";
+    };
+    Service = {
+      Restart = "always";
+      RestartSec = 1;
+    };
+  };
+
   programs.waybar = {
     enable = true;
     systemd.enable = true;
