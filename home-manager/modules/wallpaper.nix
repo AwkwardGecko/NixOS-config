@@ -9,11 +9,12 @@
       OUTPUT="ALL"
 
       while true; do
-      for vid in "$VID_DIR"/*.mp4; do
-        [ -f "$vid" ] || continue
-        pkill -x mpvpaper 2>/dev/null
-        mpvpaper "$OUTPUT" "$vid" -o "no-audio --loop=yes --hwdec=auto" &
-        sleep "$DELAY"
+        for vid in "$VID_DIR"/*.mp4; do
+          [ -f "$vid" ] || continue
+          pkill -x mpvpaper 2>/dev/null
+          mpvpaper "$OUTPUT" "$vid" -o "no-audio --loop=yes --hwdec=auto" &
+          sleep "$DELAY"
+        done
       done
     '';
     executable = true;
