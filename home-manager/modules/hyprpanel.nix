@@ -4,6 +4,8 @@
     enable = true;
     systemd.enable = true;
     settings = {
+      
+      menus.dashboard.icon = "󱄅";
       bar.battery.label = true;
       bar.bluetooth.label = false;
       bar.clock.format = "%H:%M";
