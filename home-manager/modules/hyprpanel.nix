@@ -4,7 +4,13 @@
     enable = true;
     systemd.enable = true;
     settings = {
-      
+     
+      theme.font = {
+        name = "JetBrainsMono Nerd Font";
+        size = 16;
+      };
+
+
       bar.launcher.autoDetectIcon = true;
       #bar.dashboard.icon = "󱄅";
       bar.battery.label = true;
