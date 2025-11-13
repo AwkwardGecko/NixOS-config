@@ -21,12 +21,14 @@
       "$kitty_with_fastfetch" = "kitty fastfetch";
       # "$unhide_waybar" = "bash -c 'pkill -SIGUSR1 waybar; sleep 30; pkill -SIGUSR1 waybar'";
       "$unhide_waybar" = "bash -c 'pkill -SIGUSR1 waybar'";
+      "$steam_friends" = "sleep 60 && steam steam://open/friends";
 
       exec-once = [
         "sleep 3 && signal-desktop"
         "sleep 1 && steam -silent"
         #"hyprpaper &"
         "hyprpanel"
+        "$steam_friends"
         #"bash $HOME/.local/bin/video-wallpapers.sh"
       ];
 
@@ -190,15 +192,17 @@
       ];
 
       windowrulev2 = [
-        "immediate, class:^(steam_app_.*)$"
-        "noanim, class:^(steam_app_.*)$"
-        "rounding 0, class:^(steam_app_.*|Star Rail|Cyberpunk2077|Fallout)$"
-        "float, class:^(pavucontrol|nm-connection-editor)$"
-        "opacity 1.0 override 1.0, class:^(Steam)$"
-        "suppressevent maximize, class:.*"
-        "nofocus, class:^$, title:^$, wayland:1, floating:1, fullscreen:0, pinned:0"
+        "workspace 9, class:^(steam)$, title:^(Friends)$" # open steamfriends on workspace 9
+        "immediate, class:^(steam_app_.*|StarRail.exe)$" # No animation delay
+        "noanim, class:^(steam_app_.*|StarRail.exe)$" # No animation
+        "rounding 0, class:^(steam_app_.*|StarRail.exe)$" # Don't round corners
+        "suppressevent maximize, class:.*" # Prevents maximize 
+        
+        "float, class:^(pavucontrol|nm-connection-editor)$" # Floating windows
+        "opacity 1.0 override 1.0, class:^(Steam)$" # Turn opacity off
+        "nofocus, class:^$, title:^$, wayland:1, floating:1, fullscreen:0, pinned:0" # prevents hidden windows from being fuckwits
           
-          "float, class:^(sysupdate)$"
+          "float, class:^(sysupdate)$" # update window top right
           "size 900 300, class:^(sysupdate)$"
           "move 1640 40, class:^(sysupdate)$"
           "noanim, class:^(sysupdate)$"
