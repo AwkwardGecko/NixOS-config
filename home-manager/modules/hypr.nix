@@ -162,8 +162,8 @@
         "$mainMod, S, togglespecialworkspace, magic"
         "$mainMod SHIFT, S, movetoworkspace, special:magic"
 
-        "$mainMod, mouse_down, workspaceopt, next"
-        "$mainMod, mouse_up, workspaceopt, prev"
+        "$mainMod, mouse_down, workspace, e+1"
+        "$mainMod, mouse_up, workspace, e-1"
 
         "$mainMod SHIFT, mouse_down, movetoworkspace, -1"
         "$mainMod SHIFT, mouse_up, movetoworkspace, +1"
