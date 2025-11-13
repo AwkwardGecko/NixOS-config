@@ -14,7 +14,7 @@
     ./modules/hypr.nix
     ./modules/hyprpanel.nix
     ./modules/hyprpaper.nix
-    ./modules/hypridle.nix
+    #./modules/hypridle.nix
     ./modules/kitty.nix
     #./modules/lutris.nix
     #./modules/terminal.nix
