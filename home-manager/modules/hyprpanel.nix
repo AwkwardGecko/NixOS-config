@@ -31,11 +31,11 @@
           left = [
             "volume"
             "media"
+            "workspaces"
           ];
 
           middle = [ 
             #"windowtitle"
-            #"workspaces"
             "clock"
           ];
 

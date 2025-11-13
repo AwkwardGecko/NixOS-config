@@ -193,18 +193,21 @@
 
       windowrulev2 = [
         "workspace 9, class:^(steam)$, title:^(Friends)$" # open steamfriends on workspace 9
-        "immediate, class:^(steam_app_.*|StarRail.exe)$" # No animation delay
-        "noanim, class:^(steam_app_.*|StarRail.exe)$" # No animation
-        "rounding 0, class:^(steam_app_.*|StarRail.exe)$" # Don't round corners
+        "immediate, class:^(steam_app_.*|starrail.exe)$" # No animation delay
+        "noanim, class:^(steam_app_.*|starrail.exe)$" # No animation
+        "rounding 0, class:^(steam_app_.*|starrail.exe)$" # Don't round corners
         "suppressevent maximize, class:.*" # Prevents maximize 
-        
+        "idleinhibit always, class:^(steam_app_.*|starrail.exe)$" # prevent games from sleep
+
+
+
         "float, class:^(pavucontrol|nm-connection-editor)$" # Floating windows
         "opacity 1.0 override 1.0, class:^(Steam)$" # Turn opacity off
         "nofocus, class:^$, title:^$, wayland:1, floating:1, fullscreen:0, pinned:0" # prevents hidden windows from being fuckwits
           
           "float, class:^(sysupdate)$" # update window top right
-          "size 900 300, class:^(sysupdate)$"
-          "move 1640 40, class:^(sysupdate)$"
+          "size 900 400, class:^(sysupdate)$" # window size
+          "move 1640 40, class:^(sysupdate)$" # window position
           "noanim, class:^(sysupdate)$"
           "noblur, class:^(sysupdate)$"
       ];
