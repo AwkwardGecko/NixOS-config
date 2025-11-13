@@ -8,7 +8,7 @@
       theme.font = {
         name = "JetBrainsMono Nerd Font";
         #style = "Regular";
-        size = "16px";
+        size = "1.2rem";
       };
 
       bar.tray = {
