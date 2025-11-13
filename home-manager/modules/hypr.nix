@@ -162,8 +162,8 @@
         "$mainMod, S, togglespecialworkspace, magic"
         "$mainMod SHIFT, S, movetoworkspace, special:magic"
 
-        "$mainMod, mouse_down, workspace, -1"
-        "$mainMod, mouse_up, workspace, +1"
+        "$mainMod, mouse_down, workspaceopt next"
+        "$mainMod, mouse_up, workspaceopt prev"
 
         "$mainMod SHIFT, mouse_down, movetoworkspace, -1"
         "$mainMod SHIFT, mouse_up, movetoworkspace, +1"
@@ -193,6 +193,7 @@
 
       windowrulev2 = [
         "workspace 9, class:^(steam)$, title:^(Friends)$" # open steamfriends on workspace 9
+        "workspace 5, class:^(steam_app_.*|starrail.exe)$" # send games to workspace 5 
         "immediate, class:^(steam_app_.*|starrail.exe)$" # No animation delay
         "noanim, class:^(steam_app_.*|starrail.exe)$" # No animation
         "rounding 0, class:^(steam_app_.*|starrail.exe)$" # Don't round corners
