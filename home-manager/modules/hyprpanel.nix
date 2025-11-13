@@ -4,7 +4,14 @@
     enable = true;
     systemd.enable = true;
     settings = {
-     
+      
+      notifications = {
+        enable = true;
+        autoDismiss = true;
+        dismissTimeout = 5000;
+      };
+
+
       theme.font = {
         name = "JetBrainsMono Nerd Font";
         #style = "Regular";
