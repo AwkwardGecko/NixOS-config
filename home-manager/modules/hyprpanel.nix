@@ -6,7 +6,7 @@
     settings = {
       
       notifications = {
-        enable = true;
+        enabled = true;
         autoDismiss = true;
         dismissTimeout = 5000;
       };
