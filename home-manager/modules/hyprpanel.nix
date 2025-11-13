@@ -6,7 +6,8 @@
     settings = {
      
       theme.font = {
-        name = "JetBrains Mono Regular";
+        name = "JetBrainsMono Nerd Font";
+        style = "Regular";
         size = "16px";
       };
 
