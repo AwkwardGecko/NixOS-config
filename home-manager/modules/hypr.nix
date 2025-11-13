@@ -208,7 +208,7 @@
           
           "float, class:^(sysupdate)$" # update window top right
           "size 900 400, class:^(sysupdate)$" # window size
-          "move 1640 40, class:^(sysupdate)$" # window position
+          "move 1650 80, class:^(sysupdate)$" # window position
           "noanim, class:^(sysupdate)$"
           "noblur, class:^(sysupdate)$"
       ];
