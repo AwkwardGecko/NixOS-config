@@ -38,6 +38,7 @@
     ./sys-modules/git.nix
     ./sys-modules/git-push-dotfiles.nix
     ./sys-modules/haveno.nix
+    ./sys-modules/hostname.nix
     ./sys-modules/hdd-soft-shutdown.nix
     ./sys-modules/huge-pages.nix
     ./sys-modules/hypr.nix
