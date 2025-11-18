@@ -90,7 +90,7 @@
 
   home.file."bin/beets-maintain" = {
     text = ''
-      #!${pkgs.bash}/bin/bash
+      #!/usr/bin/env bash
       set -euo pipefail
 
       MUSIC_LIB="/server/data/media/music"
