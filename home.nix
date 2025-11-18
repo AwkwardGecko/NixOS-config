@@ -4,6 +4,7 @@
   imports = [
     #./modules/applications.nix
     #./modules/cursor.nix
+    ./home-modules/beets.nix
     ./home-modules/comfyui.nix
     ./home-modules/diffusion.nix
     ./home-modules/fish.nix
