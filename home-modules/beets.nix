@@ -13,6 +13,12 @@
         log = "${config.xdg.stateHome}/beets/import.log";
         resume = "ask";
       };
+      match = {
+        preferred = {
+          original_year = true;
+          media = [ "CD" "Digital Media|File" ];
+        };
+      };
       plugins = [
         "chroma"    # AcoustID / fingerprinting
         "fetchart"  # download cover art
