@@ -42,6 +42,7 @@
       };
       lyrics = {
         auto = true;
+        sources = "musixmatch genius";
         fallback = "";
       };
       mbsync = {
