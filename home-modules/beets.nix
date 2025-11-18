@@ -26,7 +26,8 @@
         "lastgenre" # genre from Last.fm
         "lyrics"    # fetch lyrics
         "mbsync"    # sync MBIDs back and forth
-        "duplicates"#
+        "duplicates"
+        "replaygain"
       ];
       chroma.auto = true;
       fetchart = {
