@@ -96,8 +96,8 @@
       ];
     };
 
-    "/data" = {
-      device = "z-home@192.168.1.157:/data";
+    "/server" = {
+      device = "z-home@192.168.1.157:/";
       fsType = "sshfs";
       options = [ 
         "nodev"
