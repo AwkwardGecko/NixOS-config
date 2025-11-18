@@ -96,12 +96,11 @@
       MUSIC_LIB="/server/data/media/music"
       INBOX="/server/data/media/music-sorted"
       DUPS="/server/data/media/music-duplicates"
-      LOG_DIR="${XDG_STATE_HOME:-$HOME/.local/state}/beets"
 
-      mkdir -p "$MUSIC_LIB" "$INBOX" "$DUPS" "$LOG_DIR"
+      mkdir -p "$MUSIC_LIB" "$INBOX" "$DUPS"
 
       echo "[beets-maintain] 1/9 Importing from inbox: $INBOX"
-      # NOTE: we do *not* use -A. -A disables autotagging.
+      # -q = quiet, -i = incremental (skip already-imported dirs)
       beet import -q -i "$INBOX"
 
       echo "[beets-maintain] 2/9 Normalizing paths into library: $MUSIC_LIB"
@@ -114,31 +113,27 @@
       beet fingerprint
 
       echo "[beets-maintain] 5/9 Detecting and moving duplicates → $DUPS"
-      # This uses the duplicates plugin defaults (MBIDs, then artist/title/length).
       beet duplicates -m "$DUPS" || true
 
       echo "[beets-maintain] 6/9 Writing tags and scrubbing weirdness"
-      # -a = albums; -f = force rewrite even if beets thinks tags are current
       beet write -af
 
       echo "[beets-maintain] 7/9 Artwork, genres, lyrics"
       beet fetchart
       beet embedart
       beet lastgenre
-      # Lyrics providers can be flaky; don't fail the whole run on errors
       beet lyrics || true
 
       echo "[beets-maintain] 8/9 Calculating ReplayGain"
       beet replaygain
 
       echo "[beets-maintain] 9/9 Final DB resync (no moves)"
-      # -M: don’t move/rename files during update, just sync metadata & detect
-      # missing files in the DB.
       beet update -aM
 
       echo "[beets-maintain] Done. Library should now be in a consistent state."
     '';
     executable = true;
   };
+
 
 }
