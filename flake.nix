@@ -29,7 +29,7 @@
         inherit system;
         specialArgs = { inherit inputs; };
         modules = [
-          ./z-nixos/configuration.nix
+          ./configuration.nix
           home-manager.nixosModules.home-manager
           nixvim.nixosModules.nixvim
           #comfyui.nixosModules.default
@@ -45,7 +45,7 @@
 
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.zozano = import ./home-manager/home.nix;
+            home-manager.users.zozano = import ./home.nix;
           }
         ];
       };

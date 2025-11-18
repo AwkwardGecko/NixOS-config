@@ -4,31 +4,31 @@
   imports = [
     #./modules/applications.nix
     #./modules/cursor.nix
-    ./modules/comfyui.nix
-    ./modules/diffusion.nix
-    ./modules/fish.nix
+    ./home-modules/comfyui.nix
+    ./home-modules/diffusion.nix
+    ./home-modules/fish.nix
     #./modules/fonts.nix
-    ./modules/gpg.nix
-    ./modules/git.nix
+    ./home-modules/gpg.nix
+    ./home-modules/git.nix
     #./modules/gtk.nix
-    ./modules/hypr.nix
-    ./modules/hyprpanel.nix
-    ./modules/hyprpaper.nix
+    ./home-modules/hypr.nix
+    ./home-modules/hyprpanel.nix
+    ./home-modules/hyprpaper.nix
     #./modules/hypridle.nix
-    ./modules/kitty.nix
+    ./home-modules/kitty.nix
     #./modules/lutris.nix
     #./modules/terminal.nix
     #./modules/mako.nix
     #./modules/mangohud.nix
     #./modules/neovim/neovim.nix
     #./modules/OpenRGB.nix
-    ./modules/ranger.nix
+    ./home-modules/ranger.nix
     #./modules/star-rail.nix
-    ./modules/style.nix
+    ./home-modules/style.nix
     #./modules/swaync.nix
-    ./modules/rofi.nix
-    ./modules/tmux.nix
-    ./modules/wallpaper.nix
+    ./home-modules/rofi.nix
+    ./home-modules/tmux.nix
+    ./home-modules/wallpaper.nix
     #./modules/waybar.nix
     #./modules/waybar/mechabar.nix
     #$./modules/xdg.nix
