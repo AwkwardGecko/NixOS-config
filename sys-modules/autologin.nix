@@ -9,8 +9,11 @@
   ...
 }:
 {
-  services.displayManager.autoLogin = {
-    enable = true;
-    user = "zozano";
+  services.displayManager = {
+    sddm.enable = true;
+    autoLogin = {
+      enable = true;
+      user = "zozano";
+    };
   };
 }
