@@ -96,7 +96,7 @@
       ];
     };
 
-    "/data" = {
+    "/server" = {
       device = "z-home@192.168.1.157:/";
       fsType = "sshfs";
       options = [ 
@@ -106,6 +106,18 @@
         "IdentityFile=/root/.ssh/home-server_z-nix"
         "x-systemd.automount"
         "x-systemd.requires=network-online.target"
+      ];
+    };
+    "/data" = {
+      service = "z-home@192.168.1.157:/data";
+      fsType = "sshfs";
+      options = [
+        "nodev"
+        "nofail"
+        "allow_other"
+        "IdentityFile=/root/.ssh/home-server_z-nix"
+        "x-systemd.automount"
+        "xsystemd.requires=network-online.target"
       ];
     };
   };
