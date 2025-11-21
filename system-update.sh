@@ -29,5 +29,9 @@
    echo "Done!"
    git status
    flatpak update -y
+   if command -v podman >/dev/null; then
+     podman auto-update --dry-run || true
+     podman auto-update || true
+  fi
    sleep 2  # short pause before closing
 ) && exit
