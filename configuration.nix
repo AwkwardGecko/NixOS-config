@@ -66,7 +66,7 @@
     ./sys-modules/syncthing.nix
     #./sys-modules/#systemd-timers.nix
     ./sys-modules/tailscale.nix
-    ./sys-modules/#tdarr.nix
+    ./sys-modules/tdarr.nix
     ./sys-modules/teamviewer.nix
     #./sys-modules/#untrunc-anthwlock.nix
     ./sys-modules/users.nix
