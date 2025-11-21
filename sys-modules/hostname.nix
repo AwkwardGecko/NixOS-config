@@ -2,21 +2,48 @@
 
 let
   setHost = pkgs.writeShellScript "derive-hostname" ''
-    set -euo pipefail
-    serial=""
-    if [ -r /sys/class/dmi/id/product_serial ]; then
-      serial=$(tr -d ' \n' </sys/class/dmi/id/product_serial || true)
-    fi
-    if [ -z "$serial" ] && [ -r /etc/machine-id ]; then
-      serial=$(cut -c1-8 /etc/machine-id || true)
-    fi
-    short=$(printf %s "$serial" | tail -c 6)
-    name="dectech-$short"
+#!/usr/bin/env bash
+set -euo pipefail
 
-    current=$(cat /proc/sys/kernel/hostname 2>/dev/null || true)
-    if [ "$current" != "$name" ]; then
-      /run/current-system/sw/bin/hostname "$name"
-    fi
+serial=""
+
+if [ -r /sys/class/dmi/id/product_serial ]; then
+  raw=$(tr -d ' \n' </sys/class/dmi/id/product_serial || true)
+
+  # Normalise and filter out junk values
+  case "$raw" in
+    "" \
+    | "ToBeFilledByOem" \
+    | "ToBeFilledByOEM" \
+    | "SystemSerialNumber" \
+    | "Defaultstring")
+      raw=""
+      ;;
+  esac
+
+  # Require at least one digit; many placeholders are all letters
+  if printf '%s' "$raw" | grep -q '[0-9]'; then
+    serial="$raw"
+  fi
+fi
+
+# Fallback to machine-id if serial is empty or junk
+if [ -z "$serial" ] && [ -r /etc/machine-id ]; then
+  serial=$(cut -c1-8 /etc/machine-id || true)
+fi
+
+short=""
+if [ -n "$serial" ]; then
+  short=$(printf '%s' "$serial" | tail -c 6 | tr '[:upper:]' '[:lower:]')
+fi
+
+name="dectech-$short"
+
+current=$(cat /proc/sys/kernel/hostname 2>/dev/null || true)
+if [ "$current" != "$name" ]; then
+  /run/current-system/sw/bin/hostname "$name"
+fi
+
   '';
 in {
   # do not write /etc/hostname
