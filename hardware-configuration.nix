@@ -117,7 +117,7 @@
         "allow_other"
         "IdentityFile=/root/.ssh/home-server_z-nix"
         "x-systemd.automount"
-        "xsystemd.requires=network-online.target"
+        "x-systemd.requires=network-online.target"
       ];
     };
   };
