@@ -26,7 +26,7 @@
     ./sys-modules/controller.nix
     ./sys-modules/coolercontrol.nix
     #./sys-modules/#cron.nix
-    ./sys-modules/docker.nix
+    #./sys-modules/docker.nix
     ./sys-modules/dolphin.nix
     ./sys-modules/eigenwallet.nix
     ./sys-modules/filesystem.nix
