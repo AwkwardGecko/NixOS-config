@@ -7,6 +7,7 @@
     ./home-modules/beets.nix
     ./home-modules/comfyui.nix
     ./home-modules/diffusion.nix
+    ./home-mostules/fastfetch.nix
     ./home-modules/fish.nix
     #./modules/fonts.nix
     ./home-modules/gpg.nix

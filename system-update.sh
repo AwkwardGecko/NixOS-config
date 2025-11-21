@@ -28,5 +28,6 @@
 
    echo "Done!"
    git status
+   flatpak update -y
    sleep 2  # short pause before closing
 ) && exit
