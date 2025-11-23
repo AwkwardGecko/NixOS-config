@@ -192,13 +192,13 @@
       ];
 
       windowrulev2 = [
-        "workspace 9, class:^(steam)$, title:^(Friends)$" # open steamfriends on workspace 9
-        "workspace 5, class:^(steam_app_.*|starrail.exe)$" # send games to workspace 5 
-        "immediate, class:^(steam_app_.*|starrail.exe)$" # No animation delay
-        "noanim, class:^(steam_app_.*|starrail.exe)$" # No animation
-        "rounding 0, class:^(steam_app_.*|starrail.exe)$" # Don't round corners
-        "suppressevent maximize, class:.*" # Prevents maximize 
-        "idleinhibit always, class:^(steam_app_.*|starrail.exe)$" # prevent games from sleep
+        #"workspace 9, class:^(steam)$, title:^(Friends)$" # open steamfriends on workspace 9
+        #"workspace 5, class:^(steam_app_.*|starrail.exe)$" # send games to workspace 5 
+        #"immediate, class:^(steam_app_.*|starrail.exe)$" # No animation delay
+        #"noanim, class:^(steam_app_.*|starrail.exe)$" # No animation
+        #"rounding 0, class:^(steam_app_.*|starrail.exe)$" # Don't round corners
+        #"suppressevent maximize, class:.*" # Prevents maximize 
+        #"idleinhibit always, class:^(steam_app_.*|starrail.exe)$" # prevent games from sleep
 
 
 
