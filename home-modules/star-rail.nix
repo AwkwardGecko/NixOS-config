@@ -11,8 +11,6 @@
 
     # 1. Proton / Wine environment like Honkers
     export WINEPREFIX="$PREFIX"
-    export STEAM_COMPAT_DATA_PATH="$PREFIX"
-    export SteamAppId="0"
     export WINEARCH="win64"
     export WINEFSYNC="1"
 
@@ -22,8 +20,11 @@
     export WINE_FULLSCREEN_FSR_STRENGTH="2"
 
     # 3. Libraries for this Proton build (pattern from upstream logs)
-    export GST_PLUGIN_PATH="$RUNNERDIR/files/lib64/gstreamer-1.0:$RUNNERDIR/files/lib/gstreamer-1.0"
-    export LD_LIBRARY_PATH="$RUNNERDIR/files/lib:$RUNNERDIR/files/lib64:$RUNNERDIR/files/lib64/wine/x86_64-unix:$RUNNERDIR    /files/lib/wine/i386-unix"
+    #export GST_PLUGIN_PATH="$RUNNERDIR/files/lib64/gstreamer-1.0:$RUNNERDIR/files/lib/gstreamer-1.0"
+    #export LD_LIBRARY_PATH="$RUNNERDIR/files/lib:$RUNNERDIR/files/lib64:$RUNNERDIR/files/lib64/wine/x86_64-unix:$RUNNERDIR    /files/lib/wine/i386-unix"
+
+    # 3.1 Use the runner's own libs
+    export LD_LIBRARY_PATH="$RUNNERDIR/lib64:$RUNNERDIR/lib:$RUNNERDIR/lib32:${LD_LIBRARY_PATH-}"
 
     # 4. Go to the game directory (your /proc/27098 cwd)
     cd "$BASE/HSR"
