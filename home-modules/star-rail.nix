@@ -32,7 +32,7 @@
     #    Using the Proton runner Honkers downloaded
     exec "$RUNNERDIR/bin/wine \
       'Z:\\home\\$USER\\.var\\app\\moe.launcher.the-honkers-railway-launcher\\data\\honkers-railway-launcher\\HSR\\StarRail.exe' \
-      -window-mode exclusive"
+      -window-mode borderless"
     '';
     executable = true;
   };
