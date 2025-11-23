@@ -9,7 +9,7 @@
   boot = {
     initrd = {
       luks.devices."crypt-home" = {
-        device = "/dev/disk/by-uuid/139a8d8a-d234-450e-9c90-4f633e8c3b8c;
+        device = "/dev/disk/by-uuid/139a8d8a-d234-450e-9c90-4f633e8c3b8c";
         allowDiscards = true;
       };
       availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
