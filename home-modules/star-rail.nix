@@ -24,7 +24,7 @@
     #export LD_LIBRARY_PATH="$RUNNERDIR/files/lib:$RUNNERDIR/files/lib64:$RUNNERDIR/files/lib64/wine/x86_64-unix:$RUNNERDIR    /files/lib/wine/i386-unix"
 
     # 3.1 Use the runner's own libs
-    export LD_LIBRARY_PATH="$RUNNERDIR/lib64:$RUNNERDIR/lib:$RUNNERDIR/lib32:${LD_LIBRARY_PATH-}"
+    export LD_LIBRARY_PATH="$RUNNERDIR/lib64:$RUNNERDIR/lib:$RUNNERDIR/lib32:LD_LIBRARY_PATH"
 
     # 4. Go to the game directory (your /proc/27098 cwd)
     cd "$BASE/HSR"
