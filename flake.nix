@@ -14,9 +14,12 @@
     #comfyui.url = "github:utensils/nix-comfyui";
     #comfyui.inputs.nixpkgs.follows = "nixpkgs";
 
+    aagl.url = "github:ezKEa/aagl-gtk-on-nix";
+    aagl.inputs.nixpkgs.follows = "nixpkgs"; # Name of nixpkgs input you want to use
+
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, alejandra, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, aagl, alejandra, ... }:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
@@ -34,6 +37,10 @@
           nixvim.nixosModules.nixvim
           #comfyui.nixosModules.default
           {
+            imports = [ aagl.nixosModules.default ];
+            nix.settings = aagl.nixConfig;
+            programs.honkers-railway-launcher.enable = true;
+
             environment = {
               sessionVariables = {
                 XDG_CURRENT_DESKTOP = "Hyprland";
