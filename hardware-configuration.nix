@@ -8,6 +8,10 @@
 
   boot = {
     initrd = {
+      luks.devices."crypt-home" = {
+        device = "/dev/disk/by-uuid/139a8d8a-d234-450e-9c90-4f633e8c3b8c;
+        allowDiscards = true;
+      };
       availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
       kernelModules = [ ];
     };
@@ -28,18 +32,19 @@
     };
 
     "/home" = {
-      device = "/dev/disk/by-uuid/e2d9c427-977c-4271-ae93-88e11cedb227";
-      fsType = "ext4";
+      device = "/dev/mapper/crypt-home";
+      fsType = "btrfs";
+      options = [ "subvol=@home" "compress=zstd" "noatime" ];
     };
 
-    "/steam" = {
-      device = "/dev/disk/by-uuid/249c8bec-3ec2-4b89-8618-748cd918d4ba";
-      fsType = "btrfs";
-      options = [
-        "space_cache=v2"
-        "discard=async"
-      ];
-    };
+    # "/steam" = {
+    #   device = "/dev/disk/by-uuid/249c8bec-3ec2-4b89-8618-748cd918d4ba";
+    #   fsType = "btrfs";
+    #   options = [
+    #     "space_cache=v2"
+    #     "discard=async"
+    #   ];
+    # };
 
     # "/home/zozano/.var" = {
     #   device = "/dev/disk/by-uuid/249c8bec-3ec2-4b89-8618-748cd918d4ba";
@@ -74,27 +79,27 @@
     #   ];
     # };
 
-    "/home/zozano/.local/share/Steam" = {
-      device = "/dev/disk/by-uuid/249c8bec-3ec2-4b89-8618-748cd918d4ba";
-      fsType = "btrfs";
-      options = [
-        "subvol=@steam"
-        "space_cache=v2"
-        "discard=async"
-        "nofail"
-      ];
-    };
+    # "/home/zozano/.local/share/Steam" = {
+    #   device = "/dev/disk/by-uuid/249c8bec-3ec2-4b89-8618-748cd918d4ba";
+    #   fsType = "btrfs";
+    #   options = [
+    #     "subvol=@steam"
+    #     "space_cache=v2"
+    #     "discard=async"
+    #     "nofail"
+    #   ];
+    # };
 
-    "/home/zozano/.bitmonero" = {
-      device = "/dev/disk/by-uuid/249c8bec-3ec2-4b89-8618-748cd918d4ba";
-      fsType = "btrfs";
-      options = [
-        "subvol=@monero"
-        "space_cache=v2"
-        "discard=async"
-        "nofail"
-      ];
-    };
+    # "/home/zozano/.bitmonero" = {
+    #   device = "/dev/disk/by-uuid/249c8bec-3ec2-4b89-8618-748cd918d4ba";
+    #   fsType = "btrfs";
+    #   options = [
+    #     "subvol=@monero"
+    #     "space_cache=v2"
+    #     "discard=async"
+    #     "nofail"
+    #   ];
+    # };
 
     "/server" = {
       device = "z-home@192.168.1.157:/";
