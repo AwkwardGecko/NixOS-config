@@ -7,7 +7,7 @@
     ./home-modules/beets.nix
     ./home-modules/comfyui.nix
     ./home-modules/diffusion.nix
-    ./home-modules/fastfetch.nix
+    #./home-modules/fastfetch.nix
     ./home-modules/fish.nix
     #./modules/fonts.nix
     ./home-modules/gpg.nix
@@ -25,7 +25,6 @@
     #./modules/neovim/neovim.nix
     #./modules/OpenRGB.nix
     ./home-modules/ranger.nix
-    #./modules/star-rail.nix
     ./home-modules/star-rail.nix
     ./home-modules/style.nix
     #./modules/swaync.nix
