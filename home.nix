@@ -26,7 +26,7 @@
     #./modules/OpenRGB.nix
     ./home-modules/ranger.nix
     #./modules/star-rail.nix
-    ./home-modules/star-rail.nix
+    #./home-modules/star-rail.nix
     ./home-modules/style.nix
     #./modules/swaync.nix
     ./home-modules/rofi.nix
