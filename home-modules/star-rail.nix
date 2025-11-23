@@ -30,7 +30,7 @@
 
     # 5. Run the same exe + arguments you saw in CMDLINE
     #    Using the Proton runner Honkers downloaded
-    exec "$RUNNERDIR/bin/wine \
+    exec "$RUNNERDIR/bin/wine64 \
       'Z:\\home\\$USER\\.var\\app\\moe.launcher.the-honkers-railway-launcher\\data\\honkers-railway-launcher\\HSR\\StarRail.exe' \
       -window-mode borderless"
     '';
