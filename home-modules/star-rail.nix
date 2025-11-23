@@ -2,33 +2,53 @@
 {
   home.file."bin/star-rail" = {
     text = ''
-      #!/usr/bin/env bash
-      set -euo pipefail
+#!/usr/bin/env bash
+set -euo pipefail
 
-      BASE="$HOME/.var/app/moe.launcher.the-honkers-railway-launcher/data/honkers-railway-launcher"
-      PREFIX="$BASE/prefix"
-      RUNNERDIR="$BASE/runners/spritz-wine-tkg-staging-wow64-10.15-6"
+# 1. Start Honkers (Flatpak) in the background
+flatpak run moe.launcher.the-honkers-railway-launcher &
+launcher_pid=$!
 
-      # Wine environment like Honkers
-      export WINEPREFIX="$PREFIX"
-      export WINEARCH="win64"
-      export WINEFSYNC="1"
+echo "Waiting for Star Rail to start..."
 
-      # FSR tweaks from the running process
-      export WINE_FULLSCREEN_FSR="1"
-      export WINE_FULLSCREEN_FSR_MODE="balanced"
-      export WINE_FULLSCREEN_FSR_STRENGTH="2"
+# 2. Wait for at least one StarRail.exe process to appear
+while ! pgrep -f 'StarRail.exe' >/dev/null; do
+  # If the launcher died before the game started, bail out
+  if ! kill -0 "$launcher_pid" 2>/dev/null; then
+    echo "Launcher exited before Star Rail started."
+    exit 1
+  fi
+  sleep 1
+done
 
-      # Use the runner's libs
-      export LD_LIBRARY_PATH="$RUNNERDIR/lib64:$RUNNERDIR/lib:$RUNNERDIR/lib32"
+echo "Star Rail detected."
 
-      # Game directory (your /proc/.../cwd)
-      cd "$BASE/HSR"
+# Optional: small delay to let the window actually show
+sleep 5
 
-      # Run Star Rail with Wine from this runner, non-exclusive mode
-      exec "$RUNNERDIR/bin/wine64" \
-        "$BASE/HSR/StarRail.exe" \
-        -screen-fullscreen 0 -popupwindow -window-mode borderless
+# 3. (Optional) On Hyprland, focus the game window if possible
+if command -v hyprctl >/dev/null 2>&1 && command -v jq >/dev/null 2>&1; then
+  addr=$(hyprctl clients -j | jq -r '.[] | select(.title|test("Star Rail";"i")) | .address' || true)
+  if [ -n "${addr:-}" ] && [ "$addr" != "null" ]; then
+    hyprctl dispatch focuswindow address:"$addr" || true
+  fi
+fi
+
+echo "Star Rail running; waiting for all StarRail.exe processes to exit..."
+
+# 4. Stay alive as long as ANY StarRail.exe process exists
+while pgrep -f 'StarRail.exe' >/dev/null; do
+  sleep 2
+done
+
+echo "Star Rail exited."
+
+# 5. When game ends, clean up the launcher if it's still around
+if kill -0 "$launcher_pid" 2>/dev/null; then
+  flatpak kill moe.launcher.the-honkers-railway-launcher 2>/dev/null || \
+    kill "$launcher_pid" 2>/dev/null || true
+fi
+
     '';
     executable = true;
   };
