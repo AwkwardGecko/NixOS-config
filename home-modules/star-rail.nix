@@ -32,8 +32,7 @@
     #    Using the Proton runner Honkers downloaded
     exec bash -c "gamemoderun python3 '$RUNNERDIR/proton' waitforexitandrun \
       'Z:\\home\\$USER\\.var\\app\\moe.launcher.the-honkers-railway-launcher\\data\\honkers-railway-launcher\\HSR\\StarRail.exe' \
-      -screen-fullscreen 0 -popupwindow -window-mode exclusive"
-    EOF
+      -window-mode exclusive"
     '';
     executable = true;
   };
