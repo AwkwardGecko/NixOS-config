@@ -2,38 +2,35 @@
 {
   home.file."bin/star-rail" = {
     text = ''
-    #!/usr/bin/env bash
-    set -euo pipefail
+      #!/usr/bin/env bash
+      set -euo pipefail
 
-    BASE="$HOME/.var/app/moe.launcher.the-honkers-railway-launcher/data/honkers-railway-launcher"
-    PREFIX="$BASE/prefix"
-    RUNNERDIR="$BASE/runners/spritz-wine-tkg-staging-wow64-10.15-6"  
+      BASE="$HOME/.var/app/moe.launcher.the-honkers-railway-launcher/data/honkers-railway-launcher"
+      PREFIX="$BASE/prefix"
+      RUNNERDIR="$BASE/runners/spritz-wine-tkg-staging-wow64-10.15-6"
 
-    # 1. Proton / Wine environment like Honkers
-    export WINEPREFIX="$PREFIX"
-    export WINEARCH="win64"
-    export WINEFSYNC="1"
+      # Wine environment like Honkers
+      export WINEPREFIX="$PREFIX"
+      export WINEARCH="win64"
+      export WINEFSYNC="1"
 
-    # 2. Your fullscreen FSR tweaks (from /proc/27098)
-    export WINE_FULLSCREEN_FSR="1"
-    export WINE_FULLSCREEN_FSR_MODE="balanced"
-    export WINE_FULLSCREEN_FSR_STRENGTH="2"
+      # FSR tweaks from the running process
+      export WINE_FULLSCREEN_FSR="1"
+      export WINE_FULLSCREEN_FSR_MODE="balanced"
+      export WINE_FULLSCREEN_FSR_STRENGTH="2"
 
-    # 3. Libraries for this Proton build (pattern from upstream logs)
-    #export GST_PLUGIN_PATH="$RUNNERDIR/files/lib64/gstreamer-1.0:$RUNNERDIR/files/lib/gstreamer-1.0"
-    #export LD_LIBRARY_PATH="$RUNNERDIR/files/lib:$RUNNERDIR/files/lib64:$RUNNERDIR/files/lib64/wine/x86_64-unix:$RUNNERDIR    /files/lib/wine/i386-unix"
+      # Use the runner's libs
+      export LD_LIBRARY_PATH="$RUNNERDIR/lib64:$RUNNERDIR/lib:$RUNNERDIR/lib32"
 
-    # 3.1 Use the runner's own libs
-    export LD_LIBRARY_PATH="$RUNNERDIR/lib64:$RUNNERDIR/lib:$RUNNERDIR/lib32"
-    # 4. Go to the game directory (your /proc/27098 cwd)
-    cd "$BASE/HSR"
+      # Game directory (your /proc/.../cwd)
+      cd "$BASE/HSR"
 
-    # 5. Run the same exe + arguments you saw in CMDLINE
-    #    Using the Proton runner Honkers downloaded
-    exec "$RUNNERDIR/bin/wine64 \
-      'Z:\\home\\$USER\\.var\\app\\moe.launcher.the-honkers-railway-launcher\\data\\honkers-railway-launcher\\HSR\\StarRail.exe' \
-      -window-mode borderless"
+      # Run Star Rail with Wine from this runner, non-exclusive mode
+      exec "$RUNNERDIR/bin/wine64" \
+        "$BASE/HSR/StarRail.exe" \
+        -screen-fullscreen 0 -popupwindow -window-mode borderless
     '';
     executable = true;
   };
 }
+
