@@ -30,7 +30,7 @@
 
     # 5. Run the same exe + arguments you saw in CMDLINE
     #    Using the Proton runner Honkers downloaded
-    exec "$RUNNERDIR/bin/spritz-wine-tkg-staging-wow64-10 \
+    exec "$RUNNERDIR/bin/wine \
       'Z:\\home\\$USER\\.var\\app\\moe.launcher.the-honkers-railway-launcher\\data\\honkers-railway-launcher\\HSR\\StarRail.exe' \
       -window-mode exclusive"
     '';
