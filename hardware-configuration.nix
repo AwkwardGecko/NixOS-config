@@ -34,11 +34,7 @@
     "/home" = {
       device = "/dev/mapper/crypt-home";
       fsType = "btrfs";
-<<<<<<< HEAD
-      options = [ "subvol=@home" "compress=zstd" "noatime" ];
-=======
       options = [ "compress=zstd" "noatime" ];
->>>>>>> f4b02b25d4308cae826b1c45575de5645f4b71c9
     };
 
     # "/steam" = {
