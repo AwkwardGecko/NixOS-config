@@ -29,6 +29,7 @@
     #./sys-modules/docker.nix
     ./sys-modules/dolphin.nix
     ./sys-modules/eigenwallet.nix
+    ./sys-modules/fclones.nix
     ./sys-modules/filesystem.nix
     ./sys-modules/firefox.nix
     ./sys-modules/flatpak.nix
