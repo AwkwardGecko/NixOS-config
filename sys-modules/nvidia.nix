@@ -46,6 +46,14 @@
     Option "Coolbits" "4"
   '';
 
+  environment.etc."X11/xorg.conf.d/11-nvidia-coolbits.conf".text = ''
+    Section "Device"
+      Identifier "Nvidia Card"
+      Driver "nvidia"
+      Option "Coolbits" "4"
+    EndSection
+  '';
+
   environment.variables = {
     GBM_BACKEND = "nvidia-drm";
     LIBVA_DRIVER_NAME = "nvidia";
