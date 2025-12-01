@@ -42,6 +42,10 @@
     lm_sensors
   ];
   
+  services.xserver.deviceSection = ''
+    Option "Coolbits" "4"
+  '';
+
   environment.variables = {
     GBM_BACKEND = "nvidia-drm";
     LIBVA_DRIVER_NAME = "nvidia";
