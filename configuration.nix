@@ -15,7 +15,7 @@
     ./sys-modules/autologin.nix # 100%
     ./sys-modules/bash.nix
     #./sys-modules/#bluearchive.nix
-    ./sys-modules/bluetooth.nix # bluetooth
+    #./sys-modules/bluetooth.nix # bluetooth
     ./sys-modules/boot.nix # configure kernel modules
     #./sys-modules/#borderlands2-fix.nix
     ./sys-modules/bottles.nix
