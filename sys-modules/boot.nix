@@ -16,6 +16,8 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  boot.blacklistedKernelModules = [ "amdgpu" ];
+
   boot.initrd.kernelModules = [
     "usbhid"
     "btusb"
