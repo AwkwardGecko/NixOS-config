@@ -1,7 +1,6 @@
 { config, lib, pkgs, ... }:
 
 {
-  hardware.bluetooth.enable = true;
 
   programs.chromium = {
     enable = true;
