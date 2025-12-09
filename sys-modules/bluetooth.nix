@@ -2,8 +2,8 @@
 { config, pkgs, lib, ... }:
 {
   hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
+    enable = false;
+    powerOnBoot = false;
   };
 
   services.blueman.enable = true;
