@@ -6,6 +6,7 @@
   hardware = {
     #steam-hardware.enable = true;
     #xpad-noone.enable = true;
-    #xone.enable = true;
+    xpad-noone.enable = false;
+    xone.enable = true;
   };
 }
