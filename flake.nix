@@ -14,8 +14,8 @@
     #comfyui.url = "github:utensils/nix-comfyui";
     #comfyui.inputs.nixpkgs.follows = "nixpkgs";
 
-    aagl.url = "github:ezKEa/aagl-gtk-on-nix";
-    aagl.inputs.nixpkgs.follows = "nixpkgs"; # Name of nixpkgs input you want to use
+    #aagl.url = "github:ezKEa/aagl-gtk-on-nix";
+    #aagl.inputs.nixpkgs.follows = "nixpkgs"; # Name of nixpkgs input you want to use
 
   };
 
@@ -39,7 +39,7 @@
           {
             imports = [ aagl.nixosModules.default ];
             nix.settings = aagl.nixConfig;
-            programs.honkers-railway-launcher.enable = true;
+            # programs.honkers-railway-launcher.enable = true;
 
             environment = {
               sessionVariables = {
