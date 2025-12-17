@@ -19,7 +19,7 @@
 
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, aagl, alejandra, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, alejandra, ... }:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
@@ -37,8 +37,8 @@
           nixvim.nixosModules.nixvim
           #comfyui.nixosModules.default
           {
-            imports = [ aagl.nixosModules.default ];
-            nix.settings = aagl.nixConfig;
+            #imports = [ aagl.nixosModules.default ];
+            #nix.settings = aagl.nixConfig;
             # programs.honkers-railway-launcher.enable = true;
 
             environment = {
