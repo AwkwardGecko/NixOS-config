@@ -60,7 +60,7 @@
     ./sys-modules/signal.nix
     ./sys-modules/ssh.nix
     ./sys-modules/sshfs.nix
-    ./sys-modules/star-rail.nix
+    #./sys-modules/star-rail.nix
     ./sys-modules/statix.nix
     ./sys-modules/steam.nix
     ./sys-modules/syncthing.nix
