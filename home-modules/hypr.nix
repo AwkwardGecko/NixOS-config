@@ -12,7 +12,6 @@
 
     settings = {
 
-      xwayland.enable = true;
 
       "$mainMod" = "SUPER";
       "$terminal" = "kitty";
