@@ -8,9 +8,11 @@
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
-    xwayland.enable = true;
+    # xwayland.enable = true;
 
     settings = {
+
+      xwayland.enable = true;
 
       "$mainMod" = "SUPER";
       "$terminal" = "kitty";
