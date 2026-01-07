@@ -11,9 +11,7 @@
 {
   programs.hyprland = {
     enable = true;
-    settings = {
-      xwayland.enable = true;
-    };
+    xwayland.enable = true;
   };
 
   services.windowManager.sddm.wayland.enable = true;
