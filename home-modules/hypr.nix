@@ -203,7 +203,7 @@
 
 
         "float, class:^(pavucontrol|nm-connection-editor)$" # Floating windows
-        "opacity 1.0 override 1.0, class:^(Steam)$" # Turn opacity off
+        #"opacity 1.0 override 1.0, class:^(Steam)$" # Turn opacity off
         "nofocus, class:^$, title:^$, wayland:1, floating:1, fullscreen:0, pinned:0" # prevents hidden windows from being fuckwits
           
           "float, class:^(sysupdate)$" # update window top right
