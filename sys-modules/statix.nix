@@ -1,7 +1,12 @@
-{ pkgs, lib, config, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 
 {
-   environment.systemPackages = with pkgs; [
-      statix
-   ];
+  environment.systemPackages = with pkgs; [
+    statix
+  ];
 }

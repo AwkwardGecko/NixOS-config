@@ -1,15 +1,19 @@
-{ config, pkgs, lib, ... }:
 {
-   home.packages = with pkgs; [
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
+  home.packages = with pkgs; [
     hyprsunset
     hypridle
-  ]; 
+  ];
 
   wayland.windowManager.hyprland = {
     enable = true;
 
     settings = {
-
 
       "$mainMod" = "SUPER";
       "$terminal" = "kitty";
@@ -31,7 +35,7 @@
         #"bash $HOME/.local/bin/video-wallpapers.sh"
       ];
 
-      "ecosystem:no_update_news" = true; 
+      "ecosystem:no_update_news" = true;
 
       env = [
         "XDG_CURRENT_DESKTOP,Hyprland"
@@ -60,9 +64,9 @@
         active_opacity = 1.0;
         inactive_opacity = 1.0;
         shadow = {
-            range = 4;
-            render_power = 3;
-            color= "rgba(1a1a1aee)";
+          range = 4;
+          render_power = 3;
+          color = "rgba(1a1a1aee)";
         };
 
         blur = {
@@ -95,9 +99,9 @@
       };
 
       master = {
-        new_status = false;  # new windows go to stack
-        mfact = 0.5;  # master width
-        allow_small_split = false; 
+        new_status = false; # new windows go to stack
+        mfact = 0.5; # master width
+        allow_small_split = false;
 
         #"new_status" = "master";
       };
@@ -109,9 +113,8 @@
       };
 
       bind = [
-        
-        #"$mainMod, space, exec, $unhide_waybar"
 
+        #"$mainMod, space, exec, $unhide_waybar"
 
         ", print, exec, grimblast save area ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"
         "$mainMod, print, exec, grimblast copy area"
@@ -127,7 +130,6 @@
         "$mainMod, R, exec, $menu"
         "$mainMod, V, togglefloating,"
         "$mainMod, num_lock, exec, $update_script"
-        
 
         "$mainMod, return, exec, $terminal"
 
@@ -192,26 +194,23 @@
 
       windowrulev2 = [
         #"workspace 9, class:^(steam)$, title:^(Friends)$" # open steamfriends on workspace 9
-        #"workspace 5, class:^(steam_app_.*|starrail.exe)$" # send games to workspace 5 
+        #"workspace 5, class:^(steam_app_.*|starrail.exe)$" # send games to workspace 5
         #"immediate, class:^(steam_app_.*|starrail.exe)$" # No animation delay
         #"noanim, class:^(steam_app_.*|starrail.exe)$" # No animation
         #"rounding 0, class:^(steam_app_.*|starrail.exe)$" # Don't round corners
-        #"suppressevent maximize, class:.*" # Prevents maximize 
+        #"suppressevent maximize, class:.*" # Prevents maximize
         #"idleinhibit always, class:^(steam_app_.*|starrail.exe)$" # prevent games from sleep
-
-
 
         "float, class:^(pavucontrol|nm-connection-editor)$" # Floating windows
         #"opacity 1.0 override 1.0, class:^(Steam)$" # Turn opacity off
         "nofocus, class:^$, title:^$, wayland:1, floating:1, fullscreen:0, pinned:0" # prevents hidden windows from being fuckwits
-          
-          "float, class:^(sysupdate)$" # update window top right
-          "size 900 400, class:^(sysupdate)$" # window size
-          "move 1650 80, class:^(sysupdate)$" # window position
-          "noanim, class:^(sysupdate)$"
-          "noblur, class:^(sysupdate)$"
+
+        "float, class:^(sysupdate)$" # update window top right
+        "size 900 400, class:^(sysupdate)$" # window size
+        "move 1650 80, class:^(sysupdate)$" # window position
+        "noanim, class:^(sysupdate)$"
+        "noblur, class:^(sysupdate)$"
       ];
     };
   };
 }
-

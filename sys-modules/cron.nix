@@ -12,7 +12,7 @@
   services.cron = {
     enable = true;
     systemCronJobs = [
-    "01 * * * * && dex ~/.local/share/applications/teamviewer.desktop"
+      "01 * * * * && dex ~/.local/share/applications/teamviewer.desktop"
     ];
   };
 }

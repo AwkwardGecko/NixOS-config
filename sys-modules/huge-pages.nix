@@ -1,8 +1,13 @@
-{ config, libs, pkgs, ... }:
+{
+  config,
+  libs,
+  pkgs,
+  ...
+}:
 
 {
   boot.kernel.sysctl = {
-    "vm.nr_hugepages" = 512;  # Set this to the number of huge pages you want
+    "vm.nr_hugepages" = 512; # Set this to the number of huge pages you want
   };
 
   boot.kernelParams = [

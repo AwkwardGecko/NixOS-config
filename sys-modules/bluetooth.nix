@@ -1,5 +1,10 @@
 #~/.dotfiles/z-nixos/modules/bluetooth.nix
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 {
   hardware.bluetooth = {
     enable = true;

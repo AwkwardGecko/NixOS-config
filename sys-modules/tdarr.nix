@@ -2,12 +2,12 @@
 { pkgs, lib, ... }:
 
 {
-   environment.systemPackages = with pkgs; [
-      libva-utils
-      nvidia-container-toolkit
-   ];
+  environment.systemPackages = with pkgs; [
+    libva-utils
+    nvidia-container-toolkit
+  ];
 
-   hardware.nvidia-container-toolkit.enable = true;
+  hardware.nvidia-container-toolkit.enable = true;
 
   # Runtime
   virtualisation.podman = {
@@ -145,4 +145,4 @@
     };
     wantedBy = [ "multi-user.target" ];
   };
-  }
+}

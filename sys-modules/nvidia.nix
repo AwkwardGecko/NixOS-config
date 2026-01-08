@@ -11,8 +11,8 @@
 {
 
   services.xserver = {
-     #enable = true;
-     videoDrivers = [ "nvidia" ];
+    #enable = true;
+    videoDrivers = [ "nvidia" ];
   };
 
   hardware = {
@@ -41,7 +41,7 @@
     nvfancontrol
     lm_sensors
   ];
-  
+
   # services.xserver.deviceSection = ''
   #   Option "Coolbits" "4"
   # '';

@@ -1,19 +1,24 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
 
-   environment.systemPackages = with pkgs; [
-      age
-   ];
+  environment.systemPackages = with pkgs; [
+    age
+  ];
 
-   age.secrets.github-token = {
-      file = ../../secrets/github-token.age;
-      owner = "zozano";
-   };
+  age.secrets.github-token = {
+    file = ../../secrets/github-token.age;
+    owner = "zozano";
+  };
 
-   systemd.services.github-token = {
-      serviceConfig = {
-         Environment = "GITHUB_TOKEN=${config.age.secrets.github-token.path}";
-      };
-   };
+  systemd.services.github-token = {
+    serviceConfig = {
+      Environment = "GITHUB_TOKEN=${config.age.secrets.github-token.path}";
+    };
+  };
 }

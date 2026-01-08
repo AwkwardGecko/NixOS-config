@@ -1,5 +1,10 @@
 #~/.dotfiles/home-manager/modules/diffusion.nix
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   xdg.desktopEntries.diffusion = {
     name = "Diffusion";

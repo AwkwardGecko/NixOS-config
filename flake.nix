@@ -16,42 +16,50 @@
 
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, ... }:
-  let
-    system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
-    };
-  in {
-    nixosConfigurations = {
-      z-nixos = nixpkgs.lib.nixosSystem {
+  outputs =
+    inputs@{
+      self,
+      nixpkgs,
+      home-manager,
+      nixvim,
+      ...
+    }:
+    let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
         inherit system;
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./configuration.nix
-          home-manager.nixosModules.home-manager
-          nixvim.nixosModules.nixvim
-          #comfyui.nixosModules.default
-          {
-            #imports = [ aagl.nixosModules.default ];
-            #nix.settings = aagl.nixConfig;
-            # programs.honkers-railway-launcher.enable = true;
+        config.allowUnfree = true;
+      };
+    in
+    {
+      nixosConfigurations = {
+        z-nixos = nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./configuration.nix
+            home-manager.nixosModules.home-manager
+            nixvim.nixosModules.nixvim
+            #comfyui.nixosModules.default
+            {
+              #imports = [ aagl.nixosModules.default ];
+              #nix.settings = aagl.nixConfig;
+              # programs.honkers-railway-launcher.enable = true;
 
-            environment = {
-              sessionVariables = {
-                XDG_CURRENT_DESKTOP = "Hyprland";
-                XDG_SESSION_TYPE = "wayland";
-                XAUTHORITY = "\$HOME/.Xauthority";
+              environment = {
+                sessionVariables = {
+                  XDG_CURRENT_DESKTOP = "Hyprland";
+                  XDG_SESSION_TYPE = "wayland";
+                  XAUTHORITY = "\$HOME/.Xauthority";
+                };
               };
-            };
 
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.zozano = import ./home.nix;
-          }
-        ];
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.zozano = import ./home.nix;
+            }
+          ];
+        };
       };
     };
-  };
 }

@@ -1,4 +1,9 @@
-{ pkgs, config, lib, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
 
 {
   systemd.services.reload-usb-dongle = {
@@ -13,4 +18,3 @@
     };
   };
 }
-

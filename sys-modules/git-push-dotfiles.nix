@@ -1,4 +1,9 @@
-{ pkgs, config, lib, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
 
 {
   systemd.services.push-dotfiles = {
@@ -21,4 +26,3 @@
     };
   };
 }
-

@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   programs.hyprpanel = {
     enable = true;
@@ -7,9 +12,18 @@
 
       bar.layouts = {
         "*" = {
-          left = [ "volume" "media" "workspaces" ];
+          left = [
+            "volume"
+            "media"
+            "workspaces"
+          ];
           middle = [ "clock" ];
-          right = [ "systray" "bluetooth" "notifications" "dashboard" ];
+          right = [
+            "systray"
+            "bluetooth"
+            "notifications"
+            "dashboard"
+          ];
           # unused: "network" "windowtitle"
         };
       };

@@ -3,7 +3,7 @@
 {
   systemd.user.services.xmrig = {
     # Install = {
-    #   WantedBy = [ "default.target" ]; 
+    #   WantedBy = [ "default.target" ];
     # };
     Unit = {
       Description = "xmrig miner (user service)";

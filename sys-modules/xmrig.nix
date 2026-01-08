@@ -8,7 +8,6 @@
   boot.initrd.availableKernelModules = [ "msr" ];
   boot.kernelModules = [ "msr" ];
 
-
   systemd.services.xmrig = {
     description = "xmrig miner (system/root service)";
     after = [ "network.target" ];

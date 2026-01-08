@@ -1,6 +1,12 @@
-{ pkgs, lib, config, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 
-{# Set up a global .gitignore to ignore dotfiles
+{
+  # Set up a global .gitignore to ignore dotfiles
   environment.etc."gitconfig".text = ''
     [core]
       excludesFile = ~/.gitignore_global

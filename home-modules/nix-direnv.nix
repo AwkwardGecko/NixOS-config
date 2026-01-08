@@ -1,7 +1,12 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
-    programs = {
+  programs = {
     direnv = {
       enable = true;
       enableBashIntegration = true; # see note on other shells below

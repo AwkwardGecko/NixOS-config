@@ -1,6 +1,11 @@
 # ~/.dotfiles/home-manager/modules/git.nix
 
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   programs.git = {
     enable = true;

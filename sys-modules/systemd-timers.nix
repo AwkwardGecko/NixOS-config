@@ -11,10 +11,10 @@
 {
   systemd.timers."teamviewer" = {
     wantedBy = [ "timers.target" ];
-      timerConfig = {
-        OnBootSec = "5m";
-        onUnitActivateSec = "5m";
-        Unit = "teamviewer.service";
+    timerConfig = {
+      OnBootSec = "5m";
+      onUnitActivateSec = "5m";
+      Unit = "teamviewer.service";
     };
   };
 }

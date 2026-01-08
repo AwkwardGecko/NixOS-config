@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
 
@@ -7,7 +12,7 @@
 
     # Make sure policy isn’t silently blocking the API.
     extraOpts = {
-      "DefaultWebBluetoothGuardSetting" = 3;  # 3 = allow sites to ask
+      "DefaultWebBluetoothGuardSetting" = 3; # 3 = allow sites to ask
       "homepage" = "https://app.storz-bickel.com";
       "session.restore_on_startup" = 4;
       "session.startup_urls" = [ "https://app.storz-bickel.com" ];
@@ -27,4 +32,3 @@
     bluez
   ];
 }
-

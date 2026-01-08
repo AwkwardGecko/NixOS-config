@@ -1,30 +1,35 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
-  let
-    lock-false = {
-      Value = false;
-      Status = "locked";
-    };
-    lock-true = {
-      Value = true;
-      Status = "locked";
-    };
-  in
+let
+  lock-false = {
+    Value = false;
+    Status = "locked";
+  };
+  lock-true = {
+    Value = true;
+    Status = "locked";
+  };
+in
 {
   programs = {
     firefox = {
       enable = true;
-      languagePacks = [ 
+      languagePacks = [
         "en-GB"
       ];
 
-      /* ---- POLICIES ---- */
+      # ---- POLICIES ----
       # Check about:policies#documentation for options.
       policies = {
         DisableTelemetry = true;
         DisableFirefoxStudies = true;
         EnableTrackingProtection = {
-          Value= true;
+          Value = true;
           Locked = true;
           Cryptomining = true;
           Fingerprinting = true;
@@ -38,19 +43,19 @@
         DisplayMenuBar = "default-off"; # alternatives: "always", "never" or "default-on"
         SearchBar = "unified"; # alternative: "separate"
 
-        /* ---- EXTENSIONS ---- */
+        # ---- EXTENSIONS ----
         # Check about:support for extension/add-on ID strings.
         # Valid strings for installation_mode are "allowed", "blocked",
         # "force_installed" and "normal_installed".
         ExtensionSettings = {
           #"*".installation_mode = "blocked"; # blocks all addons except the ones specified below
-          
+
           # uBlock Origin:
           "uBlock0@raymondhill.net" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
             installation_mode = "force_installed";
           };
-          
+
           # Proton Pass:
           "78272b6fa58f4a1abaac99321d503a20@proton.me" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/proton-pass/latest.xpi";
@@ -70,16 +75,19 @@
           };
 
           # Aussie English Language Pack:
-          "en-AU@dictionaries.addons.mozilla.org"= {
+          "en-AU@dictionaries.addons.mozilla.org" = {
             install_url = "https://addons.mozilla.org/en-GB/firefox/addon/english-australian-dictionary/latest.xpi";
             installation_mode = "forced_install";
           };
         };
-        
-        /* ---- PREFERENCES ---- */
+
+        # ---- PREFERENCES ----
         # Check about:config for options.
-        Preferences = { 
-          "browser.contentblocking.category" = { Value = "strict"; Status = "locked"; };
+        Preferences = {
+          "browser.contentblocking.category" = {
+            Value = "strict";
+            Status = "locked";
+          };
           "extensions.pocket.enabled" = lock-false;
           "extensions.screenshots.disabled" = lock-true;
           "browser.topsites.contile.enabled" = lock-false;

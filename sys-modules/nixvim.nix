@@ -1,5 +1,6 @@
-{ pkgs, self, ... }: {
-  
+{ pkgs, self, ... }:
+{
+
   environment.systemPackages = with pkgs; [
     wl-clipboard
   ];
@@ -11,7 +12,7 @@
     vimAlias = true;
     performance.byteCompileLua.enable = true;
     clipboard.providers.wl-copy.enable = true;
-    colorschemes.gruvbox.enable = true;  # Gruvbox colorscheme
+    colorschemes.gruvbox.enable = true; # Gruvbox colorscheme
 
     extraConfigLua = ''
       local cmp = require("cmp")
@@ -53,10 +54,29 @@
         enable = true;
         settings = {
           keywords = {
-            TODO = { icon = ""; color = "info"; alt = [ ]; };
-            FIX = { icon = ""; color = "error"; alt = [ "FIXME" "BUG" ]; };
-            HACK = { icon = ""; color = "warning"; alt = [ ]; };
-            NOTE = { icon = ""; color = "hint"; alt = [ "INFO" ]; };
+            TODO = {
+              icon = "";
+              color = "info";
+              alt = [ ];
+            };
+            FIX = {
+              icon = "";
+              color = "error";
+              alt = [
+                "FIXME"
+                "BUG"
+              ];
+            };
+            HACK = {
+              icon = "";
+              color = "warning";
+              alt = [ ];
+            };
+            NOTE = {
+              icon = "";
+              color = "hint";
+              alt = [ "INFO" ];
+            };
           };
         };
       };
@@ -65,12 +85,11 @@
         enable = true;
         autoEnableSources = true;
       };
-     
+
       cmp-buffer.enable = true;
       cmp-path.enable = true;
       cmp-nvim-lsp.enable = true;
       cmp_luasnip.enable = true;
-
 
       lsp = {
         enable = true;
@@ -98,7 +117,10 @@
           formatters = {
             nix = {
               command = "alejandra";
-              args = [ "--indentation" "2" ];
+              args = [
+                "--indentation"
+                "2"
+              ];
               stdin = true;
             };
           };
@@ -106,29 +128,28 @@
       };
 
       notify.enable = true;
-      lualine.enable = true;               # Statusline plugin
-      treesitter.enable = true;            # Advanced syntax highlighting
-      telescope.enable = true;             # Fuzzy finder for files and more
-      web-devicons.enable = true;          # File icons for Neovim
-      bufferline.enable = true;            # Buffer tabline for better navigation
-      gitsigns.enable = true;              # Git integration in the editor
-      comment.enable = true;               # Easy commenting of code
-      nvim-autopairs.enable = true;             # Automatic pairing of parentheses and brackets
-      indent-blankline.enable = true;      # Visual indentation guides
+      lualine.enable = true; # Statusline plugin
+      treesitter.enable = true; # Advanced syntax highlighting
+      telescope.enable = true; # Fuzzy finder for files and more
+      web-devicons.enable = true; # File icons for Neovim
+      bufferline.enable = true; # Buffer tabline for better navigation
+      gitsigns.enable = true; # Git integration in the editor
+      comment.enable = true; # Easy commenting of code
+      nvim-autopairs.enable = true; # Automatic pairing of parentheses and brackets
+      indent-blankline.enable = true; # Visual indentation guides
       #lightline.enable = true;
-      fugitive.enable = true;              # Git commands inside Neovim
+      fugitive.enable = true; # Git commands inside Neovim
     };
 
     opts = {
-      number = true;                       # Show absolute line numbers
-      shiftwidth = 2;                      # Set indentation width to 2 spaces
-      tabstop = 2;                         # Set tab width to 2 spaces
+      number = true; # Show absolute line numbers
+      shiftwidth = 2; # Set indentation width to 2 spaces
+      tabstop = 2; # Set tab width to 2 spaces
       softtabstop = 2;
-      expandtab = true;                    # Use spaces instead of tabs
-      smartindent = true;                  # Enable smart indentation
+      expandtab = true; # Use spaces instead of tabs
+      smartindent = true; # Enable smart indentation
       #autoindent = true;                   # Enable automatic indentation
       clipboard = "unnamedplus";
     };
   };
 }
-

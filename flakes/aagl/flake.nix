@@ -4,20 +4,26 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     aagl = {
-         url = "github:ezKEa/aagl-gtk-on-nix";
-         inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:ezKEa/aagl-gtk-on-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, aagl, ... }: {
-    defaultModule = {
-      imports = [ aagl.nixosModules.default ];
+  outputs =
+    {
+      self,
+      nixpkgs,
+      aagl,
+      ...
+    }:
+    {
+      defaultModule = {
+        imports = [ aagl.nixosModules.default ];
 
-      nix.settings = aagl.nixConfig;
+        nix.settings = aagl.nixConfig;
 
-      programs.honkers-railway-launcher.enable = true;
-      aagl.enableNixpkgsReleaseBranchCheck = false;
+        programs.honkers-railway-launcher.enable = true;
+        aagl.enableNixpkgsReleaseBranchCheck = false;
+      };
     };
-  };
 }
-

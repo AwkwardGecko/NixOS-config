@@ -1,5 +1,11 @@
 #~/.dotfiles/z-nixos/configuration.nix
-{ config, pkgs, libs, inputs, ... }:
+{
+  config,
+  pkgs,
+  libs,
+  inputs,
+  ...
+}:
 {
 
   # limit rebuild speed
@@ -77,23 +83,20 @@
     #./sys-modules/# whisperai.nix
     #./sys-modules/# webdav.nix
     ./sys-modules/wine.nix
-  ]; 
-
-  
-
-
-
+  ];
 
   security.sudo = {
-    extraRules = [{
-      users = [ "zozano" ];
+    extraRules = [
+      {
+        users = [ "zozano" ];
         commands = [
           {
             command = "/run/current-system/sw/bin/nixos-rebuild";
             options = [ "NOPASSWD" ];
           }
         ];
-    }];
+      }
+    ];
 
     extraConfig = ''
       Defaults timestamp_timeout=-1
@@ -121,7 +124,10 @@
   networking.networkmanager.enable = true;
   networking.interfaces.enp10s0.macAddress = "04:42:1A:A7:FD:1F";
 
-  networking.nameservers = [ "1.1.1.1" "8.8.8.8"];
+  networking.nameservers = [
+    "1.1.1.1"
+    "8.8.8.8"
+  ];
 
   nixpkgs.config.allowUnfree = true;
   hardware.enableAllFirmware = true;
@@ -135,150 +141,147 @@
     '';
   };
 
-
   security.doas.enable = true;
   programs.ssh.startAgent = true;
   programs.npm.enable = true;
 
   programs.nix-ld.enable = true; # resolve library issues for Stable Diffusion
 
-
-
   environment.systemPackages = with pkgs; [
-    age                         # generate keypair
-    alejandra                   # format nix files
-    alsa-lib                    # ALSA sound library
-    atk                         # Accessibility toolkit (GNOME dependencies)
-    bazel                       # Google's build tool (used for TensorFlow etc.)
+    age # generate keypair
+    alejandra # format nix files
+    alsa-lib # ALSA sound library
+    atk # Accessibility toolkit (GNOME dependencies)
+    bazel # Google's build tool (used for TensorFlow etc.)
     bc
     #binutils_nogold            # Binutils without the gold linker
-    bootiso                     # Create bootable USB drives from ISO
-    brave                       # Web browser
+    bootiso # Create bootable USB drives from ISO
+    brave # Web browser
     # btmon                    # Bluetooth monitoring/debugging
-    btrfs-progs                 # Btrfs filesystem tools
-    cairo                       # 2D graphics library
-    cargo                       # Rust package manager
-    cargo-c                     # Build C-style shared libs from Rust
-    cargo-deb                   # Generate .deb packages from Rust projects
-    cargo-rr                    # Run Rust programs under rr debugger
-    clinfo                      # Lists OpenCL devices
+    btrfs-progs # Btrfs filesystem tools
+    cairo # 2D graphics library
+    cargo # Rust package manager
+    cargo-c # Build C-style shared libs from Rust
+    cargo-deb # Generate .deb packages from Rust projects
+    cargo-rr # Run Rust programs under rr debugger
+    clinfo # Lists OpenCL devices
     cmake
     compose2nix
-    conda                       # Python environment manager
-    crane                       # Nix-native Rust build system (like crate2nix)
-    cups                        # Printing system
+    conda # Python environment manager
+    crane # Nix-native Rust build system (like crate2nix)
+    cups # Printing system
     curl
-    dbus                        # IPC system used by desktop apps
-    dcap                        # Data Center Attestation Primitives (SGX stuff)
-    dig                         # DNS Lookup
+    dbus # IPC system used by desktop apps
+    dcap # Data Center Attestation Primitives (SGX stuff)
+    dig # DNS Lookup
     #digikam                     # Photo management software
-    docker                      # Container engine
-    docker-compose              # Define & run multi-container apps with Docker
-    evince                      # Document viewer
-    evtest                      # Reads input events (debugging input devices)
-    expat                       # XML parsing library
-    ffmpeg                      # Video and audio processing tool
+    docker # Container engine
+    docker-compose # Define & run multi-container apps with Docker
+    evince # Document viewer
+    evtest # Reads input events (debugging input devices)
+    expat # XML parsing library
+    ffmpeg # Video and audio processing tool
     hdparm
     gawk
-    gcc                         # GNU Compiler Collection
-    gcc-unwrapped               # Unwrapped GCC (required by some projects like Stable Diffusion)
-    gimp                        # Image editing software
-    git                         # Version control
-    glib                        # Low-level GNOME core library
-    #glxinfo                     # 
+    gcc # GNU Compiler Collection
+    gcc-unwrapped # Unwrapped GCC (required by some projects like Stable Diffusion)
+    gimp # Image editing software
+    git # Version control
+    glib # Low-level GNOME core library
+    #glxinfo                     #
     #glibc_memusage              # Tracks memory usage of programs
     gedit
-    gnome-calculator            # Calculator app
-    gnome-disk-utility          # Disk management GUI
-    gparted                     # Partitioning tool
+    gnome-calculator # Calculator app
+    gnome-disk-utility # Disk management GUI
+    gparted # Partitioning tool
     gperftools
-    gtk3                        # GNOME GUI toolkit v3
-    gtkd                        # D bindings for GTK
-    icu                         # Unicode support libraries
-    iproute2                    # Network tools (replacement for net-tools)
+    gtk3 # GNOME GUI toolkit v3
+    gtkd # D bindings for GTK
+    icu # Unicode support libraries
+    iproute2 # Network tools (replacement for net-tools)
     #imv                         # Image viewer
-    inotify-tools               # check what is making folders
+    inotify-tools # check what is making folders
     #koboldcpp                   # Local LLM interface for KoboldAI
-    jq                          #
+    jq
     libcap # test
-    libGL                       # OpenGL library
+    libGL # OpenGL library
     libglvnd
-    libdrm                      # Direct Rendering Manager (graphics stuff)
-    libglvnd                    # OpenGL Vendor-Neutral Dispatch library (Stable Diffusion dependency)
-    libheif                    # HEIF image support
+    libdrm # Direct Rendering Manager (graphics stuff)
+    libglvnd # OpenGL Vendor-Neutral Dispatch library (Stable Diffusion dependency)
+    libheif # HEIF image support
     libnotify
     #libpcap                     # Packet capture library (used in Fribbels Honkai Star Rail Optimizer)
-    libsecret                   # Secret storage (GNOME keyring)
-    libxkbcommon                # Keyboard layout handling (Wayland/X)
+    libsecret # Secret storage (GNOME keyring)
+    libxkbcommon # Keyboard layout handling (Wayland/X)
     libz
-    lld                         # LLVM linker
-    llvmPackages.bintools      # LLVM toolchain binaries (e.g., ar, nm)
+    lld # LLVM linker
+    llvmPackages.bintools # LLVM toolchain binaries (e.g., ar, nm)
     #lutris                      # Game manager (especially for Wine games)
     lsof
-    lynis                       # security auditing
-    mesa                        # Open-source graphics drivers
-    nettools                    # Old-school network tools (ifconfig, etc.)
-    nixd                        # Nix language server (LSP)
+    lynis # security auditing
+    mesa # Open-source graphics drivers
+    nettools # Old-school network tools (ifconfig, etc.)
+    nixd # Nix language server (LSP)
     nixfmt
-    nodejs                      # Node.js runtime
-    nomacs                      # image viewer
-    nspr                        # Netscape Portable Runtime (used by Firefox, etc.)
-    nss                         # Network Security Services
-    onlyoffice-desktopeditors   # Office suite
+    nodejs # Node.js runtime
+    nomacs # image viewer
+    nspr # Netscape Portable Runtime (used by Firefox, etc.)
+    nss # Network Security Services
+    onlyoffice-desktopeditors # Office suite
     opencv
-    openssl                     # TLS/SSL support (used by reliquary-archiver and other tools)
-    pango                       # Text rendering library
-    parted                      # Partitioning tool
-    pavucontrol                 # PulseAudio volume control GUI
-    pcapfix                     # Repairs broken .pcap files
-    pciutils                    # testing PCI links
-    pkg-config                  # Finds C libraries (used by reliquary-archiver)
-    protobuf                    # Google's Protocol Buffers (serialization)
+    openssl # TLS/SSL support (used by reliquary-archiver and other tools)
+    pango # Text rendering library
+    parted # Partitioning tool
+    pavucontrol # PulseAudio volume control GUI
+    pcapfix # Repairs broken .pcap files
+    pciutils # testing PCI links
+    pkg-config # Finds C libraries (used by reliquary-archiver)
+    protobuf # Google's Protocol Buffers (serialization)
     proton-pass
-    pyenv                       # Python version manager
+    pyenv # Python version manager
     python3
-    python311                   # Python 3.11 interpreter
+    python311 # Python 3.11 interpreter
     python311Packages.pyyaml
     python312Packages.numpy
     python311Packages.scipy
-    python311Packages.pip       # Python 3.11 pip installer
+    python311Packages.pip # Python 3.11 pip installer
     python311Packages.pyasyncore # Async networking module for Python 3.11
     python311Packages.setuptools
     python311Packages.wheel
     #python311Packages.torch
     # python312Packages.libpcap   # Python bindings for libpcap (next-gen testing?)
     python312Packages.opencv-python
-    qbittorrent                 # BitTorrent client
-    rclone                      # Sync with cloud storage
+    qbittorrent # BitTorrent client
+    rclone # Sync with cloud storage
     #rustc                       # Rust compiler
     #rustup                      # Rust toolchain manager (used by reliquary-archiver)
     #rustup-toolchain-install-master # Install Rust toolchains from master
-    smartmontools               # Monitor hard drive health (S.M.A.R.T.)
-    sqlite                      # Embedded SQL database engine
-    sshfs                       # Mount remote filesystems over SSH
-    stdenv                      # Nix standard environment
-    strawberry                  # Music player
+    smartmontools # Monitor hard drive health (S.M.A.R.T.)
+    sqlite # Embedded SQL database engine
+    sshfs # Mount remote filesystems over SSH
+    stdenv # Nix standard environment
+    strawberry # Music player
     usbutils
-    udev                        # Device manager for the Linux kernel
+    udev # Device manager for the Linux kernel
     # unigine-superposition       # GPU benchmarking tool
     unzip
-    upower                      # Power management daemon (dependency for Vivaldi maybe)
-    uv                          # Fast Python package manager
-    vlc                         # Media player
-    vulkan-loader               # Vulkan runtime loader
-    vulkan-tools                # Vulkan utilities like `vulkaninfo`
-    wl-clipboard                # clipboard support for wayland
-    wget                        # File downloader
-    wine                        # Windows compatibility layer
+    upower # Power management daemon (dependency for Vivaldi maybe)
+    uv # Fast Python package manager
+    vlc # Media player
+    vulkan-loader # Vulkan runtime loader
+    vulkan-tools # Vulkan utilities like `vulkaninfo`
+    wl-clipboard # clipboard support for wayland
+    wget # File downloader
+    wine # Windows compatibility layer
     xmrig
-    xorg.libX11                 # Core X11 library
-    xorg.libXcomposite          # Compositing support for X11
-    xorg.libXdamage             # Damage tracking for X11
-    xorg.libXext                # Misc X11 extensions
-    xorg.libXfixes              # X11 fixes extension
-    xorg.libXrandr              # X11 RandR extension (screen resizing)
-    xorg.libxcb                 # X protocol C-language Binding
-    yt-dlp                      # YouTube downloader
-    zlib                        # Compression lib (used by Stable Diffusion & reliquary launcher)
+    xorg.libX11 # Core X11 library
+    xorg.libXcomposite # Compositing support for X11
+    xorg.libXdamage # Damage tracking for X11
+    xorg.libXext # Misc X11 extensions
+    xorg.libXfixes # X11 fixes extension
+    xorg.libXrandr # X11 RandR extension (screen resizing)
+    xorg.libxcb # X protocol C-language Binding
+    yt-dlp # YouTube downloader
+    zlib # Compression lib (used by Stable Diffusion & reliquary launcher)
   ];
 }

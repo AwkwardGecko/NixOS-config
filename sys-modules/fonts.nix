@@ -21,7 +21,6 @@
       noto-fonts-color-emoji
       liberation_ttf
 
-
       # Optional alternates if you want variety:
       #nerd-fonts.hack
       #nerd-fonts.terminess-ttf

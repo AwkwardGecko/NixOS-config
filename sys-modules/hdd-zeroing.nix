@@ -1,13 +1,24 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 let
   scriptPath = "/home/zozano/temp/hdd-zeroing.sh";
   stateFile = "/home/zozano/temp/hdd-zeroing.done";
-in {
+in
+{
   systemd.services.hdd-zeroing = {
     description = "Incremental HDD zeroing step";
     wantedBy = [ ];
-    path = [ pkgs.coreutils pkgs.util-linux pkgs.gnugrep pkgs.gnused ];
+    path = [
+      pkgs.coreutils
+      pkgs.util-linux
+      pkgs.gnugrep
+      pkgs.gnused
+    ];
     serviceConfig = {
       Type = "oneshot";
       ExecStart = "${scriptPath}";
@@ -26,4 +37,3 @@ in {
     };
   };
 }
-

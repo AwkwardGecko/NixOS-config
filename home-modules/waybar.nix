@@ -1,7 +1,12 @@
-{ config, lib, pkgs, ... }:
 {
-  
-  #   			 	 	 󰍛	 󰍜	 󰒓 󰘚							 
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+{
+
+  #   			 	 	 󰍛	 󰍜	 󰒓 󰘚						
   programs.waybar = {
     enable = true;
     systemd.enable = true;
@@ -118,7 +123,7 @@
 
         memory = {
           interval = 10;
-          icon-size = 20; 
+          icon-size = 20;
           icon-spacing = 0;
           format = " {percentage}%";
           #max-length = 10;
@@ -164,31 +169,31 @@
           };
           ignored-players = [ "firefox" ];
         };
-        
+
         # cpu = {
         #   format = "CPU   {usage}%";
         #   icon-size = 20;
         #   icon-spacing = 0;
         #   #tooltip = true;
         # };
-        
+
         "custom/cpuload" = {
-            format = "  {}%";
-            exec = "printf '%02d\\n' $(grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print int(usage)}')";
-            interval = 5;
-            return-type = "";
-            icon-size = 20;
-            icon-spacing = 0;
+          format = "  {}%";
+          exec = "printf '%02d\\n' $(grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print int(usage)}')";
+          interval = 5;
+          return-type = "";
+          icon-size = 20;
+          icon-spacing = 0;
         };
-       
+
         "custom/gpuvram" = {
           format = "󰘚 {}";
           icon-size = 20;
           icon-spacing = 0;
-          return-type = ""; 
+          return-type = "";
           exec = "nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F',' '{ printf \"%02d%%\\n\", int(($1 / $2) * 100) }'";
           interval = 5;
-         };
+        };
 
         "custom/update" = {
           format = "{}";
@@ -199,8 +204,7 @@
           on-click = "kitty /usr/bin/env bash -c '/home/zozano/.dotfiles/system-update.sh'";
           tooltip = false;
           return-type = "json";
-         };
-
+        };
 
         "custom/gputemp" = {
           format = " {}°C";
@@ -209,7 +213,7 @@
           exec = "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits";
           return-type = "";
           interval = 5;
-         };
+        };
 
         "custom/gpuload" = {
           icon-size = 20;
@@ -250,345 +254,344 @@
         };
       }
 
-
     ];
 
-  style = ''
-    * {	
-      border: none;
-      border-radius: 10px;
-      font-size: 15px;
-      font-family: "JetBrainsMono-Regular", monospace;
-    }
-
-    window#waybar {
-      background: transparent;
-    }
-
-    window#waybar.hidden {
-      opacity: 0.2;
-    }
-
-    @keyframes blink {
-      to {
-        background-color: #BF616A;
-        color: #B5E8E0;
+    style = ''
+      * {	
+        border: none;
+        border-radius: 10px;
+        font-size: 15px;
+        font-family: "JetBrainsMono-Regular", monospace;
       }
-    }
 
-      #custom-gpuvram {
-          margin-top: 6px;
-          margin-left: 8px;
-          padding-left: 10px;
-          margin-bottom: 0px;
-          padding-right: 10px;
+      window#waybar {
+        background: transparent;
+      }
+
+      window#waybar.hidden {
+        opacity: 0.2;
+      }
+
+      @keyframes blink {
+        to {
+          background-color: #BF616A;
           color: #B5E8E0;
-          transition: none;
-          border-radius: 10px;
-          background: #161320;
+        }
       }
 
-      #custom-hddzero {
-          margin-top: 6px;
-          margin-left: 8px;
-          padding-left: 10px;
-          margin-bottom: 0px;
-          padding-right: 10px;
-          color: #B5E8E0;
-          transition: none;
-          border-radius: 10px;
-          background: #161320;
-      }
+        #custom-gpuvram {
+            margin-top: 6px;
+            margin-left: 8px;
+            padding-left: 10px;
+            margin-bottom: 0px;
+            padding-right: 10px;
+            color: #B5E8E0;
+            transition: none;
+            border-radius: 10px;
+            background: #161320;
+        }
 
-      #window {
-          margin-top: 6px;
-          padding-left: 10px;
-          padding-right: 10px;
-          border-radius: 10px;
-          transition: none;
-          background: transparent;
-      }
+        #custom-hddzero {
+            margin-top: 6px;
+            margin-left: 8px;
+            padding-left: 10px;
+            margin-bottom: 0px;
+            padding-right: 10px;
+            color: #B5E8E0;
+            transition: none;
+            border-radius: 10px;
+            background: #161320;
+        }
 
-      #custom-gputemp {
-          margin-top: 6px;
-          margin-left: 8px;
-          padding-left: 10px;
-          margin-bottom: 0px;
-          padding-right: 10px;
-          border-radius: 10px;
-          transition: none;
-          color: #B5E8E0;
-          background: #161320;
-      }
+        #window {
+            margin-top: 6px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 10px;
+            transition: none;
+            background: transparent;
+        }
 
-      #custom-update {
-          margin-top: 6px;
-          margin-left: 8px;
-          padding-left: 10px;
-          margin-bottom: 0px;
-          padding-right: 10px;
-          border-radius: 10px;
-          transition: none;
-          background: #161320;
-          color: #B5E8E0;
-      }
+        #custom-gputemp {
+            margin-top: 6px;
+            margin-left: 8px;
+            padding-left: 10px;
+            margin-bottom: 0px;
+            padding-right: 10px;
+            border-radius: 10px;
+            transition: none;
+            color: #B5E8E0;
+            background: #161320;
+        }
 
-      #custom-update.clean {
-         color: #B5E8E0;
-      }
+        #custom-update {
+            margin-top: 6px;
+            margin-left: 8px;
+            padding-left: 10px;
+            margin-bottom: 0px;
+            padding-right: 10px;
+            border-radius: 10px;
+            transition: none;
+            background: #161320;
+            color: #B5E8E0;
+        }
 
-      #custom-update.dirty {
-         color: #F28FAD;
-      }
+        #custom-update.clean {
+           color: #B5E8E0;
+        }
 
-      #custom-cputemp {
-          margin-top: 6px;
-          margin-left: 8px;
-          margin-right: 8px;
-          margin-bottom: 6px;
+        #custom-update.dirty {
+           color: #F28FAD;
+        }
 
-          padding-left: 10px;
-          padding-right: 10px;
-          
-          border-radius: 10px;
-          transition: none;
-          color: #B5E8E0;
-          background: #161320;
-      }
+        #custom-cputemp {
+            margin-top: 6px;
+            margin-left: 8px;
+            margin-right: 8px;
+            margin-bottom: 6px;
 
-      #custom-cpuload {
-          margin-top: 6px;
-          margin-left: 8px;
-          margin-right: 8px;
-          margin-bottom: 6px;
+            padding-left: 10px;
+            padding-right: 10px;
+            
+            border-radius: 10px;
+            transition: none;
+            color: #B5E8E0;
+            background: #161320;
+        }
 
-          padding-left: 10px;
-          padding-right: 10px;
-          
-          border-radius: 10px;
-          transition: none;
-          color: #B5E8E0;
-          background: #161320;
-      }
+        #custom-cpuload {
+            margin-top: 6px;
+            margin-left: 8px;
+            margin-right: 8px;
+            margin-bottom: 6px;
 
-      #custom-gpuload {
-          margin-top: 6px;
-          margin-left: 8px;
-          margin-right: 8px;
-          margin-bottom: 6px;
+            padding-left: 10px;
+            padding-right: 10px;
+            
+            border-radius: 10px;
+            transition: none;
+            color: #B5E8E0;
+            background: #161320;
+        }
 
-          padding-left: 10px;
-          padding-right: 10px;
-          
-          border-radius: 10px;
-          transition: none;
-          color: #B5E8E0;
-          background: #161320;
-      }
+        #custom-gpuload {
+            margin-top: 6px;
+            margin-left: 8px;
+            margin-right: 8px;
+            margin-bottom: 6px;
+
+            padding-left: 10px;
+            padding-right: 10px;
+            
+            border-radius: 10px;
+            transition: none;
+            color: #B5E8E0;
+            background: #161320;
+        }
 
 
 
-      #bluetooth {
-          margin-top: 6px;
-          margin-left: 8px;
-          margin-right: 8px;
-          margin-bottom: 6px;
+        #bluetooth {
+            margin-top: 6px;
+            margin-left: 8px;
+            margin-right: 8px;
+            margin-bottom: 6px;
 
-          padding-left: 10px;
-          padding-right: 10px;
-          
-          border-radius: 10px;
-          transition: none;
-          color: #B5E8E0;
-          background: #161320;
-      }
+            padding-left: 10px;
+            padding-right: 10px;
+            
+            border-radius: 10px;
+            transition: none;
+            color: #B5E8E0;
+            background: #161320;
+        }
 
-      #mpris {
-          margin-top: 6px;
-          margin-left: 8px;
-          margin-right: 8px;
-          margin-bottom: 6px;
+        #mpris {
+            margin-top: 6px;
+            margin-left: 8px;
+            margin-right: 8px;
+            margin-bottom: 6px;
 
-          padding-left: 10px;
-          padding-right: 10px;
-          
-          border-radius: 10px;
-          transition: none;
-          color: #B5E8E0;
-          background: #161320;
-      }
+            padding-left: 10px;
+            padding-right: 10px;
+            
+            border-radius: 10px;
+            transition: none;
+            color: #B5E8E0;
+            background: #161320;
+        }
 
-      #gamemode {
-          margin-top: 6px;
-          margin-left: 8px;
-          margin-right: 8px;
-          margin-bottom: 6px;
+        #gamemode {
+            margin-top: 6px;
+            margin-left: 8px;
+            margin-right: 8px;
+            margin-bottom: 6px;
 
-          padding-left: 10px;
-          padding-right: 10px;
-          
-          border-radius: 10px;
-          transition: none;
-          color: #B5E8E0;
-          background: #161320;
-      }
+            padding-left: 10px;
+            padding-right: 10px;
+            
+            border-radius: 10px;
+            transition: none;
+            color: #B5E8E0;
+            background: #161320;
+        }
 
-      #pulseaudio {
-          margin-top: 6px;
-          margin-left: 8px;
-          margin-right: 8px;
-          margin-bottom: 6px;
+        #pulseaudio {
+            margin-top: 6px;
+            margin-left: 8px;
+            margin-right: 8px;
+            margin-bottom: 6px;
 
-          padding-left: 10px;
-          padding-right: 10px;
-          
-          border-radius: 10px;
-          transition: none;
-          color: #B5E8E0;
-          background: #161320;
-      }
+            padding-left: 10px;
+            padding-right: 10px;
+            
+            border-radius: 10px;
+            transition: none;
+            color: #B5E8E0;
+            background: #161320;
+        }
 
-      #disk {
-          margin-top: 6px;
-          margin-left: 8px;
-          margin-right: 8px;
-          margin-bottom: 6px;
+        #disk {
+            margin-top: 6px;
+            margin-left: 8px;
+            margin-right: 8px;
+            margin-bottom: 6px;
 
-          padding-left: 10px;
-          padding-right: 10px;
-          
-          border-radius: 10px;
-          transition: none;
-          color: #B5E8E0;
-          background: #161320;
-      }
+            padding-left: 10px;
+            padding-right: 10px;
+            
+            border-radius: 10px;
+            transition: none;
+            color: #B5E8E0;
+            background: #161320;
+        }
 
-      #clock {
-          margin-top: 6px;
-          margin-left: 8px;
-          margin-right: 8px;
-          margin-bottom: 6px;
+        #clock {
+            margin-top: 6px;
+            margin-left: 8px;
+            margin-right: 8px;
+            margin-bottom: 6px;
 
-          padding-left: 10px;
-          padding-right: 10px;
-          
-          border-radius: 10px;
-          
-          transition: none;
-          
-          color: #B5E8E0;
-          
-          background: #161320;
-      }
+            padding-left: 10px;
+            padding-right: 10px;
+            
+            border-radius: 10px;
+            
+            transition: none;
+            
+            color: #B5E8E0;
+            
+            background: #161320;
+        }
 
-      #memory {
-          margin-top: 6px;
-          margin-left: 8px;
-          margin-right: 8px;
-          margin-bottom: 6px;
+        #memory {
+            margin-top: 6px;
+            margin-left: 8px;
+            margin-right: 8px;
+            margin-bottom: 6px;
 
-          padding-left: 10px;
-          padding-right: 10px;
-          
-          border-radius: 10px;
-          transition: none;
-          color: #B5E8E0;
-          background: #161320;
-      }
+            padding-left: 10px;
+            padding-right: 10px;
+            
+            border-radius: 10px;
+            transition: none;
+            color: #B5E8E0;
+            background: #161320;
+        }
 
-      #cpu {
-          margin-top: 6px;
-          margin-left: 8px;
-          margin-right: 8px;
-          margin-bottom: 6px;
+        #cpu {
+            margin-top: 6px;
+            margin-left: 8px;
+            margin-right: 8px;
+            margin-bottom: 6px;
 
-          padding-left: 10px;
-          padding-right: 10px;
-          
-          border-radius: 10px;
-          transition: none;
-          color: #B5E8E0;
-          background: #161320;
-      }
+            padding-left: 10px;
+            padding-right: 10px;
+            
+            border-radius: 10px;
+            transition: none;
+            color: #B5E8E0;
+            background: #161320;
+        }
 
-      #tray {
-          margin-top: 6px;
-          margin-left: 8px;
-          margin-right: 8px;
-          margin-bottom: 6px;
+        #tray {
+            margin-top: 6px;
+            margin-left: 8px;
+            margin-right: 8px;
+            margin-bottom: 6px;
 
-          padding-left: 10px;
-          padding-right: 10px;
-          
-          border-radius: 10px;
-          transition: none;
-          color: #b5e8e0;
-          background: #161320;
-      }
+            padding-left: 10px;
+            padding-right: 10px;
+            
+            border-radius: 10px;
+            transition: none;
+            color: #b5e8e0;
+            background: #161320;
+        }
 
-      #custom-launcher {
-          margin-top: 6px;
-          margin-left: 8px;
-          margin-right: 8px;
-          margin-bottom: 6px;
+        #custom-launcher {
+            margin-top: 6px;
+            margin-left: 8px;
+            margin-right: 8px;
+            margin-bottom: 6px;
 
-          padding-left: 10px;
-          padding-right: 10px;
-          
-          border-radius: 10px;
-          transition: none;
-          color: #b5e8e0;
-          background: #161320;
-      }
+            padding-left: 10px;
+            padding-right: 10px;
+            
+            border-radius: 10px;
+            transition: none;
+            color: #b5e8e0;
+            background: #161320;
+        }
 
-      #custom-power {
-          margin-top: 6px;
-          margin-left: 8px;
-          margin-right: 8px;
-          margin-bottom: 6px;
+        #custom-power {
+            margin-top: 6px;
+            margin-left: 8px;
+            margin-right: 8px;
+            margin-bottom: 6px;
 
-          padding-left: 10px;
-          padding-right: 10px;
-          
-          border-radius: 10px;
-          transition: none;
-          color: #b5e8e0;
-          background: #161320;
-      }
+            padding-left: 10px;
+            padding-right: 10px;
+            
+            border-radius: 10px;
+            transition: none;
+            color: #b5e8e0;
+            background: #161320;
+        }
 
-      #workspaces {
-          margin-top: 6px;
-          margin-left: 8px;
-          margin-right: 8px;
-          margin-bottom: 6px;
+        #workspaces {
+            margin-top: 6px;
+            margin-left: 8px;
+            margin-right: 8px;
+            margin-bottom: 6px;
 
-          padding-left: 10px;
-          padding-right: 10px;
-          
-          border-radius: 10px;
-          transition: none;
-          color: #b5e8e0;
-          background: #161320;
-      }
+            padding-left: 10px;
+            padding-right: 10px;
+            
+            border-radius: 10px;
+            transition: none;
+            color: #b5e8e0;
+            background: #161320;
+        }
 
-      #workspaces button {
-          padding: 0 5px;
-          background-color: transparent;
-          color: #ffffff;
-      }
+        #workspaces button {
+            padding: 0 5px;
+            background-color: transparent;
+            color: #ffffff;
+        }
 
-      #workspaces button:hover {
-          background: rgba(0, 0, 0, 0.2);
-      }
+        #workspaces button:hover {
+            background: rgba(0, 0, 0, 0.2);
+        }
 
-      #workspaces button.focused {
-          background-color: #64727D;
-          box-shadow: inset 0 -3px #ffffff;
-      }
+        #workspaces button.focused {
+            background-color: #64727D;
+            box-shadow: inset 0 -3px #ffffff;
+        }
 
-      #workspaces button.urgent {
-          background-color: #eb4d4b;
-      }
+        #workspaces button.urgent {
+            background-color: #eb4d4b;
+        }
     '';
   };
 }

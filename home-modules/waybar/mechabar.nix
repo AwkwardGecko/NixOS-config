@@ -115,7 +115,7 @@
           # === Window Titles ===
 
           "rewrite" = {
-            # == Desktop == 
+            # == Desktop ==
 
             "" = "<span foreground='#89b4fa'> </span> Hyprland";
 
@@ -148,7 +148,8 @@
             "VLC media player" = "<span foreground='#fab387'>󰕼 </span> VLC Media Player";
             "(.*) - VLC media player" = "<span foreground='#fab387'>󰕼 </span> $1";
 
-            "GNU Image Manipulation Program" = "<span foreground='#a6adc8'> </span> GNU Image Manipulation Program";
+            "GNU Image Manipulation Program" =
+              "<span foreground='#a6adc8'> </span> GNU Image Manipulation Program";
 
             "qView" = "  qView";
 

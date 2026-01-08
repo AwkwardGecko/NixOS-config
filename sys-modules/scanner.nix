@@ -1,9 +1,14 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   hardware.sane = {
     enable = true;
-    
+
     extraBackends = with pkgs; [
       #utsushi
       epkowa

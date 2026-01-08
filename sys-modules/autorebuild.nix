@@ -1,4 +1,9 @@
-{ lib, pkgs, config, ... }:
+{
+  lib,
+  pkgs,
+  config,
+  ...
+}:
 
 {
   systemd.services.dotfiles-update = {
@@ -14,4 +19,3 @@
     };
   };
 }
-

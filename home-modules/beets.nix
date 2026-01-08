@@ -1,19 +1,24 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   programs.beets = {
     enable = true;
     settings = {
       directory = "/server/data/media/music";
       library = "${config.xdg.dataHome}/beets/music.db";
-      
+
       per_disc_numbering = true;
       asciify_paths = true;
-      
+
       replace = {
-        "^\\." = "_";                 # no leading dot
-        "[\\x00-\\x1F]" = "";         # strip control chars
-        "[<>:\"\\?\\*\\|]" = "";      # strip Win-unsafe
-        "\\s+$" = "";                 # trim trailing space
+        "^\\." = "_"; # no leading dot
+        "[\\x00-\\x1F]" = ""; # strip control chars
+        "[<>:\"\\?\\*\\|]" = ""; # strip Win-unsafe
+        "\\s+$" = ""; # trim trailing space
       };
 
       import = {
@@ -29,16 +34,19 @@
       match = {
         preferred = {
           original_year = true;
-          media = [ "Digital Media|File" "CD" ];
+          media = [
+            "Digital Media|File"
+            "CD"
+          ];
         };
       };
       plugins = [
-        "chroma"    # AcoustID / fingerprinting
-        "fetchart"  # download cover art
-        "embedart"  # embed art into files
+        "chroma" # AcoustID / fingerprinting
+        "fetchart" # download cover art
+        "embedart" # embed art into files
         "lastgenre" # genre from Last.fm
-        "lyrics"    # fetch lyrics
-        "mbsync"    # sync MBIDs back and forth
+        "lyrics" # fetch lyrics
+        "mbsync" # sync MBIDs back and forth
         "duplicates"
         "replaygain"
         "scrub"
@@ -73,18 +81,21 @@
 
       paths = {
         # Normal albums
-        default = "$albumartist/%if{$year,$year - }$album/"
-                  + "%if{$multidisc,$disc_}%if{$track,$track - }$title";
+        default =
+          "$albumartist/%if{$year,$year - }$album/" + "%if{$multidisc,$disc_}%if{$track,$track - }$title";
 
         # Various Artists / Compilations
-        comp = "Compilations/%if{$year,$year - }$album/"
-               + "%if{$multidisc,$disc_}%if{$track,$track - }$artist - $title";
+        comp =
+          "Compilations/%if{$year,$year - }$album/"
+          + "%if{$multidisc,$disc_}%if{$track,$track - }$artist - $title";
 
         # Singles / loose tracks
         singleton = "Singles/$artist/%if{$track,$track - }$title";
       };
 
-      ui = { color = true; };
+      ui = {
+        color = true;
+      };
     };
   };
 
@@ -134,6 +145,5 @@
     '';
     executable = true;
   };
-
 
 }

@@ -1,4 +1,9 @@
-{ pkgs, inputs, lib, ... }:
+{
+  pkgs,
+  inputs,
+  lib,
+  ...
+}:
 
 let
   myRuntimeDir = "/home/zozano/comfyui";
@@ -31,4 +36,3 @@ in
     ];
   };
 }
-

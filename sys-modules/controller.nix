@@ -1,5 +1,10 @@
 #~/.dotfiles/z-nixos/modules/controller.nix
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   #services.udev.packages = [ pkgs.game-devices-udev-rules ];
 

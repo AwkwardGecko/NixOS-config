@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs.nixvim = {
     enable = true;
     colorscheme = "onedark";
@@ -12,4 +13,3 @@
     '';
   };
 }
-

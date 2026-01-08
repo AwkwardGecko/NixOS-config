@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   services.vsftpd = {
@@ -15,7 +20,7 @@
     '';
   };
 
-  users.groups.ftpuser = {};
+  users.groups.ftpuser = { };
   users.users.ftpuser = {
     isSystemUser = true;
     createHome = true;
@@ -31,7 +36,9 @@
 
   networking.firewall.allowedTCPPorts = [ 21 ];
   networking.firewall.allowedTCPPortRanges = [
-    { from = 50000; to = 50010; }
+    {
+      from = 50000;
+      to = 50010;
+    }
   ];
 }
-

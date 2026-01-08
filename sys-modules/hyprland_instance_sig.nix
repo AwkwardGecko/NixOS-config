@@ -1,10 +1,16 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 with lib;
 
 let
   cfg = config.services.custom-ssh-agent;
-in {
+in
+{
   options.services.custom-ssh-agent = {
     enable = mkEnableOption "Custom SSH agent service";
   };
@@ -24,4 +30,3 @@ in {
     };
   };
 }
-

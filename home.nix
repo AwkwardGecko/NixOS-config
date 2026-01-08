@@ -1,5 +1,11 @@
 #~/.dotfiles/home-manager/home.nix
-{ config, lib, inputs, pkgs, ... }:
+{
+  config,
+  lib,
+  inputs,
+  pkgs,
+  ...
+}:
 {
   imports = [
     #./modules/applications.nix
@@ -49,7 +55,7 @@
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
 
     # controllers / SDL
-    #SDL_GAMECONTROLLERCONFIG = 
+    #SDL_GAMECONTROLLERCONFIG =
     #  builtins.readFile "${pkgs.sdl2}/share/sdl2/gamecontrollerdb.txt"; # Injects a controller mapping database that SDL uses to identify how your gamepad buttons map to standard Xbox-style layouts.
 
     # Video Acceleration on Nvidia
@@ -68,7 +74,7 @@
 
   };
 
-	home.file = {
+  home.file = {
     #".local/share/applications".source = source/local/share/applications;
     #".config/hypr/hypridle.conf".source = source/config/hypr/hypridle-xmrig-off.conf;
     #".local/share/vlc/lua/extensions".source = source/local/share/vlc/lua/extensions;
@@ -78,35 +84,35 @@
   };
 
   home.packages = with pkgs; [
-    baobab        # disk usage analyzer
+    baobab # disk usage analyzer
     #blueberry
     #clementine
-    cliphist    # wayland clipboard manager
-    cryptsetup  # LUKS support
-    dex         # run .desktop files from CLI
+    cliphist # wayland clipboard manager
+    cryptsetup # LUKS support
+    dex # run .desktop files from CLI
     #digikam
-	  egl-wayland
+    egl-wayland
     fastfetch
     #gimp
     #git
     #google-chrome
     grimblast
-	  grc
+    grc
     #home-assistant-component-tests.tuya
-	  htop
+    htop
     #hyprpaper
     #hyprshot
     #jellyfinmediaplayer
     #jellyfin-web
-	  #plasma5Packages.kdeconnect-kde
-    krusader # file manager 
+    #plasma5Packages.kdeconnect-kde
+    krusader # file manager
     krename # batch renamer for krusader
     libva
-	  #lua
+    #lua
     #lua54Packages.luarocks-nix
     mesa
     mp3gain # normalize volume of music
-    mkvtoolnix #modify video files 
+    mkvtoolnix # modify video files
     nautilus # file browser
     #	nettools
     #	networkmanagerapplet
@@ -114,14 +120,14 @@
     playerctl
     #	protonvpn-gui
     #	pyprland # python support for Hyprland
-  	python3
+    python3
     #	python312Packages.pip
-  	pipx	
+    pipx
     #	qbittorrent
     qt6Packages.qt6ct # QT support
     ripgrep # something for nvim
     #	rofi-wayland
-	  #qt5ct
+    #qt5ct
     protonup-qt
     #python312Packages.tinytuya
     #SDL2
@@ -134,7 +140,7 @@
     #	winetricks
     wlroots
     #wl-clipboard-rs
-    #xcbeautify # colour support for wayland? 
+    #xcbeautify # colour support for wayland?
   ];
 
   home.enableNixpkgsReleaseCheck = false;
