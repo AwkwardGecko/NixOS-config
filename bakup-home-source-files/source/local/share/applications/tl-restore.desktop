@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Torchlight-Restore
+Exec=/home/zozano/.dotfiles/home-manager/source/local/share/applications/tl-restore.sh
+Icon=jellyfin-media-player
+Terminal=false
+Type=Application
+Categories=Media;
