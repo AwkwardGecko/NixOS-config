@@ -219,7 +219,7 @@
     mesa                        # Open-source graphics drivers
     nettools                    # Old-school network tools (ifconfig, etc.)
     nixd                        # Nix language server (LSP)
-    nixfmt-rfc-style            # Nix formatter
+    nixfmt
     nodejs                      # Node.js runtime
     nomacs                      # image viewer
     nspr                        # Netscape Portable Runtime (used by Firefox, etc.)
