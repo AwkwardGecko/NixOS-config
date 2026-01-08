@@ -8,9 +8,6 @@
     nixvim.url = "github:nix-community/nixvim";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
 
-    alejandra.url = "github:kamadorueda/alejandra/4.0.0";
-    alejandra.inputs.nixpkgs.follows = "nixpkgs";
-
     #comfyui.url = "github:utensils/nix-comfyui";
     #comfyui.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -19,7 +16,7 @@
 
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, alejandra, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, ... }:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
@@ -47,7 +44,6 @@
                 XDG_SESSION_TYPE = "wayland";
                 XAUTHORITY = "\$HOME/.Xauthority";
               };
-              systemPackages = [alejandra.defaultPackage.${system}];
             };
 
             home-manager.useGlobalPkgs = true;

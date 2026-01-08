@@ -4,56 +4,66 @@
     enable = true;
     systemd.enable = true;
     settings = {
-      
+
+      bar.layouts = {
+        "*" = {
+          left = [ "volume" "media" "workspaces" ];
+          middle = [ "clock" ];
+          right = [ "systray" "bluetooth" "notifications" "dashboard" ];
+          # unused: "network" "windowtitle"
+        };
+      };
+
       notifications = {
         enabled = true;
         autoDismiss = true;
         dismissTimeout = 5000;
       };
 
-
-      theme.font = {
-        name = "JetBrainsMono Nerd Font";
-        #style = "Regular";
-        size = "1.2rem";
+      theme = {
+        font = {
+          name = "JetBrainsMono Nerd Font";
+          #style = "Regular";
+          size = "1.2rem";
+        };
+        bar.transparent = true;
       };
 
-      bar.tray = {
-        enable = true;
-        iconSize = 22;
+      bar = {
+        tray = {
+          enable = true;
+          iconSize = 22;
+        };
+        launcher.autoDetectIcon = true;
+        workspaces.show_icons = true;
+        #dashboard.icon = "󱄅";
+        #battery.label = true;
+        bluetooth.label = false;
+        clock.format = "%H:%M";
       };
 
-      modules.weather = {
-        enable = true;
-        location = "Port Macquarie, NSW, Australia";
-        units = "metric";
-      };
+      # modules.weather = {
+      #   enable = true;
+      #   location = "Port Macquarie, NSW, Australia";
+      #   units = "metric";
+      #   api_key = "cd8270d44cfa4514b6145250260801";
+      # };
 
-      bar.launcher.autoDetectIcon = true;
-      #bar.dashboard.icon = "󱄅";
-      #bar.battery.label = true;
-      bar.bluetooth.label = false;
-      bar.clock.format = "%H:%M";
-      bar.layouts = {
-        "*" = {
-          left = [
-            "volume"
-            "media"
-            "workspaces"
-          ];
-
-          middle = [ 
-            #"windowtitle"
-            "clock"
-          ];
-
-          right = [
-            "systray"
-            #"network"
-            "bluetooth"
-            "notifications"
-            "dashboard"
-          ];
+      menus = {
+        clock = {
+          time = {
+            military = true;
+            hideSeconds = true;
+          };
+          weather = {
+            unit = "metric";
+            key = "cd8270d44cfa4514b6145250260801";
+            location = "-31.43127,152.908131";
+          };
+        };
+        dashboard = {
+          directories.enabled = false;
+          enable_gpu = true;
         };
       };
     };
