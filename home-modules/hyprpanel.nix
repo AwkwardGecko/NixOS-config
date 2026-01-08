@@ -48,7 +48,7 @@
           ];
 
           right = [
-            "tray"
+            "systray"
             #"network"
             "bluetooth"
             "notifications"

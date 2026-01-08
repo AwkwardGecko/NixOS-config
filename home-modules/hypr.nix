@@ -7,8 +7,6 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    systemd.enable = true;
-    # xwayland.enable = true;
 
     settings = {
 
@@ -21,15 +19,15 @@
       "$update_script" = "kitty --class sysupdate -e bash ~/.dotfiles/system-update.sh";
       "$kitty_with_fastfetch" = "kitty fastfetch";
       # "$unhide_waybar" = "bash -c 'pkill -SIGUSR1 waybar; sleep 30; pkill -SIGUSR1 waybar'";
-      "$unhide_waybar" = "bash -c 'pkill -SIGUSR1 waybar'";
-      "$steam_friends" = "sleep 60 && steam steam://open/friends";
+      #"$unhide_waybar" = "bash -c 'pkill -SIGUSR1 waybar'";
+      #"$steam_friends" = "sleep 60 && steam steam://open/friends";
 
       exec-once = [
         "sleep 3 && signal-desktop"
         "sleep 1 && steam -silent"
         #"hyprpaper &"
-        "hyprpanel"
-        "$steam_friends"
+        #"hyprpanel"
+        #"$steam_friends"
         #"bash $HOME/.local/bin/video-wallpapers.sh"
       ];
 
@@ -112,7 +110,7 @@
 
       bind = [
         
-        "$mainMod, space, exec, $unhide_waybar"
+        #"$mainMod, space, exec, $unhide_waybar"
 
 
         ", print, exec, grimblast save area ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"
