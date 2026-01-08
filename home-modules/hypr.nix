@@ -29,6 +29,7 @@
       exec-once = [
         "sleep 3 && signal-desktop"
         "sleep 1 && steam -silent"
+        "sleep 1 && coolercontrol"
         #"hyprpaper &"
         #"hyprpanel"
         #"$steam_friends"
