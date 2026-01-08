@@ -158,6 +158,7 @@
     bootiso # Create bootable USB drives from ISO
     brave # Web browser
     # btmon                    # Bluetooth monitoring/debugging
+    btop
     btrfs-progs # Btrfs filesystem tools
     cairo # 2D graphics library
     cargo # Rust package manager
