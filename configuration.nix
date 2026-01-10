@@ -192,8 +192,10 @@
     #glxinfo                     #
     #glibc_memusage              # Tracks memory usage of programs
     gedit
+    
     gnome-calculator # Calculator app
     gnome-disk-utility # Disk management GUI
+    goverlay
     gparted # Partitioning tool
     gperftools
     gtk3 # GNOME GUI toolkit v3
