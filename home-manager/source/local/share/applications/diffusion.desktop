@@ -1,9 +1,0 @@
-#~/.local/share/applications/diffusion.desktop
-[Desktop Entry]
-Name=Diffusion
-Comment=Stable Diffusion
-Exec=~/.local/share/applications/start.sh
-Icon=
-Terminal=true
-Type=Application
-Categories=Media;
