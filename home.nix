@@ -27,7 +27,7 @@
     #./modules/lutris.nix
     #./modules/terminal.nix
     #./modules/mako.nix
-    #./modules/mangohud.nix
+    ./home-modules/mangohud.nix
     #./modules/neovim/neovim.nix
     #./modules/OpenRGB.nix
     ./home-modules/ranger.nix
