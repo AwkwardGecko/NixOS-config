@@ -19,7 +19,7 @@
     ./modules/gpg.nix
     ./modules/git.nix
     #./modules/gtk.nix
-    ./modules/hypr.nix
+    ./modules/hyprland-home.nix
     ./modules/hyprpanel.nix
     ./modules/hyprpaper.nix
     #./modules/hypridle.nix

@@ -47,7 +47,7 @@
     ./modules/hostname.nix
     ./modules/hdd-soft-shutdown.nix
     ./modules/huge-pages.nix
-    ./modules/hypr.nix
+    ./modules/hyprland-system.nix
     ./modules/localisation.nix
     #.modules/#lutris.nix
     #.modules/#ollama.nix
