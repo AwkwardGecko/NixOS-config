@@ -41,7 +41,7 @@
     ./modules/fonts.nix
     ./modules/ftp.nix
     ./modules/gamemode.nix
-    #./modules/git.nix
+    ./modules/git-system.nix
     ./modules/git-push-dotfiles.nix
     ./modules/haveno.nix
     ./modules/hostname.nix

@@ -17,7 +17,7 @@
     ./modules/fish.nix
     #.modules/fonts.nix
     ./modules/gpg.nix
-    ./modules/git.nix
+    ./modules/git-home.nix
     #./modules/gtk.nix
     ./modules/hyprland-home.nix
     ./modules/hyprpanel.nix
