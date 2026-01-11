@@ -14,75 +14,75 @@
 
   imports = [
     ./hardware-configuration.nix
-    ./sys-modules/adwaita.nix
-    ./sys-modules/alejandra.nix
-    ./sys-modules/android.nix
-    ./sys-modules/audio.nix # audio
-    ./sys-modules/autologin.nix # 100%
-    ./sys-modules/bash.nix
-    ./sys-modules/bluetooth.nix # bluetooth
-    ./sys-modules/boot.nix # configure kernel modules
-    #./sys-modules/#borderlands2-fix.nix
-    ./sys-modules/bottles.nix
-    ./sys-modules/bisq.nix
-    ./sys-modules/cachix.nix # cachix
-    ./sys-modules/chromium.nix
-    #./sys-modules/#comfyui.nix
-    ./sys-modules/controller.nix
-    ./sys-modules/coolercontrol.nix
-    #./sys-modules/#cron.nix
-    #./sys-modules/docker.nix
-    ./sys-modules/dolphin.nix
-    ./sys-modules/eigenwallet.nix
-    ./sys-modules/fclones.nix
-    ./sys-modules/filesystem.nix
-    ./sys-modules/firefox.nix
-    ./sys-modules/flatpak.nix
-    ./sys-modules/fonts.nix
-    ./sys-modules/ftp.nix
-    ./sys-modules/gamemode.nix
-    ./sys-modules/git.nix
-    ./sys-modules/git-push-dotfiles.nix
-    ./sys-modules/haveno.nix
-    ./sys-modules/hostname.nix
-    ./sys-modules/hdd-soft-shutdown.nix
-    ./sys-modules/huge-pages.nix
-    ./sys-modules/hypr.nix
-    ./sys-modules/localisation.nix
-    #./sys-modules/#lutris.nix
-    #./sys-modules/#ollama.nix
-    ./sys-modules/openrgb.nix
-    ./sys-modules/polkit.nix
-    ./sys-modules/prometheus.nix
-    ./sys-modules/protonmail.nix
-    ./sys-modules/protonvpn.nix
-    ./sys-modules/monero.nix
-    ./sys-modules/nixvim.nix
-    ./sys-modules/nvidia.nix
-    #./sys-modules/#reload-usb.nix
-    ./sys-modules/scanner.nix
-    ./sys-modules/security.nix
-    ./sys-modules/shadps4.nix
-    ./sys-modules/signal.nix
-    ./sys-modules/ssh.nix
-    ./sys-modules/sshfs.nix
-    #./sys-modules/star-rail.nix
-    ./sys-modules/statix.nix
-    ./sys-modules/steam.nix
-    ./sys-modules/syncthing.nix
-    #./sys-modules/#systemd-timers.nix
-    ./sys-modules/tailscale.nix
-    ./sys-modules/tdarr.nix
-    ./sys-modules/teamviewer.nix
-    #./sys-modules/#untrunc-anthwlock.nix
-    ./sys-modules/users.nix
-    ./sys-modules/xdg-desktop-portal.nix
-    #./sys-modules/#xmrig.nix
-    #./sys-modules/#xserver.nix
-    ./sys-modules/waybar-mpris.nix
-    #./sys-modules/# whisperai.nix
-    #./sys-modules/# webdav.nix
-    ./sys-modules/wine.nix
+    ./modules/adwaita.nix
+    ./modules/alejandra.nix
+    ./modules/android.nix
+    ./modules/audio.nix # audio
+    ./modules/autologin.nix # 100%
+    ./modules/bash.nix
+    ./modules/bluetooth.nix # bluetooth
+    ./modules/boot.nix # configure kernel modules
+    #.modules/#borderlands2-fix.nix
+    ./modules/bottles.nix
+    ./modules/bisq.nix
+    ./modules/cachix.nix # cachix
+    ./modules/chromium.nix
+    #.modules/#comfyui.nix
+    ./modules/controller.nix
+    ./modules/coolercontrol.nix
+    #.modules/#cron.nix
+    #.modules/docker.nix
+    ./modules/dolphin.nix
+    ./modules/eigenwallet.nix
+    ./modules/fclones.nix
+    ./modules/filesystem.nix
+    ./modules/firefox.nix
+    ./modules/flatpak.nix
+    ./modules/fonts.nix
+    ./modules/ftp.nix
+    ./modules/gamemode.nix
+    ./modules/git.nix
+    ./modules/git-push-dotfiles.nix
+    ./modules/haveno.nix
+    ./modules/hostname.nix
+    ./modules/hdd-soft-shutdown.nix
+    ./modules/huge-pages.nix
+    ./modules/hypr.nix
+    ./modules/localisation.nix
+    #.modules/#lutris.nix
+    #.modules/#ollama.nix
+    ./modules/openrgb.nix
+    ./modules/polkit.nix
+    ./modules/prometheus.nix
+    ./modules/protonmail.nix
+    ./modules/protonvpn.nix
+    ./modules/monero.nix
+    ./modules/nixvim.nix
+    ./modules/nvidia.nix
+    #.-modules/#reload-usb.nix
+    ./modules/scanner.nix
+    ./modules/security.nix
+    ./modules/shadps4.nix
+    ./modules/signal.nix
+    ./modules/ssh.nix
+    ./modules/sshfs.nix
+    #.modules/star-rail.nix
+    ./modules/statix.nix
+    ./modules/steam.nix
+    ./modules/syncthing.nix
+    #.modules/#systemd-timers.nix
+    ./modules/tailscale.nix
+    ./modules/tdarr.nix
+    ./modules/teamviewer.nix
+    #.modules/#untrunc-anthwlock.nix
+    ./modules/users.nix
+    ./modules/xdg-desktop-portal.nix
+    #.modules/#xmrig.nix
+    #.modules/#xserver.nix
+    ./modules/waybar-mpris.nix
+    #.modules/# whisperai.nix
+    #.modules/# webdav.nix
+    ./modules/wine.nix
   ];
 
   security.sudo = {

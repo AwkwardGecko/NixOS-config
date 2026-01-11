@@ -10,33 +10,33 @@
   imports = [
     #./modules/applications.nix
     #./modules/cursor.nix
-    ./home-modules/beets.nix
-    ./home-modules/comfyui.nix
-    ./home-modules/diffusion.nix
-    #./home-modules/fastfetch.nix
-    ./home-modules/fish.nix
-    #./modules/fonts.nix
-    ./home-modules/gpg.nix
-    ./home-modules/git.nix
+    ./modules/beets.nix
+    ./modules/comfyui.nix
+    ./modules/diffusion.nix
+    #.modules/fastfetch.nix
+    ./modules/fish.nix
+    #.modules/fonts.nix
+    ./modules/gpg.nix
+    ./modules/git.nix
     #./modules/gtk.nix
-    ./home-modules/hypr.nix
-    ./home-modules/hyprpanel.nix
-    ./home-modules/hyprpaper.nix
+    ./modules/hypr.nix
+    ./modules/hyprpanel.nix
+    ./modules/hyprpaper.nix
     #./modules/hypridle.nix
-    ./home-modules/kitty.nix
+    ./modules/kitty.nix
     #./modules/lutris.nix
     #./modules/terminal.nix
     #./modules/mako.nix
-    ./home-modules/mangohud.nix
+    ./modules/mangohud.nix
     #./modules/neovim/neovim.nix
     #./modules/OpenRGB.nix
-    ./home-modules/ranger.nix
-    ./home-modules/star-rail.nix
-    ./home-modules/style.nix
+    ./modules/ranger.nix
+    ./modules/star-rail.nix
+    ./modules/style.nix
     #./modules/swaync.nix
-    ./home-modules/rofi.nix
-    ./home-modules/tmux.nix
-    ./home-modules/wallpaper.nix
+    ./modules/rofi.nix
+    ./modules/tmux.nix
+    ./modules/wallpaper.nix
     #./modules/waybar.nix
     #./modules/waybar/mechabar.nix
     #$./modules/xdg.nix
