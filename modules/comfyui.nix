@@ -23,7 +23,10 @@ let
     cd "$workdir"
 
     echo "[run-comfy] git pull…"
-    git pull --ff-only || echo "[run-comfy] pull failed—running local copy."
+    git pull origin master
+    /home/zozano/test-shell/.venv/bin/python -s -m pip install -r /home/zozano/test-shell/ComfyUI/requirements.txt
+    pip install diffusers
+    #|| echo "[run-comfy] pull failed—running local copy."
 
     nix-shell ../shell.nix --run "
       python main.py \
