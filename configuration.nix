@@ -48,6 +48,7 @@
     ./modules/hdd-soft-shutdown.nix
     ./modules/huge-pages.nix
     ./modules/hyprland-system.nix
+    ./modules/jellyfin-media-player.nix
     ./modules/localisation.nix
     #.modules/#lutris.nix
     #.modules/#ollama.nix
