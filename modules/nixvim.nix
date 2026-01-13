@@ -2,7 +2,7 @@
 {
   programs.nixvim = {
     enable = true;
-    colorscheme = "gruvbox";
+    colorschemes.gruvbox.enable = true;
     plugins = {
       lualine.enable = true;
       treesitter.enable = true;
