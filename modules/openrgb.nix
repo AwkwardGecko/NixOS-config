@@ -12,7 +12,7 @@
   services.hardware.openrgb = {
     enable = true;
     motherboard = "amd";
-    startupProfile = "Default";
+    #startupProfile = "Default";
   };
 
   systemd.user.services.openrgb-autostart = {
