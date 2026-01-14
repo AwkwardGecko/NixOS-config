@@ -9,11 +9,12 @@
   ...
 }:
 {
-  services.hardware.openrgb = {
-    enable = true;
-    motherboard = "amd";
+  services.hardware.openrgb.enable = true; 
+  #{
+  #  enable = true;
+    #motherboard = "amd";
     #startupProfile = "Default";
-  };
+  #};
 
   # systemd.user.services.openrgb-autostart = {
   #   description = "OpenRGB minimized with profile";
