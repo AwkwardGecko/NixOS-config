@@ -9,10 +9,10 @@
   ...
 }:
 {
-  environment.systemPackages = with pkgs; [
-	openrgb
-  ];
-  #services.hardware.openrgb.enable = true; 
+  #environment.systemPackages = with pkgs; [
+	#openrgb
+  #];
+  services.hardware.openrgb.enable = true; 
   #{
   #  enable = true;
     #motherboard = "amd";

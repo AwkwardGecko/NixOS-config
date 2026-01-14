@@ -30,7 +30,7 @@
         "signal-desktop"
         "steam -silent"
         "coolercontrol"
-	"openrgb"
+	#"openrgb"
         #"hyprpaper &"
         #"hyprpanel"
         #"$steam_friends"
