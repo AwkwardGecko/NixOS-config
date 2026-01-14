@@ -10,7 +10,6 @@
 }:
 {
   
-  hardware.firmwareCompression = "none";
 
   boot.loader = {
     systemd-boot.enable = true;
@@ -23,7 +22,6 @@
 
   boot.initrd.kernelModules = [
     "usbhid"
-    "btusb"
     "joydev"
   ];
 }
