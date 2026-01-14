@@ -22,6 +22,5 @@
 
   boot.initrd.kernelModules = [
     "usbhid"
-    "joydev"
   ];
 }
