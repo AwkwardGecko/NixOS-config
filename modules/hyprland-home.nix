@@ -30,7 +30,7 @@
         "signal-desktop"
         "steam -silent"
         "coolercontrol"
-	#"openrgb"
+	"openrgb --startminimized -p Zozano"
         #"hyprpaper &"
         #"hyprpanel"
         #"$steam_friends"
