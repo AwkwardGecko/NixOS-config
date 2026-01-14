@@ -27,9 +27,10 @@
       #"$steam_friends" = "sleep 60 && steam steam://open/friends";
 
       exec-once = [
-        "sleep 3 && signal-desktop"
-        "sleep 1 && steam -silent"
-        "sleep 1 && coolercontrol"
+        "signal-desktop"
+        "steam -silent"
+        "coolercontrol"
+	"openrgb"
         #"hyprpaper &"
         #"hyprpanel"
         #"$steam_friends"
