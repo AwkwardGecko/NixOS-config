@@ -6,13 +6,13 @@
 }:
 {
   services.hyprpaper = {
-    enable = false;
+    enable = true;
     settings = {
       preload = [ "~/Pictures/wallpaper/1.jpg" ];
       wallpaper = [ ",~/Pictures/wallpaper/1.jpg" ];
     };
   };
 
-  programs.mpvpaper.enable = true;
+  #programs.mpvpaper.enable = true;
 
 }
