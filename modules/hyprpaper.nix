@@ -12,7 +12,4 @@
       wallpaper = [ ",~/Pictures/wallpaper/1.jpg" ];
     };
   };
-
-  #programs.mpvpaper.enable = true;
-
 }
