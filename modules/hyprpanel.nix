@@ -63,6 +63,8 @@
       #   api_key = "cd8270d44cfa4514b6145250260801";
       # };
 
+	theming.general.applyWallpapers = false;
+
       menus = {
         clock = {
           time = {
