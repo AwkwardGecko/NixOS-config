@@ -43,6 +43,8 @@
         bar.transparent = true;
       };
 
+	wallpaper.enable = false;
+
       bar = {
         tray = {
           enable = true;
