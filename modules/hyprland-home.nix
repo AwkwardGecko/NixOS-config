@@ -112,6 +112,7 @@
         "force_default_wallpaper" = -1;
         "disable_hyprland_logo" = true;
         "enable_anr_dialog" = false;
+	"vfr" = true;
       };
 
       bind = [
