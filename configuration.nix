@@ -61,7 +61,7 @@
     ./modules/nixvim.nix
     ./modules/nvidia.nix
     #.-modules/#reload-usb.nix
-    ./modules/scanner.nix
+    #./modules/scanner.nix
     ./modules/security.nix
     ./modules/shadps4.nix
     ./modules/signal.nix
