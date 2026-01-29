@@ -194,10 +194,7 @@
         ",XF86AudioPrev, exec, playerctl previous"
         ",XF86AudioPlay, exec, playerctl play-pause"
       ];
-	windowrule = {
-		
-	};
-	#
+
 	windowrule = [
 		"workspace 2, match:class ^(steam)$, match:title ^(Friends)$" # open steamfriends on workspace 2
 	 	"workspace 3, match:class ^(Terraria)$, match:title ^(Terraria)$" #Terraria
