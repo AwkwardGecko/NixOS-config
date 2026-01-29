@@ -72,14 +72,14 @@
         };
 
         blur = {
-          enabled = true;
+          enabled = false;
           size = 3;
           passes = 1;
           vibrancy = 0.1696;
         };
       };
 
-      animations.enabled = true;
+      animations.enabled = false;
 
       cursor.inactive_timeout = 0;
 
@@ -95,10 +95,10 @@
         "workspaces,1,7,default,slidevert"
       ];
 
-      dwindle = {
-        pseudotile = true;
-        preserve_split = true;
-      };
+      # dwindle = {
+      #   pseudotile = true;
+      #   preserve_split = true;
+      # };
 
       master = {
         new_status = false; # new windows go to stack
