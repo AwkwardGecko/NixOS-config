@@ -194,27 +194,24 @@
         ",XF86AudioPrev, exec, playerctl previous"
         ",XF86AudioPlay, exec, playerctl play-pause"
       ];
+	windowrule = {
+		
+	};
 	#
- #      windowrulev2 = [
- #        "workspace 2, class:^(steam)$, title:^(Friends)$" # open steamfriends on workspace 2
-	# "workspace 3, class:^(Terraria)$, title:^(Terraria)$" #Terraria
- #        "workspace 5, class:^(steam_app_.*|starrail.exe)$" # send games to workspace 5
- #        #"immediate, class:^(steam_app_.*|starrail.exe)$" # No animation delay
- #        #"noanim, class:^(steam_app_.*|starrail.exe)$" # No animation
- #        #"rounding 0, class:^(steam_app_.*|starrail.exe)$" # Don't round corners
- #        "suppressevent maximize, class:.*" # Prevents maximize
- #        #"idleinhibit always, class:^(steam_app_.*|starrail.exe)$" # prevent games from sleep
-	#
- #        "float, class:^(pavucontrol|nm-connection-editor)$" # Floating windows
- #        #"opacity 1.0 override 1.0, class:^(Steam)$" # Turn opacity off
- #        "nofocus, class:^$, title:^$, wayland:1, floating:1, fullscreen:0, pinned:0" # prevents hidden windows from being fuckwits
-	#
- #        "float, class:^(sysupdate)$" # update window top right
- #        "size 900 400, class:^(sysupdate)$" # window size
- #        "move 1650 80, class:^(sysupdate)$" # window position
- #        "noanim, class:^(sysupdate)$"
- #        "noblur, class:^(sysupdate)$"
- #      ];
+	windowrule = [
+		"workspace 2, match:class ^(steam)$, match:title ^(Friends)$" # open steamfriends on workspace 2
+	 	"workspace 3, match:class ^(Terraria)$, match:title ^(Terraria)$" #Terraria
+         	
+		"workspace 5, immediate on, no_anim on, rounding 0, idle_inhibit always, match:class ^(steam_app_.*|starrail.exe)$"
+         	
+		#"suppressevent maximize, class:.*" # Prevents maximize
+
+        	"float on, match:class ^(pavucontrol|nm-connection-editor)$" # Floating windows
+        	"opacity 1.0 override 1.0 override, match:class ^(Steam)$" # Turn opacity off
+        	"no_focus on, match:class ^$, match:title ^$, match:xwayland 0, match:float 1, match:fullscreen 0, match:pin 0" # prevents hidden windows from being fuckwits
+
+        	"float on, size 900 400, move 1650 80, no_anim on, no_blur on, match:class ^(sysupdate)$" # update window top right
+      ];
     };
   };
 }
