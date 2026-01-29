@@ -197,6 +197,7 @@
 
       windowrulev2 = [
         "workspace 2, class:^(steam)$, title:^(Friends)$" # open steamfriends on workspace 2
+	"workspace 3, class:^(Terraria)$, title:^(Terraria)$" #Terraria
         "workspace 5, class:^(steam_app_.*|starrail.exe)$" # send games to workspace 5
         #"immediate, class:^(steam_app_.*|starrail.exe)$" # No animation delay
         #"noanim, class:^(steam_app_.*|starrail.exe)$" # No animation
