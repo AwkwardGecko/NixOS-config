@@ -10,9 +10,8 @@
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, nixvim, ... }:
-    nixosConfigurations = {
-      z-nixos = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+    nixosConfigurations.z-nixos = nixpkgs.lib.nixosSystem {
+	system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
@@ -27,6 +26,5 @@
           }
         ];
       };
-    };
   };
 }

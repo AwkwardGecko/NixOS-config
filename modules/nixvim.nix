@@ -4,7 +4,12 @@
     enable = true;
     colorschemes.gruvbox.enable = true;
     opts = {
-    	number = true;
+    	tabstop = 2;
+	shiftwidth = 2;
+	softtabstop = 2;
+	smartindent = true;
+	expandtab = true;
+	number = true;
 	relativenumber = true;
 	wrap = false;
 	clipboard = "unnamedplus";
