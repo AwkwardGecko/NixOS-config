@@ -10,12 +10,9 @@
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, nixvim, ... }:
-  let
-    system = "x86_64-linux";
-  in {
     nixosConfigurations = {
       z-nixos = nixpkgs.lib.nixosSystem {
-        inherit system;
+        system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
@@ -23,11 +20,6 @@
           nixvim.nixosModules.nixvim
           {
             nixpkgs.config.allowUnfree = true;
-
-            environment.sessionVariables = {
-              XDG_CURRENT_DESKTOP = "Hyprland";
-              XDG_SESSION_TYPE = "wayland";
-            };
 
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
