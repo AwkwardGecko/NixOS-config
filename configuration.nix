@@ -257,6 +257,7 @@
     # python312Packages.libpcap   # Python bindings for libpcap (next-gen testing?)
     python312Packages.opencv-python
     qbittorrent # BitTorrent client
+    qt5.qtwayland
     rclone # Sync with cloud storage
     #rustc                       # Rust compiler
     #rustup                      # Rust toolchain manager (used by reliquary-archiver)
