@@ -199,7 +199,7 @@
     goverlay
     gparted # Partitioning tool
     gperftools
-    gpu-burn
+    #gpu-burn
     gtk3 # GNOME GUI toolkit v3
     gtkd # D bindings for GTK
     icu # Unicode support libraries
