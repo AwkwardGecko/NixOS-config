@@ -9,7 +9,7 @@
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, ... }: {
     nixosConfigurations.z-nixos = nixpkgs.lib.nixosSystem {
 	system = "x86_64-linux";
         specialArgs = { inherit inputs; };
