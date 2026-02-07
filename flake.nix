@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:Nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -21,8 +21,19 @@
         home-manager.nixosModules.home-manager
         nixvim.nixosModules.nixvim
         {
+          imports = [ comfyui-nix.nixosModules.default ];
           nixpkgs.overlays = [ comfyui-nix.overlays.default ];
-          environment.systemPackages = [ pkgs.comfy-ui ];
+          services.comfyui = {
+            enable = true;
+            cuda = true;
+            enableManager = true;
+            port = 8188;
+            listenAddress = "127.0.0.1";
+            dataDir = "/var/lib/comfyui";
+            openFirewall = false;
+            #extraArgs = [ "--lowvram" ];
+            # environment = {};
+          }
 
           nixpkgs.config.allowUnfree = true;
           home-manager.useGlobalPkgs = true;
