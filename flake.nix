@@ -21,19 +21,19 @@
         home-manager.nixosModules.home-manager
         nixvim.nixosModules.nixvim
         {
-          imports = [ comfyui-nix.nixosModules.default ];
-          nixpkgs.overlays = [ comfyui-nix.overlays.default ];
-          services.comfyui = {
-            enable = true;
-            cuda = true;
-            enableManager = true;
-            port = 8188;
-            listenAddress = "127.0.0.1";
-            dataDir = "/var/lib/comfyui";
-            openFirewall = false;
-            #extraArgs = [ "--lowvram" ];
-            # environment = {};
-          };
+          # imports = [ comfyui-nix.nixosModules.default ];
+          # nixpkgs.overlays = [ comfyui-nix.overlays.default ];
+          # services.comfyui = {
+          #   enable = true;
+          #   cuda = true;
+          #   enableManager = true;
+          #   port = 8188;
+          #   listenAddress = "127.0.0.1";
+          #   dataDir = "/var/lib/comfyui";
+          #   openFirewall = false;
+          #   #extraArgs = [ "--lowvram" ];
+          #   # environment = {};
+          # };
 
           nixpkgs.config.allowUnfree = true;
           home-manager.useGlobalPkgs = true;
