@@ -33,7 +33,7 @@
             openFirewall = false;
             #extraArgs = [ "--lowvram" ];
             # environment = {};
-          }
+          };
 
           nixpkgs.config.allowUnfree = true;
           home-manager.useGlobalPkgs = true;
