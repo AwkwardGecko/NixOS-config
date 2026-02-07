@@ -227,6 +227,7 @@
     mesa # Open-source graphics drivers
     nettools # Old-school network tools (ifconfig, etc.)
     nixd # Nix language server (LSP)
+    nix-prefetch-github
     nixfmt
     nodejs # Node.js runtime
     nomacs # image viewer
