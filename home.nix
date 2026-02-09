@@ -25,7 +25,7 @@
     #./modules/hyprpaper.nix
     #./modules/hypridle.nix
     ./modules/kitty.nix
-    #./modules/lutris.nix
+    ./modules/lutris.nix
     #./modules/terminal.nix
     #./modules/mako.nix
     ./modules/mangohud.nix
