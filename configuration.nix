@@ -281,13 +281,13 @@
     wget # File downloader
     wine # Windows compatibility layer
     xmrig
-    xorg.libX11 # Core X11 library
-    xorg.libXcomposite # Compositing support for X11
-    xorg.libXdamage # Damage tracking for X11
-    xorg.libXext # Misc X11 extensions
-    xorg.libXfixes # X11 fixes extension
-    xorg.libXrandr # X11 RandR extension (screen resizing)
-    xorg.libxcb # X protocol C-language Binding
+    libX11 # Core X11 library
+    libXcomposite # Compositing support for X11
+    libXdamage # Damage tracking for X11
+    libXext # Misc X11 extensions
+    libXfixes # X11 fixes extension
+    libXrandr # X11 RandR extension (screen resizing)
+    libxcb # X protocol C-language Binding
     yt-dlp # YouTube downloader
     zlib # Compression lib (used by Stable Diffusion & reliquary launcher)
   ];
