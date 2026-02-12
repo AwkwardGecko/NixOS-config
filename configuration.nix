@@ -208,6 +208,15 @@
     inotify-tools # check what is making folders
     #koboldcpp                   # Local LLM interface for KoboldAI
     jq
+    
+
+    libX11 # Core X11 library
+    libXcomposite # Compositing support for X11
+    libXdamage # Damage tracking for X11
+    libXext # Misc X11 extensions
+    libXfixes # X11 fixes extension
+    libXrandr # X11 RandR extension (screen resizing)
+    libxcb # X protocol C-language Binding
     libcap # test
     libGL # OpenGL library
     libglvnd
@@ -215,13 +224,11 @@
     libglvnd # OpenGL Vendor-Neutral Dispatch library (Stable Diffusion dependency)
     libheif # HEIF image support
     libnotify
-    #libpcap                     # Packet capture library (used in Fribbels Honkai Star Rail Optimizer)
     libsecret # Secret storage (GNOME keyring)
     libxkbcommon # Keyboard layout handling (Wayland/X)
     libz
     lld # LLVM linker
     llvmPackages.bintools # LLVM toolchain binaries (e.g., ar, nm)
-    #lutris                      # Game manager (especially for Wine games)
     lsof
     lynis # security auditing
     mesa # Open-source graphics drivers
@@ -281,13 +288,7 @@
     wget # File downloader
     wine # Windows compatibility layer
     xmrig
-    libX11 # Core X11 library
-    libXcomposite # Compositing support for X11
-    libXdamage # Damage tracking for X11
-    libXext # Misc X11 extensions
-    libXfixes # X11 fixes extension
-    libXrandr # X11 RandR extension (screen resizing)
-    libxcb # X protocol C-language Binding
+
     yt-dlp # YouTube downloader
     zlib # Compression lib (used by Stable Diffusion & reliquary launcher)
   ];
