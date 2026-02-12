@@ -40,6 +40,7 @@
     dxvk
     nvfancontrol
     lm_sensors
+    mesa-demos #glxinfo # Collection of demos and test programs for OpenGL and Mesa
   ];
 
   # services.xserver.deviceSection = ''
