@@ -150,6 +150,7 @@
 
   environment.systemPackages = with pkgs; [
     age # generate keypair
+    audacity
     alejandra # format nix files
     alsa-lib # ALSA sound library
     atk # Accessibility toolkit (GNOME dependencies)
