@@ -14,6 +14,7 @@
     winetricks
 
     # native wayland support (unstable)
-    wineWowPackages.stable
+    wineWow64Packages
+    #wineWowPackages.stable
   ];
 }
