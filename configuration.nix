@@ -83,7 +83,7 @@
     ./modules/waybar-mpris.nix
     #.modules/# whisperai.nix
     #.modules/# webdav.nix
-    ./modules/wine.nix
+    #./modules/wine.nix
   ];
 
   security.sudo = {
