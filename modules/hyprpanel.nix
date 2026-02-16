@@ -2,7 +2,7 @@
 {
   programs.hyprpanel = {
     enable = true;
-    systemd.enable = true;
+    #systemd.enable = true;
 
     settings = {
       # Layouts belong under `layout.*`
