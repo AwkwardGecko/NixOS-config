@@ -7,7 +7,7 @@
 {
   programs.hyprpanel = {
     enable = true;
-    systemd.enable = true;
+    #systemd.enable = true;
     settings = {
 
       bar.layouts = {
