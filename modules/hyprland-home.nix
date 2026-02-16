@@ -30,9 +30,9 @@
         "signal-desktop"
         "steam -silent"
         "coolercontrol"
-	"openrgb --startminimized -p Zozano"
+	      "openrgb --startminimized -p Zozano"
         #"hyprpaper &"
-        "hyprpanel"
+        #"hyprpanel"
         #"$steam_friends"
         #"bash $HOME/.local/bin/video-wallpapers.sh"
       ];

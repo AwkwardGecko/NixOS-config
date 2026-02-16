@@ -2,7 +2,7 @@
 {
   programs.hyprpanel = {
     enable = true;
-
+    systemd.enable = true;
     settings = {
       layout.bar.layouts = {
         "*" = {
