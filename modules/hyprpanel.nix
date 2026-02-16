@@ -55,5 +55,11 @@
       #menus.dashboard.stats.enable_gpu = true; # key path per docs :contentReference[oaicite:3]{index=3}
     };
   };
+
+systemd.user.services.hyprpanel.Service = {
+  Restart = lib.mkForce "always";
+  RestartSec = lib.mkForce "1s";
+};
+
 }
 
