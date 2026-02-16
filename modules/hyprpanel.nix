@@ -1,30 +1,16 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+{ config, lib, pkgs, ... }:
 {
   programs.hyprpanel = {
     enable = true;
-    #systemd.enable = true;
-    settings = {
+    systemd.enable = true;
 
-      bar.layouts = {
+    settings = {
+      # Layouts belong under `layout.*`
+      layout.bar.layouts = {
         "*" = {
-          left = [
-            "volume"
-            "media"
-            "workspaces"
-          ];
+          left = [ "volume" "media" "workspaces" ];
           middle = [ "clock" ];
-          right = [
-            "systray"
-            "bluetooth"
-            "notifications"
-            "dashboard"
-          ];
-          # unused: "network" "windowtitle"
+          right = [ "systray" "bluetooth" "notifications" "dashboard" ];
         };
       };
 
@@ -37,53 +23,39 @@
       theme = {
         font = {
           name = "JetBrainsMono Nerd Font";
-          #style = "Regular";
+          # Docs/examples tend to use px strings, e.g. "16px" :contentReference[oaicite:2]{index=2}
           size = "1.2rem";
         };
         bar.transparent = true;
       };
 
-	wallpaper.enable = false;
+      wallpaper.enable = false;
+      theming.general.applyWallpapers = false;
 
-      bar = {
-        tray = {
-          enable = true;
-          iconSize = 22;
-        };
-        launcher.autoDetectIcon = true;
-        workspaces.show_icons = true;
-        #dashboard.icon = "󱄅";
-        #battery.label = true;
-        bluetooth.label = false;
-        clock.format = "%H:%M";
+      # Use attribute-path style so we never redefine `bar = {...}`
+      bar.launcher.autoDetectIcon = true;
+      bar.workspaces.show_icons = true;
+      bar.bluetooth.label = false;
+      bar.clock.format = "%H:%M";
+
+      # Not sure `bar.tray.*` is a real key in current docs; keep if you know it works.
+      bar.tray.enable = true;
+      bar.tray.iconSize = 22;
+
+      menus.clock.time = {
+        military = true;
+        hideSeconds = true;
       };
 
-      # modules.weather = {
-      #   enable = true;
-      #   location = "Port Macquarie, NSW, Australia";
-      #   units = "metric";
-      #   api_key = "cd8270d44cfa4514b6145250260801";
-      # };
-
-	theming.general.applyWallpapers = false;
-
-      menus = {
-        clock = {
-          time = {
-            military = true;
-            hideSeconds = true;
-          };
-          weather = {
-            unit = "metric";
-            key = "cd8270d44cfa4514b6145250260801";
-            location = "-31.43127,152.908131";
-          };
-        };
-        dashboard = {
-          directories.enabled = false;
-          enable_gpu = true;
-        };
+      menus.clock.weather = {
+        unit = "metric";
+        key = "cd8270d44cfa4514b6145250260801";
+        location = "-31.43127,152.908131";
       };
+
+      menus.dashboard.directories.enabled = false;
+      menus.dashboard.stats.enable_gpu = true; # key path per docs :contentReference[oaicite:3]{index=3}
     };
   };
 }
+
