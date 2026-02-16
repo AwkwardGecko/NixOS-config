@@ -2,10 +2,8 @@
 {
   programs.hyprpanel = {
     enable = true;
-    #systemd.enable = true;
 
     settings = {
-      # Layouts belong under `layout.*`
       layout.bar.layouts = {
         "*" = {
           left = [ "volume" "media" "workspaces" ];
