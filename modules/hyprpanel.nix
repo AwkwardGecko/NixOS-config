@@ -56,10 +56,45 @@
     };
   };
 
-systemd.user.services.hyprpanel.Service = {
-  Restart = lib.mkForce "always";
-  RestartSec = lib.mkForce "1s";
+home.packages = [ pkgs.socat ];
+
+home.file.".local/bin/hyprpanel-hotplug-restart" = {
+  executable = true;
+  text = ''
+    #!${pkgs.bash}/bin/bash
+    set -euo pipefail
+    shopt -s nullglob
+
+    socks=( "$XDG_RUNTIME_DIR"/hypr/*/.socket2.sock )
+    sock="''${socks[0]:-}"
+    [[ -S "$sock" ]] || exit 0
+
+    ${pkgs.socat}/bin/socat -u "UNIX-CONNECT:$sock" - | while IFS= read -r line; do
+      case "$line" in
+        monitoradded*|monitorremoved*)
+          ${pkgs.systemd}/bin/systemctl --user restart hyprpanel.service || true
+          ;;
+      esac
+    done
+  '';
 };
+
+systemd.user.services.hyprpanel-hotplug-restart = {
+  Unit = {
+    Description = "Restart HyprPanel on monitor hotplug";
+    After = [ "graphical-session.target" ];
+    PartOf = [ "graphical-session.target" ];
+  };
+  Service = {
+    ExecStart = "%h/.local/bin/hyprpanel-hotplug-restart";
+    Restart = "always";
+    RestartSec = "1s";
+  };
+  Install = {
+    WantedBy = [ "graphical-session.target" ];
+  };
+};
+
 
 }
 
