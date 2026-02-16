@@ -37,8 +37,8 @@
       bar.clock.format = "%H:%M";
 
       # Not sure `bar.tray.*` is a real key in current docs; keep if you know it works.
-      bar.tray.enable = true;
-      bar.tray.iconSize = 22;
+      #bar.tray.enable = true;
+      #bar.tray.iconSize = 22;
 
       menus.clock.time = {
         military = true;
