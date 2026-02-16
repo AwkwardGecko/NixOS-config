@@ -4,7 +4,7 @@
     enable = true;
     systemd.enable = true;
     settings = {
-      layout.bar.layouts = {
+      bar.layouts = {
         "*" = {
           left = [ "volume" "media" "workspaces" ];
           middle = [ "clock" ];
