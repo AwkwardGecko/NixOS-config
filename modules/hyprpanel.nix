@@ -31,10 +31,12 @@
       theming.general.applyWallpapers = false;
 
       # Use attribute-path style so we never redefine `bar = {...}`
-      bar.launcher.autoDetectIcon = true;
-      bar.workspaces.show_icons = true;
-      bar.bluetooth.label = false;
-      bar.clock.format = "%H:%M";
+      bar = {
+        launcher.autoDetectIcon = true;
+        workspaces.show_icons = true;
+        bluetooth.label = false;
+        clock.format = "%H:%M";
+      };
 
       # Not sure `bar.tray.*` is a real key in current docs; keep if you know it works.
       #bar.tray.enable = true;
