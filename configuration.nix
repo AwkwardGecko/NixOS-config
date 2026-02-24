@@ -255,14 +255,14 @@
     proton-pass
     pyenv # Python version manager
     python3
-    python311 # Python 3.11 interpreter
-    python311Packages.pyyaml
+    #python311 # Python 3.11 interpreter
+    #python311Packages.pyyaml
     python312Packages.numpy
-    python311Packages.scipy
-    python311Packages.pip # Python 3.11 pip installer
-    python311Packages.pyasyncore # Async networking module for Python 3.11
-    python311Packages.setuptools
-    python311Packages.wheel
+    #python311Packages.scipy
+    #python311Packages.pip # Python 3.11 pip installer
+    #python311Packages.pyasyncore # Async networking module for Python 3.11
+    #python311Packages.setuptools
+    #python311Packages.wheel
     #python311Packages.torch
     # python312Packages.libpcap   # Python bindings for libpcap (next-gen testing?)
     python312Packages.opencv-python
