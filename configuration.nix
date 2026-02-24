@@ -164,10 +164,10 @@
     btop
     btrfs-progs # Btrfs filesystem tools
     cairo # 2D graphics library
-    cargo # Rust package manager
-    cargo-c # Build C-style shared libs from Rust
-    cargo-deb # Generate .deb packages from Rust projects
-    cargo-rr # Run Rust programs under rr debugger
+    #cargo # Rust package manager
+    #cargo-c # Build C-style shared libs from Rust
+    #cargo-deb # Generate .deb packages from Rust projects
+    #cargo-rr # Run Rust programs under rr debugger
     clinfo # Lists OpenCL devices
     cmake
     compose2nix
