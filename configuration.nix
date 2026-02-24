@@ -71,6 +71,7 @@
     #.modules/star-rail.nix
     ./modules/statix.nix
     ./modules/steam.nix
+    ./modules/stylix.nix
     ./modules/syncthing.nix
     #.modules/#systemd-timers.nix
     ./modules/tailscale.nix
