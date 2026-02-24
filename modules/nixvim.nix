@@ -37,13 +37,14 @@
         nixGrammars = true;
       };
   
-    lsp = {
-    	enable = true;
-	    autoLoad = true;
+      lsp = {
+    	  enable = true;
+	      autoLoad = true;
 
-      servers = {
-		    nil_ls.enable = true;
-	    };
+        servers = {
+		      nil_ls.enable = true;
+	      };
+      };
     };
   };
-};}
+}
