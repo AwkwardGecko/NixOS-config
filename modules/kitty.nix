@@ -22,7 +22,7 @@
       shell = "fish";
 
       # Look
-      background_opacity = "0.8";
+      #background_opacity = "0.8";
       # background = "#1a1a1a";
 
       # Cursor
