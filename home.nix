@@ -10,7 +10,7 @@
   imports = [
     #./modules/applications.nix
     #./modules/cursor.nix
-    ./modules/beets.nix
+    #./modules/beets.nix
     ./modules/comfyui.nix
     ./modules/diffusion.nix
     #.modules/fastfetch.nix
