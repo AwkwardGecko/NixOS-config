@@ -107,7 +107,7 @@
 
   # Automatic cleanup
   nix = {
-    gc = {
+    gc = { # garbage collection
       automatic = true;
       dates = "daily";
       options = "--delete-older-than 7d";
@@ -155,7 +155,7 @@
     alejandra # format nix files
     alsa-lib # ALSA sound library
     atk # Accessibility toolkit (GNOME dependencies)
-    bazel # Google's build tool (used for TensorFlow etc.)
+    # bazel # Google's build tool (used for TensorFlow etc.)
     bc
     #binutils_nogold            # Binutils without the gold linker
     bootiso # Create bootable USB drives from ISO
@@ -206,12 +206,8 @@
     gtkd # D bindings for GTK
     icu # Unicode support libraries
     iproute2 # Network tools (replacement for net-tools)
-    #imv                         # Image viewer
     inotify-tools # check what is making folders
-    #koboldcpp                   # Local LLM interface for KoboldAI
     jq
-    
-
     libX11 # Core X11 library
     libXcomposite # Compositing support for X11
     libXdamage # Damage tracking for X11
@@ -255,16 +251,7 @@
     proton-pass
     pyenv # Python version manager
     python3
-    #python311 # Python 3.11 interpreter
-    #python311Packages.pyyaml
     python312Packages.numpy
-    #python311Packages.scipy
-    #python311Packages.pip # Python 3.11 pip installer
-    #python311Packages.pyasyncore # Async networking module for Python 3.11
-    #python311Packages.setuptools
-    #python311Packages.wheel
-    #python311Packages.torch
-    # python312Packages.libpcap   # Python bindings for libpcap (next-gen testing?)
     python312Packages.opencv-python
     qbittorrent # BitTorrent client
     qt5.qtwayland
@@ -279,7 +266,7 @@
     strawberry # Music player
     usbutils
     udev # Device manager for the Linux kernel
-    unigine-superposition       # GPU benchmarking tool
+    # unigine-superposition - don't use. run .exe through steam for Vulkan support
     unzip
     upower # Power management daemon (dependency for Vivaldi maybe)
     uv # Fast Python package manager
