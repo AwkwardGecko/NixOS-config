@@ -10,9 +10,9 @@
 }:
 {
 
-  home.packages = with pkgs; [
-    jetbrains-mono
-  ];
+  # home.packages = with pkgs; [
+  #   jetbrains-mono
+  # ];
 
   programs.kitty = {
     enable = true;
