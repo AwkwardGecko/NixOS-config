@@ -3,7 +3,7 @@
   stylix = {
     enable = true;
     
-  #base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
     
     fonts = {
       serif = {
@@ -17,8 +17,8 @@
       };
 
       monospace = {
-        package = pkgs.dejavu_fonts;
-        name = "DejaVu Sans Mono";
+        package = pkgs.jetbrains-mono;
+        name = "Jetbrains Mono";
       };
 
       emoji = {
