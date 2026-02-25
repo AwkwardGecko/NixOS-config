@@ -14,14 +14,9 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    import-tree = {
-      url = "github:vic/import-tree";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, comfyui-nix, stylix, import-tree, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, comfyui-nix, stylix, ... }: {
     nixosConfigurations.z-nixos = nixpkgs.lib.nixosSystem {
 	    system = "x86_64-linux";
       specialArgs = { inherit inputs; };
