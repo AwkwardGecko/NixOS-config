@@ -28,7 +28,7 @@
 
       packages = [
         pkgs.jetbrains-mono
-        pkgs.nerd-fonts.jerbrains-mono
+        pkgs.nerd-fonts.jetbrains-mono
       ];
     };
 
