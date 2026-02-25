@@ -18,17 +18,22 @@
       };
 
       monospace = {
-        #package = pkgs.jetbrains-mono;
-        name = "JetBrainsMono Nerd Font";
+        package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
+        name = "JetBrainsMono Nerd Font Mono";
       };
 
       emoji = {
         package = pkgs.noto-fonts-color-emoji;
         name = "Noto Color Emoji";
       };
-
-
     };
+
+      cursor = {
+        package = pkgs.bibata-cursors;
+        name = "Bibata-Modern-Ice";
+      };
+
+    targets.hyperpanel.enable = false;
 
     #image = pkgs.fetchurl {
     #  url = "https://getwallpapers.com/wallpaper/full/1/4/3/523784.jpg";
