@@ -29,8 +29,12 @@
     };
 
     cursor = {
-      package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Classic";
+      #package = pkgs.bibata-cursors;
+      #name = "Bibata-Modern-Classic";
+      
+      package = pkgs.kdePackages.breeze;
+      name = "Breeze_Snow";
+      
       size = 16;
     };
 
