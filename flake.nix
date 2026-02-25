@@ -31,7 +31,7 @@
         home-manager.nixosModules.home-manager
         nixvim.nixosModules.nixvim
         stylix.nixosModules.stylix
-        import-tree.nixosModules.import-tree
+        #import-tree.nixosModules.import-tree
         {
           # imports = [ comfyui-nix.nixosModules.default ];
           # nixpkgs.overlays = [ comfyui-nix.overlays.default ];
