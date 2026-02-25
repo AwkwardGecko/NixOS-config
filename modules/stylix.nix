@@ -25,6 +25,11 @@
         package = pkgs.noto-fonts-color-emoji;
         name = "Noto Color Emoji";
       };
+
+      packages = [
+        pkgs.jetbrains-mono
+        pkgs.nerd-fonts.jerbrains-mono
+      ];
     };
 
     #image = pkgs.fetchurl {
