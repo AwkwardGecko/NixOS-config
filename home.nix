@@ -64,11 +64,11 @@
     __GLX_VENDOR_LIBRARY_NAME = "nvidia"; # Tells GLVND (OpenGL vendor dispatcher) to use Nvidia’s driver instead of Mesa’s.
 
     # Wine / Proton
-    WINE_FULLSCREEN_FOCUS_MODE = 1; # Lets Wine maintain focus properly when alt-tabbing fullscreen games under Wayland.
+    #WINE_FULLSCREEN_FOCUS_MODE = 1; # Lets Wine maintain focus properly when alt-tabbing fullscreen games under Wayland.
 
     # Portals & theming (Wayland-friendly file pickers, etc.)
-    GTK_USE_PORTAL = 1;
-    QT_QPA_PLATFORMTHEME = "qt5ct";
+    #GTK_USE_PORTAL = 1;
+    #QT_QPA_PLATFORMTHEME = "qt5ct";
 
     # Pipewire
     SDL_AUDIODRIVER = "pipewire";
