@@ -28,15 +28,15 @@
       };
     };
 
-    cursor = {
-      #package = pkgs.bibata-cursors;
-      #name = "Bibata-Modern-Classic";
-      
-      package = pkgs.kdePackages.breeze;
-      name = "Breeze_Snow";
-      
-      size = 16;
-    };
+    # cursor = {
+    #   #package = pkgs.bibata-cursors;
+    #   #name = "Bibata-Modern-Classic";
+    #   
+    #   package = pkgs.kdePackages.breeze;
+    #   name = "Breeze_Snow";
+    #   
+    #   size = 16;
+    # };
 
     #targets.hyperpanel.enable = false;
 
