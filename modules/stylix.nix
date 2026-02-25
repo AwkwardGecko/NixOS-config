@@ -26,10 +26,7 @@
         name = "Noto Color Emoji";
       };
 
-      packages = [
-        #pkgs.jetbrains-mono
-        pkgs.nerd-fonts.jetbrains-mono
-      ];
+
     };
 
     #image = pkgs.fetchurl {
