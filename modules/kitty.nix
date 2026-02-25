@@ -26,8 +26,8 @@
       # background = "#1a1a1a";
 
       # Cursor
-      cursor_shape = "beam";
-      cursor_blink_interval = 0;
+      #cursor_shape = "beam";
+      #cursor_blink_interval = 0;
 
       # Scrollback
       scrollback_lines = 20000;
@@ -48,12 +48,12 @@
       sync_to_monitor = "yes";
     };
 
-    font = {
+    #font = {
       #name = "JetBrains Mono";
       #name = "JetBrainsMono Nerd Font";
-      size = 12;
-    };
+      #size = 12;
+    #};
 
-    themeFile = "GruvboxMaterialDarkMedium";
+    #themeFile = "GruvboxMaterialDarkMedium";
   };
 }
