@@ -1,4 +1,4 @@
 { config, lib, pkgs, ... }:
 {
-  services.ruskdesk-server.enable = true;
+  services.rustdesk-server.enable = true;
 }
