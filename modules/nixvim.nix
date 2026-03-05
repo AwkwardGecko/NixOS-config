@@ -22,9 +22,9 @@
 	    clipboard = "unnamedplus";
     };
 
-    extraConfigLuaPre = ''
-      vim.opt.runtimepath:append(vim.fn.stdpath('data') .. '/site')
-    '';
+    #extraConfigLuaPre = ''
+    #  vim.opt.runtimepath:append(vim.fn.stdpath('data') .. '/site')
+    #'';
 
     plugins = {
       
