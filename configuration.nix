@@ -161,7 +161,7 @@
     bc
     #binutils_nogold            # Binutils without the gold linker
     bootiso # Create bootable USB drives from ISO
-    brave # Web browser
+    # brave # Web browser
     # btmon                    # Bluetooth monitoring/debugging
     btop
     btrfs-progs # Btrfs filesystem tools

@@ -37,7 +37,7 @@
         #"bash $HOME/.local/bin/video-wallpapers.sh"
       ];
 
-      "ecosystem:no_update_news" = true;
+      #"ecosystem:no_update_news" = true;
 
       env = [
         "XDG_CURRENT_DESKTOP,Hyprland"
@@ -54,8 +54,6 @@
         gaps_in = 2;
         gaps_out = 5;
         border_size = 2;
-        #"col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-        #"col.inactive_border" = "rgba(595959aa)";
         resize_on_border = false;
         allow_tearing = false;
         layout = "master";
@@ -68,7 +66,6 @@
         shadow = {
           range = 4;
           render_power = 3;
-          #color = "rgba(1a1a1aee)";
         };
 
         blur = {
@@ -90,7 +87,6 @@
         "windowsOut, 1, 7, default, popin 80%"
         "border, 1, 10, default"
         "borderangle, 1, 7, default"
-        #"workspaces, 1, 6, default"
         "fade,1,7,default"
         "workspaces,1,7,default,slidevert"
       ];
