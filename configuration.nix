@@ -58,7 +58,7 @@
     ./modules/prometheus.nix
     ./modules/protonmail.nix
     ./modules/protonvpn.nix
-    #./modules/monero.nix
+    ./modules/monero.nix
     ./modules/nixvim.nix
     ./modules/nvidia.nix
     #.-modules/#reload-usb.nix
