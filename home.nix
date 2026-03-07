@@ -12,6 +12,7 @@
     #./modules/cursor.nix
     #./modules/beets.nix
     ./modules/comfyui.nix
+    ./modules/default-apps.nix
     ./modules/diffusion.nix
     #.modules/fastfetch.nix
     ./modules/fish.nix
