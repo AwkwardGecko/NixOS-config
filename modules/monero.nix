@@ -13,7 +13,7 @@
     extraConfig = ''
       out-peers=64
       enable-dns-blocklist=1
-      db-sync-mode-fast:async:1000
+      db-sync-mode=fast:async:1000
     '';
   
    };
