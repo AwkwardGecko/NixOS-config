@@ -10,9 +10,6 @@
     prune = true;
     dataDir = "/monero";
 
-    limit.threads = 8;
-    limit.syncSize = 20;
-
     extraConfig = ''
       out-peers=64
       enable-dns-blocklist=1
@@ -27,14 +24,6 @@
     18080
     #18081
   ];
-
-  # users.users.zozano = {
-  #   isSystemUser = true;
-  #   group = "users";
-  #   description = "Monero daemon user";
-  #   home = "/var/lib/monero";
-  #   createHome = true;
-  # };
 
   # systemd.services.monero = {
   #   description = "monero daemon";

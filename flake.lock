@@ -74,11 +74,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1772768709,
-        "narHash": "sha256-uzeT4oc5MyZaGJ4C1J2FMSfcUJUoMlzf1ZSWIgBrW7A=",
+        "lastModified": 1772918486,
+        "narHash": "sha256-lwpRpS7JPR4eqzfnJNt3Cdmi596cUnWRlFaHvCqVv9E=",
         "owner": "utensils",
         "repo": "comfyui-nix",
-        "rev": "390747dcc0631621fe43308b3464d2591e11e77d",
+        "rev": "2c0c411d90764084d7b75be6402c320bcc278776",
         "type": "github"
       },
       "original": {
@@ -252,11 +252,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1772624091,
-        "narHash": "sha256-QKyJ0QGWBn6r0invrMAK8dmJoBYWoOWy7lN+UHzW1jc=",
+        "lastModified": 1772773019,
+        "narHash": "sha256-E1bxHxNKfDoQUuvriG71+f+s/NT0qWkImXsYZNFFfCs=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "80bdc1e5ce51f56b19791b52b2901187931f5353",
+        "rev": "aca4d95fce4914b3892661bcb80b8087293536c6",
         "type": "github"
       },
       "original": {
