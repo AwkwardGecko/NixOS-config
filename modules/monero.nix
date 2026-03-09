@@ -11,9 +11,7 @@
     dataDir = "/monero";
 
     extraConfig = ''
-      out-peers=64
       enable-dns-blocklist=1
-      db-sync-mode=fast:async:1000
     '';
   
    };
@@ -33,7 +31,12 @@
   #   serviceConfig = {
   #     User = "zozano";
   #     Group = "users";
-  #     ExecStart = "${pkgs.monero-cli}/bin/monerod --config-file=/home/zozano/.bitmonero/monero.conf --non-interactive --data-dir=/home/zozano/.bitmonero --out-peers 64 --prune-blockchain --enable-dns-blocklist --max-concurrency 8 --block-sync-size 20 --db-sync-mode fast:async:1000";
+  #     ExecStart = "${pkgs.monero-cli}/bin/monerod --config-file=/home/zozano/.bitmonero/monero.conf --non-interactive --data-dir=/home/zozano/.bitmonero \
+        #--out-peers 64 
+        #--prune-blockchain 
+        #--enable-dns-blocklist 
+        #--max-concurrency 8 
+        #--block-sync-size 20 
   #     ExecStop = "${pkgs.monero-cli}/bin/monerod exit";
   #     TimeoutStopSec = "90s";
   #     Restart = "always";
