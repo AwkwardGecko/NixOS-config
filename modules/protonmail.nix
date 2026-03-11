@@ -13,5 +13,5 @@
 
   #programs.evolution.enable = true;
 
-  programs.kde-pin.kmail.enable = true;
+  programs.kde-pim.kmail.enable = true;
 }
