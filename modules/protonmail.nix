@@ -11,5 +11,7 @@
     libnotify
   ];
 
-  programs.evolution.enable = true;
+  #programs.evolution.enable = true;
+
+  programs.kde-pin.kmail.enable = true;
 }
