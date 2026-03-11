@@ -10,4 +10,6 @@
     protonmail-bridge-gui
     libnotify
   ];
+
+  programs.evolution.enable = true;
 }
