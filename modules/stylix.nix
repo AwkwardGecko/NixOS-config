@@ -38,7 +38,7 @@
     #   size = 16;
     # };
 
-    #targets.hyperpanel.enable = false;
+    targets.hyprpanel.enable = false;
 
     #image = pkgs.fetchurl {
     #  url = "https://getwallpapers.com/wallpaper/full/1/4/3/523784.jpg";
