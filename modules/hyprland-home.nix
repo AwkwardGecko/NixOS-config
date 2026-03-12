@@ -31,6 +31,7 @@
         "steam -silent"
         "coolercontrol"
 	      "openrgb --startminimized -p Zozano"
+        "protonmail-bridge --noninteractive"
         #"hyprpaper &"
         #"hyprpanel"
         #"$steam_friends"
