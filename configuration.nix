@@ -102,9 +102,7 @@
   #   '';
   # };
 
-  security.sudo.extraConfig = ''
-    Default timestamp_timeout=-1
-  '';
+
 
   # Automatic cleanup
   nix = {
