@@ -24,7 +24,10 @@
           # Docs/examples tend to use px strings, e.g. "16px" :contentReference[oaicite:2]{index=2}
           size = "1.2rem";
         };
-        bar.transparent = true;
+        bar = {
+          transparent = true;
+          background = "#1e1e2e";
+        };
       };
 
       wallpaper.enable = false;

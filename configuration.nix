@@ -7,11 +7,6 @@
   ...
 }:
 {
-
-  # limit rebuild speed
-  nix.settings.max-jobs = 2;
-  nix.settings.cores = 6;
-
   imports = [
     ./hardware-configuration.nix
     ./modules/adwaita.nix

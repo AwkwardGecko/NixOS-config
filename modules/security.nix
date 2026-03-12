@@ -11,4 +11,20 @@
   security.pam.services = {
     login.enableGnomeKeyring = true;
   };
+
+  security.sudo.extraRules = [
+    {
+      users = [ "zozano" ];
+      commands = [
+        {
+          command = "/run/current-system/sw/bin/nix-collect-garbage";
+          options = [ "NOPASSWD" ];
+        }
+        {
+          command = "/run/current-system/sw/bin/nix-store";
+          options = [ "NOPASSWD" ];
+        }
+      ];
+    }
+  ];
 }
