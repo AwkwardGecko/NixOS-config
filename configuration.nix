@@ -79,7 +79,7 @@
     #.modules/#xmrig.nix
     #.modules/#xserver.nix
     ./modules/waybar-mpris.nix
-    #.modules/# whisperai.nix
+    ./modules/whisperai.nix
     #.modules/# webdav.nix
     #./modules/wine.nix
   ];
