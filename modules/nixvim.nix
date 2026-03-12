@@ -40,6 +40,7 @@
       lsp = {
     	  enable = true;
 	      autoLoad = true;
+        autoArchive = true;
 
         servers = {
 		      nil_ls.enable = true;
