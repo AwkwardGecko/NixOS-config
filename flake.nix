@@ -2,6 +2,8 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -16,7 +18,7 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, comfyui-nix, stylix, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager,nix-flatpak, nixvim, comfyui-nix, stylix, ... }: {
     nixosConfigurations.z-nixos = nixpkgs.lib.nixosSystem {
 	    system = "x86_64-linux";
       specialArgs = { inherit inputs; };
@@ -24,6 +26,7 @@
         
         ./configuration.nix
         home-manager.nixosModules.home-manager
+        nix-flatpak.nixosModules.nix-flatpak
         nixvim.nixosModules.nixvim
         stylix.nixosModules.stylix
         #import-tree.nixosModules.import-tree
