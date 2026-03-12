@@ -39,12 +39,24 @@
   
       lsp = {
     	  enable = true;
-	      autoLoad = true;
-        autoArchive = true;
-
+	      inlayHints = true;
+        autoLoad = true;
         servers = {
-		      nil_ls.enable = true;
+		      nil_ls = {
+            enable = true;
+            settings = {
+              formatting.command = [ "nixpkgs-fmt" ];
+              nix.flake.autoArchive = true;
+              nixos.options.enable = true;
+              home-manager.options.enable = true;
+            };
+          };
 	      };
+      };
+
+      cmp = {
+        enable = true;
+        autoEnableSources = true;
       };
     };
   };
