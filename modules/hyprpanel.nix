@@ -26,7 +26,7 @@
         };
         bar = {
           transparent = true;
-          background = "#1e1e2e";
+          #background = "#1e1e2e";
         };
       };
 

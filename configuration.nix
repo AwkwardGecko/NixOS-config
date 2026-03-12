@@ -84,23 +84,27 @@
     #./modules/wine.nix
   ];
 
-  security.sudo = {
-    extraRules = [
-      {
-        users = [ "zozano" ];
-        commands = [
-          {
-            command = "/run/current-system/sw/bin/nixos-rebuild";
-            options = [ "NOPASSWD" ];
-          }
-        ];
-      }
-    ];
+  # security.sudo = {
+  #   extraRules = [
+  #     {
+  #       users = [ "zozano" ];
+  #       commands = [
+  #         {
+  #           command = "/run/current-system/sw/bin/nixos-rebuild";
+  #           options = [ "NOPASSWD" ];
+  #         }
+  #       ];
+  #     }
+  #   ];
+  #
+  #   extraConfig = ''
+  #     Defaults timestamp_timeout=-1
+  #   '';
+  # };
 
-    extraConfig = ''
-      Defaults timestamp_timeout=-1
-    '';
-  };
+  security.sudo.extraConfig = ''
+    Default timestamp_timeout=-1
+  '';
 
   # Automatic cleanup
   nix = {
