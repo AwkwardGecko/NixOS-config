@@ -9,6 +9,7 @@
     protonmail-bridge
     protonmail-bridge-gui
     libnotify
+    kdePackages.kmail
     kdePackages.kdepim-addons
   ];
 
