@@ -9,6 +9,7 @@
     protonmail-bridge
     protonmail-bridge-gui
     libnotify
+    kdePackages.kdepim-addons
   ];
 
   #programs.evolution.enable = true;
