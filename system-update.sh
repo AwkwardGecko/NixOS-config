@@ -11,7 +11,7 @@
    STAMP_FILE="/tmp/nix_flake_update.timestamp"
 
    # Check if the file exists and if it's less than 10 minutes old
-   if [[ ! -f "$STAMP_FILE" || $(($(date +%s) - $(< "$STAMP_FILE"))) -ge 500 ]]; then
+   if [[ ! -f "$STAMP_FILE" || $(($(date +%s) - $(< "$STAMP_FILE"))) -ge 440 ]]; then
     echo "Running nix flake update..."
     nix flake update
     date +%s > "$STAMP_FILE"
@@ -22,8 +22,8 @@
    nix flake update
    sudo nixos-rebuild switch --flake /home/zozano/.dotfiles/#z-nixos --show-trace
   
-   #sudo nix-collect-garbage --delete-older-than 7d
-   #sudo nix-store --optimise
+   sudo nix-collect-garbage --delete-older-than 7d
+   sudo nix-store --optimise
    #nix-env --delete-generations old
 
    echo "Done!"
