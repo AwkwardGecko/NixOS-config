@@ -79,29 +79,10 @@
     #.modules/#xmrig.nix
     #.modules/#xserver.nix
     ./modules/waybar-mpris.nix
-    #./modules/whisperai.nix
+    ./modules/whisperai.nix
     #.modules/# webdav.nix
     #./modules/wine.nix
   ];
-
-  # security.sudo = {
-  #   extraRules = [
-  #     {
-  #       users = [ "zozano" ];
-  #       commands = [
-  #         {
-  #           command = "/run/current-system/sw/bin/nixos-rebuild";
-  #           options = [ "NOPASSWD" ];
-  #         }
-  #       ];
-  #     }
-  #   ];
-  #
-  #   extraConfig = ''
-  #     Defaults timestamp_timeout=-1
-  #   '';
-  # };
-
 
 
   # Automatic cleanup
