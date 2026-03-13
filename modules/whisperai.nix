@@ -7,16 +7,13 @@
 
 {
   environment.systemPackages = with pkgs; [
-    ffmpeg
-    (python312Packages.openai-whisper.override {
-      torch = python312Packages.torch-bin;
-     })
+    python312Packages.openai-whisper
   ];
 
-  nix.settings = {
-    substituters = [ "https://cache.nixos-cuda.org" ];
-    trusted-public-keys = [ "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M=" ];
-  };
+  #nix.settings = {
+  #  substituters = [ "https://cache.nixos-cuda.org" ];
+  #  trusted-public-keys = [ "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M=" ];
+  #};
 
   #nixpkgs.config = {
     #cudaSupport = true;
