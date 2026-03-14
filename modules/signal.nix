@@ -9,4 +9,6 @@
     signal-desktop
     signal-export
   ];
+
+  nixpkgs.config.allowBroken = true;
 }
