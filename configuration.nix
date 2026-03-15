@@ -47,6 +47,7 @@
     ./modules/jellyfin-media-player.nix
     ./modules/localisation.nix
     #.modules/#lutris.nix
+    ./modules/nintendo64.nix
     #.modules/#ollama.nix
     ./modules/openrgb.nix
     ./modules/polkit.nix
