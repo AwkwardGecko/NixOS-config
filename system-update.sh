@@ -1,43 +1,71 @@
 #!/usr/bin/env bash
 (
   set -euo pipefail
-
   cd /home/zozano/.dotfiles
-  git add ./*
-  git commit -m "$(date '+%F_%H:%M:%S')" 
-  git push github main
 
-  # Define the timestamp file
-  STAMP_FILE="/tmp/nix_flake_update.timestamp"
+  STAMP_DIR="/tmp"
+  FLAKE_STAMP="$STAMP_DIR/nix_flake_update.timestamp"
+  GC_STAMP="$STAMP_DIR/nix_gc.timestamp"
+  OPTIMISE_STAMP="$STAMP_DIR/nix_optimise.timestamp"
 
-  # Check if the file exists and if it's less than 10 minutes old
-  if [[ ! -f "$STAMP_FILE" || $(($(date +%s) - $(< "$STAMP_FILE"))) -ge 600 ]]; then
+  FLAKE_INTERVAL=600        # 10 minutes
+  GC_INTERVAL=86400         # 1 day
+  OPTIMISE_INTERVAL=604800  # 1 week
+
+  now=$(date +%s)
+
+  stamp_is_stale() {
+    local file="$1" interval="$2"
+    [[ ! -f "$file" || $(( now - $(< "$file") )) -ge $interval ]]
+  }
+
+  # --- Flake update (throttled) ---
+  if stamp_is_stale "$FLAKE_STAMP" "$FLAKE_INTERVAL"; then
     echo "Running nix flake update..."
     nix flake update
-    date +%s > "$STAMP_FILE"
+    echo "$now" > "$FLAKE_STAMP"
   else
     echo "Skipping nix flake update (ran recently)."
   fi
 
-  nix flake update
+  # --- Rebuild (before committing, so we only push known-good config) ---
   sudo nixos-rebuild switch --flake /home/zozano/.dotfiles/#z-nixos --show-trace
-  echo "Finished rebuilding"
+  echo "Finished rebuilding."
 
-  sudo nix-collect-garbage --delete-older-than 7d
-  echo "Finished deleting garbage more than seven days old"
-
-  sudo nix-store --optimise
-  echo "Finished optimising the nix-store"
-  
-  #nix-env --delete-generations old
-
+  # --- Commit and push only after a successful rebuild ---
+  git add ./*
+  git commit -m "$(date '+%F_%H:%M:%S')" || echo "Nothing to commit."
+  git push github main || echo "Push failed or nothing to push."
   git status
-  flatpak update -y
-  
+
+  # --- Garbage collection (throttled — once per day) ---
+  if stamp_is_stale "$GC_STAMP" "$GC_INTERVAL"; then
+    echo "Running garbage collection..."
+    sudo nix-collect-garbage --delete-older-than 7d
+    echo "$now" > "$GC_STAMP"
+    echo "Finished deleting garbage older than seven days."
+  else
+    echo "Skipping garbage collection (ran recently)."
+  fi
+
+  # --- Store optimisation (throttled — once per week) ---
+  if stamp_is_stale "$OPTIMISE_STAMP" "$OPTIMISE_INTERVAL"; then
+    echo "Running nix-store optimisation..."
+    sudo nix-store --optimise
+    echo "$now" > "$OPTIMISE_STAMP"
+    echo "Finished optimising the nix-store."
+  else
+    echo "Skipping nix-store optimisation (ran recently)."
+  fi
+
+  # --- Non-nix updates (failures here shouldn't kill the script) ---
+  flatpak update -y || true
+
   if command -v podman >/dev/null; then
     podman auto-update --dry-run || true
     podman auto-update || true
   fi
-  
-  sleep 2  # short pause before closing
-) && exit
+
+  echo "All done."
+  sleep 2
+) || echo "System update failed with exit code $?."
