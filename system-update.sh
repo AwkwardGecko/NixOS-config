@@ -19,6 +19,10 @@
     [[ ! -f "$file" || $(( now - $(< "$file") )) -ge $interval ]]
   }
 
+  # --- Commit locally first (so Nix sees a clean git tree) ---
+  git add ./*
+  git commit -m "$(date '+%F_%H:%M:%S')" || echo "Nothing to commit."
+
   # --- Flake update (throttled) ---
   if stamp_is_stale "$FLAKE_STAMP" "$FLAKE_INTERVAL"; then
     echo "Running nix flake update..."
@@ -28,13 +32,10 @@
     echo "Skipping nix flake update (ran recently)."
   fi
 
-  # --- Rebuild (before committing, so we only push known-good config) ---
+  # --- Rebuild (push only after success, so remote stays known-good) ---
   sudo nixos-rebuild switch --flake /home/zozano/.dotfiles/#z-nixos --show-trace
   echo "Finished rebuilding."
 
-  # --- Commit and push only after a successful rebuild ---
-  git add ./*
-  git commit -m "$(date '+%F_%H:%M:%S')" || echo "Nothing to commit."
   git push github main || echo "Push failed or nothing to push."
   git status
 
