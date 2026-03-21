@@ -118,6 +118,8 @@
 
         ",          print,  exec, grimblast save area ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"
         "$mainMod,  print,  exec, grimblast copy area"
+
+        ",          F9,     exec, grimblast save area ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"
         ",          F10,    exec, grimblast copy area"
 
         "$mainMod, C, killactive,"
