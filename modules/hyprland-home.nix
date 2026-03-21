@@ -116,8 +116,9 @@
 
         #"$mainMod, space, exec, $unhide_waybar"
 
-        ", print, exec, grimblast save area ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"
-        "$mainMod, print, exec, grimblast copy area"
+        ",          print,  exec, grimblast save area ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"
+        "$mainMod,  print,  exec, grimblast copy area"
+        ",          F10,    exec, grimblast copy area"
 
         "$mainMod, C, killactive,"
         "$mainMod, E, exec, $fileManager"
