@@ -13,10 +13,10 @@
   programs.fish = {
     enable = true;
     shellAbbrs = {
-      update-nix = "kitty bash /home/zozano/.dotfiles/home-manager/source/local/share/applications/update.sh";
-      server-connect = "kitty ssh -t z-home@192.168.1.157 'fish -l'";
-    };
-    shellAbbrs = {
+      #update-nix = "kitty bash /home/zozano/.dotfiles/home-manager/source/local/share/applications/update.sh";
+      #server-connect = "kitty ssh -t z-home@192.168.1.157 'fish -l'";
+    #};
+    #shellAbbrs = {
       update = "bash ~/.dotfiles/system-update.sh";
     };
     shellInit = "cd ~/.dotfiles/";
