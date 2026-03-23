@@ -101,6 +101,7 @@
       "--network-alias=tdarr-node"
       "--network=tdarr_default"
       "--group-add=video"
+      "--label=io.containers.autoupdate=registry"
     ];
   };
   systemd.services."podman-tdarr-node" = {
