@@ -15,6 +15,7 @@
         email = "private@private.com";
       };
       init.defaultBranch = "main";
+      signing.format = "openpgp";
     };
   };
 }
