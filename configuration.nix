@@ -183,8 +183,8 @@
     gparted # Partitioning tool
     gperftools
     #gpu-burn
-    gtk3 # GNOME GUI toolkit v3
-    gtkd # D bindings for GTK
+    #gtk3 # GNOME GUI toolkit v3
+    #gtkd # D bindings for GTK
     icu # Unicode support libraries
     iproute2 # Network tools (replacement for net-tools)
     inotify-tools # check what is making folders
