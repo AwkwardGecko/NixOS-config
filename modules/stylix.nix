@@ -28,6 +28,8 @@
       };
     };
 
+    gtk.gtk4.theme = null;
+
     # cursor = {
     #   #package = pkgs.bibata-cursors;
     #   #name = "Bibata-Modern-Classic";
