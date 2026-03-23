@@ -13,7 +13,7 @@
   home.pointerCursor = {
     gtk = {
       enable = true;
-      gtk4.theme = null;
+      #gtk4.theme = null;
       # x11.enable = true;
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Classic";
