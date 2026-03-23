@@ -19,7 +19,6 @@
     #.modules/fonts.nix
     ./modules/gpg.nix
     ./modules/git-home.nix
-    #./modules/gtk.nix
     ./modules/hyprland-home.nix
     #./modules/hyprpanel-dummy.nix
     ./modules/hyprpanel.nix
