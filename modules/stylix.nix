@@ -28,7 +28,6 @@
       };
     };
 
-    gtk.gtk4.theme = null;
 
     # cursor = {
     #   #package = pkgs.bibata-cursors;
@@ -46,4 +45,7 @@
     #  hash = "sha256-S/6kgloXiIYI0NblT6YVXfqELApbdHGsuYe6S4JoQwQ=";
     #};
   };
+
+
+    gtk.gtk4.theme = null;
 }
