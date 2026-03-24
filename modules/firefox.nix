@@ -43,6 +43,21 @@ in
         DisplayMenuBar = "default-off"; # alternatives: "always", "never" or "default-on"
         SearchBar = "unified"; # alternative: "separate"
 
+        SearchEngines = {
+          Default = "Ecosia";
+          Add = [
+            {
+              Name = "Ecosia";
+              URLTemplate = "https://www.ecosia.org/search?q={searchTerms}";
+              IconURL = "https://www.ecosia.org/static/icons/favicon.ico";
+              Alias = "@ecosia";
+              Description = "Ecosia - the search engine which fucks and sucks lol";
+              Method = "GET";
+            }
+          ];
+          Remove = [ "Bing" "Amazon.com" ];
+        };
+
         # ---- EXTENSIONS ----
         # Check about:support for extension/add-on ID strings.
         # Valid strings for installation_mode are "allowed", "blocked",
