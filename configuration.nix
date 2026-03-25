@@ -33,6 +33,7 @@
     ./modules/fclones.nix
     ./modules/filesystem.nix
     ./modules/firefox.nix
+    ./modules/fish.nix
     ./modules/flatpak.nix
     ./modules/fonts.nix
     ./modules/ftp.nix

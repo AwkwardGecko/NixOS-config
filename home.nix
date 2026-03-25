@@ -15,7 +15,7 @@
     ./modules/default-apps.nix
     ./modules/diffusion.nix
     #.modules/fastfetch.nix
-    ./modules/fish.nix
+    #./modules/fish.nix
     #.modules/fonts.nix
     ./modules/gpg.nix
     ./modules/git-home.nix
