@@ -25,6 +25,7 @@
     #./modules/hyprpaper.nix
     #./modules/hypridle.nix
     ./modules/kitty.nix
+    ./modules/jellyfin-media-player-home.nix
     ./modules/lutris.nix
     #./modules/terminal.nix
     #./modules/mako.nix
