@@ -1,11 +1,4 @@
-#~/.dotfiles/home-manager/home.nix
-{
-  config,
-  lib,
-  inputs,
-  pkgs,
-  ...
-}:
+{ config, lib, inputs, pkgs, ... }:
 {
   imports = [
     #./modules/applications.nix
@@ -49,8 +42,7 @@
   systemd.user.startServices = "sd-switch";
 
   home.sessionVariables = {
-    # Wayland backends for common stacks
-    SDL_VIDEODRIVER = "wayland";
+    SDL_VIDEODRIVER = "wayland"; # Wayland backends for common stacks
     QT_QPA_PLATFORM = "wayland";
     MOZ_ENABLE_WAYLAND = 1;
     NIXOS_OZONE_WL = 1; # Enables Wayland (Ozone) backend in Chromium/Electron apps.
@@ -76,19 +68,17 @@
 
   };
 
-  home.file = {
+  #home.file = {
     #".local/share/applications".source = source/local/share/applications;
     #".config/hypr/hypridle.conf".source = source/config/hypr/hypridle-xmrig-off.conf;
     #".local/share/vlc/lua/extensions".source = source/local/share/vlc/lua/extensions;
     #".config/waybar/gputemp.sh".source = source/config/waybar/gputemp.sh;
     # ".config/nsxiv/delete_and_next.sh".source = source/config/nsxiv/delete_and_next.sh;
     # ".config/nsxiv/exec/key-handler".source = source/config/nsxiv/exec/key-handler;
-  };
+  #};
 
   home.packages = with pkgs; [
-    baobab # disk usage analyzer
-    #blueberry
-    #clementine
+    baobab
     cliphist # wayland clipboard manager
     cryptsetup # LUKS support
     dex # run .desktop files from CLI
@@ -104,8 +94,6 @@
     htop
     #hyprpaper
     #hyprshot
-    #jellyfinmediaplayer
-    #jellyfin-web
     #plasma5Packages.kdeconnect-kde
     krusader # file manager
     krename # batch renamer for krusader

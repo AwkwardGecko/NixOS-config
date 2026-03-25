@@ -60,10 +60,11 @@
   fi
 
   # --- Non-nix updates (failures here shouldn't kill the script) ---
+  echo "Beginning flatpak update"
   flatpak update -y || true
-
+  
+  echo "Begininng podman update" 
   if command -v podman >/dev/null; then
-    podman auto-update --dry-run || true
     podman auto-update || true
   fi
 
