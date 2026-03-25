@@ -2,7 +2,7 @@
 {
   xdg.desktopEntries.jellyfin-opener = {
     name = "Jellyfin Media Player Opener";
-    exec = "jellyfin-media-player %u";
+    exec = "jellyfin-desktop %u";
     type = "Application";
     noDisplay = true;
     mimeType = [ "x-scheme-handler/jmp" ];
