@@ -193,9 +193,11 @@
         #",XF86AudioNext, exec, playerctl next"
         #",XF86AudioPrev, exec, playerctl previous"
         #",XF86AudioPlay, exec, playerctl play-pause"
+        ];
 
-        ",F11, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"
-        ",F12, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+"
+      bindle = [
+        ",Prior, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+        ",Next, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
       ];
 
 	windowrule = [
