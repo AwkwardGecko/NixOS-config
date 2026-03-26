@@ -12,8 +12,8 @@
       "--dont-upcast-attention"
       "--force-fp16"
       "--use-split-cross-attention"
-      "--preview-method auto"
-      "--reserve-vram 512"
+      "--preview-method=auto"
+      "--reserve-vram=512"
       "--disable-smart-memory"
     ];
   };
