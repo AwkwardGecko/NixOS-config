@@ -2,7 +2,6 @@
 {
   home-manager.users.zozano = {
     home.packages = with pkgs; [
-      baobab
       cliphist # wayland clipboard manager
       cryptsetup # LUKS support
       dex # run .desktop files from CLI

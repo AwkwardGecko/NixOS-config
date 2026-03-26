@@ -7,7 +7,7 @@
     lsof
     unzip
     inotify-tools
-    lootiso
+    bootiso
     btop
   ];
 }
