@@ -21,6 +21,7 @@
     ./modules/desktop/stylix.nix
     ./modules/desktop/theme.nix
 
+    ./modules/gaming/controller.nix
     ./modules/gaming/gamemode.nix
     ./modules/gaming/nvidia.nix
     ./modules/gaming/star-rail.nix
@@ -110,10 +111,6 @@
     #cargo-deb # Generate .deb packages from Rust projects
     #cargo-rr # Run Rust programs under rr debugger
     clinfo # Lists OpenCL devices
-    cmake
-    compose2nix
-    conda # Python environment manager
-    crane # Nix-native Rust build system (like crate2nix)
     cups # Printing system
     curl
     dig # DNS Lookup
@@ -124,8 +121,6 @@
     evtest # Reads input events (debugging input devices)
     ffmpeg # Video and audio processing tool
     hdparm
-    gcc # GNU Compiler Collection
-    gcc-unwrapped # Unwrapped GCC (required by some projects like Stable Diffusion)
     gimp # Image editing software
     git # Version control
     #glxinfo                     #
@@ -133,9 +128,7 @@
     gedit
     gnome-calculator # Calculator app
     goverlay
-    gperftools
     #gpu-burn
-    icu # Unicode support libraries
     iproute2 # Network tools (replacement for net-tools)
     libcap # test
     libGL # OpenGL library
@@ -143,29 +136,17 @@
     libheif # HEIF image support
     libnotify
     libsecret # Secret storage (GNOME keyring)
-    lld # LLVM linker
-    llvmPackages.bintools # LLVM toolchain binaries (e.g., ar, nm)
     lynis # security auditing
     mesa # Open-source graphics drivers
     nettools # Old-school network tools (ifconfig, etc.)
-    nixd # Nix language server (LSP)
-    nix-prefetch-github
-    nixfmt
-    nodejs # Node.js runtime
     nomacs # image viewer
     onlyoffice-desktopeditors # Office suite
-    opencv
     openssl # TLS/SSL support (used by reliquary-archiver and other tools)
     pavucontrol # PulseAudio volume control GUI
     pcapfix # Repairs broken .pcap files
     pciutils # testing PCI links
     pkg-config # Finds C libraries (used by reliquary-archiver)
-    protobuf # Google's Protocol Buffers (serialization)
     proton-pass
-    pyenv # Python version manager
-    python3
-    python312Packages.numpy
-    python312Packages.opencv-python
     qbittorrent # BitTorrent client
     qt5.qtwayland
     rclone # Sync with cloud storage
@@ -173,13 +154,11 @@
     #rustup                      # Rust toolchain manager (used by reliquary-archiver)
     #rustup-toolchain-install-master # Install Rust toolchains from master
     smartmontools # Monitor hard drive health (S.M.A.R.T.)
-    sqlite # Embedded SQL database engine
     sshfs # Mount remote filesystems over SSH
     strawberry # Music player
     usbutils
     # unigine-superposition - don't use. run .exe through steam for Vulkan support
     upower # Power management daemon (dependency for Vivaldi maybe)
-    uv # Fast Python package manager
     vlc # Media player
     vulkan-loader # Vulkan runtime loader
     vulkan-tools # Vulkan utilities like `vulkaninfo`
