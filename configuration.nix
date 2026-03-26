@@ -12,6 +12,7 @@
     ./modules/core/audio.nix
     ./modules/core/boot.nix
     ./modules/core/filesystem.nix
+    ./modules/core/hardware.nix
     ./modules/core/localisation.nix
     ./modules/core/networking.nix
     ./modules/core/nix.nix
@@ -113,9 +114,6 @@
   #   "1.1.1.1"
   #   "8.8.8.8"
   # ];
-
-  nixpkgs.config.allowUnfree = true;
-  hardware.enableAllFirmware = true;
 
   security.doas.enable = true;
   programs.ssh.startAgent = true;
