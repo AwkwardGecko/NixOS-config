@@ -49,6 +49,8 @@
     ./modules/containers.nix
     ./modules/crypto.nix
     ./modules/browsers.nix
+    
+
 
     #./modules/beets.nix
     #./modules/cachix.nix # cachix
@@ -69,9 +71,7 @@
     ./modules/git-push-dotfiles.nix
     ./modules/gpg.nix
     ./modules/haveno.nix
-    ./modules/home-packages.nix
     ./modules/jellyfin-media-player.nix
-
     ./modules/monero.nix
     #.modules/ollama.nix
     ./modules/openrgb.nix
@@ -88,8 +88,8 @@
     #.modules/untrunc-anthwlock.nix
     #.modules/xmrig.nix
     ./modules/wallpaper.nix
-    ./modules/waybar-mpris.nix
-    ./modules/whisperai.nix
+    #./modules/waybar-mpris.nix
+    #./modules/whisperai.nix
     #./modules/wine.nix
   ];
 }

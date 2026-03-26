@@ -6,5 +6,6 @@
     zlib
     libGL
     gcc-unwrapped
+    whisperx
   ];
 }
