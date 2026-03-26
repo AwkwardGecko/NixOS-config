@@ -35,31 +35,28 @@ let
 in
 {
   services.comfyui = {
-    services.comfyui = {
-      enable = true;
-      cuda = true;
-      enableManager = true;
-      port = 8188;
-      listenAddress = "127.0.0.1";
-      dataDir = "/var/lib/comfyui";
-      openFirewall = false;
-      extraArgs = [
-        "--lowvram"
-        "--dont-upcast-attention"
-        "--force-fp16"
-        "--use-split-cross-attention"
-        "--preview-method auto"
-        "--reserve-vram 512"
-        "--disable-smart-memory"
-      ];
-    };
+    enable = true;
+    cuda = true;
+    enableManager = true;
+    port = 8188;
+    listenAddress = "127.0.0.1";
+    dataDir = "/var/lib/comfyui";
+    openFirewall = false;
+    extraArgs = [
+      "--lowvram"
+      "--dont-upcast-attention"
+      "--force-fp16"
+      "--use-split-cross-attention"
+      "--preview-method auto"
+      "--reserve-vram 512"
+      "--disable-smart-memory"
+    ];
   };
 
+  programs.nix-ld.enable = true;
+
   environment.systemPackages = with pkgs; [
-    zlib
-    libGL
-    gcc-unwrapped
-    #whisperx
+    python312Packages.openai-whisper
   ];
 
   # home-manager.users.zozano = {
