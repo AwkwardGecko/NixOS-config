@@ -29,12 +29,6 @@
         xdg-desktop-portal-wlr
       ];
     };
-    mime = {
-      enable = true;
-      defaultApplications = {
-        "inode/directory" = [ "nautilus.desktop" ];
-      };
-    };
   };
 
   environment = {
