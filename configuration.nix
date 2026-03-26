@@ -47,15 +47,15 @@
     ./modules/shell/nixvim.nix
 
     ./modules/media/tdarr.nix
-    ./modules/dev.nix
+    ./modules/other/dev.nix
     ./modules/shell/shell.nix
-    ./modules/containers.nix
-    ./modules/crypto.nix
-    ./modules/browsers.nix
-    ./modules/ai.nix 
+    ./modules/other/containers.nix
+    ./modules/other/crypto.nix
+    ./modules/other/browsers.nix
+    ./modules/other/ai.nix 
 
 
-    #./modules/beets.nix
+
     ./modules/fclones.nix
     ./modules/flatpak.nix
     ./modules/fonts.nix
