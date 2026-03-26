@@ -45,7 +45,6 @@
     vulkan-loader
     dxvk
     nvfancontrol
-    lm_sensors
     mesa-demos #glxinfo # Collection of demos and test programs for OpenGL and Mesa
   ];
 
@@ -71,7 +70,6 @@
     home.packages = with pkgs; [
       egl-wayland
       libva
-      mesa
     ];
   };
 }

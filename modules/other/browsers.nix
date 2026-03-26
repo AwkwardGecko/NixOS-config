@@ -12,7 +12,6 @@ in
 {
   environment.systemPackages = with pkgs; [
     chromium
-    bluez
     proton-pass
   ];
 

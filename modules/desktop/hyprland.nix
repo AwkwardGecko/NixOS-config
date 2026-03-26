@@ -42,7 +42,6 @@
 
   environment.systemPackages = with pkgs; [
     xdg-user-dirs
-    gvfs
     libmtp
     wl-clipboard
   ];

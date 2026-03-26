@@ -10,8 +10,10 @@
     pciutils
     smartmontools
     usbutils
-    upower  
+    upower
+    liquidctl
   ];
 
+  programs.coolercontrol.enable = true;
   services.hardware.openrgb.enable = true;
 }

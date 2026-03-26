@@ -14,8 +14,6 @@
     ./modules/core/security.nix
     ./modules/core/users.nix
     #./modules/core/scanner.nix
-    ./modules/core/coolercontrol.nix
-    ./modules/core/statix.nix
 
     ./modules/desktop/hyprland.nix
     ./modules/desktop/hyprpanel.nix

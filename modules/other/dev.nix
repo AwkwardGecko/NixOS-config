@@ -54,7 +54,6 @@
 
   home-manager.users.zozano = {
     home.packages = with pkgs; [
-      python3
       pipx
     ];
   };
