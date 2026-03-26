@@ -51,13 +51,9 @@
     ./modules/browsers.nix
 
 
-    ./modules/adwaita.nix
-    ./modules/alejandra.nix
     ./modules/autologin.nix # 100%
     ./modules/bash.nix
     #./modules/beets.nix
-    ./modules/bottles.nix
-    ./modules/bisq.nix
     #./modules/cachix.nix # cachix
     ./modules/chromium.nix
     #.modules/comfyui.nix
