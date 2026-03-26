@@ -61,7 +61,6 @@
     ./modules/chromium.nix
     #.modules/comfyui.nix
     #./modules/comfyui-dependencies.nix
-    ./modules/controller.nix
     ./modules/coolercontrol.nix
     #.modules/cron.nix
     ./modules/default-apps.nix
