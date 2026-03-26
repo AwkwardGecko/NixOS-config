@@ -18,6 +18,7 @@
 
     ./modules/desktop/hyprland.nix
     ./modules/desktop/hyprpanel.nix
+    ./modules/desktop/hypridle.nix
     ./modules/desktop/rofi.nix
     ./modules/desktop/style.nix
     ./modules/desktop/stylix.nix
@@ -55,11 +56,11 @@
     ./modules/other/ai.nix 
     ./modules/other/flatpak.nix
     
-    ./modules/protonmail.nix # > go to communications.nix # remove libnotify
-    ./modules/protonvpn.nix # > go to core/networking.nix
-    ./modules/signal.nix # > go to communications.nix
-    ./modules/sshfs.nix # > go to networking/ssh.nix
-    ./modules/statix.nix # > go to core/nix.nix
-    ./modules/wallpaper.nix # > go to desktop/hyprland.nix
+    ./modules/other/protonmail.nix # > go to communications.nix # remove libnotify
+    ./modules/networking/protonvpn.nix # > go to core/networking.nix
+    ./modules/other/signal.nix # > go to communications.nix
+    ./modules/networking/sshfs.nix # > go to networking/ssh.nix
+    ./modules/core/statix.nix # > go to core/nix.nix
+    ./modules/desktop/wallpaper.nix # > go to desktop/hyprland.nix
   ];
 }
