@@ -1,16 +1,8 @@
+{ config, lib, pkgs, ... }:
 {
-  config,
-  lib,
-  pkgs,
-  ...
-}:
-
-{
-
   programs.chromium = {
     enable = true;
 
-    # Make sure policy isn’t silently blocking the API.
     extraOpts = {
       "DefaultWebBluetoothGuardSetting" = 3; # 3 = allow sites to ask
       "homepage" = "https://app.storz-bickel.com";
@@ -30,5 +22,6 @@
   environment.systemPackages = with pkgs; [
     chromium
     bluez
+    proton-pass
   ];
 }

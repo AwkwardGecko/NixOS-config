@@ -49,12 +49,11 @@
     ./modules/containers.nix
     ./modules/crypto.nix
     ./modules/browsers.nix
-    
+    ./modules/ai.nix 
 
 
     #./modules/beets.nix
     #./modules/cachix.nix # cachix
-    ./modules/chromium.nix
     #.modules/comfyui.nix
     #./modules/comfyui-dependencies.nix
     ./modules/coolercontrol.nix
@@ -72,7 +71,6 @@
     ./modules/gpg.nix
     ./modules/haveno.nix
     ./modules/jellyfin-media-player.nix
-    ./modules/monero.nix
     #.modules/ollama.nix
     ./modules/openrgb.nix
     ./modules/polkit.nix
