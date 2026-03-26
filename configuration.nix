@@ -1,12 +1,7 @@
-{
-  config,
-  pkgs,
-  libs,
-  inputs,
-  ...
-}:
+{ config, pkgs, libs, inputs, ... }:
 {
   imports = [
+    
     ./hardware-configuration.nix
     
     ./modules/core/audio.nix
@@ -108,10 +103,8 @@
   environment.systemPackages = with pkgs; [
     # bazel # Google's build tool (used for TensorFlow etc.)
     #binutils_nogold            # Binutils without the gold linker
-    bootiso # Create bootable USB drives from ISO
     # brave # Web browser
     # btmon                    # Bluetooth monitoring/debugging
-    btrfs-progs # Btrfs filesystem tools
     #cargo # Rust package manager
     #cargo-c # Build C-style shared libs from Rust
     #cargo-deb # Generate .deb packages from Rust projects
@@ -141,9 +134,7 @@
     #glibc_memusage              # Tracks memory usage of programs
     gedit
     gnome-calculator # Calculator app
-    gnome-disk-utility # Disk management GUI
     goverlay
-    gparted # Partitioning tool
     gperftools
     #gpu-burn
     icu # Unicode support libraries
@@ -180,7 +171,6 @@
     onlyoffice-desktopeditors # Office suite
     opencv
     openssl # TLS/SSL support (used by reliquary-archiver and other tools)
-    parted # Partitioning tool
     pavucontrol # PulseAudio volume control GUI
     pcapfix # Repairs broken .pcap files
     pciutils # testing PCI links
