@@ -47,7 +47,7 @@
     ./modules/hostname.nix
     ./modules/hdd-soft-shutdown.nix
     ./modules/huge-pages.nix
-    ./modules/hyprland-system.nix
+    ./modules/hyprland.nix
     ./modules/jellyfin-media-player.nix
     ./modules/localisation.nix
     #.modules/#lutris.nix

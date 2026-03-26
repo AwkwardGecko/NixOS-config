@@ -1,7 +1,6 @@
 { config, lib, inputs, pkgs, ... }:
 {
   imports = [
-    ./modules/hyprland-home.nix
     ./modules/hyprpanel.nix
     ./modules/kitty.nix
     ./modules/jellyfin-media-player-home.nix
