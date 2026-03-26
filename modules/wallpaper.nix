@@ -5,6 +5,7 @@
   ...
 }:
 {
+  home-manager.users.zozano = {
   home.file.".local/bin/video-wallpapers.sh" = {
     text = ''
       #!/usr/bin/env bash
@@ -23,5 +24,6 @@
       done
     '';
     executable = true;
+  };
   };
 }

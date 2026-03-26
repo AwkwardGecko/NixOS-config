@@ -9,5 +9,7 @@
   ...
 }:
 {
-  programs.tmux.enable = true;
+  home-manager.users.zozano = {
+programs.tmux.enable = true;
+  };
 }

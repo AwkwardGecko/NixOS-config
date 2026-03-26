@@ -48,9 +48,15 @@
     ./modules/hdd-soft-shutdown.nix
     ./modules/huge-pages.nix
     ./modules/hyprland.nix
+    ./modules/hyprpanel.nix
     ./modules/jellyfin-media-player.nix
+    ./modules/kitty.nix
     ./modules/localisation.nix
-    #.modules/#lutris.nix
+    ./modules/lutris.nix
+    ./modules/mangohud.nix
+    ./modules/monero.nix
+    ./modules/nixvim.nix
+    ./modules/nvidia.nix
     ./modules/nintendo64.nix
     #.modules/#ollama.nix
     ./modules/openrgb.nix
@@ -58,10 +64,8 @@
     ./modules/prometheus.nix
     ./modules/protonmail.nix
     ./modules/protonvpn.nix
-    ./modules/monero.nix
-    ./modules/nixvim.nix
-    ./modules/nvidia.nix
-    #.-modules/#reload-usb.nix
+    ./modules/rofi.nix
+    #./modules/reload-usb.nix
     #./modules/rustdesk.nix
     #./modules/scanner.nix
     ./modules/security.nix
@@ -69,20 +73,23 @@
     ./modules/signal.nix
     ./modules/ssh.nix
     ./modules/sshfs.nix
-    #.modules/star-rail.nix
+    ./modules/star-rail.nix
     ./modules/statix.nix
     ./modules/steam.nix
+    ./modules/style.nix
     ./modules/stylix.nix
     ./modules/syncthing.nix
     #.modules/#systemd-timers.nix
     ./modules/tailscale.nix
     ./modules/tdarr.nix
     ./modules/teamviewer.nix
+    ./modules/tmux.nix
     #.modules/#untrunc-anthwlock.nix
     ./modules/users.nix
     ./modules/xdg-desktop-portal.nix
     #.modules/#xmrig.nix
     #.modules/#xserver.nix
+    ./modules/wallpaper.nix
     ./modules/waybar-mpris.nix
     ./modules/whisperai.nix
     #.modules/# webdav.nix

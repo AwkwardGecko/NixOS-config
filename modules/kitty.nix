@@ -9,7 +9,7 @@
   ...
 }:
 {
-
+  home-manager.users.zozano = {
   # home.packages = with pkgs; [
   #   jetbrains-mono
   # ];
@@ -55,5 +55,6 @@
     #};
 
     #themeFile = "GruvboxMaterialDarkMedium";
+  };
   };
 }

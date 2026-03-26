@@ -1,7 +1,3 @@
-############
-### ROFI ###
-############
-
 {
   config,
   pkgs,
@@ -9,6 +5,7 @@
   ...
 }:
 {
+  home-manager.users.zozano = { 
   programs.rofi = {
     enable = true;
 
@@ -19,5 +16,6 @@
     plugins = with pkgs; [
       #
     ];
+  };
   };
 }

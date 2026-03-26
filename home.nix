@@ -1,17 +1,16 @@
 { config, lib, inputs, pkgs, ... }:
 {
   imports = [
-    ./modules/hyprpanel.nix
-    ./modules/kitty.nix
-    ./modules/jellyfin-media-player-home.nix
-    ./modules/lutris.nix
-    ./modules/mangohud.nix
-    ./modules/ranger.nix
-    ./modules/star-rail.nix
-    ./modules/style.nix
-    ./modules/rofi.nix
-    ./modules/tmux.nix
-    ./modules/wallpaper.nix
+    #./modules/hyprpanel.nix
+    #./modules/kitty.nix
+    #./modules/jellyfin-media-player-home.nix
+    #./modules/lutris.nix
+    #./modules/mangohud.nix
+    #./modules/star-rail.nix
+    #./modules/style.nix
+    #./modules/rofi.nix
+    #./modules/tmux.nix
+    #./modules/wallpaper.nix
   ];
 
   # to add home modules to sys modules, start with:

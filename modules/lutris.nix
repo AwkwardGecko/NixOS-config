@@ -5,6 +5,7 @@
   ...
 }:
 {
-  programs.lutris.enable = true;
-
+  home-manager.users.zozano = {
+programs.lutris.enable = true;
+};
 }

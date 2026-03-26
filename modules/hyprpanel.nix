@@ -1,5 +1,6 @@
 { config, lib, pkgs, ... }:
 {
+  home-manager.users.zozano = {
   programs.hyprpanel = {
     enable = true;
     systemd.enable = true;
@@ -99,7 +100,7 @@ systemd.user.services.hyprpanel-hotplug-restart = {
     WantedBy = [ "graphical-session.target" ];
   };
 };
-
+};
 
 }
 
