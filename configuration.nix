@@ -82,7 +82,6 @@
     ./modules/tmux.nix
     #.modules/#untrunc-anthwlock.nix
     ./modules/users.nix
-    ./modules/xdg-desktop-portal.nix
     #.modules/#xmrig.nix
     ./modules/wallpaper.nix
     ./modules/waybar-mpris.nix
@@ -119,15 +118,6 @@
 
   nixpkgs.config.allowUnfree = true;
   hardware.enableAllFirmware = true;
-
-  services.flatpak.enable = true;
-  systemd.services.flatpak-repo = {
-    wantedBy = [ "multi-user.target" ];
-    path = [ pkgs.flatpak ];
-    script = ''
-      flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-    '';
-  };
 
   security.doas.enable = true;
   programs.ssh.startAgent = true;
@@ -181,7 +171,6 @@
     #glxinfo                     #
     #glibc_memusage              # Tracks memory usage of programs
     gedit
-    
     gnome-calculator # Calculator app
     gnome-disk-utility # Disk management GUI
     goverlay
@@ -261,7 +250,6 @@
     wget # File downloader
     wine # Windows compatibility layer
     xmrig
-
     yt-dlp # YouTube downloader
     zlib # Compression lib (used by Stable Diffusion & reliquary launcher)
   ];

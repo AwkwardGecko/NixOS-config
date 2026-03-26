@@ -15,17 +15,29 @@
 
   services = {
     displayManager.sddm.wayland.enable = true;
-    gvfs.enable = true;
     udisks2.enable = true;
+    dbus.enable = true;
   };
 
-  xdg.portal = {
-    enable = true;
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-hyprland
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-wlr
-    ];
+  xdg = {
+    portal = {
+      enable = true;
+      extraPortals = with pkgs; [
+        xdg-desktop-portal
+        xdg-desktop-portal-hyprland
+        xdg-desktop-portal-gtk
+        xdg-desktop-portal-wlr
+      ];
+    };
+    mime = {
+      enable = true;
+      defaultApplications = {
+        "inode/directory" = [ "nautilus.desktop" ];
+      };
+      associations.removed = {
+        "inode/directory" = [ "kitty-open.desktop" ];
+      };
+    };
   };
 
   environment = {
