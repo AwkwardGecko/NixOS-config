@@ -49,12 +49,11 @@
     ./modules/containers.nix
     ./modules/crypto.nix
     ./modules/browsers.nix
-    #./modules/ai.nix 
+    ./modules/ai.nix 
 
 
     #./modules/beets.nix
     #./modules/cachix.nix # cachix
-    #.modules/comfyui.nix
     #./modules/comfyui-dependencies.nix
     ./modules/coolercontrol.nix
     ./modules/default-apps.nix
