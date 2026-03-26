@@ -11,6 +11,7 @@
     hicolor-icon-theme
     libadwaita
     qt5.qtwayland
+    qt6Packages.qt6ct
   ];
 
   environment.sessionVariables = {
