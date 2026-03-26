@@ -21,6 +21,7 @@
     ./modules/desktop/stylix.nix
     ./modules/desktop/theme.nix
 
+    ./modules/gaming/tools.nix
     ./modules/gaming/controller.nix
     ./modules/gaming/gamemode.nix
     ./modules/gaming/nvidia.nix
@@ -37,7 +38,6 @@
     ./modules/networking/hostname.nix
     ./modules/networking/prometheus.nix
     ./modules/networking/teamviewer.nix
-    
 
     ./modules/shell/fish.nix
     ./modules/shell/kitty.nix
@@ -46,8 +46,9 @@
     ./modules/media/tdarr.nix
     ./modules/dev.nix
     ./modules/shell/shell.nix
-
-
+    ./modules/containers.nix
+    ./modules/crypto.nix
+    ./modules/browsers.nix
 
 
     ./modules/adwaita.nix
@@ -98,49 +99,5 @@
     ./modules/waybar-mpris.nix
     ./modules/whisperai.nix
     #./modules/wine.nix
-  ];
-
-  environment.systemPackages = with pkgs; [
-    # bazel # Google's build tool (used for TensorFlow etc.)
-    #binutils_nogold            # Binutils without the gold linker
-    # brave # Web browser
-    # btmon                    # Bluetooth monitoring/debugging
-    #cargo # Rust package manager
-    #cargo-c # Build C-style shared libs from Rust
-    #cargo-deb # Generate .deb packages from Rust projects
-    #cargo-rr # Run Rust programs under rr debugger
-    clinfo # Lists OpenCL devices
-    #digikam                     # Photo management software
-    docker # Container engine
-    docker-compose # Define & run multi-container apps with Docker
-    ffmpeg # Video and audio processing tool
-    gimp # Image editing software
-    git # Version control
-    #glxinfo                     #
-    #glibc_memusage              # Tracks memory usage of programs
-    goverlay
-    #gpu-burn
-    libglvnd # OpenGL Vendor-Neutral Dispatch library (Stable Diffusion dependency)
-    libheif # HEIF image support
-    libnotify
-    mesa # Open-source graphics drivers
-    openssl # TLS/SSL support (used by reliquary-archiver and other tools)
-    pavucontrol # PulseAudio volume control GUI
-    pkg-config # Finds C libraries (used by reliquary-archiver)
-    proton-pass
-    qbittorrent # BitTorrent client
-    rclone # Sync with cloud storage
-    #rustc                       # Rust compiler
-    #rustup                      # Rust toolchain manager (used by reliquary-archiver)
-    #rustup-toolchain-install-master # Install Rust toolchains from master
-    sshfs # Mount remote filesystems over SSH
-    strawberry # Music player
-    # unigine-superposition - don't use. run .exe through steam for Vulkan support
-    vlc # Media player
-    vulkan-loader # Vulkan runtime loader
-    vulkan-tools # Vulkan utilities like `vulkaninfo`
-    wine # Windows compatibility layer
-    xmrig
-    yt-dlp # YouTube downloader
   ];
 }

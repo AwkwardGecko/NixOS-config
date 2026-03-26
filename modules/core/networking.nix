@@ -12,6 +12,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    #btmon
     curl
     dig
     iproute2

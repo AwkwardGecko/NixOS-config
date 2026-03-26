@@ -8,6 +8,7 @@
     unzip
     inotify-tools
     bootiso
+    libnotify
     btop
   ];
 }

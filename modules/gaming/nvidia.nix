@@ -37,6 +37,10 @@
   };
 
   environment.systemPackages = with pkgs; [
+    clinfo
+    libGL
+    libglvnd
+    mesa
     vulkan-tools
     vulkan-loader
     dxvk
