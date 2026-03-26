@@ -10,7 +10,6 @@
     ./hardware-configuration.nix
     ./modules/adwaita.nix
     ./modules/alejandra.nix
-    #./modules/android.nix
     ./modules/audio.nix # audio
     ./modules/autologin.nix # 100%
     ./modules/bash.nix
