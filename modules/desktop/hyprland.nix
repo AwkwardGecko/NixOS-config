@@ -14,7 +14,14 @@
   };
 
   services = {
-    displayManager.sddm.wayland.enable = true;
+    displayManager.sddm = {
+      enable = true;
+      wayland.enable = true;
+      autoLogin = {
+        enable = true;
+        user = "zozano";
+      };
+    };
     udisks2.enable = true;
     dbus.enable = true;
   };

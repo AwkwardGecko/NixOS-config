@@ -51,7 +51,7 @@
     ./modules/browsers.nix
 
 
-    ./modules/autologin.nix # 100%
+    #./modules/autologin.nix # 100%
     ./modules/bash.nix
     #./modules/beets.nix
     #./modules/cachix.nix # cachix
@@ -59,7 +59,6 @@
     #.modules/comfyui.nix
     #./modules/comfyui-dependencies.nix
     ./modules/coolercontrol.nix
-    #.modules/cron.nix
     ./modules/default-apps.nix
     ./modules/dolphin.nix
     ./modules/diffusion.nix
