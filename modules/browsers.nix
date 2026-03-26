@@ -10,6 +10,12 @@ let
   };
 in
 {
+  environment.systemPackages = with pkgs; [
+    chromium
+    bluez
+    proton-pass
+  ];
+
   programs = {
     chromium = {
       enable = true;
@@ -30,7 +36,6 @@ in
         "profile.exit_type" = "Normal";
       };
     };
-  programs = {
     firefox = {
       enable = true;
       languagePacks = [
@@ -138,14 +143,4 @@ in
       };
     };
   };
-
-  };
-
-
-
-  environment.systemPackages = with pkgs; [
-    chromium
-    bluez
-    proton-pass
-  ];
 }
