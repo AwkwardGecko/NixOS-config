@@ -1,8 +1,8 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, inputs, pkgs, ... }:
 {
   services.comfyui = {
     enable = true;
-    cuda = true;
+    package = inputs.comfyui-nix.packages.x86_64-linux.cuda;
     enableManager = true;
     port = 8188;
     listenAddress = "127.0.0.1";
