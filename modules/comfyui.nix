@@ -30,50 +30,62 @@ let
 
     nix-shell ../shell.nix --run "
       python main.py \
-        --lowvram \
-        --dont-upcast-attention \
-        --force-fp16 \
-        --use-split-cross-attention \
-        --preview-method auto \
-        --reserve-vram 512 \
-        --disable-smart-memory
     "
   '';
 in
 {
-  home-manager.users.zozano = {
-
-    # Keep both kitty and the script alive
-    home.packages = [
-      runComfy
-      pkgs.kitty
-    ];
-
-    # Desktop entry
-    xdg.desktopEntries.comfyui = {
-      name = "ComfyUI";
-      comment = "Launch ComfyUI with CUDA low-VRAM flags";
-      exec = "${pkgs.kitty}/bin/kitty --hold -e ${runComfy}/bin/run-comfy";
-      icon = "${config.home.homeDirectory}/.local/share/icons/comfyui.png";
-      terminal = false; # kitty is the terminal
-      type = "Application";
-      categories = [
-        "Graphics"
-        "Utility"
-      ];
-    };
-
-    xdg.desktopEntries.comfyui-2 = {
-      name = "ComfyUI-2";
-      comment = "Launch ComfyUI with CUDA low-VRAM flags";
-      exec = "${pkgs.kitty}/bin/kitty --hold -e nix run github:utensils/nix-comfyui -- --open";
-      icon = "${config.home.homeDirectory}/.local/share/icons/comfyui.png";
-      terminal = false; # kitty is the terminal
-      type = "Application";
-      categories = [
-        "Graphics"
-        "Utility"
+  services.comfyui = {
+    services.comfyui = {
+      enable = true;
+      cuda = true;
+      enableManager = true;
+      port = 8188;
+      listenAddress = "127.0.0.1";
+      dataDir = "/var/lib/comfyui";
+      openFirewall = false;
+      extraArgs = [
+        "--lowvram"
+        "--dont-upcast-attention"
+        "--force-fp16"
+        "--use-split-cross-attention"
+        "--preview-method auto"
+        "--reserve-vram 512"
+        "--disable-smart-memory"
       ];
     };
   };
+
+
+  # home-manager.users.zozano = {
+  #   home.packages = [
+  #     runComfy
+  #   ];
+
+    # Desktop entry
+    # xdg.desktopEntries.comfyui = {
+    #   name = "ComfyUI";
+    #   comment = "Launch ComfyUI with CUDA low-VRAM flags";
+    #   exec = "${pkgs.kitty}/bin/kitty --hold -e ${runComfy}/bin/run-comfy";
+    #   icon = "${config.home.homeDirectory}/.local/share/icons/comfyui.png";
+    #   terminal = false; # kitty is the terminal
+    #   type = "Application";
+    #   categories = [
+    #     "Graphics"
+    #     "Utility"
+    #   ];
+    # };
+    #
+    # xdg.desktopEntries.comfyui-2 = {
+    #   name = "ComfyUI-2";
+    #   comment = "Launch ComfyUI with CUDA low-VRAM flags";
+    #   exec = "${pkgs.kitty}/bin/kitty --hold -e nix run github:utensils/nix-comfyui -- --open";
+    #   icon = "${config.home.homeDirectory}/.local/share/icons/comfyui.png";
+    #   terminal = false; # kitty is the terminal
+    #   type = "Application";
+    #   categories = [
+    #     "Graphics"
+    #     "Utility"
+    #   ];
+    # };
+  #};
 }
