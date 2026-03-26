@@ -6,20 +6,24 @@
 }:
 {
   environment.systemPackages = with pkgs; [
-    seahorse #keyring
+    age # generating keypairs
+    seahorse #keyring manager
   ];
 
-  services.gnome.gnome-keyring.enable = true;
-  services.gnome.gcr-ssh-agent.enable = false;
+  services = {
+    gnome.gnome-keyring.enable = true;
+    gnome.gcr-ssh-agent.enable = false;
+  };
 
   security = {
+    doas.enable = true;
     pam.services = {
       login.enableGnomeKeyring = true;
     };
     sudo = {
       extraConfig = ''
         Defaults timestamp_timeout=-1
-      '';
+      ''; # removes time-out for running sudo commands
       extraRules = [{
         users = [ "zozano" ];
         commands = [

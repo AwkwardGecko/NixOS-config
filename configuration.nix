@@ -31,7 +31,8 @@
     ./modules/gaming/star-rail.nix
     ./modules/gaming/steam.nix
     ./modules/gaming/emulation.nix
-
+    ./modules/gaming/lutris.nix
+    ./modules/gaming/mangohud.nix
 
     ./modules/networking/bluetooth.nix
     ./modules/networking/ssh.nix
@@ -47,7 +48,8 @@
     ./modules/shell/nixvim.nix
 
     ./modules/media/tdarr.nix
-
+    ./modules/dev.nix
+    ./modules/shell.nix
 
 
 
@@ -81,8 +83,7 @@
     ./modules/haveno.nix
     ./modules/home-packages.nix
     ./modules/jellyfin-media-player.nix
-    ./modules/lutris.nix
-    ./modules/mangohud.nix
+
     ./modules/monero.nix
     #.modules/ollama.nix
     ./modules/openrgb.nix
@@ -104,38 +105,13 @@
     #./modules/wine.nix
   ];
 
-
-
-  # networking.hostName = "z-nixos";
-  # networking.networkmanager.enable = true;
-  # networking.interfaces.enp10s0.macAddress = "04:42:1A:A7:FD:1F";
-  #
-  # networking.nameservers = [
-  #   "1.1.1.1"
-  #   "8.8.8.8"
-  # ];
-
-  security.doas.enable = true;
-  programs.ssh.startAgent = true;
-  programs.npm.enable = true;
-
-  programs.nix-ld.enable = true; # resolve library issues for Stable Diffusion
-
   environment.systemPackages = with pkgs; [
-    age # generate keypair
-    audacity
-    alejandra # format nix files
-    alsa-lib # ALSA sound library
-    atk # Accessibility toolkit (GNOME dependencies)
     # bazel # Google's build tool (used for TensorFlow etc.)
-    bc
     #binutils_nogold            # Binutils without the gold linker
     bootiso # Create bootable USB drives from ISO
     # brave # Web browser
     # btmon                    # Bluetooth monitoring/debugging
-    btop
     btrfs-progs # Btrfs filesystem tools
-    cairo # 2D graphics library
     #cargo # Rust package manager
     #cargo-c # Build C-style shared libs from Rust
     #cargo-deb # Generate .deb packages from Rust projects
@@ -155,15 +131,12 @@
     docker-compose # Define & run multi-container apps with Docker
     evince # Document viewer
     evtest # Reads input events (debugging input devices)
-    expat # XML parsing library
     ffmpeg # Video and audio processing tool
     hdparm
-    gawk
     gcc # GNU Compiler Collection
     gcc-unwrapped # Unwrapped GCC (required by some projects like Stable Diffusion)
     gimp # Image editing software
     git # Version control
-    glib # Low-level GNOME core library
     #glxinfo                     #
     #glibc_memusage              # Tracks memory usage of programs
     gedit
@@ -175,8 +148,6 @@
     #gpu-burn
     icu # Unicode support libraries
     iproute2 # Network tools (replacement for net-tools)
-    inotify-tools # check what is making folders
-    jq
     libX11 # Core X11 library
     libXcomposite # Compositing support for X11
     libXdamage # Damage tracking for X11
@@ -196,7 +167,6 @@
     libz
     lld # LLVM linker
     llvmPackages.bintools # LLVM toolchain binaries (e.g., ar, nm)
-    lsof
     lynis # security auditing
     mesa # Open-source graphics drivers
     nettools # Old-school network tools (ifconfig, etc.)
@@ -210,7 +180,6 @@
     onlyoffice-desktopeditors # Office suite
     opencv
     openssl # TLS/SSL support (used by reliquary-archiver and other tools)
-    pango # Text rendering library
     parted # Partitioning tool
     pavucontrol # PulseAudio volume control GUI
     pcapfix # Repairs broken .pcap files
@@ -236,7 +205,6 @@
     usbutils
     udev # Device manager for the Linux kernel
     # unigine-superposition - don't use. run .exe through steam for Vulkan support
-    unzip
     upower # Power management daemon (dependency for Vivaldi maybe)
     uv # Fast Python package manager
     vlc # Media player
