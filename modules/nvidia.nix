@@ -22,7 +22,7 @@
       #open = true;
       open = false;
       nvidiaSettings = true;
-      nvidia-container-toolkit.enable = false;
+      #nvidia-container-toolkit.enable = false;
       powerManagement.enable = false;
       powerManagement.finegrained = false;
       package = config.boot.kernelPackages.nvidiaPackages.latest;
