@@ -55,7 +55,12 @@
   };
 
   home-manager.users.zozano = {
+    
     home.packages = with pkgs; [
+      cliphist
+      grimblast
+      wayland-protocols
+      wlroots
       hyprsunset
       hypridle
     ];

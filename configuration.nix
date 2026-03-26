@@ -50,9 +50,6 @@
     ./modules/crypto.nix
     ./modules/browsers.nix
 
-
-    #./modules/autologin.nix # 100%
-    ./modules/bash.nix
     #./modules/beets.nix
     #./modules/cachix.nix # cachix
     ./modules/chromium.nix

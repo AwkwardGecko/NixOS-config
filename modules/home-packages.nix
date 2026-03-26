@@ -2,16 +2,13 @@
 {
   home-manager.users.zozano = {
     home.packages = with pkgs; [
-      cliphist # wayland clipboard manager
       cryptsetup # LUKS support
       dex # run .desktop files from CLI
       #digikam
-      egl-wayland
       fastfetch
       #gimp
       #git
       #google-chrome
-      grimblast
       grc
       #home-assistant-component-tests.tuya
       htop
@@ -20,10 +17,8 @@
       #plasma5Packages.kdeconnect-kde
       krusader # file manager
       krename # batch renamer for krusader
-      libva
       #lua
       #lua54Packages.luarocks-nix
-      mesa
       mp3gain # normalize volume of music
       mkvtoolnix # modify video files
       nautilus # file browser
@@ -46,12 +41,10 @@
       #SDL2
       shotwell
       #	vlc
-      wayland-protocols
       #	wine
       #	wine-wayland
       #	wine-staging
       #	winetricks
-      wlroots
       #wl-clipboard-rs
       #xcbeautify # colour support for wayland?
     ];

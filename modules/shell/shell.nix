@@ -11,4 +11,8 @@
     libnotify
     btop
   ];
+
+  environment.extraInit = ''
+    export PATH="$HOME/.local/bin:$PATH"
+  '';
 }
