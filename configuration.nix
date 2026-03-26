@@ -8,14 +8,41 @@
 {
   imports = [
     ./hardware-configuration.nix
+    
+    ./modules/core/audio.nix
+    ./modules/core/boot.nix
+    ./modules/core/filesystem.nix
+    ./modules/core/localisation.nix
+    ./modules/core/security.nix
+    ./modules/core/users.nix
+
+    ./modules/desktop/hyprland.nix
+    ./modules/desktop/hyprpanel.nix
+    ./modules/desktop/rofi.nix
+    ./modules/desktop/style.nix
+    ./modules/desktop/stylix.nix
+    ./modules/desktop/theme.nix
+
+    ./modules/gaming/gamemode.nix
+    ./modules/gaming/nvidia.nix
+    ./modules/gaming/star-rail.nix
+    ./modules/gaming/steam.nix
+
+    ./modules/networking/bluetooth.nix
+    ./modules/networking/ssh.nix
+    ./modules/networking/syncthing.nix
+    ./modules/networking/tailscale.nix
+    ./modules/networking/hostname.nix
+
+    ./modules/shell/fish.nix
+    ./modules/shell/kitty.nix
+    ./modules/shell/nixvim.nix
+
     ./modules/adwaita.nix
     ./modules/alejandra.nix
-    ./modules/audio.nix # audio
     ./modules/autologin.nix # 100%
     ./modules/bash.nix
     #./modules/beets.nix
-    ./modules/bluetooth.nix # bluetooth
-    ./modules/boot.nix # configure kernel modules
     ./modules/bottles.nix
     ./modules/bisq.nix
     #./modules/cachix.nix # cachix
@@ -30,29 +57,19 @@
     ./modules/diffusion.nix
     ./modules/eigenwallet.nix
     ./modules/fclones.nix
-    ./modules/filesystem.nix
     ./modules/firefox.nix
-    ./modules/fish.nix
     ./modules/flatpak.nix
     ./modules/fonts.nix
     #./modules/ftp.nix
-    ./modules/gamemode.nix
     ./modules/git.nix
     ./modules/git-push-dotfiles.nix
     ./modules/gpg.nix
     ./modules/haveno.nix
     ./modules/home-packages.nix
-    ./modules/hostname.nix
-    ./modules/hyprland.nix
-    ./modules/hyprpanel.nix
     ./modules/jellyfin-media-player.nix
-    ./modules/kitty.nix
-    ./modules/localisation.nix
     ./modules/lutris.nix
     ./modules/mangohud.nix
     ./modules/monero.nix
-    ./modules/nixvim.nix
-    ./modules/nvidia.nix
     ./modules/nintendo64.nix
     #.modules/ollama.nix
     ./modules/openrgb.nix
@@ -63,24 +80,15 @@
     ./modules/rofi.nix
     #./modules/rustdesk.nix
     #./modules/scanner.nix
-    ./modules/security.nix
     ./modules/shadps4.nix
     ./modules/signal.nix
-    ./modules/ssh.nix
     ./modules/sshfs.nix
-    ./modules/star-rail.nix
     ./modules/statix.nix
-    ./modules/steam.nix
-    ./modules/style.nix
-    ./modules/stylix.nix
-    ./modules/syncthing.nix
     #.modules/systemd-timers.nix
-    ./modules/tailscale.nix
     ./modules/tdarr.nix
     ./modules/teamviewer.nix
     ./modules/tmux.nix
     #.modules/untrunc-anthwlock.nix
-    ./modules/users.nix
     #.modules/xmrig.nix
     ./modules/wallpaper.nix
     ./modules/waybar-mpris.nix
