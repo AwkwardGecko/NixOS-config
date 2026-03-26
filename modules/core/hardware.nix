@@ -14,6 +14,11 @@
     liquidctl
   ];
 
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
   programs.coolercontrol.enable = true;
   services.hardware.openrgb.enable = true;
 }

@@ -28,17 +28,7 @@
     dbus.enable = true;
   };
 
-  xdg = {
-    portal = {
-      enable = true;
-      extraPortals = with pkgs; [
-        xdg-desktop-portal
-        xdg-desktop-portal-hyprland
-        xdg-desktop-portal-gtk
-        xdg-desktop-portal-wlr
-      ];
-    };
-  };
+
 
   environment.systemPackages = with pkgs; [
     xdg-user-dirs
@@ -48,8 +38,6 @@
     
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
-    LIBVA_DRIVER_NAME = "nvidia";
-    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
   };
 
   home-manager.users.zozano = {

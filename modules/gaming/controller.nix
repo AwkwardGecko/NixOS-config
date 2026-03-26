@@ -9,7 +9,6 @@
   #services.udev.packages = [ pkgs.game-devices-udev-rules ];
 
   hardware = {
-    #steam-hardware.enable = true;
     #xpad-noone.enable = true;
     #xpad-noone.enable = false; 
     	# whether to enable The Xpad driver from the Linux kernel with support for Xbox One controllers removed.    
