@@ -20,11 +20,11 @@
     ./modules/bisq.nix
     #./modules/cachix.nix # cachix
     ./modules/chromium.nix
-    #.modules/#comfyui.nix
+    #.modules/comfyui.nix
     #./modules/comfyui-dependencies.nix
     ./modules/controller.nix
     ./modules/coolercontrol.nix
-    #.modules/#cron.nix
+    #.modules/cron.nix
     ./modules/default-apps.nix
     ./modules/dolphin.nix
     ./modules/diffusion.nix
@@ -54,7 +54,7 @@
     ./modules/nixvim.nix
     ./modules/nvidia.nix
     ./modules/nintendo64.nix
-    #.modules/#ollama.nix
+    #.modules/ollama.nix
     ./modules/openrgb.nix
     ./modules/polkit.nix
     ./modules/prometheus.nix
@@ -74,14 +74,14 @@
     ./modules/style.nix
     ./modules/stylix.nix
     ./modules/syncthing.nix
-    #.modules/#systemd-timers.nix
+    #.modules/systemd-timers.nix
     ./modules/tailscale.nix
     ./modules/tdarr.nix
     ./modules/teamviewer.nix
     ./modules/tmux.nix
-    #.modules/#untrunc-anthwlock.nix
+    #.modules/untrunc-anthwlock.nix
     ./modules/users.nix
-    #.modules/#xmrig.nix
+    #.modules/xmrig.nix
     ./modules/wallpaper.nix
     ./modules/waybar-mpris.nix
     ./modules/whisperai.nix
