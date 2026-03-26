@@ -15,6 +15,7 @@
     ./modules/core/users.nix
     #./modules/core/scanner.nix
     ./modules/core/coolercontrol.nix
+    ./modules/core/statix.nix
 
     ./modules/desktop/hyprland.nix
     ./modules/desktop/hyprpanel.nix
@@ -23,6 +24,8 @@
     ./modules/desktop/style.nix
     ./modules/desktop/stylix.nix
     ./modules/desktop/theme.nix
+    ./modules/desktop/wallpaper.nix
+    ./modules/desktop/portals.nix
 
     ./modules/gaming/tools.nix
     ./modules/gaming/controller.nix
@@ -41,6 +44,8 @@
     ./modules/networking/hostname.nix
     ./modules/networking/prometheus.nix
     ./modules/networking/teamviewer.nix
+    ./modules/networking/protonvpn.nix
+    ./modules/networking/sshfs.nix
 
     ./modules/shell/tmux.nix
     ./modules/shell/fish.nix
@@ -54,13 +59,8 @@
     ./modules/other/crypto.nix
     ./modules/other/browsers.nix
     ./modules/other/ai.nix 
-    ./modules/other/flatpak.nix
-    
-    ./modules/other/protonmail.nix # > go to communications.nix # remove libnotify
-    ./modules/networking/protonvpn.nix # > go to core/networking.nix
-    ./modules/other/signal.nix # > go to communications.nix
-    ./modules/networking/sshfs.nix # > go to networking/ssh.nix
-    ./modules/core/statix.nix # > go to core/nix.nix
-    ./modules/desktop/wallpaper.nix # > go to desktop/hyprland.nix
+    ./modules/other/flatpak.nix 
+    ./modules/other/protonmail.nix
+    ./modules/other/signal.nix
   ];
 }
