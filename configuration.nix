@@ -49,7 +49,7 @@
     ./modules/containers.nix
     ./modules/crypto.nix
     ./modules/browsers.nix
-    ./modules/ai.nix 
+    #./modules/ai.nix 
 
 
     #./modules/beets.nix
