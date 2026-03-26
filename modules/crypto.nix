@@ -5,8 +5,14 @@
     monero-cli
     xmrig
     bisq2
+    openjdk21
   ];
 
+  programs.java = {
+    enable = true;
+    package = pkgs.openjdk21;
+  };
+  
   services.monero = {
     enable = true;
     prune = true;

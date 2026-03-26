@@ -42,7 +42,6 @@
 
   environment.systemPackages = with pkgs; [
     xdg-user-dirs
-    kdePackages.kio-extras
     gvfs
     libmtp
     wl-clipboard

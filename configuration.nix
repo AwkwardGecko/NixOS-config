@@ -39,6 +39,7 @@
     ./modules/networking/prometheus.nix
     ./modules/networking/teamviewer.nix
 
+    ./modules/shell/tmux.nix
     ./modules/shell/fish.nix
     ./modules/shell/kitty.nix
     ./modules/shell/nixvim.nix
@@ -53,15 +54,9 @@
 
 
     #./modules/beets.nix
-    #./modules/cachix.nix # cachix
-    #./modules/comfyui-dependencies.nix
     ./modules/coolercontrol.nix
-    ./modules/default-apps.nix
-    ./modules/dolphin.nix
-    ./modules/diffusion.nix
     ./modules/eigenwallet.nix
     ./modules/fclones.nix
-    ./modules/firefox.nix
     ./modules/flatpak.nix
     ./modules/fonts.nix
     #./modules/ftp.nix
@@ -69,7 +64,6 @@
     ./modules/git-push-dotfiles.nix
     ./modules/gpg.nix
     ./modules/haveno.nix
-    ./modules/jellyfin-media-player.nix
     #.modules/ollama.nix
     ./modules/openrgb.nix
     ./modules/polkit.nix
@@ -81,12 +75,9 @@
     ./modules/sshfs.nix
     ./modules/statix.nix
     #.modules/systemd-timers.nix
-    ./modules/tmux.nix
     #.modules/untrunc-anthwlock.nix
     #.modules/xmrig.nix
     ./modules/wallpaper.nix
-    #./modules/waybar-mpris.nix
     #./modules/whisperai.nix
-    #./modules/wine.nix
   ];
 }

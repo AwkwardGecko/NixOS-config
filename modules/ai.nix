@@ -1,38 +1,4 @@
-{ config, pkgs, ... }:
-
-let
-  # ── Immutable ComfyUI launcher ──────────────────────────────────────────
-  runComfy = pkgs.writeShellScriptBin "run-comfy" ''
-    set -euo pipefail
-
-    ## GPU exclusive-process mode (asks for sudo once)
-    if ! nvidia-smi -q | grep -q "Exclusive"; then
-      echo "[run-comfy] Enabling EXCLUSIVE_PROCESS on GPU 0…"
-      sudo nvidia-smi -i 0 -c EXCLUSIVE_PROCESS
-    fi
-
-    ## Environment tweaks
-    export WINIT_UNIX_NO_PORTAL=1
-    export __GL_FRAMEBUFFER_SRGB_CAPABLE=1
-    export NIXPKGS_ALLOW_UNFREE=1
-    export PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:64
-    export COMFYUI_PORT=8188
-
-    ## Update repo, then run
-    workdir="$HOME/test-shell/ComfyUI"
-    cd "$workdir"
-
-    echo "[run-comfy] git pull…"
-    git pull origin master
-    /home/zozano/test-shell/.venv/bin/python -s -m pip install -r /home/zozano/test-shell/ComfyUI/requirements.txt
-    pip install diffusers
-    #|| echo "[run-comfy] pull failed—running local copy."
-
-    nix-shell ../shell.nix --run "
-      python main.py \
-    "
-  '';
-in
+{ config, lib, pkgs, ... }:
 {
   services.comfyui = {
     enable = true;
@@ -52,42 +18,9 @@ in
     ];
   };
 
-  programs.nix-ld.enable = true;
+  #programs.nix-ld.enable = true; # enable if custom nodes fail to find system libs
 
   environment.systemPackages = with pkgs; [
     python312Packages.openai-whisper
   ];
-
-  # home-manager.users.zozano = {
-  #   home.packages = [
-  #     runComfy
-  #   ];
-
-    # Desktop entry
-    # xdg.desktopEntries.comfyui = {
-    #   name = "ComfyUI";
-    #   comment = "Launch ComfyUI with CUDA low-VRAM flags";
-    #   exec = "${pkgs.kitty}/bin/kitty --hold -e ${runComfy}/bin/run-comfy";
-    #   icon = "${config.home.homeDirectory}/.local/share/icons/comfyui.png";
-    #   terminal = false; # kitty is the terminal
-    #   type = "Application";
-    #   categories = [
-    #     "Graphics"
-    #     "Utility"
-    #   ];
-    # };
-    #
-    # xdg.desktopEntries.comfyui-2 = {
-    #   name = "ComfyUI-2";
-    #   comment = "Launch ComfyUI with CUDA low-VRAM flags";
-    #   exec = "${pkgs.kitty}/bin/kitty --hold -e nix run github:utensils/nix-comfyui -- --open";
-    #   icon = "${config.home.homeDirectory}/.local/share/icons/comfyui.png";
-    #   terminal = false; # kitty is the terminal
-    #   type = "Application";
-    #   categories = [
-    #     "Graphics"
-    #     "Utility"
-    #   ];
-    # };
-  #};
 }
