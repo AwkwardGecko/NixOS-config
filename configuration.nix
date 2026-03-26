@@ -13,6 +13,8 @@
     ./modules/core/boot.nix
     ./modules/core/filesystem.nix
     ./modules/core/localisation.nix
+    ./modules/core/networking.nix
+    ./modules/core/nix.nix
     ./modules/core/security.nix
     ./modules/core/users.nix
 
@@ -27,6 +29,8 @@
     ./modules/gaming/nvidia.nix
     ./modules/gaming/star-rail.nix
     ./modules/gaming/steam.nix
+    ./modules/gaming/emulation.nix
+
 
     ./modules/networking/bluetooth.nix
     ./modules/networking/ssh.nix
@@ -79,7 +83,6 @@
     ./modules/lutris.nix
     ./modules/mangohud.nix
     ./modules/monero.nix
-    ./modules/nintendo64.nix
     #.modules/ollama.nix
     ./modules/openrgb.nix
     ./modules/polkit.nix
@@ -87,7 +90,6 @@
     ./modules/protonvpn.nix
     #./modules/rustdesk.nix
     #./modules/scanner.nix
-    ./modules/shadps4.nix
     ./modules/signal.nix
     ./modules/sshfs.nix
     ./modules/statix.nix
@@ -102,31 +104,15 @@
   ];
 
 
-  # Automatic cleanup
-  nix = {
-    gc = { # garbage collection
-      automatic = true;
-      dates = "daily";
-      options = "--delete-older-than 7d";
-    };
 
-    settings = {
-      auto-optimise-store = true;
-      experimental-features = [
-        "nix-command"
-        "flakes"
-      ];
-    };
-  };
-
-  networking.hostName = "z-nixos";
-  networking.networkmanager.enable = true;
-  networking.interfaces.enp10s0.macAddress = "04:42:1A:A7:FD:1F";
-
-  networking.nameservers = [
-    "1.1.1.1"
-    "8.8.8.8"
-  ];
+  # networking.hostName = "z-nixos";
+  # networking.networkmanager.enable = true;
+  # networking.interfaces.enp10s0.macAddress = "04:42:1A:A7:FD:1F";
+  #
+  # networking.nameservers = [
+  #   "1.1.1.1"
+  #   "8.8.8.8"
+  # ];
 
   nixpkgs.config.allowUnfree = true;
   hardware.enableAllFirmware = true;
