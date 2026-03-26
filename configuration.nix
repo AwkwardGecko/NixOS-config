@@ -33,10 +33,19 @@
     ./modules/networking/syncthing.nix
     ./modules/networking/tailscale.nix
     ./modules/networking/hostname.nix
+    ./modules/networking/prometheus.nix
+    ./modules/networking/teamviewer.nix
+    
 
     ./modules/shell/fish.nix
     ./modules/shell/kitty.nix
     ./modules/shell/nixvim.nix
+
+    ./modules/media/tdarr.nix
+
+
+
+
 
     ./modules/adwaita.nix
     ./modules/alejandra.nix
@@ -74,7 +83,6 @@
     #.modules/ollama.nix
     ./modules/openrgb.nix
     ./modules/polkit.nix
-    ./modules/prometheus.nix
     ./modules/protonmail.nix
     ./modules/protonvpn.nix
     #./modules/rustdesk.nix
@@ -84,8 +92,6 @@
     ./modules/sshfs.nix
     ./modules/statix.nix
     #.modules/systemd-timers.nix
-    ./modules/tdarr.nix
-    ./modules/teamviewer.nix
     ./modules/tmux.nix
     #.modules/untrunc-anthwlock.nix
     #.modules/xmrig.nix
