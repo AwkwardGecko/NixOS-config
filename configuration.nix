@@ -49,7 +49,7 @@
 
     ./modules/media/tdarr.nix
     ./modules/dev.nix
-    ./modules/shell.nix
+    ./modules/shell/shell.nix
 
 
 
