@@ -44,7 +44,6 @@
     ./modules/haveno.nix
     ./modules/home-packages.nix
     ./modules/hostname.nix
-    ./modules/hdd-soft-shutdown.nix
     ./modules/hyprland.nix
     ./modules/hyprpanel.nix
     ./modules/jellyfin-media-player.nix
@@ -63,7 +62,6 @@
     ./modules/protonmail.nix
     ./modules/protonvpn.nix
     ./modules/rofi.nix
-    #./modules/reload-usb.nix
     #./modules/rustdesk.nix
     #./modules/scanner.nix
     ./modules/security.nix
