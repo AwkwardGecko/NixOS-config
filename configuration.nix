@@ -77,7 +77,6 @@
     ./modules/prometheus.nix
     ./modules/protonmail.nix
     ./modules/protonvpn.nix
-    ./modules/rofi.nix
     #./modules/rustdesk.nix
     #./modules/scanner.nix
     ./modules/shadps4.nix
