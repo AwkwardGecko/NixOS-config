@@ -6,6 +6,7 @@
     xmrig
     bisq2
     openjdk21
+    eigenwallet
   ];
 
   programs.java = {

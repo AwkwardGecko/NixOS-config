@@ -13,7 +13,7 @@
     ./modules/core/nix.nix
     ./modules/core/security.nix
     ./modules/core/users.nix
-    ./modules/core/scanner.nix
+    #./modules/core/scanner.nix
     ./modules/core/coolercontrol.nix
 
     ./modules/desktop/hyprland.nix
@@ -56,13 +56,11 @@
 
 
     #./modules/beets.nix
-    ./modules/eigenwallet.nix
     ./modules/fclones.nix
     ./modules/flatpak.nix
     ./modules/fonts.nix
     #./modules/ftp.nix
     ./modules/git.nix
-    ./modules/git-push-dotfiles.nix
     ./modules/gpg.nix
     ./modules/openrgb.nix
     ./modules/polkit.nix
