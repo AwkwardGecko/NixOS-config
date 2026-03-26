@@ -1,7 +1,3 @@
-################
-### HYPRLAND ###
-################
-
 {
   config,
   pkgs,
@@ -9,25 +5,42 @@
   ...
 }:
 {
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
+  programs = {
+    hyprland = {
+      enable = true;
+      xwayland.enable = true;
+    };
+    kdeconnect.enable = true;
   };
 
-  services.displayManager.sddm.wayland.enable = true;
+  services = {
+    displayManager.sddm.wayland.enable = true;
+    gvfs.enable = true;
+    udisks2.enable = true;
+  };
 
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [
-    pkgs.xdg-desktop-portal-hyprland
-    pkgs.xdg-desktop-portal-gtk
-  ];
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-hyprland
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-wlr
+    ];
+  };
 
-  services.udisks2.enable = true;
-
-  environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-    LIBVA_DRIVER_NAME = "nvidia";
-    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+  environment = {
+    systemPackages = with pkgs; [
+      xdg-user-dirs
+      kdePackages.kio-extras
+      gvfs
+      libmtp
+    ];
+    
+    sessionVariables = {
+      NIXOS_OZONE_WL = "1";
+      LIBVA_DRIVER_NAME = "nvidia";
+      __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    };
   };
 
   home-manager.users.zozano = {

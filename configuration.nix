@@ -10,14 +10,13 @@
     ./hardware-configuration.nix
     ./modules/adwaita.nix
     ./modules/alejandra.nix
-    ./modules/android.nix
+    #./modules/android.nix
     ./modules/audio.nix # audio
     ./modules/autologin.nix # 100%
     ./modules/bash.nix
     #./modules/beets.nix
     ./modules/bluetooth.nix # bluetooth
     ./modules/boot.nix # configure kernel modules
-    #.modules/#borderlands2-fix.nix
     ./modules/bottles.nix
     ./modules/bisq.nix
     ./modules/cachix.nix # cachix
