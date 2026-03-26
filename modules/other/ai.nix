@@ -15,7 +15,6 @@
       "--use-split-cross-attention"
       "--preview-method=auto"
       "--reserve-vram=512"
-      "--disable-smart-memory"
     ];
   };
 
