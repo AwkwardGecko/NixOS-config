@@ -116,8 +116,6 @@
     crane # Nix-native Rust build system (like crate2nix)
     cups # Printing system
     curl
-    dbus # IPC system used by desktop apps
-    dcap # Data Center Attestation Primitives (SGX stuff)
     dig # DNS Lookup
     #digikam                     # Photo management software
     docker # Container engine
@@ -139,23 +137,12 @@
     #gpu-burn
     icu # Unicode support libraries
     iproute2 # Network tools (replacement for net-tools)
-    libX11 # Core X11 library
-    libXcomposite # Compositing support for X11
-    libXdamage # Damage tracking for X11
-    libXext # Misc X11 extensions
-    libXfixes # X11 fixes extension
-    libXrandr # X11 RandR extension (screen resizing)
-    libxcb # X protocol C-language Binding
     libcap # test
     libGL # OpenGL library
-    libglvnd
-    libdrm # Direct Rendering Manager (graphics stuff)
     libglvnd # OpenGL Vendor-Neutral Dispatch library (Stable Diffusion dependency)
     libheif # HEIF image support
     libnotify
     libsecret # Secret storage (GNOME keyring)
-    libxkbcommon # Keyboard layout handling (Wayland/X)
-    libz
     lld # LLVM linker
     llvmPackages.bintools # LLVM toolchain binaries (e.g., ar, nm)
     lynis # security auditing
@@ -166,8 +153,6 @@
     nixfmt
     nodejs # Node.js runtime
     nomacs # image viewer
-    nspr # Netscape Portable Runtime (used by Firefox, etc.)
-    nss # Network Security Services
     onlyoffice-desktopeditors # Office suite
     opencv
     openssl # TLS/SSL support (used by reliquary-archiver and other tools)
@@ -190,10 +175,8 @@
     smartmontools # Monitor hard drive health (S.M.A.R.T.)
     sqlite # Embedded SQL database engine
     sshfs # Mount remote filesystems over SSH
-    stdenv # Nix standard environment
     strawberry # Music player
     usbutils
-    udev # Device manager for the Linux kernel
     # unigine-superposition - don't use. run .exe through steam for Vulkan support
     upower # Power management daemon (dependency for Vivaldi maybe)
     uv # Fast Python package manager
