@@ -63,7 +63,6 @@
     ./modules/git.nix
     ./modules/git-push-dotfiles.nix
     ./modules/gpg.nix
-    ./modules/haveno.nix
     #.modules/ollama.nix
     ./modules/openrgb.nix
     ./modules/polkit.nix
