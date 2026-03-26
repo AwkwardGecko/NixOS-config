@@ -5,5 +5,7 @@
   ...
 }:
 {
-  programs.gpg.enable = true;
+  home-manager.users.zozano = {
+    programs.gpg.enable = true;
+  };
 }

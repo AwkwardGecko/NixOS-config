@@ -2,30 +2,17 @@
 {
   imports = [
     ./modules/hyprland-home.nix
-    #./modules/hyprpanel-dummy.nix
     ./modules/hyprpanel.nix
-    #./modules/hyprpaper.nix
-    #./modules/hypridle.nix
     ./modules/kitty.nix
     ./modules/jellyfin-media-player-home.nix
     ./modules/lutris.nix
-    #./modules/terminal.nix
-    #./modules/mako.nix
     ./modules/mangohud.nix
-    #./modules/neovim/neovim.nix
-    #./modules/OpenRGB.nix
     ./modules/ranger.nix
     ./modules/star-rail.nix
     ./modules/style.nix
-    #./modules/swaync.nix
     ./modules/rofi.nix
     ./modules/tmux.nix
     ./modules/wallpaper.nix
-    #./modules/waybar.nix
-    #./modules/waybar/mechabar.nix
-    #$./modules/xdg.nix
-    #./modules/xserver.nix
-    #./modules/xmrig.nix
   ];
 
   # to add home modules to sys modules, start with:
