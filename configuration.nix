@@ -44,6 +44,7 @@
     ./modules/git-push-dotfiles.nix
     ./modules/gpg.nix
     ./modules/haveno.nix
+    ./modules/home-packages.nix
     ./modules/hostname.nix
     ./modules/hdd-soft-shutdown.nix
     ./modules/huge-pages.nix
