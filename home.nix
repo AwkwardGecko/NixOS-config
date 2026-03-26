@@ -1,17 +1,6 @@
 { config, lib, inputs, pkgs, ... }:
 {
   imports = [
-    #./modules/applications.nix
-    #./modules/cursor.nix
-    #./modules/beets.nix
-    ./modules/comfyui.nix
-    ./modules/default-apps.nix
-    ./modules/diffusion.nix
-    #.modules/fastfetch.nix
-    #./modules/fish.nix
-    #.modules/fonts.nix
-    ./modules/gpg.nix
-    ./modules/git-home.nix
     ./modules/hyprland-home.nix
     #./modules/hyprpanel-dummy.nix
     ./modules/hyprpanel.nix
@@ -38,6 +27,9 @@
     #./modules/xserver.nix
     #./modules/xmrig.nix
   ];
+
+  # to add home modules to sys modules, start with:
+  # home-manager.users.zozano = { };
 
   systemd.user.startServices = "sd-switch";
 

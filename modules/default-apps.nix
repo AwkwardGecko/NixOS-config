@@ -1,5 +1,6 @@
-  { config, lib, pkgs, ... }:
-  {
+{ config, lib, pkgs, ... }:
+{
+  home-manager.users.zozano = {
     xdg.mimeApps = {
       enable = true;
       defaultApplications = {
@@ -8,4 +9,5 @@
         "x-scheme-handler/https" = [ "firefox.desktop" ];
       };
     };
-  }
+  };
+}

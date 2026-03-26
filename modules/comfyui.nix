@@ -41,36 +41,39 @@ let
   '';
 in
 {
-  # Keep both kitty and the script alive
-  home.packages = [
-    runComfy
-    pkgs.kitty
-  ];
+  home-manager.users.zozano = {
 
-  # Desktop entry
-  xdg.desktopEntries.comfyui = {
-    name = "ComfyUI";
-    comment = "Launch ComfyUI with CUDA low-VRAM flags";
-    exec = "${pkgs.kitty}/bin/kitty --hold -e ${runComfy}/bin/run-comfy";
-    icon = "${config.home.homeDirectory}/.local/share/icons/comfyui.png";
-    terminal = false; # kitty is the terminal
-    type = "Application";
-    categories = [
-      "Graphics"
-      "Utility"
+    # Keep both kitty and the script alive
+    home.packages = [
+      runComfy
+      pkgs.kitty
     ];
-  };
 
-  xdg.desktopEntries.comfyui-2 = {
-    name = "ComfyUI-2";
-    comment = "Launch ComfyUI with CUDA low-VRAM flags";
-    exec = "${pkgs.kitty}/bin/kitty --hold -e nix run github:utensils/nix-comfyui -- --open";
-    icon = "${config.home.homeDirectory}/.local/share/icons/comfyui.png";
-    terminal = false; # kitty is the terminal
-    type = "Application";
-    categories = [
-      "Graphics"
-      "Utility"
-    ];
+    # Desktop entry
+    xdg.desktopEntries.comfyui = {
+      name = "ComfyUI";
+      comment = "Launch ComfyUI with CUDA low-VRAM flags";
+      exec = "${pkgs.kitty}/bin/kitty --hold -e ${runComfy}/bin/run-comfy";
+      icon = "${config.home.homeDirectory}/.local/share/icons/comfyui.png";
+      terminal = false; # kitty is the terminal
+      type = "Application";
+      categories = [
+        "Graphics"
+        "Utility"
+      ];
+    };
+
+    xdg.desktopEntries.comfyui-2 = {
+      name = "ComfyUI-2";
+      comment = "Launch ComfyUI with CUDA low-VRAM flags";
+      exec = "${pkgs.kitty}/bin/kitty --hold -e nix run github:utensils/nix-comfyui -- --open";
+      icon = "${config.home.homeDirectory}/.local/share/icons/comfyui.png";
+      terminal = false; # kitty is the terminal
+      type = "Application";
+      categories = [
+        "Graphics"
+        "Utility"
+      ];
+    };
   };
 }

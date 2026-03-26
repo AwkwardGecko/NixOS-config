@@ -1,4 +1,3 @@
-#~/.dotfiles/z-nixos/configuration.nix
 {
   config,
   pkgs,
@@ -15,6 +14,7 @@
     ./modules/audio.nix # audio
     ./modules/autologin.nix # 100%
     ./modules/bash.nix
+    #./modules/beets.nix
     ./modules/bluetooth.nix # bluetooth
     ./modules/boot.nix # configure kernel modules
     #.modules/#borderlands2-fix.nix
@@ -27,8 +27,10 @@
     ./modules/controller.nix
     ./modules/coolercontrol.nix
     #.modules/#cron.nix
+    ./modules/default-apps.nix
     #.modules/docker.nix
     ./modules/dolphin.nix
+    ./modules/diffusion.nix
     ./modules/eigenwallet.nix
     ./modules/fclones.nix
     ./modules/filesystem.nix
@@ -38,8 +40,9 @@
     ./modules/fonts.nix
     ./modules/ftp.nix
     ./modules/gamemode.nix
-    ./modules/git-system.nix
+    ./modules/git.nix
     ./modules/git-push-dotfiles.nix
+    ./modules/gpg.nix
     ./modules/haveno.nix
     ./modules/hostname.nix
     ./modules/hdd-soft-shutdown.nix
