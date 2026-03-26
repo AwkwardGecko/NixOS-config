@@ -8,6 +8,7 @@
     crane
     gcc
     gcc-unwrapped
+    git
     gperftools
     icu
     lld

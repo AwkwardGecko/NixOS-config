@@ -10,4 +10,13 @@
       "8.8.8.8"
     ];
   };
+
+  environment.systemPackages = with pkgs; [
+    curl
+    dig
+    iproute2
+    nettools
+    pcapfix
+    wget
+  ];
 }

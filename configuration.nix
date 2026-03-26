@@ -110,62 +110,37 @@
     #cargo-deb # Generate .deb packages from Rust projects
     #cargo-rr # Run Rust programs under rr debugger
     clinfo # Lists OpenCL devices
-    cups # Printing system
-    curl
-    dig # DNS Lookup
     #digikam                     # Photo management software
     docker # Container engine
     docker-compose # Define & run multi-container apps with Docker
-    evince # Document viewer
-    evtest # Reads input events (debugging input devices)
     ffmpeg # Video and audio processing tool
-    hdparm
     gimp # Image editing software
     git # Version control
     #glxinfo                     #
     #glibc_memusage              # Tracks memory usage of programs
-    gedit
-    gnome-calculator # Calculator app
     goverlay
     #gpu-burn
-    iproute2 # Network tools (replacement for net-tools)
-    libcap # test
-    libGL # OpenGL library
     libglvnd # OpenGL Vendor-Neutral Dispatch library (Stable Diffusion dependency)
     libheif # HEIF image support
     libnotify
-    libsecret # Secret storage (GNOME keyring)
-    lynis # security auditing
     mesa # Open-source graphics drivers
-    nettools # Old-school network tools (ifconfig, etc.)
-    nomacs # image viewer
-    onlyoffice-desktopeditors # Office suite
     openssl # TLS/SSL support (used by reliquary-archiver and other tools)
     pavucontrol # PulseAudio volume control GUI
-    pcapfix # Repairs broken .pcap files
-    pciutils # testing PCI links
     pkg-config # Finds C libraries (used by reliquary-archiver)
     proton-pass
     qbittorrent # BitTorrent client
-    qt5.qtwayland
     rclone # Sync with cloud storage
     #rustc                       # Rust compiler
     #rustup                      # Rust toolchain manager (used by reliquary-archiver)
     #rustup-toolchain-install-master # Install Rust toolchains from master
-    smartmontools # Monitor hard drive health (S.M.A.R.T.)
     sshfs # Mount remote filesystems over SSH
     strawberry # Music player
-    usbutils
     # unigine-superposition - don't use. run .exe through steam for Vulkan support
-    upower # Power management daemon (dependency for Vivaldi maybe)
     vlc # Media player
     vulkan-loader # Vulkan runtime loader
     vulkan-tools # Vulkan utilities like `vulkaninfo`
-    wl-clipboard # clipboard support for wayland
-    wget # File downloader
     wine # Windows compatibility layer
     xmrig
     yt-dlp # YouTube downloader
-    zlib # Compression lib (used by Stable Diffusion & reliquary launcher)
   ];
 }

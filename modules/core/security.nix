@@ -8,6 +8,9 @@
   environment.systemPackages = with pkgs; [
     age # generating keypairs
     seahorse #keyring manager
+    libcap
+    libsecret
+    lynis
   ];
 
   services = {

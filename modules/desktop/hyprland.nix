@@ -31,19 +31,18 @@
     };
   };
 
-  environment = {
-    systemPackages = with pkgs; [
-      xdg-user-dirs
-      kdePackages.kio-extras
-      gvfs
-      libmtp
-    ];
+  environment.systemPackages = with pkgs; [
+    xdg-user-dirs
+    kdePackages.kio-extras
+    gvfs
+    libmtp
+    wl-clipboard
+  ];
     
-    sessionVariables = {
-      NIXOS_OZONE_WL = "1";
-      LIBVA_DRIVER_NAME = "nvidia";
-      __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    };
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    LIBVA_DRIVER_NAME = "nvidia";
+    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
   };
 
   home-manager.users.zozano = {

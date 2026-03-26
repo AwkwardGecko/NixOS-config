@@ -8,6 +8,7 @@
 {
   environment.systemPackages = with pkgs; [
     libadwaita
+    qt5.qtwayland
   ];
 
   environment.sessionVariables = {
