@@ -19,7 +19,7 @@
     ./modules/boot.nix # configure kernel modules
     ./modules/bottles.nix
     ./modules/bisq.nix
-    ./modules/cachix.nix # cachix
+    #./modules/cachix.nix # cachix
     ./modules/chromium.nix
     #.modules/#comfyui.nix
     #./modules/comfyui-dependencies.nix
@@ -36,7 +36,7 @@
     ./modules/fish.nix
     ./modules/flatpak.nix
     ./modules/fonts.nix
-    ./modules/ftp.nix
+    #./modules/ftp.nix
     ./modules/gamemode.nix
     ./modules/git.nix
     ./modules/git-push-dotfiles.nix
@@ -45,7 +45,6 @@
     ./modules/home-packages.nix
     ./modules/hostname.nix
     ./modules/hdd-soft-shutdown.nix
-    ./modules/huge-pages.nix
     ./modules/hyprland.nix
     ./modules/hyprpanel.nix
     ./modules/jellyfin-media-player.nix
@@ -87,11 +86,9 @@
     ./modules/users.nix
     ./modules/xdg-desktop-portal.nix
     #.modules/#xmrig.nix
-    #.modules/#xserver.nix
     ./modules/wallpaper.nix
     ./modules/waybar-mpris.nix
     ./modules/whisperai.nix
-    #.modules/# webdav.nix
     #./modules/wine.nix
   ];
 
