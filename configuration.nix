@@ -27,7 +27,6 @@
     ./modules/coolercontrol.nix
     #.modules/#cron.nix
     ./modules/default-apps.nix
-    #.modules/docker.nix
     ./modules/dolphin.nix
     ./modules/diffusion.nix
     ./modules/eigenwallet.nix
