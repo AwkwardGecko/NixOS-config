@@ -13,6 +13,8 @@
     ./modules/core/nix.nix
     ./modules/core/security.nix
     ./modules/core/users.nix
+    ./modules/core/scanner.nix
+    ./modules/core/coolercontrol.nix
 
     ./modules/desktop/hyprland.nix
     ./modules/desktop/hyprpanel.nix
@@ -54,7 +56,6 @@
 
 
     #./modules/beets.nix
-    ./modules/coolercontrol.nix
     ./modules/eigenwallet.nix
     ./modules/fclones.nix
     ./modules/flatpak.nix
@@ -63,13 +64,11 @@
     ./modules/git.nix
     ./modules/git-push-dotfiles.nix
     ./modules/gpg.nix
-    #.modules/ollama.nix
     ./modules/openrgb.nix
     ./modules/polkit.nix
     ./modules/protonmail.nix
     ./modules/protonvpn.nix
     #./modules/rustdesk.nix
-    #./modules/scanner.nix
     ./modules/signal.nix
     ./modules/sshfs.nix
     ./modules/statix.nix
