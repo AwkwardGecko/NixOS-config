@@ -7,6 +7,8 @@
 }:
 {
   environment.systemPackages = with pkgs; [
+    adwaita-icon-theme
+    hicolor-icon-theme
     libadwaita
     qt5.qtwayland
   ];
