@@ -61,6 +61,8 @@
       grimblast
       wayland-protocols
       wlroots
+      # hyprpaper
+      hyprshot
       hyprsunset
       hypridle
     ];

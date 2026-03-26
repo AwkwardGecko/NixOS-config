@@ -2,17 +2,6 @@
 {
   home-manager.users.zozano = {
     home.packages = with pkgs; [
-      #digikam
-      #gimp
-      #git
-      #google-chrome
-      #home-assistant-component-tests.tuya
-      #hyprpaper
-      #hyprshot
-      #plasma5Packages.kdeconnect-kde
-      #lua
-      #lua54Packages.luarocks-nix
-      #	nettools
       #	networkmanagerapplet
       #	nwg-look # ???
       #	protonvpn-gui
