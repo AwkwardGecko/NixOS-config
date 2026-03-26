@@ -15,4 +15,15 @@
   environment.extraInit = ''
     export PATH="$HOME/.local/bin:$PATH"
   '';
+
+  home-manager.users.zozano = {
+    home.packages = with pkgs; [
+      dex
+      fastfetch
+      grc
+      htop
+      fclones
+      ripgrep
+    ];
+  };
 }

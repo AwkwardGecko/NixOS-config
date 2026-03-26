@@ -10,9 +10,11 @@
       gnome-disk-utility
     ];
   };
+  
   home-manager.users.zozano = {
     home.packages = with pkgs; [
       baobab
+      cryptsetup
     ];
   };
 }
