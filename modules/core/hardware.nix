@@ -12,4 +12,6 @@
     usbutils
     upower  
   ];
+
+  services.hardware.openrgb.enable = true;
 }

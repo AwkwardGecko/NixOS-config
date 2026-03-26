@@ -4,6 +4,7 @@
     bc
     gawk
     jq
+    fclones
     lsof
     unzip
     inotify-tools

@@ -1,4 +1,4 @@
-{ config, pkgs, libs, inputs, ... }:
+{ config, pkgs, lib, inputs, ... }:
 {
   imports = [
     
@@ -53,27 +53,13 @@
     ./modules/other/crypto.nix
     ./modules/other/browsers.nix
     ./modules/other/ai.nix 
-
-
-
-    ./modules/fclones.nix
-    ./modules/flatpak.nix
-    ./modules/fonts.nix
-    #./modules/ftp.nix
-    ./modules/git.nix
-    ./modules/gpg.nix
-    ./modules/openrgb.nix
-    ./modules/polkit.nix
-    ./modules/protonmail.nix
-    ./modules/protonvpn.nix
-    #./modules/rustdesk.nix
-    ./modules/signal.nix
-    ./modules/sshfs.nix
-    ./modules/statix.nix
-    #.modules/systemd-timers.nix
-    #.modules/untrunc-anthwlock.nix
-    #.modules/xmrig.nix
-    ./modules/wallpaper.nix
-    #./modules/whisperai.nix
+    ./modules/other/flatpak.nix
+    
+    ./modules/protonmail.nix # > go to communications.nix # remove libnotify
+    ./modules/protonvpn.nix # > go to core/networking.nix
+    ./modules/signal.nix # > go to communications.nix
+    ./modules/sshfs.nix # > go to networking/ssh.nix
+    ./modules/statix.nix # > go to core/nix.nix
+    ./modules/wallpaper.nix # > go to desktop/hyprland.nix
   ];
 }

@@ -5,6 +5,10 @@
   ...
 }:
 {
+  home-manager.users.zozano = {
+    programs.gpg.enable = true;
+  };
+
   environment.systemPackages = with pkgs; [
     age # generating keypairs
     seahorse #keyring manager
@@ -23,6 +27,31 @@
     pam.services = {
       login.enableGnomeKeyring = true;
     };
+    
+  polkit = {
+    enable = true;
+    extraConfig = ''
+      polkit.addRule(function(action, subject) {
+      		
+      if (
+      	subject.isInGroup("zozano")
+      	&& (
+      		action.id == "org.freedesktop.login1.reboot" ||
+      		action.id == "org.freedesktop.login1.reboot-multiple-sessions" ||
+      		action.id == "org.freedesktop.login1.power-off" ||
+      		action.id == "org.freedesktop.login1.power-off-multiple-sessions"
+      	)
+      )
+      		
+      { return polkit.Result.YES; }
+
+      if (subject.isInGroup("wheel"))
+      	return polkit.Result.YES;
+      });
+    '';
+  };
+
+
     sudo = {
       extraConfig = ''
         Defaults timestamp_timeout=-1
