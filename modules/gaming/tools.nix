@@ -30,7 +30,8 @@
       apps = [
         {
           name = "Honkai: Star Rail";
-          cmd = "launch-hsr";
+          #cmd = "launch-hsr";
+          cmd = "flatpak run --branch=stable --arch=x86_64 --command=moe.launcher.the-honkers-railway-launcher moe.launcher.the-honkers-railway-launcher";
           image-path = "/home/zozano/.config/sunshine/covers/igdb_394848.png";
           auto-detach = "true";
         }
