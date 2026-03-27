@@ -19,11 +19,15 @@
       cudaSupport = true;
       cudaPackages = pkgs.cudaPackages;
     };
+    env = {
+      PATH = "$(PATH):$(HOME)/.local/bin";
+    };
     applications = {
       apps = [
         {
           name = "Honkai: Star Rail";
           cmd = "flatpak run moe.launcher.the-honkers-railway-launcher";
+          image-path = "desktop.png";
           auto-detach = "true";
         }
       ];
