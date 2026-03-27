@@ -5,6 +5,15 @@
   ...
 }:
 {
+  environment.systemPackages = [
+    (pkgs.writeShellScriptBin "launch-hsr" ''
+      export WAYLAND_DISPLAY="''${WAYLAND_DISPLAY:-wayland-1}"
+      export XDG_RUNTIME_DIR="''${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
+      export DISPLAY="''${DISPLAY:-:0}"
+      flatpak run moe.launcher.the-honkers-railway-launcher
+    '')
+  ];
+
   home-manager.users.zozano = {
     xdg.desktopEntries."moe.launcher.the-honkers-railway-launcher" = {
       name = "Honkai: Star Rail";
@@ -14,6 +23,5 @@
       categories = [ "Game" ];
       terminal = false;
     };
-
   };
 }
