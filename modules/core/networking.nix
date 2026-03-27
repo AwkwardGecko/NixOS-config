@@ -16,6 +16,7 @@
     curl
     dig
     iproute2
+    iperf3
     nettools
     pcapfix
     wget
