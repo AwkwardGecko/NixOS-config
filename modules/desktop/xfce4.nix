@@ -8,6 +8,6 @@
 
   # XFCE extras
   environment.systemPackages = with pkgs; [
-    xfce.xfce4-screenshooter
+    xfce4-screenshooter
   ];
 }
