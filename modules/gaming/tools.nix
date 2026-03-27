@@ -9,4 +9,18 @@
     # winetricks
     # unigine-superposition - don't use. run .exe through steam for Vulkan support
   ];
+
+  services.sunshine = {
+    enable = true;
+    autoStart = true;
+    openFirewall = true;
+    capSysAdmin = true;
+    package = pkgs.sunshine.override {
+      cudaSupport = true;
+      cudaPackages = pkgs.cudaPackages;
+    };
+  };
+
+  hardware.uinput.enable = true;
+  users.users.zozano.extraGroups = [ "uinput" ];
 }

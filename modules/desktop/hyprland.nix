@@ -75,6 +75,7 @@
         "coolercontrol"
 	      "openrgb --startminimized -p Zozano"
         "protonmail-bridge --noninteractive"
+        "systemctl --user start graphical-session.target"
         #"hyprpaper &"
         #"hyprpanel"
         #"$steam_friends"
