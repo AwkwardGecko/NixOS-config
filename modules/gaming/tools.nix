@@ -23,11 +23,14 @@
     applications = {
       env = {
         PATH = "$(PATH):$(HOME)/.local/bin";
+        WAYLAND_DISPLAY = "wayland-1";
+        XDG_RUNTIME_DIR = "/run/user/1000";
+        DISPLAY = ":1";
       };
       apps = [
         {
           name = "Honkai: Star Rail";
-          cmd = "flatpak run moe.launcher.the-honkers-railway-launcher";
+          cmd = "sleep 5 && flatpak run moe.launcher.the-honkers-railway-launcher";
           image-path = "/home/zozano/.config/sunshine/covers/igdb_394848.png";
           auto-detach = "true";
         }
