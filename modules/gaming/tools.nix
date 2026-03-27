@@ -19,6 +19,15 @@
       cudaSupport = true;
       cudaPackages = pkgs.cudaPackages;
     };
+    applications = {
+      apps = [
+        {
+          name = "Honkai: Star Rail";
+          cmd = "flatpak run moe.launcher.the-honkers-railway-launcher";
+          auto-detach = "true";
+        }
+      ];
+    };
   };
 
   hardware.uinput.enable = true;
