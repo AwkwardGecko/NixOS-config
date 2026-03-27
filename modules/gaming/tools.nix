@@ -21,7 +21,7 @@
     };
 
     applications = {
-      nv = {
+      env = {
         PATH = "$(PATH):$(HOME)/.local/bin";
       };
       apps = [
