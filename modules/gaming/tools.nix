@@ -28,7 +28,7 @@
         {
           name = "Honkai: Star Rail";
           cmd = "flatpak run moe.launcher.the-honkers-railway-launcher";
-          image-path = "desktop.png";
+          image-path = "/home/zozano/.config/sunshine/covers/igdb_394848.png";
           auto-detach = "true";
         }
       ];
