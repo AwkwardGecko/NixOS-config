@@ -30,8 +30,14 @@
       apps = [
         {
           name = "Honkai: Star Rail";
-          cmd = "sleep 5 && flatpak run moe.launcher.the-honkers-railway-launcher";
+          cmd = "launch-hsr";
           image-path = "/home/zozano/.config/sunshine/covers/igdb_394848.png";
+          auto-detach = "true";
+        }
+        {
+          name = "Steam Big Picture";
+          cmd = "steam steam://open/bigpicture";
+          image-path = "/home/zozano/.config/sunshine/covers/steam.png";
           auto-detach = "true";
         }
       ];
