@@ -19,10 +19,11 @@
       cudaSupport = true;
       cudaPackages = pkgs.cudaPackages;
     };
-    env = {
-      PATH = "$(PATH):$(HOME)/.local/bin";
-    };
+
     applications = {
+      nv = {
+        PATH = "$(PATH):$(HOME)/.local/bin";
+      };
       apps = [
         {
           name = "Honkai: Star Rail";
