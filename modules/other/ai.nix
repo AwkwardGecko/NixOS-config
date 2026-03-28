@@ -6,7 +6,8 @@
     enableManager = true;
     port = 8188;
     listenAddress = "127.0.0.1";
-    dataDir = "/var/lib/comfyui";
+    dataDir = "/home/zozano/test-shell/ComfyUI";
+    #dataDir = "var/lib/comfyui";
     openFirewall = false;
     extraArgs = [
       "--lowvram"
@@ -23,4 +24,13 @@
   environment.systemPackages = with pkgs; [
     python312Packages.openai-whisper
   ];
+
+    # "/steam" = {
+    #   device = "/dev/disk/by-uuid/249c8bec-3ec2-4b89-8618-748cd918d4ba";
+    #   fsType = "btrfs";
+    #   options = [
+    #     "space_cache=v2"
+    #     "discard=async"
+    #   ];
+    # };
 }
