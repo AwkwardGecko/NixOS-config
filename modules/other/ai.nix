@@ -6,6 +6,9 @@
     enableManager = true;
     port = 8188;
     listenAddress = "127.0.0.1";
+    
+    user = "zozano";
+    group = "users";
     dataDir = "/home/zozano/test-shell/ComfyUI";
     #dataDir = "var/lib/comfyui";
     openFirewall = false;
