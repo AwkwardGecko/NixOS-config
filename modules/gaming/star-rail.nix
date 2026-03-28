@@ -22,11 +22,29 @@
   home-manager.users.zozano = {
     xdg.desktopEntries."moe.launcher.the-honkers-railway-launcher" = {
       name = "Honkai: Star Rail";
-      exec = "flatpak run --branch=stable --arch=x86_64 --command=moe.launcher.the-honkers-railway-launcher moe.launcher.the-honkers-railway-launcher";
+      #exec = "flatpak run --branch=stable --arch=x86_64 --command=moe.launcher.the-honkers-railway-launcher moe.launcher.the-honkers-railway-launcher";
+      exec = "HSR-skip-launcher"; 
       icon = "moe.launcher.the-honkers-railway-launcher";
       comment = "Honkai: Star Rail";
       categories = [ "Game" ];
       terminal = false;
     };
+
+    home.packages = [
+      (pkgs.writeShellScriptBin "HSR-skip-launcher" ''
+        BASE="$HOME/.var/app/moe.launcher.the-honkers-railway-launcher/data/honkers-railway-launcher"
+
+        export WINEPREFIX="$BASE/prefix"
+        export WINEFSYNC=1
+        export WINE_FULLSCREEN_FSR=1
+        export WINE_FULLSCREEN_FSR_STRENGTH=2
+
+        WINE="$BASE/runners/spritz-wine-tkg-staging-wow64-10.15-8/bin/wine"
+        JADEITE="$BASE/patch/jadeite.exe"
+        GAME="$BASE/HSR/StarRail.exe"
+
+        steam-run "$WINE" "$JADEITE" "$GAME"
+      '')
+    ];
   };
 }
