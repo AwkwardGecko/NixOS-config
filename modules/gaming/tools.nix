@@ -37,7 +37,8 @@
       }
       {
         name = "Steam Big Picture";
-        cmd = "/run/current-system/sw/bin/sunshine-run steam steam://open/bigpicture";
+        #cmd = "steam steam://open/bigpicture";
+        cmd = "sleep 5 && steam -bigpicture";
         image-path = "/home/zozano/.config/sunshine/covers/steam.png";
         auto-detach = "true";
       }
