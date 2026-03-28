@@ -42,8 +42,15 @@
       }
       {
         name = "Steam Big Picture";
-        cmd = "sudo -u zozano steam steam://open/bigpicture";
-        #cmd = "sleep 5 && steam -bigpicture";
+        #cmd = "sudo -u zozano steam steam://open/bigpicture";
+        detached = "sudo -u zozano setsid steam steam://open/bigpicture";
+        # prep-cmd = [
+        #   {
+        #     do = "setsid steam steam://close/bigpicture";
+        #     undo = "setsid steam steam://close/bigpicture";
+        #     elevated = "false";
+        #   }
+        # ];
         image-path = "/home/zozano/.config/sunshine/covers/steam.png";
         auto-detach = "true";
       }
