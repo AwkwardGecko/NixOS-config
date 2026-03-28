@@ -1,9 +1,5 @@
 { config, lib, inputs, pkgs, ... }:
 {
-
-  imports = [ comfyui-nix.nixosModules.default ];
-  nixpkgs.overlays = [ comfyui-nix.overlays.default ];
-
   services.comfyui = {
     enable = true;
     package = inputs.comfyui-nix.packages.x86_64-linux.cuda;
