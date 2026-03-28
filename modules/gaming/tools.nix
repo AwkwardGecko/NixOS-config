@@ -16,8 +16,6 @@
   hardware.uinput.enable = true;
   users.users.zozano.extraGroups = [ "uinput" ];
 
-
-
   services.sunshine = {
     enable = true;
     autoStart = true;
@@ -33,13 +31,13 @@
         name = "Honkai: Star Rail";
         #cmd = "launch-hsr";
         #cmd = "flatpak run --branch=stable --arch=x86_64 --command=moe.launcher.the-honkers-railway-launcher moe.launcher.the-honkers-railway-launcher";
-        cmd = "sunshine-run HSR-skip-launcher";
+        cmd = "/run/current-system/sw/bin/sunshine-run HSR-skip-launcher";
         image-path = "/home/zozano/.config/sunshine/covers/igdb_394848.png";
         auto-detach = "true";
       }
       {
         name = "Steam Big Picture";
-        cmd = "sunshine-run steam steam://open/bigpicture";
+        cmd = "/run/current-system/sw/bin/sunshine-run steam steam://open/bigpicture";
         image-path = "/home/zozano/.config/sunshine/covers/steam.png";
         auto-detach = "true";
       }
