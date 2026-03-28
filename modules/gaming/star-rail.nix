@@ -20,7 +20,7 @@
   ];
 
   home-manager.users.zozano = {
-    xdg.desktopEntries."moe.launcher.the-honkers-railway-launcher" = {
+    xdg.desktopEntries."moe.launcher.the-honkers-railway-launcher2" = {
       name = "Honkai: Star Rail";
       #exec = "flatpak run --branch=stable --arch=x86_64 --command=moe.launcher.the-honkers-railway-launcher moe.launcher.the-honkers-railway-launcher";
       exec = "HSR-skip-launcher"; 
