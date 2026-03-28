@@ -1,5 +1,9 @@
 { config, lib, inputs, pkgs, ... }:
 {
+
+  imports = [ comfyui-nix.nixosModules.default ];
+  nixpkgs.overlays = [ comfyui-nix.overlays.default ];
+
   services.comfyui = {
     enable = true;
     package = inputs.comfyui-nix.packages.x86_64-linux.cuda;
@@ -9,7 +13,7 @@
     
     user = "zozano";
     group = "users";
-    dataDir = "/home/zozano/test-shell/ComfyUI";
+    dataDir = "/home/zozano/.local/share/ComfyUI";
     #dataDir = "var/lib/comfyui";
     openFirewall = false;
     extraArgs = [
@@ -19,7 +23,6 @@
       "--use-split-cross-attention"
       "--preview-method=auto"
       "--reserve-vram=512"
-      "--enable-manager"
     ];
   };
 
