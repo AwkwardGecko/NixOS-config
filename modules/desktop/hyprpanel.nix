@@ -58,7 +58,7 @@
       };
 
       menus.dashboard.directories.enabled = false;
-      #menus.dashboard.stats.enable_gpu = true; # key path per docs :contentReference[oaicite:3]{index=3}
+      menus.dashboard.stats.enable_gpu = true; # key path per docs :contentReference[oaicite:3]{index=3}
     };
   };
 
