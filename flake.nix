@@ -2,8 +2,9 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    #nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
-    nix-flatpak.url = "github:gmodena/nix-flatpak/v0.5.1";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    nix-flatpak.inputs.nixpkgs.follows = "nixpkgs";
+    #nix-flatpak.url = "github:gmodena/nix-flatpak/v0.5.1";
 
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -19,7 +20,7 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager,nix-flatpak, nixvim, comfyui-nix, stylix, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, nix-flatpak, nixvim, comfyui-nix, stylix, ... }: {
     #nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
     nixosConfigurations.z-nixos = nixpkgs.lib.nixosSystem {
       # Build name only - runtime hostname derived dynamically in ./modules/networking/hostname.nix
