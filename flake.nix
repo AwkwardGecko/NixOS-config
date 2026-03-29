@@ -4,7 +4,7 @@
 
     #nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
-    nix-flatpak.inputs.nixpkgs.follows = "nixpkgs";
+    #nix-flatpak.inputs.nixpkgs.follows = "nixpkgs";
     #nix-flatpak.url = "github:gmodena/nix-flatpak/v0.5.1";
 
     home-manager.url = "github:nix-community/home-manager/master";
