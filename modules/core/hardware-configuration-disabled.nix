@@ -1,5 +1,8 @@
 { config, lib, pkgs, ... }:
 {
+
+  system.stateVersion = "24.05"; # never delete this, unless you want your shit pushed in.
+
     # "/steam" = {
     #   device = "/dev/disk/by-uuid/249c8bec-3ec2-4b89-8618-748cd918d4ba";
     #   fsType = "btrfs";

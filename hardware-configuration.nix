@@ -59,31 +59,7 @@
       ];
     };
 
-    "/server" = {
-      device = "z-home@192.168.1.157:/";
-      fsType = "sshfs";
-      options = [
-        "nodev"
-        "nofail"
-        "allow_other"
-        "IdentityFile=/root/.ssh/home-server_z-nix"
-        "x-systemd.automount"
-        "x-systemd.requires=network-online.target"
-      ];
-    };
-    
-    "/data" = {
-      device = "z-home@192.168.1.157:/data";
-      fsType = "sshfs";
-      options = [
-        "nodev"
-        "nofail"
-        "allow_other"
-        "IdentityFile=/root/.ssh/home-server_z-nix"
-        "x-systemd.automount"
-        "x-systemd.requires=network-online.target"
-      ];
-    };
+
   };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
@@ -97,5 +73,5 @@
   swapDevices = [ { label = "swap"; } ];
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-  system.stateVersion = "24.05"; # never delete this, unless you want your shit pushed in.
+  #system.stateVersion = "24.05"; # never delete this, unless you want your shit pushed in.
 }
