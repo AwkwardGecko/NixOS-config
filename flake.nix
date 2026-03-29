@@ -22,8 +22,8 @@
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, nix-flatpak, nixvim, comfyui-nix, stylix, ... }: {
-    #nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
-    nixosConfigurations.z-nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
+    #nixosConfigurations.z-nixos = nixpkgs.lib.nixosSystem {
       # Build name only - runtime hostname derived dynamically in ./modules/networking/hostname.nix
 	    #system = "x86_64-linux";
       specialArgs = { inherit inputs; };
