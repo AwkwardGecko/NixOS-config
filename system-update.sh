@@ -33,7 +33,7 @@
   fi
 
   # --- Rebuild (push only after success, so remote stays known-good) ---
-  sudo nixos-rebuild switch --flake /home/zozano/.dotfiles/#z-nixos --show-trace
+  sudo nixos-rebuild switch --flake .#desktop --show-trace
   echo "Finished rebuilding."
 
   git push github main || echo "Push failed or nothing to push."
