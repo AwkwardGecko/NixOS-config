@@ -23,7 +23,7 @@
     #nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
     nixosConfigurations.z-nixos = nixpkgs.lib.nixosSystem {
       # Build name only - runtime hostname derived dynamically in ./modules/networking/hostname.nix
-	    system = "x86_64-linux";
+	    #system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
         
