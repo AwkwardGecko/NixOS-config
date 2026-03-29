@@ -75,7 +75,7 @@
         "steam -silent"
         "coolercontrol"
 	      "openrgb --startminimized -p Zozano"
-        "protonmail-bridge --noninteractive"
+        #"protonmail-bridge --noninteractive"
         #"systemctl --user start graphical-session.target"
         "wlsunset -l -33.8 -L 151.2"
         #"hyprpaper &"
