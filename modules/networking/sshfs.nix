@@ -11,7 +11,7 @@
     rclone
   ];
     
-  etc."fuse.conf".text = ''
+  environment.etc."fuse.conf".text = ''
     user_allow_other
   '';
 
