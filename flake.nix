@@ -37,7 +37,6 @@
           imports = [ comfyui-nix.nixosModules.default ];
           nixpkgs.overlays = [ comfyui-nix.overlays.default ];
 
-          nixpkgs.config.allowUnfree = true;
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.zozano = import ./home.nix;

@@ -16,6 +16,8 @@
     };
   };
 
+  nixpkgs.config.allowUnfree = true;
+  
   environment.systemPackages = with pkgs; [
     alejandra
     compose2nix
