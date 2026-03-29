@@ -52,8 +52,9 @@
     ./modules/shell/kitty.nix
     ./modules/shell/nixvim.nix
 
-    ./modules/media/tdarr.nix
+    ./modules/other/tdarr.nix
     ./modules/other/dev.nix
+    ./modules/other/media.nix
     ./modules/shell/shell.nix
     ./modules/other/containers.nix
     ./modules/other/crypto.nix

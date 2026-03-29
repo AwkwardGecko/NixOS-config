@@ -6,7 +6,6 @@
   # home.packages = with pkgs; [
   # ]; import via home-packages.nix module
 
-
   home = {
     username = "zozano";
     homeDirectory = "/home/zozano";
