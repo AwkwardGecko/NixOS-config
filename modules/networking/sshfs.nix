@@ -26,6 +26,7 @@
       "IdentityFile=/root/.ssh/home-server_z-nix"
       "x-systemd.automount"
       "x-systemd.requires=network-online.target"
+      "x-systemd.requires=tailscaled.service"
     ];
   };
  
@@ -40,6 +41,7 @@
       "IdentityFile=/root/.ssh/home-server_z-nix"
       "x-systemd.automount"
       "x-systemd.requires=network-online.target"
+      "x-systemd.requires=tailscaled.service"
     ];
   };
 }
