@@ -15,13 +15,27 @@
 
     comfyui-nix.url = "github:utensils/comfyui-nix";
 
+    sops-nix.url = "github:Mic92/sops-nix";
+    sops-nix.inputs.nixpkgs.follows = "nixpkgs";
+
     stylix = {
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nix-flatpak, nixvim, comfyui-nix, stylix, ... }: {
+  outputs = inputs @ {
+    self,
+    nixpkgs,
+    home-manager,
+    nix-flatpak,
+    nixvim,
+    comfyui-nix,
+    stylix,
+    sops-nix,
+    ... 
+  }:
+  {
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
     #nixosConfigurations.z-nixos = nixpkgs.lib.nixosSystem {
       # Build name only - runtime hostname derived dynamically in ./modules/networking/hostname.nix
@@ -34,6 +48,7 @@
         nix-flatpak.nixosModules.nix-flatpak
         nixvim.nixosModules.nixvim
         stylix.nixosModules.stylix
+        ./modules/core/sops.nix
         #import-tree.nixosModules.import-tree
         {
           imports = [ comfyui-nix.nixosModules.default ];

@@ -17,7 +17,7 @@
         #server-connect = "kitty ssh -t z-home@192.168.1.157 'fish -l'";
       #};
       #shellAbbrs = {
-        update = "bash ~/.dotfiles/system-update.sh";
+        update = "bash ~/.dotfiles/scripts/system-update.sh";
       };
       shellInit = "cd ~/.dotfiles/";
       shellInitLast = "fastfetch";
