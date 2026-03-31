@@ -18,6 +18,10 @@
     secrets."headscale/desktop_key" = { };
   };
 
+  services.tailscale = {
+    authKeyFile = config.sops.secrets."headscale/desktop_key".path; # Headscale pre-auth key
+  };
+
   environment.systemPackages = with pkgs; [
     age # generating keypairs
     seahorse #keyring manager
