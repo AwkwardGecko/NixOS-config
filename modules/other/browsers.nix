@@ -15,6 +15,10 @@ in
     proton-pass
   ];
 
+  home-manager.users.zozano = {
+    programs.librewolf.enable = true;
+  };
+
   programs = {
     chromium = {
       enable = true;
