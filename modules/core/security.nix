@@ -1,4 +1,5 @@
 {
+  inputs,
   config,
   lib,
   pkgs,
@@ -7,6 +8,14 @@
 {
   home-manager.users.zozano = {
     programs.gpg.enable = true;
+  };
+
+  sops = {
+    defaultSopsFile = ../../secrets/secrets.yaml;
+    age.sshKeyPaths = [
+      "/etc/ssh/ssh_host_ed25519_key"
+    ];
+    secrets."headscale/desktop_key" = { };
   };
 
   environment.systemPackages = with pkgs; [
