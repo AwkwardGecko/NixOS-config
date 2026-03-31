@@ -64,7 +64,7 @@
       "$fileManager" = "nautilus";
       "$browser" = "firefox";
       "$menu" = "rofi -show drun -show-icons";
-      "$update_script" = "kitty --class sysupdate -e bash ~/.dotfiles/system-update.sh";
+      "$update_script" = "kitty --class sysupdate -e bash ~/.dotfiles/scripts/system-update.sh";
       "$kitty_with_fastfetch" = "kitty fastfetch";
       # "$unhide_waybar" = "bash -c 'pkill -SIGUSR1 waybar; sleep 30; pkill -SIGUSR1 waybar'";
       #"$unhide_waybar" = "bash -c 'pkill -SIGUSR1 waybar'";
