@@ -21,10 +21,8 @@
   environment.systemPackages = with pkgs; [
     alejandra
     compose2nix
-    crane
     nixd
     nix-prefetch-github
-    nixfmt
     statix
   ];
 }
