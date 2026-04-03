@@ -3,16 +3,13 @@
   pkgs,
   lib,
   ...
-}:
-{
-
+}: {
   time.hardwareClockInLocalTime = false;
   time.timeZone = "Australia/Sydney";
 
   i18n.defaultLocale = "en_AU.UTF-8";
 
   i18n.extraLocaleSettings = {
-
     LANGUAGE = "en_AU.UTF-8";
     LC_ADDRESS = "en_AU.UTF-8";
     LC_IDENTIFICATION = "en_AU.UTF-8";

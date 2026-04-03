@@ -1,5 +1,10 @@
-{ config, lib, inputs, pkgs, ... }:
 {
+  config,
+  lib,
+  inputs,
+  pkgs,
+  ...
+}: {
   # imports = [
   # ]; import via configuration.nix module with home-manager.users.zozano = {};
 
@@ -31,5 +36,4 @@
 
   systemd.user.startServices = "sd-switch";
   programs.home-manager.enable = true;
-
 }

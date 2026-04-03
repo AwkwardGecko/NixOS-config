@@ -1,17 +1,22 @@
-{ inputs, config, lib, pkgs, ... }:
 {
+  inputs,
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   home-manager.users.zozano = {
     programs.gpg.enable = true;
   };
 
-  imports = [ inputs.sops-nix.nixosModules.sops ];
+  imports = [inputs.sops-nix.nixosModules.sops];
 
   sops = {
     defaultSopsFile = ../../secrets/secrets.yaml;
     age.sshKeyPaths = [
       "/etc/ssh/ssh_host_ed25519_key"
     ];
-    secrets."headscale/desktop_key" = { };
+    secrets."headscale/desktop_key" = {};
   };
 
   services.tailscale = {
@@ -38,52 +43,53 @@
     pam.services = {
       login.enableGnomeKeyring = true;
     };
-    
-  polkit = {
-    enable = true;
-    extraConfig = ''
-      polkit.addRule(function(action, subject) {
-      		
-      if (
-      	subject.isInGroup("zozano")
-      	&& (
-      		action.id == "org.freedesktop.login1.reboot" ||
-      		action.id == "org.freedesktop.login1.reboot-multiple-sessions" ||
-      		action.id == "org.freedesktop.login1.power-off" ||
-      		action.id == "org.freedesktop.login1.power-off-multiple-sessions"
-      	)
-      )
-      		
-      { return polkit.Result.YES; }
 
-      if (subject.isInGroup("wheel"))
-      	return polkit.Result.YES;
-      });
-    '';
-  };
+    polkit = {
+      enable = true;
+      extraConfig = ''
+        polkit.addRule(function(action, subject) {
 
+        if (
+        	subject.isInGroup("zozano")
+        	&& (
+        		action.id == "org.freedesktop.login1.reboot" ||
+        		action.id == "org.freedesktop.login1.reboot-multiple-sessions" ||
+        		action.id == "org.freedesktop.login1.power-off" ||
+        		action.id == "org.freedesktop.login1.power-off-multiple-sessions"
+        	)
+        )
+
+        { return polkit.Result.YES; }
+
+        if (subject.isInGroup("wheel"))
+        	return polkit.Result.YES;
+        });
+      '';
+    };
 
     sudo = {
       extraConfig = ''
         Defaults timestamp_timeout=-1
       ''; # removes time-out for running sudo commands
-      extraRules = [{
-        users = [ "zozano" ];
-        commands = [
-          {
-          command = "/run/current-system/sw/bin/nix-collect-garbage";
-          options = [ "NOPASSWD" ];
-          }
-          {
-          command = "/run/current-system/sw/bin/nixos-rebuild";
-          options = [ "NOPASSWD" ];
-          }
-          {
-          command = "/run/current-system/sw/bin/nix-store";
-          options = [ "NOPASSWD" ];
-          }
-        ];
-      }];
+      extraRules = [
+        {
+          users = ["zozano"];
+          commands = [
+            {
+              command = "/run/current-system/sw/bin/nix-collect-garbage";
+              options = ["NOPASSWD"];
+            }
+            {
+              command = "/run/current-system/sw/bin/nixos-rebuild";
+              options = ["NOPASSWD"];
+            }
+            {
+              command = "/run/current-system/sw/bin/nix-store";
+              options = ["NOPASSWD"];
+            }
+          ];
+        }
+      ];
     };
   };
 }

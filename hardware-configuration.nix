@@ -1,6 +1,11 @@
-{ config, lib, pkgs, modulesPath, ... }:
 {
-  imports = [ 
+  config,
+  lib,
+  pkgs,
+  modulesPath,
+  ...
+}: {
+  imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
     ./modules/core/hardware-configuration-disabled.nix
   ];
@@ -11,19 +16,21 @@
         device = "/dev/disk/by-uuid/139a8d8a-d234-450e-9c90-4f633e8c3b8c";
         allowDiscards = true;
       };
-      availableKernelModules = [ # available modules
+      availableKernelModules = [
+        # available modules
         "xhci_pci"
         "ahci"
         "nvme"
         "usb_storage"
         "sd_mod"
       ];
-      kernelModules = [ # always loaded
+      kernelModules = [
+        # always loaded
         "usbhid"
       ];
     };
-    kernelModules = [ "kvm-amd" ];
-    extraModulePackages = [ ];
+    kernelModules = ["kvm-amd"];
+    extraModulePackages = [];
   };
 
   fileSystems = {
@@ -49,8 +56,6 @@
         "noatime"
       ];
     };
-
-
   };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
@@ -61,7 +66,7 @@
   # networking.interfaces.enp10s0.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp9s0.useDHCP = lib.mkDefault true;
 
-  swapDevices = [ { label = "swap"; } ];
+  swapDevices = [{label = "swap";}];
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

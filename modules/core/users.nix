@@ -1,5 +1,9 @@
-{ config, pkgs, lib, ... }:
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   users.users.zozano = {
     isNormalUser = true;
     description = "zozano";

@@ -1,7 +1,12 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   nix = {
-    gc = { # garbage collection
+    gc = {
+      # garbage collection
       automatic = true;
       dates = "daily";
       options = "--delete-older-than 7d";
@@ -17,7 +22,7 @@
   };
 
   nixpkgs.config.allowUnfree = true;
-  
+
   environment.systemPackages = with pkgs; [
     alejandra
     compose2nix

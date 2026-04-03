@@ -3,8 +3,7 @@
   lib,
   pkgs,
   ...
-}:
-{
+}: {
   # nix.settings = {
   #   substituters = [ "https://ezkea.cachix.org" ];
   #   trusted-public-keys = [ "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=" ];
@@ -23,10 +22,10 @@
     xdg.desktopEntries."moe.launcher.the-honkers-railway-launcher2" = {
       name = "Honkai: Star Rail";
       #exec = "flatpak run --branch=stable --arch=x86_64 --command=moe.launcher.the-honkers-railway-launcher moe.launcher.the-honkers-railway-launcher";
-      exec = "HSR-skip-launcher"; 
+      exec = "HSR-skip-launcher";
       icon = "moe.launcher.the-honkers-railway-launcher";
       comment = "Honkai: Star Rail";
-      categories = [ "Game" ];
+      categories = ["Game"];
       terminal = false;
     };
 

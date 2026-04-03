@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
     bottles
     goverlay
@@ -14,7 +18,7 @@
   ];
 
   hardware.uinput.enable = true;
-  users.users.zozano.extraGroups = [ "uinput" ];
+  users.users.zozano.extraGroups = ["uinput"];
 
   services.sunshine = {
     enable = true;
@@ -25,7 +29,7 @@
       cudaSupport = true;
       cudaPackages = pkgs.cudaPackages;
     };
-    
+
     applications.env = {
       PATH = "$(PATH):$(HOME)/.local/bin";
     };

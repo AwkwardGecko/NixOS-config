@@ -3,9 +3,7 @@
   pkgs,
   lib,
   ...
-}:
-
-{
+}: {
   hardware.sane = {
     enable = true;
 
@@ -31,5 +29,4 @@
   environment.systemPackages = with pkgs; [
     simple-scan
   ];
-
 }

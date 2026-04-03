@@ -4,12 +4,10 @@
   lib,
   pkgs,
   ...
-}:
-{
+}: {
   fonts = {
     enableDefaultPackages = true;
     packages = with pkgs; [
-
       dejavu_fonts
       fira-code
       fira-code-symbols

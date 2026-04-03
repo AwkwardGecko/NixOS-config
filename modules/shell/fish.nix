@@ -1,22 +1,20 @@
 ############
 ### FISH ###
 ############
-
 {
   config,
   pkgs,
   lib,
   ...
-}:
-{
+}: {
   home-manager.users.zozano = {
     programs.fish = {
       enable = true;
       shellAbbrs = {
         #update-nix = "kitty bash /home/zozano/.dotfiles/home-manager/source/local/share/applications/update.sh";
         #server-connect = "kitty ssh -t z-home@192.168.1.157 'fish -l'";
-      #};
-      #shellAbbrs = {
+        #};
+        #shellAbbrs = {
         update = "bash ~/.dotfiles/scripts/system-update.sh";
       };
       shellInit = "cd ~/.dotfiles/";

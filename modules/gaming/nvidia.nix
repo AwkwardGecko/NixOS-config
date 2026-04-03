@@ -1,22 +1,18 @@
 ##############
 ### NVIDIA ###
 ##############
-
 {
   config,
   pkgs,
   lib,
   ...
-}:
-{
-
+}: {
   services.xserver = {
     #enable = true;
-    videoDrivers = [ "nvidia" ];
+    videoDrivers = ["nvidia"];
   };
 
   hardware = {
-
     nvidia = {
       modesetting.enable = true;
       #open = true;

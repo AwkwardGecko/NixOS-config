@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
     kdePackages.dolphin
     kdePackages.okular
@@ -28,7 +32,7 @@
         "video/x-matroska" = "mpv.desktop";
         "application/pdf" = "org.pwmt.zathura.desktop";
         "text/plain" = "gedit.desktop";
-        "inode/directory" = [ "nautilus.desktop" ];
+        "inode/directory" = ["nautilus.desktop"];
       };
     };
   };

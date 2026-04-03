@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   networking = {
     # dynamic hostname derived from hardware serial, located in ./modules/networking/hostname.nix
     networkmanager.enable = true;

@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
 {
-
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   # Set up a global .gitignore to ignore dotfiles
   environment.etc."gitconfig".text = ''
     [core]
@@ -20,7 +23,7 @@
           name = "Zozano";
           email = "private@private.com";
         };
-      init.defaultBranch = "main";
+        init.defaultBranch = "main";
       };
       signing.format = "openpgp";
     };

@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }:
-let
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: let
   lock-false = {
     Value = false;
     Status = "locked";
@@ -8,8 +12,7 @@ let
     Value = true;
     Status = "locked";
   };
-in
-{
+in {
   environment.systemPackages = with pkgs; [
     chromium
     proton-pass
@@ -34,7 +37,7 @@ in
         "DefaultWebBluetoothGuardSetting" = 3; # 3 = allow sites to ask
         "homepage" = "https://app.storz-bickel.com";
         "session.restore_on_startup" = 4;
-        "session.startup_urls" = [ "https://app.storz-bickel.com" ];
+        "session.startup_urls" = ["https://app.storz-bickel.com"];
         "browser.show_home_button" = false;
         "profile.default_content_setting_values.notifications" = 2;
         "profile.default_content_setting_values.geolocation" = 2;
@@ -83,7 +86,7 @@ in
               Method = "GET";
             }
           ];
-          Remove = [ "Bing" "Amazon.com" ];
+          Remove = ["Bing" "Amazon.com"];
         };
 
         # ---- EXTENSIONS ----

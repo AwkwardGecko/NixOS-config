@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
     monero-gui
     monero-cli
@@ -13,7 +17,7 @@
     enable = true;
     package = pkgs.openjdk21;
   };
-  
+
   services.monero = {
     enable = true;
     prune = true;
@@ -22,7 +26,7 @@
     extraConfig = ''
       enable-dns-blocklist=1
     '';
-   };
+  };
 
   networking.firewall.allowedTCPPorts = [
     18080

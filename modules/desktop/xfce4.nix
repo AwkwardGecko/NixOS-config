@@ -1,6 +1,10 @@
 # xfce.nix
-{ config, pkgs, lib, ... }:
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   services.xserver = {
     enable = true;
     desktopManager.xfce.enable = true;

@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
     #digikam
     audacity
@@ -25,7 +29,7 @@
       exec = "jellyfin-desktop %u";
       type = "Application";
       noDisplay = true;
-      mimeType = [ "x-scheme-handler/jmp" ];
+      mimeType = ["x-scheme-handler/jmp"];
     };
 
     xdg.mimeApps.defaultApplications = {

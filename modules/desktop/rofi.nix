@@ -3,19 +3,18 @@
   pkgs,
   lib,
   ...
-}:
-{
-  home-manager.users.zozano = { 
-  programs.rofi = {
-    enable = true;
+}: {
+  home-manager.users.zozano = {
+    programs.rofi = {
+      enable = true;
 
-    extraConfig = {
-      #
+      extraConfig = {
+        #
+      };
+
+      plugins = with pkgs; [
+        #
+      ];
     };
-
-    plugins = with pkgs; [
-      #
-    ];
-  };
   };
 }

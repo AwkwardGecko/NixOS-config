@@ -1,9 +1,13 @@
-{ config, pkgs, lib, inputs, ... }:
 {
+  config,
+  pkgs,
+  lib,
+  inputs,
+  ...
+}: {
   imports = [
-    
     ./hardware-configuration.nix
-    
+
     ./modules/core/audio.nix
     ./modules/core/boot.nix
     ./modules/core/filesystem.nix
@@ -25,7 +29,6 @@
     ./modules/desktop/wallpaper.nix
     ./modules/desktop/portals.nix
     #./modules/desktop/xfce4.nix
-    
 
     ./modules/gaming/tools.nix
     ./modules/gaming/controller.nix
@@ -58,8 +61,8 @@
     ./modules/shell/shell.nix
     ./modules/other/crypto.nix
     ./modules/other/browsers.nix
-    ./modules/other/ai.nix 
-    ./modules/other/flatpak.nix 
+    ./modules/other/ai.nix
+    ./modules/other/flatpak.nix
     ./modules/other/protonmail.nix
     ./modules/other/signal.nix
   ];

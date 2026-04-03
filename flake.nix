@@ -17,7 +17,6 @@
 
     stylix.url = "github:nix-community/stylix";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
-
   };
 
   outputs = inputs @ {
@@ -29,22 +28,20 @@
     comfyui-nix,
     stylix,
     sops-nix,
-    ... 
-  }:
-  {
+    ...
+  }: {
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
       # Build name only - runtime hostname derived dynamically in ./modules/networking/hostname.nix
-      specialArgs = { inherit inputs; };
+      specialArgs = {inherit inputs;};
       modules = [
-        
         ./configuration.nix
         home-manager.nixosModules.home-manager
         nix-flatpak.nixosModules.nix-flatpak
         nixvim.nixosModules.nixvim
         stylix.nixosModules.stylix
         {
-          imports = [ comfyui-nix.nixosModules.default ];
-          nixpkgs.overlays = [ comfyui-nix.overlays.default ];
+          imports = [comfyui-nix.nixosModules.default];
+          nixpkgs.overlays = [comfyui-nix.overlays.default];
 
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;

@@ -1,8 +1,12 @@
-{ config, pkgs, lib, ... }:
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   services.gvfs.enable = true;
   environment = {
-    pathsToLink = [ "share/thumbnailers" ];
+    pathsToLink = ["share/thumbnailers"];
     systemPackages = with pkgs; [
       btrfs-progs
       parted
@@ -10,7 +14,7 @@
       gnome-disk-utility
     ];
   };
-  
+
   home-manager.users.zozano = {
     home.packages = with pkgs; [
       baobab

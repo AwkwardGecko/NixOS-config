@@ -1,12 +1,15 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   home-manager.users.zozano = {
-programs.mangohud = {
-    enable = true;
-    #settings = {
+    programs.mangohud = {
+      enable = true;
+      #settings = {
 
-    #};
+      #};
+    };
   };
-
-};
 }

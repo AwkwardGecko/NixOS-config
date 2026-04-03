@@ -3,9 +3,8 @@
   lib,
   pkgs,
   ...
-}:
-{
+}: {
   home-manager.users.zozano = {
-programs.lutris.enable = true;
-};
+    programs.lutris.enable = true;
+  };
 }

@@ -1,5 +1,10 @@
-{ inputs, config, lib, pkgs, ... }:
 {
+  inputs,
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   # open with "sops ~/.dotfiles/secrets/secrets.yaml";
 
   #sops.secrets."grafana/user" = { };
