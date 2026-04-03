@@ -1,14 +1,5 @@
 { inputs, config, lib, pkgs, ... }:
 {
-  imports = [ inputs.sops-nix.nixosModules.sops ];
-
-  environment.systemPackages = with pkgs; [
-    sops
-    age
-    ssh-to-age
-  ];
-
-  sops.defaultSopsFile = ../../secrets/secrets.yaml; 
   # open with "sops ~/.dotfiles/secrets/secrets.yaml";
 
   #sops.secrets."grafana/user" = { };

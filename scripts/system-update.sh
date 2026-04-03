@@ -70,6 +70,9 @@
   #sudo podman pull ghcr.io/haveagitgat/tdarr_node:latest
   #sudo systemctl restart podman-tdarr-node
 
+  echo "alejandra formatting"
+  alejandra /home/zozano/.dotfiles
+
   echo "All done."
   sleep 2
 ) || echo "System update failed with exit code $?."

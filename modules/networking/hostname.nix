@@ -1,26 +1,9 @@
-# Dynamic hostname derived from the machine's hardware serial number.
-# On this single desktop it produces something like "dectech-a1b2c3".
-#
-# This module exists to support fleet-wide unique naming for future
-# business deployments (e.g. via colmena/morph/nixops). Once a fleet
-# tool is adopted, this may be replaced by per-host hostName assignments
-# in the flake — but the approach remains valid for unmanaged or
-# ephemeral machines where you want automatic unique names without
-# maintaining a registry.
-#
-# The mkForce on networking.hostName ensures no other module accidentally
-# sets a static name. The systemd oneshot runs before networking comes up.
-
-
-
 {
   config,
   pkgs,
   lib,
   ...
-}:
-
-let
+}: let
   setHost = pkgs.writeShellScript "derive-hostname" ''
     #!/usr/bin/env bash
     set -euo pipefail
@@ -65,15 +48,27 @@ let
     fi
 
   '';
-in
-{
+in {
+  # Dynamic hostname derived from the machine's hardware serial number.
+  # On this single desktop it produces something like "dectech-a1b2c3".
+  #
+  # This module exists to support fleet-wide unique naming for future
+  # business deployments (e.g. via colmena/morph/nixops). Once a fleet
+  # tool is adopted, this may be replaced by per-host hostName assignments
+  # in the flake — but the approach remains valid for unmanaged or
+  # ephemeral machines where you want automatic unique names without
+  # maintaining a registry.
+  #
+  # The mkForce on networking.hostName ensures no other module accidentally
+  # sets a static name. The systemd oneshot runs before networking comes up.
+
   # do not write /etc/hostname
   #networking.hostName = lib.mkForce "";
   networking.hostName = "";
 
   # run before networking is brought up
   systemd.services.dynamic-hostname = {
-    wantedBy = [ "sysinit.target" ];
+    wantedBy = ["sysinit.target"];
     unitConfig = {
       DefaultDependencies = false;
       Before = [
@@ -83,7 +78,7 @@ in
         "sshd.service"
         "getty.target"
       ];
-      After = [ "local-fs.target" ];
+      After = ["local-fs.target"];
     };
     serviceConfig = {
       Type = "oneshot";

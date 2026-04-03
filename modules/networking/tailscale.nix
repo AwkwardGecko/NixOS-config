@@ -1,16 +1,9 @@
-# /etc/nixos/sys-modules/tailscale.nix
 {
   config,
   pkgs,
   lib,
   ...
-}:
-
-# let
-#   # Path on the client where you will copy the pre-auth key
-#   hsKeyPath = "/etc/tailscale/hskey.txt";
-# in
-{
+}: {
   ## Copy the key into the immutable Nix store at build time.
   ## Replace the source with wherever you actually stash the key.
   #environment.etc."tailscale/hskey.txt".source = "/root/.secrets/hskey.txt";
@@ -18,7 +11,7 @@
   services.tailscale = {
     enable = true;
     openFirewall = true; # punches UDP/41641 etc.
-    #authKeyFile = config.sops.secrets."headscale/desktop_key".path; # Headscale pre-auth key
+    #authKeyFile = config.sops.secrets."headscale/desktop_key".path; # Headscale pre-auth key lives in core/security.nix
     useRoutingFeatures = "client"; # you are not an exit node
     extraUpFlags = [
       "--login-server=https://headscale.dectech.au"
@@ -26,10 +19,8 @@
     ];
     # tailscaled-autoconnect will pick up the flags on boot
   };
-  networking.firewall.trustedInterfaces = [ "tailscale0" ];
-
+  networking.firewall.trustedInterfaces = ["tailscale0"];
 }
-
 # How to use:
 # 1. Create new user on headscale:
 # sudo headscale users create <NEW_USERNAME>
@@ -47,3 +38,4 @@
 #
 # 4. copy contents of this hskey, to the clients ssh module's authorizedkeys.keys = [ "<string>" ];
 # 5. add the target url to the server's prometheus.nix module
+

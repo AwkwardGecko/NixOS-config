@@ -1,14 +1,10 @@
-{
-  inputs,
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+{ inputs, config, lib, pkgs, ... }:
 {
   home-manager.users.zozano = {
     programs.gpg.enable = true;
   };
+
+  imports = [ inputs.sops-nix.nixosModules.sops ];
 
   sops = {
     defaultSopsFile = ../../secrets/secrets.yaml;
@@ -28,6 +24,8 @@
     libcap
     libsecret
     lynis
+    sops
+    ssh-to-age
   ];
 
   services = {

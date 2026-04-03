@@ -11,7 +11,6 @@
     ./modules/core/localisation.nix
     ./modules/core/networking.nix
     ./modules/core/nix.nix
-    ./modules/core/sops.nix
     ./modules/core/security.nix
     ./modules/core/users.nix
     #./modules/core/scanner.nix
