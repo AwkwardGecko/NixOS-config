@@ -56,7 +56,6 @@
     ./modules/other/dev.nix
     ./modules/other/media.nix
     ./modules/shell/shell.nix
-    ./modules/other/containers.nix
     ./modules/other/crypto.nix
     ./modules/other/browsers.nix
     ./modules/other/ai.nix 
