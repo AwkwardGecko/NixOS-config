@@ -5,6 +5,9 @@
     
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
 
+    targets.librewolf.profileNames = [
+      "default"
+    ];   
     
     fonts = {
       serif = {
@@ -18,7 +21,6 @@
       };
 
       monospace = {
-        #package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
         name = "JetBrainsMono Nerd Font Mono";
       };
 
@@ -26,12 +28,7 @@
         package = pkgs.noto-fonts-color-emoji;
         name = "Noto Color Emoji";
       };
-
-      targets.librewolf.profileNames = [
-        "default"
-      ];
     };
-
 
     # cursor = {
     #   #package = pkgs.bibata-cursors;
