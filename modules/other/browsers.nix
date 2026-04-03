@@ -19,6 +19,10 @@ in
     programs.librewolf = {
       enable = true;
     };
+
+    stylix.targets.librewolf.profileNames = [
+      "default"
+    ];
   };
 
   programs = {
