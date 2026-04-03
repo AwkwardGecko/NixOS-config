@@ -1,14 +1,16 @@
 { config, lib, pkgs, ... }:
 {
 
-  config.stylix.targets.librewolf.profileNames = [
-    "default"
-  ];
-
+  config.stylix.
 stylix = {
     enable = true;
     
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+
+    targets.librewolf.profileNames = [
+      "default"
+    ];
+
 
     fonts = {
       serif = {
