@@ -4,6 +4,12 @@
   lib,
   ...
 }: {
+
+  imports = [
+    #./layouts/master.nix
+    ./layouts/scrolling.nix
+  ];
+
   programs = {
     hyprland = {
       enable = true;
@@ -98,7 +104,7 @@
           border_size = 2;
           resize_on_border = false;
           allow_tearing = false;
-          layout = "master";
+          # layout = #set with imports at top of module
         };
 
         decoration = {
@@ -138,14 +144,6 @@
         #   preserve_split = true;
         # };
 
-        master = {
-          new_status = false; # new windows go to stack
-          mfact = 0.5; # master width
-          allow_small_split = false;
-
-          #"new_status" = "master";
-        };
-
         misc = {
           "force_default_wallpaper" = -1;
           "disable_hyprland_logo" = true;
@@ -154,8 +152,6 @@
         };
 
         bind = [
-          #"$mainMod, space, exec, $unhide_waybar"
-
           ",          print,  exec, grimblast save area ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"
           "$mainMod,  print,  exec, grimblast copy area"
 
