@@ -5,8 +5,8 @@
   ...
 }: {
   imports = [
-    #./layouts/master.nix
-    ./layouts/scrolling.nix
+    ./layouts/master.nix
+    #./layouts/scrolling.nix
   ];
 
   programs = {
@@ -102,7 +102,7 @@
           gaps_out = 5;
           border_size = 2;
           resize_on_border = false;
-          allow_tearing = false;
+          allow_tearing = true;
           # layout = #set with imports at top of module
         };
 
@@ -137,11 +137,6 @@
           "fade,1,7,default"
           "workspaces,1,7,default,slidevert"
         ];
-
-        # dwindle = {
-        #   pseudotile = true;
-        #   preserve_split = true;
-        # };
 
         misc = {
           "force_default_wallpaper" = -1;
