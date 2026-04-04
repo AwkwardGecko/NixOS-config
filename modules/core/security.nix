@@ -17,13 +17,23 @@
   ];
 
   sops.secrets."ssh/home-server-key" = {};
+  fileSystems."/server".options = [ "IdentityFile=${config.sops.secrets."ssh/home-server-key".path}" ];
+  fileSystems."/data".options = [ "IdentityFile=${config.sops.secrets."ssh/home-server-key".path}" ];
 
   sops.secrets."tailscale/pre_auth_key" = {};
   services.tailscale.authKeyFile = config.sops.secrets."tailscale/pre_auth_key".path; # generated on z-home-mac
 
+
+
+
+
   users.users.zozano.openssh.authorizedKeys.keys = [
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL+JLIMMkhZty4POE+gHXrNwy11myWa0F+nVsWeyYJE3 tim@solaire.com" # allows the computer with this key to ssh in
   ];
+
+
+
+
 
   environment.systemPackages = with pkgs; [
     age # generating keypairs
