@@ -11,17 +11,15 @@
 
   imports = [inputs.sops-nix.nixosModules.sops];
 
-  sops = {
-    defaultSopsFile = ../../secrets/secrets.yaml;
-    age.sshKeyPaths = [
-      "/etc/ssh/ssh_host_ed25519_key"
-    ];
-    secrets."headscale/desktop_key" = {};
-  };
+  sops.defaultSopsFile = ../../secrets/secrets.yaml; # master
+  sops.age.sshKeyPaths = "/etc/ssh/ssh_host_ed25519_key"; # machines private ssh key, used to decrypt secrets.yaml
 
-  services.tailscale = {
-    authKeyFile = config.sops.secrets."headscale/desktop_key".path; # Headscale pre-auth key
-  };
+  sops.secrets."tailscale/pre_auth_key" = {};
+  services.tailscale.authKeyFile = config.sops.secrets."tailscale/pre_auth_key".path; # generated on z-home-mac
+
+  users.users.zozano.openssh.authorizedKeys.keys = [
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL+JLIMMkhZty4POE+gHXrNwy11myWa0F+nVsWeyYJE3 tim@solaire.com" # allows the computer with this key to ssh in
+  ];
 
   environment.systemPackages = with pkgs; [
     age # generating keypairs
