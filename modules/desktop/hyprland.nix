@@ -6,7 +6,7 @@
 }: {
   imports = [
     ./layouts/master.nix
-    ./layouts/dwindle.nix
+    #./layouts/dwindle.nix
     #./layouts/scrolling.nix
   ];
 
