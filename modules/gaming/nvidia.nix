@@ -31,6 +31,8 @@
     clinfo
     libGL
     libglvnd
+    libva
+    egl-wayland
     mesa
     vulkan-tools
     vulkan-loader
@@ -57,10 +59,9 @@
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
   };
 
-  home-manager.users.zozano = {
-    home.packages = with pkgs; [
-      egl-wayland
-      libva
-    ];
-  };
+  # home-manager.users.zozano = {
+  #   home.packages = with pkgs; [
+  #     libva
+  #   ];
+  # };
 }
