@@ -12,7 +12,9 @@
   imports = [inputs.sops-nix.nixosModules.sops];
 
   sops.defaultSopsFile = ../../secrets/secrets.yaml; # master
-  sops.age.sshKeyPaths = "/etc/ssh/ssh_host_ed25519_key"; # machines private ssh key, used to decrypt secrets.yaml
+  sops.age.sshKeyPaths = [
+    "/etc/ssh/ssh_host_ed25519_key" # machines private ssh key, used to decrypt secrets.yaml
+  ];
 
   sops.secrets."tailscale/pre_auth_key" = {};
   services.tailscale.authKeyFile = config.sops.secrets."tailscale/pre_auth_key".path; # generated on z-home-mac
