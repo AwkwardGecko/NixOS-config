@@ -20,7 +20,8 @@
       "nodev"
       "nofail"
       "allow_other"
-      "IdentityFile=/root/.ssh/home-server_z-nix"
+      #"IdentityFile=/root/.ssh/home-server_z-nix"
+      "IdentityFile=${config.sops.secrets."ssh/home-server-key".path}"
       "x-systemd.automount"
       "x-systemd.requires=network-online.target"
       "x-systemd.requires=tailscaled.service"
@@ -34,10 +35,16 @@
       "nodev"
       "nofail"
       "allow_other"
-      "IdentityFile=/root/.ssh/home-server_z-nix"
+      #"IdentityFile=/root/.ssh/home-server_z-nix"
+      "IdentityFile=${config.sops.secrets."ssh/home-server-key".path}"
       "x-systemd.automount"
       "x-systemd.requires=network-online.target"
       "x-systemd.requires=tailscaled.service"
     ];
   };
 }
+
+
+
+
+
