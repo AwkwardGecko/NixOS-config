@@ -16,6 +16,8 @@
     "/etc/ssh/ssh_host_ed25519_key" # machines private ssh key, used to decrypt secrets.yaml
   ];
 
+  sops.secrets."ssh/home-server-key" = {};
+
   sops.secrets."tailscale/pre_auth_key" = {};
   services.tailscale.authKeyFile = config.sops.secrets."tailscale/pre_auth_key".path; # generated on z-home-mac
 
