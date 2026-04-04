@@ -4,7 +4,6 @@
   lib,
   ...
 }: {
-
   imports = [
     #./layouts/master.nix
     ./layouts/scrolling.nix

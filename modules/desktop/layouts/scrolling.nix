@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   home-manager.users.zozano.wayland.windowManager.hyprland.settings = {
     general.layout = "scrolling";
     #scrolling.screen_on_one_column = true;
