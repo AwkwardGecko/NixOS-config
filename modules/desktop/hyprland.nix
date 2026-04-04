@@ -6,6 +6,7 @@
 }: {
   imports = [
     ./layouts/master.nix
+    ./layouts/dwindle.nix
     #./layouts/scrolling.nix
   ];
 
@@ -66,8 +67,6 @@
         "$menu" = "rofi -show drun -show-icons";
         "$update_script" = "kitty --class sysupdate -e bash ~/.dotfiles/scripts/system-update.sh";
         "$kitty_with_fastfetch" = "kitty fastfetch";
-        # "$unhide_waybar" = "bash -c 'pkill -SIGUSR1 waybar; sleep 30; pkill -SIGUSR1 waybar'";
-        #"$unhide_waybar" = "bash -c 'pkill -SIGUSR1 waybar'";
         #"$steam_friends" = "sleep 60 && steam steam://open/friends";
 
         exec-once = [
@@ -234,7 +233,7 @@
           "workspace 2, match:class ^(steam)$, match:title ^(Friends)$" # open steamfriends on workspace 2
           "workspace 3, match:class ^(Terraria)$, match:title ^(Terraria)$" #Terraria
           "workspace 5, immediate on, no_anim on, rounding 0, idle_inhibit always, match:class ^(steam_app_.*|starrail.exe)$"
-          "windowrule = match:class ^(starrail.exe)$, immediate yes"
+          #"windowrule = match:class ^(starrail.exe)$, immediate yes"
           "float on, match:class ^(pavucontrol|nm-connection-editor)$" # Floating windows
           "opacity 1.0 override 1.0 override, match:class ^(Steam)$" # Turn opacity off
           "no_focus on, match:class ^$, match:title ^$, match:xwayland 0, match:float 1, match:fullscreen 0, match:pin 0" # prevents hidden windows from being fuckwits
