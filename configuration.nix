@@ -10,7 +10,7 @@
 
     ./modules/core/audio.nix
     ./modules/core/boot.nix
-    ./modules/core/filesystem.nix
+    #./modules/core/filesystem.nix
     ./modules/core/hardware.nix
     ./modules/core/localisation.nix
     ./modules/core/networking.nix
