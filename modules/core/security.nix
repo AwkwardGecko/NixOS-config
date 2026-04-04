@@ -31,6 +31,7 @@
     lynis
     sops
     ssh-to-age
+    cryptsetup
   ];
 
   services = {
