@@ -7,7 +7,7 @@
 }: {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
-    ./modules/core/hardware-configuration-disabled.nix
+    #./modules/core/hardware-configuration-disabled.nix
   ];
 
   boot = {
