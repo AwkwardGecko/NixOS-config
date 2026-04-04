@@ -9,7 +9,7 @@
   environment.systemPackages = with pkgs; [
     evtest
     hdparm
-    lm_sensors # remove from nvidia.nix and coolercontrol.nix
+    lm_sensors
     pciutils
     smartmontools
     usbutils
