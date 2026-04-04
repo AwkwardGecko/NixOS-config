@@ -71,7 +71,7 @@
   #sudo systemctl restart podman-tdarr-node
 
   echo "alejandra formatting"
-  alejandra /home/zozano/.dotfiles
+  alejandra -q /home/zozano/.dotfiles
 
   echo "All done."
   sleep 2
