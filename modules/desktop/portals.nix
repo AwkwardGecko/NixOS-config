@@ -28,6 +28,7 @@
         "x-scheme-handler/https" = "firefox.desktop";
         "image/png" = "imv.desktop";
         "image/jpeg" = "imv.desktop";
+        "image/gif" = "nomacs.desktop";
         "video/mp4" = "mpv.desktop";
         "video/x-matroska" = "mpv.desktop";
         "application/pdf" = "org.pwmt.zathura.desktop";
