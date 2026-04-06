@@ -24,7 +24,7 @@
   };
 
   xdg = {
-    mimeApps = {
+    mime = {
       enable = true;
       defaultApplications = {
         "text/html" = "firefox.desktop";
