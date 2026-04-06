@@ -31,7 +31,7 @@
         "x-scheme-handler/http" = "firefox.desktop";
         "x-scheme-handler/https" = "firefox.desktop";
         "image/*" = "nomacs.desktop";
-        #"image/png" = "imv.desktop";
+        "image/png" = "imv.desktop";
         #"image/jpeg" = "imv.desktop";
         #"image/gif" = "nomacs.desktop";
         "video/*" = "vlc.desktop";
