@@ -21,7 +21,10 @@
 
   home-manager.users.zozano = {
     programs.mpv.enable = true;
-    xdg.mimeApps = {
+  };
+
+  xdg = {
+    mimeApps = {
       enable = true;
       defaultApplications = {
         "text/html" = "firefox.desktop";
@@ -36,12 +39,10 @@
         #"video/x-matroska" = "mpv.desktop";
         "application/pdf" = "org.pwmt.zathura.desktop";
         "text/*" = "gedit.desktop";
-        "inode/directory" = ["nautilus.desktop"];
+        "inode/directory" = "nautilus.desktop";
       };
     };
-  };
 
-  xdg = {
     portal = {
       enable = true;
       extraPortals = with pkgs; [
