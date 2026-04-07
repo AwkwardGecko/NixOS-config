@@ -7,7 +7,7 @@
   localDir = "/home/zozano/Proton-Drive";
   remoteDir = "proton:dectech-6af36c";
 in {
-  home-manager.users.zozano = {
+  home-manager.users.zozano = { config, ... }: {
     programs.rclone = {
       enable = true;
       remotes.proton = {
