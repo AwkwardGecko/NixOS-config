@@ -18,13 +18,10 @@
   fileSystems."/server".options = ["IdentityFile=${config.sops.secrets."ssh/home-server-key".path}"];
   fileSystems."/data".options = ["IdentityFile=${config.sops.secrets."ssh/home-server-key".path}"];
 
-
   sops.secrets."proton/user" = {};
   sops.secrets."proton/pass" = {};
-  home-manager.users.zozano.programs.rclone.secrets.user = config.sops.secrets."proton/user".path;
-  home-manager.users.zozano.programs.rclone.secrets.pass = config.sops.secrets."proton/pass".path;
-
-
+  home-manager.users.zozano.programs.rclone.proton.secrets.user = config.sops.secrets."proton/user".path;
+  home-manager.users.zozano.programs.rclone.proton.secrets.pass = config.sops.secrets."proton/pass".path;
 
   sops.secrets."tailscale/pre_auth_key" = {};
   services.tailscale.authKeyFile = config.sops.secrets."tailscale/pre_auth_key".path; # generated on z-home-mac
