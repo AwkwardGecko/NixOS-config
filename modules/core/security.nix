@@ -20,8 +20,8 @@
 
   sops.secrets."proton/user" = {};
   sops.secrets."proton/pass" = {};
-  home-manager.users.zozano.programs.rclone.remotes.proton.secrets.user = config.sops.secrets."proton/user".path;
-  home-manager.users.zozano.programs.rclone.remotes.proton.secrets.pass = config.sops.secrets."proton/pass".path;
+  home-manager.users.zozano.programs.rclone.remotes.proton.secrets.account = config.sops.secrets."proton/user".path;
+  home-manager.users.zozano.programs.rclone.remotes.proton.secrets.key = config.sops.secrets."proton/pass".path;
 
   sops.secrets."tailscale/pre_auth_key" = {};
   services.tailscale.authKeyFile = config.sops.secrets."tailscale/pre_auth_key".path; # generated on z-home-mac
