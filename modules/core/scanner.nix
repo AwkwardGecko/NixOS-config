@@ -13,7 +13,7 @@
       sane-airscan
     ];
 
-    disabledDefaultBackends = [ "escl" ];
+    disabledDefaultBackends = ["escl"];
   };
 
   services = {
@@ -27,6 +27,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    simple-scan
+    #simple-scan
+    naps2
   ];
 }
