@@ -4,7 +4,9 @@
   lib,
   ...
 }: {
-  hardware.sane = {
+ # bind to key: scanimage --format=png --output-file ~/Proton-Drive/scan_$(date +%Y-%m-%d_%H_%M_%S).png
+
+hardware.sane = {
     enable = true;
 
     extraBackends = with pkgs; [
@@ -30,4 +32,6 @@
     #simple-scan
     naps2
   ];
+
+
 }
