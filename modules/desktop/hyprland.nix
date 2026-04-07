@@ -225,8 +225,8 @@
         ];
 
         bindle = [
-          ",Next, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-          ",Prior, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+          ",Next, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 3%-"
+          ",Prior, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+"
         ];
 
         windowrule = [

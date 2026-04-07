@@ -4,8 +4,7 @@
   pkgs,
   ...
 }: let
-  rclonePkg = config.programs.rclone.package;
-  localDir = "${config.home.homeDirectory}/Proton-Drive";
+  localDir = "/home/zozano/Proton-Drive";
   remoteDir = "proton:dectech-6af36c";
 in {
   home-manager.users.zozano = {
@@ -27,7 +26,7 @@ in {
         Type = "oneshot";
         ExecStartPre = "${pkgs.coreutils}/bin/mkdir -p ${localDir}";
         ExecStart = lib.concatStringsSep " " [
-          "${rclonePkg}/bin/rclone"
+          "${config.programs.rclone.package}/bin/rclone"
           "bisync"
           localDir
           remoteDir
