@@ -9,14 +9,14 @@
 
     extraBackends = with pkgs; [
       #utsushi
-      epkowa
+      #epkowa
+      sane-airscan
     ];
+
+    disabledDefaultBackends = [ "escl" ];
   };
 
   services = {
-    udev.packages = [
-      pkgs.utsushi
-    ];
     avahi.enable = true;
     avahi.nssmdns4 = true;
   };
