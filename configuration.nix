@@ -17,7 +17,7 @@
     ./modules/core/nix.nix
     ./modules/core/security.nix
     ./modules/core/users.nix
-    #./modules/core/scanner.nix
+    ./modules/core/scanner.nix
 
     ./modules/desktop/hyprland.nix
     ./modules/desktop/hyprpanel.nix
