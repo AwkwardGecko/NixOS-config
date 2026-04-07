@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: let
-  localDir = "/home/zozano/Proton-Drive";
+  localDir = "~/Proton-Drive";
   remoteDir = "proton:dectech-6af36c";
 in {
   home-manager.users.zozano = {config, ...}: {
