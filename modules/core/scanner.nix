@@ -29,7 +29,7 @@
   ];
 
   #environment.systemPackages = with pkgs; [
-    #simple-scan
-    #naps2
+  #simple-scan
+  #naps2
   #];
 }
