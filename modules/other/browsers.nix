@@ -18,6 +18,10 @@ in {
     proton-pass
   ];
 
+  environment.sessionVariables = [
+    MOZ_DRM_DEVICE = "/dev/dri/renderD128";
+  ];
+
   home-manager.users.zozano = {
     programs.librewolf = {
       enable = true;
