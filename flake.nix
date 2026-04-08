@@ -4,6 +4,9 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak";
 
+    turnbasedgamedata.url = "git+https://gitlab.com/Dimbreath/turnbasedgamedata.git?ref=main";
+    turnbasedgamedata.flake = false;
+
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -27,6 +30,7 @@
     nixvim,
     comfyui-nix,
     stylix,
+    turnbasedgamedata,
     sops-nix,
     ...
   }: {
