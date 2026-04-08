@@ -7,9 +7,9 @@
 #
 # Update workflow when HSR patches:
 #   1. Update `version` and `srcHash` to match the new reliquary-archiver release
-#   2. Update `gamedataRev` and `gamedataHash` to a fresh commit from Dimbreath's repo
-#   3. Set `cargoHash` to lib.fakeHash and rebuild — Nix will error with the correct hash
-#   4. Paste the correct cargoHash and rebuild
+#   2. Set `cargoHash` to lib.fakeHash and rebuild — Nix will error with the correct hash
+#   3. Paste the correct cargoHash and rebuild
+#   Game data updates automatically (builtins.fetchGit tracks main branch)
 #
 { lib, pkgs, ... }:
 
@@ -19,23 +19,15 @@ let
   version = "0.14.0";
   srcHash = lib.fakeHash; # replace after first build attempt
 
-  # Game data (Dimbreath's datamined resources — changes each game patch)
-  # Pin to a specific commit for reproducibility, or use "main" initially
-  gamedataRev = "main";
-  gamedataHash = lib.fakeHash; # replace after first build attempt
-
   # Cargo dependency hash (set to lib.fakeHash, rebuild, paste the real one)
   cargoHash' = lib.fakeHash;
 
   # ── Game data (pre-fetched for sandboxed build) ───────────────────────
-  gamedata = pkgs.fetchgit {
+  gamedata = builtins.fetchGit {
     url = "https://gitlab.com/Dimbreath/turnbasedgamedata.git";
-    rev = gamedataRev;
-    hash = gamedataHash;
-    sparseCheckout = [
-      "ExcelOutput"
-      "TextMap"
-    ];
+    ref = "main";
+    # Pin to a specific commit hash for reproducibility once you have one:
+    # rev = "abc123...";
   };
 
   # ── Patch script for build.rs ─────────────────────────────────────────
