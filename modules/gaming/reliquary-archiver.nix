@@ -23,7 +23,7 @@
       cd reliquary-archiver-*
       cargo build --release
       sudo setcap CAP_NET_RAW=+ep target/release/reliquary-archiver
-      cargo run
+      cargo run --release
     '';
   };
 }
