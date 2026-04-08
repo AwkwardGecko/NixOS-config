@@ -225,7 +225,7 @@
         ];
 
         bindle = [
-          ",End, exec, scanimage --device 'genesys:libusb:003:005' --resolution 3600 --format=tiff -o test_scan.tiff"
+          ",End, exec, ~/.dotfiles/scripts/plustek-opticfilm7200i.sh"
 
           #",End, exec, scanimage --format=png --output-file ~/Proton-Drive/scan_$(date +%Y-%m-%d_%H_%M_%S).png"
           ",Next, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
