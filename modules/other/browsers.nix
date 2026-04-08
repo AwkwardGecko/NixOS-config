@@ -50,6 +50,7 @@ in {
         "background_mode.enabled" = false;
         "metrics_reporting_enabled" = false;
         "profile.exit_type" = "Normal";
+        "gfx.webgpu.ignore-blocklist" = true;
       };
     };
     firefox = {
