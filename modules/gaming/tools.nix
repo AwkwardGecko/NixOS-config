@@ -8,6 +8,7 @@
     bottles
     goverlay
     wine
+    libpcap
     # unigine-superposition - don't use. run .exe through steam for Vulkan support
     # (writeShellScriptBin "sunshine-run" ''
     #   export WAYLAND_DISPLAY="''${WAYLAND_DISPLAY:-wayland-1}"
