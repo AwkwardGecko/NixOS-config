@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   home-manager.users.zozano.home.file."reliquary-archiver/default.nix".text = ''
     { pkgs ? import <nixpkgs> {} }:
 
@@ -9,6 +13,7 @@
         pkg-config
         libpcap
         wayland
+        tcpdump
       ];
     }
   '';
