@@ -3,7 +3,7 @@
   lib,
   pkgs,
   ...
-}: 
+}:
 # ~/.dotfiles/z-nixos/modules/reliquary-archiver.nix
 #
 # NixOS module for reliquary-archiver (HSR relic export via packet capture)
@@ -18,7 +18,6 @@
 #   3. Set `cargoHash` to lib.fakeHash and rebuild — Nix will error with the correct hash
 #   4. Paste the correct cargoHash and rebuild
 #
-
 let
   cfg = config.programs.reliquary-archiver;
 
@@ -50,41 +49,41 @@ let
   # build.rs downloads game data via HTTP at compile time.
   # Nix sandbox has no network, so we patch it to read from local files.
   buildRsPatch = ''
-    # 1. Point BASE_RESOURCE_URL at the pre-fetched game data directory
-    substituteInPlace build.rs \
-      --replace-fail \
-        'const BASE_RESOURCE_URL: &str = "https://gitlab.com/Dimbreath/turnbasedgamedata/-/raw/main";' \
-        'const BASE_RESOURCE_URL: &str = "${gamedata}";'
+        # 1. Point BASE_RESOURCE_URL at the pre-fetched game data directory
+        substituteInPlace build.rs \
+          --replace-fail \
+            'const BASE_RESOURCE_URL: &str = "https://gitlab.com/Dimbreath/turnbasedgamedata/-/raw/main";' \
+            'const BASE_RESOURCE_URL: &str = "${gamedata}";'
 
-    # 2. Replace the HTTP download function with a local file reader
-    #    Original uses ureq::get(url).call().into_json()
-    #    Replacement uses std::fs::read_to_string + ureq::serde_json::from_str
-    ${pkgs.python3}/bin/python3 -c "
-import re, sys
-with open('build.rs', 'r') as f:
-    content = f.read()
+        # 2. Replace the HTTP download function with a local file reader
+        #    Original uses ureq::get(url).call().into_json()
+        #    Replacement uses std::fs::read_to_string + ureq::serde_json::from_str
+        ${pkgs.python3}/bin/python3 -c "
+    import re, sys
+    with open('build.rs', 'r') as f:
+        content = f.read()
 
-old_fn = re.compile(
-    r'fn download_as_json<T: DeserializeOwned>\(url: &str\) -> T \{.*?\n\}',
-    re.DOTALL
-)
+    old_fn = re.compile(
+        r'fn download_as_json<T: DeserializeOwned>\(url: &str\) -> T \{.*?\n\}',
+        re.DOTALL
+    )
 
-new_fn = '''fn download_as_json<T: DeserializeOwned>(path: &str) -> T {
-    let content = std::fs::read_to_string(path)
-        .unwrap_or_else(|e| panic!(\"Failed to read file {}: {}\", path, e));
-    ureq::serde_json::from_str(&content)
-        .unwrap_or_else(|e| panic!(\"Failed to parse json from {}: {}\", path, e))
-}'''
+    new_fn = '''fn download_as_json<T: DeserializeOwned>(path: &str) -> T {
+        let content = std::fs::read_to_string(path)
+            .unwrap_or_else(|e| panic!(\"Failed to read file {}: {}\", path, e));
+        ureq::serde_json::from_str(&content)
+            .unwrap_or_else(|e| panic!(\"Failed to parse json from {}: {}\", path, e))
+    }'''
 
-result = old_fn.sub(new_fn, content, count=1)
-if result == content:
-    print('ERROR: Could not find download_as_json function to patch', file=sys.stderr)
-    sys.exit(1)
+    result = old_fn.sub(new_fn, content, count=1)
+    if result == content:
+        print('ERROR: Could not find download_as_json function to patch', file=sys.stderr)
+        sys.exit(1)
 
-with open('build.rs', 'w') as f:
-    f.write(result)
-print('Patched download_as_json to read from local files')
-"
+    with open('build.rs', 'w') as f:
+        f.write(result)
+    print('Patched download_as_json to read from local files')
+    "
   '';
 
   # ── Package derivation ────────────────────────────────────────────────
@@ -117,7 +116,7 @@ print('Patched download_as_json to read from local files')
     # Only build default Linux features (pcap + stream)
     # gui and pktmon are Windows-only
     buildNoDefaultFeatures = true;
-    buildFeatures = [ "pcap" "stream" ];
+    buildFeatures = ["pcap" "stream"];
 
     meta = {
       description = "HSR relic export from network packet capture";
@@ -127,9 +126,7 @@ print('Patched download_as_json to read from local files')
       mainProgram = "reliquary-archiver";
     };
   };
-
-in
-{
+in {
   # ── Module interface ──────────────────────────────────────────────────
   options.programs.reliquary-archiver = {
     enable = lib.mkEnableOption "reliquary-archiver (HSR relic packet exporter)";
@@ -137,7 +134,6 @@ in
 
   # ── Module implementation ─────────────────────────────────────────────
   config = lib.mkIf cfg.enable {
-
     # System-level: setcap wrapper so pcap can capture packets without sudo.
     # The binary at /run/wrappers/bin/reliquary-archiver gets CAP_NET_RAW.
     security.wrappers.reliquary-archiver = {
@@ -150,7 +146,7 @@ in
     # Home-manager integration
     home-manager.users.zozano = {
       # Put the unwrapped binary on PATH too (for --help, etc.)
-      home.packages = [ reliquary-archiver ];
+      home.packages = [reliquary-archiver];
 
       xdg.desktopEntries.reliquary-archiver = {
         name = "Reliquary Archiver";
@@ -159,9 +155,8 @@ in
         exec = "/run/wrappers/bin/reliquary-archiver --exit-after-capture";
         terminal = true;
         type = "Application";
-        categories = [ "Game" "Utility" ];
+        categories = ["Game" "Utility"];
       };
     };
   };
 }
-
