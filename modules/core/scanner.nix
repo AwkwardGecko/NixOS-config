@@ -28,8 +28,8 @@
     "lp"
   ];
 
-  environment.systemPackages = with pkgs; [
+  #environment.systemPackages = with pkgs; [
     #simple-scan
-    naps2
-  ];
+    #naps2
+  #];
 }

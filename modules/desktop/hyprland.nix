@@ -226,8 +226,8 @@
 
         bindle = [
           ",End, exec, scanimage --format=png --output-file ~/Proton-Drive/scan_$(date +%Y-%m-%d_%H_%M_%S).png"
-          ",Next, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 3%-"
-          ",Prior, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+"
+          ",Next, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+          ",Prior, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
         ];
 
         windowrule = [
