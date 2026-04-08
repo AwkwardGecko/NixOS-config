@@ -1,28 +1,37 @@
-# GPU/Firefox acceleration diagnostics
-echo "=== Nvidia driver ==="
-nvidia-smi --query-gpu=driver_version --format=csv,noheader 2>/dev/null || echo "nvidia-smi not found"
+#!/usr/bin/env bash
+echo "=== USB Devices (filtered for Plustek/scanner) ==="
+lsusb 2>/dev/null | grep -iE 'plustek|scanner|07b3' || echo "No Plustek USB device found"
 
-echo -e "\n=== VA-API ==="
-vainfo 2>&1 | head -20 || echo "vainfo not found"
+echo ""
+echo "=== All USB Devices ==="
+lsusb 2>/dev/null
 
-echo -e "\n=== Environment vars ==="
-env | grep -iE '(MOZ_|LIBVA|NVD|VDPAU|GBM|__GL)' | sort
+echo ""
+echo "=== SANE installed? ==="
+command -v scanimage && scanimage --version || echo "scanimage not found"
 
-echo -e "\n=== Firefox package ==="
-nix eval --raw nixpkgs#firefox.meta.name 2>/dev/null
-echo
-command -v firefox && firefox --version
+echo ""
+echo "=== SANE detected devices ==="
+scanimage -L 2>&1 || echo "scanimage -L failed"
 
-echo -e "\n=== NixOS hardware.graphics / opengl ==="
-nixos-option hardware.graphics.enable 2>/dev/null || nixos-option hardware.opengl.enable 2>/dev/null
-nixos-option hardware.graphics.extraPackages 2>/dev/null | head -20 || nixos-option hardware.opengl.extraPackages 2>/dev/null | head -20
+echo ""
+echo "=== SANE backends available ==="
+ls /etc/sane.d/ 2>/dev/null | head -30 || echo "No /etc/sane.d/"
+echo "---"
+find /nix/store -maxdepth 2 -name 'plustek*' -o -name 'sane-backends*' 2>/dev/null | tail -10
 
-echo -e "\n=== Nvidia module config ==="
-for opt in modesetting open; do
-  echo -n "hardware.nvidia.$opt = "
-  nixos-option hardware.nvidia.$opt 2>/dev/null | head -1 || echo "not set"
-done
+echo ""
+echo "=== NixOS SANE config ==="
+grep -riE 'sane|scanner|plustek' ~/.dotfiles/*.nix ~/.dotfiles/**/*.nix 2>/dev/null || echo "No SANE/scanner config found in dotfiles"
 
-echo -e "\n=== about:config-relevant env ==="
-# Check if wrapper sets anything
-grep -r "MOZ_" ~/.dotfiles/ 2>/dev/null | grep -v '.git'
+echo ""
+echo "=== Current user groups ==="
+id
+
+echo ""
+echo "=== udev rules for scanners ==="
+find /etc/udev/rules.d/ /run/udev/rules.d/ -iname '*sane*' -o -iname '*scanner*' 2>/dev/null | head -10 || echo "None found"
+
+echo ""
+echo "=== Firmware files ==="
+find /nix/store -maxdepth 3 -name 'Plustek*' -o -name 'plustek*fw*' 2>/dev/null | head -10 || echo "No Plustek firmware found in nix store"
