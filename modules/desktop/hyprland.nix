@@ -221,7 +221,7 @@
 
           ",F4, exec, playerctl next"
           ",F12, exec, ~/.dotfiles/scripts/mpc-delete.sh"
-          ",F9, exec, ~/.dotfiles/scripts/mpc-keep.sh"
+          ",F8, exec, ~/.dotfiles/scripts/mpc-keep.sh"
           #",XF86AudioPrev, exec, playerctl previous"
           #",XF86AudioPlay, exec, playerctl play-pause"
         ];
