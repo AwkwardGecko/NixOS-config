@@ -21,6 +21,7 @@
     "reliquary-archiver/build.sh".text = ''
       #!/usr/bin/env bash
       cd reliquary-archiver-*
+      rm archive_output-*
       cargo build --release
       sudo setcap CAP_NET_RAW=+ep target/release/reliquary-archiver
       cargo run --release
