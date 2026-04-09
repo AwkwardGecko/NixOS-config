@@ -37,7 +37,6 @@
         embed-subs = true;
         sub-langs = "en";
         sponsorblock-mark = "all";
-        output = "%(title)s [%(id)s].%(ext)s";
       };
     };
 
