@@ -27,6 +27,20 @@
       ncmpcpp
     ];
 
+    programs.yt-dlp = {
+      enable = true;
+      settings = {
+        merge-output-format = "mkv";
+        format = "bestvideo+bestaudio/best";
+        embed-metadata = true;
+        embed-thumbnail = true;
+        embed-subs = true;
+        sub-langs = "en";
+        sponsorblock-mark = "all";
+        output = "%(title)s [%(id)s].%(ext)s";
+      };
+    };
+
     services.mpd = {
       enable = true;
       musicDirectory = "/data/media/music";
