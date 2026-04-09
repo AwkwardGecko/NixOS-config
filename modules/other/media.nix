@@ -22,19 +22,21 @@
       playerctl
       mkvtoolnix # modify video files
       mp3gain # normalize volume of music
+      mpc-cli
+      ncmpcpp
     ];
 
-  services.mpd = {
-    enable = true;
-    user = "zozano";
-    musicDirectory = "/data/media/music";
-    extraConfig = ''
-      audio_output {
-        type "pipewire"
-        name "pipeWire Output"
-      }
-    '';
-  };
+    services.mpd = {
+      enable = true;
+      user = "zozano";
+      musicDirectory = "/data/media/music";
+      extraConfig = ''
+        audio_output {
+          type "pipewire"
+          name "pipeWire Output"
+        }
+      '';
+    };
 
     xdg.desktopEntries.jellyfin-opener = {
       name = "Jellyfin Media Player Opener";
