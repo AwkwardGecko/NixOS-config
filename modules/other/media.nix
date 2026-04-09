@@ -24,6 +24,18 @@
       mp3gain # normalize volume of music
     ];
 
+  services.mpd = {
+    enable = true;
+    user = "zozano";
+    musicDirectory = "/data/media/music";
+    extraConfig = ''
+      audio_output {
+        type "pipewire"
+        name "pipeWire Output"
+      }
+    '';
+  };
+
     xdg.desktopEntries.jellyfin-opener = {
       name = "Jellyfin Media Player Opener";
       exec = "jellyfin-desktop %u";
