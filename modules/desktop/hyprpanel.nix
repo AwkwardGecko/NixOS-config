@@ -44,6 +44,7 @@
           workspaces.show_icons = true;
           bluetooth.label = false;
           clock.format = "%H:%M";
+          media.truncation_size = 80;
         };
 
         # Not sure `bar.tray.*` is a real key in current docs; keep if you know it works.
