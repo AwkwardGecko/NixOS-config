@@ -28,7 +28,6 @@
 
     services.mpd = {
       enable = true;
-      user = "zozano";
       musicDirectory = "/data/media/music";
       extraConfig = ''
         audio_output {
