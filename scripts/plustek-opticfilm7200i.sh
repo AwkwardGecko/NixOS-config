@@ -8,9 +8,7 @@ scanimage --device 'genesys:libusb:003:005' \
   --mode Color \
   --source "Transparency Adapter" \
   --resolution 1800 \
-  #--brightness 30 \ 
-  #-l 1 \
-  #--format=png \
+  --format=png \
   -o "$OUTPUT" \
   && notify-send "Scan Complete" "$OUTPUT" \
   || notify-send -u critical "Scan Failed" "Check terminal for errors"

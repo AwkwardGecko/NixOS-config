@@ -65,7 +65,6 @@
         "$fileManager" = "nautilus";
         "$browser" = "firefox";
         "$menu" = "rofi -show drun -show-icons";
-        "$update_script" = "kitty --class sysupdate -e bash ~/.dotfiles/scripts/system-update.sh";
         "$kitty_with_fastfetch" = "kitty fastfetch";
         #"$steam_friends" = "sleep 60 && steam steam://open/friends";
 
@@ -161,7 +160,6 @@
           "$mainMod, Q, exec, $terminal"
           "$mainMod, R, exec, $menu"
           "$mainMod, V, togglefloating,"
-          "$mainMod, num_lock, exec, $update_script"
 
           "$mainMod, return, exec, $terminal"
 

@@ -13,9 +13,9 @@
       new_status = false; # master: new window becomes master; slave: new windows are added to slave stack; inherit: inherit from focused window
       new_on_top = false;
       new_on_active = "none";
-      orientation = "left";
+      orientation = "right";
       slave_count_for_center_master = 2;
-      center_master_fallback = "left";
+      center_master_fallback = "right";
       smart_resizing = true;
       drop_at_cursor = true;
       always_keep_position = false;
