@@ -220,8 +220,8 @@
           #",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 
           ",F4, exec, playerctl next"
-          ",Home, exec, ~/.dotfiles/scripts/mpc-delete.sh"
-          ",F12, exec, ~/.dotfiles/scripts/mpc-keep.sh"
+          ",F12, exec, ~/.dotfiles/scripts/mpc-delete.sh"
+          ",F9, exec, ~/.dotfiles/scripts/mpc-keep.sh"
           #",XF86AudioPrev, exec, playerctl previous"
           #",XF86AudioPlay, exec, playerctl play-pause"
         ];
