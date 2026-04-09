@@ -219,7 +219,9 @@
           #",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"
           #",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 
-          ",F3, exec, playerctl next"
+          ",F4, exec, playerctl next"
+          ",Home, exec, ~/.dotfiles/scripts/mpc-delete.sh"
+          ",F12, exec ~/.dotfiles/scripts/mpc-keep.sh"
           #",XF86AudioPrev, exec, playerctl previous"
           #",XF86AudioPlay, exec, playerctl play-pause"
         ];
@@ -229,7 +231,7 @@
 
           #",End, exec, scanimage --format=png --output-file ~/Proton-Drive/scan_$(date +%Y-%m-%d_%H_%M_%S).png"
           ",F1, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-          ",F2, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+          ",F3, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
         ];
 
         windowrule = [
