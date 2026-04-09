@@ -23,6 +23,7 @@
       mkvtoolnix # modify video files
       mp3gain # normalize volume of music
       mpc
+      mpd-mpris
       ncmpcpp
     ];
 
