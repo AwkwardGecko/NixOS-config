@@ -50,15 +50,12 @@
       "x-scheme-handler/jmp" = "jellyfin-opener.desktop";
     };
 
-
-  systemd.user.services.mpd-mpris = {
-    Unit.Description = "MPRIS bridge for MPD";
-    Unit.After = ["mpd.service"];
-    Service.ExecStart = "${pkgs.mpd-mpris}/bin/mpd-mpris";
-    Service.Restart = "on-failure";
-    Install.WantedBy = ["default.target"];
+    systemd.user.services.mpd-mpris = {
+      Unit.Description = "MPRIS bridge for MPD";
+      Unit.After = ["mpd.service"];
+      Service.ExecStart = "${pkgs.mpd-mpris}/bin/mpd-mpris";
+      Service.Restart = "on-failure";
+      Install.WantedBy = ["default.target"];
+    };
   };
-  };
-
-
 }

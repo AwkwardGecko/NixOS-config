@@ -11,7 +11,7 @@
       settings = {
         bar.layouts = {
           "*" = {
-            left = ["volume" "media" "workspaces"];
+            left = ["volume" "workspaces" "media"];
             middle = ["clock"];
             right = ["systray" "bluetooth" "notifications" "dashboard"];
           };
