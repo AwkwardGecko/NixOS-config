@@ -154,7 +154,9 @@
           "$mainMod, E, exec, $fileManager"
           "$mainMod, F, exec, $browser"
           "$mainMod, G, togglegroup,"
-          "$mainMod, J, togglesplit,"
+          
+          "$mainMod, space, togglesplit,"
+          
           "$mainMod, M, fullscreen, 1"
           "$mainMod, P, pseudo,"
           "$mainMod, Q, exec, $terminal"
