@@ -49,7 +49,7 @@
     xdg.mimeApps.defaultApplications = {
       "x-scheme-handler/jmp" = "jellyfin-opener.desktop";
     };
-  };
+
 
   systemd.user.services.mpd-mpris = {
     Unit.Description = "MPRIS bridge for MPD";
@@ -58,4 +58,7 @@
     Service.Restart = "on-failure";
     Install.WantedBy = ["default.target"];
   };
+  };
+
+
 }
