@@ -4,12 +4,13 @@ OUTPUT=~/Proton-Drive/scan_$(date +%Y-%m-%d_%H_%M_%S).png
 # change device after searching with:
 # lsusb 2>/dev/null | grep -iE 'plustek|scanner|07b3' || echo "No Plustek USB device found"
 
-scanimage --device 'genesys:libusb:003:006' \
+scanimage --device 'genesys:libusb:003:005' \
   --mode Color \
   --source "Transparency Adapter" \
   --resolution 1800 \
-  -l 1 \
-  --format=png \
+  #--brightness 30 \ 
+  #-l 1 \
+  #--format=png \
   -o "$OUTPUT" \
   && notify-send "Scan Complete" "$OUTPUT" \
   || notify-send -u critical "Scan Failed" "Check terminal for errors"
