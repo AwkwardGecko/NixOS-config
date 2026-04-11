@@ -21,7 +21,6 @@ STARTUP_WINDOW = 300  # 5 minutes
 # Conversations that get critical + sound notifications
 PRIORITY_CONTACTS = {
     "ef7a4dae-bc1c-4e0c-95f0-5fa884dbb9ae",
-    "a0b172d9-2878-4896-8aa2-ade5555dd714",
 }
 
 ALERT_SOUND = "/run/current-system/sw/share/sounds/freedesktop/stereo/message-new-instant.oga"
@@ -148,7 +147,7 @@ def main():
                         body_preview = msg["body"] if msg["body"] else "(no text)"
                         priority = conv_id in PRIORITY_CONTACTS
                         notify(
-                            f"{name} read your message",
+                            f"fuckhead {name} read your message",
                             body_preview,
                             priority=priority,
                         )
