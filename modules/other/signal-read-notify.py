@@ -101,7 +101,7 @@ def notify(summary, body="", priority=False):
         body,
     ])
     if priority:
-        subprocess.Popen(["pw-play", ALERT_SOUND],
+        subprocess.Popen(["mpv --no-video", ALERT_SOUND],
                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 
