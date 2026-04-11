@@ -7,12 +7,13 @@
   cfg = config.services.signal-read-notify;
   script = ./signal-read-notify.py;
 in {
+  
   environment.systemPackages = with pkgs; [
     signal-desktop
     signal-export
   ];
 
-  options.services.signal-read-notify = {
+  services.signal-read-notify = {
     enable = lib.mkEnableOption "Signal read receipt desktop notifications";
 
     pollInterval = lib.mkOption {
