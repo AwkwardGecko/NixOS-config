@@ -21,18 +21,18 @@ STARTUP_WINDOW = 300  # 5 minutes
 # Conversations that get critical + sound notifications
 PRIORITY_CONTACTS = {
     "ef7a4dae-bc1c-4e0c-95f0-5fa884dbb9ae", # emily
-    "a0b172d9-2878-4896-8aa2-ade5555dd714", # jason
-    "7672d921-c5f3-48d9-9ecc-8890427c4f63", # andrew
-    "016f0bdf-141d-4012-aa1d-e983e253379d", # seulgee
-    "daba8ea9-3759-484f-be14-0761cb7b889e", # jenny luck
-    "427d9baf-1be2-4675-b136-a4208c1f3017", # ash wrightson
-    "81407814-0d47-4369-9334-ff362b2cb8ec", # ranon
-    "62f94418-58ae-4174-b3c3-cb18b542df81", # rex
-    "a0c6f39c-154f-4ba1-a8dd-54cdec6f4b6b", # mum
-    "b5e152f6-b535-41f6-9c3c-4e3f35d5183a", # dad
-    "d79a939d-b8b0-46db-8613-5894b0fdd5e2", # glenn
-    "5ec5150a-0b82-435e-8e0a-b9a01d652212", # ash keogh
-    "6ee23076-d800-4963-8292-3229bf5d3ce9", # yejin
+    #"a0b172d9-2878-4896-8aa2-ade5555dd714", # jason
+    #"7672d921-c5f3-48d9-9ecc-8890427c4f63", # andrew
+    #"016f0bdf-141d-4012-aa1d-e983e253379d", # seulgee
+    #"daba8ea9-3759-484f-be14-0761cb7b889e", # jenny luck
+    #"427d9baf-1be2-4675-b136-a4208c1f3017", # ash wrightson
+    #"81407814-0d47-4369-9334-ff362b2cb8ec", # ranon
+    #"62f94418-58ae-4174-b3c3-cb18b542df81", # rex
+    #"a0c6f39c-154f-4ba1-a8dd-54cdec6f4b6b", # mum
+    #"b5e152f6-b535-41f6-9c3c-4e3f35d5183a", # dad
+    #"d79a939d-b8b0-46db-8613-5894b0fdd5e2", # glenn
+    #"5ec5150a-0b82-435e-8e0a-b9a01d652212", # ash keogh
+    #"6ee23076-d800-4963-8292-3229bf5d3ce9", # yejin
     }
 
 #ALERT_SOUND = "/run/current-system/sw/share/sounds/freedesktop/stereo/message-new-instant.oga"
