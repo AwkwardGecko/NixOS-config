@@ -69,5 +69,7 @@
     ./modules/other/signal.nix
   ];
 
+  services.signal-read-notify.enable = true;
+
   system.stateVersion = "24.05";
 }

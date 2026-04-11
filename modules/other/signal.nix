@@ -17,8 +17,6 @@ in {
       signal-export
     ];
 
-    services.signal-read-notify.enable = true;
-
     home-manager.users.zozano = {
       systemd.user.services.signal-read-notify = {
         Unit = {
