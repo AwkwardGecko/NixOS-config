@@ -21,6 +21,7 @@ STARTUP_WINDOW = 300  # 5 minutes
 # Conversations that get critical + sound notifications
 PRIORITY_CONTACTS = {
     "ef7a4dae-bc1c-4e0c-95f0-5fa884dbb9ae",
+    "a0b172d9-2878-4896-8aa2-ade5555dd714",
 }
 
 #ALERT_SOUND = "/run/current-system/sw/share/sounds/freedesktop/stereo/message-new-instant.oga"
