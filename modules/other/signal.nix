@@ -5,7 +5,7 @@
   ...
 }: let
   cfg = config.services.signal-read-notify;
-  script = ../../../scripts/signal-read-notify.py;
+  script = ./signal-read-notify.py;
 in {
   options.services.signal-read-notify = {
     enable = lib.mkEnableOption "Signal read receipt desktop notifications";
