@@ -3,20 +3,14 @@
   lib,
   pkgs,
   ...
-}: 
-
-let
+}: let
   cfg = config.services.signal-read-notify;
   script = ./signal-read-notify.py;
-in
-
-{
+in {
   environment.systemPackages = with pkgs; [
     signal-desktop
     signal-export
   ];
-
-
 
   options.services.signal-read-notify = {
     enable = lib.mkEnableOption "Signal read receipt desktop notifications";
@@ -32,8 +26,8 @@ in
     systemd.user.services.signal-read-notify = {
       Unit = {
         Description = "Signal read receipt notifier";
-        After = [ "graphical-session.target" ];
-        PartOf = [ "graphical-session.target" ];
+        After = ["graphical-session.target"];
+        PartOf = ["graphical-session.target"];
       };
 
       Service = {
@@ -48,7 +42,7 @@ in
       };
 
       Install = {
-        WantedBy = [ "graphical-session.target" ];
+        WantedBy = ["graphical-session.target"];
       };
     };
 
