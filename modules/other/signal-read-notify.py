@@ -111,7 +111,7 @@ def main():
     messages = get_outgoing_messages(key, startup_ts)
     for msg in messages:
         for conv_id, state in msg["send_state"].items():
-            if state.get("status") == "Read":
+            if state.get("status") == "Sent":
                 seen_read.add((msg["rowid"], conv_id))
 
     print(f"Monitoring read receipts (tracking {len(seen_read)} already-read states)...")
@@ -127,7 +127,7 @@ def main():
 
         for msg in messages:
             for conv_id, state in msg["send_state"].items():
-                if state.get("status") == "Read":
+                if state.get("status") == "Sent":
                     pair = (msg["rowid"], conv_id)
                     if pair not in seen_read:
                         seen_read.add(pair)
