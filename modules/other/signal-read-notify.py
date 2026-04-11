@@ -23,8 +23,8 @@ PRIORITY_CONTACTS = {
     "ef7a4dae-bc1c-4e0c-95f0-5fa884dbb9ae",
 }
 
-ALERT_SOUND = "/run/current-system/sw/share/sounds/freedesktop/stereo/message-new-instant.oga"
-
+#ALERT_SOUND = "/run/current-system/sw/share/sounds/freedesktop/stereo/message-new-instant.oga"
+ALERT_SOUND = "/home/zozano/.dotfiles/modules/other/signal-notification-sound.wav"
 
 def get_key():
     return json.loads(CONFIG_FILE.read_text())["key"]
