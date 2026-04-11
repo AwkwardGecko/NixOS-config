@@ -11,9 +11,9 @@ in {
     signal-desktop
     signal-export
   ];
-  
+
   home-manager.users.zozano = {
-    services.signal-read-notify = {
+    options.services.signal-read-notify = {
       enable = lib.mkEnableOption "Signal read receipt desktop notifications";
       pollInterval = lib.mkOption {
         type = lib.types.int;
