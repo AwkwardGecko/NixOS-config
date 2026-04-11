@@ -134,7 +134,7 @@ def main():
                         name = contacts.get(conv_id, conv_id)
                         body_preview = msg["body"] if msg["body"] else "(no text)"
                         notify(
-                            f"{name} read your message",
+                            f"the fuckhead, {name} read your message",
                             body_preview,
                         )
                         print(f"[READ] {name}: {body_preview}")
