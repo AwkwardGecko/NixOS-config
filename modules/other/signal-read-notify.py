@@ -159,7 +159,7 @@ def main():
                         body_preview = msg["body"] if msg["body"] else "(no text)"
                         priority = conv_id in PRIORITY_CONTACTS
                         notify(
-                            f"fuckhead {name} read your message",
+                            f"[read] {name}",
                             body_preview,
                             priority=priority,
                         )
