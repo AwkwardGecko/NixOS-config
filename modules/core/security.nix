@@ -38,6 +38,7 @@
     sops
     ssh-to-age
     cryptsetup
+    sqlcipher
   ];
 
   services = {
