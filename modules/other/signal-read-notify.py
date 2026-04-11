@@ -22,6 +22,7 @@ STARTUP_WINDOW = 300  # 5 minutes
 PRIORITY_CONTACTS = {
     "ef7a4dae-bc1c-4e0c-95f0-5fa884dbb9ae",
     "a0b172d9-2878-4896-8aa2-ade5555dd714",
+    "38339842-e9b4-402f-b766-66cf1f6ebce9",
 }
 
 #ALERT_SOUND = "/run/current-system/sw/share/sounds/freedesktop/stereo/message-new-instant.oga"
