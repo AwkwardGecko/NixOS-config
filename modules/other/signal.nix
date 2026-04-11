@@ -7,6 +7,8 @@
   cfg = config.services.signal-read-notify;
   script = ./signal-read-notify.py;
 in {
+
+home-manager.users.zozano = {
   options.services.signal-read-notify = {
     enable = lib.mkEnableOption "Signal read receipt desktop notifications";
     pollInterval = lib.mkOption {
@@ -31,4 +33,5 @@ in {
       sqlcipher
     ];
   };
+};
 }
