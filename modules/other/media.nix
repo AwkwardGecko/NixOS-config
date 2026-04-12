@@ -66,9 +66,12 @@
     systemd.user.services.mpd-mpris = {
       Unit.Description = "MPRIS bridge for MPD";
       Unit.After = ["mpd.service"];
-      Service.ExecStart = "${pkgs.mpd-mpris}/bin/mpd-mpris";
-      Service.Restart = "on-failure";
-      Install.WantedBy = ["default.target"];
+      Service = {
+        ExecStart = "${pkgs.mpd-mpris}/bin/mpd-mpris";
+        Restart = "on-failure";
+        RestartSec = 2;
+        WantedBy = ["default.target"];
+      };
     };
   };
 }
