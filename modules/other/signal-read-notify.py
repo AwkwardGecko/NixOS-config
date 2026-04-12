@@ -20,7 +20,7 @@ STARTUP_WINDOW = 300  # 5 minutes
 
 # Conversations that get critical + sound notifications
 PRIORITY_CONTACTS = {
-    "ef7a4dae-bc1c-4e0c-95f0-5fa884dbb9ae", # emily
+    #"ef7a4dae-bc1c-4e0c-95f0-5fa884dbb9ae", # emily
     #"a0b172d9-2878-4896-8aa2-ade5555dd714", # jason
     #"7672d921-c5f3-48d9-9ecc-8890427c4f63", # andrew
     #"016f0bdf-141d-4012-aa1d-e983e253379d", # seulgee
