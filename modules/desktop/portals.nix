@@ -27,9 +27,8 @@
     mime = {
       enable = true;
       defaultApplications = {
-
-      # find correct .desktop entries with:
-      # ls /run/current-system/sw/share/applications/ | grep -i vlc
+        # find correct .desktop entries with:
+        # ls /run/current-system/sw/share/applications/ | grep -i vlc
 
         "text/html" = "firefox.desktop";
         "x-scheme-handler/http" = "firefox.desktop";
