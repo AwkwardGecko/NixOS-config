@@ -68,8 +68,8 @@
     systemd.user.services.mpd-mpris = {
       Unit = {
         Description = "MPRIS bridge for MPD";
-        After = [ "mpd.service" ];
-        BindsTo = [ "mpd.service" ];
+        After = ["mpd.service"];
+        BindsTo = ["mpd.service"];
       };
       Service = {
         ExecStart = "${pkgs.mpd-mpris}/bin/mpd-mpris";
@@ -77,7 +77,7 @@
         RestartSec = 2;
       };
       Install = {
-        WantedBy = [ "default.target" ];
+        WantedBy = ["default.target"];
       };
     };
   };
