@@ -219,7 +219,7 @@
           #",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"
           #",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 
-          ",F4, exec, mpc next"
+          ",F4, exec, mpc next && systemctl --user restart mpd-mpris"
           ",F12, exec, ~/.dotfiles/scripts/mpc-delete.sh"
           ",F8, exec, ~/.dotfiles/scripts/mpc-keep.sh"
           #",XF86AudioPrev, exec, playerctl previous"

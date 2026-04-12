@@ -5,3 +5,4 @@ echo "$file" >> ~/.config/mpd/playlists/delete.m3u
 sed -i "\|^${file}$|d" ~/.config/mpd/playlists/global.m3u
 mpc next
 mpc del "$pos"
+systemctl --user restart mpd-mpris
