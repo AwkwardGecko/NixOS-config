@@ -72,7 +72,7 @@
         BindsTo = ["mpd.service"];
       };
       Service = {
-        ExecStart = "${pkgs.mpdris2-rs}/bin/mpd-mpris";
+        ExecStart = "${pkgs.mpdris2-rs}/bin/mpdris2-rs";
         Restart = "on-failure";
         RestartSec = 2;
       };
