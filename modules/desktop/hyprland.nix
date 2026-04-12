@@ -143,7 +143,7 @@
           "vfr" = true;
         };
 
-        bind = [
+        bind = [ # standard keybind
           ",          print,  exec, grimblast save area ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"
           "$mainMod,  print,  exec, grimblast copy area"
 
@@ -205,12 +205,12 @@
           #", mouse:275, workspace, -1"
         ];
 
-        bindm = [
+        bindm = [ # mouse bind
           "$mainMod, mouse:272, movewindow"
           "$mainMod, mouse:273, resizewindow"
         ];
 
-        bindl = [
+        bindl = [ # locked bind - worked when input inhibitor is active
           ",XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
           ",XF86MonBrightnessUp, exec, brightnessctl s 10%+"
           ",XF86MonBrightnessDown, exec, brightnessctl s 10%-"
@@ -226,7 +226,7 @@
           #",XF86AudioPlay, exec, playerctl play-pause"
         ];
 
-        bindle = [
+        bindle = [ # locked bind + repeat bind
           ",End, exec, ~/.dotfiles/scripts/plustek-opticfilm7200i.sh"
 
           #",End, exec, scanimage --format=png --output-file ~/Proton-Drive/scan_$(date +%Y-%m-%d_%H_%M_%S).png"

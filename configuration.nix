@@ -40,6 +40,7 @@
     ./modules/gaming/lutris.nix
     ./modules/gaming/mangohud.nix
     ./modules/gaming/reliquary-archiver.nix
+    ./modules/gaming/torchlight.nix
 
     ./modules/networking/bluetooth.nix
     ./modules/networking/ssh.nix
