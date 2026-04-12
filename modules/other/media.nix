@@ -44,6 +44,8 @@
       enable = true;
       musicDirectory = "/data/media/music";
       extraConfig = ''
+        replaygain "track"
+
         audio_output {
           type "pipewire"
           name "pipeWire Output"
