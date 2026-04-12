@@ -9,5 +9,5 @@ if [[ -z "$LATEST" ]]; then
 fi
 
 echo "Loading: $LATEST"
-rm -rf "$SAVEDIR"/*
-cp -r "$LATEST"* "$SAVEDIR"/
+rm -rf "$SAVEDIR"
+cp -r "${LATEST%/}" "$SAVEDIR"
