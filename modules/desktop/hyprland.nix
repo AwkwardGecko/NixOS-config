@@ -241,6 +241,7 @@
           "match:class ^(starrail.exe)$, immediate yes"
           "float on, match:class ^(pavucontrol|nm-connection-editor)$" # Floating windows
           "opacity 1.0 override 1.0 override, match:class ^(Steam)$" # Turn opacity off
+          "fullscreen 1, match:class ^(starrail.exe)$"
           "no_focus on, match:class ^$, match:title ^$, match:xwayland 0, match:float 1, match:fullscreen 0, match:pin 0" # prevents hidden windows from being fuckwits
         ];
       };
