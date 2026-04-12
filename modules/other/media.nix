@@ -72,8 +72,8 @@
         ExecStart = "${pkgs.mpd-mpris}/bin/mpd-mpris";
         Restart = "on-failure";
         RestartSec = 2;
-        WantedBy = ["default.target"];
       };
+      Install.WantedBy = ["default.target"];
     };
   };
 }
