@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-mpc clear
-mpc playlist global
-mpc shuffle
-mpc play
+mpc -q clear
+mpc -q load global
+mpc -q shuffle
+mpc -q play
+mpc status

@@ -23,7 +23,7 @@
       mkvtoolnix # modify video files
       mp3gain # normalize volume of music
       mpc
-      mpd-mpris
+      mpdris2-rs
       ncmpcpp
     ];
 
@@ -72,7 +72,7 @@
         BindsTo = ["mpd.service"];
       };
       Service = {
-        ExecStart = "${pkgs.mpd-mpris}/bin/mpd-mpris";
+        ExecStart = "${pkgs.mpdris2-rs}/bin/mpd-mpris";
         Restart = "on-failure";
         RestartSec = 2;
       };
