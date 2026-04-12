@@ -27,19 +27,18 @@
     mime = {
       enable = true;
       defaultApplications = {
+
+      # find correct .desktop entries with:
+      # ls /run/current-system/sw/share/applications/ | grep -i vlc
+
         "text/html" = "firefox.desktop";
         "x-scheme-handler/http" = "firefox.desktop";
         "x-scheme-handler/https" = "firefox.desktop";
         "image/*" = "org.nomacs.ImageLounge.desktop";
-        #"image/png" = "nomacs";
-        #"image/jpeg" = "imv.desktop";
-        #"image/gif" = "nomacs.desktop";
         "video/*" = "vlc.desktop";
-        #"video/mp4" = "mpv.desktop";
-        #"video/x-matroska" = "mpv.desktop";
         "application/pdf" = "org.pwmt.zathura.desktop";
-        "text/*" = "gedit.desktop";
-        "inode/directory" = "nautilus.desktop";
+        "text/*" = "org.gnome.gedit.desktop";
+        "inode/directory" = "org.gnome.Nautilus.desktop";
       };
     };
 
