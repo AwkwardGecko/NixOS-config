@@ -30,8 +30,8 @@
         "text/html" = "firefox.desktop";
         "x-scheme-handler/http" = "firefox.desktop";
         "x-scheme-handler/https" = "firefox.desktop";
-        "image/*" = "nomacs";
-        "image/png" = "nomacs";
+        "image/*" = "org.nomacs.ImageLounge.desktop";
+        #"image/png" = "nomacs";
         #"image/jpeg" = "imv.desktop";
         #"image/gif" = "nomacs.desktop";
         "video/*" = "vlc.desktop";
