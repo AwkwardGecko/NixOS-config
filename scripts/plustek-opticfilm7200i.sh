@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-OUTPUT=~/Proton-Drive/Box8/scan_$(date +%Y-%m-%d_%H_%M_%S).png
+OUTPUT=~/Proton-Drive/Box21/scan_$(date +%Y-%m-%d_%H_%M_%S).png
 
 # change device after searching with:
 # lsusb 2>/dev/null | grep -iE 'plustek|scanner|07b3' || echo "No Plustek USB device found"

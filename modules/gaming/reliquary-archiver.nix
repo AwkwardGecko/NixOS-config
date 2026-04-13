@@ -4,27 +4,39 @@
   pkgs,
   ...
 }: {
-  home-manager.users.zozano.home.file = {
-    "reliquary-archiver/default.nix".text = ''
-      { pkgs ? import <nixpkgs> {} }:
+  home-manager.users.zozano= {
+    home.file = {
+      "reliquary-archiver/default.nix".text = ''
+        { pkgs ? import <nixpkgs> {} }:
 
-      pkgs.mkShell {
-        buildInputs = with pkgs; [
-          cargo
-          pkg-config
-          libpcap
-          wayland
-          tcpdump
-        ];
-      }
-    '';
-    "reliquary-archiver/build.sh".text = ''
-      #!/usr/bin/env bash
-      cd reliquary-archiver-*
-      rm archive_output-*
-      cargo build --release
-      sudo setcap CAP_NET_RAW=+ep target/release/reliquary-archiver
-      cargo run --release
-    '';
+        pkgs.mkShell {
+          buildInputs = with pkgs; [
+            cargo
+            pkg-config
+            libpcap
+            wayland
+            tcpdump
+          ];
+        }
+      '';
+      "reliquary-archiver/build.sh".text = ''
+        #!/usr/bin/env bash
+        cd reliquary-archiver-*
+        rm archive_output-*
+        cargo build --release
+        sudo setcap CAP_NET_RAW=+ep target/release/reliquary-archiver
+        cargo run --release
+      '';
+    };
+
+    xdg.desktopEntries = {
+      reliquary-archiver = {
+        name = "Reliquary Archiver";
+        exec = "bash -c 'cd ~/reliquary-archiver && nix-shell --run ./build.sh'";
+        terminal = false;
+        type = "Application";
+        categories = ["Game"];
+      };
+    };
   };
 }
