@@ -42,7 +42,7 @@
     xdg.desktopEntries = {
       reliquary-archiver = {
         name = "Reliquary Archiver";
-        exec = "%h/.local/bin/reliquary-archiver.sh";
+        exec = "/home/zozano/.local/bin/reliquary-archiver.sh";
         terminal = false;
         type = "Application";
         categories = ["Game"];
