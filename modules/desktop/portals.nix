@@ -38,6 +38,7 @@
         "application/pdf" = "org.pwmt.zathura.desktop";
         "text/*" = "org.gnome.gedit.desktop";
         "inode/directory" = "org.gnome.Nautilus.desktop";
+        "x-scheme-handler/jmp" = "jellyfin-opener.desktop";
       };
     };
 

@@ -61,10 +61,6 @@
       mimeType = ["x-scheme-handler/jmp"];
     };
 
-    xdg.mimeApps.defaultApplications = {
-      "x-scheme-handler/jmp" = "jellyfin-opener.desktop";
-    };
-
     systemd.user.services.mpd-mpris = {
       Unit = {
         Description = "MPRIS bridge for MPD";
