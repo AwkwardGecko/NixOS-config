@@ -25,7 +25,7 @@
           cd reliquary-archiver-*
           rm archive_output-*
           cargo build --release
-          sudo setcap CAP_NET_RAW=+ep target/release/reliquary-archiver
+          #sudo setcap CAP_NET_RAW=+ep target/release/reliquary-archiver
           cargo run --release
         '';
         executable = true;
