@@ -13,5 +13,5 @@
     ./signal-read-notify.nix
   ];
 
-  services.signal-read-notify.enable = true;
+  #services.signal-read-notify.enable = true;
 }
