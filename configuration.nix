@@ -67,10 +67,7 @@
     ./modules/other/ai.nix
     ./modules/other/flatpak.nix
     ./modules/other/protonmail.nix
-    ./modules/other/signal.nix
+    
+    ./modules/other/signal/signal.nix
   ];
-
-  services.signal-read-notify.enable = true;
-
-  system.stateVersion = "24.05";
 }

@@ -22,6 +22,7 @@
   };
 
   nixpkgs.config.allowUnfree = true;
+  system.stateVersion = "24.05";
 
   environment.systemPackages = with pkgs; [
     alejandra

@@ -7,6 +7,8 @@
   cfg = config.services.signal-read-notify;
   script = ./signal-read-notify.py;
 in {
+
+
   options.services.signal-read-notify = {
     enable = lib.mkEnableOption "Signal read receipt desktop notifications";
   };
@@ -16,6 +18,12 @@ in {
       signal-desktop
       signal-export
     ];
+
+    imports = [
+      ./signal-read-notify.nix
+    ];
+
+    services.signal-read-notify.enable = true;
 
     home-manager.users.zozano = {
       systemd.user.services.signal-read-notify = {
