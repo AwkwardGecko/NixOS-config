@@ -3,8 +3,7 @@
   lib,
   pkgs,
   ...
-}:
-{
+}: {
   environment.systemPackages = with pkgs; [
     signal-desktop
     signal-export
@@ -14,5 +13,5 @@
     ./signal-read-notify.nix
   ];
 
-  services.signal-read-notify.enable = true;
+  #services.signal-read-notify.enable = true;
 }
