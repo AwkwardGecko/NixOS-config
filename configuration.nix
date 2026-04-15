@@ -67,7 +67,7 @@
     ./modules/other/ai.nix
     ./modules/other/flatpak.nix
     ./modules/other/protonmail.nix
-    
+
     ./modules/other/signal/signal.nix
   ];
 }
