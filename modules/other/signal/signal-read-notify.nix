@@ -3,13 +3,10 @@
   lib,
   pkgs,
   ...
-}: 
- let
+}: let
   cfg = config.services.signal-read-notify;
   script = ./signal-read-notify.py;
 in {
-
-
   options.services.signal-read-notify = {
     enable = lib.mkEnableOption "Signal read receipt desktop notifications";
   };
@@ -26,7 +23,7 @@ in {
 
     services.signal-read-notify.enable = true;
 
- home-manager.users.zozano = {
+    home-manager.users.zozano = {
       systemd.user.services.signal-read-notify = {
         Unit = {
           Description = "Signal read receipt notifier";
