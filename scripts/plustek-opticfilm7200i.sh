@@ -1,20 +1,7 @@
 #!/usr/bin/env bash
-OUTPUT=~/Proton-Drive/Box25/scan_$(date +%Y-%m-%d_%H_%M_%S).png
+cd ~/.dotfiles/scripts/
 
-# change device after searching with:
-# lsusb 2>/dev/null | grep -iE 'plustek|scanner|07b3' || echo "No Plustek USB device found"
-
-scanimage --device 'genesys:libusb:003:005' \
-  --mode Color \
-  --source "Transparency Adapter" \
-  --resolution 1800 \
-  --format=png \
-  -o "$OUTPUT" \
-  && notify-send "Scan Complete" "$OUTPUT" \
-  || notify-send -u critical "Scan Failed" "Check terminal for errors"
-  # super high def
-  # --resolution 7200 \
-  # --depth 16 \
-  # --format=tiff \
-  # -o scan_$(date +%Y-%m-%d_%H_%M_%S).png
-
+bash plustek-opticfilm7200i-repeat.sh
+bash plustek-opticfilm7200i-repeat.sh
+bash plustek-opticfilm7200i-repeat.sh
+bash plustek-opticfilm7200i-repeat.sh
