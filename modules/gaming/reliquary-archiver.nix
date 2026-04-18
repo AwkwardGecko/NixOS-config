@@ -6,7 +6,7 @@
 }: {
   home-manager.users.zozano = {
     home.file = {
-      "reliquary-archiver/default.nix".text = ''
+      "Games/reliquary-archiver/default.nix".text = ''
         { pkgs ? import <nixpkgs> {} }:
 
         pkgs.mkShell {
@@ -19,7 +19,7 @@
           ];
         }
       '';
-      "reliquary-archiver/build.sh" = {
+      "Games/reliquary-archiver/build.sh" = {
         text = ''
           #!/usr/bin/env bash
           cd reliquary-archiver-*
@@ -33,7 +33,7 @@
       ".local/bin/reliquary-archiver.sh" = {
         text = ''
           #!/usr/bin/env bash
-          cd ~/reliquary-archiver && nix-shell --run ./build.sh
+          cd ~/Games/reliquary-archiver && nix-shell --run ./build.sh
         '';
         executable = true;
       };
