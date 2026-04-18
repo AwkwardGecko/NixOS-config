@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-OUTPUT=~/Proton-Drive/BoxA/scan_$(date +%Y-%m-%d_%H_%M_%S).png
+OUTPUT=~/Proton-Drive/BoxF/scan_$(date +%Y-%m-%d_%H_%M_%S).png
 
 # change device after searching with:
 # lsusb 2>/dev/null | grep -iE 'plustek|scanner|07b3' || echo "No Plustek USB device found"
 
-scanimage --device 'genesys:libusb:003:002' \
+scanimage --device 'genesys:libusb:003:007' \
   --mode Color \
   --source "Transparency Adapter" \
   --resolution 1800 \
