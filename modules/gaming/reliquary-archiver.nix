@@ -22,7 +22,7 @@
       "Games/reliquary-archiver/build.sh" = {
         text = ''
           #!/usr/bin/env bash
-          cd Games/reliquary-archiver/reliquary-archiver*
+          cd ~/Games/reliquary-archiver/reliquary-archiver*
           rm archive_output-*
           cargo build --release
           #sudo setcap CAP_NET_RAW=+ep target/release/reliquary-archiver
