@@ -31,7 +31,7 @@
       enable = true;
       settings = {
         merge-output-format = "mkv";
-        format = "bestvideo+bestaudio/best";
+        format = "bv*+ba/b";
         embed-metadata = true;
         embed-thumbnail = true;
         embed-subs = true;

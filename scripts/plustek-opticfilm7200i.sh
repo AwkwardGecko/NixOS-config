@@ -5,3 +5,4 @@ bash plustek-opticfilm7200i-repeat.sh
 bash plustek-opticfilm7200i-repeat.sh
 bash plustek-opticfilm7200i-repeat.sh
 bash plustek-opticfilm7200i-repeat.sh
+
