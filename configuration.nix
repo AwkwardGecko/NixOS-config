@@ -21,7 +21,7 @@
 
     ./modules/desktop/hyprland.nix
     ./modules/desktop/hyprpanel.nix
-    #./modules/desktop/hypridle.nix
+    ./modules/desktop/hypridle.nix
     ./modules/desktop/rofi.nix
     ./modules/desktop/style.nix
     ./modules/desktop/stylix.nix
