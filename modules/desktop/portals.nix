@@ -30,12 +30,12 @@
         # find correct .desktop entries with:
         # ls /run/current-system/sw/share/applications/ | grep -i vlc
 
-        "text/html" = "firefox.desktop";
         "x-scheme-handler/http" = "firefox.desktop";
         "x-scheme-handler/https" = "firefox.desktop";
         "image/*" = "org.nomacs.ImageLounge.desktop";
         "video/*" = "vlc.desktop";
         "application/pdf" = "org.pwmt.zathura.desktop";
+        "application/x-shellscript" = "org.gnome.gedit.desktop";
         "text/*" = "org.gnome.gedit.desktop";
         "inode/directory" = "org.gnome.Nautilus.desktop";
         "x-scheme-handler/jmp" = "jellyfin-opener.desktop";
