@@ -5,7 +5,7 @@
   ...
 }: {
   environment.systemPackages = with pkgs; [
-    bottles
+    #bottles
     goverlay
     wine
     # unigine-superposition - don't use. run .exe through steam for Vulkan support
