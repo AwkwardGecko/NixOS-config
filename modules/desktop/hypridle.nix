@@ -25,14 +25,6 @@
           };
         };
 
-        background = [
-          {
-            path = "screenshot";
-            blur_passes = 3;
-            blur_size = 8;
-          }
-        ];
-
         input-field = [
           {
             size = "200, 50";
