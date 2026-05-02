@@ -231,7 +231,7 @@
 
         bindle = [
           # locked bind + repeat bind
-          ",End, exec, ~/.dotfiles/scripts/plustek-opticfilm7200i.sh"
+          #",End, exec, ~/.dotfiles/scripts/plustek-opticfilm7200i.sh"
 
           #",End, exec, scanimage --format=png --output-file ~/Proton-Drive/scan_$(date +%Y-%m-%d_%H_%M_%S).png"
           ",F1, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
