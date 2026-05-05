@@ -9,6 +9,10 @@
       enable = true;
       settings = {
         general = {
+          before_sleep_cmd = "loginctl lock-session";
+          after_sleep_cmd = "hyprctl dispatch dpms on";
+          ignore_dbus_inhibit = false;
+          lock_cmd = "hyprlock";
           hide_cursor = true;
           ignore_empty_input = true;
         };
@@ -55,4 +59,6 @@
     };
   };
   hardware.nvidia.powerManagement.enable = true;
+
+  boot.resumeDevice = "/dev/disk/by-label/swap";
 }
