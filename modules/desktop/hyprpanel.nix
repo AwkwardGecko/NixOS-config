@@ -67,7 +67,7 @@
       };
     };
 
-home.packages = [pkgs.socat];
+    home.packages = [pkgs.socat];
 
     # Coalesce bursts of monitor add/remove events (common on Nvidia+Wayland
     # when DPMS toggles) into a single hyprpanel restart. Without debouncing,
