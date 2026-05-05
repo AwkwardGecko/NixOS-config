@@ -24,4 +24,5 @@
 
   programs.coolercontrol.enable = true;
   services.hardware.openrgb.enable = true;
+  zramSwap.enable = true;
 }
