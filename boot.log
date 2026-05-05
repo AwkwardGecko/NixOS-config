@@ -9158,3 +9158,304 @@ May 06 09:51:41 dectech-6af36c systemd[1]: Starting Export current boot journal 
 May 06 09:51:41 dectech-6af36c systemd[1]: Starting flatpak-managed-install.service...
 May 06 09:51:41 dectech-6af36c systemd[1]: flatpak-managed-install.service: Deactivated successfully.
 May 06 09:51:41 dectech-6af36c systemd[1]: Finished flatpak-managed-install.service.
+May 06 09:51:41 dectech-6af36c systemd[1]: export-boot-log.service: Deactivated successfully.
+May 06 09:51:41 dectech-6af36c systemd[1]: Finished Export current boot journal to /home/zozano/.dotfiles/boot.log.
+May 06 09:51:41 dectech-6af36c nixos[45672]: switching to system configuration /nix/store/lvssnbdvzdmpzx35f6rbwzrl6pxga0b5-nixos-system-unnamed-26.05.20260505.549bd84 failed (status 4)
+May 06 09:51:41 dectech-6af36c systemd[1]: nixos-rebuild-switch-to-configuration.service: Main process exited, code=exited, status=4/NOPERMISSION
+May 06 09:51:41 dectech-6af36c systemd[1]: nixos-rebuild-switch-to-configuration.service: Failed with result 'exit-code'.
+May 06 09:51:41 dectech-6af36c sudo[45430]: pam_unix(sudo:session): session closed for user root
+May 06 09:51:42 dectech-6af36c systemd[1]: flatpak-repo.service: Deactivated successfully.
+May 06 09:51:42 dectech-6af36c systemd[1]: flatpak-repo.service: Consumed 41ms CPU time over 1.033s wall clock time, 6.6M memory peak, 15.6K incoming IP traffic, 5.3K outgoing IP traffic.
+May 06 09:51:45 dectech-6af36c flatpak[46118]: libostree pull from 'flathub' for appstream2/x86_64 complete
+                                               security: GPG: summary+commit 
+                                               security: SIGN: disabled http: TLS
+                                               non-delta: meta: 2 content: 0
+                                               transfer: secs: 0 size: 1.4 kB
+May 06 09:51:45 dectech-6af36c flatpak[46118]: /var/tmp/flatpak-cache-DH7XO3/repo-2XIU1O: Pulled appstream2/x86_64 from flathub
+May 06 09:51:45 dectech-6af36c flatpak-system-helper[45284]: libostree pull from 'flathub' for appstream2/x86_64 complete
+                                                             security: GPG: commit 
+                                                             security: SIGN: disabled 
+                                                             non-delta: meta: 1 content: 0
+                                                             transfer: secs: 0 size: 592 bytes
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: Starting Tdarr_Node
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: Loading...
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: /app/Tdarr_Node/Tdarr_Node
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: Running in console
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: Found Tdarr entry file:/app/Tdarr_Node/srcug/main.js
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: ExeDir:/app/Tdarr_Node
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: AppsDir:/app
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: RootDataPath:/app
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: IcoPath:/app/Tdarr_Node/assets/favicon.ico
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: NodeExePath:/app/Tdarr_Node/runtime/Tdarr_Node_Runtime
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: MainJsPath:/app/Tdarr_Node/srcug/main.js
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: LogLocation:/app/logs
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: ModuleName:Tdarr_Node
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: IsProd:true
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: IsTray:false
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: ExePath:/app/Tdarr_Node/Tdarr_Node
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: WebUIPort:8265
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: ModuleConfigPath:/app/configs/Tdarr_Node_Config.json
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: AppVersion:2.69.01
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: Polling for config file to exist: /app/configs/Tdarr_Node_Config.json
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: Config file found after 0ms
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: {
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:   environment: 'production',
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:   execDir: '/app/Tdarr_Node',
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:   appsDir: '/app'
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: }
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: [2026-05-06T09:51:50.373] [INFO] Tdarr_Node - Logger started
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: [2026-05-06T09:51:50.394] [INFO] Tdarr_Node - Config path: "/app/configs/Tdarr_Node_Config.json"
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: [2026-05-06T09:51:50.395] [WARN] Tdarr_Node - As env serverIP is set, creating serverURL from serverIP and serverPort. It's recommended to set env serverURL
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: [2026-05-06T09:51:50.400] [INFO] Tdarr_Node - {
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:   "nodeID": "85AYEm9Lx",
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:   "nodeName": "MyNode-5600G",
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:   "serverURL": "http://192.168.1.157:8266",
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:   "serverIP": "192.168.1.157",
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:   "serverPort": "8266",
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:   "handbrakePath": "",
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:   "ffmpegPath": "",
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:   "mkvpropeditPath": "",
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:   "pathTranslators": [
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:     {
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:       "server": "",
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:       "node": ""
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:     }
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:   ],
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:   "nodeType": "mapped",
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:   "unmappedNodeCache": "/app/unmappedNodeCache",
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:   "logLevel": "INFO",
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:   "priority": -1,
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:   "platform_arch_isdocker": "linux_x64_docker_true",
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:   "processPid": 2357,
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:   "cronPluginUpdate": "",
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:   "apiKey": "*****",
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:   "maxLogSizeMB": 10,
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:   "pollInterval": 2000,
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]:   "startPaused": false
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: }
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: [2026-05-06T09:51:50.402] [INFO] Tdarr_Node - Config validation passed
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: [2026-05-06T09:51:50.471] [INFO] Tdarr_Node - Checking Server version
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: [2026-05-06T09:51:50.494] [ERROR] Tdarr_Node - Node version 2.69.01 does not match Server version 2.71.01
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: [2026-05-06T09:51:50.494] [WARN] Tdarr_Node - Auto update not supported in Docker. You can enable it by setting the environment variable "enableDockerAutoUpdater" to "true" but this is not recommended for production systems. Environment variable is currently set to: "undefined"
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: Process exited with status 1
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: Child process exited
+May 06 09:51:50 dectech-6af36c tdarr-node[4473]: Waiting 10 seconds before exiting
+May 06 09:51:51 dectech-6af36c systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+May 06 09:51:55 dectech-6af36c sudo[46271]:   zozano : TTY=pts/0 ; PWD=/home/zozano/.dotfiles ; USER=root ; COMMAND=/run/current-system/sw/bin/nixos-rebuild switch --flake .#desktop --show-trace
+May 06 09:51:55 dectech-6af36c sudo[46271]: pam_unix(sudo:session): session opened for user root(uid=0) by zozano(uid=1000)
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: Starting Tdarr_Node
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: Loading...
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: /app/Tdarr_Node/Tdarr_Node
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: Running in console
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: Found Tdarr entry file:/app/Tdarr_Node/srcug/main.js
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: ExeDir:/app/Tdarr_Node
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: AppsDir:/app
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: RootDataPath:/app
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: IcoPath:/app/Tdarr_Node/assets/favicon.ico
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: NodeExePath:/app/Tdarr_Node/runtime/Tdarr_Node_Runtime
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: MainJsPath:/app/Tdarr_Node/srcug/main.js
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: LogLocation:/app/logs
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: ModuleName:Tdarr_Node
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: IsProd:true
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: IsTray:false
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: ExePath:/app/Tdarr_Node/Tdarr_Node
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: WebUIPort:8265
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: ModuleConfigPath:/app/configs/Tdarr_Node_Config.json
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: AppVersion:2.69.01
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: Polling for config file to exist: /app/configs/Tdarr_Node_Config.json
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: Config file found after 0ms
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: {
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:   environment: 'production',
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:   execDir: '/app/Tdarr_Node',
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:   appsDir: '/app'
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: }
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: [2026-05-06T09:52:01.601] [INFO] Tdarr_Node - Logger started
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: [2026-05-06T09:52:01.623] [INFO] Tdarr_Node - Config path: "/app/configs/Tdarr_Node_Config.json"
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: [2026-05-06T09:52:01.624] [WARN] Tdarr_Node - As env serverIP is set, creating serverURL from serverIP and serverPort. It's recommended to set env serverURL
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: [2026-05-06T09:52:01.630] [INFO] Tdarr_Node - {
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:   "nodeID": "TKq12UW_0",
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:   "nodeName": "MyNode-5600G",
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:   "serverURL": "http://192.168.1.157:8266",
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:   "serverIP": "192.168.1.157",
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:   "serverPort": "8266",
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:   "handbrakePath": "",
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:   "ffmpegPath": "",
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:   "mkvpropeditPath": "",
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:   "pathTranslators": [
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:     {
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:       "server": "",
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:       "node": ""
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:     }
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:   ],
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:   "nodeType": "mapped",
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:   "unmappedNodeCache": "/app/unmappedNodeCache",
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:   "logLevel": "INFO",
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:   "priority": -1,
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:   "platform_arch_isdocker": "linux_x64_docker_true",
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:   "processPid": 2381,
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:   "cronPluginUpdate": "",
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:   "apiKey": "*****",
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:   "maxLogSizeMB": 10,
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:   "pollInterval": 2000,
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]:   "startPaused": false
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: }
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: [2026-05-06T09:52:01.633] [INFO] Tdarr_Node - Config validation passed
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: [2026-05-06T09:52:01.700] [INFO] Tdarr_Node - Checking Server version
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: [2026-05-06T09:52:01.725] [ERROR] Tdarr_Node - Node version 2.69.01 does not match Server version 2.71.01
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: [2026-05-06T09:52:01.725] [WARN] Tdarr_Node - Auto update not supported in Docker. You can enable it by setting the environment variable "enableDockerAutoUpdater" to "true" but this is not recommended for production systems. Environment variable is currently set to: "undefined"
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: Process exited with status 1
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: Child process exited
+May 06 09:52:01 dectech-6af36c tdarr-node[4473]: Waiting 10 seconds before exiting
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: Starting Tdarr_Node
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: Loading...
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: /app/Tdarr_Node/Tdarr_Node
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: Running in console
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: Found Tdarr entry file:/app/Tdarr_Node/srcug/main.js
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: ExeDir:/app/Tdarr_Node
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: AppsDir:/app
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: RootDataPath:/app
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: IcoPath:/app/Tdarr_Node/assets/favicon.ico
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: NodeExePath:/app/Tdarr_Node/runtime/Tdarr_Node_Runtime
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: MainJsPath:/app/Tdarr_Node/srcug/main.js
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: LogLocation:/app/logs
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: ModuleName:Tdarr_Node
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: IsProd:true
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: IsTray:false
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: ExePath:/app/Tdarr_Node/Tdarr_Node
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: WebUIPort:8265
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: ModuleConfigPath:/app/configs/Tdarr_Node_Config.json
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: AppVersion:2.69.01
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: Polling for config file to exist: /app/configs/Tdarr_Node_Config.json
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: Config file found after 0ms
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: {
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:   environment: 'production',
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:   execDir: '/app/Tdarr_Node',
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:   appsDir: '/app'
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: }
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: [2026-05-06T09:52:12.843] [INFO] Tdarr_Node - Logger started
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: [2026-05-06T09:52:12.873] [INFO] Tdarr_Node - Config path: "/app/configs/Tdarr_Node_Config.json"
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: [2026-05-06T09:52:12.875] [WARN] Tdarr_Node - As env serverIP is set, creating serverURL from serverIP and serverPort. It's recommended to set env serverURL
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: [2026-05-06T09:52:12.884] [INFO] Tdarr_Node - {
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:   "nodeID": "hsYDLL5fl",
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:   "nodeName": "MyNode-5600G",
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:   "serverURL": "http://192.168.1.157:8266",
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:   "serverIP": "192.168.1.157",
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:   "serverPort": "8266",
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:   "handbrakePath": "",
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:   "ffmpegPath": "",
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:   "mkvpropeditPath": "",
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:   "pathTranslators": [
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:     {
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:       "server": "",
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:       "node": ""
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:     }
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:   ],
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:   "nodeType": "mapped",
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:   "unmappedNodeCache": "/app/unmappedNodeCache",
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:   "logLevel": "INFO",
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:   "priority": -1,
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:   "platform_arch_isdocker": "linux_x64_docker_true",
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:   "processPid": 2406,
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:   "cronPluginUpdate": "",
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:   "apiKey": "*****",
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:   "maxLogSizeMB": 10,
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:   "pollInterval": 2000,
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]:   "startPaused": false
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: }
+May 06 09:52:12 dectech-6af36c tdarr-node[4473]: [2026-05-06T09:52:12.890] [INFO] Tdarr_Node - Config validation passed
+May 06 09:52:13 dectech-6af36c tdarr-node[4473]: [2026-05-06T09:52:13.005] [INFO] Tdarr_Node - Checking Server version
+May 06 09:52:13 dectech-6af36c tdarr-node[4473]: [2026-05-06T09:52:13.039] [ERROR] Tdarr_Node - Node version 2.69.01 does not match Server version 2.71.01
+May 06 09:52:13 dectech-6af36c tdarr-node[4473]: [2026-05-06T09:52:13.039] [WARN] Tdarr_Node - Auto update not supported in Docker. You can enable it by setting the environment variable "enableDockerAutoUpdater" to "true" but this is not recommended for production systems. Environment variable is currently set to: "undefined"
+May 06 09:52:13 dectech-6af36c tdarr-node[4473]: Process exited with status 1
+May 06 09:52:13 dectech-6af36c tdarr-node[4473]: Child process exited
+May 06 09:52:13 dectech-6af36c tdarr-node[4473]: Waiting 10 seconds before exiting
+May 06 09:52:16 dectech-6af36c systemd[1]: Starting [systemd-run] /nix/store/lvssnbdvzdmpzx35f6rbwzrl6pxga0b5-nixos-system-unnamed-26.05.20260505.549bd84/bin/switch-to-configuration switch...
+May 06 09:52:16 dectech-6af36c systemd[1]: Started [systemd-run] /nix/store/lvssnbdvzdmpzx35f6rbwzrl6pxga0b5-nixos-system-unnamed-26.05.20260505.549bd84/bin/switch-to-configuration switch.
+May 06 09:52:16 dectech-6af36c tailscaled[3536]: netcheck: DetectCaptivePortal(found=false)
+May 06 09:52:16 dectech-6af36c nixos[46488]: switching to system configuration /nix/store/lvssnbdvzdmpzx35f6rbwzrl6pxga0b5-nixos-system-unnamed-26.05.20260505.549bd84
+May 06 09:52:16 dectech-6af36c systemd[1]: Stopped target Remote File Systems.
+May 06 09:52:16 dectech-6af36c systemd[1]: Stopped target Local File Systems.
+May 06 09:52:16 dectech-6af36c systemd[1]: Reload requested from client PID 46488 ('.switch-to-conf') (unit nixos-rebuild-switch-to-configuration.service)...
+May 06 09:52:16 dectech-6af36c systemd[1]: Reloading...
+May 06 09:52:16 dectech-6af36c systemd[1]: Reloading finished in 214 ms.
+May 06 09:52:16 dectech-6af36c systemd[2449]: Reexecution requested from client PID 46671 ('switch-to-confi')...
+May 06 09:52:16 dectech-6af36c systemd[2449]: Reexecuting.
+May 06 09:52:16 dectech-6af36c systemd-xdg-autostart-generator[46676]: Exec binary '/nix/store/wwk1jhmcrm18276qyn1cx55g7df7dnb0-openrgb-0.9/bin/.openrgb-wrapped' does not exist: No such file or directory
+May 06 09:52:16 dectech-6af36c systemd-xdg-autostart-generator[46676]: /home/zozano/.config/autostart/OpenRGB.desktop: not generating unit, executable specified in Exec= does not exist.
+May 06 09:52:16 dectech-6af36c systemd[2449]: blueman-applet.service: Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services. Refusing.
+May 06 09:52:16 dectech-6af36c systemd[2449]: Reload requested from client PID 46671 ('switch-to-confi')...
+May 06 09:52:16 dectech-6af36c systemd[2449]: Reloading...
+May 06 09:52:16 dectech-6af36c systemd-xdg-autostart-generator[46689]: Exec binary '/nix/store/wwk1jhmcrm18276qyn1cx55g7df7dnb0-openrgb-0.9/bin/.openrgb-wrapped' does not exist: No such file or directory
+May 06 09:52:16 dectech-6af36c systemd-xdg-autostart-generator[46689]: /home/zozano/.config/autostart/OpenRGB.desktop: not generating unit, executable specified in Exec= does not exist.
+May 06 09:52:17 dectech-6af36c systemd[2449]: blueman-applet.service: Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services. Refusing.
+May 06 09:52:17 dectech-6af36c systemd[2449]: Reloading finished in 217 ms.
+May 06 09:52:17 dectech-6af36c systemd[2449]: Starting Run user-specific NixOS activation...
+May 06 09:52:17 dectech-6af36c systemd[2449]: Finished Run user-specific NixOS activation.
+May 06 09:52:17 dectech-6af36c systemd[1]: Stopped target Reactivate sysinit units.
+May 06 09:52:17 dectech-6af36c systemd[1]: Stopping Reactivate sysinit units...
+May 06 09:52:17 dectech-6af36c systemd[2449]: Starting Run user-specific NixOS activation...
+May 06 09:52:17 dectech-6af36c systemd[1]: Reached target Reactivate sysinit units.
+May 06 09:52:17 dectech-6af36c systemd[1]: Reached target Remote File Systems.
+May 06 09:52:17 dectech-6af36c systemd[1]: Starting Network Manager Script Dispatcher Service...
+May 06 09:52:17 dectech-6af36c systemd[1]: Started flatpak-repo.service.
+May 06 09:52:17 dectech-6af36c systemd[1]: Starting linger-users.service...
+May 06 09:52:17 dectech-6af36c systemd[1]: Starting Container Device Interface (CDI) for Nvidia generator...
+May 06 09:52:17 dectech-6af36c systemd[1]: SSH Host Keys Generation skipped, no trigger condition checks were met.
+May 06 09:52:17 dectech-6af36c systemd[1]: Starting tailscaled-autoconnect.service...
+May 06 09:52:17 dectech-6af36c systemd[2449]: Finished Run user-specific NixOS activation.
+May 06 09:52:17 dectech-6af36c systemd[1]: linger-users.service: Deactivated successfully.
+May 06 09:52:17 dectech-6af36c systemd[1]: Finished linger-users.service.
+May 06 09:52:17 dectech-6af36c systemd[1]: Started Network Manager Script Dispatcher Service.
+May 06 09:52:17 dectech-6af36c systemd[1]: Reached target Local File Systems.
+May 06 09:52:17 dectech-6af36c systemd[1]: Starting dynamic-hostname.service...
+May 06 09:52:17 dectech-6af36c systemd[1]: Load Kernel Module efi_pstore skipped, unmet condition check ConditionKernelModuleLoaded=!efi_pstore
+May 06 09:52:17 dectech-6af36c systemd[1]: Starting Create SUID/SGID Wrappers...
+May 06 09:52:17 dectech-6af36c systemd[1]: Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+May 06 09:52:17 dectech-6af36c systemd[1]: Rebuild Journal Catalog skipped, unmet condition check ConditionNeedsUpdate=/var
+May 06 09:52:17 dectech-6af36c systemd[1]: Save Transient machine-id to Disk skipped, unmet condition check ConditionPathIsMountPoint=/etc/machine-id
+May 06 09:52:17 dectech-6af36c systemd[1]: Platform Persistent Storage Archival skipped, unmet condition check ConditionDirectoryNotEmpty=/sys/fs/pstore
+May 06 09:52:17 dectech-6af36c systemd[1]: Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+May 06 09:52:17 dectech-6af36c systemd[1]: TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+May 06 09:52:17 dectech-6af36c systemd[1]: Update is Completed skipped, no trigger condition checks were met.
+May 06 09:52:17 dectech-6af36c systemd[1]: Make TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+May 06 09:52:17 dectech-6af36c tailscaled-autoconnect-start[46704]: Tailscale is running
+May 06 09:52:17 dectech-6af36c nvidia-cdi-generator[46736]: time="2026-05-06T09:52:17+10:00" level=info msg="Using /nix/store/rl7ypvsgi1ckcx5ax6zr550282ziwwsl-nvidia-x11-595.71.05/lib/libnvidia-ml.so.595.71.05"
+May 06 09:52:17 dectech-6af36c nvidia-cdi-generator[46736]: time="2026-05-06T09:52:17+10:00" level=info msg="Using /nix/store/rl7ypvsgi1ckcx5ax6zr550282ziwwsl-nvidia-x11-595.71.05/lib/libnvidia-sandboxutils.so.595.71.05"
+May 06 09:52:17 dectech-6af36c systemd[1]: Started tailscaled-autoconnect.service.
+May 06 09:52:17 dectech-6af36c systemd[1]: tailscaled-autoconnect.service: Deactivated successfully.
+May 06 09:52:17 dectech-6af36c systemd[1]: dynamic-hostname.service: Deactivated successfully.
+May 06 09:52:17 dectech-6af36c systemd[1]: Finished dynamic-hostname.service.
+May 06 09:52:17 dectech-6af36c kernel: NVRM: API mismatch: the client 'nvidia-ctk' (pid 46736)
+                                       NVRM: has the version 595.71.05, but this kernel module has
+                                       NVRM: the version 595.58.03.  Please make sure that this
+                                       NVRM: kernel module and all NVIDIA driver components
+                                       NVRM: have the same version.
+May 06 09:52:17 dectech-6af36c nvidia-cdi-generator[46736]: ERROR: init 243 result=9time="2026-05-06T09:52:17+10:00" level=warning msg="Failed to init nvsandboxutils: ERROR_NVML_LIB_CALL; ignoring"
+May 06 09:52:17 dectech-6af36c kernel: NVRM: API mismatch: the client 'nvidia-ctk' (pid 46736)
+                                       NVRM: has the version 595.71.05, but this kernel module has
+                                       NVRM: the version 595.58.03.  Please make sure that this
+                                       NVRM: kernel module and all NVIDIA driver components
+                                       NVRM: have the same version.
+May 06 09:52:17 dectech-6af36c nvidia-cdi-generator[46736]: time="2026-05-06T09:52:17+10:00" level=warning msg="Could not determine driver version: libnvsandboxutils is not available\nfailed to initialize nvml: Driver/library version mismatch"
+May 06 09:52:17 dectech-6af36c nvidia-cdi-generator[46736]: time="2026-05-06T09:52:17+10:00" level=info msg="Auto-detected mode as 'nvml'"
+May 06 09:52:17 dectech-6af36c kernel: NVRM: API mismatch: the client 'nvidia-ctk' (pid 46736)
+                                       NVRM: has the version 595.71.05, but this kernel module has
+                                       NVRM: the version 595.58.03.  Please make sure that this
+                                       NVRM: kernel module and all NVIDIA driver components
+                                       NVRM: have the same version.
+May 06 09:52:17 dectech-6af36c nvidia-cdi-generator[46736]: time="2026-05-06T09:52:17+10:00" level=error msg="failed to generate CDI spec: failed to create device CDI specs: failed to construct device spec generators: failed to initialize NVML: Driver/library version mismatch"
+May 06 09:52:17 dectech-6af36c kernel: NVRM: API mismatch: the client 'nvidia-ctk' (pid 46736)
+                                       NVRM: has the version 595.71.05, but this kernel module has
+                                       NVRM: the version 595.58.03.  Please make sure that this
+                                       NVRM: kernel module and all NVIDIA driver components
+                                       NVRM: have the same version.
+May 06 09:52:17 dectech-6af36c systemd[1]: nvidia-container-toolkit-cdi-generator.service: Main process exited, code=exited, status=1/FAILURE
+May 06 09:52:17 dectech-6af36c systemd[1]: nvidia-container-toolkit-cdi-generator.service: Failed with result 'exit-code'.
+May 06 09:52:17 dectech-6af36c systemd[1]: Failed to start Container Device Interface (CDI) for Nvidia generator.
+May 06 09:52:17 dectech-6af36c systemd[1]: suid-sgid-wrappers.service: Deactivated successfully.
+May 06 09:52:17 dectech-6af36c systemd[1]: Finished Create SUID/SGID Wrappers.
+May 06 09:52:17 dectech-6af36c systemd[1]: Starting Export current boot journal to /home/zozano/.dotfiles/boot.log...
+May 06 09:52:17 dectech-6af36c systemd[1]: Starting flatpak-managed-install.service...
+May 06 09:52:17 dectech-6af36c systemd[1]: Import lastlog data into lastlog2 database skipped, unmet condition check ConditionPathExists=!/var/lib/lastlog/lastlog2.db
+May 06 09:52:17 dectech-6af36c systemd[1]: flatpak-managed-install.service: Deactivated successfully.
+May 06 09:52:17 dectech-6af36c systemd[1]: Finished flatpak-managed-install.service.
