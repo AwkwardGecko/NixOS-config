@@ -7,18 +7,19 @@
 # - export-shutdown-log: ExecStop fires during shutdown and dumps the CURRENT
 #                        boot's full journal (boot + runtime + early shutdown
 #                        sequence so far) to ~/.dotfiles/shutdown.log.
-{ config, pkgs, ... }:
-
-let
+{
+  config,
+  pkgs,
+  ...
+}: let
   user = "zozano";
   logDir = "/home/${user}/.dotfiles";
   journalctl = "${config.systemd.package}/bin/journalctl";
-in
-{
+in {
   systemd.services.export-boot-log = {
     description = "Export current boot journal to ${logDir}/boot.log";
-    wantedBy = [ "multi-user.target" ];
-    after = [ "multi-user.target" "systemd-journald.service" ];
+    wantedBy = ["multi-user.target"];
+    after = ["multi-user.target" "systemd-journald.service"];
     serviceConfig = {
       Type = "oneshot";
       ExecStart = pkgs.writeShellScript "export-boot-log" ''
@@ -32,8 +33,8 @@ in
 
   systemd.services.export-shutdown-log = {
     description = "Export full session journal to ${logDir}/shutdown.log on shutdown";
-    wantedBy = [ "multi-user.target" ];
-    after = [ "multi-user.target" "systemd-journald.service" ];
+    wantedBy = ["multi-user.target"];
+    after = ["multi-user.target" "systemd-journald.service"];
     serviceConfig = {
       Type = "oneshot";
       RemainAfterExit = true;
