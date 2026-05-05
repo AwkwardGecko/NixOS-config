@@ -11,9 +11,12 @@
 # their syslog identifier in journalctl's short format ("<host> <ident>[<pid>]:").
 # systemd's own lifecycle messages ("Started foo.service", "Stopped foo.service")
 # are emitted by systemd[1] and are preserved.
-{ config, pkgs, lib, ... }:
-
-let
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}: let
   user = "zozano";
   logDir = "/home/${user}/.dotfiles";
   journalctl = "${config.systemd.package}/bin/journalctl";
@@ -21,23 +24,23 @@ let
 
   # Add more identifiers here as needed. Use the syslog identifier
   # (usually the unit name without ".service"), not the full unit name.
-  excludedUnits = [ "tdarr-node" "monerod" ];
+  excludedUnits = ["tdarr-node" "monerod"];
   excludeRegex = " (${lib.concatStringsSep "|" excludedUnits})\\[";
 
-  dumpScript = name: outFile: pkgs.writeShellScript "export-${name}-log" ''
-    set -eu
-    ${journalctl} -b 0 --no-pager \
-      | ${grep} -vE '${excludeRegex}' \
-      > ${outFile} || true
-    chown ${user}:users ${outFile}
-    chmod 644 ${outFile}
-  '';
-in
-{
+  dumpScript = name: outFile:
+    pkgs.writeShellScript "export-${name}-log" ''
+      set -eu
+      ${journalctl} -b 0 --no-pager \
+        | ${grep} -vE '${excludeRegex}' \
+        > ${outFile} || true
+      chown ${user}:users ${outFile}
+      chmod 644 ${outFile}
+    '';
+in {
   systemd.services.export-boot-log = {
     description = "Export current boot journal to ${logDir}/boot.log";
-    wantedBy = [ "multi-user.target" ];
-    after = [ "multi-user.target" "systemd-journald.service" ];
+    wantedBy = ["multi-user.target"];
+    after = ["multi-user.target" "systemd-journald.service"];
     serviceConfig = {
       Type = "oneshot";
       ExecStart = dumpScript "boot" "${logDir}/boot.log";
@@ -46,8 +49,8 @@ in
 
   systemd.services.export-shutdown-log = {
     description = "Export full session journal to ${logDir}/shutdown.log on shutdown";
-    wantedBy = [ "multi-user.target" ];
-    after = [ "multi-user.target" "systemd-journald.service" ];
+    wantedBy = ["multi-user.target"];
+    after = ["multi-user.target" "systemd-journald.service"];
     serviceConfig = {
       Type = "oneshot";
       RemainAfterExit = true;
