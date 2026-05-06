@@ -24,7 +24,7 @@
 
   # Add more identifiers here as needed. Use the syslog identifier
   # (usually the unit name without ".service"), not the full unit name.
-  excludedUnits = ["tdarr-node" "monerod"];
+  excludedUnits = ["tdarr-node" "monerod" "comfy-ui" "tailscaled"];
   excludeRegex = " (${lib.concatStringsSep "|" excludedUnits})\\[";
 
   dumpScript = name: outFile:
