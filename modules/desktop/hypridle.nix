@@ -52,7 +52,7 @@
           }
           {
             timeout = 600;
-            on-timeout = "systemctl syspend";
+            on-timeout = "systemctl suspend";
           }
         ];
       };
