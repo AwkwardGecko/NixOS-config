@@ -18,7 +18,7 @@
   ...
 }: let
   user = "zozano";
-  logDir = "/home/${user}/.dotfiles";
+  logDir = "/tmp";
   journalctl = "${config.systemd.package}/bin/journalctl";
   grep = "${pkgs.gnugrep}/bin/grep";
 

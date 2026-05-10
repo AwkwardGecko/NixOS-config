@@ -2575,3 +2575,302 @@ May 10 10:51:08 dectech-6af36c systemd[1]: Finished Export full session journal 
 May 10 10:51:08 dectech-6af36c systemd[1]: flatpak-managed-install.service: Deactivated successfully.
 May 10 10:51:08 dectech-6af36c systemd[1]: Finished flatpak-managed-install.service.
 May 10 10:51:08 dectech-6af36c systemd[1]: Reached target Graphical Interface.
+May 10 10:51:08 dectech-6af36c systemd[1]: export-boot-log.service: Deactivated successfully.
+May 10 10:51:08 dectech-6af36c systemd[1]: Finished Export current boot journal to /home/zozano/.dotfiles/boot.log.
+May 10 10:51:08 dectech-6af36c systemd[1]: export-boot-log.service: Consumed 51ms CPU time over 126ms wall clock time, 35.3M memory peak, 24.3M read from disk, 104K written to disk.
+May 10 10:51:09 dectech-6af36c steam[5127]: [2026-05-10 10:51:09] Verification complete
+May 10 10:51:09 dectech-6af36c steam[5127]: UpdateUI: skip show logo
+May 10 10:51:09 dectech-6af36c steam[5127]: [2026-05-10 10:51:09] Destroy window
+May 10 10:51:09 dectech-6af36c steam[5127]: [2026-05-10 10:51:09] Shutdown
+May 10 10:51:09 dectech-6af36c steam[5127]: Steam logging initialized: directory: /home/zozano/.local/share/Steam/logs
+May 10 10:51:09 dectech-6af36c steam[5127]: XOpenIM() failed, LANG = en_AU.UTF-8
+May 10 10:51:09 dectech-6af36c steam[5127]: XOpenIM() failed, LANG = en_AU.UTF-8XRRGetOutputInfo Workaround: initialized with override: 0 real: 0xef1be840
+May 10 10:51:09 dectech-6af36c steam[5127]: XRRGetCrtcInfo Workaround: initialized with override: 0 real: 0xef1bd040
+May 10 10:51:09 dectech-6af36c steam[5127]: 05/10 10:51:09 minidumps folder is set to /tmp/dumps
+May 10 10:51:09 dectech-6af36c steam[5127]: 05/10 10:51:09 Init: Installing breakpad exception handler for appid(steamsysinfo)/version(1778281814)/tid(5347)
+May 10 10:51:09 dectech-6af36c steam[5127]: Running query: 1 - GpuTopology
+May 10 10:51:09 dectech-6af36c steam[5127]: Response: gpu_topology {
+May 10 10:51:09 dectech-6af36c steam[5127]:   gpus {
+May 10 10:51:09 dectech-6af36c steam[5127]:     id: 1
+May 10 10:51:09 dectech-6af36c steam[5127]:     name: "NVIDIA GeForce RTX 2080 SUPER"
+May 10 10:51:09 dectech-6af36c steam[5127]:     vram_size_bytes: 8847884288
+May 10 10:51:09 dectech-6af36c steam[5127]:     driver_id: k_EGpuDriverId_NvidiaProprietary
+May 10 10:51:09 dectech-6af36c steam[5127]:     driver_version_major: 595
+May 10 10:51:09 dectech-6af36c steam[5127]:     driver_version_minor: 71
+May 10 10:51:09 dectech-6af36c steam[5127]:     driver_version_patch: 5
+May 10 10:51:09 dectech-6af36c steam[5127]:     luid: 0
+May 10 10:51:09 dectech-6af36c steam[5127]:   }
+May 10 10:51:09 dectech-6af36c steam[5127]:   gpus {
+May 10 10:51:09 dectech-6af36c steam[5127]:     id: 2
+May 10 10:51:09 dectech-6af36c steam[5127]:     name: "llvmpipe (LLVM 21.1.8, 256 bits)"
+May 10 10:51:09 dectech-6af36c steam[5127]:     vram_size_bytes: 3221225472
+May 10 10:51:09 dectech-6af36c steam[5127]:     driver_id: k_EGpuDriverId_MesaLLVMPipe
+May 10 10:51:09 dectech-6af36c steam[5127]:     driver_version_major: 26
+May 10 10:51:09 dectech-6af36c steam[5127]:     driver_version_minor: 0
+May 10 10:51:09 dectech-6af36c steam[5127]:     driver_version_patch: 6
+May 10 10:51:09 dectech-6af36c steam[5127]:     luid: 0
+May 10 10:51:09 dectech-6af36c steam[5127]:   }
+May 10 10:51:09 dectech-6af36c steam[5127]:   gpus {
+May 10 10:51:09 dectech-6af36c steam[5127]:     id: 3
+May 10 10:51:09 dectech-6af36c steam[5127]:     name: "llvmpipe (LLVM 21.1.8, 256 bits)"
+May 10 10:51:09 dectech-6af36c steam[5127]:     vram_size_bytes: 3221225472
+May 10 10:51:09 dectech-6af36c steam[5127]:     driver_id: k_EGpuDriverId_MesaLLVMPipe
+May 10 10:51:09 dectech-6af36c steam[5127]:     driver_version_major: 26
+May 10 10:51:09 dectech-6af36c steam[5127]:     driver_version_minor: 0
+May 10 10:51:09 dectech-6af36c steam[5127]:     driver_version_patch: 6
+May 10 10:51:09 dectech-6af36c steam[5127]:     luid: 0
+May 10 10:51:09 dectech-6af36c steam[5127]:   }
+May 10 10:51:09 dectech-6af36c steam[5127]:   default_gpu_id: 1
+May 10 10:51:09 dectech-6af36c steam[5127]: }
+May 10 10:51:09 dectech-6af36c steam[5127]: Exit code: 0
+May 10 10:51:09 dectech-6af36c steam[5127]: Saving response to: /tmp/steamIdHaME - 165 bytes
+May 10 10:51:09 dectech-6af36c steam[5127]: Fontconfig warning: line 5: unknown element "description"
+May 10 10:51:09 dectech-6af36c steam[5127]: Fontconfig warning: "/etc/fonts/conf.d/10-hinting-slight.conf", line 4: unknown element "description"
+May 10 10:51:09 dectech-6af36c steam[5127]: Fontconfig warning: "/etc/fonts/conf.d/10-scale-bitmap-fonts.conf", line 4: unknown element "description"
+May 10 10:51:09 dectech-6af36c steam[5127]: Fontconfig error: "/etc/fonts/conf.d/10-scale-bitmap-fonts.conf", line 72: non-double matrix element
+May 10 10:51:09 dectech-6af36c steam[5127]: Fontconfig error: "/etc/fonts/conf.d/10-scale-bitmap-fonts.conf", line 72: non-double matrix element
+May 10 10:51:09 dectech-6af36c steam[5127]: Fontconfig warning: "/etc/fonts/conf.d/10-scale-bitmap-fonts.conf", line 80: saw unknown, expected number
+May 10 10:51:09 dectech-6af36c steam[5127]: Fontconfig warning: "/etc/fonts/conf.d/10-sub-pixel-none.conf", line 4: unknown element "description"
+May 10 10:51:09 dectech-6af36c steam[5127]: Fontconfig warning: "/etc/fonts/conf.d/10-yes-antialias.conf", line 4: unknown element "description"
+May 10 10:51:09 dectech-6af36c steam[5127]: Fontconfig warning: "/etc/fonts/conf.d/11-lcdfilter-default.conf", line 4: unknown element "description"
+May 10 10:51:09 dectech-6af36c steam[5127]: Fontconfig warning: "/etc/fonts/conf.d/20-unhint-small-vera.conf", line 4: unknown element "description"
+May 10 10:51:09 dectech-6af36c steam[5127]: Fontconfig warning: "/etc/fonts/conf.d/30-metric-aliases.conf", line 4: unknown element "description"
+May 10 10:51:09 dectech-6af36c steam[5127]: Fontconfig warning: "/etc/fonts/conf.d/40-nonlatin.conf", line 4: unknown element "description"
+May 10 10:51:09 dectech-6af36c steam[5127]: Fontconfig warning: "/etc/fonts/conf.d/45-generic.conf", line 4: unknown element "description"
+May 10 10:51:09 dectech-6af36c steam[5127]: Fontconfig warning: "/etc/fonts/conf.d/45-latin.conf", line 4: unknown element "description"
+May 10 10:51:09 dectech-6af36c steam[5127]: Fontconfig warning: "/etc/fonts/conf.d/48-spacing.conf", line 4: unknown element "description"
+May 10 10:51:09 dectech-6af36c steam[5127]: Fontconfig warning: "/etc/fonts/conf.d/49-sansserif.conf", line 4: unknown element "description"
+May 10 10:51:09 dectech-6af36c steam[5127]: Fontconfig warning: "/etc/fonts/conf.d/50-user.conf", line 4: unknown element "description"
+May 10 10:51:09 dectech-6af36c steam[5127]: Fontconfig warning: "/etc/fonts/conf.d/51-local.conf", line 4: unknown element "description"
+May 10 10:51:09 dectech-6af36c steam[5127]: Fontconfig warning: "/etc/fonts/conf.d/60-generic.conf", line 4: unknown element "description"
+May 10 10:51:09 dectech-6af36c steam[5127]: Fontconfig warning: "/etc/fonts/conf.d/60-latin.conf", line 4: unknown element "description"
+May 10 10:51:09 dectech-6af36c steam[5127]: Fontconfig warning: "/etc/fonts/conf.d/65-nonlatin.conf", line 4: unknown element "description"
+May 10 10:51:09 dectech-6af36c steam[5127]: Fontconfig warning: "/etc/fonts/conf.d/70-no-bitmaps-except-emoji.conf", line 4: unknown element "description"
+May 10 10:51:09 dectech-6af36c steamwebhelper[5364]: steamwebhelper.sh[5353]: Starting steamwebhelper under bootstrap steamrt steam runtime via: /home/zozano/.local/share/Steam/steamrt64/pv-runtime/steam-runtime-steamrt/_v2-entry-point
+May 10 10:51:09 dectech-6af36c steamwebhelper[5364]: steamwebhelper.sh[5353]: Starting steamwebhelper with steamrt steam runtime at /home/zozano/.local/share/Steam/steamrt64/pv-runtime/steam-runtime-steamrt/_v2-entry-point
+May 10 10:51:09 dectech-6af36c systemd[2430]: Started kitty child process: 5371 launched by: 5349.
+May 10 10:51:09 dectech-6af36c nix-daemon[1730]: accepted connection from pid 5402, user zozano
+May 10 10:51:09 dectech-6af36c nix-daemon[1730]: accepted connection from pid 5417, user zozano
+May 10 10:51:10 dectech-6af36c nix-daemon[1730]: accepted connection from pid 5432, user zozano
+May 10 10:51:10 dectech-6af36c nix-daemon[1730]: accepted connection from pid 5448, user zozano
+May 10 10:51:10 dectech-6af36c /nix/store/ih7w44bx3c8nh807h9dqlzcjcfwafbap-xdg-desktop-portal-1.20.4/libexec/xdg-desktop-portal[2577]: Realtime error: Could not get pidns for pid 5220: Could not fstatat ns/pid: Not a directory
+May 10 10:51:10 dectech-6af36c /nix/store/ih7w44bx3c8nh807h9dqlzcjcfwafbap-xdg-desktop-portal-1.20.4/libexec/xdg-desktop-portal[2577]: Realtime error: Could not get pidns for pid 5220: Could not fstatat ns/pid: Not a directory
+May 10 10:51:10 dectech-6af36c steam[5127]: Steam Runtime Launch Service: starting steam-runtime-launcher-service
+May 10 10:51:10 dectech-6af36c steam[5127]: Steam Runtime Launch Service: steam-runtime-launcher-service is running pid 5530
+May 10 10:51:10 dectech-6af36c steam[5127]: bus_name=com.steampowered.PressureVessel.LaunchAlongsideSteam
+May 10 10:51:11 dectech-6af36c nix-daemon[1730]: accepted connection from pid 5705, user zozano
+May 10 10:51:11 dectech-6af36c steamwebhelper[5364]: pressure-vessel-wrap[5353]: W: "/run/current-system/sw/bin/getent" is unlikely to appear in "/run/host"
+May 10 10:51:11 dectech-6af36c steamwebhelper[5364]: pressure-vessel-wrap[5353]: W: Unable to determine architecture of provider / ldconfig: Error reading "(null)" ELF header: invalid `Elf' handle
+May 10 10:51:11 dectech-6af36c steamwebhelper[5364]: pressure-vessel-wrap[5353]: W: "run/opengl-driver/share/drirc.d" is unlikely to appear in "/run/host"
+May 10 10:51:11 dectech-6af36c steamwebhelper[5364]: pressure-vessel-wrap[5353]: W: "run/opengl-driver-32/share/drirc.d" is unlikely to appear in "/run/host"
+May 10 10:51:12 dectech-6af36c steamwebhelper[5364]: exec ./steamwebhelper -nocrashdialog -lang=en_US -cachedir=/home/zozano/.local/share/Steam/config/htmlcache -steampid=5220 -buildid=1778281814 -steamid=0 -logdir=/home/zozano/.local/share/Steam/logs -uimode=7 -startcount=0 -steamuniverse=Public -realm=Global -clientui=/home/zozano/.local/share/Steam/clientui -steampath=/home/zozano/.local/share/Steam/ubuntu12_32/steam -launcher=0 -use_xcomposite_workaround --valve-enable-site-isolation --enable-smooth-scrolling --password-store=basic --log-file=/home/zozano/.local/share/Steam/logs/cef_log.txt --disable-quick-menu --disable-component-update --gaia-url=http://disabled.invalid --enable-features=PlatformHEVCDecoderSupport --disable-features=WinRetrieveSuggestionsOnlyOnDemand,SpareRendererForSitePerProcess,DcheckIsFatal,BlockPromptsIfIgnoredOften,ValveFFmpegAllowLowDelayHEVC
+May 10 10:51:13 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/fpv39m980wi7bbbckmh3sv8dsm7cpysr-nixos-system-unnamed-26.05.20260427.1c3fe55'
+May 10 10:51:13 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/v6854b8v6gw212y37kfj6h2v5mjq6qxi-etc'
+May 10 10:51:13 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/80j6189j8p64a7iqnwh2vdncqfg6yjw0-nixos-system-unnamed-26.05.20260427.1c3fe55.drv'
+May 10 10:51:13 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/6v0ib6smb0xmcg9zchi1czmvdmb2mg1c-activate.drv'
+May 10 10:51:13 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/mcr12r4gig5d52xn3n75c7fx28h3g20x-etc.drv'
+May 10 10:51:14 dectech-6af36c systemd[1]: Starting Disk Manager...
+May 10 10:51:14 dectech-6af36c kernel: nvme nvme0: using unchecked data buffer
+May 10 10:51:14 dectech-6af36c systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+May 10 10:51:14 dectech-6af36c systemd[1]: NetworkManager-dispatcher.service: Consumed 56ms CPU time over 17.192s wall clock time, 16.3M memory peak, 10.7M read from disk.
+May 10 10:51:14 dectech-6af36c systemd[1]: Started Disk Manager.
+May 10 10:51:16 dectech-6af36c sudo[5947]:   zozano : TTY=pts/0 ; PWD=/home/zozano/.dotfiles ; USER=root ; COMMAND=/run/current-system/sw/bin/nixos-rebuild switch --flake .#desktop --show-trace
+May 10 10:51:16 dectech-6af36c sudo[5947]: pam_unix(sudo:session): session opened for user root(uid=0) by zozano(uid=1000)
+May 10 10:51:17 dectech-6af36c steam[5127]: Desktop state changed: desktop: { pos:    0,   0 size: 2560,1440 } primary: { pos:    0,   0 size: 2560,1440 }
+May 10 10:51:17 dectech-6af36c steam[5127]: Caching cursor image for , size 24x24, serial 2, cache size = 0
+May 10 10:51:17 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/mr431w3v1j9rdwzbywnjf5wbdj2x5jdl-system-units'
+May 10 10:51:17 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/ybng3a0grwkr934hbjy0ic9h2ljhhirq-unit-home-manager-zozano.service'
+May 10 10:51:17 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/r2p1g1cc37m7mj2yxfw55jrzws1kv5fr-home-manager-generation'
+May 10 10:51:19 dectech-6af36c steam[5127]: pressure-vessel-wrap[5980]: W: "/run/current-system/sw/bin/getent" is unlikely to appear in "/run/host"
+May 10 10:51:19 dectech-6af36c steam[5127]: pressure-vessel-wrap[5980]: W: Unable to determine architecture of provider / ldconfig: Error reading "(null)" ELF header: invalid `Elf' handle
+May 10 10:51:19 dectech-6af36c steam[5127]: pressure-vessel-wrap[5980]: W: "run/opengl-driver/share/drirc.d" is unlikely to appear in "/run/host"
+May 10 10:51:19 dectech-6af36c steam[5127]: pressure-vessel-wrap[5980]: W: "run/opengl-driver-32/share/drirc.d" is unlikely to appear in "/run/host"
+May 10 10:51:20 dectech-6af36c steam[5127]: ProtonFixes[6249] WARN: Skipping fix execution. We are probably running a unit test.
+May 10 10:51:20 dectech-6af36c steam[5127]: fsync: up and running.
+May 10 10:51:21 dectech-6af36c kernel: warning: `wine_sechost_se' uses wireless extensions which will stop working for Wi-Fi 7 hardware; use nl80211
+May 10 10:51:21 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/n20s37l7qcvb61kagwzyz35vzf138i8l-cleanup'
+May 10 10:51:21 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/sf68770c82i5796zzslpzn58fx628dwk-check-link-targets.sh'
+May 10 10:51:21 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/j4bvhkfd7bnqlxvwyj4szy3jnw4mbs00-system-units.drv'
+May 10 10:51:21 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/pfz6qbfv7iibabw3vgzqp2pw5fclvrzv-unit-home-manager-zozano.service.drv'
+May 10 10:51:21 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/sbaassckfbhcm28zivkldn7280mpwjad-home-manager-generation.drv'
+May 10 10:51:21 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/pfjlchhj71sjbfcx6k3nrqix32nn3hp3-activation-script.drv'
+May 10 10:51:21 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/zgg7a24wjmiczdvbq5j8kkciq7jrwgg5-dconf-cleanup.drv'
+May 10 10:51:21 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/x997gfh7jxrsb3xpgi4jdlqx5paib2y4-cleanup.drv'
+May 10 10:51:21 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/hxly5gq7rzr09nkq9g4wjgz59034pl4k-check-link-targets.sh.drv'
+May 10 10:51:21 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/5iv103gyw6wchb2hpvg2x4wq484q8syz-link.drv'
+May 10 10:51:21 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/6jygq5p8f7vffj01l8m7gss95jyha9ki-hm-modules-messages.drv'
+May 10 10:51:21 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/55bxjss4hxljxvvvsgv6li6pvcd5bq94-dconf-cleanup'
+May 10 10:51:21 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/41r1w9222bz83yad577s3l0xbaddi448-link'
+May 10 10:51:21 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/86sa2zgh38imd4ycpm3fm49vlsrr2nw6-hm-modules-messages'
+May 10 10:51:22 dectech-6af36c steam[5127]: Fossilize INFO: Overriding serialization path: "/home/zozano/.local/share/Steam/shader_cache_temp_dir_d3d11_64/fozpipelinesv6/steamapprun_pipeline_cache".
+May 10 10:51:23 dectech-6af36c steam[5127]: reaping pid: 5221 -- steam
+May 10 10:51:25 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/4qjy3q5c0x5dnkcs5rj1d76hyxchcdh6-home-manager-files.drv'
+May 10 10:51:25 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/r77g5szacgbyc2zgq6h8k64481vxpzvb-zozano-fish-completions.drv'
+May 10 10:51:25 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/34l3fsddy1126ad0a4f9wf84fvvmwbsm-base16-kvantum-fish-completions.drv'
+May 10 10:51:25 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/04b634gv0ffhnkk62c3c42cbwg5cfkjs-home-manager-files'
+May 10 10:51:25 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/z1gwp1swarfy6afs11lrbdn5kc6z3pmh-zozano-fish-completions'
+May 10 10:51:26 dectech-6af36c steam[5127]: pressure-vessel-wrap[6497]: W: "/run/current-system/sw/bin/getent" is unlikely to appear in "/run/host"
+May 10 10:51:26 dectech-6af36c steam[5127]: pressure-vessel-wrap[6497]: W: Unable to determine architecture of provider / ldconfig: Error reading "(null)" ELF header: invalid `Elf' handle
+May 10 10:51:26 dectech-6af36c steam[5127]: pressure-vessel-wrap[6497]: W: "run/opengl-driver/share/drirc.d" is unlikely to appear in "/run/host"
+May 10 10:51:26 dectech-6af36c steam[5127]: pressure-vessel-wrap[6497]: W: "run/opengl-driver-32/share/drirc.d" is unlikely to appear in "/run/host"
+May 10 10:51:26 dectech-6af36c steam[5127]: ProtonFixes[6721] WARN: Skipping fix execution. We are probably running a unit test.
+May 10 10:51:26 dectech-6af36c steam[5127]: fsync: up and running.
+May 10 10:51:27 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/5lhbmx45nf26cz20b4i6cxf4r4qhwj6v-po'
+May 10 10:51:27 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/sf7aiqr33gnwx5y1xhy1pq9fn3k7rih6-user-environment'
+May 10 10:51:27 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/mz8wnagd7ij7i2xlb8zgnr6rs89fzgvv-home-configuration-reference-manpage-fish-completions'
+May 10 10:51:27 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/ca8fmqw21ryizrryd5v1k4ny4vhgpdm4-hm_fontconfigconf.d10hmfonts.conf'
+May 10 10:51:27 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/h9w8pvn4rz5cqjznmxwarga4691f6348-home-manager-path'
+May 10 10:51:27 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/k62daip0pzyrll572cd70hm0mqxlzcg6-home-configuration-reference-manpage'
+May 10 10:51:27 dectech-6af36c systemd[1]: systemd-hostnamed.service: Deactivated successfully.
+May 10 10:51:29 dectech-6af36c steam[5127]: Fossilize INFO: Overriding serialization path: "/home/zozano/.local/share/Steam/shader_cache_temp_dir_d3d12_64/fozpipelinesv6/steamapprun_pipeline_cache".
+May 10 10:51:29 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/fgbzcvs8jhhimyn2a6m6zsspmrdnx4l3-hm_autostartstylixactivatekde.desktop'
+May 10 10:51:31 dectech-6af36c systemd-timesyncd[1047]: Contacted time server 202.142.133.141:123 (2.nixos.pool.ntp.org).
+May 10 10:51:31 dectech-6af36c systemd-timesyncd[1047]: Initial clock synchronization to Sun 2026-05-10 10:51:31.624251 AEST.
+May 10 10:51:32 dectech-6af36c steam[5127]: pressure-vessel-wrap[6891]: W: "/run/current-system/sw/bin/getent" is unlikely to appear in "/run/host"
+May 10 10:51:32 dectech-6af36c steam[5127]: pressure-vessel-wrap[6891]: W: Unable to determine architecture of provider / ldconfig: Error reading "(null)" ELF header: invalid `Elf' handle
+May 10 10:51:32 dectech-6af36c steam[5127]: pressure-vessel-wrap[6891]: W: "run/opengl-driver/share/drirc.d" is unlikely to appear in "/run/host"
+May 10 10:51:32 dectech-6af36c steam[5127]: pressure-vessel-wrap[6891]: W: "run/opengl-driver-32/share/drirc.d" is unlikely to appear in "/run/host"
+May 10 10:51:32 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/y71p7czkjc5v91s58s2yx7xhm62av4bx-kvantum.kvconfig'
+May 10 10:51:32 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/52ylyh43xzyrlym0s4im7wxikxdhbwnj-kvantum.kvconfig.drv'
+May 10 10:51:32 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/63dwvhxlsy27a39wzhfi6lw6b0fz73dn-hm_.manpath.drv'
+May 10 10:51:32 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/7cyizv0zd6s07p60lhkjqjpw8yjgxr0g-man-cache.drv'
+May 10 10:51:32 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/4xlrbm89ihla553zhcy6qnpdp1547zkv-man-paths.drv'
+May 10 10:51:32 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/1y3gbaclvmh9kdxqd0c05y17w92nwrlp-hm_.manpath'
+May 10 10:51:32 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/znz2faqzk5jncx58h239ng7y4yp5b38w-man-cache'
+May 10 10:51:32 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/ib5rfqsd3sqv4afv00ccixnrhphrf5l4-hm_fontconfigconf.d10hmfonts.conf.drv'
+May 10 10:51:33 dectech-6af36c steam[5127]: fsync: up and running.
+May 10 10:51:34 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/l09s6xrfs68j3liimm91q2s9wr0lnmmi-user-environment.drv'
+May 10 10:51:34 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/wj2px4jmdc805i6lwps588pn71as51d1-home-manager-path.drv'
+May 10 10:51:34 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/lfbharhmzzj51f5iglfngqnp6vdppkwk-hm_hyprhyprland.conf'
+May 10 10:51:34 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/8j28i1m84dc2hhmaqvyi08j68jx8ypr4-hm_hyprhyprland.conf.drv'
+May 10 10:51:35 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/w33cybw6d6iz4xplv9rwi9d5csi56pib-home-configuration-reference-manpage-fish-completions.drv'
+May 10 10:51:35 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/6dcwbyd2852r5w0lqcabh7i7iq8162p8-home-configuration-reference-manpage.drv'
+May 10 10:51:35 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/gkxnygh1nmgs0nil1h8kx44ynj5rirbv-options.json.drv'
+May 10 10:51:35 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/r5alp33x56cjy3m5z1ks9sil5m41g5w1-base16-kvantum-fish-completions'
+May 10 10:51:35 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/r2zglzbs2jzqzimvfrkqqk8dz5cvgqzx-base16-kvantum-fish-completions.drv'
+May 10 10:51:35 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/7jclj0fhfqq4a8lg628j4cc1j6hc19j1-hm_autostartstylixactivategnome.desktop.drv'
+May 10 10:51:35 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/40wlfimzjpp6s1zlaq5m5lhqz9j90x7d-hm_autostartstylixactivategnome.desktop'
+May 10 10:51:35 dectech-6af36c nix-gc-start[1499]: deleting '/nix/store/hxlwv1wpfc4zxiwsmangv6kx4l4kj115-hm_autostartstylixactivatekde.desktop.drv'
+May 10 10:51:35 dectech-6af36c nix-gc-start[1499]: deleting unused links...
+May 10 10:51:35 dectech-6af36c steam[5127]: Fossilize INFO: Overriding serialization path: "/home/zozano/.local/share/Steam/shader_cache_temp_dir_d3d11_64/fozpipelinesv6/steamapprun_pipeline_cache".
+May 10 10:51:35 dectech-6af36c steam[5127]: X connection to :0 broken (explicit kill or server shutdown).
+May 10 10:51:38 dectech-6af36c steam[5127]: pressure-vessel-wrap[7236]: W: "/run/current-system/sw/bin/getent" is unlikely to appear in "/run/host"
+May 10 10:51:38 dectech-6af36c steam[5127]: pressure-vessel-wrap[7236]: W: Unable to determine architecture of provider / ldconfig: Error reading "(null)" ELF header: invalid `Elf' handle
+May 10 10:51:38 dectech-6af36c steam[5127]: pressure-vessel-wrap[7236]: W: "run/opengl-driver/share/drirc.d" is unlikely to appear in "/run/host"
+May 10 10:51:38 dectech-6af36c steam[5127]: pressure-vessel-wrap[7236]: W: "run/opengl-driver-32/share/drirc.d" is unlikely to appear in "/run/host"
+May 10 10:51:38 dectech-6af36c steam[5127]: fsync: up and running.
+May 10 10:51:41 dectech-6af36c steam[5127]: Fossilize INFO: Overriding serialization path: "/home/zozano/.local/share/Steam/shader_cache_temp_dir_d3d12_64/fozpipelinesv6/steamapprun_pipeline_cache".
+May 10 10:51:44 dectech-6af36c systemd[1]: Starting Time & Date Service...
+May 10 10:51:44 dectech-6af36c systemd[1]: Started Time & Date Service.
+May 10 10:51:44 dectech-6af36c nix-gc-start[1499]: note: hard linking is currently saving 18.3 GiB
+May 10 10:51:44 dectech-6af36c rtkit-daemon[2654]: Successfully made thread 7766 of process 7616 owned by '1000' RT at priority 10.
+May 10 10:51:45 dectech-6af36c nix-gc-start[1499]: 54 store paths deleted, 5.6 MiB freed
+May 10 10:51:45 dectech-6af36c systemd[1]: nix-gc.service: Deactivated successfully.
+May 10 10:51:45 dectech-6af36c systemd[1]: Finished Nix Garbage Collector.
+May 10 10:51:45 dectech-6af36c systemd[1]: Startup finished in 10.187s (firmware) + 5.424s (loader) + 521ms (kernel) + 30.028s (initrd) + 49.849s (userspace) = 1min 36.011s.
+May 10 10:51:45 dectech-6af36c systemd[1]: nix-gc.service: Consumed 42.980s CPU time over 47.747s wall clock time, 2.1G memory peak, 796.5M read from disk, 5.3M written to disk.
+May 10 10:52:05 dectech-6af36c syncthing[1877]: 2026-05-10 10:52:05 INF Relay listener starting (id=dynamic+https://relays.syncthing.net/endpoint log.pkg=connections)
+May 10 10:52:14 dectech-6af36c systemd[1]: systemd-timedated.service: Deactivated successfully.
+May 10 10:52:20 dectech-6af36c systemd[1]: Starting [systemd-run] /nix/store/zprrbfxr526sdxws5qjcnpvfj64v78iy-nixos-system-unnamed-26.05.20260505.549bd84/bin/switch-to-configuration switch...
+May 10 10:52:20 dectech-6af36c systemd[1]: Started [systemd-run] /nix/store/zprrbfxr526sdxws5qjcnpvfj64v78iy-nixos-system-unnamed-26.05.20260505.549bd84/bin/switch-to-configuration switch.
+May 10 10:52:20 dectech-6af36c nixos[13051]: switching to system configuration /nix/store/zprrbfxr526sdxws5qjcnpvfj64v78iy-nixos-system-unnamed-26.05.20260505.549bd84
+May 10 10:52:20 dectech-6af36c systemd[1]: Stopped target Local File Systems.
+May 10 10:52:20 dectech-6af36c systemd[1]: Stopped target Remote File Systems.
+May 10 10:52:20 dectech-6af36c systemd[1]: Reload requested from client PID 13051 ('.switch-to-conf') (unit nixos-rebuild-switch-to-configuration.service)...
+May 10 10:52:20 dectech-6af36c systemd[1]: Reloading...
+May 10 10:52:21 dectech-6af36c systemd[1]: Reloading finished in 230 ms.
+May 10 10:52:21 dectech-6af36c systemd[2430]: Reexecution requested from client PID 13235 ('switch-to-confi')...
+May 10 10:52:21 dectech-6af36c systemd[2430]: Reexecuting.
+May 10 10:52:21 dectech-6af36c systemd-xdg-autostart-generator[13243]: Exec binary '/nix/store/wwk1jhmcrm18276qyn1cx55g7df7dnb0-openrgb-0.9/bin/.openrgb-wrapped' does not exist: No such file or directory
+May 10 10:52:21 dectech-6af36c systemd-xdg-autostart-generator[13243]: /home/zozano/.config/autostart/OpenRGB.desktop: not generating unit, executable specified in Exec= does not exist.
+May 10 10:52:21 dectech-6af36c systemd[2430]: blueman-applet.service: Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services. Refusing.
+May 10 10:52:21 dectech-6af36c systemd[2430]: Reload requested from client PID 13235 ('switch-to-confi')...
+May 10 10:52:21 dectech-6af36c systemd[2430]: Reloading...
+May 10 10:52:21 dectech-6af36c systemd-xdg-autostart-generator[13256]: Exec binary '/nix/store/wwk1jhmcrm18276qyn1cx55g7df7dnb0-openrgb-0.9/bin/.openrgb-wrapped' does not exist: No such file or directory
+May 10 10:52:21 dectech-6af36c systemd-xdg-autostart-generator[13256]: /home/zozano/.config/autostart/OpenRGB.desktop: not generating unit, executable specified in Exec= does not exist.
+May 10 10:52:21 dectech-6af36c systemd[2430]: blueman-applet.service: Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services. Refusing.
+May 10 10:52:21 dectech-6af36c systemd[2430]: Reloading finished in 221 ms.
+May 10 10:52:21 dectech-6af36c systemd[2430]: Starting Run user-specific NixOS activation...
+May 10 10:52:21 dectech-6af36c systemd[2430]: Finished Run user-specific NixOS activation.
+May 10 10:52:21 dectech-6af36c systemd[2430]: Starting Run user-specific NixOS activation...
+May 10 10:52:21 dectech-6af36c systemd[1]: Starting Re-setup tmpfiles on a system that is already running....
+May 10 10:52:21 dectech-6af36c systemd[2430]: Finished Run user-specific NixOS activation.
+May 10 10:52:21 dectech-6af36c systemd[1]: Finished Re-setup tmpfiles on a system that is already running..
+May 10 10:52:21 dectech-6af36c systemd[1]: Reached target Reactivate sysinit units.
+May 10 10:52:21 dectech-6af36c systemd[1]: home-manager-zozano.service: Deactivated successfully.
+May 10 10:52:21 dectech-6af36c systemd[1]: Stopped Home Manager environment for zozano.
+May 10 10:52:21 dectech-6af36c systemd[1]: home-manager-zozano.service: Consumed 679ms CPU time over 1min 24.361s wall clock time, 39.5M memory peak, 31.7M read from disk.
+May 10 10:52:21 dectech-6af36c systemd[1]: Stopping Home Manager environment for zozano...
+May 10 10:52:21 dectech-6af36c systemd[1]: Starting Home Manager environment for zozano...
+May 10 10:52:21 dectech-6af36c hm-activate-zozano[13271]: Starting Home Manager activation
+May 10 10:52:21 dectech-6af36c nix-daemon[1730]: accepted connection from pid 13276, user zozano
+May 10 10:52:21 dectech-6af36c nix-daemon[1730]: accepted connection from pid 13305, user zozano
+May 10 10:52:21 dectech-6af36c hm-activate-zozano[13271]: Activating checkFilesChanged
+May 10 10:52:21 dectech-6af36c hm-activate-zozano[13271]: Activating checkLinkTargets
+May 10 10:52:22 dectech-6af36c hm-activate-zozano[13271]: Activating writeBoundary
+May 10 10:52:22 dectech-6af36c hm-activate-zozano[13271]: Activating createGpgHomedir
+May 10 10:52:22 dectech-6af36c hm-activate-zozano[13271]: Activating installPackages
+May 10 10:52:22 dectech-6af36c hm-activate-zozano[13271]: Activating dconfSettings
+May 10 10:52:22 dectech-6af36c systemd[2430]: Starting User preferences database...
+May 10 10:52:22 dectech-6af36c systemd[2430]: Started User preferences database.
+May 10 10:52:22 dectech-6af36c hm-activate-zozano[13271]: Activating linkGeneration
+May 10 10:52:22 dectech-6af36c hm-activate-zozano[13271]: Cleaning up orphan links from /home/zozano
+May 10 10:52:22 dectech-6af36c hm-activate-zozano[13271]: Creating home file links in /home/zozano
+May 10 10:52:22 dectech-6af36c hm-activate-zozano[13537]: mkdir: cannot create directory ‘/home/zozano/.config/Kvantum/Base16Kvantum’: File exists
+May 10 10:52:22 dectech-6af36c hm-activate-zozano[13538]: ln: failed to create symbolic link '/home/zozano/.config/Kvantum/Base16Kvantum/Base16Kvantum.kvconfig': No such file or directory
+May 10 10:52:22 dectech-6af36c systemd[1]: home-manager-zozano.service: Main process exited, code=exited, status=1/FAILURE
+May 10 10:52:22 dectech-6af36c systemd[1]: home-manager-zozano.service: Failed with result 'exit-code'.
+May 10 10:52:22 dectech-6af36c systemd[1]: Failed to start Home Manager environment for zozano.
+May 10 10:52:22 dectech-6af36c systemd[1]: home-manager-zozano.service: Consumed 357ms CPU time over 393ms wall clock time, 15.2M memory peak, 1.2M read from disk.
+May 10 10:52:22 dectech-6af36c systemd[1]: Make TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+May 10 10:52:22 dectech-6af36c systemd[1]: Reached target Local File Systems.
+May 10 10:52:22 dectech-6af36c systemd[1]: Reached target Remote File Systems.
+May 10 10:52:22 dectech-6af36c systemd[1]: Starting Network Manager Script Dispatcher Service...
+May 10 10:52:22 dectech-6af36c systemd[1]: Started flatpak-repo.service.
+May 10 10:52:22 dectech-6af36c systemd[1]: Starting Home Manager environment for zozano...
+May 10 10:52:22 dectech-6af36c systemd[1]: Import lastlog data into lastlog2 database skipped, unmet condition check ConditionPathExists=!/var/lib/lastlog/lastlog2.db
+May 10 10:52:22 dectech-6af36c systemd[1]: Starting linger-users.service...
+May 10 10:52:22 dectech-6af36c systemd[1]: SSH Host Keys Generation skipped, no trigger condition checks were met.
+May 10 10:52:22 dectech-6af36c systemd[1]: Starting tailscaled-autoconnect.service...
+May 10 10:52:22 dectech-6af36c systemd[1]: linger-users.service: Deactivated successfully.
+May 10 10:52:22 dectech-6af36c systemd[1]: Finished linger-users.service.
+May 10 10:52:22 dectech-6af36c systemd[1]: Starting dynamic-hostname.service...
+May 10 10:52:22 dectech-6af36c systemd[1]: Load Kernel Module efi_pstore skipped, unmet condition check ConditionKernelModuleLoaded=!efi_pstore
+May 10 10:52:22 dectech-6af36c systemd[1]: Starting Create SUID/SGID Wrappers...
+May 10 10:52:22 dectech-6af36c systemd[1]: Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+May 10 10:52:22 dectech-6af36c systemd[1]: Rebuild Journal Catalog skipped, unmet condition check ConditionNeedsUpdate=/var
+May 10 10:52:22 dectech-6af36c systemd[1]: Save Transient machine-id to Disk skipped, unmet condition check ConditionPathIsMountPoint=/etc/machine-id
+May 10 10:52:22 dectech-6af36c systemd[1]: Platform Persistent Storage Archival skipped, unmet condition check ConditionDirectoryNotEmpty=/sys/fs/pstore
+May 10 10:52:22 dectech-6af36c systemd[1]: Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+May 10 10:52:22 dectech-6af36c systemd[1]: TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+May 10 10:52:22 dectech-6af36c systemd[1]: Update is Completed skipped, no trigger condition checks were met.
+May 10 10:52:22 dectech-6af36c systemd[1]: Started Network Manager Script Dispatcher Service.
+May 10 10:52:22 dectech-6af36c hm-activate-zozano[13543]: Starting Home Manager activation
+May 10 10:52:22 dectech-6af36c tailscaled-autoconnect-start[13546]: Tailscale is running
+May 10 10:52:22 dectech-6af36c systemd[1]: Started tailscaled-autoconnect.service.
+May 10 10:52:22 dectech-6af36c systemd[1]: tailscaled-autoconnect.service: Deactivated successfully.
+May 10 10:52:22 dectech-6af36c systemd[1]: dynamic-hostname.service: Deactivated successfully.
+May 10 10:52:22 dectech-6af36c systemd[1]: Finished dynamic-hostname.service.
+May 10 10:52:22 dectech-6af36c nix-daemon[1730]: accepted connection from pid 13567, user zozano
+May 10 10:52:22 dectech-6af36c nix-daemon[1730]: accepted connection from pid 13667, user zozano
+May 10 10:52:22 dectech-6af36c hm-activate-zozano[13543]: Activating checkFilesChanged
+May 10 10:52:22 dectech-6af36c hm-activate-zozano[13543]: Activating checkLinkTargets
+May 10 10:52:22 dectech-6af36c systemd[1]: suid-sgid-wrappers.service: Deactivated successfully.
+May 10 10:52:22 dectech-6af36c systemd[1]: Finished Create SUID/SGID Wrappers.
+May 10 10:52:22 dectech-6af36c systemd[1]: suid-sgid-wrappers.service: Consumed 95ms CPU time over 102ms wall clock time, 6.9M memory peak, 1.3M read from disk.
+May 10 10:52:22 dectech-6af36c hm-activate-zozano[13543]: Activating writeBoundary
+May 10 10:52:22 dectech-6af36c hm-activate-zozano[13543]: Activating createGpgHomedir
+May 10 10:52:22 dectech-6af36c hm-activate-zozano[13543]: Activating installPackages
+May 10 10:52:22 dectech-6af36c hm-activate-zozano[13543]: Activating dconfSettings
+May 10 10:52:22 dectech-6af36c hm-activate-zozano[13543]: Activating linkGeneration
+May 10 10:52:22 dectech-6af36c hm-activate-zozano[13543]: Cleaning up orphan links from /home/zozano
+May 10 10:52:22 dectech-6af36c hm-activate-zozano[13543]: Creating home file links in /home/zozano
+May 10 10:52:22 dectech-6af36c hm-activate-zozano[13939]: mkdir: cannot create directory ‘/home/zozano/.config/Kvantum/Base16Kvantum’: File exists
+May 10 10:52:22 dectech-6af36c hm-activate-zozano[13940]: ln: failed to create symbolic link '/home/zozano/.config/Kvantum/Base16Kvantum/Base16Kvantum.kvconfig': No such file or directory
+May 10 10:52:22 dectech-6af36c systemd[1]: home-manager-zozano.service: Main process exited, code=exited, status=1/FAILURE
+May 10 10:52:22 dectech-6af36c systemd[1]: home-manager-zozano.service: Failed with result 'exit-code'.
+May 10 10:52:22 dectech-6af36c systemd[1]: Failed to start Home Manager environment for zozano.
+May 10 10:52:22 dectech-6af36c systemd[1]: Starting Export current boot journal to /home/zozano/.dotfiles/boot.log...
+May 10 10:52:22 dectech-6af36c systemd[1]: Starting flatpak-managed-install.service...
+May 10 10:52:22 dectech-6af36c systemd[1]: flatpak-managed-install.service: Deactivated successfully.
+May 10 10:52:22 dectech-6af36c systemd[1]: Finished flatpak-managed-install.service.
