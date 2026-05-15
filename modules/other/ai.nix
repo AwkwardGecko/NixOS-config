@@ -5,7 +5,10 @@
   pkgs,
   ...
 }: {
-  services.comfyui = {
+
+  services.sillytavern.enable = true;
+
+services.comfyui = {
     enable = true;
     package = inputs.comfyui-nix.packages.x86_64-linux.cuda;
     enableManager = true;
