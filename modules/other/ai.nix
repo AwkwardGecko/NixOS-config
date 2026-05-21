@@ -5,14 +5,13 @@
   pkgs,
   ...
 }: {
-
   services.sillytavern = {
     enable = true;
     port = 8045;
     listen = true;
   };
 
-services.comfyui = {
+  services.comfyui = {
     enable = true;
     package = inputs.comfyui-nix.packages.x86_64-linux.cuda;
     enableManager = true;

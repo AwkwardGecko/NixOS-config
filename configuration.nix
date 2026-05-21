@@ -19,6 +19,7 @@
     ./modules/core/security.nix
     ./modules/core/users.nix
     ./modules/core/scanner.nix
+    ./modules/core/printer.nix
 
     ./modules/desktop/hyprland.nix
     ./modules/desktop/hyprpanel.nix
