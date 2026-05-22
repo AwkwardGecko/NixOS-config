@@ -100,7 +100,7 @@
           gaps_out = 5;
           border_size = 2;
           resize_on_border = false;
-          allow_tearing = true;
+          #allow_tearing = true;
           # layout = #set with imports at top of module
         };
 
@@ -156,7 +156,7 @@
           "$mainMod, F, exec, $browser"
           "$mainMod, G, togglegroup,"
 
-          "$mainMod, space, togglesplit,"
+          "$mainMod, space, layoutmsg, togglesplit,"
 
           "$mainMod, M, fullscreen, 1"
           "$mainMod, P, pseudo,"
