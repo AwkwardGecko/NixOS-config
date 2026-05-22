@@ -100,7 +100,7 @@
           gaps_out = 5;
           border_size = 2;
           resize_on_border = false;
-          #allow_tearing = true;
+          allow_tearing = true;
           # layout = #set with imports at top of module
         };
 
@@ -140,7 +140,7 @@
           "force_default_wallpaper" = -1;
           "disable_hyprland_logo" = true;
           "enable_anr_dialog" = false;
-          "vfr" = true;
+          #"vfr" = true;
         };
 
         bind = [
