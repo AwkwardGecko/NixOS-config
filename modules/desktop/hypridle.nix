@@ -42,7 +42,7 @@
 
         listener = [
           {
-            timeout = 240;
+            timeout = 600;
             on-timeout = "hyprlock";
           }
           {
@@ -51,7 +51,7 @@
             on-resume = "hyprctl dispatch dpms on";
           }
           {
-            timeout = 600;
+            timeout = 1200;
             on-timeout = "systemctl suspend";
           }
         ];
