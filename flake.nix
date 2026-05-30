@@ -16,7 +16,7 @@
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
 
     stylix.url = "github:nix-community/stylix/master";
-    stylix.inputs.home-manager.follows = "home-manager";
+    #stylix.inputs.home-manager.follows = "home-manager";
   };
 
   outputs = inputs @ {
