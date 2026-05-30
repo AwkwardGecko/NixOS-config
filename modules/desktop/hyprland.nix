@@ -43,6 +43,8 @@
     NIXOS_OZONE_WL = "1";
   };
 
+  wayland.windowManager.hyprland.configType = "hyprlang";
+
   home-manager.users.zozano = {
     home.packages = with pkgs; [
       cliphist
