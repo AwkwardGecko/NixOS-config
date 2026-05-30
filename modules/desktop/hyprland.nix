@@ -43,7 +43,6 @@
     NIXOS_OZONE_WL = "1";
   };
 
-  wayland.windowManager.hyprland.configType = "hyprlang";
 
   home-manager.users.zozano = {
     home.packages = with pkgs; [
@@ -60,6 +59,7 @@
 
     wayland.windowManager.hyprland = {
       enable = true;
+      configType = "hyprlang";
 
       settings = {
         "$mainMod" = "SUPER";
