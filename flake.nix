@@ -26,7 +26,7 @@
     nix-flatpak,
     nixvim,
     comfyui-nix,
-    stylix,
+    #stylix,
     sops-nix,
     ...
   }: {
@@ -38,7 +38,7 @@
         home-manager.nixosModules.home-manager
         nix-flatpak.nixosModules.nix-flatpak
         nixvim.nixosModules.nixvim
-        stylix.nixosModules.stylix
+        #stylix.nixosModules.stylix
         {
           imports = [comfyui-nix.nixosModules.default];
           nixpkgs.overlays = [comfyui-nix.overlays.default];
