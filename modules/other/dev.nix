@@ -55,9 +55,9 @@
     uv
   ];
 
-  home-manager.users.zozano = {
-    home.packages = with pkgs; [
-      pipx
-    ];
-  };
+  # home-manager.users.zozano = {
+  #   home.packages = with pkgs; [
+  #     pipx
+  #   ];
+  # };
 }
