@@ -43,7 +43,6 @@
     NIXOS_OZONE_WL = "1";
   };
 
-
   home-manager.users.zozano = {
     home.packages = with pkgs; [
       cliphist
