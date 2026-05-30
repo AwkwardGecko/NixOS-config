@@ -381,7 +381,7 @@
         "flake-parts": "flake-parts_3",
         "gnome-shell": "gnome-shell",
         "nixpkgs": [
-          "nixpkgs"
+          "home-manager"
         ],
         "nur": "nur",
         "systems": "systems_2",
