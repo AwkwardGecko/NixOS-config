@@ -14,7 +14,7 @@
     strawberry
     vlc
     yt-dlp
-    jellyfin-media-player
+    #jellyfin-media-player
   ];
 
   home-manager.users.zozano = {
