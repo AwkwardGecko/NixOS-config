@@ -14,6 +14,6 @@
       size = 16;
     };
 
-    gtk.gtk4.theme = null;
+    #gtk.gtk4.theme = null;
   };
 }
