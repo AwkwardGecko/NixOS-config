@@ -22,7 +22,7 @@
     enable32Bit = true;
   };
 
-  boot.kernelModules = ["ntc6775" ];
+  boot.kernelModules = ["ntc6775"];
 
   programs.coolercontrol.enable = true;
   services.hardware.openrgb.enable = true;
