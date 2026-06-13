@@ -5,11 +5,11 @@
   pkgs,
   ...
 }: {
-  services.sillytavern = {
-    enable = true;
-    port = 8045;
-    listen = true;
-  };
+  # services.sillytavern = {
+  #   enable = true;
+  #   port = 8045;
+  #   listen = true;
+  # };
 
   services.comfyui = {
     enable = true;
