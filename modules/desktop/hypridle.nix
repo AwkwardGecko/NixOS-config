@@ -39,16 +39,16 @@
 
         listener = [
           {
-            timeout = 1200;
+            timeout = 600;
             on-timeout = "loginctl lock-session";
           }
+          # {
+          #   timeout = 660;
+          #   on-timeout = "hyprctl dispatch dpms off";
+          #   on-resume = "hyprctl dispatch dpms on";
+          # }
           {
-            timeout = 600;
-            on-timeout = "hyprctl dispatch dpms off";
-            on-resume = "hyprctl dispatch dpms on";
-          }
-          {
-            timeout = 2400;
+            timeout = 1200;
             on-timeout = "systemctl suspend";
           }
         ];
@@ -57,7 +57,7 @@
 
     wayland.windowManager.hyprland.settings.misc.allow_session_lock_restore = true;
   };
-  
+
   security.pam.services.hyprlock = {};
   hardware.nvidia.powerManagement.enable = true;
 
