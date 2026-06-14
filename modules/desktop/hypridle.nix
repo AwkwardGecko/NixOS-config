@@ -44,13 +44,13 @@
           # }
 
           {
-            timeout = 300;
+            timeout = 900;
             on-timeout = "hyprctl dispatch dpms off";
             on-resume = "hyprctl dispatch dpms on && hyprctl reload";
           }
 
           {
-            timeout = 600;
+            timeout = 1200;
             on-timeout = "systemctl suspend";
           }
         ];
