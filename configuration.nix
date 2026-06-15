@@ -64,7 +64,7 @@
     ./modules/other/tdarr.nix
     ./modules/other/dev.nix
     ./modules/other/media.nix
-    #./modules/other/jellyfin-inhibit.nix
+    ./modules/other/jellyfin-inhibit.nix
     ./modules/shell/shell.nix
     ./modules/other/crypto.nix
     ./modules/other/browsers.nix
