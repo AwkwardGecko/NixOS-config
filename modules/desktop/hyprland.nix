@@ -52,7 +52,6 @@
       # hyprpaper
       hyprshot
       hyprsunset
-      hypridle
       wlsunset
     ];
 

@@ -5,6 +5,7 @@
   ...
 }: {
   home-manager.users.zozano = {
+    
     programs.hyprlock = {
       enable = true;
       settings = {
@@ -12,18 +13,6 @@
           hide_cursor = true;
           ignore_empty_input = true;
         };
-
-        # animations = {
-        #   enabled = true;
-        #   fade_in = {
-        #     duration = 300;
-        #     bezier = "easeOutQuint";
-        #   };
-        #   fade_out = {
-        #     duration = 300;
-        #     bezier = "easeOutQuint";
-        #   };
-        # };
       };
     };
 
@@ -31,18 +20,13 @@
       enable = true;
       settings = {
         general = {
-          lock_cmd = "pidof hyprlock || hyprlock";
+          #lock_cmd = "pidof hyprlock || hyprlock";
           #before_sleep_cmd = "loginctl lock-session";
           after_sleep_cmd = "hyprctl dispatch dpms on; hyprctl keyword misc:allow_session_lock_restore 1";
           ignore_dbus_inhibit = false;
         };
 
         listener = [
-          # {
-          #   timeout = 300;
-          #   on-timeout = "loginctl lock-session";
-          # }
-
           {
             timeout = 300;
             on-timeout = "hyprctl dispatch dpms off";
