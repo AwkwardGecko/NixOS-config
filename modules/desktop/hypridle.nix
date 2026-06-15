@@ -27,7 +27,7 @@
 
         listener = [
           {
-            timeout = 300;
+            timeout = 30;
             on-timeout = "hyprctl dispatch dpms off";
             #on-resume = "hyprctl dispatch dpms on && hyprctl reload";
             on-resume = "hyprctl dispatch dpms on";
