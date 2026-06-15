@@ -1,7 +1,7 @@
 {pkgs, ...}: {
-  home-manager.users.zozano.programs.nixvim.nixpkgs.source = pkgs.path;
 
   programs.nixvim = {
+    nixpkgs.source = pkgs.path;
     enable = true;
     colorschemes.gruvbox.enable = true;
 
