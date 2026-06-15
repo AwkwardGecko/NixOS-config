@@ -29,12 +29,12 @@
           {
             timeout = 30;
             on-timeout = "hyprctl dispatch dpms off";
-          #on-resume = "hyprctl dispatch dpms on && hyprctl reload";
+            #on-resume = "hyprctl dispatch dpms on && hyprctl reload";
             on-resume = "hyprctl dispatch dpms on";
           }
 
           {
-            timeout = 600;
+            timeout = 40;
             on-timeout = "systemctl suspend";
           }
         ];
