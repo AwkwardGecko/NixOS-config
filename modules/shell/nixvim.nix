@@ -1,5 +1,4 @@
 {pkgs, ...}: {
-
   programs.nixvim = {
     nixpkgs.source = pkgs.path;
     enable = true;
