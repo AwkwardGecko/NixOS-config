@@ -35,6 +35,7 @@
     cmake
     conda
     crane
+    dmidecode
     gcc
     gcc-unwrapped
     git
