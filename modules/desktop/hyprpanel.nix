@@ -11,7 +11,7 @@
       settings = {
         bar.layouts = {
           "*" = {
-            left = ["volume" "workspaces" "media" "ram" "custom/vram" ];
+            left = ["volume" "workspaces" "media" "ram" "custom/vram"];
             middle = ["clock"];
             right = ["systray" "bluetooth" "notifications" "dashboard"];
           };
@@ -60,7 +60,7 @@
         };
 
         bar.customModules.vram = {
-        label = true;
+          label = true;
           icon = "󰢮";
           pollingInterval = 2000;
           execute = "${pkgs.linuxPackages.nvidia_x11.settings}/bin/nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F', ' '{printf \"%dMiB/%dMiB\", $1, $2}'";
