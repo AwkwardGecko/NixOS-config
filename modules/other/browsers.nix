@@ -23,9 +23,9 @@ in {
   };
 
   home-manager.users.zozano = {
-    programs.librewolf = {
-      enable = true;
-    };
+    # programs.librewolf = {
+    #   enable = true;
+    # };
 
     stylix.targets.librewolf.profileNames = [
       "default"
