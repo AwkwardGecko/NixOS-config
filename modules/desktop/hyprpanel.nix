@@ -11,7 +11,7 @@
       settings = {
         bar.layouts = {
           "*" = {
-            left = ["volume" "workspaces" "media"];
+            left = ["volume" "workspaces" "media" "ram" "custom/vram" ];
             middle = ["clock"];
             right = ["systray" "bluetooth" "notifications" "dashboard"];
           };
@@ -50,6 +50,21 @@
         # Not sure `bar.tray.*` is a real key in current docs; keep if you know it works.
         #bar.tray.enable = true;
         #bar.tray.iconSize = 22;
+
+        bar.customModules.ram = {
+          icon = "";
+          label = true;
+          labelType = "percentage"; # or "used" / "used/total"
+          round = true;
+          pollingInterval = 2000;
+        };
+
+        bar.customModules.vram = {
+        label = true;
+          icon = "󰢮";
+          pollingInterval = 2000;
+          execute = "${pkgs.linuxPackages.nvidia_x11.settings}/bin/nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F', ' '{printf \"%dMiB/%dMiB\", $1, $2}'";
+        };
 
         menus.clock.time = {
           military = true;
