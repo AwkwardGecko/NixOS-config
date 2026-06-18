@@ -4,10 +4,13 @@
   pkgs,
   ...
 }: {
+  # environment.systemPackages = with pkgs; [
+  #   
+  # ];
+
   home-manager.users.zozano = {
     services.wayle = {
       enable = true;
-      #systemd.enable = true;
       settings = {
         bar.layouts = {
           "*" = {
@@ -84,7 +87,6 @@
 
     home.packages = with pkgs; [
       socat
-      python-gpustat
     ];
 
     # Coalesce bursts of monitor add/remove events (common on Nvidia+Wayland
