@@ -35,6 +35,11 @@
 
           bluetooth.label-show = false;
 
+          volume = {
+            scroll-up = "wayle audio output-volume +5";
+            scroll-down = "wayle audio output-volume -5";
+          };
+
           ram = {
             poll-interval-ms = 2000;
             format = "{{ percent }}%";
