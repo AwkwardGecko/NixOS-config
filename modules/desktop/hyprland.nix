@@ -77,7 +77,6 @@
           #"systemctl --user start graphical-session.target"
           "wlsunset -l -33.8 -L 151.2"
           #"hyprpaper &"
-          #"hyprpanel"
           #"$steam_friends"
           #"bash $HOME/.local/bin/video-wallpapers.sh"
         ];

@@ -5,7 +5,7 @@
   ...
 }: {
   home-manager.users.zozano = {
-    programs.hyprpanel = {
+    services.wayle = {
       enable = true;
       systemd.enable = true;
       settings = {
@@ -82,14 +82,17 @@
       };
     };
 
-    home.packages = [pkgs.socat];
+    home.packages = with pkgs; [
+      socat
+      python-gpustat
+    ];
 
     # Coalesce bursts of monitor add/remove events (common on Nvidia+Wayland
     # when DPMS toggles) into a single hyprpanel restart. Without debouncing,
     # 4-5 events fire in <1s, blowing past systemd's StartLimitBurst=5 and
     # leaving hyprpanel.service in a permanently 'failed (start-limit-hit)'
     # state until manually reset-failed.
-    home.file.".local/bin/hyprpanel-hotplug-restart" = {
+    home.file.".local/bin/wayle-hotplug-restart" = {
       executable = true;
       text = ''
         #!${pkgs.bash}/bin/bash
@@ -113,8 +116,8 @@
           fi
           (
             sleep "$DEBOUNCE_SEC"
-            ${pkgs.systemd}/bin/systemctl --user reset-failed hyprpanel.service 2>/dev/null || true
-            ${pkgs.systemd}/bin/systemctl --user restart hyprpanel.service || true
+            ${pkgs.systemd}/bin/systemctl --user reset-failed wayle.service 2>/dev/null || true
+            ${pkgs.systemd}/bin/systemctl --user restart wayle.service || true
           ) &
           pending_pid=$!
         }
@@ -129,14 +132,14 @@
       '';
     };
 
-    systemd.user.services.hyprpanel-hotplug-restart = {
+    systemd.user.services.wayle-hotplug-restart = {
       Unit = {
-        Description = "Restart HyprPanel on monitor hotplug (debounced)";
+        Description = "Restart wayle on monitor hotplug (debounced)";
         After = ["graphical-session.target"];
         PartOf = ["graphical-session.target"];
       };
       Service = {
-        ExecStart = "%h/.local/bin/hyprpanel-hotplug-restart";
+        ExecStart = "%h/.local/bin/wayle-hotplug-restart";
         Restart = "always";
         RestartSec = "1s";
       };
@@ -148,6 +151,6 @@
     # Disable the start-limiter on hyprpanel itself. If something does
     # somehow burst-restart it, we'd rather it keep trying than land in
     # 'failed (start-limit-hit)' and require manual intervention.
-    systemd.user.services.hyprpanel.Unit.StartLimitIntervalSec = 0;
+    systemd.user.services.wayle.Unit.StartLimitIntervalSec = 0;
   };
 }

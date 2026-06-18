@@ -23,7 +23,7 @@
     ./modules/core/printer.nix
 
     ./modules/desktop/hyprland.nix
-    ./modules/desktop/hyprpanel.nix
+    ./modules/desktop/wayle.nix
     ./modules/desktop/hypridle.nix
     ./modules/desktop/rofi.nix
     ./modules/desktop/style.nix
