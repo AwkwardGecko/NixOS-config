@@ -25,7 +25,7 @@
               right = ["systray" "weather" "notifications" "dashboard"];
             }
           ];
-          background-opacity = 100;
+          background-opacity = 0;
         };
 
         modules = {
