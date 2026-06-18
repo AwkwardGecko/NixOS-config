@@ -101,20 +101,20 @@
     #   '';
     # };
 
-  #   systemd.user.services.wayle-hotplug-restart = {
-  #     Unit = {
-  #       Description = "Restart wayle on monitor hotplug (debounced)";
-  #       After = ["graphical-session.target"];
-  #       PartOf = ["graphical-session.target"];
-  #     };
-  #     Service = {
-  #       ExecStart = "%h/.local/bin/wayle-hotplug-restart";
-  #       Restart = "always";
-  #       RestartSec = "1s";
-  #     };
-  #     Install = {WantedBy = ["graphical-session.target"];};
-  #   };
-  #
-  #   systemd.user.services.wayle.Unit.StartLimitIntervalSec = 0;
+    #   systemd.user.services.wayle-hotplug-restart = {
+    #     Unit = {
+    #       Description = "Restart wayle on monitor hotplug (debounced)";
+    #       After = ["graphical-session.target"];
+    #       PartOf = ["graphical-session.target"];
+    #     };
+    #     Service = {
+    #       ExecStart = "%h/.local/bin/wayle-hotplug-restart";
+    #       Restart = "always";
+    #       RestartSec = "1s";
+    #     };
+    #     Install = {WantedBy = ["graphical-session.target"];};
+    #   };
+    #
+    #   systemd.user.services.wayle.Unit.StartLimitIntervalSec = 0;
   };
 }

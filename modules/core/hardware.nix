@@ -25,6 +25,11 @@
   boot.kernelModules = ["nct6775"];
 
   programs.coolercontrol.enable = true;
-  services.hardware.openrgb.enable = true;
+  
+  services.hardware.openrgb = {
+    enable = true;
+    startupProfile = "Zozano";
+  };
+
   zramSwap.enable = true;
 }

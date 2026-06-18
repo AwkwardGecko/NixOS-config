@@ -72,7 +72,7 @@
           "signal-desktop"
           "steam -silent"
           "coolercontrol"
-          "openrgb --startminimized -p Default"
+          #"openrgb --startminimized -p Zozano"
           "wayle"
 
           #"protonmail-bridge --noninteractive"
