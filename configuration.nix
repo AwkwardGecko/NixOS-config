@@ -31,6 +31,7 @@
     ./modules/desktop/theme.nix
     ./modules/desktop/wallpaper.nix
     ./modules/desktop/portals.nix
+    ./modules/desktop/wlsunset.nix
     #./modules/desktop/xfce4.nix
 
     ./modules/gaming/tools.nix
