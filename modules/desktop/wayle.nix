@@ -52,7 +52,8 @@
           custom = [
             {
               id = "vram";
-              command = "${config.hardware.nvidia.package.bin}/bin/nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F', ' '{printf \"%dMiB/%dMiB\", $1, $2}'";
+              command = "${config.hardware.nvidia.package.bin}/bin/nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F', ' '{printf \"%d\", ($1/$2)*100}'";
+              #command = "${config.hardware.nvidia.package.bin}/bin/nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F', ' '{printf \"%dMiB/%dMiB\", $1, $2}'";
               interval-ms = 2000;
               icon-name = "ld-gpu-symbolic";
               format = "{{ output }}";
