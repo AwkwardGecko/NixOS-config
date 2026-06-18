@@ -7,7 +7,7 @@
   home-manager.users.zozano = {
     services.wayle = {
       enable = true;
-      systemd.enable = true;
+      #systemd.enable = true;
       settings = {
         bar.layouts = {
           "*" = {
