@@ -20,7 +20,7 @@
           layout = [
             {
               monitor = "*";
-              left = ["volume" "hyprland-workspaces" "media" "ram" "custom-vram"];
+              left = ["volume" "hyprland-workspaces" "ram" "custom-vram" "media"];
               center = ["clock"];
               right = ["systray" "bluetooth" "notifications" "dashboard"];
             }
