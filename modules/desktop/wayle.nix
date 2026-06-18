@@ -22,7 +22,7 @@
               monitor = "*";
               left = ["volume" "hyprland-workspaces" "ram" "custom-vram" "media"];
               center = ["clock"];
-              right = ["systray" "bluetooth" "notifications" "dashboard"];
+              right = ["systray" "weather" "notifications" "dashboard"];
             }
           ];
           background-opacity = 100;
