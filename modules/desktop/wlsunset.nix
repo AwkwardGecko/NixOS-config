@@ -1,6 +1,10 @@
-{ config, lib, pkgs, ... }:
 {
-  services.wlsunset = {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  home-manager.users.zozano.services.wlsunset = {
     enable = true;
     latitude = -31.43;
     longitude = 152.91;
