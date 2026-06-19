@@ -34,9 +34,9 @@
 
   systemd.user.services.openrgb-profile = {
     description = "Apply OpenRGB profile";
-    wantedBy = [ "multi-user.target" ];
-    after = [ "openrgb.service" ];
-    requires = [ "openrgb.service" ];
+    wantedBy = ["multi-user.target"];
+    after = ["openrgb.service"];
+    requires = ["openrgb.service"];
     serviceConfig = {
       Type = "oneshot";
       ExecStartPre = "${pkgs.coreutils}/bin/sleep 2";
