@@ -34,11 +34,13 @@
 
   systemd.user.services.openrgb-profile = {
     description = "Apply OpenRGB profile";
-    wantedBy = ["graphical-sessioon.target"];
-    after = ["openrgb.service"];
+    wantedBy = [ "multi-user.target" ];
+    after = [ "openrgb.service" ];
+    requires = [ "openrgb.service" ];
     serviceConfig = {
       Type = "oneshot";
-      ExecStart = "${pkgs.openrgb}/bin/openrgb --profile Zozano";
+      ExecStartPre = "${pkgs.coreutils}/bin/sleep 2";
+      ExecStart = "${pkgs.openrgb}/bin/openrgb --client --profile Zozano";
     };
   };
 
