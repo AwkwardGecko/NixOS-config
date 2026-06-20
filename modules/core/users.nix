@@ -14,6 +14,7 @@
       "docker"
       "input"
       "uinput"
+      "ydotool"
     ];
   };
 }
