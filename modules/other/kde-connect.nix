@@ -6,6 +6,6 @@
 }: {
   programs = {
     kdeconnect.enable = true;
-    programs.ydotool.enable = true;
+    ydotool.enable = true;
   };
 }
