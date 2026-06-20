@@ -13,6 +13,7 @@
       "gamemode"
       "docker"
       "input"
+      "uinput"
     ];
   };
 }
