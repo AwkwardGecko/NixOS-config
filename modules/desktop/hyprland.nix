@@ -94,6 +94,7 @@
           "GTK_USE_PORTAL,1"
           "WLR_NO_HARDWARE_CURSORS,1"
           "__GL_VRR_ALLOWED,1"
+          "YDOTOOL_SOCKET,/run/ydotoold/socket"
         ];
 
         general = {
