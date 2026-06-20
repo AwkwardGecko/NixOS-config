@@ -4,8 +4,7 @@
   pkgs,
   ...
 }: {
-
-  home-manager.users.zozano.home.sesstionVariables.YDOTOOL_DOCKER = "/run/ydotoold/socket";
+  home-manager.users.zozano.wayland.windowManager.hyprland.settings.env = "/run/ydotoold/socket";
 
   programs = {
     kdeconnect.enable = true;
