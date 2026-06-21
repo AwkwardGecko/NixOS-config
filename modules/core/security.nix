@@ -7,6 +7,7 @@
 }: {
   home-manager.users.zozano = {
     programs.gpg.enable = true;
+    imports = [ sops-nix.homeManagerModules.sops ];
   };
 
   imports = [inputs.sops-nix.nixosModules.sops];

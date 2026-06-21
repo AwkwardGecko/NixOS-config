@@ -5,7 +5,10 @@
   pkgs,
   ...
 }: {
-  # imports = [
+  imports = [
+      inputs.sops-nix.homeManagerModules.sops
+  ];
+
   # ]; import via configuration.nix module with home-manager.users.zozano = {};
 
   # home.packages = with pkgs; [
