@@ -26,7 +26,7 @@
     owner = "zozano";
   };
   #home-manager.users.zozano.programs.rclone.remotes.proton.secrets.user = config.sops.secrets."proton/user".path;
-  home-manager.users.zozano.programs.rclone.remotes.proton.secrets.pass = config.sops.secrets."proton/pass".path;
+  home-manager.users.zozano.programs.rclone.remotes.proton.secrets.password = config.sops.secrets."proton/pass".path;
   home-manager.users.zozano.programs.rclone.remotes.proton.secrets.otp_secret_key = config.sops.secrets."proton/oath-seed".path;
 
   sops.secrets."tailscale/pre_auth_key" = {};
