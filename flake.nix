@@ -35,6 +35,7 @@
       specialArgs = {inherit inputs;};
       modules = [
         ./configuration.nix
+        sops-nix.nixosModules.sops
         home-manager.nixosModules.home-manager
         nix-flatpak.nixosModules.nix-flatpak
         nixvim.nixosModules.nixvim
