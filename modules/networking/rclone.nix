@@ -12,10 +12,10 @@
           type = "protondrive";
           username = "zozano@protonmail.com";
         };
-        secrets = {
-          pass = config.sops.secrets."proton/pass".path;
-          otp_secret_key = config.sops.secrets."proton/oath-seed".path;
-        };
+        # secrets = {
+        #   pass = config.sops.secrets."proton/pass".path;
+        #   otp_secret_key = config.sops.secrets."proton/oath-seed".path;
+        # };
         # secrets = # check ~/.dotfiles/modules/core/security.nix
       };
     };
