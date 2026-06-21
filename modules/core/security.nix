@@ -22,8 +22,8 @@
   sops.secrets."proton/pass" = {};
   sops.secrets."proton/oath-seed" = {};
   #home-manager.users.zozano.programs.rclone.remotes.proton.secrets.user = config.sops.secrets."proton/user".path;
-  #home-manager.users.zozano.programs.rclone.remotes.proton.secrets.pass = config.sops.secrets."proton/pass".path;
-  #home-manager.users.zozano.programs.rclone.remotes.proton.secrets.otp_secret_key = config.sops.secrets."proton/oath-seed".path;
+  home-manager.users.zozano.programs.rclone.remotes.proton.secrets.pass = config.sops.secrets."proton/pass".path;
+  home-manager.users.zozano.programs.rclone.remotes.proton.secrets.otp_secret_key = config.sops.secrets."proton/oath-seed".path;
 
   sops.secrets."tailscale/pre_auth_key" = {};
   services.tailscale.authKeyFile = config.sops.secrets."tailscale/pre_auth_key".path; # generated on z-home-mac
