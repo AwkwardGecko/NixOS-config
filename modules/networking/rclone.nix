@@ -14,6 +14,7 @@
         };
       };
     };
+  };
 
     environment.systemPackages = with pkgs; [
       oath-toolkit
@@ -51,5 +52,4 @@
     #
     #   Install.WantedBy = ["timers.target"];
     # };
-  };
 }
