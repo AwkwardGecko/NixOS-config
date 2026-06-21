@@ -7,7 +7,6 @@
 }: {
   home-manager.users.zozano = {
     programs.gpg.enable = true;
-    imports = [ sops-nix.homeManagerModules.sops ];
   };
 
   imports = [inputs.sops-nix.nixosModules.sops];
@@ -19,9 +18,9 @@
   fileSystems."/server".options = ["IdentityFile=${config.sops.secrets."ssh/home-server-key".path}"];
   fileSystems."/data".options = ["IdentityFile=${config.sops.secrets."ssh/home-server-key".path}"];
 
-  sops.secrets."proton/user" = {};
-  sops.secrets."proton/pass" = {};
-  sops.secrets."proton/oath-seed" = {};
+  #sops.secrets."proton/user" = {};
+  #sops.secrets."proton/pass" = {};
+  #sops.secrets."proton/oath-seed" = {};
   #home-manager.users.zozano.programs.rclone.remotes.proton.secrets.user = config.sops.secrets."proton/user".path;
   #home-manager.users.zozano.programs.rclone.remotes.proton.secrets.pass = config.sops.secrets."proton/pass".path;
   #home-manager.users.zozano.programs.rclone.remotes.proton.secrets.otp_secret_key = config.sops.secrets."proton/oath-seed".path;

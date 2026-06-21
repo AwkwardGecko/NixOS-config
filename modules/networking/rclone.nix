@@ -3,11 +3,8 @@
   lib,
   pkgs,
   ...
-}: let
-  localDir = "~/Proton-Drive";
-  remoteDir = "proton:dectech-6af36c";
-in {
-  home-manager.users.zozano = {config, ...}: {
+}:{
+  home-manager.users.zozano = {
     programs.rclone = {
       enable = true;
       remotes.proton = {
