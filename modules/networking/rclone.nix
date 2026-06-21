@@ -11,6 +11,7 @@
         config = {
           type = "protondrive";
           username = "zozano@protonmail.com";
+          enable_caching = true;
         };
       };
     };
