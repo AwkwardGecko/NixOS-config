@@ -15,6 +15,10 @@
       };
     };
 
+    environment.systemPackages = with pkgs; [
+      oath-toolkit
+    ];
+
     # systemd.user.services.rclone-proton-sync = {
     #   Unit = {
     #     Description = "Sync ~/Proton-Drive with Proton Drive";
