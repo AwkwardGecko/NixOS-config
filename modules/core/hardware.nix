@@ -37,7 +37,6 @@ in {
 
   programs.coolercontrol.enable = true;
 
-
   systemd.user.services.openrgb-profile = {
     description = "Apply OpenRGB profile";
     wantedBy = ["graphical-session.target"];
@@ -53,7 +52,6 @@ in {
     };
     unitConfig.StartLimitBurst = 5;
   };
-
 
   #services.hardware.openrgb = {
   #enable = true;
