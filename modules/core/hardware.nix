@@ -37,21 +37,21 @@ in {
 
   programs.coolercontrol.enable = true;
 
-  systemd.user.services.openrgb-profile = {
-    description = "Apply OpenRGB profile";
-    wantedBy = ["graphical-session.target"];
-    after = ["graphical-session.target"];
-    serviceConfig = {
-      Type = "oneshot";
-      # retry until the SDK server is actually accepting connections
-      ExecStart = "${pkgs.openrgb}/bin/openrgb --client --profile Zozano";
-      # crude but reliable: wait for the port, then apply
-      ExecStartPre = "${pkgs.bash}/bin/sh -c 'for i in $(seq 1 30); do ${pkgs.openrgb}/bin/openrgb --noautoconnect --list-devices >/dev/null 2>&1 && exit 0; sleep 1; done; exit 0'";
-      Restart = "on-failure";
-      RestartSec = 2;
+  config = {
+    services.udev.packages = [ pkgs.openrgb ];
+    boot.kernelModules = [ "i2c-dev" ];
+    hardware.i2c.enable = true;
+
+    systemd.services.no-rgb = {
+      description = "no-rgb";
+      serviceConfig = {
+        ExecStart = "${no-rgb}/bin/no-rgb";
+        Type = "oneshot";
+      };
+      wantedBy = [ "multi-user.target" ];
     };
-    unitConfig.StartLimitBurst = 5;
   };
+
 
   #services.hardware.openrgb = {
   #enable = true;
