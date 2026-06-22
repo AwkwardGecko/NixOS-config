@@ -28,21 +28,21 @@
 
   services.hardware.openrgb = {
     enable = true;
-    motherboard = "amd";
-    startupProfile = "Zozano";
+    #motherboard = "amd";
+    #startupProfile = "Zozano";
   };
 
-  systemd.user.services.openrgb-profile = {
-    description = "Apply OpenRGB profile";
-    wantedBy = ["multi-user.target"];
-    after = ["openrgb.service"];
-    requires = ["openrgb.service"];
-    serviceConfig = {
-      Type = "oneshot";
-      ExecStartPre = "${pkgs.coreutils}/bin/sleep 5";
-      ExecStart = "${pkgs.openrgb}/bin/openrgb --profile Default.orp.ba";
-    };
-  };
+  # systemd.user.services.openrgb-profile = {
+  #   description = "Apply OpenRGB profile";
+  #   wantedBy = ["multi-user.target"];
+  #   after = ["openrgb.service"];
+  #   requires = ["openrgb.service"];
+  #   serviceConfig = {
+  #     Type = "oneshot";
+  #     ExecStartPre = "${pkgs.coreutils}/bin/sleep 5";
+  #     ExecStart = "${pkgs.openrgb}/bin/openrgb --profile Default.orp.ba";
+  #   };
+  # };
 
   zramSwap.enable = true;
 }
