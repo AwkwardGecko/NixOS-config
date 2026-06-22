@@ -39,8 +39,8 @@
     requires = ["openrgb.service"];
     serviceConfig = {
       Type = "oneshot";
-      ExecStartPre = "${pkgs.coreutils}/bin/sleep 2";
-      ExecStart = "${pkgs.openrgb}/bin/openrgb --client --profile Zozano";
+      ExecStartPre = "${pkgs.coreutils}/bin/sleep 5";
+      ExecStart = "${pkgs.openrgb}/bin/openrgb --profile Default.orp.ba";
     };
   };
 

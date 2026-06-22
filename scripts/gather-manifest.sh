@@ -39,11 +39,19 @@ have() { command -v "$1" >/dev/null 2>&1; }
 scan_local() {
   local root="${1:-$HOME}"
   root="${root%/}"
-  local out="$OUTDIR/manifest-local-${HOST}.jsonl"
-  local sum="$OUTDIR/summary-${HOST}.txt"
+  # Tag output by host AND a sanitized root path so multiple roots on one
+  # host don't overwrite each other (e.g. /home vs /data).
+  local tag
+  tag=$(printf '%s' "${root:-root}" | sed 's#^/##; s#[/ ]#_#g')
+  [ -z "$tag" ] && tag="root"
+  local out="$OUTDIR/manifest-local-${HOST}-${tag}.jsonl"
+  local sum="$OUTDIR/summary-${HOST}-${tag}.txt"
 
   echo ">> Local scan of: $root"
   echo ">> Manifest: $out"
+  if [ ! -r "$root" ]; then
+    echo "!! Cannot read $root (permission denied or missing). If it's container/root-owned, re-run with sudo." >&2
+  fi
   : > "$out"
 
   local has_exif="no"
@@ -82,11 +90,21 @@ scan_local() {
     find "$root" \
       \( -path '*/.cache' -o -path '*/.git' -o -path '*/node_modules' \
          -o -path '*/.local/share/Trash' \
-         -o -path '*/.steam' -o -path '*/.var' \) -prune -o \
-      -type f -print0
+         -o -path '*/.local/share/ComfyUI' \
+         -o -path '*/.local/share/Steam' \
+         -o -path '*/.steam' \
+         -o -path '*/.var' \) -prune -o \
+      -type f -print0 2> >(grep -i 'permission denied' > "$OUTDIR/perm-errors-${HOST}-${tag}.log")
   )
 
   echo ">> $count files indexed."
+  if [ "$count" -eq 0 ]; then
+    echo "!! WARNING: 0 files indexed under $root."
+    echo "!! Likely a permissions issue (container/root-owned data) — check $OUTDIR/perm-errors-${HOST}-${tag}.log and consider re-running with sudo." >&2
+  fi
+  if [ -s "$OUTDIR/perm-errors-${HOST}-${tag}.log" ]; then
+    echo "!! Some paths were unreadable; see $OUTDIR/perm-errors-${HOST}-${tag}.log (re-run with sudo to capture them)."
+  fi
 
   # Human summary
   {
