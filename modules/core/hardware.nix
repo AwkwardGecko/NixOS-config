@@ -3,8 +3,7 @@
   lib,
   pkgs,
   ...
-}:
-let
+}: let
   no-rgb = pkgs.writeScriptBin "no-rgb" ''
     #!/bin/sh
     NUM_DEVICES=$(${pkgs.openrgb}/bin/openrgb --noautoconnect --list-devices | grep -E '^[0-9]+: ' | wc -l)
@@ -13,9 +12,7 @@ let
       ${pkgs.openrgb}/bin/openrgb --noautoconnect --device $i --mode static --color 000000
     done
   '';
-in
-
-{
+in {
   hardware.enableAllFirmware = true;
 
   environment.systemPackages = with pkgs; [
@@ -56,13 +53,11 @@ in
     unitConfig.StartLimitBurst = 5;
   };
 
-
-
   #services.hardware.openrgb = {
-    #enable = true;
-    #package = pkgs.openrgb-with-all-plugins;
-    #motherboard = "amd";
-    #startupProfile = "Zozano";
+  #enable = true;
+  #package = pkgs.openrgb-with-all-plugins;
+  #motherboard = "amd";
+  #startupProfile = "Zozano";
   #};
 
   # systemd.user.services.openrgb-profile = {
