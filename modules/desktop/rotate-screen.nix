@@ -1,7 +1,5 @@
 # ~/.dotfiles/modules/rotate-screen.nix
-{ ... }:
-
-{
+{...}: {
   home-manager.users.zozano.home.file.".local/bin/scripts/rotate-screen.sh" = {
     executable = true;
     text = ''
