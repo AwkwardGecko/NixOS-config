@@ -17,7 +17,7 @@
           layout = [
             {
               monitor = "*";
-              left = ["volume" "hyprland-workspaces" "ram" "custom-vram" "media"];
+              left = ["volume" "hyprland-workspaces" "ram" "custom-vram" "crafty" "media"];
               center = ["clock"];
               right = ["systray" "weather" "notifications" "dashboard"];
             }
@@ -55,6 +55,13 @@
               command = "${config.hardware.nvidia.package.bin}/bin/nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F', ' '{printf \"%d%%\", ($1/$2)*100}'";
               interval-ms = 2000;
               icon-name = "ld-cpu-symbolic";
+              format = "{{ output }}";
+            }
+            {
+              id = "crafty";
+              command = "${pkgs.jq}/bin/jq -r '.text // empty' ~/.cache/crafty-battery.json 2>/dev/null";
+              interval-ms = 10000;
+              icon-name = "ld-flame-symbolic";
               format = "{{ output }}";
             }
           ];

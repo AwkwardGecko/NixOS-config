@@ -1,11 +1,14 @@
-{ config, lib, pkgs, ... }:
-
-let
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: let
   craftyMac = "4C:24:98:FB:A7:86";
   craftyName = "STORZ&BICKEL";
 
   # bleak available to the script
-  pythonEnv = pkgs.python3.withPackages (ps: [ ps.bleak ]);
+  pythonEnv = pkgs.python3.withPackages (ps: [ps.bleak]);
 
   # The poller. Reads battery (+ temps) and writes JSON for the bar.
   craftyPoller = pkgs.writeScript "crafty-poll.py" ''
@@ -55,12 +58,10 @@ let
 
     asyncio.run(main())
   '';
-in
-{
-
+in {
   home-manager.users.zozano = {
     # Make bleak + the script available if you want to run it manually too
-    home.packages = [ pythonEnv ];
+    home.packages = [pythonEnv];
 
     systemd.user.services.crafty-battery = {
       Unit.Description = "Poll Crafty+ battery over BLE";
@@ -74,9 +75,9 @@ in
       Unit.Description = "Poll Crafty+ battery periodically";
       Timer = {
         OnBootSec = "30s";
-        OnUnitActiveSec = "60s";   # poll every 60s
+        OnUnitActiveSec = "60s"; # poll every 60s
       };
-      Install.WantedBy = [ "timers.target" ];
+      Install.WantedBy = ["timers.target"];
     };
   };
 }
