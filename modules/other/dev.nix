@@ -16,6 +16,7 @@
   '';
 
   home-manager.users.zozano = {
+    programs.cargo.enable = true;
     programs.git = {
       enable = true;
       settings = {
