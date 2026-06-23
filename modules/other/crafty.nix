@@ -61,7 +61,11 @@
 in {
   home-manager.users.zozano = {
     # Make bleak + the script available if you want to run it manually too
-    home.packages = [pythonEnv];
+    home.packages = [
+      pythonEnv
+      pkgs.socat
+      pkgs.jq
+    ];
 
     systemd.user.services.crafty-battery = {
       Unit.Description = "Poll Crafty+ battery over BLE";
