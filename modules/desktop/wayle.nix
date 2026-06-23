@@ -19,9 +19,9 @@
               monitor = "*";
               left = [
                 "volume"
-                "hyprland-workspaces" 
-                "ram" 
-                "custom-vram" 
+                "hyprland-workspaces"
+                "ram"
+                "custom-vram"
                 "custom-crafty"
                 "custom-mouse-battery"
                 "media"
@@ -30,9 +30,9 @@
                 "clock"
               ];
               right = [
-                "systray" 
-                "weather" 
-                "notifications" 
+                "systray"
+                "weather"
+                "notifications"
                 "dashboard"
               ];
             }

@@ -8,10 +8,7 @@
   #services.udev.packages = [ pkgs.game-devices-udev-rules ];
 
   hardware = {
-    #xpad-noone.enable = true;
-    #xpad-noone.enable = false;
-    # whether to enable The Xpad driver from the Linux kernel with support for Xbox One controllers removed.
-    xone.enable = true; # Dongle support
-    xpadneo.enable = true;
+    xone.enable = true; # dongle support
+    xpadneo.enable = true; # bluetooth support
   };
 }
