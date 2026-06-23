@@ -82,7 +82,7 @@ in {
     systemd.user.services.crafty-battery = {
       Unit = {
         Description = "Poll Crafty+ battery over BLE";
-        After = [ "bluetooth.target" ];
+        After = ["bluetooth.target"];
       };
 
       Service = {
@@ -90,7 +90,7 @@ in {
         Restart = "always";
         RestartSec = "10s";
       };
-      Install.WantedBy = [ "default.target" ];
+      Install.WantedBy = ["default.target"];
     };
   };
 }
