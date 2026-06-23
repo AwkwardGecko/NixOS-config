@@ -61,7 +61,7 @@
               id = "crafty";
               command = "${pkgs.jq}/bin/jq -r '.text // empty' ~/.cache/crafty-battery.json 2>/dev/null";
               interval-ms = 10000;
-              icon-name = "ld-flame-symbolic";
+              icon-name = "ld-wind-symbolic";
               format = "{{ output }}";
             }
           ];
