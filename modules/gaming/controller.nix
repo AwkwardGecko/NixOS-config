@@ -11,6 +11,7 @@
     #xpad-noone.enable = true;
     #xpad-noone.enable = false;
     # whether to enable The Xpad driver from the Linux kernel with support for Xbox One controllers removed.
-    xone.enable = true;
+    xone.enable = true; # Dongle support
+    xpadneo.enable = true;
   };
 }
