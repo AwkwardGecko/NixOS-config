@@ -11,7 +11,7 @@
   pythonEnv = pkgs.python3.withPackages (ps: [ps.bleak]);
 
   # The poller. Reads battery (+ temps) and writes JSON for the bar.
-craftyPoller = pkgs.writeScript "crafty-poll.py" ''
+  craftyPoller = pkgs.writeScript "crafty-poll.py" ''
     #!${pythonEnv}/bin/python3
     import asyncio, json, os
     from bleak import BleakScanner, BleakClient
