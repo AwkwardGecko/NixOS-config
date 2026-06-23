@@ -153,6 +153,8 @@
           ",          F9,     exec, grimblast save area ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"
           ",          F10,    exec, grimblast copy area"
 
+          "$mainMod SHIFT,  left, exec, ~/.local/bin/scripts/rotate-screen.sh"
+
           "$mainMod, C, killactive,"
           "$mainMod, E, exec, $fileManager"
           "$mainMod, F, exec, $browser"

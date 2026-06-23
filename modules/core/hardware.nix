@@ -38,18 +38,17 @@ in {
 
   programs.coolercontrol.enable = true;
 
-    services.udev.packages = [pkgs.openrgb];
-    hardware.i2c.enable = true;
+  services.udev.packages = [pkgs.openrgb];
+  hardware.i2c.enable = true;
 
-    systemd.services.no-rgb = {
-      description = "no-rgb";
-      serviceConfig = {
-        ExecStart = "${no-rgb}/bin/no-rgb";
-        Type = "oneshot";
-      };
-      wantedBy = ["multi-user.target"];
+  systemd.services.no-rgb = {
+    description = "no-rgb";
+    serviceConfig = {
+      ExecStart = "${no-rgb}/bin/no-rgb";
+      Type = "oneshot";
     };
-  
+    wantedBy = ["multi-user.target"];
+  };
 
   #services.hardware.openrgb = {
   #enable = true;

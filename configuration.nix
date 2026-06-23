@@ -33,6 +33,7 @@
     ./modules/desktop/portals.nix
     ./modules/desktop/wlsunset.nix
     #./modules/desktop/xfce4.nix
+    ./modules/desktop/rotate-screen.nix
 
     ./modules/gaming/tools.nix
     ./modules/gaming/controller.nix
