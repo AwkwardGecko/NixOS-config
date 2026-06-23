@@ -9,6 +9,6 @@
 
   hardware = {
     xone.enable = true; # dongle support
-    xpadneo.enable = true; # bluetooth support
+    #xpadneo.enable = true; # bluetooth support
   };
 }
