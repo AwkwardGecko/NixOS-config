@@ -43,13 +43,12 @@
         else:
             write({"text": "", "tooltip": "Crafty offline", "class": "offline"})
 
-    async def poll_once():
-        """Return True on a successful read, False otherwise."""
-        dev = await BleakScanner.find_device_by_name(NAME, timeout=8)
-        if not dev:
-            write_offline()
-            return False
+async def poll_once():
         try:
+            dev = await BleakScanner.find_device_by_name(NAME, timeout=8)
+            if not dev:
+                write_offline()
+                return False
             async with BleakClient(dev, timeout=15) as c:
                 await asyncio.sleep(1)
                 batt = int.from_bytes(await c.read_gatt_char(BATTERY), "little")
@@ -60,7 +59,7 @@
                        "class": "connected"})
                 return True
         except Exception:
-            write_offline()
+            write_offline()   # adapter off, scan fail, connect fail — all handled
             return False
 
     async def main():

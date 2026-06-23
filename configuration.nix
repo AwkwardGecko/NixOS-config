@@ -75,7 +75,7 @@
     ./modules/other/protonmail.nix
     ./modules/other/kde-connect.nix
     ./modules/other/exiftool.nix
-    ./modules/other/crafty.nix
+    #./modules/other/crafty.nix
 
     ./modules/other/signal/signal.nix
   ];
