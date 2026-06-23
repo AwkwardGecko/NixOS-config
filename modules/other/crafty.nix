@@ -11,7 +11,7 @@
   pythonEnv = pkgs.python3.withPackages (ps: [ps.bleak]);
 
   # The poller. Reads battery (+ temps) and writes JSON for the bar.
-  craftyPoller = pkgs.writeScript "crafty-poll.py" ''
+craftyPoller = pkgs.writeScript "crafty-poll.py" ''
     #!${pythonEnv}/bin/python3
     import asyncio, json, os
     from bleak import BleakScanner, BleakClient
@@ -21,18 +21,20 @@
     CUR_TEMP = "00000011-4c45-4b43-4942-265a524f5453"
     TGT_TEMP = "00000021-4c45-4b43-4942-265a524f5453"
     OUT = os.path.expanduser("~/.cache/crafty-battery.json")
-
-    FAST_DELAY = 2     # seconds between polls while connected/successful
-    SLOW_DELAY = 60    # seconds between retries while offline
+    FAST_DELAY = 2
+    SLOW_DELAY = 60
 
     def read_last():
         try:
-            with open(OUT) as f: return json.load(f)
-        except Exception: return None
+            with open(OUT) as f:
+                return json.load(f)
+        except Exception:
+            return None
 
     def write(obj):
         os.makedirs(os.path.dirname(OUT), exist_ok=True)
-        with open(OUT, "w") as f: json.dump(obj, f)
+        with open(OUT, "w") as f:
+            json.dump(obj, f)
 
     def write_offline():
         last = read_last()
@@ -43,7 +45,7 @@
         else:
             write({"text": "", "tooltip": "Crafty offline", "class": "offline"})
 
-async def poll_once():
+    async def poll_once():
         try:
             dev = await BleakScanner.find_device_by_name(NAME, timeout=8)
             if not dev:
@@ -59,7 +61,7 @@ async def poll_once():
                        "class": "connected"})
                 return True
         except Exception:
-            write_offline()   # adapter off, scan fail, connect fail — all handled
+            write_offline()
             return False
 
     async def main():
