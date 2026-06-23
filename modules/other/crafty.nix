@@ -11,23 +11,42 @@
   pythonEnv = pkgs.python3.withPackages (ps: [ps.bleak]);
 
   # The poller. Reads battery (+ temps) and writes JSON for the bar.
-  craftyPoller = pkgs.writeScript "crafty-poll.py" ''
+craftyPoller = pkgs.writeScript "crafty-poll.py" ''
     #!${pythonEnv}/bin/python3
-    import asyncio, json, os, sys
+    import asyncio, json, os
     from bleak import BleakScanner, BleakClient
 
     NAME = "${craftyName}"
-    # TODO: confirm this is actually battery (read+notify, in 0-100 range).
     BATTERY = "00000041-4c45-4b43-4942-265a524f5453"
-    CUR_TEMP = "00000011-4c45-4b43-4942-265a524f5453"   # x0.1 °C
-    TGT_TEMP = "00000021-4c45-4b43-4942-265a524f5453"   # x0.1 °C
-
+    CUR_TEMP = "00000011-4c45-4b43-4942-265a524f5453"
+    TGT_TEMP = "00000021-4c45-4b43-4942-265a524f5453"
     OUT = os.path.expanduser("~/.cache/crafty-battery.json")
+
+    def read_last():
+        try:
+            with open(OUT) as f:
+                return json.load(f)
+        except Exception:
+            return None
 
     def write(obj):
         os.makedirs(os.path.dirname(OUT), exist_ok=True)
         with open(OUT, "w") as f:
             json.dump(obj, f)
+
+    def write_offline():
+        last = read_last()
+        if last and "percentage" in last:
+            pct = last["percentage"]
+            write({
+                "text": f"{pct}%",
+                "percentage": pct,
+                "tooltip": f"Crafty+ {pct}% (last known, offline)",
+                "class": "stale",
+            })
+        else:
+            # never had a reading
+            write({"text": "", "tooltip": "Crafty offline", "class": "offline"})
 
     async def main():
         dev = None
@@ -36,7 +55,7 @@
             if dev:
                 break
         if not dev:
-            write({"text": "", "tooltip": "Crafty offline", "class": "offline"})
+            write_offline()
             return
         for _ in range(4):
             try:
@@ -54,7 +73,7 @@
                     return
             except Exception:
                 await asyncio.sleep(4)
-        write({"text": "", "tooltip": "Crafty unreachable", "class": "offline"})
+        write_offline()
 
     asyncio.run(main())
   '';
