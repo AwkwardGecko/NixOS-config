@@ -22,58 +22,51 @@ craftyPoller = pkgs.writeScript "crafty-poll.py" ''
     TGT_TEMP = "00000021-4c45-4b43-4942-265a524f5453"
     OUT = os.path.expanduser("~/.cache/crafty-battery.json")
 
+    FAST_DELAY = 2     # seconds between polls while connected/successful
+    SLOW_DELAY = 60    # seconds between retries while offline
+
     def read_last():
         try:
-            with open(OUT) as f:
-                return json.load(f)
-        except Exception:
-            return None
+            with open(OUT) as f: return json.load(f)
+        except Exception: return None
 
     def write(obj):
         os.makedirs(os.path.dirname(OUT), exist_ok=True)
-        with open(OUT, "w") as f:
-            json.dump(obj, f)
+        with open(OUT, "w") as f: json.dump(obj, f)
 
     def write_offline():
         last = read_last()
         if last and "percentage" in last:
             pct = last["percentage"]
-            write({
-                "text": f"{pct}%",
-                "percentage": pct,
-                "tooltip": f"Crafty+ {pct}% (last known, offline)",
-                "class": "stale",
-            })
+            write({"text": f"{pct}%", "percentage": pct,
+                   "tooltip": f"Crafty+ {pct}% (last known, offline)", "class": "stale"})
         else:
-            # never had a reading
             write({"text": "", "tooltip": "Crafty offline", "class": "offline"})
 
-    async def main():
-        dev = None
-        for _ in range(3):
-            dev = await BleakScanner.find_device_by_name(NAME, timeout=12)
-            if dev:
-                break
+    async def poll_once():
+        """Return True on a successful read, False otherwise."""
+        dev = await BleakScanner.find_device_by_name(NAME, timeout=8)
         if not dev:
             write_offline()
-            return
-        for _ in range(4):
-            try:
-                async with BleakClient(dev, timeout=20) as c:
-                    await asyncio.sleep(1)
-                    batt = int.from_bytes(await c.read_gatt_char(BATTERY), "little")
-                    cur  = int.from_bytes(await c.read_gatt_char(CUR_TEMP), "little") / 10
-                    tgt  = int.from_bytes(await c.read_gatt_char(TGT_TEMP), "little") / 10
-                    write({
-                        "text": f"{batt}%",
-                        "percentage": batt,
-                        "tooltip": f"Crafty+ {batt}%\nCurrent {cur:.1f}°C / Target {tgt:.1f}°C",
-                        "class": "connected",
-                    })
-                    return
-            except Exception:
-                await asyncio.sleep(4)
-        write_offline()
+            return False
+        try:
+            async with BleakClient(dev, timeout=15) as c:
+                await asyncio.sleep(1)
+                batt = int.from_bytes(await c.read_gatt_char(BATTERY), "little")
+                cur  = int.from_bytes(await c.read_gatt_char(CUR_TEMP), "little") / 10
+                tgt  = int.from_bytes(await c.read_gatt_char(TGT_TEMP), "little") / 10
+                write({"text": f"{batt}%", "percentage": batt,
+                       "tooltip": f"Crafty+ {batt}%\nCurrent {cur:.1f}°C / Target {tgt:.1f}°C",
+                       "class": "connected"})
+                return True
+        except Exception:
+            write_offline()
+            return False
+
+    async def main():
+        while True:
+            ok = await poll_once()
+            await asyncio.sleep(FAST_DELAY if ok else SLOW_DELAY)
 
     asyncio.run(main())
   '';
