@@ -17,9 +17,24 @@
           layout = [
             {
               monitor = "*";
-              left = ["volume" "hyprland-workspaces" "ram" "custom-vram" "custom-crafty" "media"];
-              center = ["clock"];
-              right = ["systray" "weather" "notifications" "dashboard"];
+              left = [
+                "volume"
+                "hyprland-workspaces" 
+                "ram" 
+                "custom-vram" 
+                "custom-crafty"
+                "custom-mouse-battery"
+                "media"
+              ];
+              center = [
+                "clock"
+              ];
+              right = [
+                "systray" 
+                "weather" 
+                "notifications" 
+                "dashboard"
+              ];
             }
           ];
           background-opacity = 0;
@@ -62,6 +77,20 @@
               command = "${pkgs.jq}/bin/jq -r '.text // empty' ~/.cache/crafty-battery.json 2>/dev/null";
               interval-ms = 10000;
               icon-name = "ld-wind-symbolic";
+              format = "{{ output }}";
+            }
+            {
+              id = "mouse-battery";
+              command = ''
+                bat=$(cat /sys/class/power_supply/hidpp_battery_*/capacity 2>/dev/null | head -n1)
+                if [ -n "$bat" ]; then
+                  printf "%02d%%" "$bat"
+                else
+                  printf "off"
+                fi
+              '';
+              interval-ms = 30000;
+              icon-name = "input-mouse-symbolic";
               format = "{{ output }}";
             }
           ];
