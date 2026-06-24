@@ -48,6 +48,7 @@
     opencv
     openssl
     pkg-config
+    psmisc
     protobuf
     pyenv
     python3
