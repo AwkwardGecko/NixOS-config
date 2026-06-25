@@ -8,6 +8,8 @@
   imports = [
     ./hardware-configuration.nix
 
+
+
     ./modules/core/adb.nix
     ./modules/core/audio.nix
     ./modules/core/boot.nix
@@ -76,6 +78,7 @@
     ./modules/other/kde-connect.nix
     ./modules/other/exiftool.nix
     ./modules/other/crafty.nix
+    ./modules/other/shazam.nix
 
     ./modules/other/signal/signal.nix
   ];
