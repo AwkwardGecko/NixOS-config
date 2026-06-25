@@ -8,8 +8,6 @@
   imports = [
     ./hardware-configuration.nix
 
-
-
     ./modules/core/adb.nix
     ./modules/core/audio.nix
     ./modules/core/boot.nix
