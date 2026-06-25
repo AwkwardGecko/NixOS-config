@@ -23,7 +23,7 @@ in {
     smartmontools
     usbutils
     upower
-    solaar # mouse fix - for G703 broken on boot, needing to replug the dongle 
+    solaar # mouse fix - for G703 broken on boot, needing to replug the dongle
     liquidctl
   ];
 
