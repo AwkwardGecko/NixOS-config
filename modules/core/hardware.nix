@@ -23,12 +23,18 @@ in {
     smartmontools
     usbutils
     upower
+    solaar # mouse fix - for G703 broken on boot, needing to replug the dongle 
     liquidctl
   ];
 
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
+  };
+
+  hardware.logitech.wireless = {
+    enable = true;
+    enableGraphical = true;
   };
 
   boot.kernelModules = [
