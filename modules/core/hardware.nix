@@ -55,8 +55,8 @@ in {
       RemainAfterExit = true;
     };
     wantedBy = ["multi-user.target"];
-    before = [ "display-manager.service" ];
-    after = [ "systemd-udev-settle.service" ];
+    before = ["display-manager.service"];
+    after = ["systemd-udev-settle.service"];
   };
 
   #services.hardware.openrgb = {
