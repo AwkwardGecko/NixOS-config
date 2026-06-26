@@ -201,6 +201,6 @@ in {
     fpshazam
     pkgs.songrec
     pkgs.ffmpeg
-    (pkgs.python3.withPackages (ps: [ps.mutagen]))
+    (pkgs.lib.hiPrio (pkgs.python3.withPackages (ps: [ps.mutagen])))
   ];
 }
