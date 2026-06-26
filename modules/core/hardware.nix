@@ -52,8 +52,11 @@ in {
     serviceConfig = {
       ExecStart = "${no-rgb}/bin/no-rgb";
       Type = "oneshot";
+      RemainAfterExit = true;
     };
     wantedBy = ["multi-user.target"];
+    before = [ "display-manager.service" ];
+    after = [ "systemd-udev-settle.service" ];
   };
 
   #services.hardware.openrgb = {

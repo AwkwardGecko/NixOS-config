@@ -9,6 +9,15 @@
       pkgs.nil
     ];
 
+    keymaps = [
+      {
+        mode = "i";
+        key = "<C-;>";
+        action = "<End>;";
+        options.desc = "append semicolon at line end";
+      }
+    ];
+
     opts = {
       tabstop = 2;
       shiftwidth = 2;
