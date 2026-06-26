@@ -197,5 +197,10 @@
           main()
     '';
 in {
-  home-manager.users.zozano.home.packages = [fpshazam pkgs.songrec pkgs.ffmpeg];
+  home-manager.users.zozano.home.packages = [
+    fpshazam
+    pkgs.songrec
+    pkgs.ffmpeg
+    pkgs.python3Packages.mutagen
+  ];
 }
