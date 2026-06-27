@@ -45,7 +45,8 @@
   #programs.nix-ld.enable = true; # enable if custom nodes fail to find system libs
 
   environment.systemPackages = with pkgs; [
-    python312Packages.openai-whisper
+    python313Packages.openai-whisper
+    #python313Packages.google-genai
     whisperx
   ];
 
