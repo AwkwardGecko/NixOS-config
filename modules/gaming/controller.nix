@@ -12,12 +12,12 @@
     #xpadneo.enable = true; # bluetooth support
   };
 
-  boot.blacklistedKernelModules = [ "xone_dongle" ]; # delayed load to prevent boot fault
+  boot.blacklistedKernelModules = ["xone_dongle"]; # delayed load to prevent boot fault
 
   systemd.user.services.load-xone-dongle = {
     description = "Load Xbox dongle driver after login";
-    wantedBy = [ "graphical.target" ];
-    after = [ "graphical.target" ];
+    wantedBy = ["graphical.target"];
+    after = ["graphical.target"];
     serviceConfig = {
       Type = "oneshot";
       ExecStartPre = "${pkgs.coreutils}/bin/sleep 60";
