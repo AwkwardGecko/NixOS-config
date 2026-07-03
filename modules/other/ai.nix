@@ -61,24 +61,24 @@ in {
   #   ];
   # };
 
-  home-manager.users.zozano = {
-    ###########################################################################
-    # 1. Nautilus / Tracker3 — stop indexing + search
-    ###########################################################################
-    dconf.settings."org/freedesktop/Tracker3/Miner/Files" = {
-      # basename-matched, applies wherever a dir with this name shows up
-      ignored-directories = ["po" "CVS" "core-dumps" "lost+found" "ComfyUI"];
-      # marker-file based, path-precise (belt and suspenders)
-      ignored-directories-with-content = [".trackerignore" ".git" ".hg" ".nomedia"];
-    };
-
-    ###########################################################################
-    # 2. Dolphin / Baloo — stop indexing + search
-    ###########################################################################
-    xdg.configFile."baloofilerc".text = ''
-      [General]
-      exclude folders[$e]=${comfyuiDir}/
-    '';
+  #home-manager.users.zozano = {
+    # ###########################################################################
+    # # 1. Nautilus / Tracker3 — stop indexing + search
+    # ###########################################################################
+    # dconf.settings."org/freedesktop/Tracker3/Miner/Files" = {
+    #   # basename-matched, applies wherever a dir with this name shows up
+    #   ignored-directories = ["po" "CVS" "core-dumps" "lost+found" "ComfyUI"];
+    #   # marker-file based, path-precise (belt and suspenders)
+    #   ignored-directories-with-content = [".trackerignore" ".git" ".hg" ".nomedia"];
+    # };
+    #
+    # ###########################################################################
+    # # 2. Dolphin / Baloo — stop indexing + search
+    # ###########################################################################
+    # xdg.configFile."baloofilerc".text = ''
+    #   [General]
+    #   exclude folders[$e]=${comfyuiDir}/
+    # '';
 
     ###########################################################################
     # 3. Drop marker files in the dir itself — makes exclusion spec-guaranteed
@@ -94,5 +94,5 @@ in {
     ###########################################################################
     #   home.file.".cache/thumbnails".source =
     #     config.lib.file.mkOutOfStoreSymlink "${comfyuiDir}/.thumbnails";
-  };
+  #};
 }
