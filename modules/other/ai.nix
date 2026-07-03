@@ -92,7 +92,7 @@ in {
     ###########################################################################
     # 4. Relocate the thumbnail cache into the ComfyUI root
     ###########################################################################
-    home.file.".cache/thumbnails".source =
-      config.lib.file.mkOutOfStoreSymlink "${comfyuiDir}/.thumbnails";
+    #   home.file.".cache/thumbnails".source =
+    #     config.lib.file.mkOutOfStoreSymlink "${comfyuiDir}/.thumbnails";
   };
 }
