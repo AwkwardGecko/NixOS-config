@@ -4,7 +4,13 @@
   inputs,
   pkgs,
   ...
-}: {
+}: 
+
+let
+  comfyuiDir = "${config.home.homeDirectory}/.local/share/ComfyUI";
+in
+
+{
   # services.sillytavern = {
   #   enable = true;
   #   port = 8045;
@@ -58,4 +64,41 @@
   #     "discard=async"
   #   ];
   # };
+
+
+  home-manager.users.zozano = {
+    ###########################################################################
+    # 1. Nautilus / Tracker3 — stop indexing + search
+    ###########################################################################
+    dconf.settings."org/freedesktop/Tracker3/Miner/Files" = {
+      # basename-matched, applies wherever a dir with this name shows up
+      ignored-directories = [ "po" "CVS" "core-dumps" "lost+found" "ComfyUI" ];
+      # marker-file based, path-precise (belt and suspenders)
+      ignored-directories-with-content = [ ".trackerignore" ".git" ".hg" ".nomedia" ];
+    };
+
+    ###########################################################################
+    # 2. Dolphin / Baloo — stop indexing + search
+    ###########################################################################
+    xdg.configFile."baloofilerc".text = ''
+      [General]
+      exclude folders[$e]=${comfyuiDir}/
+    '';
+
+    ###########################################################################
+    # 3. Drop marker files in the dir itself — makes exclusion spec-guaranteed
+    #    even if dconf/baloofilerc get reset or you use a different machine
+    ###########################################################################
+    home.activation.excludeComfyUIFromIndexers =
+      lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+        $DRY_RUN_CMD mkdir -p "${comfyuiDir}"
+        $DRY_RUN_CMD touch "${comfyuiDir}/.trackerignore" "${comfyuiDir}/.nomedia"
+      '';
+
+    ###########################################################################
+    # 4. Relocate the thumbnail cache into the ComfyUI root
+    ###########################################################################
+    home.file.".cache/thumbnails".source =
+      config.lib.file.mkOutOfStoreSymlink "${comfyuiDir}/.thumbnails";
+  };
 }
