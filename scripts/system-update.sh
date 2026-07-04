@@ -19,6 +19,14 @@
     [[ ! -f "$file" || $(( now - $(< "$file") )) -ge $interval ]]
   }
 
+  # --- Reject oversized files before staging ---
+  oversized=$(find . -type f -size +50M -not -path './.git/*')
+  if [[ -n "$oversized" ]]; then
+    echo "Refusing to commit — oversized files detected:"
+    echo "$oversized"
+    exit 1
+  fi
+
   # --- Commit locally first (so Nix sees a clean git tree) ---
   git add ./*
   git commit -m "$(date '+%F_%H:%M:%S')" || echo "Nothing to commit."
