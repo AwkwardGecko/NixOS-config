@@ -3,16 +3,7 @@
   lib,
   pkgs,
   ...
-}: let
-  no-rgb = pkgs.writeScriptBin "no-rgb" ''
-    #!/bin/sh
-    NUM_DEVICES=$(${pkgs.openrgb}/bin/openrgb --noautoconnect --list-devices | grep -E '^[0-9]+: ' | wc -l)
-
-    for i in $(seq 0 $(($NUM_DEVICES - 1))); do
-      ${pkgs.openrgb}/bin/openrgb --noautoconnect --device $i --mode static --color 000000
-    done
-  '';
-in {
+}: { 
   hardware.enableAllFirmware = true;
 
   environment.systemPackages = with pkgs; [
@@ -44,20 +35,13 @@ in {
 
   programs.coolercontrol.enable = true;
 
-  services.udev.packages = [pkgs.openrgb];
-  hardware.i2c.enable = true;
-
-  systemd.services.no-rgb = {
-    description = "no-rgb";
-    serviceConfig = {
-      ExecStart = "${no-rgb}/bin/no-rgb";
-      Type = "oneshot";
-      RemainAfterExit = true;
-    };
-    wantedBy = ["multi-user.target"];
-    before = ["display-manager.service"];
-    after = ["systemd-udev-settle.service"];
+  services.udev = {
+    packages = [pkgs.openrgb];
+    extraRules = ''
+      ACTION=="change", SUBSYSTEM=="block", ENV{ID_SERIAL_SHORT}=="WCJAW4XP", ENV{ID_FS_USAGE}=="filesystem", RUN+="${pkgs.bash}/bin/bash -c 'if ! ${pkgs.util-linux}/bin/findmnt -S /dev/%k >/dev/null; then ${pkgs.hdparm}/bin/hdparm -y /dev/disk/by-id/ata-ST5000LM000-2U8170_WCJAW4XP; fi'"
+    '';
   };
+  hardware.i2c.enable = true;
 
   #services.hardware.openrgb = {
   #enable = true;

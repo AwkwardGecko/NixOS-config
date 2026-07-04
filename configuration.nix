@@ -21,6 +21,7 @@
     ./modules/core/users.nix
     ./modules/core/scanner.nix
     ./modules/core/printer.nix
+    ./modules/core/rgb.nix
 
     ./modules/desktop/hyprland.nix
     ./modules/desktop/wayle.nix
