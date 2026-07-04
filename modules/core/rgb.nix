@@ -23,7 +23,6 @@
     done
   '';
 in {
-
   systemd.services.no-rgb = {
     description = "no-rgb";
     serviceConfig = {
