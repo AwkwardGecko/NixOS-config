@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }:
-let
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: let
   configDir = "/var/lib/openrgb";
 
   # Full detector map: everything false except ENE SMBus DRAM.
@@ -33,6 +37,6 @@ in {
       RemainAfterExit = true;
       TimeoutStartSec = "30s";
     };
-    wantedBy = [ "multi-user.target" ];
+    wantedBy = ["multi-user.target"];
   };
 }
