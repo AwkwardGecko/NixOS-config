@@ -41,6 +41,7 @@
     gcc-unwrapped
     git
     gperftools
+    i2c-tools
     icu
     lld
     llvmPackages.bintools
