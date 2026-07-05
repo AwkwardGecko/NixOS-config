@@ -12,6 +12,7 @@
     systemPackages = with pkgs; [
       btrfs-progs
       parted
+      freefilesync
       gparted
       gnome-disk-utility
       baobab
