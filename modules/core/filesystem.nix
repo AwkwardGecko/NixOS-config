@@ -13,7 +13,7 @@
       btrfs-progs
       parted
       freefilesync
-      #krokiet
+      czkawka-full
       gparted
       gnome-disk-utility
       baobab
