@@ -1,0 +1,83 @@
+{
+  config,
+  lib,
+  pkgs,
+  modulesPath,
+  ...
+}: {
+  imports = [
+    (modulesPath + "/installer/scan/not-detected.nix")
+    #./modules/core/hardware-configuration-disabled.nix
+  ];
+
+  boot = {
+    initrd = {
+      luks.devices."crypt-home" = {
+        device = "/dev/disk/by-uuid/139a8d8a-d234-450e-9c90-4f633e8c3b8c";
+        allowDiscards = true;
+      };
+      availableKernelModules = [
+        # available modules
+        "xhci_pci"
+        "ahci"
+        "nvme"
+        "usb_storage"
+        "sd_mod"
+      ];
+      kernelModules = [
+        # always loaded
+        "usbhid"
+      ];
+    };
+    kernelModules = ["kvm-amd"];
+    extraModulePackages = [];
+  };
+
+  fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-uuid/6b47e646-e650-485d-a0ad-2feb337506e4";
+      fsType = "ext4";
+    };
+
+    "/boot" = {
+      device = "/dev/disk/by-uuid/FB64-FC11";
+      fsType = "vfat";
+      options = [
+        "fmask=0077"
+        "dmask=0077"
+      ];
+    };
+
+    "/home" = {
+      device = "/dev/mapper/crypt-home";
+      fsType = "btrfs";
+      options = [
+        "compress=zstd"
+        "noatime"
+      ];
+    };
+
+    "/5tb-hdd" = {
+      device = "/dev/disk/by-uuid/ab4e76c1-c09a-4ee7-b61b-26bf469aebd9";
+      fsType = "xfs";
+      options = [
+        "noauto"
+        "nofail"
+        "x-systemd.automount"
+        "x-systemd.idle-timeout=600"
+      ];
+    };
+  };
+
+  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
+  # (the default) this is the recommended approach. When using systemd-networkd it's
+  # still possible to use this option, but it's recommended to use it in conjunction
+  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
+  networking.useDHCP = lib.mkDefault true;
+  # networking.interfaces.enp10s0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.wlp9s0.useDHCP = lib.mkDefault true;
+
+  swapDevices = [{label = "swap";}];
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+}
