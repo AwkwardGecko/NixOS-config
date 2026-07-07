@@ -63,8 +63,8 @@
       options = [
         "noauto"
         "nofail"
-        "x-systemd.automount"
-        "x-systemd.idle-timeout=600"
+        #"x-systemd.automount"
+        #"x-systemd.idle-timeout=600"
       ];
     };
   };
