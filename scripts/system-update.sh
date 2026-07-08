@@ -75,6 +75,9 @@
   if command -v podman >/dev/null; then
     podman auto-update || true
   fi
+
+  sudo podman pull ghcr.io/haveagitgat/tdarr_node:latest
+  sudo systemctl restart podman-tdarr-node
   #sudo podman pull ghcr.io/haveagitgat/tdarr_node:latest
   #sudo systemctl restart podman-tdarr-node
 
