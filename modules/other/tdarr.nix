@@ -58,6 +58,9 @@
       serviceConfig = {
         Restart = lib.mkOverride 90 "always";
       };
+      unitConfig.RequiresMountsFor = "/data/media";
+      bindsTo = [ "data.mount" ];
+
       after = [
         "podman-network-tdarr_default.service"
       ];
@@ -65,6 +68,7 @@
         "podman-network-tdarr_default.service"
       ];
       partOf = [
+        "data.mount"
         "podman-compose-tdarr-root.target"
       ];
       wantedBy = [
