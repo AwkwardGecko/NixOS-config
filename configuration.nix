@@ -78,6 +78,7 @@
     ./modules/other/exiftool.nix
     ./modules/other/crafty.nix
     ./modules/other/shazam.nix
+    ./modules/other/ComfyUI-mount.nix
 
     ./modules/other/signal/signal.nix
   ];
