@@ -1,0 +1,24 @@
+Quick clarification first, because these are actually two different worlds:
+ComfyUI's merge nodes don't merge LLMs. The built-in ModelMergeSimple, ModelMergeBlocks, ModelMergeAdd/Subtract nodes are for blending diffusion model checkpoints by their parameters at a specified ratio — i.e. Stable Diffusion-style image models. If that's what you meant (merging two SD/SDXL checkpoints), the workflow is: two CheckpointLoaderSimple nodes → ModelMergeSimple (set your ratio) → CLIPMergeSimple for the text encoders → CheckpointSave. Your 2080 Super handles this fine; note that models are merged and saved at whatever precision your hardware uses for inference (usually fp16), and you'd launch ComfyUI with --force-fp32 if you want full precision. ComfyUI WikiComfyUI_examples
+If you mean actual language models (two Llama/Mistral/Qwen fine-tunes), the standard tool is mergekit, not ComfyUI. It's a CLI tool driven by a YAML config. On NixOS, easiest as a throwaway venv:
+bashnix-shell -p python312 python312Packages.pip git
+python -m venv ~/mergekit && source ~/mergekit/bin/activate
+pip install mergekit
+Example SLERP config (config.yaml):
+yamlslices:
+  - sources:
+      - model: teknium/OpenHermes-2.5-Mistral-7B
+        layer_range: [0, 32]
+      - model: NousResearch/Hermes-2-Pro-Mistral-7B
+        layer_range: [0, 32]
+merge_method: slerp
+base_model: teknium/OpenHermes-2.5-Mistral-7B
+parameters:
+  t: 0.5
+dtype: bfloat16
+Then run:
+bashmergekit-yaml config.yaml ./merged --copy-tokenizer --lazy-unpickle --out-shard-size 1B --allow-crimes
+One hard constraint: both models must share the same architecture — same model type, hidden size, and layer count — so you can't directly merge, say, Llama-3 with Mistral (except via experimental passthrough/frankenmerging). Clore
+Can your hardware handle it? Yes, for 7–8B models — but your GPU is almost irrelevant here. Mergekit uses an out-of-core approach and runs entirely on CPU, with optional acceleration from as little as 8 GB of VRAM, so the 2080 Super's 8GB is technically enough to pass --cuda. The actual bottleneck is your 16GB of RAM: merging two 7B models in bf16 naively wants roughly 28GB, but the --lazy-unpickle and --out-shard-size flags let the merge run in chunks on low-RAM CPU setups — people routinely do 7B merges on ~12GB Colab instances this way. So on your box: 7–8B merges are fine (add some swap headroom — zramSwap.enable = true; in your configuration.nix is a one-liner), 13B+ will be miserable. Since it's CPU/RAM-bound anyway, your headless server is arguably the better place to run the merge if it has more RAM than the desktop. GitHub + 2
+Running the merged model afterwards is where the GPU matters: convert it to GGUF with llama.cpp and quantize, and a 7B model at Q4_K_M is about 4.7GB, which sits comfortably in 8GB VRAM with room for context. Much beyond 8B and layers start spilling to CPU, where speed falls off a cliff. PromptQuorum
+Which did you actually have in mind — diffusion checkpoints or proper LLMs? Happy to go deeper on either.

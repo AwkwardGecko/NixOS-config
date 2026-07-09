@@ -59,7 +59,7 @@
         Restart = lib.mkOverride 90 "always";
       };
       unitConfig.RequiresMountsFor = "/data/media";
-      bindsTo = [ "data.mount" ];
+      bindsTo = ["data.mount"];
 
       after = [
         "podman-network-tdarr_default.service"

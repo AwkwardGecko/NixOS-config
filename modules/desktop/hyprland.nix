@@ -10,12 +10,14 @@
     #./layouts/scrolling.nix
   ];
 
-  programs = {
-    hyprland = {
-      enable = true;
-      xwayland.enable = true;
-    };
-    kdeconnect.enable = true;
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
+  home-manager.users.zozano.services.kdeconnect = {
+    enable = true;
+    indicator = true;
   };
 
   services = {
