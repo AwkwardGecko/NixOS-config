@@ -71,8 +71,8 @@
         "$kitty_with_fastfetch" = "kitty fastfetch";
         #"$steam_friends" = "sleep 60 && steam steam://open/friends";
 
-        "$honkers-railway-launcher" = "moe.launcher.the-honkers-railway-launcher";
-        "$jellyfin" = "org.jellyfin.JellyfinDesktop";
+        "$honkers-railway-launcher" = "flatpak run moe.launcher.the-honkers-railway-launcher";
+        "$jellyfin" = "flatpak run org.jellyfin.JellyfinDesktop";
 
         exec-once = [
           "signal-desktop"
@@ -175,7 +175,6 @@
 
           "$mainMod, J, $jellyfin"
           "$mainMod, H, $honkers-railway-launcher"
-
 
           "$mainMod, left, movefocus, l"
           "$mainMod, right, movefocus, r"
