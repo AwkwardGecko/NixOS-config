@@ -173,8 +173,8 @@
           "$mainMod, R, exec, $menu"
           "$mainMod, V, togglefloating,"
 
-          "$mainMod, J, $jellyfin"
-          "$mainMod, H, $honkers-railway-launcher"
+          "$mainMod, J, exec, $jellyfin"
+          "$mainMod, H, exec, $honkers-railway-launcher"
 
           "$mainMod, left, movefocus, l"
           "$mainMod, right, movefocus, r"
