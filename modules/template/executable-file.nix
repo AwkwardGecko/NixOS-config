@@ -1,7 +1,10 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   home-manager.users.zozano = {
-
     home.file.".local/bin/myscript" = {
       text = ''
         #!/usr/bin/env bash
@@ -17,7 +20,7 @@
       exec = "~/.local/bin/myscript";
       icon = "utilities-terminal";
       type = "Application";
-      categories = [ "Utility" ];
+      categories = ["Utility"];
     };
   };
 }
