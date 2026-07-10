@@ -8,10 +8,10 @@
     services.wayle = {
       enable = true;
       settings = {
-        #general = {
-        #font-sans = "JetBrainsMono Nerd Font";
-        #font-mono = "JetBrainsMono Nerd Font";
-        #};
+        general = {
+        font-sans = "JetBrainsMono Nerd Font";
+        font-mono = "JetBrainsMono Nerd Font";
+        };
 
         bar = {
           layout = [
