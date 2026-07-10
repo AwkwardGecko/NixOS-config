@@ -21,6 +21,15 @@
 
   home-manager.users.zozano = {
     programs.mpv.enable = true;
+
+    home.packages = with pkgs; [
+      papirus-icon-theme
+    ];
+
+    xdg.configFile."kdeglobals".text = ''
+      [Icons]
+      Theme=Papirus-Dark
+    '';
   };
 
   xdg = {
