@@ -28,7 +28,7 @@
     ./modules/desktop/cursor.nix
     ./modules/desktop/hypridle.nix
     ./modules/desktop/rofi.nix
-    ./modules/desktop/stylix.nix
+    #./modules/desktop/stylix.nix
     ./modules/desktop/theme.nix
     ./modules/desktop/wallpaper.nix
     ./modules/desktop/portals.nix
