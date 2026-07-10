@@ -9,8 +9,8 @@
       enable = true;
       settings = {
         general = {
-        font-sans = "JetBrainsMono Nerd Font";
-        font-mono = "JetBrainsMono Nerd Font";
+          font-sans = "JetBrainsMono Nerd Font";
+          font-mono = "JetBrainsMono Nerd Font";
         };
 
         bar = {
