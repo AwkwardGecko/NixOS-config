@@ -27,9 +27,9 @@ in {
     #   enable = true;
     # };
 
-    stylix.targets.librewolf.profileNames = [
-      "default"
-    ];
+    # stylix.targets.librewolf.profileNames = [
+    #   "default"
+    # ];
   };
 
   programs = {
