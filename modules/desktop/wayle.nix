@@ -37,7 +37,7 @@
               ];
             }
           ];
-          #background-opacity = 0;
+          background-opacity = 0;
         };
 
         modules = {
