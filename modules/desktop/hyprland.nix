@@ -65,7 +65,7 @@
       settings = {
         "$mainMod" = "SUPER";
         "$terminal" = "kitty";
-        "$fileManager" = "nautilus";
+        "$fileManager" = "dolphin";
         "$browser" = "firefox";
         "$menu" = "rofi -show drun -show-icons";
         "$kitty_with_fastfetch" = "kitty fastfetch";
