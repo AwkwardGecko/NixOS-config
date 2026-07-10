@@ -24,10 +24,10 @@
     ./modules/core/rgb.nix
 
     ./modules/desktop/hyprland.nix
-    ./modules/desktop/wayle.nix
+    #./modules/desktop/wayle.nix
+    ./modules/desktop/cursor.nix
     ./modules/desktop/hypridle.nix
     ./modules/desktop/rofi.nix
-    ./modules/desktop/style.nix
     #./modules/desktop/stylix.nix
     ./modules/desktop/theme.nix
     ./modules/desktop/wallpaper.nix
