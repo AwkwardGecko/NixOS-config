@@ -9,6 +9,7 @@
       text = ''
         #!/usr/bin/env bash
         sudo mount /dev/disk/by-uuid/ab4e76c1-c09a-4ee7-b61b-26bf469aebd9 /5tb-hdd
+        sleep 10
         sudo mount /5tb-hdd/models ~/.local/share/ComfyUI/models
       '';
       executable = true;
