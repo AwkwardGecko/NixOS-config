@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Boot into Windows
+Comment=Reboot directly into Windows via UEFI one-time boot override
+Exec=/home/Black_LED/.local/bin/boot-to-windows.sh
+Icon=windows
+Terminal=false
+Categories=System;
