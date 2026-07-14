@@ -15,11 +15,11 @@
     programs.kitty = {
       enable = true;
       shellIntegration.enableFishIntegration = true;
-      
+
       font = {
         name = "JetBrainsMono Nerd Font";
         size = 11;
-        package = pkgs.nerd-fonts.jerbrains-mono;
+        package = pkgs.nerd-fonts.jetbrains-mono;
       };
 
       settings = {
