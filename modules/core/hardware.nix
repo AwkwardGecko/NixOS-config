@@ -38,9 +38,10 @@
   services.udev = {
     packages = [pkgs.openrgb];
     extraRules = ''
-      ACTION=="change", SUBSYSTEM=="block", ENV{ID_SERIAL_SHORT}=="WCJAW4XP", ENV{ID_FS_USAGE}=="filesystem", RUN+="${pkgs.bash}/bin/bash -c 'if ! ${pkgs.util-linux}/bin/findmnt -S /dev/%k >/dev/null; then ${pkgs.hdparm}/bin/hdparm -y /dev/disk/by-id/ata-ST5000LM000-2U8170_WCJAW4XP; fi'"
+      ACTION=="add", SUBSYSTEM=="block", KERNEL=="sd?", ENV{ID_SERIAL_SHORT}=="WCJAW4XP", RUN+="${pkgs.hdparm}/bin/hdparm -B 127 -S 60 /dev/disk/by-id/ata-ST5000LM000-2U8170_WCJAW4XP"
     '';
   };
+
   hardware.i2c.enable = true;
 
   zramSwap.enable = true;
