@@ -6,6 +6,12 @@
 }: {
   environment.systemPackages = with pkgs; [
     kdePackages.dolphin
+    kdePackages.ffmpegthumbs
+    kdePackages.kdegraphics-thumbnailers
+    kdePackages.kimageformats
+    kdePackages.kio-extras
+    kdePackages.kio-admin
+    kdePackages.dolphin-plugins
     kdePackages.okular
     kdePackages.kio-extras
     evince
