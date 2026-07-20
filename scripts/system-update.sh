@@ -47,6 +47,17 @@
   git push github main || echo "Push failed or nothing to push."
   git status
 
+  echo "Beginning flatpak update"
+  flatpak update -y || true
+  
+  #echo "Begininng podman update" 
+  #if command -v podman >/dev/null; then
+  #  podman auto-update || true
+  #fi
+
+  #sudo podman pull ghcr.io/haveagitgat/tdarr_node:latest
+  #sudo systemctl restart podman-tdarr-node
+
   # --- Garbage collection (throttled — once per day) ---
   if stamp_is_stale "$GC_STAMP" "$GC_INTERVAL"; then
     echo "Running garbage collection..."
@@ -66,20 +77,6 @@
   else
     echo "Skipping nix-store optimisation (ran recently)."
   fi
-
-  # --- Non-nix updates (failures here shouldn't kill the script) ---
-  echo "Beginning flatpak update"
-  flatpak update -y || true
-  
-  echo "Begininng podman update" 
-  if command -v podman >/dev/null; then
-    podman auto-update || true
-  fi
-
-  sudo podman pull ghcr.io/haveagitgat/tdarr_node:latest
-  sudo systemctl restart podman-tdarr-node
-  #sudo podman pull ghcr.io/haveagitgat/tdarr_node:latest
-  #sudo systemctl restart podman-tdarr-node
 
   echo "alejandra formatting"
   alejandra -q /home/zozano/.dotfiles
