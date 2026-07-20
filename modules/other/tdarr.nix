@@ -25,7 +25,7 @@
       backend = "podman";
       containers."tdarr-node" = {
         image = "ghcr.io/haveagitgat/tdarr_node:latest";
-        
+
         environment = {
           "NVIDIA_DRIVER_CAPABILITIES" = "all";
           "NVIDIA_VISIBLE_DEVICES" = "all";
@@ -99,7 +99,7 @@
     wantedBy = ["multi-user.target"];
   };
 
-  systemd.timers."podman-auto-update".wantedBy = [ "timers.target" ];
+  systemd.timers."podman-auto-update".wantedBy = ["timers.target"];
 
   systemd.timers."podman-auto-update".timerConfig = {
     OnCalendar = lib.mkForce "hourly";
