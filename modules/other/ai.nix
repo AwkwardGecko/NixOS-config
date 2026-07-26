@@ -46,11 +46,11 @@ in {
 
   #programs.nix-ld.enable = true; # enable if custom nodes fail to find system libs
 
-  environment.systemPackages = with pkgs; [
-    python313Packages.openai-whisper
+  #environment.systemPackages = with pkgs; [
+    #python313Packages.openai-whisper
     #python313Packages.google-genai
-    whisperx
-  ];
+    #whisperx
+  #];
 
   # "/steam" = {
   #   device = "/dev/disk/by-uuid/249c8bec-3ec2-4b89-8618-748cd918d4ba";
