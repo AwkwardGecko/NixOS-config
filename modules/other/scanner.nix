@@ -1,10 +1,19 @@
 { config, lib, pkgs, ... }:
 {
   hardware.sane.enable = true;
+  hardware.sane.brscan5 = {
+    enable = true;
+    netDevices.home = {
+      model = "MFC-L2800DW";
+      ip = "192.168.2.191";
+    };
+  };
   hardware.sane.extraBackends = [ pkgs.sane-airscan ];
 
   services.avahi.enable = true;
   services.avahi.nssmdns4 = true;
 
   users.users.zozano.extraGroups = [ "scanner" "lp" ];
+
+  home-manager.users.zozano.home.packages = [ pkgs.simple-scan ];
 }
