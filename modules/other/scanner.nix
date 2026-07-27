@@ -28,4 +28,8 @@
   users.users.zozano.extraGroups = ["scanner" "lp"];
 
   home-manager.users.zozano.home.packages = [pkgs.simple-scan];
+
+  home-manager.users.zozano.wayland.windowManager.hyprland.settings.env = [
+  "LD_LIBRARY_PATH,/etc/sane-libs"
+];
 }
