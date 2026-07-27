@@ -47,9 +47,9 @@ in {
   #programs.nix-ld.enable = true; # enable if custom nodes fail to find system libs
 
   #environment.systemPackages = with pkgs; [
-    #python313Packages.openai-whisper
-    #python313Packages.google-genai
-    #whisperx
+  #python313Packages.openai-whisper
+  #python313Packages.google-genai
+  #whisperx
   #];
 
   # "/steam" = {
