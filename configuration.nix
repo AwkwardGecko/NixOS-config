@@ -23,7 +23,9 @@
     ./modules/core/printer.nix
     ./modules/core/rgb.nix
 
-    ./modules/desktop/hyprland.nix
+    #./modules/desktop/hyprland.nix
+    ./modules/desktop/plasma.nix
+
     ./modules/desktop/wayle.nix
     ./modules/desktop/cursor.nix
     ./modules/desktop/hypridle.nix
@@ -65,6 +67,7 @@
     ./modules/shell/nixvim.nix
 
     ./modules/other/tdarr.nix
+    ./modules/other/claude.nix
     ./modules/other/dev.nix
     ./modules/other/media.nix
     ./modules/other/jellyfin-inhibit.nix

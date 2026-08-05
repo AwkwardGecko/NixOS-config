@@ -17,6 +17,8 @@
 
     stylix.url = "github:nix-community/stylix";
     #stylix.inputs.home-manager.follows = "home-manager";
+
+
   };
 
   outputs = inputs @ {
