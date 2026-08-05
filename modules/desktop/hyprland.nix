@@ -15,8 +15,6 @@
     xwayland.enable = true;
   };
 
-
-
   services = {
     displayManager = {
       sddm = {
@@ -38,12 +36,12 @@
     wl-clipboard
   ];
 
-home-manager.users.zozano.services.kdeconnect = {
+  home-manager.users.zozano.services.kdeconnect = {
     enable = true;
     indicator = true;
   };
 
-environment.sessionVariables = {
+  environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
   };
 
