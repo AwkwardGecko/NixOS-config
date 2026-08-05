@@ -26,15 +26,15 @@
     #./modules/desktop/hyprland.nix
     ./modules/desktop/plasma.nix
 
-    ./modules/desktop/wayle.nix
-    ./modules/desktop/cursor.nix
-    ./modules/desktop/hypridle.nix
-    ./modules/desktop/rofi.nix
+    #./modules/desktop/wayle.nix
+    #./modules/desktop/cursor.nix
+    #./modules/desktop/hypridle.nix
+    #./modules/desktop/rofi.nix
     #./modules/desktop/stylix.nix
-    ./modules/desktop/theme.nix
-    ./modules/desktop/wallpaper.nix
-    ./modules/desktop/portals.nix
-    ./modules/desktop/wlsunset.nix
+    #./modules/desktop/theme.nix
+    #./modules/desktop/wallpaper.nix
+    #./modules/desktop/portals.nix
+    #./modules/desktop/wlsunset.nix
     #./modules/desktop/xfce4.nix
     #./modules/desktop/rotate-screen.nix
 
