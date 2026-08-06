@@ -46,7 +46,7 @@
     ./modules/gaming/star-rail.nix
     ./modules/gaming/steam.nix
     ./modules/gaming/emulation.nix
-    #./modules/gaming/lutris.nix
+    ./modules/gaming/lutris.nix
     ./modules/gaming/mangohud.nix
     ./modules/gaming/reliquary-archiver.nix
     ./modules/gaming/torchlight.nix
