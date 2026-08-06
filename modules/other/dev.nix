@@ -39,6 +39,7 @@
     dmidecode
     gcc
     gcc-unwrapped
+    gdb
     git
     gperftools
     i2c-tools
