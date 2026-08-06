@@ -10,7 +10,7 @@
     settings.General.Experimental = true;
   };
 
-  services.blueman.enable = true;
+  #services.blueman.enable = true;
 
   #hardware.enableAllFirmware = true;
   environment.systemPackages = with pkgs; [
