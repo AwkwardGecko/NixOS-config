@@ -7,7 +7,9 @@
   environment.systemPackages = with pkgs; [
     #bottles
     goverlay
+    heroic
     wine
+
     #starship-sf64 # Star Fox 64
     # unigine-superposition - don't use. run .exe through steam for Vulkan support
     # (writeShellScriptBin "sunshine-run" ''
