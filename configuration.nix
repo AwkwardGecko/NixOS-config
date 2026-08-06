@@ -86,6 +86,7 @@
     ./modules/other/ComfyUI-mount.nix
     ./modules/other/rustdesk.nix
     ./modules/other/scanner.nix
+    ./modules/other/comfyui.nix
 
     ./modules/other/signal/signal.nix
   ];
