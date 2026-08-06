@@ -7,9 +7,9 @@
   home-manager.users.zozano = {
     programs.lutris = {
       enable = true;
-      protonPackages = "[
+      protonPackages = [
         pkgs.proton-ge-bin
-      ]";
+      ];
     };
   };
 }
