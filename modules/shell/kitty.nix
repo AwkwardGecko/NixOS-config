@@ -40,7 +40,7 @@
         sync_to_monitor = "yes";
       };
 
-      #themeFile = "GruvboxMaterialDarkMedium";
+      themeFile = "GruvboxMaterialDarkMedium";
     };
   };
 }
