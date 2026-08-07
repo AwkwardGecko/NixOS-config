@@ -24,8 +24,8 @@
     ./modules/core/rgb.nix
 
     #./modules/desktop/hyprland.nix
-    ./modules/desktop/plasma.nix
-    #./modules/desktop/cosmic.nix
+    #./modules/desktop/plasma.nix
+    ./modules/desktop/cosmic.nix
 
     #./modules/desktop/wayle.nix
     #./modules/desktop/cursor.nix
