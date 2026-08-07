@@ -41,8 +41,8 @@
         nixvim.nixosModules.nixvim
         stylix.nixosModules.stylix
         {
-          #disabledModules = ["services/misc/comfyui.nix"];
-          #imports = [comfyui-nix.nixosModules.default];
+          disabledModules = ["services/misc/comfyui.nix"];
+          imports = [comfyui-nix.nixosModules.default];
           nixpkgs.overlays = [comfyui-nix.overlays.default];
 
           home-manager.useGlobalPkgs = true;

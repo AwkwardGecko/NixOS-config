@@ -16,15 +16,15 @@ in {
   services.comfyui = {
     enable = true;
     package = inputs.comfyui-nix.packages.x86_64-linux.cuda;
-    #enableManager = true;
+    enableManager = true;
     port = 8188;
-    listen = "127.0.0.1";
+    listenAddress = "127.0.0.1";
 
-    #user = "zozano";
-    #group = "users";
-    #dataDir = "/home/zozano/.local/share/ComfyUI";
+    user = "zozano";
+    group = "users";
+    dataDir = "/home/zozano/.local/share/ComfyUI";
     #dataDir = "var/lib/comfyui";
-    #openFirewall = false;
+    openFirewall = false;
     extraArgs = [
       "--lowvram" # Aggressively offloads model components to system RAM when not in use, only loading pieces to VRAM as needed.
       # Essential for 8GB cards running SDXL-based models.
