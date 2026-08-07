@@ -10,6 +10,7 @@
     displayManager.cosmic-greeter.enable = true;
   };
   environment.systemPackages = with pkgs; [
-    cosmic-viewer
+    loupe
+    
   ];
 }
