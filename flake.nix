@@ -42,7 +42,7 @@
         stylix.nixosModules.stylix
         {
           #imports = [comfyui-nix.nixosModules.default];
-          #nixpkgs.overlays = [comfyui-nix.overlays.default];
+          nixpkgs.overlays = [comfyui-nix.overlays.default];
 
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
