@@ -18,4 +18,12 @@
     };
     desktopManager.gnome.enable = true;
   };
+
+  home-manager.users.zozano = {
+    gtk = {
+      enable = true;
+      iconTheme.package = pkgs.papirus-icon-theme;
+      iconTheme.name = "Papirus";
+    };
+  };
 }
