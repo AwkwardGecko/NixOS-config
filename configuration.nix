@@ -29,7 +29,7 @@
     ./modules/desktop/gnome.nix
 
     #./modules/desktop/wayle.nix
-    #./modules/desktop/cursor.nix
+    ./modules/desktop/cursor.nix
     #./modules/desktop/hypridle.nix
     #./modules/desktop/rofi.nix
     #./modules/desktop/stylix.nix
