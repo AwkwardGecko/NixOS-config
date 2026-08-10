@@ -14,9 +14,9 @@
   sops.defaultSopsFile = ../../secrets/secrets.yaml; # master
   sops.age.sshKeyPaths = ["/etc/ssh/ssh_host_ed25519_key"]; # host ssh key, used to decrypt secrets.yaml
 
-  sops.secrets."ssh/home-server-key" = {};
-  fileSystems."/server".options = ["IdentityFile=${config.sops.secrets."ssh/home-server-key".path}"];
-  fileSystems."/data".options = ["IdentityFile=${config.sops.secrets."ssh/home-server-key".path}"];
+  #sops.secrets."ssh/home-server-key" = {};
+  #fileSystems."/server".options = ["IdentityFile=${config.sops.secrets."ssh/home-server-key".path}"];
+  #fileSystems."/data".options = ["IdentityFile=${config.sops.secrets."ssh/home-server-key".path}"];
 
   #sops.secrets."proton/user" = {};
   sops.secrets."proton/pass" = {
