@@ -18,7 +18,7 @@
         update = "bash ~/.dotfiles/scripts/system-update.sh";
       };
       shellInit = "cd ~/.dotfiles/";
-      shellInitLast = "fastfetch";
+      #shellInitLast = "fastfetch";
       plugins = [
         {
           name = "gruvbox";
