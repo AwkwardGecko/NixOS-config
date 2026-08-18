@@ -23,6 +23,7 @@
     leo = {
       isNormalUser = true;
       description = "leo";
+      initialPassword = "changeme";
       extraGroups = [
         "networkmanager"
         "video"
