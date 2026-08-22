@@ -27,7 +27,7 @@
     enable = true;
   };
 
-  programs.solarr.enable = true;
+  #programs.solarr.enable = true;
 
   boot.kernelModules = [
     "nct6775"
