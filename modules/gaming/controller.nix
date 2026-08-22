@@ -28,9 +28,7 @@
       ClassicBondedOnly = true;
       IdleTimeout = 0;
     };
-
   };
-
 
   hardware = {
     xone.enable = true; # dongle support

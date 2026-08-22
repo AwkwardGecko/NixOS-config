@@ -1,4 +1,8 @@
-{ config, lib, pkgs, ... }:
 {
-  environment.systemPackages = [ pkgs.onlyoffice-desktopeditors ];
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  environment.systemPackages = [pkgs.onlyoffice-desktopeditors];
 }
