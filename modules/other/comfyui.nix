@@ -4,7 +4,6 @@
   pkgs,
   ...
 }: {
-  # services.comfyui.enable = true;
   environment.systemPackages = with pkgs; [
     comfyui
   ];
@@ -13,4 +12,5 @@
     ./comfyui/mods.nix
   ];
 
+  nixpkgs.config.cudaSupport = true;
 }
