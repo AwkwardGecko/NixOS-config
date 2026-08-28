@@ -77,7 +77,7 @@
     ./modules/shell/shell.nix
     ./modules/other/crypto.nix
     ./modules/other/browsers.nix
-    #./modules/other/ai.nix
+    ./modules/other/ai.nix
     ./modules/other/flatpak.nix
     #./modules/other/protonmail.nix
     ./modules/other/kde-connect.nix
@@ -89,7 +89,7 @@
     ./modules/other/scanner.nix
     ./modules/other/office.nix
     ./modules/other/sweethome.nix
-    ./modules/other/comfyui.nix
+    #./modules/other/comfyui.nix
 
     ./modules/other/signal/signal.nix
   ];
