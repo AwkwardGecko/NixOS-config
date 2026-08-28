@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: {
-  environment.systemPackages = with pkgs.python313Packages; [
+  environment.systemPackages = with pkgs.python314Packages; [
     comfyui-manager # Custom-node manager extension for ComfyUI
     # comfyui-embedded-docs # Embedded node documentation for ComfyUI
     # comfyui-frontend-package # Frontend assets for ComfyUI
