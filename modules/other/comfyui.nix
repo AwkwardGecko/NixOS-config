@@ -13,5 +13,4 @@
     ./comfyui/mods.nix
   ];
 
-  config.cudaSupport = true;
 }
