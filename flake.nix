@@ -10,7 +10,7 @@
     nixvim.url = "github:nix-community/nixvim";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
 
-    comfyui-nix.url = "github:utensils/comfyui-nix";
+    #comfyui-nix.url = "github:utensils/comfyui-nix";
 
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
@@ -25,7 +25,7 @@
     home-manager,
     nix-flatpak,
     nixvim,
-    comfyui-nix,
+    #comfyui-nix,
     stylix,
     sops-nix,
     ...
@@ -41,9 +41,9 @@
         nixvim.nixosModules.nixvim
         stylix.nixosModules.stylix
         {
-          disabledModules = ["services/misc/comfyui.nix"];
-          imports = [comfyui-nix.nixosModules.default];
-          nixpkgs.overlays = [comfyui-nix.overlays.default];
+          #disabledModules = ["services/misc/comfyui.nix"];
+          #imports = [comfyui-nix.nixosModules.default];
+          #nixpkgs.overlays = [comfyui-nix.overlays.default];
 
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
