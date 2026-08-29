@@ -62,7 +62,7 @@
     ./modules/networking/teamviewer.nix
     ./modules/networking/protonvpn.nix
     ./modules/networking/rclone.nix
-    #./modules/networking/sshfs.nix
+    ./modules/networking/sshfs.nix
 
     ./modules/shell/tmux.nix
     ./modules/shell/fish.nix
