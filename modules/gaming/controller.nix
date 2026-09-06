@@ -20,9 +20,7 @@
         Privacy = "device";
         JustWorksRepairing = "always";
       };
-      Policy = {
-        AutoEnable = true;
-      };
+      Policy.AutoEnable = true;
     };
     input.General = {
       ClassicBondedOnly = true;
@@ -47,10 +45,10 @@
 
   boot.blacklistedKernelModules = ["xone_dongle"]; # delayed load to prevent boot fault
 
-  systemd.user.services.load-xone-dongle = {
+  systemd.services.load-xone-dongle = {
     description = "Load Xbox dongle driver after login";
-    wantedBy = ["graphical.target"];
-    after = ["graphical.target"];
+    wantedBy = ["multi-user.target"];
+    #after = ["graphical.target"];
     serviceConfig = {
       Type = "oneshot";
       ExecStartPre = "${pkgs.coreutils}/bin/sleep 60";
