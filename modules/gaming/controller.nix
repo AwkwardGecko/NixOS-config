@@ -54,6 +54,6 @@
   };
 
   services.udev.extraRules = ''
-    ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="02fe", TAG+="systemd", ENV{SYSTEMD_WANTS}="load-xone-dongle.service"
+    ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="02e6", TAG+="systemd", ENV{SYSTEMD_WANTS}="load-xone-dongle.service"
   '';
 }
