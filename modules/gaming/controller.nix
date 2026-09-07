@@ -46,13 +46,14 @@
   boot.blacklistedKernelModules = ["xone_dongle"]; # delayed load to prevent boot fault
 
   systemd.services.load-xone-dongle = {
-    description = "Load Xbox dongle driver after login";
-    wantedBy = ["multi-user.target"];
-    #after = ["graphical.target"];
+    description = "Load Xbox dongle driver on device presence";
     serviceConfig = {
       Type = "oneshot";
-      ExecStartPre = "${pkgs.coreutils}/bin/sleep 60";
       ExecStart = "${pkgs.kmod}/bin/modprobe xone_dongle";
     };
   };
+
+  services.udev.extraRules = ''
+    ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="02fe", TAG+="systemd", ENV{SYSTEMD_WANTS}="load-xone-dongle.service"
+  '';
 }
