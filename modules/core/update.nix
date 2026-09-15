@@ -1,22 +1,8 @@
-#!/usr/bin/env bash
-
-# cd /home/zozano/.dotfiles
-# nix flake update
-# git add *
-# git commit -m "$(date '+%F_%H:%M:%S')"
-# git push github main
-# sudo nixos-rebuild switch --upgrade --flake /home/zozano/.dotfiles/#z-nixos
-# home-manager switch -b backup --flake /home/zozano/.dotfiles/#
-
-
-#~/.dotfiles/modules/nixup.nix
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   environment.systemPackages = [
     (pkgs.writeShellApplication {
       name = "nixup";
-      runtimeInputs = with pkgs; [ tmux git nix libnotify coreutils ];
+      runtimeInputs = with pkgs; [tmux git nix libnotify coreutils];
       text = ''
         SESSION=nixup
         FLAKE="$HOME/.dotfiles"
@@ -75,11 +61,11 @@
 
   security.sudo.extraRules = [
     {
-      users = [ "zozano" ];
+      users = ["zozano"];
       commands = [
         {
           command = "/run/current-system/sw/bin/nixos-rebuild";
-          options = [ "NOPASSWD" ];
+          options = ["NOPASSWD"];
         }
       ];
     }
