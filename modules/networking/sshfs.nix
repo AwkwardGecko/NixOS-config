@@ -14,7 +14,7 @@
   '';
 
   fileSystems."/server" = {
-    device = "z-home@192.168.1.157:/";
+    device = "z-home@192.168.1.169:/";
     fsType = "sshfs";
     options = [
       "nodev"
@@ -29,7 +29,7 @@
   };
 
   fileSystems."/data" = {
-    device = "z-home@192.168.1.157:/data";
+    device = "z-home@192.168.1.169:/data";
     fsType = "sshfs";
     options = [
       "nodev"
