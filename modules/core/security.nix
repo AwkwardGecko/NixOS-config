@@ -32,7 +32,10 @@
   sops.secrets."tailscale/pre_auth_key" = {};
   services.tailscale.authKeyFile = config.sops.secrets."tailscale/pre_auth_key".path; # generated on z-home-mac
 
-  users.users.zozano.openssh.authorizedKeys.keys = ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL+JLIMMkhZty4POE+gHXrNwy11myWa0F+nVsWeyYJE3 tim@solaire.com"];
+  users.users.zozano.openssh.authorizedKeys.keys = [
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL+JLIMMkhZty4POE+gHXrNwy11myWa0F+nVsWeyYJE3 tim@solaire.com"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKHfpHmsqxhyghj0VD96I76dBAcmPWzkCdU4hw/QBGU9 root@dectech-07451B"
+  ];
   # allows remote client with this key to ssh into this computer
 
   environment.systemPackages = with pkgs; [
