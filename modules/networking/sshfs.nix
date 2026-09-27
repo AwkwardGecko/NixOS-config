@@ -5,9 +5,10 @@
   ...
 }: {
   environment.systemPackages = with pkgs; [
-    sshfs
     rclone
   ];
+
+  system.fsPackages = [pkgs.sshfs];
 
   environment.etc."fuse.conf".text = ''
     user_allow_other
@@ -19,12 +20,15 @@
     options = [
       "nodev"
       "nofail"
+      "_netdev"
+      "reconnect"
       "allow_other"
-      #"IdentityFile=/root/.ssh/home-server_z-nix"
+      "ServerAliveInterval=15"
+      "IdentityFile=/root/.ssh/home-server_z-nix"
       #"IdentityFile=${config.sops.secrets."ssh/home-server-key".path}"
       "x-systemd.automount"
-      "x-systemd.requires=network-online.target"
-      "x-systemd.requires=tailscaled.service"
+      #"x-systemd.requires=network-online.target"
+      #"x-systemd.requires=tailscaled.service"
     ];
   };
 
@@ -34,12 +38,15 @@
     options = [
       "nodev"
       "nofail"
+      "_netdev"
+      "reconnect"
       "allow_other"
-      #"IdentityFile=/root/.ssh/home-server_z-nix"
+      "ServerAliveInterval=15"
+      "IdentityFile=/root/.ssh/home-server_z-nix"
       #"IdentityFile=${config.sops.secrets."ssh/home-server-key".path}"
       "x-systemd.automount"
-      "x-systemd.requires=network-online.target"
-      "x-systemd.requires=tailscaled.service"
+      #"x-systemd.requires=network-online.target"
+      #"x-systemd.requires=tailscaled.service"
     ];
   };
 }
