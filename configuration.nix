@@ -52,6 +52,7 @@
     ./modules/gaming/mangohud.nix
     ./modules/gaming/reliquary-archiver.nix
     ./modules/gaming/torchlight.nix
+    ./modules/gaming/sunshine.nix
     ./modules/gaming/majoras-mask.nix
 
     ./modules/networking/bluetooth.nix
