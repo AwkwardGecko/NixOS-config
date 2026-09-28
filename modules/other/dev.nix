@@ -40,6 +40,7 @@
     gcc
     gcc-unwrapped
     gdb
+    gi
     git
     gperftools
     i2c-tools

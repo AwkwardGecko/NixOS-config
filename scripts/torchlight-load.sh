@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # torchlight-load.sh
-SAVEDIR=~/.local/share/Steam/steamapps/compatdata/41500/pfx/drive_c/users/steamuser/AppData/Roaming/runic\ games/torchlight/save
+#SAVEDIR=~/.local/share/Steam/steamapps/compatdata/41500/pfx/drive_c/users/steamuser/AppData/Roaming/runic\ games/torchlight/save
+SAVEDIR=/home/SteamLibrary/steamapps/compatdata/41500/pfx/drive_c/users/steamuser/AppData/Roaming/runic\ games/torchlight/save
 LATEST=$(ls -dt ~/Games/Torchlight/*/ 2>/dev/null | head -1)
 
 if [[ -z "$LATEST" ]]; then
