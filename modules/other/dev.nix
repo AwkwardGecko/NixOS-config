@@ -40,9 +40,13 @@
     gcc
     gcc-unwrapped
     gdb
-    gi
+    gdk-pixbuf
     git
+    glib
+    goject-introspection
     gperftools
+    gst_all_1.gstreamer
+    gst_all_1.gst-plugins-base
     i2c-tools
     icu
     lld
@@ -50,6 +54,7 @@
     nodejs
     opencv
     openssl
+    pipewire
     pkg-config
     psmisc
     protobuf
