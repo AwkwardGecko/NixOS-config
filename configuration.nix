@@ -6,7 +6,6 @@
   ...
 }: {
   imports = [
-    
     ./modules/core/hardware-configuration.nix
 
     ./modules/core/adb.nix

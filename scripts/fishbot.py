@@ -1,16 +1,23 @@
-#!/usr/bin/env python3
-import subprocess, sys, time
+#!/run/current-system/sw/bin/python3
+import math, os, subprocess, sys, time
+os.environ["GI_TYPELIB_PATH"] = ":".join(filter(None, [
+    "/run/current-system/sw/lib/girepository-1.0", os.environ.get("GI_TYPELIB_PATH")]))
+os.environ["GST_PLUGIN_SYSTEM_PATH_1_0"] = ":".join(filter(None, [
+    "/run/current-system/sw/lib/gstreamer-1.0", os.environ.get("GST_PLUGIN_SYSTEM_PATH_1_0")]))
 import gi
 gi.require_version("Gst", "1.0")
+gi.require_version("GstApp", "1.0")
 gi.require_version("GdkPixbuf", "2.0")
-from gi.repository import Gio, GLib, Gst, GdkPixbuf
+from gi.repository import Gio, GLib, Gst, GstApp, GdkPixbuf
 
-X, Y, W, H = 900, 500, 40, 40   # watch region (monitor pixels)
-MIN_HITS = 20                   # sampled red pixels required to trigger
-COOLDOWN = 4.0                  # seconds between reel-in and recast
-
-def is_red(r, g, b):
-    return r > 170 and g < 70 and b < 70
+CX, CY = 1280, 935     # hook icon centre
+R_MIN, R_MAX = 65, 135 # ring band radii (px)
+TRIGGER = -13          # mean (R-G) above this = bite (idle ~ -21, bite ~ -6)
+MIN_PIXELS = 100       # bluish ring pixels needed for a valid reading
+CONFIRM = 2            # consecutive frames above TRIGGER before clicking
+COOLDOWN = 4.0         # seconds after reel-in
+RECAST = False         # click again after cooldown to recast
+HERE = os.path.dirname(os.path.abspath(__file__))
 
 bus = Gio.bus_get_sync(Gio.BusType.SESSION)
 sender = bus.get_unique_name()[1:].replace(".", "_")
@@ -41,9 +48,18 @@ def request(method, args, fmt, opts):
 
 session = request("CreateSession", (), "(a{sv})",
                   {"session_handle_token": GLib.Variant("s", "fishbot")})["session_handle"]
-request("SelectSources", (session,), "(oa{sv})",
-        {"types": GLib.Variant("u", 1), "cursor_mode": GLib.Variant("u", 1)})
-node = request("Start", (session, ""), "(osa{sv})", {})["streams"][0][0]
+
+TOKEN = os.path.expanduser("~/.cache/fishbot_restore_token")
+opts = {"types": GLib.Variant("u", 1), "cursor_mode": GLib.Variant("u", 1),
+        "persist_mode": GLib.Variant("u", 2)}
+if os.path.exists(TOKEN):
+    opts["restore_token"] = GLib.Variant("s", open(TOKEN).read().strip())
+request("SelectSources", (session,), "(oa{sv})", opts)
+res = request("Start", (session, ""), "(osa{sv})", {})
+if "restore_token" in res:
+    os.makedirs(os.path.dirname(TOKEN), exist_ok=True)
+    open(TOKEN, "w").write(res["restore_token"])
+node = res["streams"][0][0]
 
 reply, fdl = bus.call_with_unix_fd_list_sync(
     *DEST, "OpenPipeWireRemote", GLib.Variant("(oa{sv})", (session, {})), None,
@@ -72,22 +88,28 @@ def dump(smp, w, h):
     rgb[0::3], rgb[1::3], rgb[2::3] = d[2::4], d[1::4], d[0::4]
     buf.unmap(m)
     GdkPixbuf.Pixbuf.new_from_bytes(GLib.Bytes(bytes(rgb)), GdkPixbuf.Colorspace.RGB,
-                                    False, 8, w, h, w * 3).savev("frame.png", "png", [], [])
+                                    False, 8, w, h, w * 3).savev(
+        os.path.join(HERE, "frame.png"), "png", [], [])
 
-def hits(smp, w):
+def measure(smp, w):
+    """(bluish pixel count, mean R-G) over the lower ring band around the hook."""
     buf = smp.get_buffer()
     ok, m = buf.map(Gst.MapFlags.READ)
-    d, c = m.data, 0
-    for y in range(Y, Y + H, 2):
-        row = (y * w + X) * 4
-        for x in range(0, W, 2):
-            i = row + x * 4
-            c += is_red(d[i + 2], d[i + 1], d[i])
+    d, cnt, tot = m.data, 0, 0
+    for y in range(CY - 30, CY + R_MAX + 1, 2):
+        row = y * w * 4
+        for x in range(CX - R_MAX, CX + R_MAX + 1, 2):
+            if R_MIN <= math.hypot(x - CX, y - CY) <= R_MAX:
+                i = row + x * 4
+                b, g, r = d[i], d[i + 1], d[i + 2]
+                if max(r, g, b) > 110 and b > r + 5:
+                    cnt += 1
+                    tot += r - g
     buf.unmap(m)
-    return c
+    return cnt, (tot / cnt if cnt else None)
 
 def click():
-    subprocess.run(["ydotool", "click", "0xC0"], check=False)  # left down+up
+    subprocess.run(["ydotool", "click", "0xC0"], check=False)  # left down+up, at current cursor
 
 if "--dump" in sys.argv:
     while not (f := pull()):
@@ -96,11 +118,28 @@ if "--dump" in sys.argv:
     print("saved frame.png")
     sys.exit()
 
+if "--click-test" in sys.argv:
+    click()
+    print("clicked once at the current cursor position")
+    sys.exit()
+
+watch = "--watch" in sys.argv   # print readings, never click
+streak = 0
 while True:
     f = pull()
-    if f and hits(f[0], f[1]) >= MIN_HITS:
-        click()                 # reel in
-        time.sleep(COOLDOWN)
-        click()                 # recast
-        time.sleep(COOLDOWN)
+    if f:
+        cnt, mean = measure(f[0], f[1])
+        if watch:
+            print(f"pixels={cnt:5d}  meanRG={'n/a' if mean is None else round(mean, 1)}", flush=True)
+        elif cnt >= MIN_PIXELS and mean is not None and mean > TRIGGER:
+            streak += 1
+            if streak >= CONFIRM:
+                click()                 # reel in
+                streak = 0
+                time.sleep(COOLDOWN)
+                if RECAST:
+                    click()             # recast
+                    time.sleep(COOLDOWN)
+        else:
+            streak = 0
     time.sleep(0.02)
