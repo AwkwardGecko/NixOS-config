@@ -91,7 +91,7 @@
     ./modules/other/scanner.nix
     ./modules/other/office.nix
     ./modules/other/sweethome.nix
-    #./modules/other/comfyui.nix
+    ./modules/other/comfyui.nix
 
     ./modules/other/signal/signal.nix
   ];
