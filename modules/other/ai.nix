@@ -14,7 +14,7 @@ in {
   # };
 
   services.comfyui = {
-    enable = false;
+    enable = true;
     package = inputs.comfyui-nix.packages.x86_64-linux.cuda;
     enableManager = true;
     port = 8188;
