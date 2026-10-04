@@ -45,7 +45,7 @@
     ./modules/gaming/controller.nix
     ./modules/gaming/gamemode.nix
     ./modules/gaming/nvidia.nix
-    ./modules/gaming/star-rail.nix
+    #./modules/gaming/star-rail.nix
     ./modules/gaming/steam.nix
     ./modules/gaming/emulation.nix
     ./modules/gaming/lutris.nix
@@ -87,7 +87,7 @@
     ./modules/other/crafty.nix
     ./modules/other/shazam.nix
     ./modules/other/ComfyUI-mount.nix
-    ./modules/other/rustdesk.nix
+    #./modules/other/rustdesk.nix
     ./modules/other/scanner.nix
     ./modules/other/office.nix
     ./modules/other/sweethome.nix
