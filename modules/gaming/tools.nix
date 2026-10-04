@@ -6,7 +6,7 @@
 }: {
   environment.systemPackages = with pkgs; [
     #bottles
-    goverlay
+    #goverlay
     heroic
     wine
     snes9x
