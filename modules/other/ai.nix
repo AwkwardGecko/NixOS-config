@@ -37,11 +37,20 @@
       # at once, reducing peak VRAM spikes.
 
       "--preview-method=auto"
-      "--disable-all-custom-nodes"
+      #"--disable-all-custom-nodes"
       #"--disable-cuda-malloc"
       #"--disable-dynamic-vram"
       #"--reserve-vram=512"
     ];
+  };
+
+
+    systemd.services.comfyui.environment = {
+    CUDA_LAUNCH_BLOCKING = "1";
+    CUBLAS_LOGINFO_DBG = "1";
+    CUBLAS_LOGDEST_DBG = "stderr";
+    CUBLASLT_LOG_LEVEL = "5";
+    CUBLASLT_LOG_FILE = "stderr";
   };
 }
 #programs.nix-ld.enable = true; # enable if custom nodes fail to find system libs
