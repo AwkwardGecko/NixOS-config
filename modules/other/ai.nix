@@ -37,7 +37,8 @@
       # at once, reducing peak VRAM spikes.
 
       "--preview-method=auto"
-      "--disable-cuda-malloc"
+      "--disable-all-custom-nodes"
+      #"--disable-cuda-malloc"
       #"--disable-dynamic-vram"
       #"--reserve-vram=512"
     ];
