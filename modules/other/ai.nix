@@ -4,8 +4,7 @@
   inputs,
   pkgs,
   ...
-}:
-{
+}: {
   # services.sillytavern = {
   #   enable = true;
   #   port = 8045;
@@ -38,7 +37,8 @@
       # at once, reducing peak VRAM spikes.
 
       "--preview-method=auto"
-      "--disable-dynamic-vram"
+      "--disable-cuda-malloc"
+      #"--disable-dynamic-vram"
       #"--reserve-vram=512"
     ];
   };
