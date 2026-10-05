@@ -4,9 +4,8 @@
   inputs,
   pkgs,
   ...
-}: let
-  comfyuiDir = "${config.home.homeDirectory}/.local/share/ComfyUI";
-in {
+}:
+{
   # services.sillytavern = {
   #   enable = true;
   #   port = 8045;
@@ -39,7 +38,7 @@ in {
       # at once, reducing peak VRAM spikes.
 
       "--preview-method=auto"
-
+      "--disable-dynamic-vram"
       #"--reserve-vram=512"
     ];
   };
