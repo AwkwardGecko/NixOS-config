@@ -43,56 +43,51 @@ in {
       "--reserve-vram=512"
     ];
   };
-
-  #programs.nix-ld.enable = true; # enable if custom nodes fail to find system libs
-
-  #environment.systemPackages = with pkgs; [
-  #python313Packages.openai-whisper
-  #python313Packages.google-genai
-  #whisperx
-  #];
-
-  # "/steam" = {
-  #   device = "/dev/disk/by-uuid/249c8bec-3ec2-4b89-8618-748cd918d4ba";
-  #   fsType = "btrfs";
-  #   options = [
-  #     "space_cache=v2"
-  #     "discard=async"
-  #   ];
-  # };
-
-  #home-manager.users.zozano = {
-  # ###########################################################################
-  # # 1. Nautilus / Tracker3 — stop indexing + search
-  # ###########################################################################
-  # dconf.settings."org/freedesktop/Tracker3/Miner/Files" = {
-  #   # basename-matched, applies wherever a dir with this name shows up
-  #   ignored-directories = ["po" "CVS" "core-dumps" "lost+found" "ComfyUI"];
-  #   # marker-file based, path-precise (belt and suspenders)
-  #   ignored-directories-with-content = [".trackerignore" ".git" ".hg" ".nomedia"];
-  # };
-  #
-  # ###########################################################################
-  # # 2. Dolphin / Baloo — stop indexing + search
-  # ###########################################################################
-  # xdg.configFile."baloofilerc".text = ''
-  #   [General]
-  #   exclude folders[$e]=${comfyuiDir}/
-  # '';
-
-  ###########################################################################
-  # 3. Drop marker files in the dir itself — makes exclusion spec-guaranteed
-  #    even if dconf/baloofilerc get reset or you use a different machine
-  ###########################################################################
-  # home.activation.excludeComfyUIFromIndexers = lib.hm.dag.entryAfter ["writeBoundary"] ''
-  #  $DRY_RUN_CMD mkdir -p "${comfyuiDir}"
-  #  $DRY_RUN_CMD touch "${comfyuiDir}/.trackerignore" "${comfyuiDir}/.nomedia"
-  #'';
-
-  ###########################################################################
-  # 4. Relocate the thumbnail cache into the ComfyUI root
-  ###########################################################################
-  #   home.file.".cache/thumbnails".source =
-  #     config.lib.file.mkOutOfStoreSymlink "${comfyuiDir}/.thumbnails";
-  #};
 }
+#programs.nix-ld.enable = true; # enable if custom nodes fail to find system libs
+#environment.systemPackages = with pkgs; [
+#python313Packages.openai-whisper
+#python313Packages.google-genai
+#whisperx
+#];
+# "/steam" = {
+#   device = "/dev/disk/by-uuid/249c8bec-3ec2-4b89-8618-748cd918d4ba";
+#   fsType = "btrfs";
+#   options = [
+#     "space_cache=v2"
+#     "discard=async"
+#   ];
+# };
+#home-manager.users.zozano = {
+# ###########################################################################
+# # 1. Nautilus / Tracker3 — stop indexing + search
+# ###########################################################################
+# dconf.settings."org/freedesktop/Tracker3/Miner/Files" = {
+#   # basename-matched, applies wherever a dir with this name shows up
+#   ignored-directories = ["po" "CVS" "core-dumps" "lost+found" "ComfyUI"];
+#   # marker-file based, path-precise (belt and suspenders)
+#   ignored-directories-with-content = [".trackerignore" ".git" ".hg" ".nomedia"];
+# };
+#
+# ###########################################################################
+# # 2. Dolphin / Baloo — stop indexing + search
+# ###########################################################################
+# xdg.configFile."baloofilerc".text = ''
+#   [General]
+#   exclude folders[$e]=${comfyuiDir}/
+# '';
+###########################################################################
+# 3. Drop marker files in the dir itself — makes exclusion spec-guaranteed
+#    even if dconf/baloofilerc get reset or you use a different machine
+###########################################################################
+# home.activation.excludeComfyUIFromIndexers = lib.hm.dag.entryAfter ["writeBoundary"] ''
+#  $DRY_RUN_CMD mkdir -p "${comfyuiDir}"
+#  $DRY_RUN_CMD touch "${comfyuiDir}/.trackerignore" "${comfyuiDir}/.nomedia"
+#'';
+###########################################################################
+# 4. Relocate the thumbnail cache into the ComfyUI root
+###########################################################################
+#   home.file.".cache/thumbnails".source =
+#     config.lib.file.mkOutOfStoreSymlink "${comfyuiDir}/.thumbnails";
+#};
+
