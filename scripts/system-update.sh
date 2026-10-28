@@ -1,86 +1,69 @@
 #!/usr/bin/env bash
-(
-  set -euo pipefail
-  cd /home/zozano/.dotfiles
 
-  STAMP_DIR="/tmp"
-  FLAKE_STAMP="$STAMP_DIR/nix_flake_update.timestamp"
-  GC_STAMP="$STAMP_DIR/nix_gc.timestamp"
-  OPTIMISE_STAMP="$STAMP_DIR/nix_optimise.timestamp"
+set -Eeuo pipefail
 
-  FLAKE_INTERVAL=600        # 10 minutes
-  GC_INTERVAL=86400         # 1 day
-  OPTIMISE_INTERVAL=604800  # 1 week
+cd /home/zozano/.dotfiles
 
-  now=$(date +%s)
+REMOTE="github"
+BRANCH="main"
+FLAKE_TARGET=".#desktop"
 
-  stamp_is_stale() {
-    local file="$1" interval="$2"
-    [[ ! -f "$file" || $(( now - $(< "$file") )) -ge $interval ]]
-  }
+trap 'echo "System update failed at line $LINENO." >&2' ERR
 
-  # --- Reject oversized files before staging ---
-  oversized=$(find . -type f -size +50M -not -path './.git/*')
-  if [[ -n "$oversized" ]]; then
-    echo "Refusing to commit — oversized files detected:"
-    echo "$oversized"
-    exit 1
-  fi
+# Refuse to stage oversized files.
+oversized=$(find . -type f -size +50M -not -path './.git/*')
+if [[ -n "$oversized" ]]; then
+  echo "Refusing to update — oversized files detected:" >&2
+  echo "$oversized" >&2
+  exit 1
+fi
 
-  # --- Commit locally first (so Nix sees a clean git tree) ---
-  git add ./*
-  git commit -m "$(date '+%F_%H:%M:%S')" || echo "Nothing to commit."
+# Stage local work so new files are visible to Nix and protected by autostash.
+git add -A
 
-  # --- Flake update (throttled) ---
-  if stamp_is_stale "$FLAKE_STAMP" "$FLAKE_INTERVAL"; then
-    echo "Running nix flake update..."
-    nix flake update
-    echo "$now" > "$FLAKE_STAMP"
-  else
-    echo "Skipping nix flake update (ran recently)."
-  fi
+# Incorporate remote changes before updating.
+git pull --rebase --autostash "$REMOTE" "$BRANCH"
 
-  # --- Rebuild (push only after success, so remote stays known-good) ---
-  sudo nixos-rebuild switch --flake .#desktop --show-trace
-  echo "Finished rebuilding."
+# Format before building and committing.
+echo "Formatting Nix files..."
+alejandra -q .
 
-  git push github main || echo "Push failed or nothing to push."
-  git status
+# Update all flake inputs.
+echo "Updating flake inputs..."
+nix flake update
 
-  echo "Beginning flatpak update"
-  flatpak update -y || true
-  
-  #echo "Begininng podman update" 
-  #if command -v podman >/dev/null; then
-  #  podman auto-update || true
-  #fi
+# Include formatting, lockfile, and any other resulting changes.
+git add -A
 
-  #sudo podman pull ghcr.io/haveagitgat/tdarr_node:latest
-  #sudo systemctl restart podman-tdarr-node
+# Rebuild and activate the complete NixOS and Home Manager configuration.
+echo "Rebuilding NixOS..."
+sudo nixos-rebuild switch --flake "$FLAKE_TARGET" --show-trace
+echo "Finished rebuilding."
 
-  # --- Garbage collection (throttled — once per day) ---
-  if stamp_is_stale "$GC_STAMP" "$GC_INTERVAL"; then
-    echo "Running garbage collection..."
-    sudo nix-collect-garbage --delete-older-than 7d
-    echo "$now" > "$GC_STAMP"
-    echo "Finished deleting garbage older than seven days."
-  else
-    echo "Skipping garbage collection (ran recently)."
-  fi
+# Commit only after the configuration has built and activated successfully.
+if ! git diff --cached --quiet; then
+  git commit -m "$(date '+%F_%H:%M:%S')"
+else
+  echo "No configuration changes to commit."
+fi
 
-  # --- Store optimisation (throttled — once per week) ---
-  if stamp_is_stale "$OPTIMISE_STAMP" "$OPTIMISE_INTERVAL"; then
-    echo "Running nix-store optimisation..."
-    sudo nix-store --optimise
-    echo "$now" > "$OPTIMISE_STAMP"
-    echo "Finished optimising the nix-store."
-  else
-    echo "Skipping nix-store optimisation (ran recently)."
-  fi
+# Back up the exact configuration that was rebuilt successfully.
+git push "$REMOTE" "$BRANCH"
 
-  echo "alejandra formatting"
-  alejandra -q /home/zozano/.dotfiles
+# Flatpak updates are separate from the NixOS configuration and Git backup.
+flatpak_failed=0
+echo "Updating Flatpaks..."
+if ! flatpak update -y; then
+  echo "Warning: Flatpak update failed." >&2
+  flatpak_failed=1
+fi
 
-  echo "All done."
-  sleep 2
-) || echo "System update failed with exit code $?."
+echo "Final repository status:"
+git status
+
+if (( flatpak_failed )); then
+  echo "NixOS update and Git backup completed, but the Flatpak update failed." >&2
+  exit 1
+fi
+
+echo "All done."

@@ -21,7 +21,7 @@
     ./modules/core/users.nix
     ./modules/core/scanner.nix
     ./modules/core/printer.nix
-    ./modules/core/rgb.nix
+    #./modules/core/rgb.nix
     ./modules/core/update.nix
 
     #./modules/desktop/hyprland.nix
@@ -61,7 +61,7 @@
     ./modules/networking/tailscale.nix
     ./modules/networking/hostname.nix
     ./modules/networking/prometheus.nix
-    ./modules/networking/teamviewer.nix
+    #./modules/networking/teamviewer.nix
     ./modules/networking/protonvpn.nix
     ./modules/networking/rclone.nix
     ./modules/networking/sshfs.nix
