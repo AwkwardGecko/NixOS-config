@@ -41,7 +41,23 @@
 
       treesitter = {
         enable = true;
-        nixGrammars = true;
+
+        grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+          bash
+          css
+          html
+          javascript
+          json
+          lua
+          markdown
+          markdown_inline
+          nix
+          python
+          typescript
+          vim
+          vimdoc
+          yaml
+        ];
       };
 
       lsp = {
