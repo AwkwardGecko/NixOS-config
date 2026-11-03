@@ -48,7 +48,7 @@
     #./modules/gaming/star-rail.nix
     ./modules/gaming/steam.nix
     ./modules/gaming/emulation.nix
-    ./modules/gaming/lutris.nix
+    #./modules/gaming/lutris.nix
     ./modules/gaming/mangohud.nix
     ./modules/gaming/reliquary-archiver.nix
     ./modules/gaming/torchlight.nix
@@ -89,9 +89,10 @@
     ./modules/other/ComfyUI-mount.nix
     #./modules/other/rustdesk.nix
     ./modules/other/scanner.nix
-    ./modules/other/office.nix
+    #./modules/other/office.nix
     ./modules/other/sweethome.nix
     #./modules/other/comfyui.nix
+    ./modules/other/pandoc.nix
 
     ./modules/other/signal/signal.nix
   ];
