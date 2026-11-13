@@ -14,6 +14,11 @@
     # ];
   };
 
+  networking.firewall = {
+    allowedTCPPorts = [46233];
+    allowedUDPPorts = [46233];
+  };
+
   environment.systemPackages = with pkgs; [
     curl
     dig

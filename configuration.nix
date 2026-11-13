@@ -53,7 +53,7 @@
     ./modules/gaming/reliquary-archiver.nix
     ./modules/gaming/torchlight.nix
     ./modules/gaming/sunshine.nix
-    ./modules/gaming/majoras-mask.nix
+    #./modules/gaming/majoras-mask.nix
 
     ./modules/networking/bluetooth.nix
     ./modules/networking/ssh.nix
@@ -65,6 +65,7 @@
     ./modules/networking/protonvpn.nix
     ./modules/networking/rclone.nix
     ./modules/networking/sshfs.nix
+    ./modules/networking/simplex.nix
 
     ./modules/shell/tmux.nix
     ./modules/shell/fish.nix
@@ -79,12 +80,12 @@
     ./modules/shell/shell.nix
     ./modules/other/crypto.nix
     ./modules/other/browsers.nix
-    ./modules/other/ai.nix
+    #./modules/other/ai.nix
     ./modules/other/flatpak.nix
     #./modules/other/protonmail.nix
     ./modules/other/kde-connect.nix
     ./modules/other/exiftool.nix
-    ./modules/other/crafty.nix
+    #./modules/other/crafty.nix
     ./modules/other/shazam.nix
     ./modules/other/ComfyUI-mount.nix
     #./modules/other/rustdesk.nix
