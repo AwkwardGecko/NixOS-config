@@ -66,6 +66,7 @@
     ./modules/networking/rclone.nix
     ./modules/networking/sshfs.nix
     ./modules/networking/simplex.nix
+    ./modules/networking/rustdesk.nix
 
     ./modules/shell/tmux.nix
     ./modules/shell/fish.nix
