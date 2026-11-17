@@ -52,7 +52,7 @@
     ./modules/gaming/mangohud.nix
     ./modules/gaming/reliquary-archiver.nix
     ./modules/gaming/torchlight.nix
-    ./modules/gaming/sunshine.nix
+    #./modules/gaming/sunshine.nix
     #./modules/gaming/majoras-mask.nix
 
     ./modules/networking/bluetooth.nix
@@ -61,7 +61,7 @@
     ./modules/networking/tailscale.nix
     ./modules/networking/hostname.nix
     ./modules/networking/prometheus.nix
-    #./modules/networking/teamviewer.nix
+    ./modules/networking/teamviewer.nix
     ./modules/networking/protonvpn.nix
     ./modules/networking/rclone.nix
     ./modules/networking/sshfs.nix
