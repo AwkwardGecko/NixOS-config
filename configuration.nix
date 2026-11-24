@@ -55,6 +55,7 @@
     #./modules/gaming/sunshine.nix
     #./modules/gaming/majoras-mask.nix
     ./modules/gaming/garrys-mod-finder.nix
+    ./modules/gaming/garrys-mod-idle.nix
 
     ./modules/networking/bluetooth.nix
     ./modules/networking/ssh.nix
