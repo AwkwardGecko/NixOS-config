@@ -21,4 +21,6 @@
       Unit = "gmod-idle.service";
     };
   };
+
+  programs.gamescope.enable = true;
 }
