@@ -54,6 +54,7 @@
     ./modules/gaming/torchlight.nix
     #./modules/gaming/sunshine.nix
     #./modules/gaming/majoras-mask.nix
+    ./modules/gaming/garrys-mod-finder.nix
 
     ./modules/networking/bluetooth.nix
     ./modules/networking/ssh.nix
@@ -92,7 +93,7 @@
     #./modules/other/rustdesk.nix
     ./modules/other/scanner.nix
     #./modules/other/office.nix
-    ./modules/other/sweethome.nix
+    #./modules/other/sweethome.nix
     #./modules/other/comfyui.nix
     ./modules/other/pandoc.nix
 
