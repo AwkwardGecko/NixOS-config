@@ -1,13 +1,17 @@
-{pkgs, ...}: {
-  environment.systemPackages = with pkgs; [
-    firefox
-    geckodriver
+{pkgs, ...}: let
+  pythonEnv = pkgs.python3.withPackages (ps:
+    with ps; [
+      selenium
+      beautifulsoup4
+      openpyxl
+    ]);
+in {
+  environment.systemPackages = [
+    pkgs.firefox
+    pkgs.geckodriver
 
-    (python3.withPackages (ps:
-      with ps; [
-        selenium
-        beautifulsoup4
-        openpyxl
-      ]))
+    (pkgs.writeShellScriptBin "mega-python" ''
+      exec ${pythonEnv}/bin/python3 "$@"
+    '')
   ];
 }
